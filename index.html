@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>开机成本计算器</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+<div class="row">
+<div id="navi">
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"> <a href="#">主页</a></li>
+<li role="presentation"> <a href="#">开机成本计算器</a></li>
+<li role="presentation"> <a href="#">关于</a></li>
+
+
+</ul>
+</div>
+</div>
+
+  <div class="col-md-3"> </div>
+  <div class="col-md-6">
+    <div class="row">
+      <h2>开机成本计算器 <small>nkt cables</small></h2>
+    </div>
+    <div class="row">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-titil">
+          开机成本计算器
+          </h3>
+        </div>
+        <div class="panel-body">
+          <form class="form" role="form">
+            <div class="row">
+              <div class="form-group">
+                <label for="voltage" class="col-md-2" >电压</label>
+                <label class="radio-inline col-md-2">
+                  <input type="radio" id="HV_radio" name="voltage" value="HV" checked onClick="click_HV_radio()">
+                  高压 </label>
+                <label class="radio-inline col-md-2">
+                  <input type="radio" id="MV_radio" name="voltage" value="MV" onClick="click_MV_radio()" >
+                  中压 </label>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="form-group">
+                <label for="num_of_core" class="col-md-2">线芯数</label>
+                <label class="radio-inline col-md-2">
+                  <input type="radio" id="one_core_radio" name="num_of_core" value="1" checked onClick="click_one_core_radio()">
+                  单芯 </label>
+                <label class="radio-inline">
+                  <input type="radio" id="three_core_radio" name="num_of_core" value="3" onClick="click_three_core_radio()">
+                  三芯及以上 </label>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="num_of_core">请输入长度(米)</label>
+              <div class="input-group ">
+                <input type="number"  id="input_length" class="form-control" name="length" onBlur="calculate()" onChange="calculate()" placeholder="请输入长度(米)">
+                <span class="input-group-addon">米</span> </div>
+            </div>
+            <div class="form-group">
+              <label for="HV_start_cost">请输入高压开机成本(元)</label>
+              <div class="input-group">
+                <input type="number"  id="HV_cost_input" class="form-control" name="HV_start_cost" onBlur="calculate()" onChange="calculate()" placeholder="请输入高压开机成本,从导出的cost中获得数据">
+                <span class="input-group-addon">元</span> </div>
+            </div>
+            <button type="button" onClick="calculate()" class="btn btn-primary btn-block">计算</button>
+            
+            <div class="form-group">
+              <label>结论</label>
+              <textarea id="result_text" class="form-control col-md-4" rows="3" placeholder="计算结果" ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="js/npm.js"></script> 
+  
+  <script type="text/javascript" src="main.js"></script> 
+</div>
+</body>
+</html>
