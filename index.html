@@ -1,92 +1,176 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="zh-CN">
 <head>
-<meta name="baidu-tc-verification" content="1773725a6f2d363b9b4e7a4cd4feb9dd" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>开机成本计算器</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="main.css" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<title>小桑的个人网站</title>
 </head>
 
 <body>
-<div class="container">
-<div class="row">
-<div id="navi">
-<ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"> <a href="#">主页</a></li>
-<li role="presentation"> <a href="#">开机成本计算器</a></li>
-<li role="presentation"> <a href="#">关于</a></li>
-
-
-</ul>
-</div>
-</div>
-
-  <div class="col-md-3"> </div>
-  <div class="col-md-6">
-    <div class="row">
-      <h2>开机成本计算器 <small>nkt cables</small></h2>
-    </div>
-    <div class="row">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h4 class="panel-titil">
-          开机成本计算器
-          </h3>
-        </div>
-        <div class="panel-body">
-          <form class="form" role="form">
-            <div class="row">
-              <div class="form-group">
-                <label for="voltage" class="col-md-2" >电压</label>
-                <label class="radio-inline col-md-2">
-                  <input type="radio" id="HV_radio" name="voltage" value="HV" checked onClick="click_HV_radio()">
-                  高压 </label>
-                <label class="radio-inline col-md-2">
-                  <input type="radio" id="MV_radio" name="voltage" value="MV" onClick="click_MV_radio()" >
-                  中压 </label>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="form-group">
-                <label for="num_of_core" class="col-md-2">线芯数</label>
-                <label class="radio-inline col-md-2">
-                  <input type="radio" id="one_core_radio" name="num_of_core" value="1" checked onClick="click_one_core_radio()">
-                  单芯 </label>
-                <label class="radio-inline">
-                  <input type="radio" id="three_core_radio" name="num_of_core" value="3" onClick="click_three_core_radio()">
-                  三芯及以上 </label>
-              </div>
-            </div>
-            <br>
-            <div class="form-group">
-              <label for="num_of_core">请输入长度(米)</label>
-              <div class="input-group ">
-                <input type="number"  id="input_length" class="form-control" name="length" onBlur="calculate()" onChange="calculate()" placeholder="请输入长度(米)">
-                <span class="input-group-addon">米</span> </div>
-            </div>
-            <div class="form-group">
-              <label for="HV_start_cost">请输入高压开机成本(元)</label>
-              <div class="input-group">
-                <input type="number"  id="HV_cost_input" class="form-control" name="HV_start_cost" onBlur="calculate()" onChange="calculate()" placeholder="请输入高压开机成本,从导出的cost中获得数据">
-                <span class="input-group-addon">元</span> </div>
-            </div>
-            <button type="button" onClick="calculate()" class="btn btn-primary btn-block">计算</button>
-            
-            <div class="form-group">
-              <label>结论</label>
-              <textarea id="result_text" class="form-control col-md-4" rows="3" placeholder="计算结果" ></textarea>
-            </div>
-          </form>
-        </div>
-      </div>
+<div data-role="page" id="page_home">
+  <div data-role="header" >
+    <h1>小桑.net</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page_home" class="ui-btn-active ui-state-persist" data-icon="home" data-transition="flip">主页</a></li>
+        <li><a href="#page_calculator" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_lab" data-icon="carat-d" data-transition="flip">实验室</a></li>
+        <li><a href="#page_about" data-icon="user" data-transition="flip">关于</a></li>
+      </ul>
     </div>
   </div>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script> 
-  <script type="text/javascript" src="js/npm.js"></script> 
+  <div data-role="content">
+    <form>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>选择产品</legend>
+      <label for="radio_110">110kV</label>
+      <input type="radio" name="product_type" id="radio_110" value="110" >
+      <label for="radio_220">220kV</label>
+      <input type="radio" name="product_type" id="radio_220" value="220" >
+      <label for="radio_MV">中压</label>
+      <input type="radio" name="product_type" id="radio_MV" value="MV" >
+      <label for="radio_acc">附件的附件</label>
+      <input type="radio" name="product_type" id="radio_acc" value="acc" >
+    </fieldset>
+    
+    <label for="text_unit_price">单价(元)</label>
+    <input type="text" name="unit_price" id="text_unit_price" placeholder="输入单价(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+    <label for="text_num">数量</label>
+    <input type="text" name="num" id="text_num" placeholder="输入数量"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
   
-  <script type="text/javascript" src="main.js"></script> 
+    <label for="text_standerd_price">出厂价(元)</label>
+    <input type="text" name="standerd_price" id="text_standerd_price" placeholder="输入出厂价(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+  	
+    <input type="button" id="btn_bonus" value="计算奖金">
+    
+    <label for="textarea_bonus">计算结果</label>
+    		<textarea name="result" id="textarea_bonus" value="计算结果"></textarea>
+    
+  
+    
+    
+    </form>
+    
+    
+    
+  </div>
+  <div data-role="footer">
+    <h1>Powered by jQuery-mobile 2014-11 </h1>
+  </div>
 </div>
+<div data-role="page" id="page_calculator">
+  <div data-role="header">
+    <h1>小桑.net</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page_home" data-icon="home" data-transition="flip">主页</a></li>
+        <li><a href="#page_calculator" class="ui-btn-active ui-state-persist" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_lab" data-icon="carat-d" data-transition="flip">实验室</a></li>
+        <li><a href="#page_about" data-icon="user" data-transition="flip">关于</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <form>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>选择电压</legend>
+      <label for="radio_HV">高压</label>
+      <input type="radio" name="voltage" id="radio_HV" value="HV" >
+      <label for="radio_MV">中低压</label>
+      <input type="radio" name="voltage" id="radio_MV" value="MV">
+    </fieldset>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>选择线芯数</legend>
+      <label for="radio_one_core">单芯</label>
+      <input type="radio" name="num_core" id="radio_one_core" value="1" >
+      <label for="radio_three_core">三芯</label>
+      <input type="radio" name="num_core" id="radio_three_core" value="3">
+    </fieldset>
+    <label for="text_length">长度(米)</label>
+    <input type="text" name="length" id="text_length" placeholder="输入长度(米)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+    <label for="text_HV_cost">高压开机成本(元)</label>
+    <input type="text" name="HV_cost" id="text_HV_cost" placeholder="输入系统导出的高压开机成本(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+    <input type="button" id="btn" value="计算开机成本">
+    <label for="textarea_result">计算结果</label>
+    <textarea name="result" id="textarea_result" value="计算结果"></textarea>
+    <div id="set_up" data-role="collapsible">
+    <h2>参数设置</h2>
+    <form>
+      <label>收全额的长度(米)</label>
+      <input type="text" name="full_cost_length" id="text_full_cost_length" value="100"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <label>收全额的长度(米)</label>
+      <input type="text" name="full_cost_length" id="text_full_cost_length" value="100"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+    </form>
+  </div>
+</div>
+</form>
+<div data-role="footer">
+  <h1>Powered by jQuery-mobile 2014-11 </h1>
+</div>
+</div>
+
+<div data-role="page" id="page_lab">
+  <div data-role="header" >
+    <h1>小桑.net</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page_home"  data-icon="home" data-transition="flip">主页</a></li>
+        <li><a href="#page_calculator" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_lab" class="ui-btn-active ui-state-persist" data-icon="carat-d" data-transition="flip">实验室</a></li>
+        <li><a href="#page_about" data-icon="user" data-transition="flip">关于</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <p>404</p>
+    <p>这是一片嗷嗷待哺的处女地</p>
+  </div>
+  <div data-role="footer">
+    <h1>Powered by jQuery-mobile 2014-11 </h1>
+  </div>
+</div>
+<div data-role="page" id="page_about">
+  <div data-role="header">
+    <h1>小桑.net</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page_home"  data-icon="home" data-transition="flip" >主页</a></li>
+        <li><a href="#page_calculator" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_lab" data-icon="carat-d" data-transition="flip">实验室</a></li>
+        <li><a href="#page_about" class="ui-btn-active ui-state-persist" data-icon="user" data-transition="flip">关于</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <p>学习前端技术</p>
+    <p>利用jQuery-mobile做了一个简单的web-app</p>
+    <p>请关注我的微信公共号"明阅光"</p>
+    <p>2014年11月29日</p>
+  </div>
+  <div data-role="footer">
+    <h1>Powered by jQuery-mobile 2014-11 </h1>
+  </div>
+</div>
+<script type="text/javascript" src="main.js"></script>
+
 </body>
 </html>

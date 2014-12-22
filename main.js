@@ -1,128 +1,156 @@
-//Copyright:sangyimin
-//2014-11-13
-var voltage="HV"
-var num_of_core="1"
-var length = 0;
-var cost_standerd=0;
-var full_cost_length=100.0;
-var to_zero_time =1.5;
-var threshold_lenth = 0;
-var MV_COST_STANDERD =7000.0;
-var HV_1_THRESHOLD_LENGTH = 1000.0;
-var MV_1_THRESHOLD_LENGTH = 500.0;
-var MV_3_THRESHOLD_LENGTH = 300.0;
- 
-var result=0;
-
-
-function calculate()
+// JavaScript Document
+//2014年11月29日 开机成本计算器脚本
+/*
+$(document).on("pageinit","#page_calculator",fuction()
 {
-	voltage = get_radio_value("voltage");
-	num_of_core = get_radio_value("num_of_core");
-	length = 1*document.getElementById("input_length").value;
-	if(length<=0)
-	{
-		document.getElementById("result_text").value = "长度错误，请修改。"
-		return null;
-	}
-		 
-	if(voltage=="HV")
-	{
-		cost_standerd =1* document.getElementById("HV_cost_input").value;
-		threshold_lenth = HV_1_THRESHOLD_LENGTH;
-		if(cost_standerd<=0)
-		{
-			document.getElementById("result_text").value="高压开机成本输入错误，请修改。"
-			return null;
-		}
-	}
-	else if(voltage=="MV")
-	{
-		cost_standerd = MV_COST_STANDERD;
+}
+*/
+//变量声明部分
+var cnt = 0;
+//控件动作-函数映射部分
+$(document).ready(main);
+function main()
+{
+	init();
+	init_bonus();
+	$("#btn").click(btn_click);
+	$("#btn_bonus").click(btn_bonus_click);
+}
+
+function init_bonus()
+{
+	$(":radio[name='product_type'][value='110']").attr("checked",true);
+	$("#text_unit_price").val("99999");
+	$("#text_num").val("1");
+	$("#text_standerd_price").val("1000");
 		
-		if(num_of_core =="1")
-		{
-			threshold_lenth = MV_1_THRESHOLD_LENGTH;
-			
-		}
-		else if(num_of_core == "3")
-		{
-			threshold_lenth = MV_3_THRESHOLD_LENGTH;
+}
+
+function btn_bonus_click()
+{
+	bonus_calculate();
+}
+
+function bonus_calculate()
+{
+	var product=$("input[name='product_type']:checked").val();
+	var unit_price=Number($("#text_unit_price").val());
+	var num=Number($("#text_num").val());
+	var standerd_price=$("#text_standerd_price").val();
+	var result="";
+	var unit_bonus=1;
+	
+	
+	if(product == "110")
+	{
+			if(unit_price>48500)
+				unit_bonus = (unit_price-48500)/1.17*0.7+45000.0/1.17*0.06;
+			else if(unit_price>38500)
+				unit_bonus = (unit_price-3500)/1.17*0.05;
+			else if(unit_price>30200)
+				unit_bonus = (unit_price-3200)/1.17*0.035;
+			else if(unit_price>25000)
+				unit_bonus = (unit_price-3000)/1.17*0.02;
+			else if(unit_price>=2800)
+				unit_bonus = (unit_price-2800)/1.17*0.005;
+			else
+				unit_bonus="error";
+	}
+	else if(product == "220")
+	{
 		
-		}
-		else
-		{
-			document.getElementById("result_text").value="芯数选择错误，请修改。";
-			return null;
-		}
 	}
-	if(length<=	full_cost_length)
+	else if(product == "MV")
 	{
-		result = cost_standerd;	
+		
 	}
-	else if(length>to_zero_time*threshold_lenth)
+	else if(product == "Acc")
 	{
-		result = 0;	
+		
 	}
 	else
 	{
-		result = cost_standerd*(length- to_zero_time*threshold_lenth )/(full_cost_length- to_zero_time*threshold_lenth )	
+		result="error";	
 	}
-	show("开机成本总额为"+result.toFixed(2)+"元\n"+"平均每米增加"+(result/length).toFixed(2)+"元");		
+		
+	
+	result = product+"附件 单价"+unit_price+"元 长度"+num+"米 出厂价"+standerd_price+"元 单个奖金="+unit_bonus;
+	result = "总价"+unit_price*num + "奖金" +unit_bonus;
+	$("#textarea_bonus").val(result);
+	
 	
 	
 	
 }
 
-function get_radio_value(radio_name)
+//初始化函数
+function init()
 {
-	var obj= document.getElementsByName(radio_name);
-	if(obj!= null)
+	$(":radio[name='voltage'][value='MV']").attr("checked",true);
+	$(":radio[name='num_core'][value='3']").attr("checked",true);
+}
+
+function btn_click()
+{
+	cnt++;
+	if(cnt%2 == 0)
+		$(":radio[name='voltage'][value='HV']").attr("checked",true);
+	else
+		$(":radio[name='voltage'][value='MV']").attr("checked",true);
+	
+	$("#textarea_result").text("cnt = "+cnt);
+}
+
+
+//参数变化函数
+function set_voltage()
+{
+	var my_voltage=$("input[name='voltage']:checked").val();
+	if(my_voltage=="HV")
 	{
-		var i;
-		for(i=0;i<obj.length;i++)
-		{
-			if(obj[i].checked)
-				return obj[i].value;
-		}	
+		$("#text_HV_cost").attr("disabled",false);	
+		$(":radio[name='num_core'][value='1']").attr("checked",true);
 	}
-	return null;
+	else
+	{
+		$("#text_HV_cost").attr("disabled",true);	
+	}
+	go();
+	
+	
+}
+function set_core()
+{
+	var my_core=$(":radio[name='num_core']:checked").val();
+	if(my_core=="3")
+	{
+		$(":radio[name='voltage'][value='MV']").attr("checked",true);	
+	}
 }
 
-//radio点击处理函数
-function click_HV_radio()
+//错误处理函数
+function show_error(str)
 {
-	document.getElementById("HV_cost_input").disabled = false;
-	document.getElementById("one_core_radio").checked = true;
+	$("#textarea_result").val("填写错误:"+str);
+}
+//情况判断函数
+//通用计算函数
+function calculate()
+{
+	
+}
+function show()
+{
+	//alert("show()!")
+}
+
+function bonus_show()
+{
+	//alert("show()!")
+}
+
+function go()
+{
 	calculate();
+	show();	
 }
-
-function click_MV_radio()
-{
-	document.getElementById("HV_cost_input").disabled = true;
-	calculate();
-	
-}
-function click_one_core_radio()
-{
-	calculate();
-	
-}
-function click_three_core_radio()
-{
-	document.getElementById("MV_radio").checked = true;
-	document.getElementById("HV_cost_input").disabled = true;
-	
-	calculate();
-	
-}
-function show(str)
-{
-	document.getElementById("result_text").value=str;
-	
-}
-
-
-
-
-
