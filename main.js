@@ -8,21 +8,30 @@ $(document).on("pageinit","#page_calculator",fuction()
 //变量声明部分
 var cnt = 0;
 //控件动作-函数映射部分
-$(document).ready(main);
+$(document).ready();
+$(document).on("pageinit","#page_home",main);
+//$(document).on("pageinit","#page_calculator",main);
+
 function main()
 {
-	init();
 	init_bonus();
+	init();
 	$("#btn").click(btn_click);
 	$("#btn_bonus").click(btn_bonus_click);
 }
 
 function init_bonus()
 {
-	$(":radio[name='product_type'][value='110']").attr("checked",true);
+	$(":radio[name='product_type'][value='220']").attr("checked",true);
+	//$(":radio[name='voltage'][value='MV']").attr("checked",true);
+	
 	$("#text_unit_price").val("99999");
 	$("#text_num").val("1");
 	$("#text_standerd_price").val("1000");
+	
+	$(":radio[name='voltage'][value='HV']").attr("checked",true);
+	$(":radio[name='num_core'][value='1']").attr("checked",true);
+
 		
 }
 
@@ -60,11 +69,11 @@ function bonus_calculate()
 	{
 		
 	}
-	else if(product == "MV")
+	else if(product == "MV_acc")
 	{
 		
 	}
-	else if(product == "Acc")
+	else if(product == "acc")
 	{
 		
 	}
@@ -86,8 +95,6 @@ function bonus_calculate()
 //初始化函数
 function init()
 {
-	$(":radio[name='voltage'][value='MV']").attr("checked",true);
-	$(":radio[name='num_core'][value='3']").attr("checked",true);
 }
 
 function btn_click()
