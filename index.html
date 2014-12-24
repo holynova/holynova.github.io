@@ -1,15 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
 <title>小桑的个人网站</title>
 </head>
 
@@ -29,43 +27,32 @@
   <div data-role="content">
     <form>
       <fieldset data-role="controlgroup" data-type="horizontal">
-      <legend>选择产品</legend>
-      <label for="bonus_radio_110">110kV</label>
-      <input type="radio" name="product_type" id="bonus_radio_110" value="110" >
-      <label for="bonus_radio_220">220kV</label>
-      <input type="radio" name="product_type" id="bonus_radio_220" value="220" >
-      <label for="bonus_radio_MV">中压附件</label>
-      <input type="radio" name="product_type" id="bonus_radio_MV" value="MV_acc" >
-      <label for="bonus_radio_acc">附件的附件</label>
-      <input type="radio" name="product_type" id="bonus_radio_acc" value="acc" >
-    </fieldset>
-    
-    <label for="text_unit_price">单价(元)</label>
-    <input type="text" name="unit_price" id="text_unit_price" placeholder="输入单价(元)"
+        <legend>选择产品</legend>
+        <label for="bonus_radio_110">110kV</label>
+        <input type="radio" name="product_type" id="bonus_radio_110" value="110" >
+        <label for="bonus_radio_220">220kV</label>
+        <input type="radio" name="product_type" id="bonus_radio_220" value="220" >
+        <label for="bonus_radio_MV">中压附件</label>
+        <input type="radio" name="product_type" id="bonus_radio_MV" value="MV_acc" >
+        <label for="bonus_radio_acc">附件的附件</label>
+        <input type="radio" name="product_type" id="bonus_radio_acc" value="acc" >
+      </fieldset>
+      <label for="text_unit_price">单价(元)</label>
+      <input type="text" name="unit_price" id="text_unit_price" placeholder="输入单价(元)"
       	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
       	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
-    <label for="text_num">数量</label>
-    <input type="text" name="num" id="text_num" placeholder="输入数量"
+      <label for="text_num">数量</label>
+      <input type="text" name="num" id="text_num" placeholder="输入数量"
       	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
       	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
-  
-    <label for="text_standerd_price">出厂价(元)</label>
-    <input type="text" name="standerd_price" id="text_standerd_price" placeholder="输入出厂价(元)"
+      <label for="text_standerd_price">出厂价(元)</label>
+      <input type="text" name="standerd_price" id="text_standerd_price" placeholder="输入出厂价(元)"
       	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
       	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
-  	
-    <input type="button" id="btn_bonus" value="计算奖金">
-    
-    <label for="textarea_bonus">计算结果</label>
-    		<textarea name="result" id="textarea_bonus" value="计算结果"></textarea>
-    
-  
-    
-    
+      <input type="button" id="btn_bonus" value="计算奖金">
+      <label for="textarea_bonus">计算结果</label>
+      <textarea name="result" id="textarea_bonus" value="计算结果"></textarea>
     </form>
-    
-    
-    
   </div>
   <div data-role="footer">
     <h1>Powered by jQuery-mobile 2014-11 </h1>
@@ -129,8 +116,7 @@
   <h1>Powered by jQuery-mobile 2014-11 </h1>
 </div>
 </div>
-
-<div data-role="page" id="page_lab">
+<div data-role="page" id="page_lab" data-position="fixed">
   <div data-role="header" >
     <h1>小桑.net</h1>
     <div data-role="navbar">
@@ -143,8 +129,27 @@
     </div>
   </div>
   <div data-role="content">
-    <p>404</p>
-    <p>这是一片嗷嗷待哺的处女地</p>
+    <form>
+      <h2>人名生成器</h2>
+      <label for="text_family_name">姓</label>
+      <input type="text" name="family_name" id="text_family_name"  placeholder="输入姓">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>性别</legend>
+        <label for="radio_girl">女</label>
+        <input type="radio" name="sex" id="radio_girl" value="girl" >
+        <label for="radio_boy">男</label>
+        <input type="radio" name="sex" id="radio_boy" value="boy" checked>
+        <label for="radio_sex">其他</label>
+        <input type="radio" name="sex" id="radio_sex" value="unknown">
+      </fieldset>
+      <label for="range_num_of_char">字数(不含姓)</label>
+      <input type="range" name="num_of_char" id="range_num_of_char" value="2" min="1" max="5" data-highlight="true">
+      <label for="range_num_of_name">生成多少个名字</label>
+      <input type="range" name="num_of_name" id="range_num_of_name" value="5" min="1" max="20" data-highlight="true">
+      <input type="button" id="btn_name" value="一键起名">
+      <label for="textarea_name">姓名池</label>
+      <textarea name="result_name" id="textarea_name" value="计算结果"></textarea>
+    </form>
   </div>
   <div data-role="footer">
     <h1>Powered by jQuery-mobile 2014-11 </h1>
@@ -173,6 +178,5 @@
   </div>
 </div>
 <script type="text/javascript" src="main.js"></script>
-
 </body>
 </html>
