@@ -17,7 +17,7 @@ function main()
 {
 	init_bonus();
 	init();
-	$("#text_family_name").val("桑");
+	$("#text_family_name").val("李");
 	$("#btn").click(btn_click);
 	$("#btn_bonus").click(btn_bonus_click);
 	$("#btn_name").click(btn_name_click);
@@ -53,8 +53,15 @@ function btn_name_click()
 					one_name += girl_char[parseInt(Math.random()*girl_char.length,10)];			
 			}
 		}	
-	
-		$("#ol_name").append("<li class='new_name'>" + one_name + "</li>").listview('refresh');
+		if(cnt_name%2 ==0)
+		{
+			$("#ol_name_left").append("<li class='new_name'>" + one_name + "</li>").listview('refresh');
+			
+		}
+		else
+		{
+			$("#ol_name_right").append("<li class='new_name'>" + one_name + "</li>").listview('refresh');
+		}
 		//$("ol").append("<li>hello</li>").listview('refresh');
 		
 		//$("#ol_name").append("<li>张三</li>");//.trigger("creat");

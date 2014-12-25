@@ -144,17 +144,26 @@
         <input type="radio" name="sex" id="radio_sex" value="unknown">
       </fieldset>
       <label for="range_num_of_char">字数(不含姓)</label>
-      <input type="range" name="num_of_char" id="range_num_of_char" value="2" min="1" max="5" data-highlight="true">
+      <input type="range" name="num_of_char" id="range_num_of_char" value="2" min="1" max="3" data-highlight="true">
       <label for="range_num_of_name">生成多少个名字</label>
-      <input type="range" name="num_of_name" id="range_num_of_name" value="5" min="1" max="20" data-highlight="true">
+      <input type="range" name="num_of_name" id="range_num_of_name" value="10" min="1" max="100" data-highlight="true">
       <input type="button" id="btn_name" value="一键起名">
       <div id="div_name">
-      <p>结果</p>
-      <ol id="ol_name" data-role="listview" data-inset="true">
-      </ol>
+        <p>结果</p>
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+          <ul id="ol_name_left" data-role="listview" data-inset="true">
+          </ul>
+          </div>
+          
+          <div class="ui-block-b">
+          <ul id="ol_name_right" data-role="listview" data-inset="true">
+          </ul>
+          </div>
+          
+        </div>
       </div>
-      
-      </form>
+    </form>
   </div>
   <div data-role="footer">
     <h1>Powered by jQuery-mobile 2014-11 </h1>
