@@ -4,7 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="style.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -139,7 +140,7 @@
         <input type="radio" name="sex" id="radio_girl" value="girl" >
         <label for="radio_boy">男</label>
         <input type="radio" name="sex" id="radio_boy" value="boy" checked>
-        <label for="radio_sex">其他</label>
+        <label for="radio_sex">你猜</label>
         <input type="radio" name="sex" id="radio_sex" value="unknown">
       </fieldset>
       <label for="range_num_of_char">字数(不含姓)</label>
@@ -147,9 +148,13 @@
       <label for="range_num_of_name">生成多少个名字</label>
       <input type="range" name="num_of_name" id="range_num_of_name" value="5" min="1" max="20" data-highlight="true">
       <input type="button" id="btn_name" value="一键起名">
-      <label for="textarea_name">姓名池</label>
-      <textarea name="result_name" id="textarea_name" value="计算结果"></textarea>
-    </form>
+      <div id="div_name">
+      <p>结果</p>
+      <ol id="ol_name" data-role="listview" data-inset="true">
+      </ol>
+      </div>
+      
+      </form>
   </div>
   <div data-role="footer">
     <h1>Powered by jQuery-mobile 2014-11 </h1>

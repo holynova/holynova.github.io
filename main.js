@@ -33,7 +33,8 @@ function btn_name_click()
 	var num_of_name=$("#range_num_of_name").val();
 	var family_name=$("#text_family_name").val();
 	var result_name="";
-	
+	//清空显示区
+	$("li").remove();
 	
 	for(cnt_name=0;cnt_name<num_of_name;cnt_name++)
 	{
@@ -45,14 +46,21 @@ function btn_name_click()
 			else if(sex=="girl")
 				one_name += girl_char[parseInt(Math.random()*girl_char.length,10)];
 			else
-				one_name += "其他";
+			{
+				if(	parseInt(Math.random()*girl_char.length,10)%2 == 0)
+					one_name += boy_char[parseInt(Math.random()*boy_char.length,10)];
+				else
+					one_name += girl_char[parseInt(Math.random()*girl_char.length,10)];			
+			}
 		}	
 	
+		$("#ol_name").append("<li>" + one_name + "</li>").listview('refresh');
+		//$("ol").append("<li>hello</li>").listview('refresh');
 		
-		result_name += (cnt_name+1+":"+one_name+"\n");
-
+		//$("#ol_name").append("<li>张三</li>");//.trigger("creat");
+	
 	}
-	$("#textarea_name").text(result_name);
+	//$("#textarea_name").text(result_name);
 	
 	
 
@@ -70,7 +78,6 @@ function init_bonus()
 	$(":radio[name='voltage'][value='HV']").attr("checked",true);
 	$(":radio[name='num_core'][value='1']").attr("checked",true);
 
-		
 }
 
 function btn_bonus_click()
