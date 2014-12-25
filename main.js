@@ -34,7 +34,7 @@ function btn_name_click()
 	var family_name=$("#text_family_name").val();
 	var result_name="";
 	//清空显示区
-	$("li").remove();
+	$(".new_name").remove();
 	
 	for(cnt_name=0;cnt_name<num_of_name;cnt_name++)
 	{
@@ -54,7 +54,7 @@ function btn_name_click()
 			}
 		}	
 	
-		$("#ol_name").append("<li>" + one_name + "</li>").listview('refresh');
+		$("#ol_name").append("<li class='new_name'>" + one_name + "</li>").listview('refresh');
 		//$("ol").append("<li>hello</li>").listview('refresh');
 		
 		//$("#ol_name").append("<li>张三</li>");//.trigger("creat");
