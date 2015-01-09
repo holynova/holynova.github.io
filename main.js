@@ -120,15 +120,32 @@ function bonus_calculate()
 	}
 	else if(product == "220")
 	{
+			if(unit_price>124500)
+				unit_bonus = (unit_price-124500)/1.17*0.7+115000.0/1.17*0.08;
+			else if(unit_price>111000)
+				unit_bonus = (unit_price-9000)/1.17*0.06;
+			else if(unit_price>98500)
+				unit_bonus = (unit_price-8500)/1.17*0.04;
+			else if(unit_price>88000)
+				unit_bonus = (unit_price-8000)/1.17*0.03;
+			else if(unit_price>=7500)
+				unit_bonus = (unit_price-7500)/1.17*0.015;
+			else
+				unit_bonus="error";
 		
 	}
 	else if(product == "MV_acc")
 	{
-		
+		if(unit_price >= standerd_price)
+			unit_bonus = (unit_price - standerd_price)*0.65 + standerd_price/1.17*0.05;
+		else if(unit_price > 0)
+			unit_bonus = unit_price/1.17*0.03;
+		else
+			unit_bonus = "error";
 	}
 	else if(product == "acc")
 	{
-		
+		unit_bonus = unit_price/1.17*0.3/100;
 	}
 	else
 	{
@@ -137,7 +154,7 @@ function bonus_calculate()
 		
 	
 	result = product+"附件 单价"+unit_price+"元 长度"+num+"米 出厂价"+standerd_price+"元 单个奖金="+unit_bonus;
-	result = "总价"+unit_price*num + "奖金" +unit_bonus;
+	result += "总价"+unit_price*num + "奖金" +unit_bonus;
 	$("#textarea_bonus").val(result);
 	
 	
