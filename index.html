@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>小桑作品展示</title>
+	<title>小桑前端作品展示</title>
 
 	<link rel="stylesheet" href="css\clear.css">
 	<style>
@@ -14,13 +14,22 @@
 			line-height: 2em;
 			font-family: Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 		}
+		a
+		{
+			transition: all 0.3s;
+			-moz-transition: all 0.3s;	/* Firefox 4 */
+			-webkit-transition: all 0.3s;	/* Safari 和 Chrome */
+			-o-transition: all 0.3s;
+		}
 		.container
 		{
 			background-color: #fff;
 			width: 300px;
 			margin: 0 auto;
 			margin-top: 10px;
-			padding: 20px 10px;
+			padding: 20px 20px;
+			border-radius: 1px;
+			box-shadow: 2px 2px 2px #ccc;
 
 		}
 		li a
@@ -28,19 +37,49 @@
 			display:block; 
 			text-decoration: none;
 			padding-left:1em;
+			color: black;
+			border-bottom: 1px solid #eee;
 		}
 		li a:hover
 		{
-			background-color:#f60 ;
+			background-color:#f60;
 			color: white;
+			padding-left: 2em;
+			font-weight: bold;
 		}
+
 		ul h2
 		{
 			font-weight: bold;
 			font-size: 1.2em;
-			border-bottom: 1px solid #eee;
+			border-bottom: 1px solid #ccc;
 			line-height: 2.4em;
+			display: block;
+			/*background-color: blue;*/
+
 		}
+		h1
+		{
+			font-size: 1.5em;
+			line-height: 2.4em;
+			font-weight:bold;
+		}
+
+		ul>a
+		{
+			display: block;
+			color: black;
+			/*background-color: green;*/
+			text-decoration: none;
+
+		}
+		ul>a:hover
+		{
+			background-color: #00ABD8;
+			color: white;
+			padding-left: 1em;
+		}
+
 		
 
 
@@ -49,8 +88,9 @@
 </head>
 <body>
 	<div class="container">
+	<h1>小桑前端作品展示</h1>
 		<ul>
-			<h2>1.基本组件</h2>
+			<a href="#"><h2>1.基本组件</h2></a>
 			<li><a href="pages\shopping_cart\shopping_cart.html">购物车</a></li>
 			<li><a href="pages\calendar\简易日历.html">简易日历</a></li>
 			<li><a href="pages\tabs\tabs.html">标签选项卡</a></li>
@@ -58,7 +98,7 @@
 			<li><a href="">你好</a></li>
 		</ul>
 		<ul>
-			<h2>2.完整网站</h2>
+			<a href="#"><h2>2.完整网站</h2></a>
 			<li><a href="pages\furnitureV1.0\index.html">家具网站布局1.0</a></li>
 			<li><a href="pages\furnitureV2.0\full_screen.html">家具网站布局2.0-bootstrap</a></li>
 			<li><a href="pages\qq.com\index.html">腾讯布局</a></li>
@@ -70,13 +110,15 @@
 
 		</ul>
 		<ul>
-			<h2>3.其他作品</h2>
+			<a href="#"><h2>3.其他作品</h2></a>
 			<li><a href="pages\2048\2048.html">个性化2048游戏</a></li>
 			<li><a href="">你好</a></li>
 			<li><a href="">你好</a></li>
 			<li><a href="">你好</a></li>
 			<li><a href="">你好</a></li>
 		</ul>
+
+		<p>联系我:287111309@qq.com</p>
 	</div>
 	<script src="script\jquery-1.11.2.min.js"></script>
 	<script src="script\main.js"></script>
