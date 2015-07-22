@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap full screen</title>
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/clear.css"> -->
+</head>
+<body>
+	<div id="main">
+
+		<div id="top">
+			<div class="container" id='nav_wrapper'>
+				<nav id='nav' class="navbar navbar-default">
+					<div class="navbar-header">
+						<a href="#" class="navbar-brand">诗意栖居</a>
+						<button type="button" class="navbar-toggle collapsed" data-toggle='collapse' data-target='#my_collapsed_navbar'>
+							<span class="sr-only"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+
+						</button>
+					</div>
+
+
+
+					<div class="collapse navbar-collapse" id="my_collapsed_navbar">
+						<ul class='nav navbar-nav' id="main_nav_ul">
+							<li class="active"><a href="#">首页</a></li>
+							<li><a href="#">产品</a></li>
+							<!-- <li><a href="#">服务</a></li> -->
+							
+							<li><a href="#">服务</a></li>
+							<li><a href="#">关于</a></li>
+						</ul>
+
+						<form  class="navbar-form navbar-left" role='search'>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder='搜索'>
+								<button type="submit" class="btn btn-default" >搜索</button>
+							</div>
+
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">登陆</a></li>
+							<li class="divider"></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+
+						
+
+
+					</div>
+				</nav>
+			</div>
+
+
+			<!-- </div> -->
+			<div id="my_show" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#my_show" data-slide-to="0" class="active"></li>
+					<li data-target="#my_show" data-slide-to="1"></li>
+					<li data-target="#my_show" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active ">
+
+						<div class="pic_to_show pic1"></div>
+						<div class="carousel-caption">
+							<h3>柔软是一种生活态度</h3>
+							<a href="#" role='button' class="btn btn_link btn_link_a">购买</a>
+							<a href="#" role='button' class="btn btn_link btn_link_b">更多</a>
+
+							<!-- <button  class="btn btn-warning">购买</button>
+							<button  class="btn btn-warning">详情</button> -->
+
+						</div>
+					</div>
+					<div class="item">
+						<div class="pic_to_show pic2"></div>
+						<div class="carousel-caption">
+						<h3>肩负文化的重量</h3>
+							<a href="#" role='button' class="btn btn_link btn_link_a">购买</a>
+							<a href="#" role='button' class="btn btn_link btn_link_b">更多</a>
+
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="pic_to_show pic3"></div>
+						<div class="carousel-caption">
+							<h3>对酒当歌，人生几何</h3>
+							<a href="#" role='button' class="btn btn_link btn_link_a">购买</a>
+							<a href="#" role='button' class="btn btn_link btn_link_b">更多</a>
+
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#my_show" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#my_show" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div> 
+
+
+
+		</div>
+		<!-- <div class="container"> -->
+
+	<!-- 	<nav id='nav' class="navbar navbar-default">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">LOGO</a>
+			</div>
+			<ul class='nav navbar-nav'>
+				<li><a href="#" class="active">首页</a></li>
+				<li><a href="#">产品</a></li>
+				<li><a href="#">服务</a></li>
+				<li><a href="#">关于</a></li>
+			</ul>
+		</nav> -->
+		<!-- </div> -->
+
+		<!-- <div id="background">
+			<div id="mask">
+				<div id="header" class="container">
+					<nav id='nav' class="navbar navbar-default">
+						<div class="navbar-header">
+							<a href="#" class="navbar-brand">LOGO</a>
+						</div>
+						<ul class='nav navbar-nav'>
+							<li><a href="#" class="active">首页</a></li>
+							<li><a href="#">产品</a></li>
+							<li><a href="#">服务</a></li>
+							<li><a href="#">关于</a></li>
+						</ul>
+					</nav>
+					<div id="head_text" class="jumbotron">
+						<h1>声声慢</h1>
+						<p>寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急？雁过也，正伤心，却是旧时相识。</p>
+
+						<p>
+							满地黄花堆积。憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑？梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！
+						</p>
+						<p><a href="#" class="btn btn-primary btn-md" role='button'>更多</a></p>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	-->
+
+
+
+	<div id="content" class="container">
+		<div class="row" id="row1">
+			<div class="col-md-4 thumbnail">
+				<div class='pic' id="pic1"></div>
+				
+				<div class="caption">
+					<h3>沙发</h3>
+					<p>柔软是一种生活态度</p>
+					<h4>$998</h4>
+					<a href="#" role='button' class="btn btn-primary">more...</a>
+				</div>
+			</div>
+			<div class="col-md-4 thumbnail">
+				<div class='pic' id="pic2"></div>
+				<div class="caption">
+					<h3>书架</h3>
+					<p>担当文化的重量</p>
+					<h4>$998</h4>
+					<a href="#" role='button' class="btn btn-primary">more...</a>
+				</div>
+			</div>
+			<div class="col-md-4 thumbnail">
+				<div class='pic' id="pic3"></div>
+				<div class="caption">
+					<h3>茶几</h3>
+					<p>对酒当歌,人生"几"何</p>
+					<h4>$998</h4>
+					<a href="#" role='button' class="btn btn-primary">more...</a>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="row" id="logo_nav">
+			<div class="col-md-2 logo_box" >
+				<a href="#">
+					<div class="logo center-block" id="logo1"></div>
+					<div class="text">摇椅</div>
+				</a>
+			</div>
+			<div class="col-md-2 logo_box" >
+				<a href="#">
+					<div class="logo center-block" id="logo2"></div>
+					<div class="text">扶手椅</div>
+				</a>
+			</div>
+			<div class="col-md-2 logo_box" >
+				<a href="#">
+					<div class="logo center-block" id="logo3"></div>
+					<div class="text">茶几</div>
+				</a>
+			</div>
+			<div class="col-md-2 logo_box" >
+				<a href="#">
+					<div class="logo center-block" id="logo4"></div>
+					<div class="text">椅子</div>
+				</a>
+			</div>
+			<div class="col-md-2 logo_box" >
+				<a href="#">
+					<div class="logo center-block" id="logo5"></div>
+					<div class="text">皮质沙发</div>
+				</a>
+			</div>
+			<div class="col-md-2 logo_box" >
+				<a href="3">
+					<div class="logo center-block" id="logo6"></div>
+					<div class="text">单人沙发</div>
+				</a>
+			</div>
+		</div>
+
+
+
+
+		<!-- <div class="container"> -->
+		<div class="row" id="product_show">
+			<div class="row row1">
+				<a href="#"><div class="col-md-6 block1-1 block">产品名称</div></a>
+				<a href="#"><div class="col-md-3 block1-2 block">产品名称</div></a>
+				<a href="#"><div class="col-md-3 block1-3 block">产品名称</div></a>
+			</div>
+			<div class="row row2">
+				<a href="#"><div class="col-md-3 block2-1 block">产品名称</div></a>
+				<a href="#"><div class="col-md-6 block2-2 block">产品名称</div></a>
+				<a href="#"><div class="col-md-3 block2-3 block">产品名称</div></a>
+
+			</div>
+			<div class="row row3">
+				<a href="#"><div class="col-md-6 block_big block">产品名称</div></a>
+				<!-- <div class="row row3-1"> -->
+				<a href="#"><div class="col-md-6 block3-3 block">产品名称</div></a>
+				<a href="#"><div class="col-md-3 block3-1 block">产品名称</div></a>
+				<a href="#"><div class="col-md-3 block3-2 block">产品名称</div></a>
+				<!-- </div> -->
+				<!-- <div class="row row3-2"> -->
+
+				<!-- </div> -->
+			</div>
+		</div>
+
+
+		<div class="row" id="service">
+			<div class="col-md-3">
+				<div class="logo center-block logo1"></div>
+				<div class="text"></div>
+			</div>
+			<div class="col-md-3">
+				<div class="logo center-block logo2"></div>
+				<div class="text"></div>
+			</div>
+			<div class="col-md-3">
+				<div class="logo center-block logo3"></div>
+				<div class="text"></div>
+			</div>
+			<div class="col-md-3">
+				<div class="logo center-block logo4"></div>
+				<div class="text"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<h3>你好</h3>
+					<p><a href="#">桌子</a></p>
+					<p><a href="#">椅子</a></p>
+					<p><a href="#">沙发</a></p>
+					<p><a href="#">茶几</a></p>
+				</div>
+				<div class="col-md-2">
+					<h3>你好</h3>
+					<p><a href="#">桌子</a></p>
+					<p><a href="#">椅子</a></p>
+					<p><a href="#">沙发</a></p>
+					<p><a href="#">茶几</a></p>
+				</div>
+				<div class="col-md-2">
+					<h3>你好</h3>
+					<p><a href="#">桌子</a></p>
+					<p><a href="#">椅子</a></p>
+					<p><a href="#">沙发</a></p>
+					<p><a href="#">茶几</a></p>
+				</div>
+				<div class="col-md-2">
+					<h3>你好</h3>
+					<p><a href="#">桌子</a></p>
+					<p><a href="#">椅子</a></p>
+					<p><a href="#">沙发</a></p>
+					<p><a href="#">茶几</a></p>
+				</div>
+				<div class="col-md-4">
+					<h3>你好</h3>
+					<p><a href="#">桌子</a></p>
+					<p><a href="#">椅子</a></p>
+					<p><a href="#">沙发</a></p>
+					<p><a href="#">茶几</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+

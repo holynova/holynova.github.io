@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>完整购物车</title>
+	<link rel="stylesheet" href="clear.css">
+	<script src="jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" href="css/cart.css">
+	<script src="script/cart.js"></script>
+
+</head>
+<body>
+	
+	<div class="container">
+
+		<div class="galley"></div>
+
+		<div class="cart">
+			<div class="cart_top">
+				<h1>购物车</h1>
+				<button class="btn_test">增加一条随机商品</button>
+			</div>
+
+
+			<table border="1">
+				<!-- <th>i am a table</th> -->
+				<tr class="table_head">
+					<td>
+						<button class="btn_select_all">全选</button>	
+						<button class="btn_select_none">全不选</button>	
+						<button class="btn_select_reverse">反选</button>	
+					</td>		
+					<td>good</td>
+					<td>
+						unit price
+						<button class="btn_sort" id="btn_sort_by_unitprice">排序</button>
+					</td>
+					<td>num
+						<button class="btn_sort" id="btn_sort_by_num">排序</button>
+					</td>
+					<td>line-total
+						<button class="btn_sort" id="btn_sort_by_linetotal">排序</button>
+					</td>
+					<td>delete</td>
+				</tr>
+				<!-- <tr class="table_good">
+					<td class="table_select">
+						<input type="checkbox" name="" id="">
+					</td>
+					<td class="table_details">
+						<div class="pic"></div>
+						<div class="name">我是一本书</div>
+					</td>
+					<td class="table_unit_price">
+						<span>1元</span>
+					</td>
+					<td class="table_num">
+						<span >10</span>件
+						<button class="btn_add_one">+1</button>
+						<button class="btn_del_one">-1</button>
+					</td>
+					<td class="table_total">
+						合计<span class='span_total_price'>10</span>元
+					</td>
+					<td class="table_del">
+						<button class="btn_del_line">删除</button>
+					</td>
+				</tr> -->
+				<!-- <tr class="table_good">
+					<td class="table_select">
+						<input type="checkbox" name="" id="">
+					</td>
+					<td class="table_details">
+						<div class="pic"></div>
+						<div class="name">我是一本书</div>
+						<div class="detail">
+				<p>作者:桑益民</p>
+				<p>出版社:生活 读书 新知 三联书店</p>
+						 </div>
+					</td>
+					<td class="table_unit_price">
+						<span>1.99元</span>
+					</td>
+					<td class="table_num">
+						<span >10</span>件
+						<button class="btn_add_one">+1</button>
+						<button class="btn_del_one">-1</button>
+					</td>
+					<td class="table_total">
+						合计<span class='span_total_price'>10</span>元
+					</td>
+					<td class="table_del">
+						<button class="btn_del_line">删除</button>
+					</td>
+				</tr>
+				<tr class="table_good">
+					<td class="table_select">
+						<input type="checkbox" name="" id="">
+					</td>
+					<td class="table_details">
+						<div class="pic"></div>
+						<div class="name">我是一本书</div>
+					</td>
+					<td class="table_unit_price">
+						<span>1.99元</span>
+					</td>
+					<td class="table_num">
+						<span >10</span>件
+						<button class="btn_add_one">+1</button>
+						<button class="btn_del_one">-1</button>
+					</td>
+					<td class="table_total">
+						合计<span class='span_total_price'>10</span>元
+					</td>
+					<td class="table_del">
+						<button class="btn_del_line">删除</button>
+					</td>
+				</tr> -->
+				<tr class="table_all">
+					<td>
+						选中<span>xx</span>条商品
+					</td>
+					<td></td>
+					<td></td>
+					<td class="table_all_num">
+
+						总计<span>xx</span>件
+					</td>
+					<td class="table_all_price">
+
+						总计<span>xx</span>元
+					</td>
+					<td>
+						<button class="btn_delete_selected">删除选中</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="top">
+
+		</div>
+		<ul>
+			<li>
+				<div class="pic"></div>
+				<div class="name"></div>
+				<div class="price"></div>
+				<div class="num"></div>
+				<div class="sum"></div>
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+</html>

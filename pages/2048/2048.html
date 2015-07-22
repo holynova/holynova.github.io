@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2048</title>
+	<link rel="stylesheet" href="2048.css">
+
+</head>
+<body>
+	<div id="container">
+		<div id="game">
+			<div id="background"></div>
+		</div>
+
+		<div id="setup">
+
+			<h1>2048</h1>
+			<p><span id="result"></span></p>
+			<p>score: <span id="score"></span></p>
+			<p>setp: <span id="num_steps"></span></p>
+			<hr>
+			<p>选择级别(0到10)</p>
+			<input type="text" id="input_grid_num" value="5">
+			<input type="button" value="重新开始" id="btn_start">
+		<!-- 	<form action="" id="form_box_name">
+				2			<input type="text" class="my_str" id="my_str1"> <br>
+				4			<input type="text" class="my_str" id="my_str2"> <br>
+				8			<input type="text" class="my_str" id="my_str3"> <br>
+				16			<input type="text" class="my_str" id="my_str4"> <br>
+				32			<input type="text" class="my_str" id="my_str5"> <br>
+				64			<input type="text" class="my_str" id="my_str6"> <br>
+				128			<input type="text" class="my_str" id="my_str7"> <br>
+				256			<input type="text" class="my_str" id="my_str8"> <br>
+				1024			<input type="text" class="my_str" id="my_str9"> <br>
+				2048			<input type="text" class="my_str" id="my_str10"> <br>
+				4096			<input type="text" class="my_str" id="my_str11"> <br>
+				8192			<input type="text" class="my_str" id="my_str12"> <br>
+
+			</form> -->
+
+		</div>
+
+	</div>
+<!-- 	<div id="title">
+		<h3>2048      <span id="my_title"></span>
+			分数：<span id="score">0</span>      移动的步数：<span id="num_steps">0</span></h3>
+			选择级别(2到10):<input type="text" id="input_grid_num" value="5">
+			<input type="button" value="重新开始" id="btn_start">
+			<p><span id="result"></span></p>
+			<hr>
+		</div>	 -->
+
+		<script src="jquery-1.11.2.min.js"></script>
+		<script src="2048.js"></script>
+	</body>
+	</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+<title>小桑的个人网站</title>
+</head>
+
+<body>
+<!-------------------------主页------------------------->
+
+
+
+
+<div data-role="page" id="page_home">
+  <div data-role="header" data-position="fixed"    data-theme="b">
+  <a href="#popup_menu" data-rel="popup" data-role="button" data-icon="bars" data-theme="a" data-transition="slidedown">功能</a>
+  
+  <h1>小桑.net</h1>
+  <a href="#page_home" data-role="button" data-icon="home" class="ui-btn-right" data-theme="a" data-theme="a" >首页</a> </div>
+	
+  <div data-role="content">
+    <div data-role="collapsible-set">
+      <div data-role="collapsible" data-theme="a">
+        <h3 >效率</h3>
+        <ul data-role="listview" data-set="true">
+          <li><a href="#page_spc" data-transition="slide" >附件SPC计算器</a></li>
+          <li><a href="#page_start_cost" data-transition="slide">平滑的开机成本</a></li>
+          <li><a href="#" >虚位以待</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-theme="a">
+        <h3 >乐趣</h3>
+        <ul data-role="listview" data-set="true">
+          <li><a href="#page_namer" data-transition="slide" >非智能起名机器人</a></li>
+          <li><a href="#" >出生天数</a></li>
+          <li><a href="#" >词频统计</a></li>
+          <li><a href="#" >虚位以待</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible" data-theme="a">
+        <h3 >关于</h3>
+        <ul data-role="listview" data-set="true">
+          <li><a href="#page_about"  data-transition="slide">关于</a></li>
+          <li><a href="#" >作者</a></li>
+          <li><a href="#" >兴趣</a></li>
+          <li><a href="#" >虚位以待</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" >
+    <h2>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h2>
+  </div>
+  <!-------------------------弹出功能菜单------------------------->
+<div id="popup_menu_div">
+<div data-role="popup" id="popup_menu" data-tolerance="0,0" data-corners="false" data-theme="b" >
+<div data-role="collapsible-set" style="margin:0;width:20em;" >
+    <div data-role="collapsible">
+      <h3 >效率</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_spc" data-transition="slide" >附件SPC计算器</a></li>
+        <li><a href="#page_start_cost" data-transition="slide">平滑的开机成本</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible">
+      <h3 >乐趣</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_namer" data-transition="slide" >非智能起名机器人</a></li>
+        <li><a href="#" >出生天数</a></li>
+        <li><a href="#" >词频统计</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" >
+      <h3 >关于</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_about"  data-transition="slide">关于</a></li>
+        <li><a href="#" >作者</a></li>
+        <li><a href="#" >兴趣</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+
+<!-------------------------SPC计算页面------------------------->
+<div data-role="page" id="page_spc">
+  <div data-role="header" data-position="fixed"   data-theme="b" > 
+  <a href="#popup_menu1" data-role="button" data-rel="popup" data-icon="bars" data-theme="a" data-transition="slidedown">功能</a>
+    <h1>附件SPC计算器</h1>
+    <a href="#page_home" data-role="button" data-icon="home" class="ui-btn-right"data-theme="a" >首页</a> </div>
+  <div data-role="content">
+    <form>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>选择产品</legend>
+        <label for="bonus_radio_110">110kV</label>
+        <input type="radio" name="product_type" id="bonus_radio_110" value="110" >
+        <label for="bonus_radio_220">220kV</label>
+        <input type="radio" name="product_type" id="bonus_radio_220" value="220" >
+        <label for="bonus_radio_MV">中压附件</label>
+        <input type="radio" name="product_type" id="bonus_radio_MV" value="MV_acc" >
+        <label for="bonus_radio_acc">附件的附件</label>
+        <input type="radio" name="product_type" id="bonus_radio_acc" value="acc" >
+      </fieldset>
+      <label for="text_unit_price">单价(元)</label>
+      <input type="text" name="unit_price" id="text_unit_price" placeholder="输入单价(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <label for="text_num">数量</label>
+      <input type="text" name="num" id="text_num" placeholder="输入数量"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <label for="text_standerd_price">出厂价(元)</label>
+      <input type="text" name="standerd_price" id="text_standerd_price" placeholder="输入出厂价(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <input type="button" id="btn_bonus" value="计算奖金">
+      <label for="textarea_bonus">计算结果</label>
+      <textarea name="result" id="textarea_bonus" value="计算结果"></textarea>
+    </form>
+  </div>
+  <div data-role="footer" >
+    <h2>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h2>
+  </div>
+  <!-------------------------弹出功能菜单------------------------->
+<div id="popup_menu_div">
+<div data-role="popup" id="popup_menu1" data-tolerance="0,0" data-corners="false" data-theme="b" >
+<div data-role="collapsible-set" style="margin:0;width:20em;" >
+    <div data-role="collapsible">
+      <h3 >效率</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_spc" data-transition="slide" >附件SPC计算器</a></li>
+        <li><a href="#page_start_cost" data-transition="slide">平滑的开机成本</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible">
+      <h3 >乐趣</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_namer" data-transition="slide" >非智能起名机器人</a></li>
+        <li><a href="#" >出生天数</a></li>
+        <li><a href="#" >词频统计</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" >
+      <h3 >关于</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_about"  data-transition="slide">关于</a></li>
+        <li><a href="#" >作者</a></li>
+        <li><a href="#" >兴趣</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+</div>
+
+<!-------------------------起名机器人------------------------->
+<div data-role="page" id="page_namer">
+  <div data-role="header" data-position="fixed"   data-theme="b" > 
+  <a href="#popup_menu3" data-role="button" data-rel="popup" data-icon="bars" data-theme="a" data-transition="slidedown">功能</a>
+    <h1>非智能起名机器人</h1>
+    <a href="#page_home" data-role="button" data-icon="home" class="ui-btn-right"data-theme="a" >首页</a> </div>
+  <div data-role="content">
+    <form>
+      <label for="text_family_name">姓</label>
+      <input type="text" name="family_name" id="text_family_name"  placeholder="输入姓">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>性别</legend>
+        <label for="radio_girl">女</label>
+        <input type="radio" name="sex" id="radio_girl" value="girl" >
+        <label for="radio_boy">男</label>
+        <input type="radio" name="sex" id="radio_boy" value="boy" checked>
+        <label for="radio_sex">你猜</label>
+        <input type="radio" name="sex" id="radio_sex" value="unknown">
+      </fieldset>
+      <label for="range_num_of_char">字数(不含姓)</label>
+      <input type="range" name="num_of_char" id="range_num_of_char" value="2" min="1" max="3" data-highlight="true">
+      <label for="range_num_of_name">生成多少个名字</label>
+      <input type="range" name="num_of_name" id="range_num_of_name" value="10" min="1" max="100" data-highlight="true">
+      <input type="button" id="btn_name" value="一键起名">
+      <div id="div_name">
+        <p>结果</p>
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <ul id="ol_name_left" data-role="listview" data-inset="true">
+            </ul>
+          </div>
+          <div class="ui-block-b">
+            <ul id="ol_name_right" data-role="listview" data-inset="true">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div data-role="footer" >
+    <h2>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h2>
+  </div>
+  <!-------------------------弹出功能菜单------------------------->
+<div id="popup_menu_div">
+<div data-role="popup" id="popup_menu3" data-tolerance="0,0" data-corners="false" data-theme="b" >
+<div data-role="collapsible-set" style="margin:0;width:20em;" >
+    <div data-role="collapsible">
+      <h3 >效率</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_spc" data-transition="slide" >附件SPC计算器</a></li>
+        <li><a href="#page_start_cost" data-transition="slide">平滑的开机成本</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible">
+      <h3 >乐趣</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_namer" data-transition="slide" >非智能起名机器人</a></li>
+        <li><a href="#" >出生天数</a></li>
+        <li><a href="#" >词频统计</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" >
+      <h3 >关于</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_about"  data-transition="slide">关于</a></li>
+        <li><a href="#" >作者</a></li>
+        <li><a href="#" >兴趣</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+</div>
+
+<!-------------------------开机成本页面------------------------->
+<div data-role="page" id="page_start_cost">
+  <div data-role="header" data-position="fixed"   data-theme="b" > 
+  <a href="#popup_menu4" data-role="button" data-rel="popup" data-icon="bars" data-theme="a">功能</a>
+    <h1>平滑的开机成本</h1>
+    <a href="#page_home" data-role="button" data-icon="home" class="ui-btn-right"data-theme="a" >首页</a> </div>
+  <div data-role="content">
+    <form>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>选择电压</legend>
+        <label for="radio_HV">高压</label>
+        <input type="radio" name="voltage" id="radio_HV" value="HV" >
+        <label for="radio_MV">中低压</label>
+        <input type="radio" name="voltage" id="radio_MV" value="MV">
+      </fieldset>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>选择线芯数</legend>
+        <label for="radio_one_core">单芯</label>
+        <input type="radio" name="num_core" id="radio_one_core" value="1" >
+        <label for="radio_three_core">三芯</label>
+        <input type="radio" name="num_core" id="radio_three_core" value="3">
+      </fieldset>
+      <label for="text_length">长度(米)</label>
+      <input type="text" name="length" id="text_length" placeholder="输入长度(米)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <label for="text_HV_cost">高压开机成本(元)</label>
+      <input type="text" name="HV_cost" id="text_HV_cost" placeholder="输入系统导出的高压开机成本(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <input type="button" id="btn" value="计算开机成本">
+      <label for="textarea_result">计算结果</label>
+      <textarea name="result" id="textarea_result" value="计算结果"></textarea>
+    </form>
+    <div id="set_up" data-role="collapsible">
+      <h2>参数设置</h2>
+      <form>
+        <label>收全额的长度(米)</label>
+        <input type="text" name="full_cost_length" id="text_full_cost_length" value="100"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+        <label>收全额的长度(米)</label>
+        <input type="text" name="full_cost_length" id="text_full_cost_length" value="100"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      </form>
+    </div>
+  </div>
+  <div data-role="footer" >
+    <h2>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h2>
+  </div>
+  <!-------------------------弹出功能菜单------------------------->
+<div id="popup_menu_div">
+<div data-role="popup" id="popup_menu4" data-tolerance="0,0" data-corners="false" data-theme="b" >
+<div data-role="collapsible-set" style="margin:0;width:20em;" >
+    <div data-role="collapsible">
+      <h3 >效率</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_spc" data-transition="slide" >附件SPC计算器</a></li>
+        <li><a href="#page_start_cost" data-transition="slide">平滑的开机成本</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible">
+      <h3 >乐趣</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_namer" data-transition="slide" >非智能起名机器人</a></li>
+        <li><a href="#" >出生天数</a></li>
+        <li><a href="#" >词频统计</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" >
+      <h3 >关于</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_about"  data-transition="slide">关于</a></li>
+        <li><a href="#" >作者</a></li>
+        <li><a href="#" >兴趣</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+</div>
+
+<!-------------------------关于page------------------------->
+<div data-role="page" id="page_about">
+  <div data-role="header" data-position="fixed"   data-theme="b" > <a href="#popup_menu5" data-role="button" data-rel="popup" data-icon="bars" data-theme="a">功能</a>
+    <h1>小桑.net</h1>
+    <a href="#page_home" data-role="button" data-icon="home" class="ui-btn-right"data-theme="a" >首页</a> </div>
+  <div data-role="content">
+    <p>互联网时代，学点儿网站技术，很有必要，关键是还很好玩儿</p>
+    <p>欢迎来到 小桑.net</p>
+  </div>
+  <div data-role="footer" >
+    <h2>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h2>
+  </div>
+  <!-------------------------弹出功能菜单------------------------->
+<div id="popup_menu_div">
+<div data-role="popup" id="popup_menu5" data-tolerance="0,0" data-corners="false" data-theme="b" >
+<div data-role="collapsible-set" style="margin:0;width:20em;" >
+    <div data-role="collapsible">
+      <h3 >效率</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_spc" data-transition="slide" >附件SPC计算器</a></li>
+        <li><a href="#page_start_cost" data-transition="slide">平滑的开机成本</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible">
+      <h3 >乐趣</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_namer" data-transition="slide" >非智能起名机器人</a></li>
+        <li><a href="#" >出生天数</a></li>
+        <li><a href="#" >词频统计</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" >
+      <h3 >关于</h3>
+      <ul data-role="listview" data-set="true" data-theme="a">
+        <li><a href="#page_about"  data-transition="slide">关于</a></li>
+        <li><a href="#" >作者</a></li>
+        <li><a href="#" >兴趣</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+</div>
+
+  
+
+<!-------------------------SPC计算页面------------------------->
+<div data-role="page" id="page_temp">
+  <div data-role="header" data-position="fixed"   data-theme="b" > <a href="#popup_menu" data-role="button" data-rel="popup" data-icon="bars" data-theme="a">功能</a>
+    <h1>小桑.net</h1>
+    <a href="#page_home" data-role="button" data-icon="home" class="ui-btn-right"data-theme="a" >首页</a> </div>
+  <div data-role="content"> </div>
+  <div data-role="footer" >
+    <h2>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h2>
+  </div>
+  <div class="my_menu"></div>
+  
+</div>
+
+<!-------------------------SPC计算页面------------------------->
+<div data-role="page" id="page_temp">
+  <div data-role="header" data-position="fixed"   data-theme="b" > <a href="#popup_menu" data-role="button" data-rel="popup" data-icon="bars" data-theme="a">功能</a>
+    <h1>小桑.net</h1>
+    <a href="#page_home" data-role="button" data-icon="home" class="ui-btn-right"data-theme="a" >首页</a> </div>
+  <div data-role="content"> </div>
+  <div data-role="footer" >
+    <h2>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h2>
+  </div>
+  <div class="my_menu"></div>
+  
+</div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

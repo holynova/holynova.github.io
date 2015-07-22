@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <style>
+    .item
+    {
+
+    }
+    .pic_to_show
+    {
+      width: 100%;
+      height: 800px;
+      -webkit-background-size: 100% 100%;
+      background-size: 100% 100%;
+    }
+    .pic1
+    {
+      background-image: url(img/back1.jpg);
+    }
+
+    .pic2
+    {
+      background-image: url(img/back2.jpg);
+    }
+    .pic3
+    {
+      background-image: url(img/back3.jpg);
+    }
+    #header
+    {
+      margin-top: -780px;
+    }
+
+    #my_show{
+      margin-top: 0px;
+    }
+    .jumbotron
+    {
+      background-color: rgba(0,0,0,0.2);
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class=" center-block">
+
+
+
+
+
+
+
+
+       <div id="my_show" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#my_show" data-slide-to="0" class="active"></li>
+          <li data-target="#my_show" data-slide-to="1"></li>
+          <li data-target="#my_show" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active ">
+
+            <div class="pic_to_show pic1"></div>
+            <!-- <img src="img/back1.jpg" alt="pic1"> -->
+            <div class="carousel-caption">
+             <div id="head_text" class="jumbotron">
+              <h1>声声慢</h1>
+              <p>寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急？雁过也，正伤心，却是旧时相识。</p>
+
+              <p>
+                满地黄花堆积。憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑？梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！
+              </p>
+              <p><a href="#" class="btn btn-primary btn-md" role='button'>更多</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic_to_show pic2"></div>
+          <!-- <img src="img/back2.jpg" alt="pic2"> -->
+          <div class="carousel-caption">
+            <h1>旋转木马2</h1>
+            <p>旋转木马2</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <!-- <img src="img/back3.jpg" alt="pic3"> -->
+          <div class="pic_to_show pic3"></div>
+          <div class="carousel-caption">
+            <h1>旋转木马3</h1>
+            <p>旋转木马3</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#my_show" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#my_show" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> 
+
+
+
+    <div id="header" class="container">
+      <nav id='nav' class="navbar navbar-default">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">LOGO</a>
+        </div>
+        <ul class='nav navbar-nav'>
+          <li><a href="#" class="active">首页</a></li>
+          <li><a href="#">产品</a></li>
+          <li><a href="#">服务</a></li>
+          <li><a href="#">关于</a></li>
+        </ul>
+      </nav>
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+</div>
+
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

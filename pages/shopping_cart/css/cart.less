@@ -1,0 +1,91 @@
+
+@my_blue:#0092C7;
+@my_pink:#F29C9C;
+
+body{
+
+	font-family: Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+	background-color: #eee;
+
+	.container
+	{
+		width: 960px;
+		margin:0 auto;
+		background-color: #fff;
+		.cart
+		{
+			.cart_top
+			{
+				height: 50px;
+			}
+			table
+			{
+				text-align: center;
+				td
+				{
+					width: 20%;
+				}
+				tr.table_head
+				{
+					line-height: 3em;
+					background-color: @my_blue;
+					font-weight: bold;
+					button
+					{
+						display: inline-block;
+					}
+					
+
+				}
+				tr.table_good
+				{
+					width: 250px;
+					td.table_select
+					{
+						background-color: #fff;
+					}
+					td.table_details
+					{
+
+					text-align: left;
+					line-height: 2em;
+					}
+					td.table_unit_price
+					{
+
+					}
+					td.table_num{}
+					td.table_total{
+						span{
+
+						}
+					}
+					td.table_del{
+						button{
+							background-color: red;
+							color: white;
+						}
+					}
+				}
+				tr.table_all
+				{
+					line-height: 3em;
+					background-color: lighten(@my_blue, 10%);
+					font-weight: bold;
+					td.table_all_num
+					{
+
+					}
+					td.table_all_price
+					{
+
+					}
+					button
+					{
+						background-color: red;
+					}
+				}
+			}
+		}
+	}
+}

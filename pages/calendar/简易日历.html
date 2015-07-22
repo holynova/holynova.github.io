@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易日历</title>
+	<link rel="stylesheet" href="../../css/clear.css">
+	<script src="../../script/jquery-1.11.2.min.js"></script>
+	<style>
+		body
+		{
+			background-color: #ccc;
+		}
+		.container
+		{
+			width: 50%;
+			margin: 10px auto;
+			background-color: #fff;
+			height: 500px;
+		}
+
+		.box
+		{
+			width: 90%;
+			margin: 0 auto;
+			background-color: #fff;
+		}
+
+		
+		.box .month_box
+		{
+			width: 30%;
+			background-color: #ccc;
+			float: left;
+			margin: 1%;
+			height: 5em;
+			text-align: center;
+
+
+		}
+		.box .month_box:hover
+		{
+			background-color: #f60;
+			color: white;
+		}
+
+		.clearfix
+		{
+			clear:both;
+		}
+		
+		.string
+		{
+			background-color: #ccc;
+			text-align: center;
+			margin: 1%;
+			width: 94%;
+			font-size: 3em;
+
+		}
+		
+
+	</style>
+
+	<script>
+	var arr = ['立春','小雨','清明','春分','惊蛰','谷雨','立夏','小满','芒种','夏至','小暑','大暑'];
+		$(document).ready(function (){
+			console.log('ready to work');
+
+			var month_boxs = $('.month_box');
+			console.log(month_boxs.length);
+
+			month_boxs.each(function()
+			{
+				$(this).hover(function()
+				{
+					// $(this).css('background-color', '#f60');
+					var my_h1 = $('.string h2');
+					var my_p = $('.string p');
+					my_h1.text($(this).text());
+					my_p.text(arr[$(this).index()]);
+
+
+				});
+			});
+		});
+
+
+
+
+	</script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="box">
+
+
+			<div class="month_box">
+				<h2>1月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>2月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>3月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>4月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>5月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>6月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>7月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>8月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>9月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>10月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>11月</h2>
+				<p>日历</p>
+			</div>
+			<div class="month_box">
+				<h2>12月</h2>
+				<p>日历</p>
+			</div>
+			<div class="string clearfix">
+				<h2>本月活动</h2>
+				<p>啦啦啦啦</p>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>

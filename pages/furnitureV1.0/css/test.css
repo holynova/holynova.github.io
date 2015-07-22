@@ -1,0 +1,10 @@
+.logo{
+	width: 100px;
+	height: 100px;
+	
+	background-color: grey;
+	border-radius: 10%;
+	background-image: url(./img/p02.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}

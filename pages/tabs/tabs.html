@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<link rel="stylesheet" href="clear.css">
+	<style>
+
+		.container
+		{
+			width: 50%;
+			background-color: #eee;
+			margin: 0 auto;
+		}
+		.box
+		{
+			width: 80%;
+			margin:0 auto;
+
+		}
+		.box a
+		{
+			text-decoration: none;
+			display: inline-block;
+			padding: 0 10px;
+
+		}
+		.box a:hover
+		{
+			background-color: #f60;
+			color: white;
+		}
+		.box_title
+		{
+			background-color: #grey;
+			/*border: solid 1px black;*/
+		}
+		.box_title
+		{
+			height: 2em;
+			line-height: 2em;
+		}
+		.box_content
+		{
+			/*height: 100px;*/
+		}
+		.page
+		{
+			
+			display: none;
+			height: 200px;
+			padding:20px;
+			background-color: #f60;
+
+		}
+		.box_content img
+		{
+			width: 50%;
+			float:left;
+
+		}
+		/*.box_content */
+		#page1
+		{
+			display: block;
+		}
+		.active
+		{
+			background-color: green;
+			color: white;
+
+		}
+
+
+	</style>
+	<script>
+
+		window.onload = function ()
+		{
+			var btns= document.getElementsByTagName('a');
+			var pages = document.getElementsByClassName('page');
+			for(var i=0; i<btns.length; i++)
+			{
+				btns[i].index = i;
+				btns[i].onclick = function ()
+				{
+					for(var j=0; j<btns.length; j++)
+					{
+						btns[j].style.backgroundColor = 'white';
+						btns[j].style.color = 'black';
+					}
+
+					this.style.backgroundColor = '#f60';
+					this.style.color = 'white';
+					for(var k=0; k<pages.length; k++)
+					{
+						pages[k].style.display = 'none';
+					}
+					pages[this.index].style.display = 'block';
+
+
+				};
+			}
+
+
+
+		};
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<div class="box_title">
+				<a href="#">页面01</a>
+				<a href="#">页面02</a>
+				<a href="#">页面03</a>
+
+			</div>
+			<div class="box_content">
+				<div class="page" id="page1">
+					<img src="img/01.jpg" alt="">
+					<p>我是页面01</p>
+					<p>我是页面01</p>
+					<p>我是页面01</p>
+				</div>
+				<div class="page" id="page2">
+					<img src="img/02.jpg" alt="">
+					<p>我是页面02</p>
+					<p>我是页面02</p>
+					<p>我是页面02</p>
+				</div>
+				<div class="page" id="page3">
+					<img src="img/03.jpg" alt="">
+					<p>我是页面03</p>
+					<p>我是页面03</p>
+					<p>我是页面03</p>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

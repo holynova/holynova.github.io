@@ -1,0 +1,94 @@
+
+*{
+	font-family:"Microsoft YaHei";
+	/*margin:0 auto;*/
+	vertical-align:  top;
+
+}
+
+#container{
+	width: 1024px;
+	margin: auto;
+	/*width: 800px;*/
+}
+
+#setup,#game{
+	display: inline-block;
+	/*background-color: red;*/
+	/*width:600px;
+	height: 600px;*/
+	/*padding: 100px;*/
+	margin:10px auto;
+	/*background-color: #fff;*/
+	/*color: */
+
+}
+#game{
+	/*border-right: solid 1px grey;*/
+}
+#setup{
+	text-align: left;
+	font-size: 1em;
+	background-color: hsl(120,90%,90%);
+	/*margin:100px;*/
+	padding: 50px;
+	width: 400px;
+	height: 400px;
+
+}
+
+
+#background{
+	background-color: #bdc3c7;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	border-radius: 10px;
+	/*position: relative;*/
+	position: relative;
+}
+
+.box
+{
+	background-color: white;
+	position: absolute;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 2em;
+}
+.box_num
+{
+	font-size: 5em;
+	line-height: 115px;
+
+	/*margin-top: (115px-1em)/2;*/
+	/*background-color: red;*/
+
+	/*margin: 0 auto;*/
+}
+
+#btn_start{
+/*	height: 50px;
+	width: 200px;
+	font-size: 1.5em;
+	background-color: hsl(120,50%,50%);*/
+	display: block;
+
+}
+
+.my_str{
+	display: inline;
+	width: 4em;
+}
+#result
+{
+	font-size: 2em;
+	background-color: red;
+
+}
+
+form
+{
+	background-color: #555555;
+	text-align: center;
+}
