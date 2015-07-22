@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>灵感工厂</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-12'>
+          <h1>灵感发生器</h1>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-6'>
+          <form>
+            <div class="form-group">
+              <label for="food">材料</label>
+              <textarea id='food' class="form-control" placeholder="放入素材"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class='col-md-6'>
+          <form>
+            <div class="form-group">
+              <label for="method">方法</label>
+              <textarea id='method' class="form-control" placeholder="烹调方法"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <button id='btn_make_label' class="btn btn-info">生成标签</button>
+      <button id='btn_make_idea' class="btn btn-success">生成创意</button>
+      <hr/>
+      <div class='row'>
+        <div class='col-md-3'>
+          <form>
+            <div class="form-group">
+              <label for="input_food_num">原料数量</label>
+              <input type="number" class="form-control" id="input_food_num" placeholder="1" value='1'>
+            </div>
+            <div class="form-group">
+              <label for="input_method_num">方法数量</label>
+              <input type="number" class="form-control" id="input_method_num" placeholder="1" value='1'>
+            </div>
+            <div class="form-group">
+              <label for="input_result_num">灵感数量</label>
+              <input type="number" class="form-control" id="input_result_num" placeholder="1" value='20'>
+            </div>
+            
+            
+            
+          </form>
+        </div>
+      </div>
+      <hr/>
+      <div class='row'>
+        <div class='col-md-3'>
+          <label for="food_labels">材料</label>
+          <br/>
+          <div id='food_labels'></div>
+        </div>
+        <div class='col-md-3'>
+          <label for="method_labels">方法</label>
+          <br/>
+          <div id='method_labels'></div>
+        </div>
+        <div class='col-md-6'>
+          <label for="idea_labels">结论</label>
+          <br/>
+          <div id='idea_labels'></div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
