@@ -19,44 +19,43 @@
     <div data-role="navbar">
       <ul>
         <li><a href="#page_home" class="ui-btn-active ui-state-persist" data-icon="home" data-transition="flip">主页</a></li>
-        <li><a href="#page_calculator" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_calculator" data-icon="star" data-transition="flip">高效工作</a></li>
         <li><a href="#page_lab" data-icon="carat-d" data-transition="flip">实验室</a></li>
         <li><a href="#page_about" data-icon="user" data-transition="flip">关于</a></li>
       </ul>
     </div>
   </div>
-  <div data-role="content">
-    <form>
-      <fieldset data-role="controlgroup" data-type="horizontal">
-        <legend>选择产品</legend>
-        <label for="bonus_radio_110">110kV</label>
-        <input type="radio" name="product_type" id="bonus_radio_110" value="110" >
-        <label for="bonus_radio_220">220kV</label>
-        <input type="radio" name="product_type" id="bonus_radio_220" value="220" >
-        <label for="bonus_radio_MV">中压附件</label>
-        <input type="radio" name="product_type" id="bonus_radio_MV" value="MV_acc" >
-        <label for="bonus_radio_acc">附件的附件</label>
-        <input type="radio" name="product_type" id="bonus_radio_acc" value="acc" >
-      </fieldset>
-      <label for="text_unit_price">单价(元)</label>
-      <input type="text" name="unit_price" id="text_unit_price" placeholder="输入单价(元)"
-      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
-      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
-      <label for="text_num">数量</label>
-      <input type="text" name="num" id="text_num" placeholder="输入数量"
-      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
-      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
-      <label for="text_standerd_price">出厂价(元)</label>
-      <input type="text" name="standerd_price" id="text_standerd_price" placeholder="输入出厂价(元)"
-      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
-      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
-      <input type="button" id="btn_bonus" value="计算奖金">
-      <label for="textarea_bonus">计算结果</label>
-      <textarea name="result" id="textarea_bonus" value="计算结果"></textarea>
-    </form>
+  <div data-role="content"> <br>
+    <div data-role="collapsible" data-theme="a">
+      <h3 >给你们</h3>
+      <ul data-role="listview" data-set="true">
+        <li><a href="#page_work_spc" >附件SPC计算器</a></li>
+        <li><a href="#" >平滑的开机成本</a></li>
+        <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" data-theme="b">
+      <h3 >逗你玩</h3>
+      <ul data-role="listview" data-set="true">
+        <li><a href="#page_lab" >非智能起名机器人</a></li>
+      <li><a href="#" >出生天数</a></li>
+      <li><a href="#" >词频统计</a></li>
+      <li><a href="#" >虚位以待</a></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" data-theme="c">
+      <h3 >关于作者</h3>
+      <ul data-role="listview" data-set="true">
+    	<li><a href="#page_about" >关于</a></li>
+      <li><a href="#" >作者</a></li>
+      <li><a href="#" >兴趣</a></li>
+      <li><a href="#" >虚位以待</a></li>
+            </ul>
+    </div>
+    
   </div>
   <div data-role="footer">
-    <h1>Powered by jQuery-mobile 2014-11 </h1>
+    <h4>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h4>
   </div>
 </div>
 <div data-role="page" id="page_calculator">
@@ -65,7 +64,7 @@
     <div data-role="navbar">
       <ul>
         <li><a href="#page_home" data-icon="home" data-transition="flip">主页</a></li>
-        <li><a href="#page_calculator" class="ui-btn-active ui-state-persist" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_calculator" class="ui-btn-active ui-state-persist" data-icon="star" data-transition="flip">高效工作</a></li>
         <li><a href="#page_lab" data-icon="carat-d" data-transition="flip">实验室</a></li>
         <li><a href="#page_about" data-icon="user" data-transition="flip">关于</a></li>
       </ul>
@@ -73,6 +72,7 @@
   </div>
   <div data-role="content">
     <form>
+    <h2>平滑的开机成本</h2>
     <fieldset data-role="controlgroup" data-type="horizontal">
       <legend>选择电压</legend>
       <label for="radio_HV">高压</label>
@@ -114,7 +114,7 @@
 </div>
 </form>
 <div data-role="footer">
-  <h1>Powered by jQuery-mobile 2014-11 </h1>
+  <h4>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h4>
 </div>
 </div>
 <div data-role="page" id="page_lab" data-position="fixed">
@@ -123,7 +123,7 @@
     <div data-role="navbar">
       <ul>
         <li><a href="#page_home"  data-icon="home" data-transition="flip">主页</a></li>
-        <li><a href="#page_calculator" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_calculator" data-icon="star" data-transition="flip">高效工作</a></li>
         <li><a href="#page_lab" class="ui-btn-active ui-state-persist" data-icon="carat-d" data-transition="flip">实验室</a></li>
         <li><a href="#page_about" data-icon="user" data-transition="flip">关于</a></li>
       </ul>
@@ -164,7 +164,7 @@
     </form>
   </div>
   <div data-role="footer">
-    <h1>Powered by jQuery-mobile 2014-11 </h1>
+    <h4>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h4>
   </div>
 </div>
 <div data-role="page" id="page_about">
@@ -173,20 +173,81 @@
     <div data-role="navbar">
       <ul>
         <li><a href="#page_home"  data-icon="home" data-transition="flip" >主页</a></li>
-        <li><a href="#page_calculator" data-icon="star" data-transition="flip">开机成本</a></li>
+        <li><a href="#page_calculator" data-icon="star" data-transition="flip">高效工作</a></li>
         <li><a href="#page_lab" data-icon="carat-d" data-transition="flip">实验室</a></li>
         <li><a href="#page_about" class="ui-btn-active ui-state-persist" data-icon="user" data-transition="flip">关于</a></li>
       </ul>
     </div>
   </div>
   <div data-role="content">
+    <h2>工作辅助</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#page_home">附件SPC计算器</a></li>
+      <li><a href="#page_calculator">平滑的开机成本</a></li>
+      <li><a href="#page_lab">非智能起名机器人</a></li>
+      <li><a href="#">附件SPC计算器</a></li>
+    </ul>
+    <h2>工作辅助</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#page_home">附件SPC计算器</a></li>
+      <li><a href="#page_calculator">平滑的开机成本</a></li>
+      <li><a href="#page_lab">非智能起名机器人</a></li>
+      <li><a href="#">附件SPC计算器</a></li>
+    </ul>
     <p>学习前端技术</p>
     <p>利用jQuery-mobile做了一个简单的web-app</p>
     <p>请关注我的微信公共号"明阅光"</p>
     <p>2014年11月29日</p>
   </div>
   <div data-role="footer">
-    <h1>Powered by jQuery-mobile 2014-11 </h1>
+    <h4>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h4>
+  </div>
+</div>
+<div data-role="page" id="page_work_spc">
+  <div data-role="header" >
+    <h1>小桑.net</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page_home"  data-icon="home" data-transition="flip">主页</a></li>
+        <li><a href="#page_calculator" data-icon="star" data-transition="flip" class="ui-btn-active ui-state-persist">高效工作</a></li>
+        <li><a href="#page_lab" data-icon="carat-d" data-transition="flip">实验室</a></li>
+        <li><a href="#page_about" data-icon="user" data-transition="flip">关于</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <form>
+      <h2>附件SPC计算器</h2>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>选择产品</legend>
+        <label for="bonus_radio_110">110kV</label>
+        <input type="radio" name="product_type" id="bonus_radio_110" value="110" >
+        <label for="bonus_radio_220">220kV</label>
+        <input type="radio" name="product_type" id="bonus_radio_220" value="220" >
+        <label for="bonus_radio_MV">中压附件</label>
+        <input type="radio" name="product_type" id="bonus_radio_MV" value="MV_acc" >
+        <label for="bonus_radio_acc">附件的附件</label>
+        <input type="radio" name="product_type" id="bonus_radio_acc" value="acc" >
+      </fieldset>
+      <label for="text_unit_price">单价(元)</label>
+      <input type="text" name="unit_price" id="text_unit_price" placeholder="输入单价(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <label for="text_num">数量</label>
+      <input type="text" name="num" id="text_num" placeholder="输入数量"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <label for="text_standerd_price">出厂价(元)</label>
+      <input type="text" name="standerd_price" id="text_standerd_price" placeholder="输入出厂价(元)"
+      	onkeyup="this.value=this.value.replace(/[^\d]/g,'') " 
+      	onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " />
+      <input type="button" id="btn_bonus" value="计算奖金">
+      <label for="textarea_bonus">计算结果</label>
+      <textarea name="result" id="textarea_bonus" value="计算结果"></textarea>
+    </form>
+  </div>
+  <div data-role="footer">
+    <h4>怕什么真理无穷，进一寸有一寸的欢喜。——胡适</h4>
   </div>
 </div>
 <script type="text/javascript" src="main.js"></script>
