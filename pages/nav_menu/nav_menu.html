@@ -7,9 +7,15 @@
 	<script src="../../script/jquery-1.11.2.min.js"></script>
 	<link rel="stylesheet" href="../../css/clear.css">
 	<style>
+		body
+		{
+			background-color: #ccc;
+		}
 		.container
 		{
-			width: 50%;
+
+			font-family: Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+			width: 600px;
 			margin: 0 auto;
 			background-color: #ccc;
 			position: relative;
@@ -23,7 +29,7 @@
 			/*position: absolute;*/
 			/*height: 3em;*/
 			text-align: center;
-			font-size: 0.8em;
+			/*font-size: 0.8em;*/
 			line-height: 4em;
 
 		}
@@ -31,11 +37,15 @@
 		{
 			text-decoration: none;
 			display: block;
+			color: white;
 		}
 		.menu_box a:hover
 		{
 			/*font-size: 2em;*/
-			background-color: #f60;
+			/*background-color: #f60;*/
+			font-size: 1.2em;
+			font-weight: bold;
+
 		}
 		.menu_box>nav>ul
 		{
@@ -45,22 +55,22 @@
 
 		.menu_class_0
 		{
-			width: 24.5%;
+			width: 30%;
 			/*font-weight: bold;*/
 			/*display: inline;*/
-			background-color: #00ABD8;
+			background-color: #00C3D9;
 			float: left;
 			border-right: 1px solid white;
 		}
 		.menu_class_1
 		{
 			padding-left: 20px;
-			background-color: #008972;
+			background-color: #0099BF;
 		}
 		.menu_class_2
 		{
 			padding-left: 40px;
-			background-color: #EFC028;
+			background-color: #9CECF7;
 		}
 		.menu_class_0,.menu_class_1,.menu_class_2
 		{
@@ -81,12 +91,13 @@
 			/*padding-top: 10em;*/
 			/*padding-top: 3em;*/
 			padding: 1em;
-			margin-top: 3em;
+			margin-top: 5em;
 			background-color: #eee;
 			/*padding: 5%;*/
 			line-height: 2em;
 			position: absolute;
 			z-index: -10;
+			transition:all 0.5s;
 
 		}
 
@@ -94,7 +105,7 @@
 	</style>
 
 	<script>
-		var color_arr=['#00ABD8','#008972','#EFC028'];
+		var color_arr=['#00C3D9','#0099BF','#9CECF7'];
 		$(document).ready(function() 
 		{
 			var menu0 =  $('.menu_class_0');
@@ -232,8 +243,7 @@
 					</ul>
 				</li>
 				
-				<li class="menu_class_0">0级菜单3</li>
-				<li class="menu_class_0">0级菜单4</li>
+				
 			</ul>
 
 			<!-- <p id="menu1">鼠标悬浮菜单</p>
