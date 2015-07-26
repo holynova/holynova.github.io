@@ -15,7 +15,7 @@ body{
 
 		.cart
 		{
-			margin: 0 auto;
+			margin: 0 10px;
 			.cart_top
 			{
 				height: 50px;
@@ -30,63 +30,74 @@ body{
 				}
 				tr.table_head
 				{
-					line-height: 3em;
-					background-color: @my_blue;
+					// line-height: 2em;
+					background-color: lighten(@my_blue, 10%);
 					font-weight: bold;
 					button
 					{
 						display: inline-block;
+					}
+					.table_select
+					{
+						background-color: @my_pink;
+						button
+						{
+							display: block;
+						}
 					}
 					
 
 				}
 				tr.table_good
 				{
-					width: 250px;
-					td.table_select
+					&:hover
 					{
-						background-color: #fff;
-					}
-					td.table_details
-					{
+						background-color: lighten(@my_blue, 30%);					}
+						width: 250px;
+						td.table_select
+						{
+							background-color: #fff;
+						}
+						td.table_details
+						{
 
-					text-align: left;
-					line-height: 2em;
-					}
-					td.table_unit_price
-					{
-
-					}
-					td.table_num{}
-					td.table_total{
-						span{
+							text-align: left;
+							line-height: 2em;
+						}
+						td.table_unit_price
+						{
 
 						}
+						td.table_num{}
+						td.table_total{
+							span{
+
+							}
+						}
+						td.table_del{
+							button{
+								background-color: red;
+								color: white;
+							}
+						}
 					}
-					td.table_del{
-						button{
+					tr.table_all,tr.table_all_checked
+					{
+						line-height: 3em;
+						background-color: lighten(@my_blue, 20%);
+						font-weight: bold;
+						td.table_all_num
+						{
+
+						}
+						td.table_all_price
+						{
+
+						}
+						button
+						{
 							background-color: red;
-							color: white;
-						}
-					}
-				}
-				tr.table_all,tr.table_all_checked
-				{
-					line-height: 3em;
-					background-color: lighten(@my_blue, 10%);
-					font-weight: bold;
-					td.table_all_num
-					{
-
-					}
-					td.table_all_price
-					{
-
-					}
-					button
-					{
-						background-color: red;
-						color:white;
+							color:white;
 						// border: none;
 					}
 				}

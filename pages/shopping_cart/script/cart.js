@@ -37,12 +37,15 @@ $(document).ready(function()
 	//删除一行
 	$('table').on('click','.btn_del_line',delete_line);
 
-	
+	// //每行悬浮变色
+	// $('table').on('mouseover','td',function(){
+	// 	$(this).css('background-color', '#ccc');
+	// });
 });
 
 function init()
 {
-	for(var i=0;i<4;i++)
+	for(var i=0;i<9;i++)
 	{
 		add_random_good();
 	}
@@ -50,10 +53,10 @@ function init()
 }
 function add_random_good()
 {
-	var price = parseInt(Math.random()*999+1);
-	var num = parseInt(Math.random()*100+1);
-	var total_price = price *num;
-
+	var price = parseFloat(Math.random()*999+1).toFixed(2);
+	var num = parseInt(Math.random()*10+1);
+	var total_price = parseFloat(price *num).toFixed(2);
+	var name = creat_random_name();
 
 	var a_book = '\
 	<tr class="table_good">\
@@ -62,7 +65,7 @@ function add_random_good()
 	</td>\
 	<td class="table_details">\
 	<div class="pic"></div>\
-	<div class="name">我是第' + cnt + '本书</div>\
+	<div class="name">'+cnt+" "+name+'</div>\
 	<div class="detail">\
 	</div>\
 	</td>\
@@ -82,7 +85,7 @@ function add_random_good()
 	</td>\
 	</tr>\
 	' 
-	$('table').append(a_book);
+	$('.table_all').before(a_book);
 	renew_all();
 	cnt += 1;
 	// renew_all();
@@ -99,8 +102,8 @@ function num_add_one()
 	my_num_span.text(num);
 
 	//数量变化后更新本行的总价
-	var unit_price = parseInt($(this).parent('.table_num').siblings('.table_unit_price').children('span').text());
-	var total_price = unit_price * num;
+	var unit_price = parseFloat($(this).parent('.table_num').siblings('.table_unit_price').children('span').text()).toFixed(2);
+	var total_price = parseFloat(unit_price * num).toFixed(2);
 	$(this).parent('.table_num').siblings('.table_total').children('span').text(total_price);
 	renew_all();
 }
@@ -117,8 +120,8 @@ function num_del_one()
 	my_num_span.text(num);
 
 	//数量变化后更新本行的总价
-	var unit_price = parseInt($(this).parent('.table_num').siblings('.table_unit_price').children('span').text());
-	var total_price = unit_price * num;
+	var unit_price = parseFloat($(this).parent('.table_num').siblings('.table_unit_price').children('span').text()).toFixed(2);
+	var total_price = parseFloat(unit_price * num).toFixed(2);
 	$(this).parent('.table_num').siblings('.table_total').children('span').text(total_price);
 	renew_all();
 }
@@ -139,11 +142,11 @@ function renew_selected_line()
 	checked_item = $('.table_good :checked').length;
 	$('.table_good :checked').parents('.table_good').each(function(){
 		checked_num += parseInt($(this).find('.table_num span').text());
-		checked_price +=parseInt($(this).find('.table_total span').text());
+		checked_price += parseFloat($(this).find('.table_total span').text());
 	});
 	$('.checked_item span').text(checked_item);
 	$('.checked_num span').text(checked_num);
-	$('.checked_price span').text(checked_price);
+	$('.checked_price span').text(checked_price.toFixed(2));
 
 }
 
@@ -162,9 +165,9 @@ function renew_total_line()
 
 
 	$('.span_total_price').each(function(){
-		all_price += parseInt( $(this).text());
+		all_price += parseFloat( $(this).text());
 	});
-	$('.table_all_price').text('总计'+all_price+'元');
+	$('.table_all_price').text('总计'+all_price.toFixed(2)+'元');
 
 
 	
@@ -208,7 +211,16 @@ function delete_all()
 {
 	if (confirm('确定删除所有商品?'))
 	{
-		renew_all();
 		$('.table_good').remove();
+		renew_all();
 	};
+}
+
+function creat_random_name()
+{
+	var name='';
+	var brands=['格力','美的','奥克斯','海尔','科龙','格兰仕','TCL','志高','海信','三菱电机','松下','大金','长虹','统帅','扬子','富士通','春兰','奥力','SKG','小艾'];
+	var goods =['平板电视','空调','冰箱','洗衣机','家庭影院','烟机','灶具','热水器','消毒柜','洗碗机','冷柜','冰吧','酒柜','净化器','净水设备','微波炉','吸尘器','电饭煲'];
+	name = brands[parseInt(Math.random()*(brands.length))] + goods[parseInt(Math.random()*(goods.length))];
+	return name;
 }

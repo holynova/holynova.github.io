@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡
+	</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.wrapper
+		{
+			width: 800px;
+			margin: 0 auto;
+			/*background-color: #eee;*/
+		}
+		p
+		{
+			/*font-weight: bold;*/
+			line-height: 3em;
+		}
+		.tabs
+		{
+			background-color: #f5f5f5;
+			border: 1px solid #ddd;
+			max-width: 750px;
+			/*height: 1000px;*/
+
+		}
+		.tab_head
+		{			
+			font-size: 0px;
+		}
+		.tab_head li
+		{
+			display: inline-block;
+			width: 70px;
+			font-size: 15px;
+			line-height: 40px;
+			text-align: center;
+			border-right: 1px solid #ddd;
+		}
+		
+		.tab_head li:hover
+		{
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.tab_head li.on
+		{
+			background-color: #fff;
+			border-top: solid 3px #f60;
+			border-right: solid 1px #ddd;
+		}
+		.tab_head,.tab_body
+		{
+			list-style: none;
+		}
+		.tab_body
+		{
+			background-color: #FFF;
+			height: 350px;
+			text-align: center;
+			padding: 2em;
+		}
+		.tab_body li
+		{
+			display:  none;
+		}
+		.tab_body li img
+		{
+			height: 300px;
+
+			float: left;
+			padding: 0 2em;
+		}
+		.tab_body li p
+		{
+			line-height: 2em;
+			font-size: 0.9em;
+		}
+		.tab_body li h3
+		{
+			line-height: 3em;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p><b>普通选项卡</b> <small>jQuery</small></p>
+		<div class="tabs">
+			<ul class="tab_head">
+				<li class="on">王维</li>
+				<li>李白</li>
+				<li>辛弃疾</li>
+			</ul>
+			<ul class="tab_body">
+				<li>
+					<img src="1.jpg" alt="山居秋暝1">
+					<h3>山居秋暝</h3>
+					<p>空山新雨后，天气晚来秋。</p>
+					<p>明月松间照，清泉石上流。</p>
+					<p>竹喧归浣女，莲动下渔舟。</p>
+					<p>随意春芳歇，王孙自可留。</p>
+				</li>
+				<li>
+					<img src="2.jpg" alt="山居秋暝2">
+					<h3>望庐山瀑布</h3>
+					<p>日照香炉生紫烟，遥看瀑布挂前川。</p>
+					<p>飞流直下三千尺，疑是银河落九天。</p>
+				</li>
+				<li>
+					<img src="3.jpg" alt="山居秋暝3">
+					<h3>青玉案·元夕</h3>
+					<p>东风夜放花千树。更吹落、星如雨。宝马雕车香满路。
+					凤箫声动，玉壶光转，一夜鱼龙舞。 </p><br>
+					<p>蛾儿雪柳黄金缕,笑语盈盈暗香去。众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。</p>
+				</li>
+			</ul>
+		</div>
+		<div class="tabs">
+			
+		</div>
+		
+	</div>
+	<script src="..\..\script\jquery-1.11.2.min.js"></script>
+	<script src="tabs2.0.js"></script>
+</body>
+</html>
