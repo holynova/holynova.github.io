@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Sprite特效</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<style>
+		body
+		{
+			font-family: Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+			background-color: #ccc;
+			font-size: 1em;
+		}
+		.warpper
+		{
+			width: 400px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+		}
+		.star_pic
+		{
+			width: 50px;
+			height: 50px;
+			
+			/*background-color: #f60;*/
+			border: 20px solid #ccc;
+
+			background:url('star.png') no-repeat;
+			/*background-size: 100% auto;*/
+
+		}
+
+		.whole_pic
+		{
+			width: 50px;
+			height: 600px;
+			/*background: url('star.png') no-repeat;*/
+			background-image: url('star.png');
+			/*padding: 20px;*/
+			background-color: #eee;
+			border: 20px solid #fff;
+			
+		}
+		span{
+			color: red;
+		}
+
+
+	</style>
+	<script src="..\..\script\jquery-1.11.2.min.js"></script>
+	<script>
+
+		$(document).ready(function() {
+			$('#star_selector').change(function(){
+				var pos = ($('#star_selector').val()-1)*50;
+				// console.log('0px '+(pos-1)*50+'px');
+				$('.star span').text(pos);
+				$('.star_pic').css('background-position', '0px '+(pos)*(-1)+'px');
+
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div class="warpper">
+		<h3>CSS Sprite演示</h3>
+		<div class="star">
+
+			<form action="">
+				<select name="select_star" id="star_selector">
+					<option value="1">白羊座(03.21-04.19)</option>
+					<option value="2">金牛座(04.20-05.20)</option>
+					<option value="3">双子座(05.21-06.21)</option>
+					<option value="4">巨蟹座(06.22-07.22)</option>
+					<option value="5">狮子座(07.23-08.22)</option>
+					<option value="6">处女座(08.23-09.22)</option>
+					<option value="7">天秤座(09.23-10.23)</option>
+					<option value="8">天蝎座(10.24-11.22)</option>
+					<option value="9">射手座(11.23-12.21)</option>
+					<option value="10">摩羯座(12.22-01.19)</option>
+					<option value="11">水瓶座(01.20-02.18)</option>
+					<option value="12">双鱼座(02.19-03.20)</option>
+
+
+				</select>
+			</form>
+			<div class="star_pic"></div>
+			<!-- <p>选择了:<span></span></p> -->
+			<p>background-position: 0px <span>0</span>px;</p>
+			<hr>
+			<p>完整的图:</p>
+			<div class="whole_pic">
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
