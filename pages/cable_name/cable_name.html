@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>电缆型号解析</title>
+	
+	<style>
+		body
+		{
+			font-family: Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+
+ 
+		}
+		.container
+		{
+			background-color: #eee;
+			width: 800px;
+			margin:0 auto;
+			padding: 20px;
+			line-height: 2em;
+		}
+		button
+		{
+			width: 600px;
+			height: 2em;
+		}
+		input
+		{
+			width: 600px;
+			height: 2em;
+			padding-left: 5px;
+		}
+		textarea
+		{
+			width: 600px;
+			padding-left: 5px;
+
+		}
+		.explain
+		{
+			line-height: 1.2em;
+		}
+		.explain dt
+		{
+			font-size: 1em;
+			color: red;
+		}
+		.explain dd
+		{
+			font-size: 0.8em;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<div class="container">
+		<h2>电缆型号翻译</h2>
+		<input type="text" placeholder='YJLW03' id='cable_type'>
+		<br>
+		<button class="btn_go">翻译</button>
+		<br>
+		
+		<textarea name="" id="output" cols="30" rows="10">
+
+		</textarea>
+		<div class="explain"></div>
+	<script src="..\..\script\jquery-1.11.2.min.js"></script>
+	<script src="translater.js"></script>
+	</div>
+
+	
+</body>
+</html>
