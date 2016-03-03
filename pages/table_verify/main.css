@@ -1,0 +1,45 @@
+body{background-color: #eee;}
+div#wrpper
+{
+	width: 400px;
+	/*height: 600px;*/
+	margin:0 auto;
+	padding:  2em;
+	border: 1px black dashed;
+	background-color: white;
+
+}
+li{color: #f60}
+.menu
+{
+	visibility: hidden;
+	background-color: #eee;
+
+}
+.menu ul li a
+{
+	text-decoration: none;
+	list-style-type: none;
+	
+}
+
+div#my_form
+{
+	padding: 2em;
+	background-color: #ddd;
+
+}
+div#my_form label
+{
+	display: block;
+}
+span.error_msg
+{
+	/*color: red;*/
+	padding-left: 1em;
+	/*font-style: bold;*/
+}
+div#my_form input
+{
+	width: 10em;
+}

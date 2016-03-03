@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="wrpper">
+	<h1>js表单验证</h1>
+		<p>带错误提示效果</p>
+		<div id="my_form">
+
+			<form action="#" method="post" accept-charset="utf-8">
+				<label>输入手机号:11位数字
+					<br>
+					<input id="input_phone" type="text" name="phone" value="" placeholder="请输入数字"><span id="error_phone" class="error_msg"></span>
+				</label>
+				<br>
+				<label>密码:4位及以上英文字母
+					<br>
+					<input id="input_passwd" type="text" name="passwd" value="" placeholder="请输入密码"><span id="error_passwd" class="error_msg"></span>
+				</label>
+				<br>
+				<label>密码重复:4位及以上英文字母
+					<br>
+					<input id="input_passwd_again" type="text" name="passwd_again" value="" placeholder="请输入密码"><span id="error_passwd_again" class="error_msg"></span>
+				</label>
+				<br>
+
+				<input id="input_submit" type="submit" name="" value="注册">
+			</form>
+		</div>
+	</div>
+
+</body>
+<!-- <script src='main.js'></script> -->
+<script src="verify.js"></script>
+</html>
