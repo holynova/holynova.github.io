@@ -6,30 +6,36 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<div id="wrpper">
-	<h1>js表单验证</h1>
-		<p>带错误提示效果</p>
+	<div id="wrapper">
+		<h1>js表单验证</h1>
+		<ol>
+			<li>带错误提示效果</li>
+			<li>获得焦点时，输入框变大</li>
+			<li>获得焦点时，文字自动全选</li>
+		</ol>
 		<div id="my_form">
-
 			<form action="#" method="post" accept-charset="utf-8">
-				<label>输入手机号:11位数字
+				<label>输入手机号<small>(11位数字)</small>
 					<br>
 					<input id="input_phone" type="text" name="phone" value="" placeholder="请输入数字"><span id="error_phone" class="error_msg"></span>
 				</label>
 				<br>
-				<label>密码:4位及以上英文字母
+				<label>密码:<small>(4位及以上数字、英文字母)</small>
 					<br>
-					<input id="input_passwd" type="text" name="passwd" value="" placeholder="请输入密码"><span id="error_passwd" class="error_msg"></span>
+					<input id="input_passwd" type="password" name="passwd" value="" placeholder="请输入密码"><span id="error_passwd" class="error_msg"></span>
 				</label>
 				<br>
-				<label>密码重复:4位及以上英文字母
+				<label>再次输入密码:<small>(4位及以上数字、英文字母)</small>
 					<br>
-					<input id="input_passwd_again" type="text" name="passwd_again" value="" placeholder="请输入密码"><span id="error_passwd_again" class="error_msg"></span>
+					<input id="input_passwd_again" type="password" name="passwd_again" value="" placeholder="请输入密码"><span id="error_passwd_again" class="error_msg"></span>
 				</label>
 				<br>
 
 				<input id="input_submit" type="submit" name="" value="注册">
 			</form>
+		</div>
+		<div id="result">
+			
 		</div>
 	</div>
 
