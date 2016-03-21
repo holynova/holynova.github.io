@@ -9,15 +9,40 @@
 	<div id="wrapper">
 
 		<h3>Rich Editer</h3><small>富文本编辑器</small>
-		<button id="btn_bold">Bold</button>
-		<button id='btn_italic'>Italic</button>
-		<br>
+		<hr>
+		<button id="btn_bold" class="btn" style='font-style: bold;'>B</button>
+		<button id='btn_italic' class="btn" style='font-style: italic;'>I</button>
+		<button id='btn_underline' class="btn" style='font-style: underline';>U</button>
+		&nbsp;
+		<button id='btn_align_left' class="btn">left</button>
+		<button id='btn_align_center' class="btn">center</button>
+		<button id='btn_align_right' class="btn">right</button>
+		&nbsp;
+		<button id='btn_clear_style' class="btn">Clear Style</button>
+		<button id='btn_clear' class="btn">Clear Content</button>
+		<button id='btn_preview' class="btn">预览</button>
+				
+		<select name="font_size" id='font_size_select'>
+			<option value="1">Fontsize:1</option>
+			<option value="2">Fontsize:2</option>
+			<option value="3">Fontsize:3</option>
+			<option value="4">Fontsize:4</option>
+			<option value="5">Fontsize:5</option>
+			<option value="6">Fontsize:6</option>
+			<option value="7">Fontsize:7</option>
+		</select>
+
+		<hr>
 		<iframe  id='editor'>
-			hello world
+			this is an  iframe.
 		</iframe>
 <!-- 		<div class="editable" id="rich_edit" contentEditable>
 			hello world
 		</div> -->
+		<hr>
+		<div id="preview">
+			
+		</div>
 	</div>
 	<script src="rich_edit.js"></script>
 </body>

@@ -2,21 +2,31 @@ body{background-color: #eee;}
 body{font-family: Microsoft YaHei , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;	background-color: #fff;}
 div#wrapper
 {
-	width: 600px;
+	/*width: 600px;*/
 	/*height: 600px;*/
 	margin:0 auto;
 	padding:  2em;
 	border: 1px black dashed;
 	/*background-color: #DA3610;*/
 	background-color: #ccc;
-
+	
 }
 
-div#rich_edit
+iframe#editor
 {
-	width: 500px;
-	height: 400px;
+	/*width: 80%;*/
+	/*height: 400px;*/
+	width: 80%;
 	background-color: white;
 	padding: 1em;
 	border: 1px dashed black;
+}
+button
+{
+	/*width: 40px;*/
+	line-height: 2em;
+}
+div#preview{
+	width: 80%;
+	background-color: #FAF5F5;
 }
