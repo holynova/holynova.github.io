@@ -29,4 +29,5 @@ button
 div#preview{
 	width: 80%;
 	background-color: #FAF5F5;
+	padding: 1em;
 }
