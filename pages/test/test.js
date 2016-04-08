@@ -8,17 +8,17 @@ function window_load_handler()
 	{
 		"title": "Journey to the west",
 		"authors": ["Wu Chengen"],
-		year:1997
+		year:1997,
 	},
 	{
 		"title": "Red Building",
 		"authors": ["Cao","Gao"],
-		year:1998
+		year:1998,
 	},
 	{
 		"title": "Three Kindoms",
 		"authors": ["Luo,Guanzhong"],
-		"year":1997
+		"year":1997,
 	}];
 	// books = JSON.parse(my_json);
 	books = my_json;
@@ -35,7 +35,7 @@ function window_load_handler()
 			if((xhr.status >= 200 && xhr.status <300) || xhr.status == 304)
 			{
 				console.log('success '+xhr.responseText);
-				console.log('xhr.status = '+xhr.status);
+				console.log('xhr.status = '+xhr.status+" des = "+xhr.statusText);
 				document.getElementById('from_server').innerHTML = xhr.responseText;
 			}
 			else
@@ -56,3 +56,9 @@ function window_load_handler()
 	}
 
 }
+
+var make_get_url = function(url,name,value){
+	url += url.indexOf('?') == -1?"?":"&";
+	url += encodeURIComponent(name)+'='+encodeURIComponent(value);
+	return url;
+};

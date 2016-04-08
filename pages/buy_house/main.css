@@ -1,0 +1,71 @@
+*
+{
+	font-family:"Microsoft YaHei";
+	/*margin:0 auto;*/
+	vertical-align:  top;
+	/*color: #fff;*/
+}
+
+body{
+	background-color: #1a1a1d;
+	
+}
+input
+{vertical-align: middle;
+width: 100px;
+/*text-align: right;*/
+padding-left: 1em;
+}
+
+div.wrapper
+{
+	width: 90%;
+	margin:0 auto;
+	line-height: 2em;
+	padding-left: 2em;
+}
+div.wrapper h1
+{
+	color: #fff;
+}
+label
+{
+	width: 200px;
+	display:inline;
+	/*background-color: #fff;*/
+}
+
+
+span.label_txst
+{
+	width: 150px;
+	/*display: inline;*/
+	/*background-color: #f60;*/
+	text-align: right;
+	display: inline-block;
+
+}
+
+div.wrapper div.left,div.right
+{
+	width: 100%;
+	display: block;
+	padding: 10px;
+}
+div.wrapper div.left
+{
+background-color: #fc5c5d;
+}
+div.wrapper div.right
+{
+background-color: #bbbcbe;
+}
+
+input.tax_rate{
+	/*width: 80px;*/
+}
+
+div.right div.col_one
+{
+	height: 
+}

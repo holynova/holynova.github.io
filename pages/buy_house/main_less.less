@@ -1,0 +1,107 @@
+@item_height:100px;
+body
+{
+	font-family:"Microsoft YaHei";
+	background-color: #1a1a1d;
+	line-height: 2em;
+	div.wrapper
+	{	
+		margin:0 auto;
+		input.btn_go
+		{
+			width:50%;
+			
+			height:50px;
+		}
+		label
+		{
+			span.label_text
+			{
+				width: 150px;
+				text-align: right;
+				display: inline-block;
+			}
+			input
+			{
+				padding-left:10px;
+				width:80px;
+			}
+		}
+		div.left,div.right
+		{
+		width: 100%;
+		display: block;
+		padding: 10px;	
+		margin:0;
+		}
+		div.left
+		{
+			background-color: #fc5c5d;
+		}
+		div.right
+		{
+			background-color: #bbbcbe;
+			div.col_one,div.col_two
+			{
+				display:inline-block;
+				border: dashed black 1px;
+				height: @item_height*7;
+			}
+			div.col_one
+			{
+				width:30%;
+				background-color: #f60;
+			}
+			div.col_two
+			{
+				width:60%;
+				div.col_two_up
+				{
+					height:@item_height*2;
+					background-color: #eee;
+					display:inline-block;
+					div.col_two_up_left,div.col_two_up_right
+					{
+						width:45%;
+						height:@item_height*2;
+						display:inline-block;
+
+					}
+					div.col_two_up_left
+					{
+				
+					}
+					div.col_two_up_right
+					{
+					}
+				}
+				div.col_two_down
+				{
+					height:@item_height*5;
+					display:inline-block;
+					div.col_two_up_left,div.col_two_up_right
+					{
+						width:45%;
+						height:@item_height*5;
+						display:inline-block;
+
+					}
+					div.col_two_up_left
+					{
+				
+					}
+					div.col_two_up_right
+					{
+					}
+				}
+				div.col_two_up,div.col_two_down
+				{
+					display:inline-block;
+				}
+				
+			}
+
+		}
+
+	}
+}
