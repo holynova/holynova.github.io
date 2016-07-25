@@ -1,0 +1,27 @@
+body{
+	background-color: #011;
+}
+#wrapper{
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+	border: dashed 1px #fff;
+	text-align: center;
+	color: #fff;
+	font-size:33px;
+	padding: 1em;
+
+}
+#wrapper p{
+	color:#fff;
+	font-size: 33px;
+
+}
+#wrapper select{
+	font-size:30px;
+}
+#wrapper span{
+	// border:1px #fff solid;
+	font-weight: bold;
+	color:#f60;
+}
