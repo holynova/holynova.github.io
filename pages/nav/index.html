@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nav</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+			list-style-type: none;
+			font-size: 14px;
+
+		}
+		a{
+			text-decoration: none;
+			color:#000;
+		}
+		a:hover{
+			background-color: #000;
+			color:#fff;
+			/*background-color: #eee;*/
+		}
+		body{
+			background-color: #fff;
+		}
+		#wrapper{
+			width: 1000px;
+			margin:0 auto;
+			position: relative;
+			background-color: #eee;
+
+
+		}
+		#wrapper .horizon ul{
+			height:50px;
+			background-color: #F3C5C5;
+
+		}
+		.horizon ul li{
+			display: inline-block;
+			width: 100px;
+		}
+		.horizon ul li a{
+			height: 50px;
+			line-height: 50px;
+			display: block;
+			text-align: center;
+		}
+
+		/*#wrapp*/
+		#wrapper .vertical{
+			position: absolute;
+			top:50px;
+			width: 100%;
+
+		}
+		#wrapper .vertical .left{
+			width: 30%;
+			position: absolute;
+			left: 0;
+			background-color: #B1BCE3;
+
+
+		}
+		#wrapper .vertical .left li{
+			/*width: 50px;*/
+			display: block;
+			height: 50px;
+
+		}
+		#wrapper .vertical .left li a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+		#wrapper .vertical .right{
+			width: 70%;
+			position: absolute;
+			background-color: #92E999;
+			right: 0;
+			padding: 30px;
+			line-height: 28px;
+			box-sizing: border-box;
+		}
+		.left,.right{
+			height: 1000px;
+		}
+		h3{
+			font-size: 14px;
+			line-height: 42px;
+			font-weight: bold;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="horizon">
+			<ul>
+				<li><a href="">导航1</a></li>
+				<li><a href="">导航2</a></li>
+				<li><a href="">导航3</a></li>
+				<li><a href="">导航4</a></li>
+				<li><a href="">导航5</a></li>
+				<li><a href="">导航6</a></li>
+				<li><a href="">导航7</a></li>
+				<li><a href="">导航8</a></li>
+			</ul>
+		</div>
+		<div class="vertical">
+			<div class="left">
+				<ul>
+					<li><a href="">导航1</a></li>
+					<li><a href="">导航2</a></li>
+					<li><a href="">导航3</a></li>
+					<li><a href="">导航4</a></li>
+					<li><a href="">导航5</a></li>
+					<li><a href="">导航6</a></li>
+					<li><a href="">导航7</a></li>
+					<li><a href="">导航8</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
+
+				<p> 
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				</p>
+
+				<h3>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
+				<p> 
+				"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+				</p>
+				
+				<h3>1914 translation by H. Rackham</h3>
+
+				<p>
+				"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+				</p>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>

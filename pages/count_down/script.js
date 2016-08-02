@@ -15,17 +15,17 @@ window.onload = function(){
 	new Festival('劳动节',5,1),
 	new Festival('儿童节',6,1),
 	new Festival('国庆节',10,1),
-	new Festival('我生日',10,18),
-	]
-
+	new Festival('我生日',10,18),]
 	//生成下拉菜单option选项
 	var selecter = document.getElementById('select_festivals');
 	for(var i = 0; i<festivals.length; i++){
-		item = festivals[i];
-		console.log(item.name+"是"+item.month+"月"+item.day+"日");
+		var item = festivals[i];
+		// console.log(item.name+"是"+item.month+"月"+item.day+"日");
 		var option = document.createElement('option');
 		option.setAttribute('value',i);
 		option.text = item.name;
+		// console.log(item.name);
+		// option.firstChild.data = item.name;
 		selecter.appendChild(option);
 	}
 	change_fest();
@@ -60,8 +60,8 @@ function renew_countdown(){
 function unit_test(){
 	// console.log(get_next_fest(10,1));
 	// console.log(get_next_fest(5,1));
-	str = date_to_str(new Date());
-	console.log(str);
+	// str = date_to_str(new Date());
+	// console.log(str);
 }
 function date_to_str(date){
 	//将一个date对象转换成日期字符串

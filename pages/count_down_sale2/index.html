@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拍卖</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="wrapper">
+
+		<div id="pic_box" class="box">
+			<p>【第一次拍卖】浙BWV223的梅赛德斯-奔驰牌小型汽车</p>
+			<img src="img\car.jpg">
+		</div>
+		<div id="info_box" class="box">
+			<div class = 'text_box' id="price">当前价 <span id="span_price">999</span> 元</div>
+			<div class = 'text_box' id="time">倒计时 <span id="count_down">x时x分x秒</span></div>
+			
+			<div class = 'text_box' id="bid">
+				出价
+				<div id="tag_state">正在拍卖</div>
+			</div>
+			<div id="date_box" >
+				<div id="show_date">
+					<p>开始时间</p>
+					<p>结束时间</p>
+				</div>
+				<hr>
+				<div id="set_date">
+					<label>开始时间<input type="text" id = "input_start" value=""></label>
+					<br>
+					<label>结束时间<input type="text" id="input_end" value=""></label>
+					<br>
+					<input type="button" name="" value="设定时间" id = 'btn_set_time'>
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
