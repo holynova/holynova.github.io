@@ -6,8 +6,8 @@ window.onload = function(){
 	function show_detailed_movie(){
 		var target = event.target || event.srcElement;
 		var tag = target.tagName.toUpperCase();
-		console.log(event.type+' '+target.className+' '+target);
-		if(tag == 'A' || tag == 'IMG' || tag == 'DIV') {
+		console.log(event.type+' '+target.className+' '+target +' '+tag);
+		if(tag == 'DIV') {
 			var img = target.getElementsByTagName('img')[0];
 			if(get_style(img,'display') == 'none'){
 				img.style.display = 'inline-block';
@@ -17,8 +17,8 @@ window.onload = function(){
 	function hide_detailed_movie(){
 		var target = event.target || event.srcElement;
 		var tag = target.tagName.toUpperCase();
-		console.log(event.type+' '+target.className+' '+target);
-		if(tag == 'A' || tag == 'IMG' || tag == 'DIV') {
+		console.log(event.type+' '+target.className+' '+target+' '+tag);
+		if(tag == 'DIV' || tag == '1A' || tag == '1IMG') {
 			var img = target.getElementsByTagName('img')[0];
 			if(get_style(img,'display') != 'none'){
 				img.style.display = 'none';
