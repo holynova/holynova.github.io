@@ -1,34 +1,21 @@
 window.onload = function(){
-	var movies = document.getElementById('content').getElementsByTagName('li');
-	var content = document.getElementById('content');
-	EventUtil.addHandler(content,'mouseover',show_detailed_movie);
-	EventUtil.addHandler(content,'mouseout',hide_detailed_movie);
-	function show_detailed_movie(){
-		var target = event.target || event.srcElement;
-		var tag = target.tagName.toUpperCase();
-		console.log(event.type+' '+target.className+' '+target +' '+tag);
-		if(tag == 'DIV') {
-			var img = target.getElementsByTagName('img')[0];
-			if(get_style(img,'display') == 'none'){
-				img.style.display = 'inline-block';
-			}
+	var movie_boxs= document.querySelectorAll('#content ul li div.movie_box');
+	for(var i=0; i<movie_boxs.length; i++){
+		EventUtil.addHandler(movie_boxs[i],'mouseover',show_or_hide);
+		EventUtil.addHandler(movie_boxs[i],'mouseout',show_or_hide);
+	}
+	function show_or_hide(){
+		var display = '';
+		if(event.type == 'mouseover'){
+			display = 'inline-block';
+		}
+		else if(event.type == 'mouseout' ){
+			display = 'none';
+		}
+		if(display){
+			this.querySelectorAll('img')[0].style.display = display;
 		}
 	}
-	function hide_detailed_movie(){
-		var target = event.target || event.srcElement;
-		var tag = target.tagName.toUpperCase();
-		console.log(event.type+' '+target.className+' '+target+' '+tag);
-		if(tag == 'DIV' || tag == '1A' || tag == '1IMG') {
-			var img = target.getElementsByTagName('img')[0];
-			if(get_style(img,'display') != 'none'){
-				img.style.display = 'none';
-			}
-		}
-	}
-
-
-
-
 }
 //兼容IE的通用事件处理对象
 EventUtil ={
@@ -55,21 +42,19 @@ EventUtil ={
 		}
 	}
 };
-
-function nodes_to_array(nodes){
-	var arr = [];
-	try{
-		arr = Array.prototype.slice.call(nodes);
-	}
-	catch(ex){
-		//奇葩浏览器IE专用代码
-		for(var i=0;i<nodes.length;i++){
-			arr.push(nodes[i]);
-		}
-	}
-	return arr;
-}
-
-function get_style(element,style){
-	return (element.currentStyle || getComputedStyle(element))[style];
-}
+// function nodes_to_array(nodes){
+// 	var arr = [];
+// 	try{
+// 		arr = Array.prototype.slice.call(nodes);
+// 	}
+// 	catch(ex){
+// 		//奇葩浏览器IE专用代码
+// 		for(var i=0;i<nodes.length;i++){
+// 			arr.push(nodes[i]);
+// 		}
+// 	}
+// 	return arr;
+// }
+// function get_style(element,style){
+// 	return (element.currentStyle || getComputedStyle(element))[style];
+// }

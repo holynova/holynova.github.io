@@ -3,34 +3,83 @@
 	margin: 0;
 	font-size: 14px;
 	line-height: 28px;
+	a{
+		text-decoration: none;
+		color: #000;
+	}
 	div{
 		box-sizing: border-box;
 	}
 	ul{
 		list-style-type: none;
-		
 	}
 	#wrapper{
 		margin:0 auto;
 		margin-top: 50px;
 		width: 160px;
 		background-color: #efefef;
+		
 		ul{
 			li{
 				.user_box{
-					div{
-						// padding-left: 20px;
-					border-bottom: 1px solid #ccc;
+					position: relative;
+					border:1px solid #ccc;
+					.user_title,.user_avatar,.user_info{
+						border-bottom: 1px solid #ccc;
 					}
 					.user_title{
-						// border-bottom: 1px solid #ccc;
 						text-align:center;
-
 					}
-					.user_avator{
-						// border-bottom: 1px solid #ccc;
+					.user_avatar{
 						text-align: center;
+						// border:1px solid red;
+						img{
+							// border:1px solid blue;
+						}
+					}
+					.user_detail{
+						display:none;
+						background-color: #ffe;
+						border:1px solid #999;
+						position: absolute;
+						width:480px;
+						height:200px;
+						left: 0px;
+						top:28px;
+						z-index: 10;
+						.user_detail_avatar{
+							width:160px;
+							position:absolute;
+							left: 0;
+							text-align:center;
+							a{
+								display:block;
+								height:20px;
+								line-height:20px;
+							}
+						}
+						.user_detail_data{
+							width:320px;
+							position:absolute;
+							right:0;
+							padding-left:10px;
+							dl{
+								dt{
+									// padding-left:20px;
+								}
+								dd{
+									width:150px;
+									display:inline-block;
+									span{
+										// font-size:10px;
+										// padding-left:20px;
+										width:50%;
+										// display:inline-block;
 
+									}
+								}
+							}
+						}
 					}
 					.user_info{
 						height: 300px;
@@ -38,19 +87,20 @@
 						position: relative;
 						text-align: center;
 						div{
-						width:50%;
-						text-align:left;
-
+							width:50%;
+							text-align:left;
+							p{
+								font-size:12px;
+							}
 						}
 						.user_info_left{
 							position:absolute;
 							left: 0;
-
+							padding-left:20px;
 						}
 						.user_info_right{
 							position: absolute;
 							right:0;
-
 						}
 					}
 				}
