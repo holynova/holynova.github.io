@@ -7,14 +7,21 @@ window.onload = function(){
 	function show_or_hide(){
 		var display = '';
 		if(event.type == 'mouseover'){
-			display = 'inline-block';
+			// display = 'inline-block';
+			// this.style.backgroundColor = "#fff";
+			remove_class(this,'brief');
+			add_class(this,'full');
 		}
 		else if(event.type == 'mouseout' ){
-			display = 'none';
+			remove_class(this,'full');
+			add_class(this,'brief');
+
+			// display = 'none';
+			// this.style.backgroundColor = '#dee7e7';
 		}
-		if(display){
-			this.querySelectorAll('img')[0].style.display = display;
-		}
+		// if(display){
+		// 	this.querySelectorAll('img')[0].style.display = display;
+		// }
 	}
 }
 //兼容IE的通用事件处理对象
@@ -42,6 +49,25 @@ EventUtil ={
 		}
 	}
 };
+
+function add_class(elem,the_class){
+	 elem.className = elem.className +" "+the_class;
+}
+
+
+function remove_class(elem,the_class){
+	var arr_class = elem.className.trim().toLowerCase().split(/\s+/);
+	console.log('before:'+arr_class.join(' '));
+	for(var i=arr_class.length-1; i>=0; i--){
+		if(arr_class[i] == the_class.toLowerCase()){
+			arr_class.pop(arr_class[i]);
+		}
+	}
+	console.log('after:'+arr_class.join(' '));
+	elem.className = arr_class.join(" ");
+
+}
+
 // function nodes_to_array(nodes){
 // 	var arr = [];
 // 	try{
@@ -55,6 +81,6 @@ EventUtil ={
 // 	}
 // 	return arr;
 // }
-// function get_style(element,style){
-// 	return (element.currentStyle || getComputedStyle(element))[style];
-// }
+function get_style(element,style){
+	return (element.currentStyle || getComputedStyle(element))[style];
+}
