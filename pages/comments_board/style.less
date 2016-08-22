@@ -1,0 +1,88 @@
+@box_width:800px;
+*{
+	margin: 0;
+	padding: 0;
+	body{
+		#wrapper{
+			padding:20px;
+			background-color:#eee;
+			width: @box_width;
+			margin:0 auto;
+			p{
+				font-size: 1.5em;
+				line-height:1.5em;
+				font-weight: bold;
+			}
+			div{
+				margin-top:1em;
+				border: 1px solid #ccc;
+				padding: 20px;
+				background-color: #fff;
+				ol{
+					padding-left:10px;
+					li{
+						position: relative;
+						padding:10px 2em 1em;
+						border-bottom: 1px solid #999;
+						line-height:2em;
+						// height:2em;
+						background-color: #eee;
+						span{
+							// display:inline-block;
+						}
+						span.time{
+							// border:1px solid green;
+							border-radius: 3px;
+							background-color:#818CEB;
+							color:white;
+							padding:5px;
+							margin-right:1em;
+						}
+						span.content{
+							// border-radius: 3px;
+							// background-color:#818CEB;
+							// color:white;
+							// padding:5px;
+							margin-right:6em;
+						}
+						a{
+							display: none;
+						}
+					}
+					li:hover{
+						background-color: #E7F6CD;
+						a{
+							display:inline-block;
+							float:right;
+							color: red;
+							position:absolute;
+							right:1em;
+							// padding-right: 1em;
+						}
+					}
+				}
+			}
+			textarea{
+				margin-top:1em;
+				width: @box_width - 22px;
+				height: 100px;
+				padding:10px;
+				text-align: left;
+
+			}
+			input[type = 'button']:last-of-type
+			{
+				width:@box_width;
+				height:30px;
+				margin-top:1em;
+			}
+			input[type = 'button']:nth-of-type(1),input[type = 'button']:nth-of-type(2)
+			{
+				width:@box_width/5;
+				height:30px;
+				margin-top:1em;
+			}
+
+		}
+	}
+}

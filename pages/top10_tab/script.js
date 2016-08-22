@@ -7,21 +7,13 @@ window.onload = function(){
 	function show_or_hide(){
 		var display = '';
 		if(event.type == 'mouseover'){
-			// display = 'inline-block';
-			// this.style.backgroundColor = "#fff";
 			remove_class(this,'brief');
 			add_class(this,'full');
 		}
 		else if(event.type == 'mouseout' ){
 			remove_class(this,'full');
 			add_class(this,'brief');
-
-			// display = 'none';
-			// this.style.backgroundColor = '#dee7e7';
 		}
-		// if(display){
-		// 	this.querySelectorAll('img')[0].style.display = display;
-		// }
 	}
 }
 //兼容IE的通用事件处理对象
