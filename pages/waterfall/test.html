@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		ul li img{
+			width:200px;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var ul = document.querySelector('ul');
+			for(var i=2;i<10;i++){
+				var li = document.createElement('li');
+				li.innerHTML = '<img src="img/'+i+'.jpg">';
+				ul.appendChild(li);
+
+			}
+			var lis = document.querySelectorAll('img')[0];
+			lis.onload = function(){
+				var imgs = document.querySelectorAll('img');
+				for(var j=0;j<imgs.length;j++){
+					console.log(imgs[j].offsetHeight);
+				}	
+			};
+
+
+			
+		}
+
+		// var ul = document.querySelector('ul');
+		// ul.onload = function(){
+		// 	var imgs = document.querySelectorAll('img');
+		// 	for(var j=0;j<imgs.length;j++){
+		// 		console.log(imgs[j].offsetHeight);
+		// 	}	
+		// }
+	</script>
+</head>
+<body>
+<ul>
+	<!-- <li><img src="img/1.jpg"></li> -->
+</ul>
+	
+</body>
+</html>

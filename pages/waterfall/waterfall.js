@@ -16,7 +16,11 @@ window.onload = function()
 	// }
 	for(var j=0;j<20;j++){
 		addOnePic(data[j]);
-
+	}
+	var oLis = document.querySelectorAll('img');
+	for(var k=0;k<oLis.length;k++){
+		console.log(oLis[k].offsetHeight);
+		// console.log(window.getComputedStyle(oLis[k])['height']);
 	}
 
 
@@ -37,9 +41,10 @@ function addOnePic(picBox){
 		aUl.push(oUl[i]);
 	}
 	var str = aUl.map(function(a){
-		return a.offsetHeight;
+		// return a.offsetHeight;
+		return window.getComputedStyle(a)['height'];
 	}).join(',');
-	console.log(str);
+	// console.log(str);
 	aUl.sort(function(a,b){
 		return a.offsetHeight - b.offsetHeight;
 	})
