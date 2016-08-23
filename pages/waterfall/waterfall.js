@@ -1,6 +1,7 @@
 window.onload = function()
 {
 	var data = [];
+	var cntPic = 0;
 	for (var i = 1; i <= 97; i++)
 	{
 		data.push(new PicBox(picSrc = 'img/' + i + '.jpg',title = i));
@@ -14,17 +15,44 @@ window.onload = function()
 	// 	li.innerHTML = data[j].toHTML();
 	// 	aUl[j % 5].appendChild(li);
 	// }
-	for(var j=0;j<20;j++){
-		addOnePic(data[j]);
+	for(var cntPic=0;cntPic<5;cntPic++){
+		addOnePic(data[cntPic]);
 	}
+	// cntPic = j-1;
+
+	EventUtil.addEvent(window,'scroll',loadImgs);
+	EventUtil.addEvent(window,'resize',loadImgs);
+	
+	function loadImgs(){
+		var oUl = document.querySelectorAll('.wrapper .pics ul');
+		// var oWrapper = document.querySelector('.wrapper');
+		//找到最短的ul
+		var aUl = [];
+		for(var i =0 ;i<oUl.length;i++){
+			aUl.push(oUl[i]);
+		}
+
+		aUl.sort(function(a,b){
+			return a.offsetHeight - b.offsetHeight;
+		})
+		var shortestUl = aUl[0];
+		//当最短的ul的下边沿在视口范围内时,加载新的图片
+		if(isInViewPort(shortestUl).bottom){
+			addOnePic(data[cntPic]);
+			cntPic++;
+		}
+
+	}
+
+};
+
+window.onresize = function (){
 	var oLis = document.querySelectorAll('img');
 	for(var k=0;k<oLis.length;k++){
 		console.log(oLis[k].offsetHeight);
 		// console.log(window.getComputedStyle(oLis[k])['height']);
 	}
-
-
-};
+}
 
 function unitTest()
 {
@@ -58,7 +86,7 @@ function addOnePic(picBox){
 //判断一个元素的顶部和底部在不在视口范围内
 function isInViewPort(elem){
 	var browserHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
-	var elemHeight = elem.oDiv.offsetHeight;
+	var elemHeight = elem.offsetHeight;
 	var rect = elem.getBoundingClientRect();
 	var dic = {};
 	dic.top = rect.top >=0 && rect.top < browserHeight;
@@ -100,3 +128,9 @@ function PicBox(picSrc, title, author, detailStr)
 	this.detailStr = detailStr || PicBox.prototype.randChoose(PicBox.prototype.details) + ',' + PicBox.prototype.randChoose(PicBox.prototype.details);
 
 }
+
+var EventUtil = {
+	'addEvent':function(elem,event,func){
+		return elem.attachEvent? elem.attachEvent('on'+event,func):elem.addEventListener(event, func,false);
+	}
+};

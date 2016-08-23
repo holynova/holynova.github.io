@@ -16,18 +16,17 @@
 				var li = document.createElement('li');
 				li.innerHTML = '<img src="img/'+i+'.jpg">';
 				ul.appendChild(li);
-
 			}
-			var lis = document.querySelectorAll('img')[0];
-			lis.onload = function(){
+			//等待渲染
+
+			var lis = document.querySelectorAll('li');
+			var li = lis[0];
+			li.onload = function(){
 				var imgs = document.querySelectorAll('img');
 				for(var j=0;j<imgs.length;j++){
 					console.log(imgs[j].offsetHeight);
 				}	
 			};
-
-
-			
 		}
 
 		// var ul = document.querySelector('ul');
