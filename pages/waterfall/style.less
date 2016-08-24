@@ -1,8 +1,9 @@
-@ul_width:190px;
+@ul_width:200px;
 * {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	font-family: Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }
 body{
 	background-color: #eee;
@@ -11,22 +12,37 @@ body{
 	// width: 100%;'
 	// padding-left:20px;
 	background-color: #eee;
-	width: 1000px;
+	// width: 1000px;
 	margin: 0 auto;
+	position: relative;
+	
 
 	.nav {
-		height: 30px;
-		background-color: #2A9FE5;
+		// height: 30px;
+		h3{display:inline-block;
+			padding:0 2em;}
+			background-color: #0094BC;
+			color:#fff;
+			line-height:50px;
+			font-size:20px;
+			padding-left: 20px;
+		// padding:10px;
 	}
-	ul.colume {
-		width: @ul_width;
-		display: inline-block;
-		position: relative;
-		z-index:0;
+	.pics{
+		// display:;
+		width:90%;
+		margin:0 auto;
+
+		ul.column {
+			width: @ul_width;
+			display: inline-block;
+			position: relative;
+			z-index:0;
 		// float:left;
 		vertical-align: top;
 
 		li {
+			cursor: pointer;
 			// box-shadow: 1px 1px 1px #999;
 			// padding: 10px;
 			margin: 20px 0;
@@ -52,51 +68,52 @@ body{
 			box-shadow: 5px 5px 5px #999;
 		}
 	}
-	.float_ad{
-		display:none;
-		position: fixed;
-		z-index: 100;
-		top:300px;
-		border:1px solid #ccc;
-		background-color: #ccc;
-		padding:10px;
-		img{
-			max-width: 100px;
-		}
+}
+.float_ad{
+	display:none;
+	position: fixed;
+	z-index: 100;
+	top:300px;
+	border:1px solid #ccc;
+	background-color: #ccc;
+	padding:10px;
+	img{
+		max-width: 100px;
+	}
 
-	}
-	.float_ad:hover{
-		background-color: #999;
-	}
-	.float_ad.left{
-		left: 0;
-	}
-	.float_ad.right{
-		right:0;
-	}
-	.mask{
-		display:none;
-		background-color: rgba(0,0,0,0.8);
-		top:0;
-		left: 0;
-		position: fixed;
-		width: 100%;
+}
+.float_ad:hover{
+	background-color: #999;
+}
+.float_ad.left{
+	left: 0;
+}
+.float_ad.right{
+	right:0;
+}
+.mask{
+	display:none;
+	background-color: rgba(0,0,0,0.8);
+	top:0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height:100%;
+	.mask_content{
+		position: absolute;
+		width:100%;
 		height:100%;
-		.mask_content{
-			position: absolute;
-			width:100%;
-			height:100%;
-			text-align: center;
-			color: #fff;
-			img{
-		
+		text-align: center;
+		color: #fff;
+		img{
+
 			height:80%;
 			margin:0 auto;
 			margin-top: 50px;
-			}
-			h1,p{
+		}
+		h1,p{
 
-			}
+		}
 			// background-color:;
 			a{
 				background-color:rgba(255,255,255,0.7) ;

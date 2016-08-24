@@ -7,9 +7,9 @@ function windowLoadHandler() {
 	var data = []; //存储所有picbox数据的全局变量
 	var cntPic = 0; //全局计数器
 	for (var i = 1; i <= 97; i++) {
-		data.push(new PicBox(picSrc = 'img/' + i + '.jpg', title = i));
+		data.push(new PicBox(picSrc = 'img/' + i + '.jpg'));
 	}
-	while (positionToViewPort(oWrapper, -100).bottom <= 0) {
+	while (positionToViewPort(oWrapper, 0).bottom == 0) {
 		loadImgs();
 	}
 	EventUtil.addEvent(window, 'scroll', loadImgs);
