@@ -9,6 +9,10 @@ function windowLoadHandler() {
     for (var i = 1; i <= 97; i++) {
         data.push(new PicBox(picSrc = 'img/' + i + '.jpg'));
     }
+
+    for (var j = 0; j < 10; j++) {
+        loadImgs();
+    }
     while (positionToViewPort(oWrapper, 0).bottom == 0) {
         loadImgs();
     }

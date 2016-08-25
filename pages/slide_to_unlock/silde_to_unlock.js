@@ -27,6 +27,7 @@ function windowLoadHandler() {
                 flagSuccess = true;
                 oBlock.style.background = '#fff url("img/ok.png") no-repeat 50% 50%';
                 oBlock.innerHTML = '';
+                oProgress.classList.add('success');
             }
             var sLeft = iLeft === 0 ? 0 : iLeft + 'px';
             oBlock.style.left = sLeft;
