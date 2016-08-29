@@ -1,10 +1,12 @@
 window.onload = windowLoad;
 
 function windowLoad() {
-    // EventUtil.addEvent(window, 'resize', showAd);
-    // EventUtil.addEvent(window, 'scroll', showAd);
 
-    console.log('ie6:' + isIE(6) + '\n' + 'ie7:' + isIE(7) + '\n' + 'ie8:' + isIE(8) + '\n' + 'ie9:' + isIE(9) + '\n' + 'ie:' + isIE());
+    // console.log('ie6:' + isIE(6) + '\n' + 'ie7:' + isIE(7) + '\n' + 'ie8:' + isIE(8) + '\n' + 'ie9:' + isIE(9) + '\n' + 'ie:' + isIE());
+    if (isIE() && !isIE(7) && !isIE(8) && !isIE(9)) {
+        EventUtil.addEvent(window, 'resize', showAd);
+        EventUtil.addEvent(window, 'scroll', showAd);
+    }
 
 }
 
@@ -25,7 +27,7 @@ function showAd() {
     console.log(top)
     for (var i = 1; i < ads.length; i++) {
         ads[i].style.top = top + "px";
-        console.log(ads[i].style.top);
+        // console.log(ads[i].style.top);
     }
 
 
