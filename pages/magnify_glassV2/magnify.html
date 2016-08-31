@@ -9,14 +9,26 @@
 </head>
 
 <body>
-    <p>放大镜效果</p>
+    <p>任意倍数放大镜</p>
+    <p>
+        <input type="text" name="" value="5" placeholder="输入放大倍数">
+        <input type="button" name="" value="设定放大倍数(1-20)">
+    </p>
+    <p>
+        选择图片
+        <input type="radio" name="pic-radio" value="1" placeholder="">中国画
+        <input type="radio" name="pic-radio" value="2" placeholder="">拉斐尔
+        <input type="radio" name="pic-radio" value="3" checked placeholder="">莫奈
+    </p>
     <div class="wrapper">
         <div class="img-small">
-            <img src="img/s2.jpg" alt="s1">
-            <div class="mask"></div>
+            <div class="img-and-mask">
+                <img src="img/s3.jpg" alt="">
+                <div class="mask"> </div>
+            </div>
         </div>
         <div class="img-big">
-            <img src="img/b2.jpg" alt="b2">
+            <img src="img/b3.jpg" alt="">
         </div>
     </div>
     <script src="magnify.js"></script>

@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    .wrapper {
+        // max-width: 800px;
+        width: 800px;
+        margin: 0 auto;
+        .col {
+            display: inline-block;
+            width: 320px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #F1F1F1;
+            padding: 10px;
+            min-height: 500px;
+            vertical-align: top;
+            position: relative;
+        }
+        span.icon {
+            // display: inline-block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 5px;
+            background: url(img/sprite.png) #ccc -50px 0 no-repeat;
+            border: #ccc solid 10px;
+            z-index: 10;
+            box-shadow: 0 0 5px #000;
+            &:hover {
+                box-shadow: 0 0 20px #000;
+                opacity: 0.8;
+                cursor: move;
+            }
+        }
+    }
+}
