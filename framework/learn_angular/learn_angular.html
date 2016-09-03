@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>learn angular</title>
+    <style type="text/css" media="screen">
+
+    </style>
+</head>
+
+<body>
+    <script src="../../script/angular.min.js"></script>
+    <div class="wrapper" ng-app='myApp' ng-controller="myCtrl">
+        <input type="password" name="" ng-model='a' ng-change='changeHandler()'>
+        <input type="button" name="" value="change" ng-click="btnClick()">
+        <p>输入的内容是{{a}}</p>
+        <ul>
+            <li ng-repeat="name in arr">{{name}}</li>
+        </ul>
+    </div>
+    <script src="learn_angular.js"></script>
+</body>
+
+</html>

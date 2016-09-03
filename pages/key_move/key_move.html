@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>key move</title>
+    <style type="text/css" media="screen">
+* {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        height: 500px;
+        width: 80%;
+        /*background: #A0A0A0;*/
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid red;
+    }
+    
+    #role {
+        width: 82.5px;
+        height: 62.5px;
+        /*background-color: red;*/
+        background-image: url(role.png);
+        /*border: 1px solid red;*/
+        background-position: -82.5px 0;
+        position: absolute;
+    }
+    /* .down1 { background-position: 0 0 } .down2 { background-position: -25% 0 } .down3 { background-position: -75% 0 } .down4 { background-position: -100% 0
+*/
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="role" id='role'>
+        </div>
+    </div>
+    <script src='game.js'></script>
+</body>
+
+</html>
