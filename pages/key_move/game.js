@@ -22,8 +22,8 @@ window.onload = function() {
 
     function move() {
         clearInterval(picTimer);
-        var stepLen = 10,
-            animateInterval = 300;
+        var stepLen = 15,
+            animateInterval = 1;
         if (keys['ArrowDown']) {
             top = Math.min(top + stepLen, role.parentNode.offsetHeight - role.offsetHeight);
             picTimer = setInterval(step('down'), animateInterval);

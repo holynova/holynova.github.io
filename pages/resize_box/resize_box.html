@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>box resize</title>
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        position: relative;
+    }
+    
+    p {
+        /*margin-left auto;*/
+        text-align: center;
+    }
+    
+    .box {
+        position: absolute;
+        left: 500px;
+        top: 100px;
+        height: 300px;
+        width: 300px;
+        background-color: #EAF2BF;
+        cursor: move;
+    }
+    
+    .bar,
+    .corner {
+        position: absolute;
+    }
+    
+    .bar.left,
+    .bar.right {
+        width: 20px;
+        height: 100%;
+        cursor: ew-resize;
+    }
+    
+    .bar.top,
+    .bar.bottom {
+        height: 20px;
+        width: 100%;
+        cursor: ns-resize;
+    }
+    
+    .bar {
+        background-color: #84D8CB;
+    }
+    
+    .corner {
+        background-color: #0E728C;
+        width: 20px;
+        height: 20px;
+        cursor: nwse-resize;
+    }
+    
+    .corner.left.bottom,
+    .corner.right.top {
+        cursor: nesw-resize;
+    }
+    
+    .left {
+        left: 0;
+    }
+    
+    .right {
+        right: 0;
+    }
+    
+    .top {
+        top: 0;
+    }
+    
+    .bottom {
+        bottom: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <p>拖拽边和角缩放,拖拽中间移动</p>
+    <div class="box">
+        <div class="bar top"></div>
+        <div class="bar bottom"></div>
+        <div class="bar left"></div>
+        <div class="bar right"></div>
+        <div class="corner left top"></div>
+        <div class="corner left bottom"></div>
+        <div class="corner right top"></div>
+        <div class="corner right bottom"></div>
+    </div>
+    <script src="resize_box.js"></script>
+</body>
+
+</html>
