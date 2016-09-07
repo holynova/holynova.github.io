@@ -21,16 +21,24 @@
         width: 100%;
         cursor: pointer;
         text-align: center;
-        span {
-            width: 140px;
+        a {
+            width: 130px;
             display: inline-block;
             height: 40px;
             line-height: 40px;
+            cursor: pointer;
+        }
+        input {
+            width: 50px;
         }
     }
     p.button {
         color: @color;
         line-height: 30px;
+        span {
+            border: 1px solid @color;
+            cursor: pointer;
+        }
     }
     table {
         text-align: center;
@@ -58,6 +66,9 @@
                 td.today {
                     // background-color: #F25CF4;
                     border: 2px solid @color;
+                }
+                td.not-current-month {
+                    color: #ccc;
                 }
             }
         }

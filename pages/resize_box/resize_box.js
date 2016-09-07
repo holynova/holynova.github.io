@@ -29,7 +29,7 @@ window.onload = function() {
             curRect = new Rect();
         // console.log(tar.className);
         // e.stopPropagation();
-
+        console.log(Object.prototype.toString.call(tar));
         if (hasClass(tar, 'bar') || hasClass(tar, 'corner')) {
             if (hasClass(tar, 'left')) {
                 curRect.width = Math.max(minSize, rect.width - diffX);

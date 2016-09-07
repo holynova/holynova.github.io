@@ -11,7 +11,13 @@
     <div class="date-picker">
         <table>
             <p class="info">2016年9月5日</p>
-            <p class="picker"><span>&lt</span><span>2016年9月</span><span>&gt</span></p>
+            <p class="picker">
+                <a class="prev-month">&lt</a>
+                <!-- <a class="cur-month">2016年9月</a> -->
+                <input type="text" name="" value="2016" placeholder="" class='input-year'>年
+                <input type="text" name="" value="9" placeholder="" class="input-month">月
+                <a class="next-month">&gt</a>
+            </p>
             <thead>
                 <tr>
                     <td>一</td>
@@ -80,7 +86,8 @@
                 </tr>
             </tbody>
         </table>
-        <p class="button"><span>ok</span> <span>cancel</span> </p>
+        <!-- <p class="button"><span>ok</span> <span>cancel</span> <span>today</span> </p> -->
+        <a href="#" title="">today</a>
     </div>
     <!-- </div> -->
     <script src='date_picker.js'></script>
