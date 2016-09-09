@@ -1,0 +1,46 @@
+//     * {
+//     margin: 0;
+//     padding: 0;
+// }
+body {
+    .wrapper {
+        width: 50%;
+        // text-align: center;
+        margin: 0 auto;
+        .box {
+            margin: 0 auto;
+            position: relative;
+            width: 300px;
+            height: 400px;
+            border: 1px solid #000;
+            overflow: hidden;
+            // overflow: scroll;
+            .content {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 280px - 2*16px;
+                padding: 16px;
+                // padding-right: 1em + 20px;
+            }
+            .scroll-bar {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20px;
+            }
+            .scroll-bar.handle {
+                height: 40px;
+                background-color: #FF7F7f;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            .scroll-bar.slot {
+                height: 100%;
+                background-color: #ccc;
+            }
+        }
+    }
+}
