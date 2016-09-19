@@ -4,32 +4,29 @@ window.onload = function() {
         downMouse = new Mouse(-1, -1),
         rect = new Rect(),
         minSize = 50;
-    EventUtil.addEvent(oBox, 'mousedown', downHandler);
+    EventUtil.addHandler(oBox, 'mousedown', downHandler);
 
-    function downHandler(e) {
-        EventUtil.addEvent(document, 'mousemove', moveHandler);
-        EventUtil.addEvent(document, 'mouseup', upHandler);
-        e = e || event;
-        tar = e.target || e.srcElement,
-            downMouse.x = e.clientX,
-            downMouse.y = e.clientY;
+    function downHandler(event) {
+        EventUtil.addHandler(document, 'mousemove', moveHandler);
+        EventUtil.addHandler(document, 'mouseup', upHandler);
+        event = EventUtil.getEvent(event);
+        tar = EventUtil.getTarget(event);
+        downMouse.x = event.clientX;
+        downMouse.y = event.clientY;
         rect.top = oBox.offsetTop;
         rect.left = oBox.offsetLeft;
         rect.width = oBox.offsetWidth;
         rect.height = oBox.offsetHeight;
-        // e.preventDefault();
-        return false;
+        EventUtil.preventDefault(event);
 
     }
 
-    function moveHandler(e) {
-        e = e || event;
-        var diffX = e.clientX - downMouse.x,
-            diffY = e.clientY - downMouse.y,
+    function moveHandler(event) {
+        event = EventUtil.getEvent(event);
+        var diffX = event.clientX - downMouse.x,
+            diffY = event.clientY - downMouse.y,
             curRect = new Rect();
-        // console.log(tar.className);
-        // e.stopPropagation();
-        console.log(Object.prototype.toString.call(tar));
+        // console.log(Object.prototype.toString.call(tar));
         if (hasClass(tar, 'bar') || hasClass(tar, 'corner')) {
             if (hasClass(tar, 'left')) {
                 curRect.width = Math.max(minSize, rect.width - diffX);
@@ -55,21 +52,16 @@ window.onload = function() {
             curRect.top = rect.top + diffY;
             curRect.set(oBox);
         }
-        // e.preventDefault();
-        return false;
-
+        EventUtil.preventDefault(event);
     }
 
-    function upHandler(e) {
-        e = e || event;
-        console.log('up');
-        EventUtil.removeEvent(document, 'mousemove', moveHandler);
-        EventUtil.removeEvent(document, 'mouseup', upHandler);
-        // e.preventDefault();
-        return false;
-
+    function upHandler(event) {
+        event = EventUtil.getEvent(event);
+        tar = EventUtil.getTarget(event);
+        EventUtil.removeHandler(document, 'mousemove', moveHandler);
+        EventUtil.removeHandler(document, 'mouseup', upHandler);
+        EventUtil.preventDefault(event);
     }
-
 };
 //矩形对象
 var Rect = function(top, left, width, height) {
@@ -77,15 +69,14 @@ var Rect = function(top, left, width, height) {
     this.left = typeof left !== 'undefined' ? left : 'default';
     this.width = typeof width !== 'undefined' ? width : 'default';
     this.height = typeof height !== 'undefined' ? height : 'default';
-
 };
 //设置元素为本矩形的形状和位置
 Rect.prototype = {
-    'set': function(el) {
-        if (this.top !== "default") el.style.top = this.top + 'px';
-        if (this.left !== "default") el.style.left = this.left + 'px';
-        if (this.width !== "default") el.style.width = this.width + 'px';
-        if (this.height !== "default") el.style.height = this.height + 'px';
+    'set': function(event) {
+        if (this.top !== "default") event.style.top = this.top + 'px';
+        if (this.left !== "default") event.style.left = this.left + 'px';
+        if (this.width !== "default") event.style.width = this.width + 'px';
+        if (this.height !== "default") event.style.height = this.height + 'px';
     }
 };
 //记录鼠标坐标的对象
@@ -94,9 +85,13 @@ var Mouse = function(x, y) {
     this.y = y;
 };
 
+function hasClass(elem, className) {
+    var exp = new RegExp('(^| )' + className + "( |$)", 'gi');
+    return exp.test(elem.className);
+}
 //兼容IE的通用事件处理对象
 EventUtil = {
-    addEvent: function(element, type, handler) {
+    addHandler: function(element, type, handler) {
         if (element.addEventListener) {
             element.addEventListener(type, handler, false);
         } else if (element.attachEvent) {
@@ -105,7 +100,7 @@ EventUtil = {
             element['on' + type] = handler;
         }
     },
-    removeEvent: function(element, type, handler) {
+    removeHandler: function(element, type, handler) {
         if (element.removeEventListener) {
             element.removeEventListener(type, handler, false);
         } else if (element.attachEvent) {
@@ -113,18 +108,33 @@ EventUtil = {
         } else {
             element['on' + type] = null;
         }
+    },
+    getWheelDelta: function(event) {
+        if (event.wheelDelta) {
+            return event.wheelDelta;
+        } else {
+            //for firefox
+            return event.detail * -40;
+        }
+    },
+    getEvent: function(event) {
+        return event ? event : window.event;
+    },
+    getTarget: function(event) {
+        return event.target || event.srcElement;
+    },
+    preventDefault: function(event) {
+        if (event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+        }
+    },
+    stopPropagation: function(event) {
+        if (event.stopPropagation) {
+            event.stopPropagation();
+        } else {
+            event.cancelBubble = true;
+        }
     }
 };
-
-function hasClass(el, className) {
-    // if (el.classList) {
-    //     return el.contains(className);
-    // } else {
-    //     var exp = new RegExp('(^| )' + className + "( |$)", 'gi');
-    //     return exp.test(el.className);
-    // }
-
-    var exp = new RegExp('(^| )' + className + "( |$)", 'gi');
-    return exp.test(el.className);
-
-}

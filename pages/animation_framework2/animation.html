@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>animation</title>
+    <style type="text/css" media="screen">
+        *{
+            font-family: Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+        .wrappwer{
+            width: 80%;
+            height: 600px;
+            margin:0 auto;
+            position: relative;
+        }
+        .box{
+            font-size: 10px;
+            height:50px;
+            width:50px;
+            background-color:#9FE0F6;
+            position: relative;
+            top:0;
+            left:0;
+            /*transform: translate(-50%,-50%);*/
+            text-align: center;
+            margin: 10px 0;
+            color:#fff;
+            line-height: 50px;
+
+        }
+        .trigger{
+            background-color: #F29C9C;
+            width:500px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!-- <button type=""></button> -->
+    <div class="trigger">鼠标移入触发</div>
+    <div class="box linear">linear</div>
+    <div class="box speedup">speedup</div>
+    <div class="box slowdown">slowdown</div>
+    <div class="box linear">linear</div>
+    <div class="box speedup">speedup</div>
+    <div class="box slowdown">slowdown</div>
+</div>
+<script src = 'animation.js'></script>
+<script src = 'animate.js'></script>
+<script src = 'basic.js'></script>
+</body>
+</html>
