@@ -1,99 +1,120 @@
 window.onload = function() {
-    // initTable(new Date());
-    // initTable
     var today = new Date(),
         pickedDate = new Date(),
-        shownMonth = pickedDate.getMonth(),
-        shownYear = pickedDate.getFullYear(),
-        shownDate = pickedDate.getDate(),
         oInfo = document.querySelector('.info'),
         prevMonth = document.querySelector('.prev-month'),
         nextMonth = document.querySelector('.next-month'),
         oDatePicker = document.querySelector('.date-picker'),
         oPickYear = document.querySelector('.pick-year'),
-        oPickMonth = document.querySelector('.pick-month');
-
-    showBox(shownYear, shownMonth, shownDate);
+        oPickMonth = document.querySelector('.pick-month'),
+        dateCells = document.querySelectorAll('.date-picker table tbody td');
+    showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
     EventUtil.addHandler(oDatePicker, 'click', clickHandler);
-    // EventUtil.addHandler(oDatePicker,'changed')
 
     function clickHandler(event) {
         event = event || window.event;
         var target = event.target || event.srcElement;
-        if (target.className === 'prev-month') {
-            shownMonth--;
-            if (shownMonth === -1) {
-                shownMonth = 11;
-                shownYear--;
+        // console.log(target);
+        if (hasClass(target.parentNode, 'picker') && target.tagName.toUpperCase() === 'A') {
+            switch (target.className) {
+                case 'prev-year':
+                    pickedDate.setFullYear(pickedDate.getFullYear() - 1);
+                    break;
+                case "next-year":
+                    pickedDate.setFullYear(pickedDate.getFullYear() + 1);
+                    break;
+                case "prev-month":
+                    pickedDate.setMonth(pickedDate.getMonth() - 1);
+                    break;
+                case "next-month":
+                    pickedDate.setMonth(pickedDate.getMonth() + 1);
+                    break;
+                default:
+                    break;
             }
-            showBox(shownYear, shownMonth, shownDate);
-            return false;
-        } else if (target.className === 'next-month') {
-            shownMonth++;
-            if (shownMonth === 12) {
-                shownMonth = 0;
-                shownYear++;
-            }
-            showBox(shownYear, shownMonth, shownDate);
-            return false;
-        } else if (target.className === "prev-year") {
-            shownYear--;
-            if (shownYear <= 1970) {
-                shownYear = 1970;
-            }
-            showBox(shownYear, shownMonth, shownDate);
+            showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
+        }
 
-        } else if (target.className === "next-year") {
-            showBox(++shownYear, shownMonth, shownDate);
+        if (target.tagName.toLowerCase() === 'td') {
+            setChoosen(target.myDate);
 
-        } else if (target.tagName.toLowerCase() === 'td') {
-            if (target.className === 'not-current-month') {
+        } else if (target.className === 'to-today' && target.tagName.toUpperCase() === 'A') {
+            today = new Date();
+            showBox(today.getFullYear(), today.getMonth(), today.getDate());
 
-            } else {
-                pickedDate.setFullYear(shownYear);
-                pickedDate.setMonth(shownMonth);
-                pickedDate.setDate(parseInt(event.target.innerHTML));
-                showBox(shownYear, shownMonth, shownDate);
-                target.className = 'choosen';
+        } else if (hasClass(target, 'pick-year')) {
+            showYearMask();
 
-            }
-        } else if (target.className === '')
+        } else if (hasClass(target, 'pick-month')) {
+            showMonthMask();
+        }
+    }
+
+    function showYearMask() {
+        var yearMask = document.querySelector('.mask.year'),
+            yearCells = yearMask.querySelectorAll('ul li a'),
+            cntYear = pickedDate.getFullYear() - 6;
+        for (var i = 0; i < yearCells.length; i++) {
+            yearCells[i].innerHTML = cntYear++;
+        }
+        yearMask.style.display = 'block';
+
+
+    }
+
+    function showMonthMask() {
+        var monthMask = document.querySelector('.mask.month');
+        monthMask.style.display = 'block';
+
     }
 
     function showBox(year, month, day) {
-        var dateCells = document.querySelectorAll('.date-picker table tbody td'),
-            date = new Date(year, month, 1),
-            today = new Date();
-        shownMonth = month;
-        shownYear = year;
+        var date = new Date(year, month, day);
+
+        pickedDate = new Date(year, month, day);
         oInfo.innerHTML = dateToStr(pickedDate);
         oPickYear.innerHTML = year + '年';
         oPickMonth.innerHTML = (month + 1) + '月';
 
-        // curMonth.innerHTML = year + '年' + (month + 1) + "月";
         date.setDate(-5); //从上个月开始找,找到第一个星期一
         while (date.getDay() !== 1) {
             toTomorrow(date);
         }
         for (var i = 0; i < dateCells.length; i++) {
-
             dateCells[i].innerHTML = date.getDate();
-            toTomorrow(date);
-            if (date.getDate() === day && date.getMonth() === month) {
-                dateCells[i].className = 'choosen';
-            } else if (date.getMonth() !== month) {
+            //每个单元格内有自定义属性myDate,存储了这个格子代表的date对象
+            dateCells[i].myDate = new Date(date.getTime());
+            if (date.getMonth() !== month) {
                 dateCells[i].className = 'not-current-month';
             } else {
                 dateCells[i].className = '';
 
             }
-
-            // dateCells[i].className = date.getMonth() !== month ? 'not-current-month' : '';
-            // dateCells[i].className = date.getDate() !== day ? 'choosen' : '';
-
+            toTomorrow(date);
         }
+        setChoosen(pickedDate);
+    }
+
+    function setChoosen(date) {
+        for (var i = 0; i < dateCells.length; i++) {
+            var cell = dateCells[i],
+                cellDate = cell.myDate;
+            if (date.getFullYear() == cellDate.getFullYear() &&
+                date.getMonth() == cellDate.getMonth() &&
+                date.getDate() == cellDate.getDate()) {
+                cell.className += ' choosen';
+
+            } else {
+                cell.className = cell.className.replace(/choosen/g, '');
+            }
+        }
+        pickedDate = new Date(date.getTime());
+        oInfo.innerHTML = dateToStr(pickedDate);
+
+
     }
 };
+
 
 function dateToStr(date) {
     var weekdays = '日一二三四五六'
@@ -125,3 +146,8 @@ EventUtil = {
         }
     }
 };
+
+
+function hasClass(el, className) {
+    return RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+}

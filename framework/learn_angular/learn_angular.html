@@ -16,7 +16,7 @@
         <input type="button" name="" value="change" ng-click="btnClick()">
         <p>输入的内容是{{a}}</p>
         <ul>
-            <li ng-repeat="name in arr">{{name}}</li>
+            <li ng-repeat="name in arr track by $index">{{name}}</li>
         </ul>
     </div>
     <script src="learn_angular.js"></script>

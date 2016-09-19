@@ -12,9 +12,10 @@ app.controller('myCtrl', function($scope) {
     $scope.a = 'a changed';
     var cnt = 0;
     $scope.changeHandler = function() {
-        $scope.a += cnt;
-        cnt++;
+        // $scope.a += cnt;
+        // cnt++;
         // alert(1);
+        $scope.arr = $scope.a.split('');
     };
     $scope.btnClick = function() {
         $scope.arr = 'world'.split('');
