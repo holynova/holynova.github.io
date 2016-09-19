@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+@color: #89d9bb;
+.date-picker {
+    a{
+        &:hover{
+            color:#fff;
+            background-color: @color;
+            border-radius: 3px;
+        }
+    }
+
+    box-shadow: 0px 0px 20px #ccc;
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 100px;
+    .info {
+        background-color: @color;
+        font-size: 20px;
+        text-align: center;
+        line-height: 60px;
+        color: #fff;
+    }
+    .picker {
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        a {
+            width: 60px;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        input {
+            width: 50px;
+        }
+    }
+
+    table {
+        text-align: center;
+        width: 100%;
+        thead {
+            tr {
+                height: 36px;
+                font-weight: bold;
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    height: 36px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: @color;
+                        color: #fff;
+                    }
+                }
+                td.choosen {
+                    color: #fff;
+                    background-color: @color;
+                }
+                td.today {
+                    // background-color: #F25CF4;
+                    border: 2px solid @color;
+                }
+                td.not-current-month {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+    div.to-today{
+        border-top: 1px solid #000;
+        line-height:30px;
+        height: 30px;
+        text-align:center;
+        a{}
+
+    }
+}
