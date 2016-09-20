@@ -7,9 +7,19 @@ window.onload = function() {
         oDatePicker = document.querySelector('.date-picker'),
         oPickYear = document.querySelector('.pick-year'),
         oPickMonth = document.querySelector('.pick-month'),
-        dateCells = document.querySelectorAll('.date-picker table tbody td');
+        dateCells = document.querySelectorAll('.date-picker table tbody td'),
+        oDateInput = document.querySelector('.date-input');
+
+    var monthMask = document.querySelector('.mask.month'),
+        yearMask = document.querySelector('.mask.year');
     showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
     EventUtil.addHandler(oDatePicker, 'click', clickHandler);
+    EventUtil.addHandler(oDateInput, 'focus', function() {
+        oDatePicker.style.display = "block";
+    })
+    EventUtil.addHandler(oDateInput, 'change', inputChangeHandler);
+
+    unitTest();
 
     function clickHandler(event) {
         event = event || window.event;
@@ -37,34 +47,78 @@ window.onload = function() {
 
         if (target.tagName.toLowerCase() === 'td') {
             setChoosen(target.myDate);
+            oDateInput.value = dateToInputStr(pickedDate);
+            oDatePicker.style.display = 'none';
 
         } else if (target.className === 'to-today' && target.tagName.toUpperCase() === 'A') {
             today = new Date();
             showBox(today.getFullYear(), today.getMonth(), today.getDate());
+            oDateInput.value = dateToInputStr(pickedDate);
+            // oDatePicker.style.display = 'none';
 
         } else if (hasClass(target, 'pick-year')) {
-            showYearMask();
-
+            showYearMask(pickedDate.getFullYear());
         } else if (hasClass(target, 'pick-month')) {
             showMonthMask();
+        } else if (target.parentNode.parentNode === document.querySelector('.mask.month ul')) {
+            // maskChooseMonth(event);
+            var month = parseInt(target.innerHTML) - 1;
+            pickedDate.setMonth(month);
+            setChoosenMonth(month);
+            monthMask.style.display = "none";
+            showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
+
+        } else if (hasClass(target.parentNode, 'picker')) {
+            if (hasClass(target, 'pageup')) {
+                pickedDate.setFullYear(pickedDate.getFullYear() - 10);
+                showYearMask(pickedDate.getFullYear());
+                showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
+
+            } else if (hasClass(target, 'pagedown')) {
+                pickedDate.setFullYear(pickedDate.getFullYear() + 10);
+                showYearMask(pickedDate.getFullYear());
+                showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
+
+            } else if (hasClass(target, 'mask-pick-year')) {
+
+            }
+
+        } else if (target.parentNode.parentNode === document.querySelector('.mask.year ul')) {
+            var year = parseInt(target.innerHTML);
+            pickedDate.setFullYear(year);
+            setChoosenYear(year);
+            yearMask.style.display = 'none';
+            showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
+
+        }
+
+    }
+
+    function inputChangeHandler() {
+        var ms = Date.parse(oDateInput.value);
+        if (!isNaN(ms)) {
+            pickedDate.setTime(ms);
+            showBox(pickedDate.getFullYear(), pickedDate.getMonth(), pickedDate.getDate());
         }
     }
 
-    function showYearMask() {
+    function showYearMask(year) {
         var yearMask = document.querySelector('.mask.year'),
             yearCells = yearMask.querySelectorAll('ul li a'),
-            cntYear = pickedDate.getFullYear() - 6;
-        for (var i = 0; i < yearCells.length; i++) {
-            yearCells[i].innerHTML = cntYear++;
+            cntYear = Math.floor(year / 10) * 10;
+        for (var i = 0; i < 10; i++) {
+            yearCells[i].innerHTML = cntYear;
+            cntYear++;
         }
         yearMask.style.display = 'block';
-
+        setChoosenYear(year);
 
     }
 
     function showMonthMask() {
-        var monthMask = document.querySelector('.mask.month');
         monthMask.style.display = 'block';
+        monthMask.querySelector('.picker .mask-pick-month').innerHTML = (pickedDate.getMonth()) + 1 + "月";
+        addClass(monthMask.querySelectorAll('ul li a')[pickedDate.getMonth()], 'choosen');
 
     }
 
@@ -93,6 +147,26 @@ window.onload = function() {
             toTomorrow(date);
         }
         setChoosen(pickedDate);
+        oDateInput.value = dateToInputStr(pickedDate);
+
+    }
+
+    function setChoosenMonth(month) {
+        var monthCells = document.querySelectorAll('.mask.month ul li a');
+        for (var i = 0; i < monthCells.length; i++) {
+            monthCells[i].className = '';
+        }
+        addClass(monthCells[month], 'choosen');
+    }
+
+    function setChoosenYear(year) {
+        var yearCells = document.querySelectorAll('.mask.year ul li a');
+        for (var i = 0; i < yearCells.length; i++) {
+            yearCells[i].className = '';
+        }
+        addClass(yearCells[year % 10], 'choosen');
+        document.querySelector('.mask.year .picker .mask-pick-year').innerHTML = year;
+
     }
 
     function setChoosen(date) {
@@ -102,23 +176,31 @@ window.onload = function() {
             if (date.getFullYear() == cellDate.getFullYear() &&
                 date.getMonth() == cellDate.getMonth() &&
                 date.getDate() == cellDate.getDate()) {
-                cell.className += ' choosen';
+                // cell.className += ' choosen';
+                addClass(cell, 'choosen');
 
             } else {
+                // removeClass(cell, 'choosen');
                 cell.className = cell.className.replace(/choosen/g, '');
             }
         }
         pickedDate = new Date(date.getTime());
         oInfo.innerHTML = dateToStr(pickedDate);
 
-
     }
 };
-
 
 function dateToStr(date) {
     var weekdays = '日一二三四五六'
     return date.getFullYear() + '年' + (date.getMonth() + 1) + "月" + date.getDate() + "日 周" + weekdays.charAt(date.getDay());
+}
+
+function dateToInputStr(date) {
+    return date.getFullYear() + '-' + to2Bit(date.getMonth() + 1) + "-" + to2Bit(date.getDate());
+}
+
+function to2Bit(n) {
+    return n < 10 ? '0' + n : n;
 }
 
 function toTomorrow(date) {
@@ -147,7 +229,25 @@ EventUtil = {
     }
 };
 
-
 function hasClass(el, className) {
     return RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+}
+
+function addClass(el, className) {
+    if (el.className === "") {
+        el.className = className;
+    } else if (!hasClass(el, className)) {
+        el.className += ' ' + className;
+    }
+}
+
+function removeClass(el, className) {
+    el.className = el.className.replace(new RegExp('^|\\b' + className + '\\b|$', 'gi'), ' ').replace(/\s+/, ' ');
+}
+
+function unitTest() {
+    // var oTest = document.querySelector('.test');
+    // removeClass(oTest, 'test2');
+    // removeClass(oTest, 'choosen');
+
 }
