@@ -99,6 +99,7 @@ function genDatePicker(date) {
         pickedDate.setTime(new Date().getTime());
         update(pickedDate);
     });
+    $('document').click()
 }
 
 // ----------------------------------------------------------
