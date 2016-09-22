@@ -9,168 +9,57 @@
     <script src='date_picker_oop.js'></script>
     <script src='main.js'></script>
     <style type="text/css" media="screen">
-        .mybox{
-            height: 300px;
-            width: 300px;
-            display: inline-block;
-            border:1px solid red;
-        }
+    ul {
+        list-style-type: none;
+    }
+    ol li{
+        height: 2em;
+        line-height: 2em;
+    }
+    
+    body {
+      
+        /*background-color: #ccc;*/
+    }
+    .wrapper{
+          width: 50%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 20px #ccc;
+        border-radius: 5px;
+    }
+    
+    ul li.date {
+        /*display: inline-block;*/
+        width: 200px;
+        height: 50px;
+    }
     </style>
 </head>
 
 <body>
-<!--     <div class="date-picker-wrapper" id = 'date-picker001'>
-        <input type="text" class="date-input" value="2016-5-5">
-        <div class="date-box box">
-            <div class="date-picker picker">
-                <span class="prev-year">&lt&lt</span>
-                <span class="prev-month">&lt</span>
-                <span class="cur-year">2016年</span>
-                <span class="cur-month">1月</span>
-                <span class="next-month">&gt</span>
-                <span class="next-year">&gt&gt</span>
-            </div>
-            <div class="date-cells cells">
-                <table>
-                    <thead>
-                        <tr>
-                            <td>一</td>
-                            <td>二</td>
-                            <td>三</td>
-                            <td>四</td>
-                            <td>五</td>
-                            <td>六</td>
-                            <td>日</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="today">
-                <span class="btn-today">TODAY</span>
-            </div>
-        </div>
-        <div class="year-box box">
-            <div class="year-picker picker">
-                <span class="prev">&lt</span>
-                <span class="cur">data</span>
-                <span class="next">&gt</span>
-            </div>
-            <div class="year-cells cells">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>data</td>
-                            <td>data</td>
-                            <td>data</td>
-                        </tr>
-                        <tr>
-                            <td>data</td>
-                            <td>data</td>
-                            <td>data</td>
-                        </tr>
-                        <tr>
-                            <td>data</td>
-                            <td>data</td>
-                            <td>data</td>
-                        </tr>
-                        <tr>
-                            <td>data</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="month-box box">
-            <div class="month-picker picker">
-                <span>1月</span>
-            </div>
-            <div class="month-cells cells">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>1月</td>
-                            <td>2月</td>
-                            <td>3月</td>
-                        </tr>
-                        <tr>
-                            <td>4月</td>
-                            <td>5月</td>
-                            <td>6月</td>
-                        </tr>
-                        <tr>
-                            <td>7月</td>
-                            <td>8月</td>
-                            <td>9月</td>
-                        </tr>
-                        <tr>
-                            <td>10月</td>
-                            <td>11月</td>
-                            <td>12月</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div> -->
-<div class="mybox box1"></div>
-<div class="mybox box2"></div>
-    <!-- <div class="test test1 test2 choosen">test</div> -->
+    <div class="wrapper">
+        <h3>日期选择器 date picker</h3>
+        <ol>
+            <li>面向对象的组件,有uuid,可以在页面内任意加</li>
+            <li>使用了jQuery</li>
+            <li>可以点选,也可以键盘输入</li>
+            <li>年\月快速翻页</li>
+            <li>年月弹出选择</li>
+        </ol>
+        <ul>
+            <li class="date"></li>
+            <li class="date"></li>
+            <li class="date"></li>
+            <li class="date"></li>
+            <li class="date"></li>
+        </ul>
+        <!-- <p></p> -->
+        <!-- <div class="mybox box1"></div>
+<div class="mybox box2"></div> -->
+        <!-- <div class="test test1 test2 choosen">test</div> -->
+    </div>
 </body>
 
 </html>

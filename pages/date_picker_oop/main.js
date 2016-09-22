@@ -1,11 +1,20 @@
-$('document').ready(function() {
-    var t1 = new DatePicker(document.querySelector('.box1'), 'box1');
-    var t2 = new DatePicker(document.querySelector('.box2'), 'box2');
-
-    // console.log(t1.id);
-    t1.render();
-    t2.render();
-    $(document).click(function() {
-        console.log('t1 = %s,t2 = %s', t1.date, t2.date);
+$(document).ready(function() {
+    var myPickers = [];
+    $('p').text('str');
+    $('ul li.date').each(function() {
+        var myPicker = new DatePicker(this, '');
+        myPickers.push(myPicker);
+        myPicker.render();
+    });
+    var str = '';
+    $('ul li.date date-input').each(function() {
+        var $me = $(this);
+        $(this).on('click', function() {
+            var str = '';
+            for (var i = 0; i < myPickers.length; i++) {
+                str += (i + 1) + ":" + $me.val();
+            }
+            $('p').text('changed');
+        })
     });
 });
