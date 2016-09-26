@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        /*transition: 0.3s;*/
+    }
+    
+    .box {
+        width: 470px;
+        height: 150px;
+        margin: 50px auto;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .box ul {
+        /*width: 470px;*/
+        height: 150px;
+    }
+    
+    .box ul li {
+        width: 470px;
+        height: 150px;
+        float: left;
+    }
+    
+    .box ul li img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .box ol {
+        width: 150px;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        margin-left: -75px;
+    }
+    
+    .box ol li {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #f60;
+        color: #fff;
+        float: left;
+        text-align: center;
+        line-height: 20px;
+        font-size: 10px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    
+    .box ol li.active {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .box span {
+        width: 60px;
+        height: 3em;
+        line-height: 3em;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        margin-top: -1.5em;
+        cursor: pointer;
+        opacity: 0;
+    }
+    
+    .box span:hover {
+        background-color: rgba(255, 0, 0, 0.5);
+        opacity: 1;
+    }
+    
+    .box span.prev {
+        left: 0;
+    }
+    
+    .box span.next {
+        right: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="img\1.jpg" alt=""></li>
+            <li><img src="img\2.jpg" alt=""></li>
+            <li><img src="img\3.jpg" alt=""></li>
+            <li><img src="img\4.jpg" alt=""></li>
+            <li><img src="img\5.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+        <span class="prev">&lt</span>
+        <span class="next">&gt</span>
+    </div>
+    <script src='basic.js'></script>
+    <script src='animate.js'></script>
+    <!-- <script src = 'main.js'></script> -->
+    <script>
+    window.onload = function() {
+        var oBox = document.querySelector('.box'),
+            oUl = oBox.querySelector('ul'),
+            oOl = oBox.querySelector('ol'),
+            aImgs = oUl.querySelectorAll('img'),
+            aBtn = oOl.querySelectorAll('li'),
+            oPrev = oBox.querySelector('span.prev'),
+            oNext = oBox.querySelector('span.next');
+
+
+        var unitWidth = aImgs[0].offsetWidth;
+        var picIndex = 0,
+            len = aImgs.length;
+        oUl.style.width = unitWidth * (len + 2) + 'px';
+        oUl.innerHTML = oUl.children[len - 1].outerHTML + oUl.innerHTML + oUl.children[0].outerHTML;
+        var startMargin = -unitWidth;
+        oUl.style.marginLeft = startMargin + 'px';
+        for(var i =0;i<aBtn.length;i++){
+            aBtn[i].index = i;
+        }
+        
+        EventUtil.addHandler(oBox,'click',clickHandler);
+        function clickHandler(event){
+            event = EventUtil.getEvent(event);
+            var target = EventUtil.getTarget(event);
+            if(target == oNext){
+                picIndex++;
+                if (picIndex == len) {
+                    animate(oUl, {
+                        marginLeft: startMargin - unitWidth * picIndex
+                    }, {
+                        callback: function() {
+                            oUl.style.marginLeft = startMargin + 'px';
+                        }
+                    });
+                    picIndex = 0;
+                } else {
+                    animate(oUl, {
+                        marginLeft: startMargin - unitWidth * picIndex
+                    });
+                }
+                setActiveBtn(picIndex);
+            }else if(target == oPrev){
+                picIndex--;
+                if(picIndex == -1){
+                     animate(oUl, {
+                        marginLeft: startMargin - unitWidth * picIndex
+                    }, {
+                        callback: function() {
+                            oUl.style.marginLeft = startMargin - unitWidth*(len-1) + 'px';
+                        }
+                    });
+                    picIndex = len-1; 
+                }else{
+                     animate(oUl, {
+                        marginLeft: startMargin - unitWidth * picIndex
+                    });
+                } 
+                setActiveBtn(picIndex);  
+            }else if(target.parentNode == oOl){
+                picIndex = target.index;
+                animate(oUl, {
+                        marginLeft: startMargin - unitWidth * picIndex
+                    });
+
+                setActiveBtn(picIndex);
+            }
+        }
+
+        // EventUtil.addHandler(oPrev, 'click', function() {
+        //         picIndex++;
+        //         if (picIndex == len) {
+        //             animate(oUl, {
+        //                 marginLeft: startMargin - unitWidth * picIndex
+        //             }, {
+        //                 callback: function() {
+        //                     oUl.style.marginLeft = startMargin + 'px';
+        //                 }
+        //             });
+        //             picIndex = 0;
+        //         } else {
+        //             animate(oUl, {
+        //                 marginLeft: startMargin - unitWidth * picIndex
+        //             });
+        //         }
+        //         setActiveBtn(picIndex);
+
+        //     });
+
+        function setActiveBtn(index){
+              for (var i = 0; i < aBtn.length; i++) {
+                    aBtn[i].className = "";
+                }
+                aBtn[index].className = 'active';
+        }
+
+    }
+    </script>
+</body>
+
+</html>
