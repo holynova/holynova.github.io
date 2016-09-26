@@ -22,7 +22,7 @@ function animate(el, styles, options) {
         options.duration = 300;
     }
     if (typeof options.easing === 'undefined') {
-        options.easing = 'linear';
+        options.easing = 'slowdown';
     }
     if (typeof options.FPS === 'undefined') {
         options.FPS = 30;
