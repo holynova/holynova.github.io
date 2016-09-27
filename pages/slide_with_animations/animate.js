@@ -129,4 +129,8 @@ function animate(el, styles, options) {
         }
     }
 
+    function getStyle(element, style) {
+        return (element.currentStyle || getComputedStyle(element))[style];
+    }
+
 }

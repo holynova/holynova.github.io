@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+* ul {
+  list-style-type: none;
+}
+* a {
+  text-decoration: none;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 1210px;
+}
+.wrapper .login-bar {
+  font-size: 14px;
+  line-height: 30px;
+  width: 1210px;
+  height: 30px;
+  background-color: #f1f1f1;
+}
+.wrapper .login-bar ul {
+  width: 100%;
+}
+.wrapper .login-bar ul li {
+  float: left;
+}
+.wrapper .login-bar ul li a {
+  padding: 0 5px;
+  color: #666;
+}
+.wrapper .banner-ad {
+  width: 1210px;
+  height: 80px;
+  background-color: red;
+}
+.wrapper .banner-ad img {
+  margin: 0 auto;
+}
+.wrapper .logo-search {
+  width: 1210px;
+  height: 75px;
+  padding-top: 25px;
+}
+.wrapper .logo-search .logo {
+  width: 250px;
+  height: 50px;
+  background-color: #f60;
+}
+.wrapper .logo-search div {
+  float: left;
+  margin-right: 100px;
+}
+.wrapper .entrance .nav {
+  border-bottom: 2px solid #b1191a;
+  padding: 15px 0;
+  height: 15px;
+  line-height: 15px;
+}
+.wrapper .entrance .nav ul li:first-of-type {
+  width: 210px;
+  background-color: #b1191a;
+}
+.wrapper .entrance .nav ul li:first-of-type a {
+  color: #fff;
+}
+.wrapper .entrance .nav ul li {
+  float: left;
+}
+.wrapper .entrance .nav ul li a {
+  padding: 0 5px;
+  color: #b1191a;
+}
+.wrapper .entrance .content div {
+  float: left;
+}
+.wrapper .entrance .content .catalog {
+  width: 210px;
+  background-color: #c81623;
+}
+.wrapper .entrance .content .catalog ul li {
+  height: 32px;
+  line-height: 32px;
+}
+.wrapper .entrance .content .catalog ul li a {
+  font-size: 15px;
+  padding-left: 10px;
+  color: #fff;
+}
+.wrapper .entrance .content .slide {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.wrapper .entrance .content .news-tickets {
+  width: 250px;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #666;
+}
+.wrapper .entrance .content .news-tickets .news {
+  border: 1px solid #ccc;
+  height: 165px;
+  width: 248px;
+}
+.wrapper .entrance .content .news-tickets .news a {
+  padding-left: 10px;
+}
+.wrapper .entrance .content .news-tickets .news p {
+  padding-left: 10px;
+  border-bottom: 1px solid #ccc;
+  height: 34px;
+  line-height: 34px;
+}
+.wrapper .entrance .content .news-tickets .news ul li {
+  height: 25px;
+  line-height: 25px;
+}
+.wrapper .entrance .content .news-tickets .news ul li a {
+  font-size: 10px;
+  color: #666;
+}
+.wrapper .entrance .content .news-tickets .tickets {
+  height: 210px;
+}
+.wrapper .entrance .content .news-tickets .tickets ul li {
+  width: 60px;
+  height: 70px;
+  border: 1px solid #ccc;
+  float: left;
+}
+.wrapper .entrance .content .news-tickets .tickets ul li span {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+}
+.wrapper .entrance .content .news-tickets .ad {
+  margin-top: 10px;
+}
+/*# sourceMappingURL=style.css.map */

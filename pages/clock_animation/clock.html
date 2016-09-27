@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>动画时钟</title>
+    <link rel="stylesheet" href="">
+    <script src="animate.js"></script>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        width: 300px;
+        margin: 50px auto;
+    }
+    
+    .wrapper ul {
+        list-style: none;
+    }
+    
+    .wrapper ul li {
+        width: 24px;
+        height: 35px;
+        overflow: hidden;
+        float: left;
+        /*position: relative;*/
+    }
+    
+    .wrapper ul li img {
+        width: 100%;
+        /*position: absolute;*/
+        /*top: 0;*/
+    }
+    
+    .wrapper ul li span {
+        display: block;
+        line-height: 35px;
+        text-align: center;
+        font-size: 20px;
+    }
+    </style>
+    <script>
+    window.onload = function() {
+        var timer = null;
+        clearInterval(timer);
+        refresh();
+        timer = setInterval(refresh, 1000);
+
+        function refresh() {
+
+            var date = new Date();
+            showClock(date);
+        }
+
+        function showClock(date) {
+            var dateStr = date2Str(date);
+            var aImgs = document.getElementsByTagName('img');
+            for (var i = 0; i < aImgs.length; i++) {
+                animate(aImgs[i], {
+                    marginTop: -35 * parseInt(dateStr.charAt(i))
+                });
+                // aImgs[i].style.marginTop = -35 *parseInt(dateStr.charAt(i)) +"px";
+            }
+        }
+
+        function date2Str(date) {
+            return toDouble(date.getHours()) + toDouble(date.getMinutes()) + toDouble(date.getSeconds());
+        }
+
+        function toDouble(n) {
+            return n < 10 ? '0' + n : '' + n;
+        }
+
+
+    };
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="num.png" alt=""></li>
+            <li><img src="num.png" alt=""></li>
+            <li><span>:</span></li>
+            <li><img src="num.png" alt=""></li>
+            <li><img src="num.png" alt=""></li>
+            <li><span>:</span></li>
+            <li><img src="num.png" alt=""></li>
+            <li><img src="num.png" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>
