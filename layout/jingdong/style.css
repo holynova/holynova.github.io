@@ -172,16 +172,17 @@
   margin-top: 11px;
 }
 .wrapper .entrance .content .news-tickets {
-  width: 248px;
-  margin-left: 11px;
+  width: 249px;
+  margin-left: 10px;
   margin-top: 11px;
   color: #666;
 }
 .wrapper .entrance .content .news-tickets .news {
+  width: 100%;
   border: 1px solid #ccc;
   border-bottom: 0;
   height: 163px;
-  width: 246px;
+  width: 247px;
 }
 .wrapper .entrance .content .news-tickets .news a {
   padding-left: 10px;
@@ -204,23 +205,75 @@
   color: #666;
 }
 .wrapper .entrance .content .news-tickets .tickets {
-  height: 210px;
+  width: 248px;
+  height: 211px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
-.wrapper .entrance .content .news-tickets .tickets table {
-  border-collapse: collapse;
-}
-.wrapper .entrance .content .news-tickets .tickets table td {
-  border: 1px solid #ccc;
-  width: 62px;
-  height: 68px;
+.wrapper .entrance .content .news-tickets .tickets a {
   text-align: center;
-  font-size: 10px;
-}
-.wrapper .entrance .content .news-tickets .tickets table td span {
   display: block;
+  width: 61px;
+  height: 69px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  float: left;
+}
+.wrapper .entrance .content .news-tickets .tickets a div {
+  height: 25px;
+  width: 25px;
+  margin-top: 15px;
+  margin-left: 18px;
+  background: url(imgs/tick-logo-all.png) 0 0 no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a span {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 11px;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(1) div {
+  background: url(imgs/tick-logo-all.png) 0 0px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(2) div {
+  background: url(imgs/tick-logo-all.png) 0 -25px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(3) div {
+  background: url(imgs/tick-logo-all.png) 0 -50px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(4) div {
+  background: url(imgs/tick-logo-all.png) 0 -75px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(5) div {
+  background: url(imgs/tick-logo-all.png) 0 -100px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(6) div {
+  background: url(imgs/tick-logo-all.png) 0 -125px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(7) div {
+  background: url(imgs/tick-logo-all.png) 0 -150px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(8) div {
+  background: url(imgs/tick-logo-all.png) 0 -175px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(9) div {
+  background: url(imgs/tick-logo-all.png) 0 -200px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(10) div {
+  background: url(imgs/tick-logo-all.png) 0 -225px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(11) div {
+  background: url(imgs/tick-logo-all.png) 0 -250px no-repeat;
+}
+.wrapper .entrance .content .news-tickets .tickets a:nth-of-type(12) div {
+  background: url(imgs/tick-logo-all.png) 0 -275px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .ad {
-  margin-top: 5px;
+  width: 249px;
+  margin-top: 4px;
+}
+.wrapper .entrance .content .news-tickets .ad img {
+  width: 100%;
 }
 .wrapper .top-ad {
   margin-top: 11px;
@@ -309,18 +362,62 @@
   overflow: hidden;
 }
 .wrapper .main-class .content .row1 .left .catalog-logo {
-  height: 89px;
+  height: 88px;
   position: absolute;
-  width: 100%;
-  top: 256px;
+  padding-left: 15px;
+  top: 258px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item {
+  width: 100px;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item .icon {
+  margin: 9px;
+  height: 26px;
+  width: 26px;
+  float: left;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item span {
+  font-size: 16px;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(1) .icon {
+  background: url(imgs/clothesicon.png) 0 0px no-repeat;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(2) .icon {
+  background: url(imgs/clothesicon.png) 0 -26px no-repeat;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(3) .icon {
+  background: url(imgs/clothesicon.png) 0 -52px no-repeat;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(4) .icon {
+  background: url(imgs/clothesicon.png) 0 -78px no-repeat;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(5) .icon {
+  background: url(imgs/clothesicon.png) 0 -104px no-repeat;
+}
+.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(6) .icon {
+  background: url(imgs/clothesicon.png) 0 -130px no-repeat;
 }
 .wrapper .main-class .content .row1 .left .catalog-text {
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 127px;
+  height: 97px;
   background-color: #eaebf5;
+  padding: 15px;
+}
+.wrapper .main-class .content .row1 .left .catalog-text > div {
+  float: left;
+  width: 60px;
+  height: 24px;
+  line-height: 24px;
+  color: #111;
+}
+.wrapper .main-class .content .row1 .left .catalog-text > div a {
+  color: #666;
 }
 .wrapper .main-class .content .row1 .right {
   width: 880px;
@@ -391,5 +488,34 @@
 }
 .wrapper .main-class .brands-ad ul li:last-of-type {
   border-right: none;
+}
+.wrapper .footer .banner {
+  width: 1210px;
+  height: 74px;
+  background-color: #f5f5f5;
+  padding-top: 20px;
+  font-size: 0;
+}
+.wrapper .footer .banner a {
+  margin-left: 16px;
+  margin-right: 64px;
+}
+.wrapper .footer .web-map {
+  margin-top: 24px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 50px;
+}
+.wrapper .footer .web-map .col {
+  float: left;
+  width: 200px;
+}
+.wrapper .footer .web-map .col .title {
+  height: 30px;
+}
+.wrapper .footer .web-map .col ul li {
+  height: 22px;
+}
+.wrapper .footer .web-map .col ul li a {
+  color: #666;
 }
 /*# sourceMappingURL=style.css.map */
