@@ -61,6 +61,7 @@
   margin: 0 auto;
 }
 .wrapper .logo-search {
+  position: relative;
   width: 1210px;
   height: 75px;
   padding-top: 25px;
@@ -108,23 +109,27 @@
 .wrapper .logo-search .shopping-cart {
   width: 139px;
   height: 34px;
-  line-height: 34px;
   font-size: 13px;
   border: 1px solid #ccc;
   text-align: center;
   margin: 0;
   background-color: #f9f9f9;
+  position: relative;
 }
 .wrapper .logo-search .shopping-cart img {
-  margin-top: 5px;
+  padding-top: 5px;
 }
 .wrapper .entrance .nav {
   border-bottom: 2px solid #b1191a;
   height: 45px;
   line-height: 45px;
+  vertical-align: bottom;
 }
 .wrapper .entrance .nav * {
   font-size: 16px;
+}
+.wrapper .entrance .nav ul {
+  width: 917px;
 }
 .wrapper .entrance .nav ul li:first-of-type {
   width: 210px;
@@ -132,6 +137,9 @@
 }
 .wrapper .entrance .nav ul li:first-of-type a {
   padding-left: 10px;
+  color: #fff;
+}
+.wrapper .entrance .nav ul li:first-of-type a:hover {
   color: #fff;
 }
 .wrapper .entrance .nav ul li {
@@ -143,6 +151,22 @@
 }
 .wrapper .entrance .nav ul li a:hover {
   color: #b1191a;
+}
+.wrapper .entrance .nav ul li a:last-of-type {
+  padding-right: 10px;
+}
+.wrapper .entrance .nav ul,
+.wrapper .entrance .nav div {
+  float: left;
+}
+.wrapper .entrance .nav > div {
+  position: relative;
+  z-index: -10;
+  margin-top: -80px;
+  margin-left: 25px;
+  height: 125px;
+  width: 268px;
+  overflow: hidden;
 }
 .wrapper .entrance .content .catalog,
 .wrapper .entrance .content .slide,
@@ -501,6 +525,7 @@
   margin-right: 64px;
 }
 .wrapper .footer .web-map {
+  float: left;
   margin-top: 24px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 50px;
@@ -510,12 +535,33 @@
   width: 200px;
 }
 .wrapper .footer .web-map .col .title {
-  height: 30px;
+  height: 36px;
+  font-size: 16px;
 }
 .wrapper .footer .web-map .col ul li {
   height: 22px;
 }
 .wrapper .footer .web-map .col ul li a {
+  font-size: 11px;
   color: #666;
+}
+.wrapper .footer .cover-map {
+  border-bottom: 1px solid #ccc;
+  width: 200px;
+  float: left;
+}
+.wrapper .footer .cover-map > div {
+  height: 170px;
+  width: 200px;
+  background: url(imgs/map.png) 0 -130px no-repeat;
+  padding-bottom: 30px;
+}
+.wrapper .footer .cover-map > div h3 {
+  margin: 20px;
+  font-size: 16px;
+}
+.wrapper .footer .cover-map > div p {
+  line-height: 20px;
+  font-size: 11px;
 }
 /*# sourceMappingURL=style.css.map */
