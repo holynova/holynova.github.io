@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     font-family: Microsoft Yahei;
-    ul {
+    ul,
+    ol {
         list-style-type: none;
         li {}
     }
@@ -24,9 +25,76 @@
     visibility: hidden;
 }
 
+div.slide {
+    position: relative;
+    ul,
+    ol,
+    span {
+        position: absolute;
+    }
+    ul {
+        li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            a {
+                img {
+                    opacity: 0;
+                }
+            }
+        }
+        li.active {
+            a {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    ol {
+        width: 50%;
+        text-align: center;
+        bottom:10%;
+        left:25%;
+        li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: @jd_red;
+            color: #fff;
+            text-align: center;
+        }
+        li.active {
+            background-color: #fff;
+            color: @jd_red;
+        }
+    }
+    span {
+        cursor: pointer;
+        font-size: 20px;
+        text-align: center;
+        top: 40%;
+        width: 10%;
+        height: 10%;
+        // line-height:10%;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #fff;
+    }
+    span.prev {
+        left: 0;
+    }
+    span.next {
+        right: 0;
+    }
+}
+
 @max_width: 1210px;
 @unit_width: 210px;
 @jd_red: #b1191a;
+@jd_red_light: #c81623;
+@jd_grey: #f1f1f1;
 .wrapper {
     margin: 0 auto;
     width: 1210px;
@@ -39,18 +107,62 @@
         position: relative;
         ul {
             position: absolute;
-            li {
+            &>li {
+                border: 1px solid @jd_grey;
+                height: 28px;
                 float: left;
                 a {
+                    font-size: 12px;
                     padding: 0 10px;
                     color: #666;
                     border-right: 1px solid #ccc;
+                    &:hover {
+                        // border:0;
+                        color: #222;
+                    }
                 }
             }
-            li:last-of-type {
+            &>li.city {
+                &:hover {
+                    background-color: #fff;
+                    a:hover {
+                        border-right: 1px solid #fff;
+                    }
+                }
+            }
+            &>li:last-of-type {
                 a {
                     border: none;
                 }
+            }
+            table.city {
+                left: 0;
+                top: 29px;
+                width: 300px;
+                display: none;
+                position: absolute;
+                background-color: #fff;
+                border: 1px solid @jd_grey;
+                border-top: 0;
+                tr {
+                    td {
+                        padding: 0 5px;
+                        // display:inline-block;
+                        width: 45px;
+                        font-size: 12px;
+                        text-align: center;
+                        cursor: pointer;
+                        &:hover {
+                            background: @jd_grey;
+                            color: @jd_red_light;
+                        }
+                        &.active {
+                            background-color: @jd_red_light;
+                            color: #fff;
+                        }
+                    }
+                }
+                z-index:10;
             }
         }
         ul:first-of-type {
@@ -127,23 +239,21 @@
             margin: 0;
             background-color: #f9f9f9;
             // vertical-align:center;
-            position:relative;
+            position: relative;
             img {
-            // top:50%;
-            // margin-top:-8px;
+                // top:50%;
+                // margin-top:-8px;
                 padding-top: 5px;
             }
-            img,span{
-            // position: absolute;
-            // top:50%;
+            img,
+            span {
+                // position: absolute;
+                // top:50%;
             }
-
-
             // z-index:10;
         }
     }
     .entrance {
-
         .nav {
             * {
                 font-size: 16px;
@@ -188,13 +298,11 @@
                 position: relative;
                 z-index: -10;
                 margin-top: -80px;
-                margin-left:25px;
+                margin-left: 25px;
                 height: 125px;
-                width:268px;
-                overflow:hidden;
-                img {
-
-                }
+                width: 268px;
+                overflow: hidden;
+                img {}
             }
         }
         .content {

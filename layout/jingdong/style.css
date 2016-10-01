@@ -4,7 +4,8 @@
   font-family: Microsoft Yahei;
   font-size: 13px;
 }
-* ul {
+* ul,
+* ol {
   list-style-type: none;
 }
 * a {
@@ -19,6 +20,61 @@
   height: 0;
   clear: both;
   visibility: hidden;
+}
+div.slide {
+  position: relative;
+}
+div.slide ul,
+div.slide ol,
+div.slide span {
+  position: absolute;
+}
+div.slide ul li {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+div.slide ul li a img {
+  opacity: 0;
+}
+div.slide ul li.active a img {
+  opacity: 1;
+}
+div.slide ol {
+  width: 50%;
+  text-align: center;
+  bottom: 10%;
+  left: 25%;
+}
+div.slide ol li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #b1191a;
+  color: #fff;
+  text-align: center;
+}
+div.slide ol li.active {
+  background-color: #fff;
+  color: #b1191a;
+}
+div.slide span {
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  top: 40%;
+  width: 10%;
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+div.slide span.prev {
+  left: 0;
+}
+div.slide span.next {
+  right: 0;
 }
 .wrapper {
   margin: 0 auto;
@@ -35,16 +91,54 @@
 .wrapper .login-bar ul {
   position: absolute;
 }
-.wrapper .login-bar ul li {
+.wrapper .login-bar ul > li {
+  border: 1px solid #f1f1f1;
+  height: 28px;
   float: left;
 }
-.wrapper .login-bar ul li a {
+.wrapper .login-bar ul > li a {
+  font-size: 12px;
   padding: 0 10px;
   color: #666;
   border-right: 1px solid #ccc;
 }
-.wrapper .login-bar ul li:last-of-type a {
+.wrapper .login-bar ul > li a:hover {
+  color: #222;
+}
+.wrapper .login-bar ul > li.city:hover {
+  background-color: #fff;
+}
+.wrapper .login-bar ul > li.city:hover a:hover {
+  border-right: 1px solid #fff;
+}
+.wrapper .login-bar ul > li:last-of-type a {
   border: none;
+}
+.wrapper .login-bar ul table.city {
+  left: 0;
+  top: 29px;
+  width: 300px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  border-top: 0;
+  z-index: 10;
+}
+.wrapper .login-bar ul table.city tr td {
+  padding: 0 5px;
+  width: 45px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.wrapper .login-bar ul table.city tr td:hover {
+  background: #f1f1f1;
+  color: #c81623;
+}
+.wrapper .login-bar ul table.city tr td.active {
+  background-color: #c81623;
+  color: #fff;
 }
 .wrapper .login-bar ul:first-of-type {
   left: 0;
