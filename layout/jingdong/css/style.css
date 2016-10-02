@@ -21,61 +21,6 @@
   clear: both;
   visibility: hidden;
 }
-div.slide {
-  position: relative;
-}
-div.slide ul,
-div.slide ol,
-div.slide span {
-  position: absolute;
-}
-div.slide ul li {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-div.slide ul li a img {
-  opacity: 0;
-}
-div.slide ul li.active a img {
-  opacity: 1;
-}
-div.slide ol {
-  width: 50%;
-  text-align: center;
-  bottom: 10%;
-  left: 25%;
-}
-div.slide ol li {
-  float: left;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin: 0 5px;
-  background-color: #b1191a;
-  color: #fff;
-  text-align: center;
-}
-div.slide ol li.active {
-  background-color: #fff;
-  color: #b1191a;
-}
-div.slide span {
-  cursor: pointer;
-  font-size: 20px;
-  text-align: center;
-  top: 40%;
-  width: 10%;
-  height: 10%;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
-}
-div.slide span.prev {
-  left: 0;
-}
-div.slide span.next {
-  right: 0;
-}
 .wrapper {
   margin: 0 auto;
   width: 1210px;
@@ -288,6 +233,8 @@ div.slide span.next {
 .wrapper .entrance .content .slide {
   margin-left: 11px;
   margin-top: 11px;
+  width: 730px;
+  height: 454px;
 }
 .wrapper .entrance .content .news-tickets {
   width: 249px;
@@ -342,7 +289,7 @@ div.slide span.next {
   width: 25px;
   margin-top: 15px;
   margin-left: 18px;
-  background: url(imgs/tick-logo-all.png) 0 0 no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 0 no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a span {
   display: block;
@@ -351,40 +298,40 @@ div.slide span.next {
   font-size: 11px;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(1) div {
-  background: url(imgs/tick-logo-all.png) 0 0px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 0px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(2) div {
-  background: url(imgs/tick-logo-all.png) 0 -25px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -25px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(3) div {
-  background: url(imgs/tick-logo-all.png) 0 -50px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -50px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(4) div {
-  background: url(imgs/tick-logo-all.png) 0 -75px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -75px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(5) div {
-  background: url(imgs/tick-logo-all.png) 0 -100px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -100px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(6) div {
-  background: url(imgs/tick-logo-all.png) 0 -125px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -125px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(7) div {
-  background: url(imgs/tick-logo-all.png) 0 -150px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -150px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(8) div {
-  background: url(imgs/tick-logo-all.png) 0 -175px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -175px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(9) div {
-  background: url(imgs/tick-logo-all.png) 0 -200px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -200px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(10) div {
-  background: url(imgs/tick-logo-all.png) 0 -225px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -225px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(11) div {
-  background: url(imgs/tick-logo-all.png) 0 -250px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -250px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .tickets a:nth-of-type(12) div {
-  background: url(imgs/tick-logo-all.png) 0 -275px no-repeat;
+  background: url(../imgs/tick-logo-all.png) 0 -275px no-repeat;
 }
 .wrapper .entrance .content .news-tickets .ad {
   width: 249px;
@@ -502,22 +449,22 @@ div.slide span.next {
   font-size: 16px;
 }
 .wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(1) .icon {
-  background: url(imgs/clothesicon.png) 0 0px no-repeat;
+  background: url(../imgs/clothesicon.png) 0 0px no-repeat;
 }
 .wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(2) .icon {
-  background: url(imgs/clothesicon.png) 0 -26px no-repeat;
+  background: url(../imgs/clothesicon.png) 0 -26px no-repeat;
 }
 .wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(3) .icon {
-  background: url(imgs/clothesicon.png) 0 -52px no-repeat;
+  background: url(../imgs/clothesicon.png) 0 -52px no-repeat;
 }
 .wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(4) .icon {
-  background: url(imgs/clothesicon.png) 0 -78px no-repeat;
+  background: url(../imgs/clothesicon.png) 0 -78px no-repeat;
 }
 .wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(5) .icon {
-  background: url(imgs/clothesicon.png) 0 -104px no-repeat;
+  background: url(../imgs/clothesicon.png) 0 -104px no-repeat;
 }
 .wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(6) .icon {
-  background: url(imgs/clothesicon.png) 0 -130px no-repeat;
+  background: url(../imgs/clothesicon.png) 0 -130px no-repeat;
 }
 .wrapper .main-class .content .row1 .left .catalog-text {
   width: 100%;
@@ -647,7 +594,7 @@ div.slide span.next {
 .wrapper .footer .cover-map > div {
   height: 170px;
   width: 200px;
-  background: url(imgs/map.png) 0 -130px no-repeat;
+  background: url(../imgs/map.png) 0 -130px no-repeat;
   padding-bottom: 30px;
 }
 .wrapper .footer .cover-map > div h3 {

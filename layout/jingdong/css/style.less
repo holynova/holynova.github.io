@@ -25,71 +25,6 @@
     visibility: hidden;
 }
 
-div.slide {
-    position: relative;
-    ul,
-    ol,
-    span {
-        position: absolute;
-    }
-    ul {
-        li {
-            position: absolute;
-            left: 0;
-            top: 0;
-            a {
-                img {
-                    opacity: 0;
-                }
-            }
-        }
-        li.active {
-            a {
-                img {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-    ol {
-        width: 50%;
-        text-align: center;
-        bottom:10%;
-        left:25%;
-        li {
-            float: left;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            margin: 0 5px;
-            background-color: @jd_red;
-            color: #fff;
-            text-align: center;
-        }
-        li.active {
-            background-color: #fff;
-            color: @jd_red;
-        }
-    }
-    span {
-        cursor: pointer;
-        font-size: 20px;
-        text-align: center;
-        top: 40%;
-        width: 10%;
-        height: 10%;
-        // line-height:10%;
-        background-color: rgba(255, 255, 255, 0.5);
-        color: #fff;
-    }
-    span.prev {
-        left: 0;
-    }
-    span.next {
-        right: 0;
-    }
-}
-
 @max_width: 1210px;
 @unit_width: 210px;
 @jd_red: #b1191a;
@@ -334,6 +269,8 @@ div.slide {
             .slide {
                 margin-left: 11px;
                 margin-top: 11px;
+                width: 730px;
+                height: 454px;
             }
             .news-tickets {
                 width: 249px;
@@ -389,7 +326,7 @@ div.slide {
                             width: 25px;
                             margin-top: 15px;
                             margin-left: 18px;
-                            background: url(imgs/tick-logo-all.png) 0 0 no-repeat;
+                            background: url(../imgs/tick-logo-all.png) 0 0 no-repeat;
                         }
                         span {
                             display: block;
@@ -399,40 +336,40 @@ div.slide {
                         }
                     }
                     a:nth-of-type(1) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(1-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(1-1) no-repeat;
                     }
                     a:nth-of-type(2) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(2-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(2-1) no-repeat;
                     }
                     a:nth-of-type(3) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(3-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(3-1) no-repeat;
                     }
                     a:nth-of-type(4) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(4-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(4-1) no-repeat;
                     }
                     a:nth-of-type(5) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(5-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(5-1) no-repeat;
                     }
                     a:nth-of-type(6) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(6-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(6-1) no-repeat;
                     }
                     a:nth-of-type(7) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(7-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(7-1) no-repeat;
                     }
                     a:nth-of-type(8) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(8-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(8-1) no-repeat;
                     }
                     a:nth-of-type(9) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(9-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(9-1) no-repeat;
                     }
                     a:nth-of-type(10) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(10-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(10-1) no-repeat;
                     }
                     a:nth-of-type(11) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(11-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(11-1) no-repeat;
                     }
                     a:nth-of-type(12) div {
-                        background: url(imgs/tick-logo-all.png) 0 -25px*(12-1) no-repeat;
+                        background: url(../imgs/tick-logo-all.png) 0 -25px*(12-1) no-repeat;
                     }
                 }
                 .ad {
@@ -562,7 +499,7 @@ div.slide {
                                 margin: 9px;
                                 height: 26px;
                                 width: 26px;
-                                // background: url(imgs/clothesicon.png) 0 -52px no-repeat;
+                                // background: url(../imgs/clothesicon.png) 0 -52px no-repeat;
                                 float: left;
                             }
                             span {
@@ -570,22 +507,22 @@ div.slide {
                             }
                         }
                         .item:nth-of-type(1) .icon {
-                            background: url(imgs/clothesicon.png) 0 -26px * 0 no-repeat;
+                            background: url(../imgs/clothesicon.png) 0 -26px * 0 no-repeat;
                         }
                         .item:nth-of-type(2) .icon {
-                            background: url(imgs/clothesicon.png) 0 -26px * 1 no-repeat;
+                            background: url(../imgs/clothesicon.png) 0 -26px * 1 no-repeat;
                         }
                         .item:nth-of-type(3) .icon {
-                            background: url(imgs/clothesicon.png) 0 -26px * 2 no-repeat;
+                            background: url(../imgs/clothesicon.png) 0 -26px * 2 no-repeat;
                         }
                         .item:nth-of-type(4) .icon {
-                            background: url(imgs/clothesicon.png) 0 -26px * 3 no-repeat;
+                            background: url(../imgs/clothesicon.png) 0 -26px * 3 no-repeat;
                         }
                         .item:nth-of-type(5) .icon {
-                            background: url(imgs/clothesicon.png) 0 -26px * 4 no-repeat;
+                            background: url(../imgs/clothesicon.png) 0 -26px * 4 no-repeat;
                         }
                         .item:nth-of-type(6) .icon {
-                            background: url(imgs/clothesicon.png) 0 -26px * 5 no-repeat;
+                            background: url(../imgs/clothesicon.png) 0 -26px * 5 no-repeat;
                         }
                     }
                     .catalog-text {
@@ -733,7 +670,7 @@ div.slide {
             &>div {
                 height: 170px;
                 width: 200px;
-                background: url(imgs/map.png) 0 -130px no-repeat;
+                background: url(../imgs/map.png) 0 -130px no-repeat;
                 padding-bottom: 30px;
                 h3 {
                     margin: 20px;
