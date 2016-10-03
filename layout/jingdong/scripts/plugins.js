@@ -13,6 +13,7 @@ function Slide(parent, datas) {
     this.datas = datas;
     this.nowIndex = 0;
     this.id = new Date().getTime();
+    this.parent.timer = null;
 
     var that = this;
     this.init = function() {
@@ -33,16 +34,18 @@ function Slide(parent, datas) {
 
         //绑定事件
         that.bindEvent();
-
-        //启动轮播定时器
-        that.parent.timer = null;
-        clearInterval(parent.timer);
-        parent.timer = setInterval(function() {
-            that.nowIndex = (that.nowIndex + 1) % that.aBtn.length;
-            that.toPage(that.nowIndex);
-        }, 3000);
+        that.setTimer(3000);
 
     };
+    this.setTimer = function(interval) {
+        //启动轮播定时器
+        // that.parent.timer = null;
+        clearInterval(that.parent.timer);
+        that.parent.timer = setInterval(function() {
+            that.nowIndex = (that.nowIndex + 1) % that.aBtn.length;
+            that.toPage(that.nowIndex);
+        }, interval);
+    }
 
     this.create = function() {
         //生成固定部分html代码
@@ -80,6 +83,7 @@ function Slide(parent, datas) {
                 that.nowIndex = maxIndex;
             }
             that.toPage(that.nowIndex);
+            that.setTimer(3000);
         });
         EventUtil.addHandler(that.oNext, 'click', function() {
             that.nowIndex++;
@@ -87,6 +91,7 @@ function Slide(parent, datas) {
                 that.nowIndex = 0;
             }
             that.toPage(that.nowIndex);
+            that.setTimer(3000);
 
         });
         EventUtil.addHandler(that.oOl, 'mouseover', function(event) {
@@ -95,6 +100,7 @@ function Slide(parent, datas) {
             if (target.tagName.toUpperCase() === 'LI') {
                 that.toPage(target.myIndex);
                 that.nowIndex = target.myIndex;
+                that.setTimer(3000);
             }
         });
 

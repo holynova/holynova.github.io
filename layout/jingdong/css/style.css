@@ -155,8 +155,96 @@
   background-color: #f9f9f9;
   position: relative;
 }
-.wrapper .logo-search .shopping-cart img {
+.wrapper .logo-search .shopping-cart > img {
   padding-top: 5px;
+}
+.wrapper .logo-search .shopping-cart:hover {
+  background-color: #fff;
+  box-shadow: 0 0 10px #ccc;
+  z-index: 100;
+  border-bottom: none;
+}
+.wrapper .logo-search .shopping-cart .cart-goods {
+  display: none;
+  text-align: left;
+  width: 278px;
+  max-height: 398px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ccc;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  z-index: 10;
+  padding: 11px;
+  padding-bottom: 44px;
+}
+.wrapper .logo-search .shopping-cart .cart-goods .header {
+  height: 24px;
+  background-color: #fff;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul {
+  overflow: auto;
+  width: 100%;
+  max-height: 330px;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart {
+  height: 65px;
+  padding: 11px 0;
+  border-bottom: 1px solid #ccc;
+  display: relative;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart:hover {
+  background: #f5f5f5;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart a,
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart span {
+  font-size: 10px;
+  float: left;
+  display: block;
+  height: 53px;
+  top: 11px;
+  vertical-align: top;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart a.pic {
+  border: 1px solid #ccc;
+  height: 51px;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart a.name {
+  width: 120px;
+  padding-left: 11px;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart span {
+  width: 70px;
+  height: 26px;
+  text-align: right;
+}
+.wrapper .logo-search .shopping-cart .cart-goods ul li.good-in-cart span.price {
+  font-weight: bold;
+  width: 70px;
+}
+.wrapper .logo-search .shopping-cart .cart-goods .footer {
+  margin-left: -11px;
+  margin-top: 11px;
+  padding: 11px;
+  position: absolute;
+  bottom: 0;
+  background-color: #f5f5f5;
+  width: 278px;
+  height: 22px;
+  line-height: 22px;
+}
+.wrapper .logo-search .shopping-cart .cart-goods .footer span {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+.wrapper .logo-search .shopping-cart .cart-goods .footer input {
+  color: #fff;
+  background-color: #c81623;
+  border: 2px solid #c81623;
+  padding: 3px;
+  border-radius: 3px;
+  text-align: center;
 }
 .wrapper .entrance .nav {
   border-bottom: 2px solid #b1191a;
