@@ -14,7 +14,7 @@ var json = {
 })();
 
 var app = angular.module('myApp', []);
-app.controller('myCtrl', ['$scope', function($scope, $filter) {
+app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
     var numPerPage = 5;
     $scope.inputText = "默认留言";
     $scope.comments = json.comments;
@@ -34,7 +34,7 @@ app.controller('myCtrl', ['$scope', function($scope, $filter) {
         $scope.comments.push(comment);
         // $scope.inputText = '';
         $scope.slicePage(numPerPage);
-
+        $scope.sortBy('time', true);
     };
 
     $scope.delComment = function(item) {
@@ -45,11 +45,15 @@ app.controller('myCtrl', ['$scope', function($scope, $filter) {
     $scope.upvote = function(item) {
         item.up++;
     };
-    $scope.sortBy = function(key) {
+    $scope.sortBy = function(key, reverse) {
+        if (typeof reverse === 'undefined') {
+            reverse = 'toggle';
+        }
         $scope.sortKey = key;
-        $scope.reverse = $scope.reverse ? false : true;
-        // $scope.comments = $filter('orderBy')($scope.comments, $scope.sortKey, $scope.reverse);
+        $scope.reverse = reverse === 'toggle' ? !$scope.reverse : reverse;
+        $scope.comments = $filter('orderBy')($scope.comments, $scope.sortKey, $scope.reverse);
         // orderBy($scope.comments, $scope.sortKey, $scope.reverse);
+
     };
     // $scope.sortBy('time');
     $scope.slicePage = function(N) {
@@ -63,6 +67,7 @@ app.controller('myCtrl', ['$scope', function($scope, $filter) {
         $scope.pagemarks = pagemarks;
     }
     $scope.slicePage(numPerPage);
+    $scope.sortBy('time', true);
 }]);
 
 function unitTest() {
