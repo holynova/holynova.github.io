@@ -103,6 +103,44 @@ window.onload = function() {
     }
 
     //=============================================================================================
+    //服装鞋包的标签页
+    var aClothTabs = document.querySelectorAll('.main-class.cloth .nav .tabs>ul>li');
+    var oClothUl = document.querySelector('.main-class.cloth .content>ul');
+    var tabWidth = document.querySelector('.main-class.cloth .content>ul>li').offsetWidth;
+    // console.log(oClothUl);
+    oClothUl.style.width = tabWidth * aClothTabs.length + 'px';
+    // EventUtil.addHandler(document.querySelector('.main-class.cloth .nav'), 'mouseover', clothTabHandler);
+    for (var i = 0; i < aClothTabs.length; i++) {
+        aClothTabs[i].myIndex = i;
+        EventUtil.addHandler(aClothTabs[i], 'mouseover', function() {
+            event = EventUtil.getEvent(event);
+            var target = EventUtil.getTarget(event);
+            for (var i = 0; i < aClothTabs.length; i++) {
+                removeClass(aClothTabs[i], 'active');
+            }
+            addClass(target, 'active');
+            // oClothUl.style.marginLeft = -target.myIndex * tabWidth + 'px';
+            animate(oClothUl, {
+                marginLeft: -target.myIndex * tabWidth
+            });
+
+        });
+    }
+
+    function clothTabHandler(event) {
+        event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event);
+        console.log(target.tagName);
+        if (target.tagName.toUpperCase() === 'LI') {
+            for (var i = 0; i < aClothTabs.length; i++) {
+                removeClass(aClothTabs[i], 'active');
+            }
+            addClass(target, 'active');
+
+            oClothUl.style.marginLeft = -target.myIndex * tabWidth + 'px';
+        }
+    }
+
     //=============================================================================================
     // 城市选择 
     var oTabCity = document.querySelectorAll('.login-bar ul>li')[0];

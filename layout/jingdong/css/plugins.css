@@ -32,7 +32,7 @@ div.slide ul li.active a img {
 div.slide ol {
   width: 50%;
   text-align: center;
-  bottom: 10%;
+  bottom: 5%;
   left: 25%;
 }
 div.slide ol li {
@@ -45,6 +45,7 @@ div.slide ol li {
   background-color: #b1191a;
   color: #fff;
   text-align: center;
+  line-height: 20px;
 }
 div.slide ol li.active {
   background-color: #fff;
@@ -54,9 +55,11 @@ div.slide span {
   cursor: pointer;
   font-size: 20px;
   text-align: center;
-  top: 40%;
+  top: 50%;
   width: 10%;
-  height: 20%;
+  height: 50px;
+  margin-top: -25px;
+  line-height: 50px;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;

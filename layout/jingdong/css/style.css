@@ -161,8 +161,19 @@
 .wrapper .logo-search .shopping-cart:hover {
   background-color: #fff;
   box-shadow: 0 0 10px #ccc;
-  z-index: 100;
   border-bottom: none;
+}
+.wrapper .logo-search .shopping-cart:hover .space {
+  display: block;
+}
+.wrapper .logo-search .shopping-cart .space {
+  position: absolute;
+  display: none;
+  top: 30px;
+  height: 20px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 20;
 }
 .wrapper .logo-search .shopping-cart .cart-goods {
   display: none;
@@ -170,9 +181,10 @@
   width: 278px;
   max-height: 398px;
   background-color: #fff;
+  border: 1px solid #ccc;
   box-shadow: 0 0 10px #ccc;
   position: absolute;
-  right: 0;
+  right: -1px;
   top: 35px;
   z-index: 10;
   padding: 11px;
@@ -490,7 +502,6 @@
 .wrapper .main-class .nav .tabs ul li:last-of-type a {
   border-right: none;
 }
-.wrapper .main-class .nav .tabs ul li:hover,
 .wrapper .main-class .nav .tabs ul li.active {
   border-left: 1px solid #b1191a;
   border-right: 1px solid #b1191a;
@@ -499,62 +510,74 @@
   margin-top: -3px;
   margin-left: -2px;
 }
-.wrapper .main-class .nav .tabs ul li:hover a,
 .wrapper .main-class .nav .tabs ul li.active a {
   border: none;
 }
-.wrapper .main-class .content .row1 .left,
-.wrapper .main-class .content .row1 .right {
+.wrapper .main-class .content {
+  width: 1210px;
+  height: 634px;
+  overflow: hidden;
+}
+.wrapper .main-class .content > ul {
+  width: 10890px;
+}
+.wrapper .main-class .content > ul li.tab-content {
+  width: 1210px;
+  height: 634px;
   float: left;
 }
-.wrapper .main-class .content .row1 .left {
+.wrapper .main-class .content > ul li.tab-content .row1 .left,
+.wrapper .main-class .content > ul li.tab-content .row1 .right {
+  float: left;
+}
+.wrapper .main-class .content > ul li.tab-content .row1 .left {
   position: relative;
   width: 330px;
   height: 473px;
   background-color: #094;
   overflow: hidden;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo {
   height: 88px;
   position: absolute;
   padding-left: 15px;
   top: 258px;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item {
   width: 100px;
   height: 44px;
   line-height: 44px;
   float: left;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item .icon {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item .icon {
   margin: 9px;
   height: 26px;
   width: 26px;
   float: left;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item span {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item span {
   font-size: 16px;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(1) .icon {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item:nth-of-type(1) .icon {
   background: url(../imgs/clothesicon.png) 0 0px no-repeat;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(2) .icon {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item:nth-of-type(2) .icon {
   background: url(../imgs/clothesicon.png) 0 -26px no-repeat;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(3) .icon {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item:nth-of-type(3) .icon {
   background: url(../imgs/clothesicon.png) 0 -52px no-repeat;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(4) .icon {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item:nth-of-type(4) .icon {
   background: url(../imgs/clothesicon.png) 0 -78px no-repeat;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(5) .icon {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item:nth-of-type(5) .icon {
   background: url(../imgs/clothesicon.png) 0 -104px no-repeat;
 }
-.wrapper .main-class .content .row1 .left .catalog-logo .item:nth-of-type(6) .icon {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-logo .item:nth-of-type(6) .icon {
   background: url(../imgs/clothesicon.png) 0 -130px no-repeat;
 }
-.wrapper .main-class .content .row1 .left .catalog-text {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-text {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -562,21 +585,21 @@
   background-color: #eaebf5;
   padding: 15px;
 }
-.wrapper .main-class .content .row1 .left .catalog-text > div {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-text > div {
   float: left;
   width: 60px;
   height: 24px;
   line-height: 24px;
   color: #111;
 }
-.wrapper .main-class .content .row1 .left .catalog-text > div a {
+.wrapper .main-class .content > ul li.tab-content .row1 .left .catalog-text > div a {
   color: #666;
 }
-.wrapper .main-class .content .row1 .right {
+.wrapper .main-class .content > ul li.tab-content .row1 .right {
   width: 880px;
   height: 474px;
 }
-.wrapper .main-class .content .row1 .right ul li {
+.wrapper .main-class .content > ul li.tab-content .row1 .right ul li {
   width: 219px;
   height: 236px;
   float: left;
@@ -584,42 +607,42 @@
   border-bottom: 1px solid #ededed;
   border-right: 1px solid #ededed;
 }
-.wrapper .main-class .content .row1 .right ul li a {
+.wrapper .main-class .content > ul li.tab-content .row1 .right ul li a {
   padding: 11px;
 }
-.wrapper .main-class .content .row1 .right ul li a img {
+.wrapper .main-class .content > ul li.tab-content .row1 .right ul li a img {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.wrapper .main-class .content .row1 .right ul li a .name {
+.wrapper .main-class .content > ul li.tab-content .row1 .right ul li a .name {
   text-align: left;
   font-size: 12px;
   padding-left: 18px;
   color: #666;
 }
-.wrapper .main-class .content .row1 .right ul li a .price {
+.wrapper .main-class .content > ul li.tab-content .row1 .right ul li a .price {
   padding: 10px 18px;
   text-align: left;
   font-size: 14px;
   color: #b1191a;
 }
-.wrapper .main-class .content .row2 .left,
-.wrapper .main-class .content .row2 .right {
+.wrapper .main-class .content > ul li.tab-content .row2 .left,
+.wrapper .main-class .content > ul li.tab-content .row2 .right {
   float: left;
 }
-.wrapper .main-class .content .row2 .left img,
-.wrapper .main-class .content .row2 .right img {
+.wrapper .main-class .content > ul li.tab-content .row2 .left img,
+.wrapper .main-class .content > ul li.tab-content .row2 .right img {
   border-bottom: 1px solid #ededed;
   border-right: 1px solid #ededed;
 }
-.wrapper .main-class .content .row2 .left img {
+.wrapper .main-class .content > ul li.tab-content .row2 .left img {
   width: 329px;
   height: 156px;
 }
-.wrapper .main-class .content .row2 .right {
+.wrapper .main-class .content > ul li.tab-content .row2 .right {
   font-size: 0;
 }
-.wrapper .main-class .content .row2 .right img {
+.wrapper .main-class .content > ul li.tab-content .row2 .right img {
   width: 219px;
   height: 156px;
 }

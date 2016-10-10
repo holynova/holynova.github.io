@@ -17,6 +17,19 @@
         <p>输入的内容是{{a}}</p>
         <ul>
             <li ng-repeat="name in arr track by $index">{{name}}</li>
+            <!-- <li ng-repeat="name in arr track">{{name}}</li> -->
+        </ul>
+        <hr>
+        <input type="text" ng-model='n1' value="" placeholder="">除以
+        <input type="text" ng-model='n2' value="" placeholder="">
+        <p>等于 {{ n1/n2 }}</p>
+        <hr>
+        <p>自定义指令</p>
+        <sym></sym>
+        <hr>
+        <input type="text" ng-model = "myFilter" value="" placeholder="">
+        <ul>
+            <li ng-repeat="stu in students |orderBy:'age'|filter:myFilter">{{ (stu.name | uppercase) +','+stu.age }}</li>
         </ul>
     </div>
     <script src="learn_angular.js"></script>

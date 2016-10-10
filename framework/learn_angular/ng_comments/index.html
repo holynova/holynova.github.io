@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>angular留言板</title>
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        transition: 0.5s;
+        font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    }
+    
+    .wrapper {
+        width: 80%;
+        margin: 20px auto;
+        background-color: #ccc;
+        padding: 20px;
+    }
+    
+    .wrapper ul {
+        list-style: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    input[type='button'] {
+        padding: 0 5px;
+    }
+    
+    .wrapper ul.comments {
+        height: 300px;
+        overflow: auto;
+    }
+    
+    .wrapper ul.comments li {
+        background-color: #eee;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 28px;
+        padding: 5px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .wrapper ul.comments li span{
+     padding: 5px 10px;
+     border-radius: 5px;
+     color: #fff;
+     font-size: 12px;
+     line-height: 12px;
+    text-align: center;
+    display: inline-block;
+    }
+    span.time{
+        background-color: #0092C7;
+        width:200px;
+    }
+    span.upvote{
+        background-color: #F60;
+        cursor: pointer;
+        width: 80px;
+    }
+    span.del{
+        background-color: #f6A;
+        cursor: pointer;
+        width: 40px;
+    }
+    
+
+    
+    .wrapper ul.pagemark {
+        background-color: #ccc;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .wrapper ul.pagemark li {
+        display: inline;
+        padding: 5px 10px;
+        margin-left: 5px;
+        background-color: #f60;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+    
+    .wrapper ul.pagemark li.active {
+        color: #f60;
+        background-color: #fff;
+    }
+    
+    span.sort-arrow:after {
+        content: '\25b2';
+    }
+    
+    span.sort-arrow.reverse:after {
+        content: '\25bc';
+    }
+    </style>
+</head>
+
+<body>
+    <script src="../../../script/angular.min.js"></script>
+    <div class="wrapper" ng-app='myApp' ng-controller="myCtrl">
+        <h2>留言板<small>({{comments.length}}条评论)</small></h2>
+        <input type="text" value="默认留言." ng-model='inputText'>
+        <input type="button" ng-click='addComment()' value="add">
+        <div>
+            <input type="text" ng-model="commentFilter" placeholder="输入筛选">
+            <input type="button" name="" value="按时间排序" ng-click="sortBy('time')">
+            <span ng-show="sortKey === 'time'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
+            <input type="button" name="" value="按赞同排序" ng-click="sortBy('up')">
+            <span ng-show="sortKey === 'up'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
+        </div>
+        <ul class="comments">
+            <li ng-repeat="c in comments | orderBy:sortKey:reverse |filter: commentFilter ">
+                <p>{{c.content}}</p>
+                <div>
+                    <span class="time">{{c.timeStr}}</span>
+                    <span class="upvote"  ng-click="upvote(c)">{{c.up}}人赞同</span>
+                    <span class="del" ng-click="delComment(c)">删除</span>
+                </div>
+            </li>
+        </ul>
+        <ul class='pagemark'>
+            <li>&lt</li>
+            <!-- <li class="active">1</li> -->
+            <li ng-repeat="mark in pagemarks">{{mark}}</li>
+            <li>&gt</li>
+        </ul>
+    </div>
+    <script src="comments.js"></script>
+</body>
+
+</html>

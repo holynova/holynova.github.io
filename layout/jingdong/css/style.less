@@ -180,8 +180,20 @@
             &:hover {
                 background-color: #fff;
                 box-shadow: 0 0 10px #ccc;
-                z-index: 100;
+                // z-index: 10;
                 border-bottom: none;
+                .space {
+                    display: block;
+                }
+            }
+            .space {
+                position: absolute;
+                display: none;
+                top: 30px;
+                height: 20px;
+                width: 100%;
+                background-color: #fff;
+                z-index: 20;
             }
             .cart-goods {
                 display: none;
@@ -189,9 +201,10 @@
                 width: 278px;
                 max-height: 398px;
                 background-color: #fff;
+                border: 1px solid #ccc;
                 box-shadow: 0 0 10px #ccc;
                 position: absolute;
-                right: 0;
+                right: -1px;
                 top: 35px;
                 z-index: 10;
                 padding: 11px;
@@ -261,7 +274,7 @@
                     span {
                         display: inline-block;
                         width: 100px;
-                        font-weight:bold;
+                        font-weight: bold;
                     }
                     span.num {}
                     span.total-price {}
@@ -540,7 +553,7 @@
                             }
                         }
                     }
-                    li:hover,
+                    // li:hover,
                     li.active {
                         border-left: 1px solid @jd_red;
                         border-right: 1px solid @jd_red;
@@ -557,137 +570,147 @@
             }
         }
         .content {
-            // height: 100px;
-            .row1 {
-                .left,
-                .right {
-                    float: left;
-                }
-                .left {
-                    position: relative;
-                    width: 330px;
-                    height: 473px;
-                    background-color: #094;
-                    overflow: hidden;
-                    .bg {
-                        img {}
-                    }
-                    .catalog-logo {
-                        height: 88px;
-                        position: absolute;
-                        // width: 100%;
-                        padding-left: 15px;
-                        top: 258px;
-                        background-color: rgba(255, 255, 255, 0.5);
-                        .item {
-                            width: 100px;
-                            height: 44px;
-                            line-height: 44px;
+            width: 1210px;
+            height: 634px;
+            overflow:hidden;
+            &>ul {
+                width:1210px *9;
+                li.tab-content {
+                    width: 1210px;
+                    height:634px;
+                    float:left;
+                    .row1 {
+                        .left,
+                        .right {
                             float: left;
-                            .icon {
-                                margin: 9px;
-                                height: 26px;
-                                width: 26px;
-                                // background: url(../imgs/clothesicon.png) 0 -52px no-repeat;
-                                float: left;
+                        }
+                        .left {
+                            position: relative;
+                            width: 330px;
+                            height: 473px;
+                            background-color: #094;
+                            overflow: hidden;
+                            .bg {
+                                img {}
                             }
-                            span {
-                                font-size: 16px;
-                            }
-                        }
-                        .item:nth-of-type(1) .icon {
-                            background: url(../imgs/clothesicon.png) 0 -26px * 0 no-repeat;
-                        }
-                        .item:nth-of-type(2) .icon {
-                            background: url(../imgs/clothesicon.png) 0 -26px * 1 no-repeat;
-                        }
-                        .item:nth-of-type(3) .icon {
-                            background: url(../imgs/clothesicon.png) 0 -26px * 2 no-repeat;
-                        }
-                        .item:nth-of-type(4) .icon {
-                            background: url(../imgs/clothesicon.png) 0 -26px * 3 no-repeat;
-                        }
-                        .item:nth-of-type(5) .icon {
-                            background: url(../imgs/clothesicon.png) 0 -26px * 4 no-repeat;
-                        }
-                        .item:nth-of-type(6) .icon {
-                            background: url(../imgs/clothesicon.png) 0 -26px * 5 no-repeat;
-                        }
-                    }
-                    .catalog-text {
-                        width: 100%;
-                        // margin-top:-128px;
-                        position: absolute;
-                        bottom: 0;
-                        height: 97px;
-                        background-color: #eaebf5;
-                        padding: 15px;
-                        &>div {
-                            float: left;
-                            width: 60px;
-                            height: 24px;
-                            line-height: 24px;
-                            color: #111;
-                            a {
-                                color: #666;
-                            }
-                        }
-                    }
-                }
-                .right {
-                    width: 880px;
-                    height: 474px;
-                    ul {
-                        li {
-                            width: 219px;
-                            height: 236px;
-                            float: left;
-                            text-align: center;
-                            border-bottom: 1px solid #ededed;
-                            border-right: 1px solid #ededed;
-                            a {
-                                padding: 11px;
-                                img {
-                                    padding-top: 20px;
-                                    padding-bottom: 10px;
+                            .catalog-logo {
+                                height: 88px;
+                                position: absolute;
+                                // width: 100%;
+                                padding-left: 15px;
+                                top: 258px;
+                                background-color: rgba(255, 255, 255, 0.5);
+                                .item {
+                                    width: 100px;
+                                    height: 44px;
+                                    line-height: 44px;
+                                    float: left;
+                                    .icon {
+                                        margin: 9px;
+                                        height: 26px;
+                                        width: 26px;
+                                        // background: url(../imgs/clothesicon.png) 0 -52px no-repeat;
+                                        float: left;
+                                    }
+                                    span {
+                                        font-size: 16px;
+                                    }
                                 }
-                                .name {
-                                    text-align: left;
-                                    font-size: 12px;
-                                    padding-left: 18px;
-                                    color: #666;
+                                .item:nth-of-type(1) .icon {
+                                    background: url(../imgs/clothesicon.png) 0 -26px * 0 no-repeat;
                                 }
-                                .price {
-                                    padding: 10px 18px;
-                                    text-align: left;
-                                    font-size: 14px;
-                                    color: @jd_red;
+                                .item:nth-of-type(2) .icon {
+                                    background: url(../imgs/clothesicon.png) 0 -26px * 1 no-repeat;
+                                }
+                                .item:nth-of-type(3) .icon {
+                                    background: url(../imgs/clothesicon.png) 0 -26px * 2 no-repeat;
+                                }
+                                .item:nth-of-type(4) .icon {
+                                    background: url(../imgs/clothesicon.png) 0 -26px * 3 no-repeat;
+                                }
+                                .item:nth-of-type(5) .icon {
+                                    background: url(../imgs/clothesicon.png) 0 -26px * 4 no-repeat;
+                                }
+                                .item:nth-of-type(6) .icon {
+                                    background: url(../imgs/clothesicon.png) 0 -26px * 5 no-repeat;
+                                }
+                            }
+                            .catalog-text {
+                                width: 100%;
+                                // margin-top:-128px;
+                                position: absolute;
+                                bottom: 0;
+                                height: 97px;
+                                background-color: #eaebf5;
+                                padding: 15px;
+                                &>div {
+                                    float: left;
+                                    width: 60px;
+                                    height: 24px;
+                                    line-height: 24px;
+                                    color: #111;
+                                    a {
+                                        color: #666;
+                                    }
                                 }
                             }
                         }
+                        .right {
+                            width: 880px;
+                            height: 474px;
+                            ul {
+                                li {
+                                    width: 219px;
+                                    height: 236px;
+                                    float: left;
+                                    text-align: center;
+                                    border-bottom: 1px solid #ededed;
+                                    border-right: 1px solid #ededed;
+                                    a {
+                                        padding: 11px;
+                                        img {
+                                            padding-top: 20px;
+                                            padding-bottom: 10px;
+                                        }
+                                        .name {
+                                            text-align: left;
+                                            font-size: 12px;
+                                            padding-left: 18px;
+                                            color: #666;
+                                        }
+                                        .price {
+                                            padding: 10px 18px;
+                                            text-align: left;
+                                            font-size: 14px;
+                                            color: @jd_red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                }
-            }
-            .row2 {
-                .left,
-                .right {
-                    float: left;
-                    img {
-                        border-bottom: 1px solid #ededed;
-                        border-right: 1px solid #ededed;
-                    }
-                }
-                .left {
-                    img {
-                        width: 329px;
-                        height: 156px;
-                    }
-                }
-                .right {
-                    font-size: 0;
-                    img {
-                        width: 219px;
-                        height: 156px;
+                    .row2 {
+                        .left,
+                        .right {
+                            float: left;
+                            img {
+                                border-bottom: 1px solid #ededed;
+                                border-right: 1px solid #ededed;
+                            }
+                        }
+                        .left {
+                            img {
+                                width: 329px;
+                                height: 156px;
+                            }
+                        }
+                        .right {
+                            font-size: 0;
+                            img {
+                                width: 219px;
+                                height: 156px;
+                            }
+                        }
                     }
                 }
             }
