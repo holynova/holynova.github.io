@@ -4,18 +4,23 @@
 // };
 
 var json = {
-    comments: []
+    comments: [],
+    users: []
 };
 
 (function() {
-    for (var i = 0; i < 17; i++) {
+    for (var i = 0; i < 20; i++) {
+        json.users.push(getRandomUser());
+    }
+    for (var i = 0; i < 107; i++) {
+
         json.comments.push(getRandomComment());
     }
 })();
 
 var app = angular.module('myApp', []);
 app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
-    var numPerPage = 5;
+    $scope.numPerPage = 10;
     $scope.inputText = "默认留言";
     $scope.comments = json.comments;
     $scope.sortKey = 'time';
@@ -33,14 +38,14 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
         comment.up = 0;
         $scope.comments.push(comment);
         // $scope.inputText = '';
-        $scope.slicePage(numPerPage);
+        $scope.slicePage($scope.numPerPage);
         $scope.sortBy('time', true);
     };
 
     $scope.delComment = function(item) {
         // console.log(item);
         $scope.comments.remove(item);
-        $scope.slicePage(numPerPage);
+        $scope.slicePage($scope.numPerPage);
     };
     $scope.upvote = function(item) {
         item.up++;
@@ -50,9 +55,12 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
             reverse = 'toggle';
         }
         $scope.sortKey = key;
+
         $scope.reverse = reverse === 'toggle' ? !$scope.reverse : reverse;
         $scope.comments = $filter('orderBy')($scope.comments, $scope.sortKey, $scope.reverse);
         // orderBy($scope.comments, $scope.sortKey, $scope.reverse);
+        // 排序完成后页码回到1
+        $scope.toPage(1);
 
     };
     // $scope.sortBy('time');
@@ -63,12 +71,37 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
             pagemarks.push(i);
 
         }
-        console.log(pagemarks);
         $scope.pagemarks = pagemarks;
+        //重新切分页面后 页码回到1
+        $scope.toPage(1);
     }
-    $scope.slicePage(numPerPage);
+    $scope.activePage = 1;
+    $scope.curPageFirstIndex = 0;
+
+    $scope.toPage = function(N) {
+        // 改变页码的选中状态
+        if (N == "prev") {
+            $scope.activePage = Math.max(1, $scope.activePage - 1);
+
+        } else if (N == 'next') {
+            $scope.activePage = Math.min($scope.activePage + 1, Math.ceil($scope.comments.length / $scope.numPerPage));
+
+        } else {
+            $scope.activePage = N;
+        }
+        // 改变显示内容
+
+        $scope.curPageFirstIndex = ($scope.activePage - 1) * $scope.numPerPage;
+
+
+
+    }
+
+    $scope.slicePage($scope.numPerPage);
     $scope.sortBy('time', true);
 }]);
+
+
 
 function unitTest() {
     console.log(DateToStr(new Date));
@@ -93,6 +126,7 @@ function getRandomComment() {
     comment.timeStr = DateToStr(comment.time);
     comment.content = getRandomStr();
     comment.up = randBetween(0, 20);
+    comment.user = json.users[randBetween(0, json.users.length - 1)];
     return comment;
 }
 
@@ -108,4 +142,13 @@ function getRandomStr() {
 
 function randBetween(start, end) {
     return start + parseInt(Math.random() * (end - start));
+}
+
+function getRandomUser() {
+    var pool = 'Jacob,Michael,Matthew,Joshua,Christopher,Nicholas,Andrew,Joseph,Daniel,Daniel,Tyler,Brandon,Ryan,Austin,William,John,David,Zachary,Anthony,James,Justin,Alexander,Jonathan,Dylan,Christian,Noah,Robert,Samuel,Kyle,Benjamin,Jose,Jordan,Kevin,Thomas,Nathan,Cameron,Hunter,Ethan,Aaron,Eric,Jason,Caleb,Logan,Brian,Luis,Adam,Juan,Steven,Jordan,Cody,Gabriel,Connor,Timothy,Charles,Isaiah,Jack,Carlos,Jared,Sean,Alex,Evan,Elijah,Richard,Patrick,Nathaniel,Isaac,Seth,Trevor,Angel,Luke,Devin,Bryan,Jesus,Mark,Ian,Mason,Cole,Adrian,Chase,Jeremy,Dakota,Garrett,Antonio,Jackson,Jesse,Blake,Dalton,Tanner,Stephen,Alejandro,Kenneth,Miguel,Victor,Lucas,Spencer,Bryce,Paul,Brendan,Jake,Tristan,Jeffrey,Leslie,Marcus'.split(',');
+    var user = {};
+    user.name = pool[randBetween(0, pool.length - 1)] + " " + pool[randBetween(0, pool.length - 1)];
+    user.avatar = 'img/' + randBetween(1, 9) + '.png';
+    return user;
+
 }
