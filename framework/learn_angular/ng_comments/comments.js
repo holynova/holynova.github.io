@@ -77,7 +77,7 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
     }
     $scope.activePage = 1;
     $scope.curPageFirstIndex = 0;
-
+    $scope.bookmarkBegin = 0;
     $scope.toPage = function(N) {
         // 改变页码的选中状态
         if (N == "prev") {
@@ -88,6 +88,9 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
 
         } else {
             $scope.activePage = N;
+            if (N > 10) {
+
+            }
         }
         // 改变显示内容
 

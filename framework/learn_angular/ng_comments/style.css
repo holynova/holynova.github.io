@@ -37,6 +37,7 @@
 }
 .wrapper > div label {
   display: block;
+  margin: 10px 0;
 }
 .wrapper > div input[type='button'] {
   padding: 5px;

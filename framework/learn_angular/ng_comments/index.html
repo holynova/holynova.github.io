@@ -19,8 +19,7 @@
         <div>
             
             <label>内容筛选<input type="text" ng-model="commentFilter" placeholder="输入筛选"></label>
-            <label>每页
-                <input type="number" ng-model='numPerPage' ng-change='slicePage(numPerPage)'>条</label>
+            <label>每页显示<input type="number" ng-model='numPerPage' ng-change='slicePage(numPerPage)'>条</label>
             <!-- <input type="number" name="" value="" placeholder=""> -->
             <input type="button" name="" value="按时间排序" ng-click="sortBy('time')">
             <span ng-show="sortKey === 'time'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
@@ -49,7 +48,7 @@
         <ul class='pagemark'>
             <li ng-click='toPage("prev")'>上一页</li>
             <!-- <li class="active">1</li> -->
-            <li ng-repeat="mark in pagemarks" ng-click='toPage(mark)' ng-class="{active:mark === activePage}">{{mark}}</li>
+            <li ng-repeat="mark in pagemarks |limitTo:10:bookmarkBegin" ng-click='toPage(mark)' ng-class="{active:mark === activePage}">{{mark}}</li>
             <li ng-click='toPage("next")'>下一页</li>
         </ul>
     </div>
