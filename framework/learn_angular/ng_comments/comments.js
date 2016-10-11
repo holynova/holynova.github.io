@@ -21,7 +21,7 @@ var json = {
 var app = angular.module('myApp', []);
 app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
     $scope.numPerPage = 10;
-    $scope.inputText = "默认留言";
+    $scope.inputText = "写下你的评论";
     $scope.comments = json.comments;
     $scope.sortKey = 'time';
     $scope.reverse = false;
@@ -93,15 +93,11 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
 
         $scope.curPageFirstIndex = ($scope.activePage - 1) * $scope.numPerPage;
 
-
-
     }
 
     $scope.slicePage($scope.numPerPage);
     $scope.sortBy('time', true);
 }]);
-
-
 
 function unitTest() {
     console.log(DateToStr(new Date));

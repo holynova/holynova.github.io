@@ -1,134 +1,150 @@
-
+// .wrapper ul.comments li {
+//     background-color: #eee;
+//     padding: 10px;
+//     font-size: 14px;
+//     line-height: 28px;
+//     padding: 5px;
+//     border-bottom: 1px solid #ccc;
+// }
+// .wrapper ul.comments li:hover {
+//     background-color: #9FE0F6;
+// }
+// .wrapper ul.comments li span {
+//     padding: 5px 10px;
+//     border-radius: 5px;
+//     color: #fff;
+//     font-size: 12px;
+//     line-height: 12px;
+//     text-align: center;
+//     display: inline-block;
+// }
+// span.time {
+//     background-color: #0092C7;
+//     // width: 200px;
+// }
+// span.upvote {
+//     background-color: #F60;
+//     cursor: pointer;
+//     // width: 80px;
+// }
+// span.del {
+//     background-color: #f6A;
+//     cursor: pointer;
+//     // width: 40px;
+// }
+.wrapper {
+    width: 80%;
+    margin: 20px auto;
+    // background-color: #ccc;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
     * {
         margin: 0;
         padding: 0;
         transition: 0.5s;
         font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
     }
-    
-    .wrapper {
-        width: 80%;
-        margin: 20px auto;
-        background-color: #ccc;
-        padding: 20px;
+    ul {
+        list-style-type: none;
     }
-    
-    .wrapper ul {
-        list-style: none;
-        width: 100%;
-        margin-top: 10px;
-    }
-    
-    input[type='button'] {
-        padding: 0 5px;
-    }
-    
-    .wrapper ul.comments {
-        /*height: 300px;*/
-        /*overflow: auto;*/
-    }
-    
-    .wrapper ul.comments li {
-        background-color: #eee;
-        padding: 10px;
-        font-size: 14px;
-        line-height: 28px;
-        padding: 5px;
-        border-bottom: 1px solid #ccc;
-    }
-    
-    .wrapper ul.comments li:hover {
-        background-color: #9FE0F6;
-    }
-    
-    .wrapper ul.comments li span {
-        padding: 5px 10px;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 12px;
-        line-height: 12px;
-        text-align: center;
-        display: inline-block;
-    }
-    
-    span.time {
-        background-color: #0092C7;
-        // width: 200px;
-    }
-    
-    span.upvote {
-        background-color: #F60;
-        cursor: pointer;
-        // width: 80px;
-    }
-    
-    span.del {
-        background-color: #f6A;
-        cursor: pointer;
-        // width: 40px;
-    }
-    
-    .wrapper ul.pagemark {
-        background-color: #ccc;
-        text-align: center;
-        padding: 10px 0;
-    }
-    
-    .wrapper ul.pagemark li {
-        display: inline;
-        padding: 5px 10px;
-        margin-left: 5px;
-        background-color: #f60;
-        color: #fff;
-        font-size: 12px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    .wrapper ul.pagemark li.active {
-        color: #f60;
-        background-color: #fff;
-    }
-    
-    span.sort-arrow:after {
-        content: '\25b2';
-    }
-    
-    span.sort-arrow.reverse:after {
-        content: '\25bc';
-    }
-    
+    // -----------------------------------------
     textarea {
-        width: 50%;
-        height: 100px;
+        width: 80%;
+        // height: 1em;
+        overflow-y: hidden;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 3px;
+        display: block;
     }
-
-.wrapper{
-    ul.comments{
-        li{
-            &>div{
+    input[type='button'] {
+        padding: 5px 15px;
+        background-color: #0092C7;
+        color:#fff;
+        border:none;
+        border-radius:3px;
+        cursor:pointer;
+    }
+    &>div {
+        font-size:13px;
+        margin: 20px auto;
+        label{display:block;}
+        input[type='text'] {}
+        input[type='button'] {
+            padding: 5px;
+        }
+        span.sort-arrow:after {
+            content: '\25b2';
+        }
+        span.sort-arrow.reverse:after {
+            content: '\25bc';
+        }
+    }
+    ul.comments {
+        li {
+            // background-color: #eee;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 28px;
+            padding: 5px;
+            border-bottom: 1px dashed #ccc;
+            &>div {
                 // float:left;
-                display:inline-block;
+                display: inline-block;
             }
-            .left{width:20%;}
-            .right{
-                width:75%;
-                p.username{
-                    font-weight: bold;
-                    color:blue;
+            .left {
+                width: 20%;
+                img {
+                    width: 50%;
                 }
-                p.content{}
-                span{}
-                span.time{}
-                span.upvote{}
-                span.del{}
-                span.up-num{
-
+            }
+            .right {
+                width: 75%;
+                font-size: 13px;
+                p.username {
+                    // font-weight: bold;
+                    color: blue;
                 }
+                p.content {}
+                span {
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    color: #333;
+                    font-size: 12px;
+                    line-height: 12px;
+                    text-align: center;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+                span.time {
+                    padding-left: 0;
+                }
+                span.upvote {}
+                span.del {}
+                span.up-num {}
             }
         }
     }
-    ul.pagemarks{
-        li{}
+    ul.pagemark {
+        background-color: #ccc;
+        text-align: center;
+        padding: 10px 0;
+        // width:100%;
+        li {
+            display: inline;
+            padding: 5px 10px;
+            margin-left: 5px;
+            background-color: #f60;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        li.active {
+            color: #f60;
+            background-color: #fff;
+        }
     }
 }
