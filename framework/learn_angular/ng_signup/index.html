@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <script src="../../../script/angular.min.js"></script>
+    <script src='signup.js'></script>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+
+<body>
+    <div class="wrapper" ng-app = "myApp" ng-controller = 'myCtrl'>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <p>与世界分享你的知识、经验和见解</p>
+        <span ng-class = '{active:formType == "signup"}' ng-click = 'formType = "signup"'>注册</span>
+        <span ng-class = '{active:formType == "login"}' ng-click = 'formType = "login"'>登陆</span>
+        <form class="signup-form" ng-show = 'formType == "signup"'>
+            <input type="text" name="name" placeholder="姓名">
+            <input type="email" name="email" placeholder="邮箱">
+            <input type="password" name="password" placeholder="密码(不少于6位)">
+            <input type="button" ng-disabled = '' name="" value="注册知乎">
+            <p>点击「注册」按钮，即代表你同意<a href="javascript:;">《知乎协议》</a></p>
+        </form>
+        <form class="login-form" ng-show = 'formType == "login"'>
+            <input type="text" name="name">
+            <input type="password" name="password">
+            <input type="button" name="" value="登陆">
+            <div>
+                <input type="checkbox" name="" value="记住我">
+                <a href="javascript:;" title="">无法登陆</a>
+            </div>
+        </form>
+        <input type="button" class= 'download' value="下载知乎APP">
+    </div>
+</body>
+
+</html>

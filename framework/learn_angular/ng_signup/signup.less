@@ -1,0 +1,100 @@
+@myblue:#0f88eb;
+@mywidth:300px;
+.wrapper{
+    *{
+        padding: 0;
+        margin:0;
+        font-family:Microsoft YaHei;
+    }
+    background-color: #eee;
+    // box-shadow: 0 0 10px #ccc;
+    width: @mywidth;
+    margin: 180px auto;
+    .logo{
+        img{
+            display: block;
+            margin:0 auto;
+        }
+    }
+    &>p{
+        margin-top:30px;
+        margin-bottom:20px;
+        font-size:20px;
+
+    }
+    &>span{
+        // margin-top:20px;
+        cursor: pointer;
+        /* margin-left: 30px; */
+        padding:5px;
+        &:hover{
+            color:#999;
+        }
+        &.active{
+            border-bottom: 2px solid @myblue;
+
+            // background-color: @myblue;
+        }
+        &:first-of-type{
+            margin-left:90px;
+        }
+        &:last-of-type{
+            margin-left:25px;
+        }
+    }
+    form{
+        margin-top:20px;
+        font-size:12px;
+        a{
+            text-decoration: none;
+            color:@myblue;
+
+        }
+        &.signup-form{
+            // input:first-of-type{
+            //     border-bottom:none;
+            // }
+            // input:nth-of-type(2){
+            //     border-top: none;
+            //     border-bot:none;
+            // }
+            // input:nth-of-type(3){
+            //     border-top:none;
+            // }
+
+        }
+        &.login-form{}
+    }
+
+    input{
+        width: @mywidth - 4px - 10px;
+        height:40px;
+        padding-left:10px;
+        // outline: none;
+    }
+    input[type = 'checkbox']{
+        width:auto;
+        height:auto;
+    }
+    input[type = 'button']{
+        margin:20px 0;
+        width:@mywidth;
+        // height: 40px;
+        background-color: @myblue;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        
+        &:hover{
+            background-color: lighten(@myblue,10%);
+        }
+        &.download{
+            width:@mywidth - 2px;
+            height:40px - 2px;
+            border:1px solid @myblue;
+            background-color: transparent;
+            color:#000;
+        }
+    }
+}
