@@ -15,11 +15,13 @@ var json = {
 
 var app = angular.module('myApp', []);
 app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
-    $scope.numPerPage = 10;
+    $scope.numPerPage = 5;
     $scope.inputText = "写下你的评论";
     $scope.comments = json.comments;
+    $scope.users = json.users;
     $scope.sortKey = 'time';
     $scope.reverse = false;
+    $scope.curUser = json.users[0];
 
     $scope.addComment = function() {
         if ($scope.inputText == "") {
@@ -31,6 +33,7 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
         comment.timeStr = DateToStr(comment.time);
         comment.content = $scope.inputText;
         comment.up = 0;
+        comment.user = $scope.curUser;
         $scope.comments.push(comment);
         // $scope.inputText = '';
         $scope.slicePage($scope.numPerPage);
@@ -39,8 +42,10 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
 
     $scope.delComment = function(item) {
         // console.log(item);
-        $scope.comments.remove(item);
-        $scope.slicePage($scope.numPerPage);
+        var index = $scope.comments.indexOf(item);
+        $scope.comments.splice(index, 1);
+        // console.log(index);
+        // $scope.slicePage($scope.numPerPage);
     };
     $scope.upvote = function(item) {
         item.up++;
@@ -61,6 +66,7 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
     // $scope.sortBy('time');
     $scope.slicePage = function(N) {
         var maxPage = Math.ceil($scope.comments.length / N);
+        $scope.lastpage = maxPage;
         var pagemarks = [];
         for (var i = 1; i <= maxPage; i++) {
             pagemarks.push(i);
@@ -86,7 +92,6 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
 
         }
 
-
         $scope.bookmarkBegin = Math.floor(($scope.activePage - 1) / 10) * 10;
 
         // }
@@ -99,9 +104,9 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
     $scope.sortBy('time', true);
 }]);
 
-function unitTest() {
-    console.log(DateToStr(new Date));
-}
+// function unitTest() {
+//     console.log(DateToStr(new Date));
+// }
 
 function DateToStr(date) {
     return date.getFullYear() + "年" +
@@ -148,7 +153,6 @@ function randUser() {
 
 }
 
-
 //language可选cn,en,rand
 function randName(language) {
     if (typeof language === 'undefined') {
@@ -175,12 +179,10 @@ function randName(language) {
         p = Math.random() >= 0.5 ? pool.cn : pool.en;
 
     }
-    return p.family[randBetween(0, p.family.length - 1)] + ' ' + p.name[randBetween(0, p.name.length - 1)]
+    return p.family[randBetween(0, p.family.length - 1)] + ' ' + p.name[randBetween(0, p.name.length - 1)] + p.name[randBetween(0, p.name.length - 1)];
 
     // return pool[randBetween(0, pool.length - 1)] + " " + pool[randBetween(0, pool.length - 1)];
 }
-
-
 
 function createJSON() {
     for (var i = 0; i < 10; i++) {
