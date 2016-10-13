@@ -32,10 +32,11 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
         comment.time = new Date();
         comment.timeStr = DateToStr(comment.time);
         comment.content = $scope.inputText;
+        // .replace(/ /g, '&nbsp').replace(/\n/g, '<br/>');
         comment.up = 0;
         comment.user = $scope.curUser;
         $scope.comments.push(comment);
-        // $scope.inputText = '';
+        $scope.inputText = '';
         $scope.slicePage($scope.numPerPage);
         $scope.sortBy('time', true);
     };

@@ -9,55 +9,75 @@
 </head>
 
 <body>
-    <div class="wrapper" ng-app='myApp' ng-controller="myCtrl">
-        <h2>Angular留言板<small>({{comments.length}}条评论)</small></h2>
-        <!-- <input type="text" value="默认留言." ng-model='inputText'> -->
-        <select ng-model='curUser' ng-options="x.name for x in users">
-        </select>
-
-        <textarea ng-model='inputText' value='请留言'></textarea>
-        <input type="button" ng-click='addComment()' value="评论">
-        <input type="button"  value="取消">
-        <!-- <hr> -->
-        <div>
-            
-            <label>内容筛选<input type="text" ng-model="commentFilter" placeholder="输入筛选"></label>
-            <label>每页显示<input type="number" ng-model='numPerPage' ng-change='slicePage(numPerPage)'>条</label>
-            <!-- <input type="number" name="" value="" placeholder=""> -->
-            <input type="button" name="" value="按时间排序" ng-click="sortBy('time')">
-            <span ng-show="sortKey === 'time'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
-            <input type="button" name="" value="按赞同排序" ng-click="sortBy('up')">
-            <span ng-show="sortKey === 'up'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
+    <div class="wrapper-all" ng-app='myApp' ng-controller="myCtrl">
+        <div class="nav">
+            <ul>
+                <li>
+                    <label>内容筛选
+                        <input type="text" ng-model="commentFilter" placeholder="输入筛选">
+                    </label>
+                </li>
+                <li>
+                    选择用户
+                    <select ng-model='curUser' ng-options="x.name for x in users">
+                    </select>
+                </li>
+                <li>
+                    <img ng-src="{{curUser.avatar}}" alt="curUser.name">
+                    <span> {{curUser.name}}</span>
+                </li>
+            </ul>
         </div>
-        <ul class="comments">
-            <li ng-repeat="c in comments | limitTo:numPerPage:curPageFirstIndex |filter: commentFilter ">
-                <div class="left">
-                    <img ng-src = '{{c.user.avatar}}' alt="c.user.avatar">
-                   
-                </div>
-                <div class='right'>
-                    <p class ='username' >{{c.user.name}}</p>
-                    <p class="content">{{c.content}}</p>
-                    <div>
-                        <span class="time">{{c.timeStr}}</span>
-                        <span class="upvote" ng-click="upvote(c)">点赞</span>
-                        <span class="del" ng-click="delComment(c)">删除</span>
-                        <span class="del" >举报</span>
-                        <span class="up-num">{{c.up}}赞</span>
+        <div class="wrapper-content">
+            <h2>Angular留言板<small>({{comments.length}}条评论)</small></h2>
+            <!-- <input type="text" value="默认留言." ng-model='inputText'> -->
+            <textarea ng-model='inputText' value='请留言' rows=3></textarea>
+            <div>已输入<span>{{inputText.length}}</span>个字符</div>
+            <input type="button" ng-click='addComment()' value="评论">
+            <input type="button" value="取消">
+            <!-- <hr> -->
+            <div>
+                <!--         <label>内容筛选
+                    <input type="text" ng-model="commentFilter" placeholder="输入筛选">
+                </label>
+ -->
+                <label>每页显示
+                    <input type="number" ng-model='numPerPage' ng-change='slicePage(numPerPage)'>条</label>
+                <!-- <input type="number" name="" value="" placeholder=""> -->
+                <input type="button" name="" value="按时间排序" ng-click="sortBy('time')">
+                <span ng-show="sortKey === 'time'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
+                <input type="button" name="" value="按赞同排序" ng-click="sortBy('up')">
+                <span ng-show="sortKey === 'up'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
+            </div>
+            <ul class="comments">
+                <li ng-repeat="c in comments | limitTo:numPerPage:curPageFirstIndex |filter: commentFilter ">
+                    <div class="left">
+                        <img ng-src='{{c.user.avatar}}' alt="c.user.avatar">
                     </div>
-                </div>
-            </li>
-        </ul>
-        <ul class='pagemark'>
-            <li ng-click='toPage(1)'>首页</li>
-            <li ng-click='toPage("prev")'>上一页</li>
-            <!-- <li class="active">1</li> -->
-            <li ng-repeat="mark in pagemarks |limitTo:10:bookmarkBegin" ng-click='toPage(mark)' ng-class="{active:mark === activePage}">{{mark}}</li>
-            <li ng-click='toPage("next")'>下一页</li>
-            <li ng-click='toPage(lastpage)'>尾页</li>
-        </ul>
+                    <div class='right'>
+                        <p class='username'>{{c.user.name}}</p>
+                        <p class="content"><pre>{{c.content}}</pre></p>
+                        <div>
+                            <span class="time">{{c.timeStr}}</span>
+                            <span class="upvote" ng-click="upvote(c)">点赞</span>
+                            <span class="del" ng-click="delComment(c)">删除</span>
+                            <span class="del">举报</span>
+                            <span class="up-num">{{c.up}}赞</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class='pagemark'>
+                <li ng-click='toPage(1)'>首页</li>
+                <li ng-click='toPage("prev")'>上一页</li>
+                <!-- <li class="active">1</li> -->
+                <li ng-repeat="mark in pagemarks |limitTo:10:bookmarkBegin" ng-click='toPage(mark)' ng-class="{active:mark === activePage}">{{mark}}</li>
+                <li ng-click='toPage("next")'>下一页</li>
+                <li ng-click='toPage(lastpage)'>尾页</li>
+            </ul>
+        </div>
+        <script src="comments.js"></script>
     </div>
-    <script src="comments.js"></script>
 </body>
 
 </html>
