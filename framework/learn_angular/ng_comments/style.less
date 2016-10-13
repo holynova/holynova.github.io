@@ -49,6 +49,14 @@
     pre {
         white-space: pre-wrap;
     }
+    input[type='button'] {
+        padding: 5px 15px;
+        background-color: #0092C7;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
     .nav {
         width: 100%;
         padding: 0 10%;
@@ -63,7 +71,7 @@
         font-size: 14px;
         // box-shadow
         li {
-            padding:0 10px;
+            padding: 0 10px;
             input {}
             select {
                 margin: 10px 0;
@@ -83,43 +91,78 @@
             }
             // vertical-align:center;
         }
+        input[type="button"]{
+        background-color: #fff;
+        color:@myBlue;
+        }
+        // margin-top: 50px;
     }
+    // div.nav:after {
+    //     content: "shadow";
+    //     box-shadow: 0 0px 10px 2px #999;
+    //     width:100%;
+    //     height:10px;
+    //     display:block;
+    //     margin:0;
+    //     padding:0;
+    // }
+    // .shadow {
+    //     width: 100%;
+    //     height: 1px;
+    //     // background-color: red;
+    //     box-shadow: 0 0 10px #999;
+    //     margin:0;
+    //     margin-top: 50px;
+    //     // position:absolute;
+    //     // left:0;
+    //     // bottom:0;
+    // }
     .wrapper-content {
         width: 80%;
         margin: 70px auto;
-        // background-color: #ccc;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
         box-shadow: 0 0 10px #ccc;
-        // -----------------------------------------
-        textarea {
-            width: 80%;
-            height: 100px;
-            overflow-y: hidden;
-            padding: 5px;
-            margin: 5px 0;
-            border-radius: 3px;
-            display: block;
-            overflow: auto;
-            // rows:10;
-        }
-        input[type='button'] {
-            padding: 5px 15px;
-            background-color: #0092C7;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+
+        
         &>div {
             font-size: 13px;
-            margin: 20px auto;
-            label {
+            margin: 10px auto;
+           
+        }
+
+        .editer{
+            // background-color: #eee;
+            textarea {
+                width: 90%;
+                height: 100px;
+                overflow-y: hidden;
+                padding: 5px;
+                margin: 5px 0;
+                border-radius: 3px;
                 display: block;
+                overflow: auto;
+                // rows:10;
+            }
+            &>span,input{
+
+                margin-right: 10px;
+            }
+        }
+        .setup{
+            background-color: #eee;
+            width:90%;
+            margin:0;
+            // padding:10px 0;
+
+            label {
+                // display: block;
                 margin: 10px 0;
             }
-            input[type='text'] {}
+            input[type='text'] {
+                // width:50px;
+            }
             input[type='button'] {
                 padding: 5px;
                 // margin-right: 
@@ -148,6 +191,7 @@
                     vertical-align: top;
                     // text-align:center;
                 }
+
                 .left {
                     width: 80px;
                     margin-top: 15px;
@@ -158,7 +202,7 @@
                 }
                 .right {
                     position: relative;
-                    width: 75%;
+                    width: 80%;
                     font-size: 13px;
                     p.username {
                         font-weight: bold;

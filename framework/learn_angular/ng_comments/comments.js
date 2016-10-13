@@ -22,6 +22,7 @@ app.controller('myCtrl', ['$scope', '$filter', function($scope, $filter) {
     $scope.sortKey = 'time';
     $scope.reverse = false;
     $scope.curUser = json.users[0];
+    $scope.showTextarea = true;
 
     $scope.addComment = function() {
         if ($scope.inputText == "") {
