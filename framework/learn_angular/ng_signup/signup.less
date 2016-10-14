@@ -44,7 +44,14 @@
         margin-top: 20px;
         font-size: 12px;
         span.error {
+            display:block;
+            height:0px;
             color: red;
+            position: relative;
+            top:-30px;
+            right:10px;
+            text-align:right;
+            // background-color: #f60;
         }
         a {
             text-decoration: none;
@@ -55,6 +62,23 @@
         }
         input.ng-valid {
             border: 1px solid green;
+        }
+        .result{
+            margin-top:10px;
+            border:1px solid @myblue;
+            &.success{
+            border:1px solid green;
+            }
+            &.fail{
+            border:1px solid red;
+            }
+            border-radius:5px;
+            p{
+            text-align:left;
+            line-height:20px;
+            height:20px; 
+            padding-left:10px;
+            }
         }
         &.signup-form {
             input:nth-of-type(1) {
@@ -67,7 +91,7 @@
                 border-top: none;
                 border-radius: 0 0 5px 5px;
             }
-            p{
+            &>p{
                 text-align: center;
             }
         }
@@ -87,6 +111,7 @@
                 margin-left:100px;
             }
         }
+
     }
     input {
         width: @mywidth - 2px - 10px;
@@ -109,8 +134,12 @@
         border: none;
         border-radius: 3px;
         cursor: pointer;
-        &:hover {
+        &:hover{
             background-color: lighten(@myblue, 10%);
+        }
+        &:disabled {
+            background-color: lighten(grey, 10%);
+            cursor:auto;
         }
         &.download {
             width: @mywidth - 2px;

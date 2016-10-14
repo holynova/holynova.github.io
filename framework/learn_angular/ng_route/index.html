@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>路由试验</title>
+    <link rel="stylesheet" href="">
+    <script src = '../../../script/angular.min.js'></script>
+    <script src = '../../../script/angular-route.js'></script>
+    <script src = 'ng_route.js'></script>
+</head>
+<body>
+<div class="wrapper" ng-app="myRouteApp" ng-controller = 'myCtrl'>
+    <button name = "注册">注册</button>
+    <button name = "登陆">登陆</button>
+
+    <a href="#/" title="">首页</a>
+    <a href="#/login" title="">注册</a>
+    <a href="#/comments" title="">留言</a>
+<div ng-view> 
+</div>
+</div>
+    
+</body>
+</html>

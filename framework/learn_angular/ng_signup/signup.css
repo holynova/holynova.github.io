@@ -39,7 +39,13 @@
   font-size: 12px;
 }
 .wrapper form span.error {
+  display: block;
+  height: 0px;
   color: red;
+  position: relative;
+  top: -30px;
+  right: 10px;
+  text-align: right;
 }
 .wrapper form a {
   text-decoration: none;
@@ -47,6 +53,23 @@
 }
 .wrapper form input.ng-valid {
   border: 1px solid green;
+}
+.wrapper form .result {
+  margin-top: 10px;
+  border: 1px solid #0f88eb;
+  border-radius: 5px;
+}
+.wrapper form .result.success {
+  border: 1px solid green;
+}
+.wrapper form .result.fail {
+  border: 1px solid red;
+}
+.wrapper form .result p {
+  text-align: left;
+  line-height: 20px;
+  height: 20px;
+  padding-left: 10px;
 }
 .wrapper form.signup-form input:nth-of-type(1) {
   border-bottom: none;
@@ -56,7 +79,7 @@
   border-top: none;
   border-radius: 0 0 5px 5px;
 }
-.wrapper form.signup-form p {
+.wrapper form.signup-form > p {
   text-align: center;
 }
 .wrapper form.login-form input:nth-of-type(1) {
@@ -96,6 +119,11 @@
 .wrapper input[type='button']:hover,
 .wrapper input[type='submit']:hover {
   background-color: #3ba0f2;
+}
+.wrapper input[type='button']:disabled,
+.wrapper input[type='submit']:disabled {
+  background-color: #9a9a9a;
+  cursor: auto;
 }
 .wrapper input[type='button'].download,
 .wrapper input[type='submit'].download {
