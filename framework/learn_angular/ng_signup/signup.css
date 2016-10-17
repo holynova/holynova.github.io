@@ -1,7 +1,6 @@
 .wrapper {
-  background-color: #eee;
   width: 300px;
-  margin: 180px auto;
+  margin: 50px auto;
 }
 .wrapper * {
   padding: 0;
@@ -41,18 +40,15 @@
 .wrapper form span.error {
   display: block;
   height: 0px;
-  color: red;
   position: relative;
   top: -30px;
   right: 10px;
   text-align: right;
+  color: red;
 }
 .wrapper form a {
   text-decoration: none;
   color: #0f88eb;
-}
-.wrapper form input.ng-valid {
-  border: 1px solid green;
 }
 .wrapper form .result {
   margin-top: 10px;
@@ -117,7 +113,9 @@
   cursor: pointer;
 }
 .wrapper input[type='button']:hover,
-.wrapper input[type='submit']:hover {
+.wrapper input[type='submit']:hover,
+.wrapper input[type='button']:active,
+.wrapper input[type='submit']:active {
   background-color: #3ba0f2;
 }
 .wrapper input[type='button']:disabled,

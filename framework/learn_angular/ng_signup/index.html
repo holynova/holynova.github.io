@@ -17,36 +17,34 @@
         <span ng-class='{active:formType == "login"}' ng-click='formType = "login"'>登陆</span>
         <form class="signup-form" ng-show='formType == "signup"' name="signupForm" novalidate>
             <input type="text" name="name" placeholder="姓名" ng-model='signup.name' required>
-            <span class="error" ng-show="signupForm.name.$dirty && signupForm.name.$invalid">姓名必填</span>
+            <span class="error" >{{signupError.name}}</span>
             <input type="email" name="email" placeholder="邮箱" ng-model='signup.email' required>
-            <!-- <span class="error" ng-show="signupForm.email.$dirty && signupForm.email.$error.required">邮箱必填</span> -->
-            <span class="error" ng-show="signupForm.email.$dirty && signupForm.email.$invalid">无效的邮箱</span>
+            <span class="error" > {{signupError.email}}</span>
             <input type="password" name="password" placeholder="密码(不少于6位)" ng-model='signup.password' ng-minlength=6 required>
-            <span class="error" ng-show="signupForm.password.$dirty && signupForm.password.$invalid">密码不少于6位</span>
-            <input type="submit" ng-disabled='signupForm.name.$invalid || signupForm.email.$invalid || signupForm.password.$invalid' ng-click="signupSubmit()" name="" value="注册知乎">
+            <span class="error" > {{signupError.password}}</span>
+            <input type="submit" ng-click="signupSubmit()" name="" value="注册知乎">
+            <!--             <input type="submit" ng-disabled='signupForm.name.$invalid || signupForm.email.$invalid || signupForm.password.$invalid || signupError == null' ng-click="signupSubmit()" name="" value="注册知乎">
+ -->
             <p>点击「注册」按钮，即代表你同意<a href="javascript:;">《知乎协议》</a></p>
-            <div class="signup-result result" ng-show = 'isSignupValid' ng-class="{success:isSignupValid,fail:!isSignupValid}">
+            <div class="signup-result result" ng-show='isSignupValid' >
                 <p>注册成功</p>
                 <p>用户名为{{signupResult.name}}</p>
                 <p>邮箱为{{signupResult.email}}</p>
                 <p>请牢记密码</p>
-                <!-- <input type="button" name="" value="用新账号登陆"> -->
             </div>
         </form>
-        <form class="login-form" ng-show='formType == "login"' name = 'loginForm'>
-            <input type="text" name="name" ng-model = 'login.name' required placeholder="用户名或邮箱">
-            <span class="error" ng-show="loginForm.name.$dirty && loginForm.name.$invalid">用户名或邮箱必填</span>
-            <input type="password" name="password" ng-model = 'login.password' required placeholder="输入密码">
-            <span class="error" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">请输入密码</span>
-            <input type="submit" name="" ng-disabled = "loginForm.name.$invalid || loginForm.password.$invalid"  value="登陆" ng-click="loginSubmit()">
+        <form class="login-form" ng-show='formType == "login"' name='loginForm' novalidate>
+            <input type="text" name="name" ng-model='login.name' required placeholder="用户名或邮箱">
+            <span class="error" >{{loginError.name}}</span>
+            <input type="password" name="password" ng-model='login.password' required placeholder="输入密码">
+            <span class="error" >{{loginError.password}}</span>
+            <input type="submit" name="" value="登陆" ng-click="loginSubmit()">
             <div>
                 <input type="checkbox" name="" value="">记住我
                 <a href="javascript:;" title="">无法登陆</a>
             </div>
             <div class="login-result"></div>
         </form>
-
-
         <input type="button" class='download' value="下载知乎APP">
     </div>
 </body>

@@ -5,11 +5,12 @@
         padding: 0;
         margin: 0;
         font-family: Microsoft YaHei;
+        // transition:0.3s;
     }
-    background-color: #eee;
+    // background-color: #eee;
     // box-shadow: 0 0 10px #ccc;
     width: @mywidth;
-    margin: 180px auto;
+    margin: 50px auto;
     .logo {
         img {
             display: block;
@@ -46,12 +47,16 @@
         span.error {
             display:block;
             height:0px;
-            color: red;
+            // color: green;
             position: relative;
             top:-30px;
             right:10px;
             text-align:right;
             // background-color: #f60;
+                color: red;
+            &.fail{
+            }
+
         }
         a {
             text-decoration: none;
@@ -61,7 +66,7 @@
             // border: 1px solid red;
         }
         input.ng-valid {
-            border: 1px solid green;
+            // border: 1px solid green;
         }
         .result{
             margin-top:10px;
@@ -134,7 +139,7 @@
         border: none;
         border-radius: 3px;
         cursor: pointer;
-        &:hover{
+        &:hover,&:active{
             background-color: lighten(@myblue, 10%);
         }
         &:disabled {
