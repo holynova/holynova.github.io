@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>打字效果</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+    body {
+        background-color: #000;
+    }
+    
+    .wrapper {
+        width: 80%;
+        margin: 10px auto;
+        font-size: 60px;
+        font-family: Microsoft YaHei;
+        /*background-color: #fff;*/
+        line-height: 60px;
+    }
+    
+    .wrapper span {
+        opacity: 0;
+        color: #fff;
+    }
+    </style>
+    <script src='../animate.js'></script>
+    <script>
+    window.onload = function() {
+        var text = "没有人是一座孤岛，可以自全。每个人都是大陆的一片，整体的一部分。如果海水冲掉一块，欧洲就减小，如同一个海岬失掉一角，如同你的朋友或者你自己的领地失掉一块：任何人的死亡都是我的损失，因为我是人类的一员，因此不要问丧钟为谁而鸣，它就为你而鸣。";
+        var oWrapper = document.body.children[0];
+        var htmlStr = '';
+        for (var i = 0; i < text.length; i++) {
+            htmlStr += '<span>' + text.charAt(i) + "</span>";
+        }
+        console.log(oWrapper);
+        oWrapper.innerHTML = htmlStr;
+        // oWrapper.innerHTML = '<span>hello world</span>';
+        // console.log(oWrapper.innerHTML);
+        var aSpan = oWrapper.children;
+
+
+
+        for (var i = 0; i < aSpan.length; i++) {
+            (function(index) {
+                setTimeout(function() {
+                    animate(aSpan[index], {
+                        opacity: 1,
+                        fontSize:30
+                    },{
+                        duration:500
+                    });
+                }, index * 200, false);
+
+            })(i);
+
+            // setTimeout(function(index){
+            //  animate(aSpan[index],{opacity:1}) ;  
+            // },i*300,false);
+        }
+
+    };
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+    </div>
+</body>
+
+</html>

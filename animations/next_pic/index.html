@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>手风琴</title>
+    <title>next pic</title>
     <link rel="stylesheet" href="">
     <style type="text/css" media="screen">
     * {
@@ -14,55 +14,49 @@
     }
     
     .wrapper {
-        /*width: 800px;*/
+        width: 720px;
+        height: 450px;
         margin: 50px auto;
-        width:712px;
-        /*display: relative;*/
+        background: url(img/1.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .wrapper span{
+        display: block;
+        float:left;
+        background-repeat: no-repeat;
+        opacity: 0;
+
+
     }
     
-    .wrapper ul {
-        /*width: 5000px;*/
-        position: relative;
-        height: 320px;
-        width:712px;
-        display: relative;
-        /*margin-left:100px;*/
-        overflow: hidden;
+/*    .wrapper ul {
+        width: 480px;
+        height: 300px;
     }
     
     .wrapper ul li {
-        width: 512px;
-        height: 320px;
-        float: left;
-        position: absolute;
+        width: 480px;
+        height: 300px;
     }
     
     .wrapper ul li img {
-        width: 100%;
-    }
-    
-    .clearfix:after {
-        content: '.';
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-    }
+        width: 100%
+    }*/
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <ul class="clearfix">
+      <!--   <ul>
             <li><img src="img/1.jpg" alt=""></li>
             <li><img src="img/2.jpg" alt=""></li>
             <li><img src="img/3.jpg" alt=""></li>
             <li><img src="img/4.jpg" alt=""></li>
             <li><img src="img/5.jpg" alt=""></li>
-        </ul>
+        </ul> -->
     </div>
-    <script src= '../animate.js'></script>
-    <script src='menu.js'></script>
+    <script src='../animate.js'></script>
+    <script src='nextPic.js'></script>
 </body>
 
 </html>
