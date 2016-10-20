@@ -3,9 +3,11 @@ window.onload = function() {
     var oUl = oWrapper.getElementsByTagName('ul')[0];
     var aLi = oUl.children;
     var aImg = oUl.getElementsByTagName('img');
+    var oBtn = oWrapper.getElementsByTagName('input')[0];
     console.log('ready');
     //转换为定位的布局
     var arrPos = toAbsolute();
+    console.log(arrPos);
 
     function toAbsolute() {
         var aPos = [];
@@ -28,12 +30,24 @@ window.onload = function() {
         return aPos;
     }
 
+    // setInterval(function() {
+    //     for (var i = 0; i < aLi.length; i++) {
+    //         // aLi[i].innerHTML = aLi[i].myIndex;
+    //     }
+    // }, 100, false);
 
+    oBtn.onclick = function() {
 
+        arrPos.sort(function() {
+            return Math.random() - 0.5;
+        });
 
+        for (var i = 0; i < aLi.length; i++) {
+            animate(aLi[i], arrPos[aLi[i].myIndex]);
+        }
+    };
     //拖拽动作
     for (var i = 0; i < aLi.length; i++) {
-        // EventUtil.addHandler(aLi[i], 'mousedown', mousedownHandler);
         aLi[i].onmousedown = function(ev) {
             var oEvent = ev || event;
             var curIcon = this;
@@ -51,56 +65,39 @@ window.onload = function() {
                     left: (left + oEvent.clientX - x) + "px",
                     top: (top + oEvent.clientY - y) + 'px'
                 });
-
-                var minDis = 99999;
-                var minDisIndex = -1;
                 for (var i = 0; i < aLi.length; i++) {
-                    // console.log('%d vs %d =%s', curIcon.myIndex, aLi[i].myIndex, isCover(curIcon, aLi[i]))
-                    aLi[i].style.border = '1px solid #26292C';
-                    if (aLi[i] == curIcon) {
-                        continue;
-                    }
-                    if (isCover(curIcon, aLi[i])) {
-                        var dis = disBetween(curIcon, aLi[i]);
-                        if (dis < minDis) {
-                            minDis = dis;
-                            minDisIndex = aLi[i].myIndex;
-                            // aLi[i].style.border = '1px dashed #ccc';
-                        }
-                    }
-                    // else {
-                    //     aLi[i].style.border = '1px solid #26292C';
-
-                    // }
+                    aLi[i].style.border = '1px dashed #26292C';
 
                 }
-                if (minDis != 99999) {
-                    aLi[minDisIndex].style.border = '1px dashed #ccc';
+                var oNearest = findNearest(curIcon);
+                if (oNearest) {
+                    oNearest.style.border = '1px dashed #ccc';
 
                 }
+
                 document.onmouseup = function() {
-                    // setStyle(curIcon,"")
-                    if (minDis == 99999) {
+
+                    // var minDisIndex = findNearest(curIcon);
+                    var oNearest = findNearest(curIcon);
+                    if (!oNearest) {
                         animate(curIcon, arrPos[curIcon.myIndex]);
                     } else {
-                        //换位置
+                        // console.log('minDisIndex = %d', minDisIndex);
+                        oNearest.style.border = '1px solid #26292C';
                         var temp = curIcon.myIndex;
-                        curIcon.myIndex = aLi[minDisIndex].myIndex;
-                        aLi[minDisIndex].myIndex = temp;
+                        animate(curIcon, arrPos[oNearest.myIndex]);
+                        animate(oNearest, arrPos[curIcon.myIndex]);
 
-                        animate(curIcon, arrPos[curIcon.myIndex]);
-                        animate(aLi[minDisIndex], arrPos[aLi[minDisIndex].myIndex]);
+                        curIcon.myIndex = oNearest.myIndex;
+                        oNearest.myIndex = temp;
 
                     }
-
-
-
                     document.onmousemove = null;
                     document.onmouseup = null;
                     curIcon.style.zIndex = 10;
+                    curIcon = null;
 
                 };
-
 
                 return false;
             };
@@ -108,51 +105,31 @@ window.onload = function() {
         }
     }
 
-    // function mousedownHandler(event) {
-    //     console.log('down');
-    //     EventUtil.addHandler(document, 'mousemove', mousemoveHandler);
-    //     return false;
-    // }
+    function findNearest(curEl) {
+        var minDis = 999999;
+        var minDisIndex = -1;
+        var dis;
+        for (var i = 0; i < aLi.length; i++) {
 
-    // function mousemoveHandler(event) {
-    //     console.log('move');
-    //     event = EventUtil.getEvent(event);
-    //     var target = EventUtil.getTarget(event);
-    //     target.style.zIndex = 20;
-    //     for (var i = 0; i < aLi.length; i++) {
-    //         if (aLi[i] == target) {
-    //             continue;
-    //         } else {
-    //             if (isCover(target, aLi[i])) {
-    //                 aLi[i].style.border = '1px dashed #ccc';
-    //             } else {
-    //                 aLi[i].style.border = '1px solid #26292C';
-
-
-    //             }
-    //         }
-    //     }
-    //     EventUtil.addHandler(document, 'mouseup', mouesupHandler);
-
-    // }
-
-    // function mouesupHandler(event) {
-    //     console.log('up');
-    //     EventUtil.removeHandler(document, 'mousemove', mousemoveHandler);
-    //     EventUtil.removeHandler(document, 'mouseup', mouseupHandler);
-    // }
-
-    // EventUtil.addHandler(oUl, 'mousedown', mousedownHandler);
-
-    // function mousedownHandler(event) {
-    //     event = EventUtil.getEvent(event);
-    //     var target = EventUtil.getTarget(event);
-    //     if (target.tagName.toUpperCase() == 'IMG' || 　target.tagName.toUpperCase() == 'LI') {
-    //         setStyle(target, {
-    //             border: "1px dashed #ccc"
-    //         });
-    //     }
-    // }
+            if (curEl.myIndex == aLi[i].myIndex) {
+                continue;
+            } else {
+                if (isCover(curEl, aLi[i])) {
+                    dis = disBetween(curEl, aLi[i]);
+                    if (dis < minDis) {
+                        minDis = dis;
+                        minDisIndex = i;
+                    }
+                }
+            }
+        }
+        if (minDisIndex == -1) {
+            //没有碰撞的
+            return null;
+        } else {
+            return aLi[minDisIndex];
+        }
+    }
 
     //找到两个icon之间的距离
     //距离最小, 且小于
@@ -198,7 +175,6 @@ window.onload = function() {
         rect.right = pos.left + el.offsetWidth;
         rect.bottom = pos.top + el.offsetHeight;
         return rect;
-
 
     }
 
