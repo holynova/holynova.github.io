@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft Yahei'
+}
+
+.wrapper {
+    width: 50%;
+    margin: 50px auto;
+    &>div {
+        border: 1px solid #ccc;
+        // padding: 10px;
+    }
+    .left {
+        // width: 50%;
+        font-size: 15px;
+        h3 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        form {
+            &>div {
+                // height: 
+                margin:10px 0;
+                span,
+                input {
+                    display: block;
+                    float: left;
+                }
+                span {
+                    width: 40%;
+                    text-align: right;
+                    padding-right: 3px;
+                }
+                input {
+                    width: 20%;
+                    text-align:right;
+                }
+            }
+        }
+    }
+    .right {
+        div {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        // width: 50%;
+        font-size: 12px;
+        div {
+            padding: 1em;
+            margin: 1em;
+            display: block;
+            min-width: 100px;
+            text-align: center;
+        }
+        .class1,
+        .class2,
+        .class3 {
+            span {
+                display: block;
+            }
+        }
+        .class1 {
+            display: block;
+        }
+        .class2 {
+            display: block;
+        }
+        .class3 {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+        }
+    }
+}
+
+.clearFix:after {
+    clear: both;
+    content: "";
+    display: none;
+}

@@ -1,100 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>买房计算器</title>
-
-	<link rel="stylesheet" type="text/css" href="clear.css">
-	<link rel="stylesheet" type="text/css" href="main_less.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>买房计算器</title>
+    <link rel="stylesheet" type="text/css" href="clear.css">
+    <!-- <link rel="stylesheet" type="text/css" href="main_less.css"> -->
+    <link rel="stylesheet" type="text/css" href="buy_house.css">
+    <script src = "../../script/vue.js"></script>
 </head>
+
 <body>
-	<div class="wrapper">
-		<!-- <h1>calculator</h1> -->
-		<div class="left">
-			<h3>输入参数</h3>
-			<form action="" method="get" accept-charset="utf-8">
-				<label>
-					<span class="label_text">房东报价</span>
-					<input type="number" name="total_price" id="total_price" value="73">万元
-				</label><br>
-				<label>
-					<span class="label_text">面积</span>
-					<input type="number" name="area" id="area" value="95.12">平方米
-				</label><br>
-				<label>
-					<span class="label_text">评估单价</span>
-					<input type="number" name="eval_unit_price" id="eval_unit_price" value="6500">元每米
-				</label><br>
-
-				<label>
-					<span class="label_text">契税税率</span>
-					<input class='tax_rate' type="number" name="contract_tax_rate" id="contract_tax_rate" value="1.5">%
-				</label><br>
-				<label>
-					<span class="label_text">营业税税率</span>
-					<input class='tax_rate' type="number" name="business_tax_rate" id="business_tax_rate" value="0">%
-				</label><br>
-				<label>
-					<span class="label_text">个人所得税税率</span>
-					<input class='tax_rate' type="number" name="income_tax_rate" id="income_tax_rate" value="1">%
-				</label><br>
-				<label>
-					<span class="label_text">中介费点数</span>
-					<input class='tax_rate' type="number" name="agent_fee_rate" id="agent_fee_rate" value="2">%
-				</label><br>
-
-				<label>
-					<span class="label_text">首付比例</span>
-					<input type="number" name="down_payment_per" id="down_payment_per" value="20">%
-				</label><br>
-				<label>
-					<span class="label_text">其他费用</span>
-					<input type="number" name="others" id="others" value="2500">元
-				</label><br>
-				<label>
-					<span class="label_text">公积金贷款金额</span>
-					<input type="number" name="house_found" id="house_found" value="30">万元
-				</label><br>
-
-
-				<input type="button" id="btn_go" name="" value="计算">
-				<!-- <button id="btn_go" >计算</button> -->
-
-			</form>
-		</div>
-		<div class="right" id = 'result'>
-
-		<!-- 	<div class="col_one class1">
-				
-			总价
-			</div>
-			<div class="col_two class1">
-				<div class="col_two_up">
-					<div class="col_two_up_left">
-						房屋总价
-					</div>
-					<div class="col_two_up_right">
-						<div class="col_two_up_right_1">评估总价</div>
-						<div class="col_two_up_right_2">评估外总价</div>
-					</div>
-				</div>
-				<div class="col_two_down">
-					<div class="col_two_down_left">
-						税费合计
-					</div>
-					<div class="col_two_down_right">
-						<div class="col_two_down_right_1">契税</div>
-						<div class="col_two_down_right_2">营业税</div>
-						<div class="col_two_down_right_3">个人所得税</div>
-						<div class="col_two_down_right_4">中介费</div>
-						<div class="col_two_down_right_5">其他费用</div>
-					</div>
-				</div>
-			</div> -->
-			
-		</div>
-	</div>
-	<script src="buy_house.js" type="text/javascript" charset="utf-8" ></script>
+    <div class="wrapper" id = 'app'>
+        <!-- <h1>calculator</h1> -->
+        <div class="left">
+            <h3>输入参数</h3>
+            <form action="" method="get" accept-charset="utf-8">
+                <div>
+                    <span class="label_text">房东报价</span>
+                    <input type="number" name="total_price" id="total_price" value="73">万元
+                </div>
+                <div>
+                    <span class="label_text">面积</span>
+                    <input type="number" name="area" id="area" value="95.12">平方米
+                </div>
+                <div>
+                    <span class="label_text">评估单价</span>
+                    <input type="number" name="eval_unit_price" id="eval_unit_price" value="6500">元每米
+                </div>
+                <div>
+                    <span class="label_text">契税税率</span>
+                    <input class='tax_rate' type="number" name="contract_tax_rate" id="contract_tax_rate" value="1.5">%
+                </div>
+                <div>
+                    <span class="label_text">营业税税率</span>
+                    <input class='tax_rate' type="number" name="business_tax_rate" id="business_tax_rate" value="0">%
+                </div>
+                <div>
+                    <span class="label_text">个人所得税税率</span>
+                    <input class='tax_rate' type="number" name="income_tax_rate" id="income_tax_rate" value="1">%
+                </div>
+                <div>
+                    <span class="label_text">中介费点数</span>
+                    <input class='tax_rate' type="number" name="agent_fee_rate" id="agent_fee_rate" value="2">%
+                </div>
+                <div>
+                    <span class="label_text">首付比例</span>
+                    <input type="number" name="down_payment_per" id="down_payment_per" value="20">%
+                </div>
+                <div>
+                    <span class="label_text">其他费用</span>
+                    <input type="number" name="others" id="others" value="2500">元
+                </div>
+                <div>
+                    <span class="label_text">公积金贷款金额</span>
+                    <input type="number" name="house_found" id="house_found" value="30">万元
+                </div>
+                <input type="button" id="btn_go" name="" value="计算">
+            </form>
+        </div>
+        <div class="right result" id='result'>
+            <div class="total class1">
+            <span>总价</span>
+                <div class="house class2">
+                <span>房屋总价</span>
+                    <div class="evaluation class3">评估总价</div>
+                    <div class="rest class3">评估外总价</div>
+                </div>
+                <div class="tax class2">
+                <span>税费总和</span>
+                	<div class="taxtype class3">契税</div>
+                	<div class="taxtype class3">营业税</div>
+                	<div class="taxtype class3">个人所得税</div>
+                	<div class="taxtype class3">中介费</div>
+                	<div class="taxtype class3">其他</div>
+                </div>
+            </div>
+            <!--             <div class="col_one class1">
+                总价
+            </div>
+            <div class="col_two class1">
+                <div class="col_two_up">
+                    <div class="col_two_up_left">
+                        房屋总价
+                    </div>
+                    <div class="col_two_up_right">
+                        <div class="col_two_up_right_1">评估总价</div>
+                        <div class="col_two_up_right_2">评估外总价</div>
+                    </div>
+                </div>
+                <div class="col_two_down">
+                    <div class="col_two_down_left">
+                        税费合计
+                    </div>
+                    <div class="col_two_down_right">
+                        <div class="col_two_down_right_1">契税</div>
+                        <div class="col_two_down_right_2">营业税</div>
+                        <div class="col_two_down_right_3">个人所得税</div>
+                        <div class="col_two_down_right_4">中介费</div>
+                        <div class="col_two_down_right_5">其他费用</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="buy_house.js" type="text/javascript" charset="utf-8"></script>
 </body>
+
 </html>

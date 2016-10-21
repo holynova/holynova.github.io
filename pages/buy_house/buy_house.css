@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Microsoft Yahei';
+}
+.wrapper {
+  width: 50%;
+  margin: 50px auto;
+}
+.wrapper > div {
+  border: 1px solid #ccc;
+}
+.wrapper .left {
+  font-size: 15px;
+}
+.wrapper .left h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.wrapper .left form > div {
+  margin: 10px 0;
+}
+.wrapper .left form > div span,
+.wrapper .left form > div input {
+  display: block;
+  float: left;
+}
+.wrapper .left form > div span {
+  width: 40%;
+  text-align: right;
+  padding-right: 3px;
+}
+.wrapper .left form > div input {
+  width: 20%;
+  text-align: right;
+}
+.wrapper .right {
+  font-size: 12px;
+}
+.wrapper .right div {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.wrapper .right div {
+  padding: 1em;
+  margin: 1em;
+  display: block;
+  min-width: 100px;
+  text-align: center;
+}
+.wrapper .right .class1 span,
+.wrapper .right .class2 span,
+.wrapper .right .class3 span {
+  display: block;
+}
+.wrapper .right .class1 {
+  display: block;
+}
+.wrapper .right .class2 {
+  display: block;
+}
+.wrapper .right .class3 {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+.clearFix:after {
+  clear: both;
+  content: "";
+  display: none;
+}
+/*# sourceMappingURL=buy_house.css.map */

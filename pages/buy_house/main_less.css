@@ -1,1 +1,77 @@
-body{font-family:"Microsoft YaHei";background-color:#1a1a1d;line-height:2em}body div.wrapper{margin:0 auto}body div.wrapper input#btn_go{width:50%;height:50px}body div.wrapper label span.label_text{width:150px;text-align:right;display:inline-block}body div.wrapper label input{padding-left:10px;width:80px}body div.wrapper div.left,body div.wrapper div.right{width:100%;display:block;padding:10px;margin:0}body div.wrapper div.left{background-color:#fc5c5d}body div.wrapper div.right{background-color:#bbbcbe}body div.wrapper div.right div.col_one,body div.wrapper div.right div.col_two{display:inline-block;border:1px dashed #000;height:700px}body div.wrapper div.right div.col_one{width:30%;background-color:#f60}body div.wrapper div.right div.col_two{width:60%}body div.wrapper div.right div.col_two div.col_two_up{height:200px;background-color:#eee}body div.wrapper div.right div.col_two div.col_two_up div.col_two_up_left,body div.wrapper div.right div.col_two div.col_two_up div.col_two_up_right{width:45%;height:200px;display:inline-block}body div.wrapper div.right div.col_two div.col_two_down{height:500px}body div.wrapper div.right div.col_two div.col_two_down div.col_two_up_left,body div.wrapper div.right div.col_two div.col_two_down div.col_two_up_right{width:45%;height:500px;display:inline-block}body div.wrapper div.right div.col_two div.col_two_down,body div.wrapper div.right div.col_two div.col_two_up{display:inline-block}
+body {
+  font-family: Microsoft YaHei;
+  background-color: #1a1a1d;
+  line-height: 2em;
+}
+body div.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+body div.wrapper input#btn_go {
+  width: 50%;
+  height: 50px;
+}
+body div.wrapper label span.label_text {
+  width: 150px;
+  text-align: right;
+  display: inline-block;
+}
+body div.wrapper label input {
+  padding-left: 10px;
+  width: 80px;
+}
+body div.wrapper div.left,
+body div.wrapper div.right {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin: 0;
+}
+body div.wrapper div.left {
+  background-color: #fc5c5d;
+}
+body div.wrapper div.right {
+  background-color: #bbbcbe;
+}
+body div.wrapper div.right div {
+  border: 1px dashed red;
+}
+body div.wrapper div.right div.col_one,
+body div.wrapper div.right div.col_two {
+  display: inline-block;
+  border: dashed black 1px;
+  height: 700px;
+}
+body div.wrapper div.right div.col_one {
+  width: 30%;
+  background-color: #f60;
+}
+body div.wrapper div.right div.col_two {
+  width: 60%;
+}
+body div.wrapper div.right div.col_two div.col_two_up {
+  height: 200px;
+  background-color: #eee;
+  display: inline-block;
+}
+body div.wrapper div.right div.col_two div.col_two_up div.col_two_up_left,
+body div.wrapper div.right div.col_two div.col_two_up div.col_two_up_right {
+  width: 45%;
+  height: 200px;
+  display: inline-block;
+}
+body div.wrapper div.right div.col_two div.col_two_down {
+  height: 500px;
+  display: inline-block;
+}
+body div.wrapper div.right div.col_two div.col_two_down div.col_two_up_left,
+body div.wrapper div.right div.col_two div.col_two_down div.col_two_up_right {
+  width: 45%;
+  height: 500px;
+  display: inline-block;
+}
+body div.wrapper div.right div.col_two div.col_two_up,
+body div.wrapper div.right div.col_two div.col_two_down {
+  display: inline-block;
+}
+/*# sourceMappingURL=main_less.css.map */

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue test</title>
+    <link rel="stylesheet" href="">
+    <script src='../../script/vue.js'></script>
+</head>
+
+<body>
+    <div class="wrapper" id='wrapper'>
+        <input type="text" v-model='msg'>
+        <p>{{ msg }}</p>
+    </div>
+    <script>
+    // new
+    var vm = new Vue({
+        el: "#wrapper",
+        data: {
+            msg: "hello world"
+        }
+    });
+    </script>
+</body>
+
+</html>
