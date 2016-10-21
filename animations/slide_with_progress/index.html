@@ -5,16 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>带进度条的幻灯片</title>
     <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+        *{
+            margin:0;
+            padding: 0;
+            list-style-type: none;
+            font-family: Microsoft YaHei;
+        }
+        .wrapper{
+        width:600px;
+        margin:50px auto;
+        height:200px; 
+        overflow: hidden;
+        position: relative;
+        }
+        .wrapper ul{
+        position: absolute;
+        top:0;
+        /*left:-600px;*/
+        }
+        .wrapper ul li{
+            width:600px;
+            height: 200px;
+            float:left;
+            text-align: center;
+            font-size: 80px;
+            line-height: 200px;
+            color: #fff;
+        }
+        .wrapper ol{
+            position: absolute;
+            bottom: 15px;
+            width:500px;
+            height: 12px;
+            left:50px;
+            /*margin-left: -250px;*/
+        }
+        .wrapper ol li{
+            float:left;
+            width:80px;
+            height: 12px;
+            margin:0 10px;
+            background-color: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            opacity: 0.5;
+        }
+
+        ol li span{
+            opacity: 0.8;
+            display: block;
+            /*border-radius: 5px;*/
+            width:0;
+            height: 100%;
+            background-color: #0092C7;
+        }
+
+    </style>
 </head>
 <body>
 <div class="wrapper">
     <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li style='background-color:#c092C7'>Hello</li>
+        <li style='background-color:#cF6327'>World</li>
+        <li style='background-color:#cFE0F6'>HTML</li>
+        <li style='background-color:#c3E59A'>CSS</li>
+        <li style='background-color:#c29C9C'>JavaScript</li>
     </ul>
+    <ol>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+      
+    </ol>
 </div>
     <script src= "../animate.js"></script>
     <script src= "slide_with_progress.js"></script>
