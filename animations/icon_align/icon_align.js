@@ -75,31 +75,30 @@ window.onload = function() {
 
                 }
 
-                document.onmouseup = function() {
-
-                    // var minDisIndex = findNearest(curIcon);
-                    var oNearest = findNearest(curIcon);
-                    if (!oNearest) {
-                        animate(curIcon, arrPos[curIcon.myIndex]);
-                    } else {
-                        // console.log('minDisIndex = %d', minDisIndex);
-                        oNearest.style.border = '1px solid #26292C';
-                        var temp = curIcon.myIndex;
-                        animate(curIcon, arrPos[oNearest.myIndex]);
-                        animate(oNearest, arrPos[curIcon.myIndex]);
-
-                        curIcon.myIndex = oNearest.myIndex;
-                        oNearest.myIndex = temp;
-
-                    }
-                    document.onmousemove = null;
-                    document.onmouseup = null;
-                    curIcon.style.zIndex = 10;
-                    curIcon = null;
-
-                };
-
                 return false;
+            };
+            document.onmouseup = function() {
+
+                // var minDisIndex = findNearest(curIcon);
+                var oNearest = findNearest(curIcon);
+                if (!oNearest) {
+                    animate(curIcon, arrPos[curIcon.myIndex]);
+                } else {
+                    // console.log('minDisIndex = %d', minDisIndex);
+                    oNearest.style.border = '1px solid #26292C';
+                    var temp = curIcon.myIndex;
+                    animate(curIcon, arrPos[oNearest.myIndex]);
+                    animate(oNearest, arrPos[curIcon.myIndex]);
+
+                    curIcon.myIndex = oNearest.myIndex;
+                    oNearest.myIndex = temp;
+
+                }
+                document.onmousemove = null;
+                document.onmouseup = null;
+                curIcon.style.zIndex = 10;
+                curIcon = null;
+
             };
 
         }

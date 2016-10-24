@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-family: Microsoft YaHei;
+    }
+    body{
+        /*background: #26292C;*/
+    }
+    #box {
+        width: 800px;
+        height: 300px;
+        margin: 50px auto;
+        border: 1px solid #26292C;
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+
+    }
+    
+    #box ul {
+        width: 9999px;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        cursor: pointer;
+        top:50%;
+        margin-top: -75px;
+    }
+    
+    #box ul li {
+        width: 150px;
+        height: 150px;
+        float: left;
+        position: relative;
+        top:0;
+
+    }
+    
+    #box ul li img {
+        display: absolute;
+        /*left:0;*/
+        /*bottom: 0;*/
+        width: 100%;
+        box-shadow: 0 0 20px #000;
+    }
+    #box ul li span{
+        position: absolute;
+        font-size: 30px;
+        z-index: 10;
+        left:0;
+        bottom: 0;
+        color:red;
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="img/1.jpg" alt=""><span></span></li>
+            <li><img src="img/2.jpg" alt=""><span></span></li>
+            <li><img src="img/3.jpg" alt=""><span></span></li>
+            <li><img src="img/4.jpg" alt=""><span></span></li>
+            <li><img src="img/5.jpg" alt=""><span></span></li>
+            <li><img src="img/6.jpg" alt=""><span></span></li>
+            <li><img src="img/7.jpg" alt=""><span></span></li>
+            <li><img src="img/8.jpg" alt=""><span></span></li>
+            <li><img src="img/9.jpg" alt=""><span></span></li>
+            <li><img src="img/10.jpg" alt=""><span></span></li>
+        </ul>
+    </div>
+    <script src='album.js'></script>
+</body>
+
+</html>
