@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
-    <meta name="name" content="content" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <title>circle</title>
     <style type="text/css" media="screen">
-        .box{
-            width: 294px;
-            height: 294px;
-            border-radius: 50%;
-            border:3px solid #f65;
-            position: relative;
-            margin:100px auto;
-        }
-        .box span{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: black;
-            opacity: 0.8;
-            position: absolute;
-            top:0;
-            left:50%;
-            margin-left:-25px;
-            margin-top:-25px;
-            font-size: 25px;
-            text-align: center;
-            line-height: 50px;
-            color: #fff;
-
-        }
+    .inputs {
+        width: 300px;
+        margin: 50px auto;
+    }
+    
+    #circle {
+        width: 294px;
+        height: 294px;
+        border-radius: 50%;
+        border: 3px solid #f65;
+        position: relative;
+        margin: 100px auto;
+    }
+    
+    .box span {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        font-size: 25px;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+    }
+    
+    input {
+        /*   position: relative;
+        margin-top: -50px;
+        top: 0;*/
+    }
+    /*#input{}*/
     </style>
 </head>
-<body>
-<div class="box">
-<!-- <span></span> -->
-</div>
 
+<body>
+    <div class="inputs">
+        <input type="text" id="input" value="无法可修饰的一对手带出温暖永远在背后">
+        <input type="button" id="btn" value="更改文字">
+        <input type="button" id="btn2" value="运动">
+    </div>
+    <div class="box" id='circle'>
+        <!-- <span></span> -->
+    </div>
 </body>
-<script src = '../animate.js'></script>
-<script src = 'circle.js'></script>
+<!-- <script src = '../animate.js'></script> -->
+<script src='circle.js'></script>
+
 </html>

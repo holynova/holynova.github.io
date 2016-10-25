@@ -1,30 +1,67 @@
 window.onload = function() {
-    var oBox = document.body.children[0];
-    var str = '自古逢秋悲寂寥我言秋日胜春朝';
-    createStrBalls(str);
-    // var aSpan = document.getElementsByTagName('span');
-    var aSpan = oBox.getElementsByTagName('span'),
-        radius = oBox.offsetWidth / 2;
-    for (var i = 0; i < aSpan.length; i++) {
-        aSpan[i].degree = 0;
+    var oCircle = document.getElementById('circle'),
+        oBtn = document.getElementById('btn'),
+        oBtnMove = document.getElementById('btn2'),
+        oInput = document.getElementById('input'),
+        radius = oCircle.offsetWidth / 2;
+    init();
 
+    function init() {
+        var str = '没有人是一座孤岛';
+        createStrBalls(str);
+        moveBalls('open');
     }
-    // moveOnCircle(aSpan[0], 270, {
-    //     duration: 5000
-    // });
-    var isOpen = false;
-    document.onclick = function() {
-        for (i = 0; i < aSpan.length; i++) {
+    oBtn.onclick = function(ev) {
+        moveBalls('close');
+        setTimeout(function() {
+            createStrBalls(oInput.value);
+        }, 550, false);
+        setTimeout(function() {
+            moveBalls('open');;
+        }, 1100, false);
+    };
+    oBtnMove.onclick = function() {
+        moveBalls('toggle');
+    }
+    var isOpen = true;
 
-            moveOnCircle(aSpan[i], isOpen ? 0 : 360 / aSpan.length * i, {
-                duration: 500
-            });
+    function moveBalls(mode) {
+        var aSpan = oCircle.children;
+        if (typeof mode === 'undefined') {
+            mode = 'toggle';
         }
-        isOpen = !isOpen;
-
+        var degree = 0;
+        switch (mode) {
+            case 'open':
+                if (!isOpen) {
+                    for (var i = 0; i < aSpan.length; i++) {
+                        moveOnCircle(aSpan[i], 360 / aSpan.length * i, {
+                            duration: 500
+                        });
+                    }
+                    isOpen = true;
+                }
+                break;
+            case 'close':
+                if (isOpen) {
+                    for (var i = 0; i < aSpan.length; i++) {
+                        moveOnCircle(aSpan[i], 0, {
+                            duration: 500
+                        });
+                    }
+                    isOpen = false;
+                }
+                break;
+            case 'toggle':
+                for (var i = 0; i < aSpan.length; i++) {
+                    moveOnCircle(aSpan[i], isOpen ? 0 : 360 / aSpan.length * i, {
+                        duration: 500
+                    });
+                }
+                isOpen = !isOpen;
+                break;
+        }
     }
-
-
 
     function moveOnCircle(el, finalDegree, options) {
         var start = el.degree;
@@ -32,12 +69,9 @@ window.onload = function() {
         if (typeof options === 'undefined') {
             options = {};
         }
-        // setDefault(options, {});
-        // setDefault(options.duration, 300);
         if (typeof options.duration === 'undefined') {
             options.duration = 500
         }
-
         var cntFrame = 0,
             maxFrame = Math.floor(options.duration / timePerFrame);
         clearInterval(el.timer);
@@ -51,28 +85,25 @@ window.onload = function() {
             if (cntFrame === maxFrame) {
                 clearInterval(el.timer);
             }
-
         }, timePerFrame, false);
     }
 
-    function setDefault(para, defaultValue) {
-        if (typeof para === 'undefined') {
-            para = defaultValue;
-        }
-    }
-
     function createBalls(N) {
+        oCircle.innerHTML = "";
         for (var i = 0; i < N; i++) {
             var span = document.createElement('span');
-            oBox.appendChild(span);
+            span.degree = 0;
+            oCircle.appendChild(span);
         }
     }
 
     function createStrBalls(str) {
+        oCircle.innerHTML = "";
         for (var i = 0; i < str.length; i++) {
             var span = document.createElement('span');
             span.innerHTML = str.charAt(i);
-            oBox.appendChild(span);
+            span.degree = 0;
+            oCircle.appendChild(span);
         }
     }
 
