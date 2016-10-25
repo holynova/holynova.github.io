@@ -32,7 +32,7 @@ window.onload = function() {
 
     // setInterval(function() {
     //     for (var i = 0; i < aLi.length; i++) {
-    //         // aLi[i].innerHTML = aLi[i].myIndex;
+    //         aLi[i].innerHTML = aLi[i].myIndex;
     //     }
     // }, 100, false);
 
@@ -49,38 +49,45 @@ window.onload = function() {
     //拖拽动作
     for (var i = 0; i < aLi.length; i++) {
         aLi[i].onmousedown = function(ev) {
+            // console.log('down');
             var oEvent = ev || event;
             var curIcon = this;
             var x = oEvent.clientX,
                 y = oEvent.clientY,
                 left = parseInt(this.style.left),
-                top = parseInt(this.style.top);
-            console.log('down:%d', curIcon.myIndex);
+                top = parseInt(this.style.top),
+                oNearest = null;
+            // console.log('down:%d', curIcon.myIndex);
             // console.log('down:x = %d,y = %d, left = %d, top = %d', x, y, left, top);
             curIcon.style.zIndex = 20;
 
             document.onmousemove = function(ev) {
+                // console.log('move');
+
                 var oEvent = ev || event;
                 setStyle(curIcon, {
                     left: (left + oEvent.clientX - x) + "px",
                     top: (top + oEvent.clientY - y) + 'px'
                 });
+
                 for (var i = 0; i < aLi.length; i++) {
                     aLi[i].style.border = '1px dashed #26292C';
+                    // aLi[i].style.border = '1px solid red';
 
                 }
-                var oNearest = findNearest(curIcon);
+                oNearest = findNearest(curIcon);
                 if (oNearest) {
                     oNearest.style.border = '1px dashed #ccc';
-
+                    // console.log('Near %d', oNearest.myIndex);
                 }
 
                 return false;
             };
             document.onmouseup = function() {
+                // console.log('up');
 
                 // var minDisIndex = findNearest(curIcon);
-                var oNearest = findNearest(curIcon);
+                // var oNearest = findNearest(curIcon);
                 if (!oNearest) {
                     animate(curIcon, arrPos[curIcon.myIndex]);
                 } else {
@@ -103,19 +110,24 @@ window.onload = function() {
 
         }
     }
-
-    function findNearest(curEl) {
+    //找到最近的元素,但必须距离到小于thereshold才换位置
+    function findNearest(curEl, threshold) {
+        if (typeof threshold === 'undefined') {
+            threshold = aLi[0].offsetWidth / 2;
+        }
         var minDis = 999999;
         var minDisIndex = -1;
         var dis;
         for (var i = 0; i < aLi.length; i++) {
 
             if (curEl.myIndex == aLi[i].myIndex) {
+                // aLi[i].innerHTML = 'cur';
                 continue;
             } else {
                 if (isCover(curEl, aLi[i])) {
                     dis = disBetween(curEl, aLi[i]);
-                    if (dis < minDis) {
+                    // aLi[i].innerHTML = dis.toFixed(1);
+                    if (dis < minDis && dis < threshold) {
                         minDis = dis;
                         minDisIndex = i;
                     }
@@ -135,7 +147,7 @@ window.onload = function() {
     function disBetween(el1, el2) {
         var pos1 = getPos(el1);
         var pos2 = getPos(el2);
-        return Math.sqrt((pos1.left - pos2.left) * (pos1.left - pos2.left), (pos1.top - pos2.top) * (pos1.top - pos2.top))
+        return Math.sqrt((pos1.left - pos2.left) * (pos1.left - pos2.left) + (pos1.top - pos2.top) * (pos1.top - pos2.top))
     }
     //碰撞检测
     function isCover(el1, el2) {
