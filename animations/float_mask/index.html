@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style type="text/css" media="screen">
+        *{
+            margin:0;
+            padding: 0;
+            list-style-type: none;
+        }
+        body{
+            background-color: #26292C;
+        }
+        .wrapper{
+            width:600px;
+            height: 600px;
+            margin:50px auto;
+            margin-bottom: 0;
+        }
+        .wrapper ul {
+
+        }
+        .wrapper ul li{
+            float:left;
+            width: 180px;
+            height: 180px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .wrapper ul li img{
+
+            width: 100%;
+
+        }
+        .wrapper ul li span{
+            position: absolute;
+            left: -1000px;
+            top:0;
+            width:180px;
+            height:180px;
+            background-color: red;
+            opacity: 0.5;
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            line-height: 180px;
+            cursor: pointer;
+
+
+        }
+        .text{
+            color: #fff;
+            width: 80%;
+            margin:0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><img src="../album/img/1.jpg" alt=""><span>唱片封面1</span></li>
+            <li><img src="../album/img/2.jpg" alt=""><span>唱片封面2</span></li>
+            <li><img src="../album/img/3.jpg" alt=""><span>唱片封面3</span></li>
+            <li><img src="../album/img/4.jpg" alt=""><span>唱片封面4</span></li>
+            <li><img src="../album/img/5.jpg" alt=""><span>唱片封面5</span></li>
+            <li><img src="../album/img/6.jpg" alt=""><span>唱片封面6</span></li>
+            <li><img src="../album/img/7.jpg" alt=""><span>唱片封面7</span></li>
+            <li><img src="../album/img/8.jpg" alt=""><span>唱片封面8</span></li>
+            <li><img src="../album/img/9.jpg" alt=""><span>唱片封面9</span></li>
+            <!-- <li><img src="../album/img/10.jpg" alt=""><span>唱片封面10</span></li> -->
+        </ul>
+    </div>
+    <div class="text">
+    鼠标悬浮在图片上查看效果
+        
+    </div>
+    <script src='../animate.js'></script>
+    <script src='float_mask.js'></script>
+</body>
+
+</html>

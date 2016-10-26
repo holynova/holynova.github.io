@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Microsoft Yahei';
+}
+.wrapper {
+  width: 50%;
+  margin: 50px auto;
+}
+.wrapper > div {
+  border: 1px solid #ccc;
+}
+.wrapper .inputs {
+  font-size: 15px;
+}
+.wrapper .inputs h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.wrapper .inputs form > div {
+  margin: 10px 0;
+}
+.wrapper .inputs form > div span,
+.wrapper .inputs form > div input {
+  display: block;
+  float: left;
+}
+.wrapper .inputs form > div span {
+  width: 40%;
+  text-align: right;
+  padding-right: 3px;
+}
+.wrapper .inputs form > div input {
+  width: 20%;
+}
+.wrapper .result,
+.wrapper .pay {
+  font-size: 12px;
+}
+.wrapper .result div,
+.wrapper .pay div {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  min-width: 100px;
+  text-align: center;
+}
+.wrapper .result .class1 span,
+.wrapper .pay .class1 span,
+.wrapper .result .class2 span,
+.wrapper .pay .class2 span,
+.wrapper .result .class3 span,
+.wrapper .pay .class3 span {
+  display: block;
+}
+.wrapper .result .class1,
+.wrapper .pay .class1 {
+  display: block;
+  background-color: #FFFFCB;
+}
+.wrapper .result .class2,
+.wrapper .pay .class2 {
+  display: block;
+  background-color: #C9FFD5;
+}
+.wrapper .result .class3,
+.wrapper .pay .class3 {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  background-color: #8DF5D9;
+}
+.wrapper .result .class3 div,
+.wrapper .pay .class3 div {
+  margin: 5px;
+}
+.clearFix:after {
+  clear: both;
+  content: "";
+  display: none;
+}
+/*# sourceMappingURL=buy_house.css.map */
