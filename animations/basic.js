@@ -18,7 +18,6 @@ function addClass(el, className) {
 function removeClass(el, className) {
     el.className = el.className.replace(new RegExp('(^| )' + className + '( |$)', 'gi'), ' ').replace(/\s+/, ' ');
 }
-
 //兼容IE的通用事件处理对象
 EventUtil = {
     addHandler: function(element, type, handler) {

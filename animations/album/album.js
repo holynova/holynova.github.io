@@ -4,30 +4,53 @@ window.onload = function() {
         aLi = oUl.children,
         aImg = oUl.getElementsByTagName('img'),
         aSpan = oUl.getElementsByTagName('span');
-
     changeSize();
-
     oUl.onmousedown = function(ev) {
-        // console.log('down');
-
         var oEvent = ev || event,
             x = oEvent.clientX,
             left = oUl.offsetLeft;
         document.onmousemove = function(ev) {
             var oEvent = ev || event;
-
             changeSize();
             oUl.style.left = oEvent.clientX - x + left + 'px';
-            // return false;
         }
         document.onmouseup = function() {
-            // console.log('up');
-
             document.onmousemove = null;
             document.onmouseup = null;
         }
         return false;
     };
+    EventUtil.addHandler(oUl, 'touchstart', touchstartHandler);
+
+    function touchstartHandler(event) {
+        event = EventUtil.getEvent(event);
+        // console.log(event);
+        EventUtil.preventDefault(event);
+        var target = EventUtil.getTarget(event);
+        var pos = {};
+        pos.left = oUl.offsetLeft;
+        // pos.top = oUl.offsetTop;
+        pos.x = event.touches[0].clientX;
+        // pos.y = event.touches[0].clientY;
+        EventUtil.addHandler(oUl, 'touchmove', touchMoveHandler);
+        EventUtil.addHandler(oUl, 'touchend', touchEndHandler);
+
+        function touchMoveHandler(event) {
+            event = EventUtil.getEvent(event);
+            var target = EventUtil.getTarget(event);
+            EventUtil.preventDefault(event);
+            changeSize();
+            oUl.style.left = event.touches[0].clientX - pos.x + pos.left + 'px';
+        }
+
+        function touchEndHandler(event) {
+            event = EventUtil.getEvent(event);
+            EventUtil.preventDefault(event);
+            var target = EventUtil.getTarget(event);
+            EventUtil.removeHandler(oUl, 'touchmove', touchMoveHandler);
+            EventUtil.removeHandler(oUl, 'touchend', touchEndHandler);
+        }
+    }
 
     function changeSize() {
         for (var i = 0; i < aLi.length; i++) {
@@ -44,11 +67,9 @@ window.onload = function() {
         var center = oBox.offsetWidth / 2,
             elCenter = oUl.offsetLeft + el.offsetLeft + el.offsetWidth / 2;
         return Math.abs(center - elCenter);
-
     }
 
     function getRatio(el) {
         return Math.max(Math.min(1 - getDisToCenter(el) / 1000, 1), 0.5);
     }
-
 };
