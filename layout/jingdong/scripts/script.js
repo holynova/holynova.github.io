@@ -112,7 +112,7 @@ window.onload = function() {
     // EventUtil.addHandler(document.querySelector('.main-class.cloth .nav'), 'mouseover', clothTabHandler);
     for (var i = 0; i < aClothTabs.length; i++) {
         aClothTabs[i].myIndex = i;
-        EventUtil.addHandler(aClothTabs[i], 'mouseover', function() {
+        EventUtil.addHandler(aClothTabs[i], 'mouseenter', function() {
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event);
             for (var i = 0; i < aClothTabs.length; i++) {
