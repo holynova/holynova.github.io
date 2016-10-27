@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VUE.js 二手房计算器</title>
     <link rel="stylesheet" type="text/css" href="clear.css">
@@ -67,16 +67,23 @@
                 <span>总价{{total_price_incld_tax|fix}}</span>
                 <div class="house class2">
                     <span>房屋总价{{parseFloat(total_price)|fix}}</span>
-                    <div class="evaluation class3">评估总价<br>{{eval_price|fix}}</div>
-                    <div class="rest class3">评估外总价<br>{{eval_diff|fix}}</div>
+                    <div class="evaluation class3">评估总价
+                        <br>{{eval_price|fix}}</div>
+                    <div class="rest class3">评估外总价
+                        <br>{{eval_diff|fix}}</div>
                 </div>
                 <div class="tax class2">
                     <span>税费总和{{sum_tax_fee|fix}}</span>
-                    <div class="taxtype class3">契税<br>{{contract_tax|fix}}</div>
-                    <div class="taxtype class3">营业税<br>{{business_tax|fix}}</div>
-                    <div class="taxtype class3">个人所得税<br>{{income_tax|fix}}</div>
-                    <div class="taxtype class3">中介费<br>{{agent_fee|fix}}</div>
-                    <div class="taxtype class3">其他<br>{{other_cost|fix}}</div>
+                    <div class="taxtype class3">契税
+                        <br>{{contract_tax|fix}}</div>
+                    <div class="taxtype class3">营业税
+                        <br>{{business_tax|fix}}</div>
+                    <div class="taxtype class3">个人所得税
+                        <br>{{income_tax|fix}}</div>
+                    <div class="taxtype class3">中介费
+                        <br>{{agent_fee|fix}}</div>
+                    <div class="taxtype class3">其他
+                        <br>{{other_cost|fix}}</div>
                 </div>
             </div>
         </div>
