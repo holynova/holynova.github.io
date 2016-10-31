@@ -1,0 +1,3 @@
+var RandUtil = {
+    rand(type)
+};
