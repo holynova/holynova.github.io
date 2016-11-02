@@ -5,14 +5,67 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ajax test</title>
-    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    body {
+        background-color: #C0C0C0;
+    }
+    
+    .wrapper {
+        width: 800px;
+        margin: 50px auto;
+    }
+    
+    ul {
+        width: 800px;
+        background-color: #fff;
+    }
+    
+    ul li {
+        width: 700px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    ul li div.info {
+        margin-left: 80px;
+        margin-top: -50px;
+    }
+    
+    .name {
+        font-size: 16px;
+    }
+    
+    .about {
+        font-size: 14px;
+        color: #666;
+    }
+    
+    .company,
+    .reg-time {
+        font-size: 14px;
+    }
+    </style>
 </head>
+<input type="button" id='btn' value="btn">
 <div class="wrapper" id='wrapper'>
     <ul id='list'>
-        <li></li>
+        <li>
+            <img src="http://placehold.it/64x64" alt="">
+            <div class="info">
+                <div class="name">Micheal Jackson</div>
+                <div class="about">Ex ipsum laborum enim incididunt commodo voluptate. Et ullamco proident occaecat ad ex exercitation voluptate nisi in. Dolor cillum sit velit sit velit adipisicing sint.</div>
+                <div class="company">Tentent</div>
+                <div class="reg-time">Wednesday, December 3, 2014 7:42 AM</div>
+            </div>
+        </li>
     </ul>
 </div>
-<input type="button" id='btn' value="btn">
 
 <body>
     <script src='ajax.js'></script>
