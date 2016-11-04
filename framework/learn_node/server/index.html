@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-family: Microsoft Yahei;
+        transition: all 5s ease-out;
+    }
+    
+    body {
+        /*background-color: #ccc;*/
+        background-color: #f1f1f1;
+    }
+    
+    .wrapper {
+        width: 700px;
+        margin: 50px auto;
+        /*padding: 1em;*/
+    }
+    
+    label {
+        font-size: 14px;
+        /*display: block;*/
+        height: 36px;
+        line-height: 36px;
+        padding-right: 50px;
+    }
+    
+    ul {
+        width: 700px;
+        /*border: 1px solid #000;*/
+    }
+    
+    ul li {
+        border-radius: 2px;
+        background-color: #fff;
+        width: 700px;
+        padding: 2em;
+        font-size: 15px;
+        line-height: 28px;
+        /*border-bottom: 1px dashed #fff;*/
+        margin: 20px;
+        /*box-shadow: 0 0 10px #ccc;*/
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);
+    }
+    
+    #btnSend {
+        /*width: 100px;*/
+        font-size: 13px;
+        padding: 0 16px;
+        height: 36px;
+        background-color: #3367d6;
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+    }
+    
+    #btnSend:hover {
+        background-color: #2850a7;
+    }
+    
+    ul li#form {
+        background-color: #9FE0F6;
+    }
+    
+    ul li span {
+        /*display: block;*/
+        padding: 0 5px;
+    }
+    
+    .name {
+        color: #4a78da;
+        /*font-size: 16px;*/
+    }
+    
+    .gender {
+        color: #2850a7;
+    }
+    
+    .about {
+        color: #9a9a9a;
+    }
+    
+    li#form textarea {
+        /*width: 600px;*/
+        width: 90%;
+        font-size: 16px;
+        line-height: 28px;
+        padding: 5px 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul id='input'>
+            <li id='form'>
+                <textarea name="" value='自我介绍' id='inputAbout'>random self introduction</textarea>
+                <!-- <br> -->
+                <p>已经输入<span id='charCounter'>0</span>字符</p>
+                <label>姓名
+                    <input type="text" name="" value="random_name" id='inputName'>
+                </label>
+                <label>性别
+                    <input type="radio" value="male" name='gender' checked>男
+                    <input type="radio" value="female" name='gender'>女
+                </label>
+                <label>
+                    <input type="button" name="" value="发送" id='btnSend'>
+                </label>
+            </li>
+        </ul>
+        <ul id='show'>
+        </ul>
+    </div>
+    <script src='ajax.js'></script>
+    <script src='cookie.js'></script>
+    <script src='front.js'></script>
+</body>
+
+</html>

@@ -35,7 +35,7 @@
             <h2>Angular留言板<small>({{comments.length}}条评论)</small></h2>
             <div class="setup">
                 <label>每页显示
-                    <input type="number" ng-model='numPerPage' ng-change='slicePage(numPerPage)'>条</label>
+                    <input type="number" ng-model='numPerPage' min='1' ng-change='slicePage(numPerPage)'>条</label>
                 <!-- <input type="number" name="" value="" placeholder=""> -->
                 <input type="button" name="" value="按时间排序" ng-click="sortBy('time')">
                 <span ng-show="sortKey === 'time'" ng-class='{reverse:reverse}' class="sort-arrow"></span>
@@ -50,7 +50,6 @@
                 <input type="button" value="取消" ng-click="showTextarea = false;">
             </div>
             <!-- <hr> -->
-
             <ul class="comments">
                 <li ng-repeat="c in comments | limitTo:numPerPage:curPageFirstIndex |filter: commentFilter ">
                     <div class="left">
