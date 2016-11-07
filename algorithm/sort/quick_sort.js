@@ -167,5 +167,43 @@ function mergeSortTop(arr) {
     return arr;
 }
 // unitTest();
-testSort(mergeSortTop, 10, true);
-//
+// testSort(mergeSortTop, 10, true);
+//2016年11月7日 每日练习
+function quickSort20161107(arr) {
+    function swap(arr, i, j) {
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    function shuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+            swap(arr, i, Math.floor(Math.random() * i));
+        }
+        return arr
+    }
+
+    function partition(arr, lo, hi) {
+        var pivot = arr[hi];
+        var keyIndex = lo;
+        for (var i = lo; i < hi; i++) {
+            if (arr[i] < pivot) {
+                swap(arr, i, keyIndex);
+                keyIndex++;
+            }
+        }
+        swap(arr, keyIndex, hi);
+        return keyIndex;
+    }
+
+    function sort(arr, lo, hi) {
+        if (lo >= hi) {
+            break;
+        }
+        var keyIndex = partition(arr, lo, hi);
+        sort(arr, lo, keyIndex - 1);
+        sort(arr, keyIndex + 1, hi);
+    }
+    sort(arr, 0, arr.length - 1)
+    return arr;
+}
