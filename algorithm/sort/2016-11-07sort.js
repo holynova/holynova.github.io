@@ -510,11 +510,11 @@ var options = {
         arrMax: 9999
     }
     // testSort(jsSort, options);
-testSort(quickSort, options);
-testSort(optQuickSort, options);
-testSort(mergeSort, options);
-testSort(optMergeSort, options);
-// testSort(heapSort, options);
-// testSort(selectSort, options);
-// testSort(insertSort, options);
-// testSort(cocktailSort, options);
+    // testSort(quickSort, options);
+    // testSort(optQuickSort, options);
+    // testSort(mergeSort, options);
+    // testSort(optMergeSort, options);
+    // testSort(heapSort, options);
+    // testSort(selectSort, options);
+    // testSort(insertSort, options);
+    // testSort(cocktailSort, options);
