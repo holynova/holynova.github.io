@@ -171,18 +171,31 @@ function heapSort(arr) {
             sink(arr, i, arr.length - 1);
         }
     }
-
+    // function sink(arr, index, hi) {
+    //     while (2 * index <= hi) {
+    //         var maxSonIndex = 2 * index;
+    //         if (hi > maxSonIndex && compare(arr[maxSonIndex + 1], arr[maxSonIndex]) > 0) {
+    //             maxSonIndex++;
+    //         }
+    //         if (compare(arr[index], arr[maxSonIndex]) > 0) {
+    //             break;
+    //         } else {
+    //             swap(arr, index, maxSonIndex);
+    //             index = maxSonIndex;
+    //         }
+    //     }
+    // }
     function sink(arr, index, hi) {
-        while (2 * index <= hi) {
-            var maxSonIndex = 2 * index;
-            if (hi > maxSonIndex && compare(arr[maxSonIndex + 1], arr[maxSonIndex]) > 0) {
+        while (index * 2 <= hi) {
+            var maxSonIndex = index * 2;
+            if (maxSonIndex < hi && compare(arr[maxSonIndex], arr[maxSonIndex + 1]) < 0) {
                 maxSonIndex++;
             }
-            if (compare(arr[index], arr[maxSonIndex]) > 0) {
-                break;
-            } else {
+            if (compare(arr[index], arr[maxSonIndex]) < 0) {
                 swap(arr, index, maxSonIndex);
                 index = maxSonIndex;
+            } else {
+                break;
             }
         }
     }
@@ -199,13 +212,89 @@ function heapSort(arr) {
     // console.log(arr);
     return arr;
 }
+
+function bubbleSort(arr) {
+    function compare(a, b) {
+        return a - b;
+    }
+
+    function swap(arr, i, j) {
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    // 从前往后，每次冒出来一个最大值
+    function sort(arr) {
+        for (var i = 0; i < arr.length - 1; i++) {
+            var isSwap = false;
+            for (var j = 0; j < arr.length - 1 - i; j++) {
+                if (compare(arr[j], arr[j + 1]) > 0) {
+                    swap(arr, j, j + 1);
+                    isSwap = true;
+                }
+            }
+            if (!isSwap) {
+                break;
+            }
+        }
+    }
+    //  从后往前，每次冒出来一个最小的
+    // function sort(arr) {
+    //     var len = arr.length;
+    //     for (var i = len - 1; i >= 1; i--) {
+    //         var isSwap = false;
+    //         for (var j = len - 1; j >= 1; j--) {
+    //             if (compare(arr[j], arr[j - 1]) < 0) {
+    //                 swap(arr, j, j - 1);
+    //                 isSwap = true;
+    //             }
+    //         }
+    //         if (!isSwap) {
+    //             break;
+    //         }
+    //     }
+    // }
+    sort(arr);
+    return arr;
+}
+
+function insertSort(arr) {
+    function compare(a, b) {
+        return a - b;
+    }
+
+    function swap(arr, i, j) {
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    function sort(arr) {
+        var len = arr.length;
+        for (var i = 1; i < len; i++) {
+            var curCnt = i;
+            while (curCnt - 1 >= 0) {
+                if (compare(arr[curCnt - 1], arr[curCnt]) > 0) {
+                    swap(arr, curCnt, curCnt - 1);
+                    curCnt--;
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+    sort(arr);
+    return arr;
+}
 //================================================================
 var options = {
-    sampleSize: 999,
-    arrSize: 9999,
+    sampleSize: 100,
+    arrSize: 999,
     arrMin: -9999,
     arrMax: 9999
 }
 testSort(quickSort, options);
 testSort(mergeSort, options);
 testSort(heapSort, options);
+testSort(insertSort, options);
+testSort(bubbleSort, options);
