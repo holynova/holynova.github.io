@@ -86,8 +86,9 @@ DatePicker.prototype = {
     },
     updateInput: function(date, id) {
         $('.date-picker-wrapper#' + id + " " + '.date-input').val(this.dateToStr(date));
-        //2016年11月16日添加 input有刷新,代表日期有可能变更, 把变更后的日期更新到picker的基本属性上
+        //2016年11月16日添加 ,每次选择和改变后,将picker的日期属性更新
         this.date = date;
+        console.log('updateInput ' + this.date);
     },
     dateToStr: function(date) {
         return date.getFullYear() + '-' + this.to2Bit(date.getMonth() + 1) + "-" + this.to2Bit(date.getDate());

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="date_picker.css">
+<link rel="stylesheet" type="text/css" href="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>还款利息计算器</title>
+    <link rel="stylesheet" href="payback.css">
+</head>
+
+<body>
+    <div class="wrapper" id='payback-calculator'>
+        <h3>还款利息计算器</h3>
+        <!-- step1 定利率 -->
+        基准利率
+        <select id="base-interest" v-model='base'>
+            <option value="4.35">定期贷款-六个月-4.35%</option>
+            <option value="4.35">定期贷款-六个月至一年-4.35%</option>
+            <option value="4.75">定期贷款-一至三年-4.75%</option>
+            <option value="4.75">定期贷款-三至五年-4.75%</option>
+            <option value="4.9">定期贷款-五年以上-4.9%</option>
+            <option value="0.3">存款-活期-0.3%</option>
+            <option value="1.35">定期存款-三个月-1.35%</option>
+            <option value="1.55">定期存款-半年-1.55%</option>
+            <option value="1.75">定期存款-一年-1.75%</option>
+            <option value="2.25">定期存款-二年-2.25%</option>
+            <option value="2.75">定期存款-三年-2.75%</option>
+            <option value="2.75">定期存款-五年-2.75%</option>
+            <option value="1">自定义-1%</option>
+        </select>
+        <span>你选择了{{base}}%</span>
+        <br> 倍数
+        <input type="number" v-model='ratio' value="1" placeholder="1.0" step=".1">
+        <p>最终利率<span>{{interest |fix}}%</span></p>
+        <hr>
+        <!-- step2 输入借款信息 -->
+        <table>
+            <caption>借款情况表</caption>
+            <thead>
+                <tr>
+                    <td>序号</td>
+                    <td>借入日期</td>
+                    <td>借入金额</td>
+                </tr>
+            </thead>
+            <tbody>
+                <td>1</td>
+                <td id='borrow-date' v-model='borrowDate'></td>
+                <td>
+                    <input type="number" name="" placeholder="借款金额" v-model='borrowQty'>
+                </td>
+            </tbody>
+        </table>
+        <hr>
+        <!-- setp3 输入还款信息并计算结果-->
+        <table class="payback">
+            <caption>还款情况表</caption>
+            <thead>
+                <tr>
+                    <td>序号</td>
+                    <td>还款日期</td>
+                    <td>还款金额</td>
+                    <td>欠债天数</td>
+                    <td>利息</td>
+                    <td>本次还款比例</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr v-for='row in paybackRows,rowInput in paybackInputs'> -->
+                <tr>
+                    <td> {{payback.num}}</td>
+                    <td> {{payback.date}}</td>
+                    <td>
+                        <input type="number" name="" v-model='input.money' placeholder="输入借款金额">
+                    </td>
+                    <td>{{payback.days}}</td>
+                    <td>{{payback.interest |fix}}</td>
+                    <td>{{payback.per|fix}}%</td>
+                </tr>
+                <!-- <tr>
+    <td>1</td>
+    <td class='payback-date'></td>
+    <td>
+        <input type="number" name="" value="0" placeholder="借款金额" v-model='borrowQty[0]'>
+    </td>
+    <td>自动</td>
+    <td>自动</td>
+    <td>自动比例</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td class='payback-date'></td>
+    <td>
+        <input type="number" name="" value="0" placeholder="借款金额" v-model='borrowQty[1]'>
+    </td>
+    <td>自动</td>
+    <td>自动</td>
+    <td>自动比例</td>
+</tr>
+ -->
+                <tr>
+                    <td>总计</td>
+                    <td></td>
+                    <td>{{paybackTotal.money|fix}}元</td>
+                    <td></td>
+                    <td>{{paybackTotal.interest|fix}}元</td>
+                    <td>{{paybackTotal.per|fix}}%</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>应还款总额(本金+利息)</p>
+    </div>
+    <div id='test'>
+    </div>
+    <script src='../../script/vue.min.js'></script>
+    <script src='../../script/jquery-1.11.2.min.js'></script>
+    <script src='date_picker_oop.js'></script>
+    <script src='payback.js'></script>
+</body>
+
+</html>
