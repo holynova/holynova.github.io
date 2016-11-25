@@ -1,0 +1,33 @@
+<!-- <html></html> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+    'use strict';
+    var arr = [];
+    var arr2 = [];
+    for (let i = 0; i <= 100; i++) {
+        arr.push(i);
+        arr2.push(i * 2);
+    }
+
+    function sum(arr) {
+        return Array.prototype.reduce.call(arr, (a, b) => (a + b));
+    }
+    console.log(sum(arr), sum(arr2));
+
+    function show(msg = 'default msg') {
+        console.log(msg);
+    }
+
+    show('hello');
+    show();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
