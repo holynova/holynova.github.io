@@ -1,17 +1,19 @@
-class MyDate extends React.Component{
-	render(){
+class MyDate extends React.Component {
+	render() {
 		const date = new Date();
 		return <h1> hello world {date.toLocaleTimeString()}</h1>
 
 	}
 }
-class MyForm extends React.Component{
-	constructor(props){
+class MyForm extends React.Component {
+	constructor(props) {
 		super(props);
-		this.state = {value:'tom'};
+		this.state = {
+			value: 'tom'
+		};
 		this.handleChange = this.handleChange.bind(this);
 	}
-	render (){
+	render() {
 		const value = this.state.value;
 		return (<form>
 			<p>input your name:</p>
@@ -21,13 +23,15 @@ class MyForm extends React.Component{
 
 	}
 
-	handleChange(event){
-		this.setState({value:event.target.value});
+	handleChange(event) {
+		this.setState({
+			value: event.target.value
+		});
 	}
 }
 
 
-ReactDOM.render( 
-<MyForm />,
-document.getElementById('root')
+ReactDOM.render(
+	<MyForm />,
+	document.getElementById('root')
 );
