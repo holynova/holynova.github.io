@@ -1,2 +1,2 @@
-*{margin:0;padding:0}#root{width:300px;margin:50px auto}#root .box{width:300px;height:300px;border:1px solid red}#root .box .cell{border:1px solid #ccc;width:98px;height:98px;float:left;line-height:99px;font-size:20px;text-align:center}
+*{margin:0;padding:0}#root{width:300px;margin:50px auto}#root .box{width:300px;height:300px;border:1px solid red}#root .box .cell{border:1px solid #ccc;width:98px;height:98px;float:left;line-height:99px;font-size:50px;text-align:center}
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
