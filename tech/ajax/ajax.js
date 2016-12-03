@@ -1,5 +1,5 @@
 // AjaxUtil = {};
-function ajax(url, successFunc, failFunc, options) {
+function ajax_old(url, successFunc, failFunc, options) {
     if (typeof options === 'undefined') {
         options = {
             method: 'GET',
@@ -22,3 +22,5 @@ function ajax(url, successFunc, failFunc, options) {
     };
     xhr.send();
 }
+
+function ajax

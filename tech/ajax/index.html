@@ -13,12 +13,13 @@
     }
     
     body {
-        background-color: #C0C0C0;
+        background-color: #f1f1f1;
     }
     
     .wrapper {
         width: 800px;
         margin: 50px auto;
+        /*text-align: center;*/
     }
     
     ul {
@@ -50,9 +51,15 @@
     .reg-time {
         font-size: 14px;
     }
+    
+    input {
+        display: block;
+        padding: 15px;
+        margin: 20px auto;
+    }
     </style>
 </head>
-<input type="button" id='btn' value="btn">
+<input type="button" id='btn' value="用ajax获取存储在json文件中的内容">
 <div class="wrapper" id='wrapper'>
     <ul id='list'>
         <li>
@@ -68,7 +75,7 @@
 </div>
 
 <body>
-    <script src='ajax.js'></script>
+    <script src='sym_ajax.js'></script>
     <script src='test.js'></script>
 </body>
 
