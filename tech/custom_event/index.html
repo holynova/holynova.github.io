@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>自定义事件</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <script>
+    var CustomEvent = {
+        //用来存储所有的事件处理函数
+        //{
+        //'click':[func1,func2],
+        //'change':[func3],
+        //'input':[func4,func4]
+        //}
+        _events: {},
+        addEvent: function(eventType, handler) {
+            //如果当前事件还没有任何处理函数,就弄一个空数组,以便往里面push新的handler
+            if (!this._events[eventType]) {
+                this._events[eventType] = [];
+            }
+            //如果handler是个函数,那就push进去
+            if (typeof handler === 'function') {
+                this._events[eventType].push(handler);
+            }
+
+        },
+        removeEvent: function(eventType, handler) {
+            // if(!this._events[eventType]) return;
+            if (this._events[eventType]) {
+                if (typeof handler === 'undefined') {
+                    //如果没有传进来具体的handler,就把所有的事件处理函数清空
+                    delete this._events[eventType];
+                } else {
+                    for (var i = 0, len = this._events[eventType].length; i < len; i++) {
+                        if (handler === this._events[eventType][i]) {
+                            this._events[eventType].splice(i, 1);
+                        }
+                    }
+                }
+            }
+
+        },
+        fireEvent: function(eventType) {
+            //如果这个事件没有handler,那就退出,如果有,那按照数组的顺序一个一个执行
+            if (!this._events[eventType]) {
+                return;
+            }
+            var eventObj = {
+                type: eventType,
+                target: this
+            };
+            for (var i = 0, len = this._events[eventType].length; i < len; i++) {
+                //逐个执行,传入参数是什么??????
+                //这里可以考虑传入数据,比如data
+                // this._events[eventType][i](data);
+                // 更好的是传进来一个类似event的对象,这个对象有type,target等常用属性,我们这里模拟一个
+
+                this._events[eventType][i](eventObj);
+            }
+
+
+        }
+    };
+
+    //测试代码
+    window.onload = function() {
+
+        function handler1(ev) {
+            // alert()
+            console.log('handler1 is triggered, eventType = %s', ev.type);
+            console.log(ev.target);
+
+        }
+
+        function handler2(ev) {
+            // alert()
+            console.log('handler2 is triggered, eventType = %s', ev.type);
+            console.log(ev.target);
+
+        }
+        CustomEvent.addEvent('myClick', handler1);
+        CustomEvent.addEvent('myClick', handler2);
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+        btn1.onclick = function() {
+            // console.log('btn clicked');
+            CustomEvent.fireEvent('myClick');
+        }
+        btn2.onclick = function() {
+            CustomEvent.removeEvent('myClick', handler1);
+        }
+        btn3.onclick = function() {
+            CustomEvent.addEvent('myClick', handler2);
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <p>请在控制台中看效果</p>
+    <input type="button" name="" value="触发自定义事件" id="btn1">
+    <input type="button" name="" value="清除事件1" id="btn2">
+    <input type="button" name="" value="添加事件1" id="btn3">
+</body>
+
+</html>

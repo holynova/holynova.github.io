@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width,initial-scale=1">
+    <title>jsonp</title>
+</head>
+<style type="text/css" media="screen">
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 20px auto;
+}
+
+h3 {
+    font-size: 1.6rem;
+    /*margin:2r;*/
+    height: 3.2rem;
+    line-height: 3.2rem;
+}
+
+.top {
+    text-align: center;
+    margin: 2rem;
+}
+
+.top input {
+    width: 60%;
+    height: 4rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.top h3 {
+    font-size: 4rem;
+    height: 8rem;
+    line-height: 8rem;
+}
+
+.left,
+.right {
+    background-color: #fff;
+    box-sizing: border-box;
+    /*margin-right: 2rem;*/
+    padding: 2rem;
+    width: 48%;
+    float: left;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);
+}
+
+.left {
+    margin-right: 1rem;
+}
+
+li {
+    /*padding-left: 2rem;*/
+    font-size: 1.4rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    border-bottom: 1px dashed #ccc;
+    /*    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);
+    width: 50%;
+    margin: 1rem;*/
+}
+
+li:last-of-type {
+    border: none;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+}
+
+li:hover {
+    background-color: #3367d6;
+    /*color: #fff;*/
+}
+
+li:hover a {
+    color: #fff;
+}
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <h3>搜索建议 <small>基于jsonp</small></h3>
+            <input type="text" name="" value="a" id='t1'>
+        </div>
+        <div class="left">
+            <h3>百度搜索建议</h3>
+            <ul id="ul1"></ul>
+        </div>
+        <div class="left">
+            <h3>360搜索建议</h3>
+            <ul id="ul2"></ul>
+        </div>
+    </div>
+    </ul>
+    <script src='jsonp.js'></script>
+    <script src='search_sug.js'></script>
+</body>
+
+</html>

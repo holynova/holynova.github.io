@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue利息计算器</title>
+    <link rel="stylesheet" href="return_money.css">
+    <script src='../../script/vue.js'></script>
+</head>
+
+<body>
+    <div id='my-app' class="wrapper">
+        <h2>vue.js 利息计算器</h2>
+        <div class="interest-setter">
+            <select name="base" v-model='baseInterest'>
+                <option v-for="item in baseArr" value={{item.value}}>{{item.text}}</option>
+            </select>
+            <label>利息倍数
+                <input type="number" name="" v-model="ratio" step="0.1">
+            </label>
+            <p>最终利率{{ interest}}</p>
+        </div>
+        <div class="borrow-form">
+            <table>
+                <thead>
+                    <tr>
+                        <td>序号</td>
+                        <td>借入时间</td>
+                        <td>借入金额</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="row in borrowRows">
+                        <td>{{row.num}}</td>
+                        <td>
+                            <select name="year">
+                                <option v-for="year in borrowRowOrigin.years" value="{{year}}" selected="{{year == borrowRowOrigin.curYear}}">{{year}}</option>
+                            </select>
+                            <select name="month">
+                                <option v-for="month in borrowRowOrigin.months" value="{{month}}" selected="{{month == borrowRowOrigin.curMonth}}">{{month}}</option>
+                            </select>
+                            <select name="date">
+                                <option v-for="date in borrowRowOrigin.dates" value="{{date}}" selected="{{date == borrowRowOrigin.curDate}}">{{date}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" value='-1' step='2'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>汇总</td>
+                        <td></td>
+                        <td>-1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="return-form">
+            <table>
+                <thead>
+                    <tr>
+                        <td>序号</td>
+                        <td>还款时间</td>
+                        <td>还款金额</td>
+                        <td>还款比例</td>
+                        <td>借入天数</td>
+                        <td>利息</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src='return_money.js'></script>
+</body>
+
+</html>

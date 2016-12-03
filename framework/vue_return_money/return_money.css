@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+.wrapper {
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 5rem auto;
+}
+.wrapper table,
+.wrapper tr,
+.wrapper td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  text-align: center;
+}
+.wrapper h2 {
+  text-align: center;
+}
+.wrapper input {
+  margin: 1rem;
+}
+.wrapper .interest-setter {
+  padding: 2rem;
+}
+.wrapper .borrow-form {
+  padding: 2rem;
+}
+.wrapper .return-form {
+  padding: 2rem;
+}

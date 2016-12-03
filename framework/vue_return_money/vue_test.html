@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue test</title>
+    <script src='../../script/vue.js'></script>
+</head>
+
+<body>
+    <div id="app">
+        <select name="year" v-model='selectedDate.year'>
+            <option v-for='year in yearOptions' :value="year">{{year}}</option>
+        </select>
+        <select name="month " v-model='selectedDate.month'>
+            <option v-for='month in monthOptions' value="{{month}} ">{{month}}</option>
+        </select>
+        <select name="date " v-model='selectedDate.date'>
+            <option v-for='date in dateOptions' value="{{date}} ">{{date}}</option>
+        </select>
+        <p>date is {{this.dateObj.toLocaleDateString()}}</p>
+        <date-picker></date-picker>
+        <currency-input v-bind:label="currency.one.label" v-model='currency.one.value'></currency-input>
+        <currency-input></currency-input>
+    </div>
+    <script>
+    function genArr(min, max, step) {
+        if (typeof min === 'undefined') min = 0;
+        if (typeof max === 'undefined') max = 100;
+        if (typeof step === 'undefined') step = 1;
+        var arr = [];
+        for (var i = min; i <= max; i += step) {
+            arr.push(i);
+        }
+        return arr;
+    }
+    Vue.component('date-picker', {
+        template: '<div class="date-picker">I am a date picker,today is {{date.toLocaleDateString()}}</div>',
+        data: function() {
+            return {
+                date: new Date(),
+            };
+        },
+    });
+    Vue.component('currency-input', {
+        template: '<div><label v-if="label">{{label}}</label>$<input ref = "input" v-bind:value="value"\ v-on:input="updateValue($event.target.value)"\
+        v ></div>',
+        props: {
+            value: {
+                type: Number,
+                default: 0
+            },
+            label: {
+                type: String,
+                default: ""
+            }
+        },
+        // data: function() { // return {}; // },
+
+        methods: {
+            updateValue: function(value) {
+                // this.$refs.input.value = 
+                this.$emit('input', value);
+            }
+        }
+
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: function() {
+            var now = new Date();
+            var selectedDate = {
+                year: now.getFullYear(),
+                month: now.getMonth() + 1,
+                date: now.getDate()
+            }
+            return {
+                selectedDate: selectedDate,
+                // currency: {
+                //     one: {
+                //         label: 'one',
+                //         value: 100
+                //     },
+                //     two: {
+                //         label: 'two',
+                //         value: 200
+                //     },
+                // }
+            }
+        },
+
+        computed: {
+            options: function() {
+
+            },
+            yearOptions: function() {
+                var curYear = this.selectedDate.year;
+                return genArr(curYear - 10, curYear + 10);
+            },
+            monthOptions: function() {
+                return genArr(1, 12);
+            },
+            dateOptions: function() {
+                //下个月的第0天,找到本月最大日期
+                var max = new Date(this.selectedDate.year, this.selectedDate.month - 1 + 1, 0).getDate();
+                // console.log(max);
+                return genArr(1, max);
+            },
+            dateObj: function() {
+                return new Date(this.selectedDate.year, this.selectedDate.month - 1, this.selectedDate.date);
+            },
+            currency: function() {
+
+                return {
+                    one: {
+                        label: 'one',
+                        value: 100
+                    },
+                    two: {
+                        label: 'two',
+                        value: 200
+                    },
+                }
+            }
+
+        }
+    });
+    </script>
+</body>
+
+</html>
