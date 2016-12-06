@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<head>
+    <title>show sort</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+    
+    .wrapper {
+        width: 620px;
+        margin: 50px auto;
+        line-height: 3rem;
+        height: 3rem;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    #my-canvas {
+        /*width: 600px;*/
+        /*height: 300px;*/
+        border: 1px solid #ccc;
+    }
+    /*.setting,*/
+    
+    .setting,
+    .btns {
+        height: 3rem;
+    }
+    
+    select,
+    label,
+    input[type='button'] {
+        margin-right: 1rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>排序算法可视化</h2>
+        <div class="setting">
+            排序算法
+            <select name="sort-func" id="select-sort">
+                <option value="bubbleSort">冒泡排序</option>
+                <option value="quickSort" selected="true">快速排序</option>
+                <option value="mergeSort">归并排序</option>
+                <option value="heapSort">堆排序</option>
+                <option value="insertSort">插入排序</option>
+                <option value="selectSort">简单选择排序</option>
+                <option value="cocktailSort">鸡尾酒排序</option>
+            </select>
+            <label>
+                样本数量
+                <input type="number" value="100" id="sample-num" min="2" max="500" step="1">
+            </label>
+            <label>动画间隔
+                <input type="number" name="" id="interval" value="100" max='9999' step='10'>ms
+            </label>
+            <!-- <br> -->
+        </div>
+        <div class="btns" id='btn-panel'>
+            <!-- <input type="button" value="重置数据" id='btn-renew-data'> -->
+            <input type="button" value="开始动画" id='btn-go'>
+            <input type="button" value="暂停动画" id='btn-pause'>
+            <input type="button" value="下一步" id='btn-next'>
+            <input type="button" value="上一步" id='btn-prev'>
+            <input type="button" value="第一步" id='btn-first'>
+            <input type="button" value="最后一步" id='btn-last'>
+        </div>
+        <h3 id='cur-frame'></h3>
+        <canvas width="600" height="300" id='my-canvas'></canvas>
+    </div>
+    <script type="text/javascript" src='show_sort2.js'></script>
+</body>
+
+</html>

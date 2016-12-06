@@ -288,10 +288,10 @@ function insertSort(arr) {
 }
 //================================================================
 var options = {
-    sampleSize: 100,
-    arrSize: 999,
-    arrMin: -9999,
-    arrMax: 9999
+    sampleSize: 99999,
+    arrSize: 10,
+    arrMin: 0,
+    arrMax: 40
 }
 testSort(quickSort, options);
 testSort(mergeSort, options);

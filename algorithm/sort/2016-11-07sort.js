@@ -153,6 +153,7 @@ function mergeSort(arr) {
 }
 
 function heapSort(arr) {
+
     //在头部添加一个没用的值,使得节点i的两个子节点恰好是2i和2i+1
     arr.unshift('-');
 
