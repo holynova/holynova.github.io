@@ -64,6 +64,14 @@ window.onload = function() {
                         rectHeight);
                     this.ctx.fillStyle = this.color;
                 } else {
+                    // var lightness = (1 - value / max) * 100 + '%';
+                    // var hue = (value / max) * 270;
+                    // this.ctx.fillStyle = 'hsl(' + hue + ',50%,50%)';
+                    // console.log('hsl(10,100%,' + lightness + ')');
+                    // console.log('hsl(' + hue + ',100%,80%)');
+                    // console.log(this.ctx.fillStyle);
+                    // this.fillStyle = 'hsl(150,20%,80%)';
+                    // this.fillStyle = 'hsl(150,20%,80%)';
                     this.ctx.fillRect(offset + i * widthStep,
                         this.height - rectHeight,
                         rectWidth,
