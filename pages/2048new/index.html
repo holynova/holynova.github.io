@@ -2,25 +2,44 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>2048game</title>
     <link rel="stylesheet" type="text/css" href="game.css">
 </head>
 
 <body>
     <div class="wrapper">
-        级别:
-        <select class='select-grade'>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4" selected="true">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-        </select>
+        <div class="game-settings">
+            选择级别:
+            <select class='select-grade'>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected="true">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+            </select>
+            选择主题
+            <select class="select-theme">
+                <option value="number" selected="true">数字</option>
+                <option value="dynasty">朝代</option>
+                <option value="chemistry">化学元素</option>
+                <option value="reverse">反向数字</option>
+                <option value="millitary">军队</option>
+                <!-- <option value="5"></option> -->
+            </select>
+            <input type="button" class='btn-restart' value="重新开始">
+            <input type="button" class='btn-prev' value="后退一步">
+        </div>
+        <div class="game-info">
+            分数:<span class='score'></span> 步数:
+            <span class='step'></span>
+            <div class='result'></div>
+        </div>
         <div id="game-box">
             game-box
         </div>

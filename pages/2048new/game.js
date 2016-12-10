@@ -1,43 +1,159 @@
 $(function() {
-    main()
+    main();
 });
 
+function clone(obj) {
+    if (obj === null || typeof obj !== 'object') {
+        return obj;
+    }
+    if (obj instanceof Array) {
+        var copy = [];
+        for (var i = 0; i < obj.length; i++) {
+            copy.push(obj[i]);
+        }
+        return copy;
+    }
+    if (obj instanceof Date) {
+        var copy = new Date();
+        copy.setTime(obj.getTime());
+        return copy;
+    }
+    if (obj instanceof Object) {
+        var copy = {};
+        for (var key in obj) {
+            //递归
+            if (obj.hasOwnProperty(key)) {
+                copy[key] = clone(obj.key);
+            }
+        }
+        return copy;
+    }
+}
+
 function main() {
+    function QueueClass(size) {
+        this.size = size;
+        this.arr = [];
+    }
+    QueueClass.prototype = {
+        inQueue: function(value) {
+            if (this.arr.length > this.size) {
+                this.arr.shift();
+            }
+            this.arr.push(clone(value));
+        },
+        //回到上一步
+        prev: function() {
+            if (this.arr.length > 0) {
+                return this.arr.pop();
+            } else {
+                return null;
+            }
+        }
+    };
     var gData = [];
     var gGrade = 4;
     var gScore = 0;
+    var gStep = 0;
+    var gHistory = {
+        data: new QueueClass(20),
+        step: new QueueClass(20),
+        score: new QueueClass(20)
+    };
     var gGameSettings = {
-        startCellQty: 12,
-        startCellValues: [2, 4],
-        animateInterval: 500,
+        startCellQty: 'auto',
+        startCellValues: [0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4],
+        animateInterval: 100,
         animateEasing: 'linear',
         winCellValue: 2048,
     };
+    //-----------------------------------------------------------
+    var gThemes = {};
+    initTheme();
+    var gCurTheme = gThemes['number'];
+
+    function initTheme() {
+        gThemes['number'] = str2theme('2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768');
+        gThemes['dynasty'] = str2theme('夏,商,周,春秋,战国,秦,汉,三国,晋,南北朝,隋,唐,五代十国,宋,元,明,清,民国,PRC');
+        gThemes['chemistry'] = str2theme('氢氦锂铍硼碳氮氧氟氖钠镁铝硅磷硫氯氩钾钙'.split('').join(','));
+        gThemes['reverse'] = str2theme('2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768'.split(',').reverse().join(','));
+        gThemes['millitary'] = str2theme('炮灰,兵,班长,排长,连长,营长,团长,旅长,师长,军长,军区司令,国防部长,军委副主席,军委主席');
+    }
+
+    function str2theme(str) {
+        //用逗号分隔的字符串,产生主题
+        var theme = {};
+        var arr = str.replace(/\s/g, '').split(',');
+        for (var i = 0; i < arr.length; i++) {
+            theme[Math.pow(2, (i + 1))] = arr[i];
+        }
+        return theme;
+    }
+    $('.game-settings .select-theme').on('change', function(ev) {
+        var value = $(ev.target).val();
+        gCurTheme = gThemes[value];
+        refreshAll();
+    });
+    //-----------------------------------------------------------
     initGameBox();
+    //-----------------------------------------------------------
+    //events handler
     $('.select-grade').on('change', function() {
         initGameBox();
         $(this).blur();
     });
-    $(document).on('keyup', handleKeyup);
-
-    function handleKeyup(event) {
-        switch (event.key) {
-            case 'ArrowLeft':
-                move('left');
-                break;
-            case 'ArrowRight':
-                move('right');
-                break;
-            case 'ArrowUp':
-                move('up');
-                break;
-            case 'ArrowDown':
-                move('down');
-                break;
-            default:
-                break;
+    $('.game-settings .btn-restart').click(initGameBox);
+    $('.game-settings .btn-prev').click(function() {
+        var prevData = gHistory.data.prev();
+        var prevStep = gHistory.step.prev();
+        var prevScore = gHistory.score.prev();
+        if (prevData !== null) {
+            gData = prevData;
+            refreshAll();
         }
-        return false;
+        if (prevStep !== null) {
+            gStep = prevStep;
+            $('.game-info .step').html(gStep);
+        }
+        if (prevScore !== null) {
+            gScore = prevScore;
+            $('.game-info .score').html(gScore);
+        }
+        console.log(prevData);
+    });
+    $(document).on('keydown', handleKey);
+    $(document).on('keydown', function(event) {
+        //阻止按方向键页面滚动的默认事件
+        if (event.key.indexOf('Arrow') !== -1) {
+            event.preventDefault();
+        }
+    });
+    // $('.game-settings .btn-restart')
+    function handleKey(event) {
+        // console.log(event.key);
+        var keyStr = event.key;
+        if (keyStr.indexOf('Arrow') !== -1) {
+            var dirStr = keyStr.replace(/^Arrow/, '').toLowerCase();
+            $('.cell').finish();
+            //上一帧已经全部结束
+            gHistory.data.inQueue(gData);
+            gHistory.step.inQueue(gStep);
+            gHistory.score.inQueue(gStep);
+            var max = Math.max(1, Math.round(gGrade / 4));
+            for (var i = 0; i < max; i++) {
+                genRandCell();
+            }
+            // //动画结束后,产生随即格子
+            // setTimeout(function() {
+            //         var max = Math.max(1, Math.round(gGrade / 4));
+            //         for (var i = 0; i < max; i++) {
+            //             genRandCell();
+            //         }
+            //     }, gGameSettings.animateInterval)
+            //     // genRandCell();
+            move(dirStr);
+            event.stopPropagation();
+        }
     }
 
     function move(direct) {
@@ -152,6 +268,12 @@ function main() {
                 }
             }
         }
+        addStep();
+    }
+
+    function addStep() {
+        gStep++;
+        $('.game-info .step').html(gStep);
     }
 
     function moveCell(fromRow, fromCol, toRow, toCol) {
@@ -170,20 +292,35 @@ function main() {
         var value = getCellData(fromRow, fromCol);
         setCellData(destRow, destCol, value * 2);
         setCellData(fromRow, fromCol, 0);
-        moveAnimate(fromRow, fromCol, destRow, destCol);
-        gScore += value * 2;
-        if (value * 2 >= gGameSettings.winCellValue) {
-            gIsWin = true;
+        moveAnimate(fromRow, fromCol, destRow, destCol, function() {
+            addScore(value * 2);
+            // if (value * 2 >= gGameSettings.winCellValue) {
+            //     gIsWin = true;
+            //     // alert('win');
+            // }
+        });
+    }
+    // function winTest()
+    function addScore(score) {
+        gScore += score;
+        $('.game-info .score').html(gScore);
+        if (score >= gGameSettings.winCellValue) {
+            showWin();
         }
+        // if(gScore >= gGameSettings.)
     }
 
-    function moveAnimate(fromRow, fromCol, toRow, toCol) {
+    function showWin() {
+        $('.game-info .result').html('You win');
+    }
+
+    function moveAnimate(fromRow, fromCol, toRow, toCol, callback) {
         var $from = $('#cell' + fromRow + '_' + fromCol);
         var $to = $('#cell' + toRow + '_' + toCol);
         var fromPos = $from.position();
         var toPos = $to.position();
         //动画期间禁止键盘输入
-        $(document).off('keyup', handleKeyup);
+        // $(document).off('keydown');
         $from.css('zIndex', 100).animate({
             left: toPos.left,
             top: toPos.top
@@ -195,134 +332,32 @@ function main() {
             });
             refreshCell(fromRow, fromCol);
             refreshCell(toRow, toCol);
-            $(document).on('keyup', handleKeyup);
-        });
-    }
-
-    function move1(direct) {
-        if (direct === 'left') {
-            for (var row = 0; row < gGrade; row++) {
-                for (var col = 1; col < gGrade; col++) {
-                    //col=0最左边,则不用移动
-                    var curCellValue = getCellData(row, col);
-                    if (!curCellValue) continue;
-                    var neighborCellValue = getCellData(row, col - 1);
-                    if (neighborCellValue) {
-                        //向左找,左边不为空,则判断数字是否一致,如果一样,则合并,如果不一样,则不动
-                        if (neighborCellValue === curCellValue) {
-                            setCellData(row, col - 1, curCellValue * 2);
-                            setCellData(row, col, 0);
-                            moveCell({
-                                row: row,
-                                col: col
-                            }, {
-                                row: row,
-                                col: col - 1
-                            }, refreshAll);
-                        }
-                    } else {
-                        //向左找,左边为空,则继续找,直到找到一个不为空的位置,移动过去,固定
-                        var nextNotEmpatyCellIndex = col - 1;
-                        while (nextNotEmpatyCellIndex >= 0) {
-                            if (getCellData(row, nextNotEmpatyCellIndex)) {
-                                break;
-                            }
-                            nextNotEmpatyCellIndex--;
-                        }
-                        nextNotEmpatyCellIndex++;
-                        setCellData(row, nextNotEmpatyCellIndex, getCellData(row, col));
-                        setCellData(row, col, 0);
-                        moveCell({
-                            row: row,
-                            col: col
-                        }, {
-                            row: row,
-                            col: nextNotEmpatyCellIndex
-                        }, refreshAll);
-                    }
-                }
-            }
-        } else if (direct === 'right') {
-            for (var row = 0; row < gGrade; row++) {
-                for (var col = gGrade - 2; col >= 0; col--) {
-                    //col=gGrade-1 最右边,则不用移动
-                    if (!getCellData(row, col)) continue;
-                    var nextCol = col + 1;
-                    if (getCellData(row, nextCol)) {
-                        //向右找,右边不为空,则判断数字是否一致,如果一样,则合并,如果不一样,则不动
-                        merge(row, col, row, nextCol);
-                    } else {
-                        //向右找,右边为空,则继续找,直到找到一个不为空的位置,移动过去,固定
-                        var nextNotEmpatyCellIndex = nextCol;
-                        while (nextNotEmpatyCellIndex < gGrade) {
-                            if (getCellData(row, nextNotEmpatyCellIndex)) {
-                                break;
-                            }
-                            nextNotEmpatyCellIndex++;
-                        }
-                        nextNotEmpatyCellIndex--;
-                        setCellData(row, nextNotEmpatyCellIndex, getCellData(row, col));
-                        setCellData(row, col, 0);
-                        moveCell({
-                            row: row,
-                            col: col
-                        }, {
-                            row: row,
-                            col: nextNotEmpatyCellIndex
-                        }, refreshAll);
-                    }
-                }
-            }
-        }
-    }
-
-    function merge1(row, col, nextRow, nextCol) {
-        var curCellValue = getCellData(row, col);
-        var neighborCellValue = getCellData(nextRow, nextCol);
-        if (neighborCellValue === curCellValue) {
-            setCellData(nextRow, nextCol, curCellValue * 2);
-            setCellData(row, col, 0);
-            moveCell({
-                row: row,
-                col: col
-            }, {
-                row: nextRow,
-                col: nextCol
-            }, refreshAll);
-        }
-    }
-
-    function moveCell1(fromDic, toDic, callback) {
-        var $fromCell = $('#cell' + fromDic.row + '_' + fromDic.col);
-        var $toCell = $('#cell' + toDic.row + '_' + toDic.col);
-        var $bgFromCell = $('#bg-cell' + fromDic.row + '_' + fromDic.col);
-        var fromPos = $bgFromCell.position();
-        $fromCell.css({
-            zIndex: 100
-        });
-        $fromCell.animate({
-            top: $toCell.position().top,
-            left: $toCell.position().left
-        }, function() {
             if (typeof callback === 'function') {
                 callback();
             }
-            $fromCell.css({
-                top: fromPos.top + 'px',
-                left: fromPos.left + 'px',
-                zIndex: 10
-            });
+            // $(document).on('keydown', handleKey);
         });
+    }
+
+    function setWidth() {
+        var deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        var width = deviceWidth > 500 ? Math.floor(deviceWidth * 0.5) : Math.floor(deviceWidth * 0.9);
+        console.log(deviceWidth, width);
+        $('#game-box').width(width);
+        $('#game-box').height(width);
+        // console.log()
     }
 
     function initGameBox() {
         var $gameBox = $('#game-box');
+        setWidth();
         $gameBox.html('');
-        gScore = 0;
         gGrade = parseInt($('.select-grade').val());
         var boxWidth = $gameBox.width();
-        var gutterWidth = Math.max(1, Math.round(boxWidth * 0.015));
-        var rectWidth = Math.floor((boxWidth - gutterWidth * (gGrade + 1)) / gGrade);
+        var gutterWidth = Math.max(1, Math.round(boxWidth / (16 * gGrade + 1)));
+        var rectWidth = Math.floor((boxWidth - (gGrade + 1) * gutterWidth) / gGrade);
+        // var gutterWidth = Math.max(1, Math.round(boxWidth * 0.015));
+        // var rectWidth = Math.floor((boxWidth - gutterWidth * (gGrade + 1)) / gGrade);
         for (var row = 0; row < gGrade; row++) {
             for (var col = 0; col < gGrade; col++) {
                 var id = 'cell' + row + '_' + col;
@@ -337,7 +372,7 @@ function main() {
                     height: rectWidth + 'px',
                     left: left + 'px',
                     top: top + 'px',
-                    fontSize: rectWidth / 2 + 'px',
+                    fontSize: rectWidth / 4 + 'px',
                     lineHeight: rectWidth + 'px',
                     zIndex: 10
                 };
@@ -348,7 +383,13 @@ function main() {
             }
         }
         initCellData();
-        for (var i = 0; i < gGameSettings.startCellQty; i++) {
+        var initCellNum = 0;
+        if (['', 'auto', 0].indexOf(gGameSettings.startCellQty) !== -1) {
+            initCellNum = gGrade;;
+        } else {
+            initCellNum = gGameSettings.startCellQty
+        }
+        for (var i = 0; i < initCellNum; i++) {
             genRandCell(randChoose(gGameSettings.startCellValues));
         }
     }
@@ -356,7 +397,12 @@ function main() {
     function initCellData() {
         gData = new Array(gGrade * gGrade);
         gData.fill(0);
-        return gData;
+        gStep = 0;
+        gScore = 0;
+        $('.game-info .score').html('0');
+        $('.game-info .step').html('0');
+        $('.game-info .result').html('');
+        // return gData;
     }
 
     function setCellData(row, col, value) {
@@ -366,7 +412,17 @@ function main() {
     function refreshCell(row, col) {
         var $cell = $('#cell' + row + '_' + col);
         var value = getCellData(row, col);
-        $cell.html(value ? value : '');
+        var content = '';
+        if (value === 0) {
+            content = '';
+        } else {
+            if (value in gCurTheme) {
+                content = gCurTheme[value];
+            } else {
+                content = value;
+            }
+        }
+        $cell.html(content);
         $cell.css({
             'backgroundColor': getColor(value)
         });
@@ -412,14 +468,7 @@ function main() {
         if (typeof value === 'undefined') {
             value = randChoose(gGameSettings.startCellValues);
         }
-        var id = 'cell' + row + '_' + col;
-        var $cell = $('#' + id);
-        var width = $cell.width();
-        $cell.animate({
-            width: width,
-            height: width
-        });
-        $cell.html(value);
+        var $cell = $('#cell' + row + '_' + col);
         setCellData(row, col, value);
         refreshCell(row, col);
     }
@@ -431,10 +480,48 @@ function main() {
                 blankCells.push(i);
             }
         }
+        testGameoverAndShow();
+        if (blankCells.length === 0) {
+            return;
+        }
         var index = randChoose(blankCells);
         var col = index % gGrade;
         var row = Math.floor(index / gGrade);
         genCell(row, col, value);
+        testGameoverAndShow();
+    }
+
+    function isGameover() {
+        var isAnyZero = gData.some(function(value) {
+            return value === 0;
+        });
+        if (isAnyZero) {
+            return false;
+        }
+        // var isOver = true;
+        for (var row = 0; row < gGrade; row++) {
+            for (var col = 0; col < gGrade - 1; col++) {
+                if (getCellData(row, col) === getCellData(row, col + 1)) {
+                    return false;
+                }
+            }
+        }
+        for (var col = 0; col < gGrade; col++) {
+            for (var row = 0; row < gGrade - 1; row++) {
+                if (getCellData(row, col) === getCellData(row + 1, col)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function testGameoverAndShow() {
+        if (isGameover()) {
+            $('.game-info .result').html('Game over');
+            alert('Game Over');
+            // $(document).off()
+        }
     }
 
     function randChoose(arr) {
