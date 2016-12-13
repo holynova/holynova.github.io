@@ -52,7 +52,7 @@ function main() {
         }
     };
     var gData = [];
-    var gGrade = 4;
+    var gGrade = $('.game-settings .grade').val()
     var gScore = 0;
     var gStep = 0;
     var gHistory = {
@@ -70,7 +70,7 @@ function main() {
     //-----------------------------------------------------------
     var gThemes = {};
     initTheme();
-    var gCurTheme = gThemes['number'];
+    var gCurTheme = gThemes[$('.game-settings .select-theme').val()];
 
     function initTheme() {
         gThemes['number'] = str2theme('2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768');
@@ -119,7 +119,7 @@ function main() {
             gScore = prevScore;
             $('.game-info .score').html(gScore);
         }
-        console.log(prevData);
+        // console.log(prevData);
     });
     $(document).on('keydown', handleKey);
     $(document).on('keydown', function(event) {
@@ -342,7 +342,7 @@ function main() {
     function setWidth() {
         var deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         var width = deviceWidth > 500 ? Math.floor(deviceWidth * 0.5) : Math.floor(deviceWidth * 0.9);
-        console.log(deviceWidth, width);
+        // console.log(deviceWidth, width);
         $('#game-box').width(width);
         $('#game-box').height(width);
         // console.log()

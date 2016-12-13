@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>利息计算器</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>还款利息计算器</h2>
+        <div class="interest-form">
+            <h3>第一步:设定利率</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>参考利率</td>
+                        <td>倍数</td>
+                        <td>利率</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select id="base-interest">
+                                <option value="4.35">定期贷款-六个月-4.35%</option>
+                                <option value="4.35">定期贷款-六个月至一年-4.35%</option>
+                                <option value="4.75">定期贷款-一至三年-4.75%</option>
+                                <option value="4.75">定期贷款-三至五年-4.75%</option>
+                                <option value="4.9">定期贷款-五年以上-4.9%</option>
+                                <option value="0.3">存款-活期-0.3%</option>
+                                <option value="1.35">定期存款-三个月-1.35%</option>
+                                <option value="1.55">定期存款-半年-1.55%</option>
+                                <option value="1.75">定期存款-一年-1.75%</option>
+                                <option value="2.25">定期存款-二年-2.25%</option>
+                                <option value="2.75">定期存款-三年-2.75%</option>
+                                <option value="2.75">定期存款-五年-2.75%</option>
+                                <option value="1">自定义-1%</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" value="1" placeholder="1.0" step=".1">
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="borrow-form">
+            <h3>第二步:填写借款信息</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>序号</td>
+                        <td>日期</td>
+                        <td>金额</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class='sum'>
+                        <td>汇总</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" name="" value="增加一条借款信息" class='btn-add'>
+        </div>
+        <div class="return-form">
+            <h3>第三步:填写还款信息</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>序号</td>
+                        <td>日期</td>
+                        <td>金额</td>
+                        <td>百分比</td>
+                        <!-- <td>借入天数</td> -->
+                        <!-- <td>本行利息</td> -->
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr class="row">
+    <td>1</td>
+    <td>
+        <input type="date">
+    </td>
+    <td>
+        <input type="number">
+    </td>
+    <td>还款百分比</td>
+    <td>借入天数</td>
+    <td>本行利息</td>
+    <td>
+        <input type="button" value="删除">
+    </td>
+</tr>
+ -->
+                    <tr class="sum">
+                        <td>汇总</td>
+                        <td></td>
+                        <td>0</td>
+                        <td>100%</td>
+                        <!-- <td>借入天数</td> -->
+                        <!-- <td>本行利息</td> -->
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" value="增加一条还款信息" class="btn-add">
+        </div>
+        <div class="result">
+            <h3>计算结果</h3>
+            <h4>最后一次还款日期:<span class='last-return-date'></span></h4>
+            <h4>利息总额:<span class="total-interest"></span>元</h4>
+            <!-- <h4>本息和:<span class="all"></span></h4> -->
+        </div>
+    </div>
+    <script src='../../script/jquery-1.11.2.min.js'></script>
+    <script src='return_money.js'></script>
+</body>
+
+</html>

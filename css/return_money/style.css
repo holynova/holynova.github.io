@@ -1,0 +1,23 @@
+html {
+  font-size: 10px;
+}
+.wrapper {
+  font-size: 1.2rem;
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+.wrapper table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+.wrapper table tr,
+.wrapper table td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  height: 3rem;
+  line-height: 3rem;
+}
+.wrapper table tr.sum {
+  background-color: #fff;
+}

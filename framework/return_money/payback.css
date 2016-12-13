@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 50%;
+  min-width: 300px;
+  margin: 50px auto;
+}
+.wrapper table.payback {
+  font-size: 14px;
+  border-collapse: collapse;
+}
+.wrapper table.payback tr {
+  line-height: 28px;
+  height: 28px;
+}
+.wrapper table.payback tr td {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.wrapper input[type='number'] {
+  width: 80px;
+}

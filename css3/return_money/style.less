@@ -1,0 +1,141 @@
+html {
+    font-size: 10px;
+}
+
+.wrapper {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        min-width: 300px;
+        width: 62%;
+        margin: 0 auto;
+        tr,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            height: 3rem;
+            line-height: 3rem;
+        }
+        tr {
+            min-width: 300px;
+            width: 100%;
+            td {
+                input {
+                    &[type="number"] {
+                        width: 60px;
+                    }
+                    &[type="date"] {
+                        min-width: 120px;
+                    }
+                }
+            }
+        }
+        input[type="button"] {
+            background-color: #84D8CB;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+        thead {
+            tr {
+                background-color: #84D8CB;
+                color: #fff;
+            }
+        }
+        tr {
+            &.sum {
+                &,
+                td {
+                    background-color: #eee;
+                } // color: red;
+            }
+            .btn-add {}
+            .btn-del {}
+        }
+        // tbody {
+        //     tr {
+        //         &.row {
+        //             // background-color: #999;
+        //         }
+        //         &.sum {
+        //             background-color: #fff;
+        //         }
+        //     }
+        // }
+    }
+    input.btn-add {
+        background-color: #84D8CB;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        padding: 0.5rem 5rem;
+        margin: 1rem 0;
+    }
+    .result {
+        span.total-interest {
+            // background-color: #84D8CB;
+            // color: #fff;
+            font-size: 2rem;
+        }
+    }
+}
+
+// table,
+// tr,
+// td {
+//     border: 1px solid #ccc;
+//     border-collapse: collapse;
+// }
+// tr,
+// td {
+//     height: 3rem;
+//     line-height: 3rem;
+// }
+// thead {
+//     background: #ddd;
+// }
+// table,
+// tr {
+//     min-width: 300px;
+//     width: 62%;
+// }
+// table {
+//     margin: 0 auto;
+// }
+// input,
+// select {
+//     /*width: 100px;*/
+// }
+// input[type="date"] {
+//     display: inline-block;
+//     width: 120px;
+//     min-width: 120px;
+//     max-width: 200px;
+// }
+// input[type="number"] {
+//     display: inline-block;
+//     width: 60px;
+//     min-width: 50px;
+//     max-width: 100px;
+//     text-align: right;
+// }
+// input[type="button"] {
+//     background: #ccc;
+//     border: none;
+//     border-radius: 5px;
+// }
+// input.btn-add {
+//     margin: 1rem 0;
+//     padding: 0.5rem 5rem;
+// }
+// tr.sum {
+//     font-weight: bold;
+//     color: red;
+// }
+// span {
+//     font-weight: bold;
+// }
