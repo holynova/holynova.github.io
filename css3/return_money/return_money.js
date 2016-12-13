@@ -106,8 +106,8 @@ $(function() {
         var $sum = $('.return-form tbody tr.sum');
         var index = $('.return-form tbody tr.row').length + 1;
         var $tr = $(getReturnRow(index, date, value));
-        var totalBorrow = parseFloat($('.borrow-form tr.sum td:eq(2)').html());
-        $tr.children('td:eq(3)').html((value / totalBorrow * 100).toFixed(2) + '%');
+        var totalReturn = parseFloat($('.borrow-form tr.sum td:eq(2)').html());
+        $tr.children('td:eq(3)').html((value / totalReturn * 100).toFixed(2) + '%');
         $tr.insertBefore($sum);
     }
     // function delBorrowRow($row) {}
@@ -131,7 +131,7 @@ $(function() {
         }
         return '<tr class="row"><td>' + index +
             '</td><td><input type="date" value="' + date2str(date) +
-            '"></td><td><input type="number" value="' + value +
+            '"></td><td><input type="number" value="' + value.toFixed(2) +
             '"></td><td>还款百分比</td><td><input type="button" class = "btn-del" value="x"></td></tr>';
     }
 
