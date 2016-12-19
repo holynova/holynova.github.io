@@ -1,10 +1,9 @@
 html {
     font-size: 10px;
-    input {
-        // -webkit-apperance: none;
-        -webkit-appearance: none;
-        border-radius: 0;
-    }
+    // input {
+    // -webkit-appearance: none;
+    // border-radius: 0;
+    // }
 }
 
 .wrapper {
@@ -16,7 +15,7 @@ html {
         border: 1px solid #84D8CB;
         border-collapse: collapse;
         min-width: 300px;
-        width: 62%;
+        width: 80%;
         margin: 0 auto;
         tr,
         td {
@@ -29,6 +28,8 @@ html {
             min-width: 300px;
             width: 100%;
             td {
+                // padding: 1rem;
+                // min-width: 20px;
                 input {
                     &[type="number"] {
                         width: 60px;
@@ -80,7 +81,10 @@ html {
         padding: 0.5rem 5rem;
         margin: 1rem 0;
     }
-    input[type="button"] {}
+    input[type="number"] {
+        // -webkit-appearance: none;
+        border: 1px solid #ccc;
+    }
     .result {
         span.total-interest {
             // background-color: #84D8CB;

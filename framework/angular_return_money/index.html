@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Angular还款利息计算器</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    canvas {
+        border: 1px solid #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" ng-app='myApp' ng-controller='myCtrl'>
+        <h2>还款利息计算器 Angular版本</h2>
+        <div class="interest-form">
+            <h3>第一步:设定利率</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>参考利率</td>
+                        <td>倍数</td>
+                        <td>利率</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select id="base-interest" ng-model='selectBase' ng-options='option.text for option in baseArr'>
+                                <<!-- option ng-repeat='option in intere
+st.baseArr' value="{{option.value}}">{{option.text}}</option> -->
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" ng-model='ratio' placeholder="1.0" step=".1">
+                        </td>
+                        <td>{{getInterest()+'%'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="borrow-form">
+            <h3>第二步:填写借款信息</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>日期</td>
+                        <td>金额</td>
+                        <td>百分比</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class='row ' ng-repeat='row in borrowData '>
+                        <td>{{$index+1}}</td>
+                        <td>
+                            <input type="date" ng-model='row.date'>
+                        </td>
+                        <td>
+                            <input type="number" ng-model='row.value'>
+                        </td>
+                        <td>
+                            {{(row.value/borrowSum*100).toFixed(2)+'% '}}
+                        </td>
+                        <!-- <td>{{row.interval +','+row.interest.toFixed(2)}}</td> -->
+                        <td>
+                            <input type="button" value="x" ng-click='changeRow( "del", "borrow",row) '>
+                        </td>
+                    </tr>
+                    <tr class='sum '>
+                        <td></td>
+                        <td>合计</td>
+                        <td>{{getSum('borrow')}}</td>
+                        <td>100.00%</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" name="" value="增加一条借款信息" class='btn-add ' ng-click='changeRow( "add", "borrow") '>
+        </div>
+        <div class="return-form">
+            <h3>第三步:填写还款信息</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>日期</td>
+                        <td>金额</td>
+                        <td>百分比</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat='row in returnData '>
+                        <td>{{$index+1}}</td>
+                        <td>
+                            <input type="date" ng-model='row.date'>
+                        </td>
+                        <td>
+                            <input type="number" ng-model='row.value'>
+                        </td>
+                        <td> {{(row.value/borrowSum*100).toFixed(2)+'% '}}</td>
+                        <!-- <td>{{row.interval +','+row.interest.toFixed(2)}}</td> -->
+                        <td>
+                            <input type="button" value="x" ng-click='changeRow( "del", "return",row) '>
+                        </td>
+                    </tr>
+                    <tr class="sum">
+                        <td></td>
+                        <td>合计</td>
+                        <td>{{getSum('return')}}</td>
+                        <td>{{(returnSum/borrowSum*100).toFixed(2)+'%'}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" value="增加一条还款信息" class="btn-add" ng-click='changeRow( "add", "return") '>
+        </div>
+        <div class="result">
+            <h3>计算结果</h3>
+            <h4>最后一次还款日期:<span class='last-return-date '>{{getLastReturnDate().toLocaleDateString()}}</span></h4>
+            <h4>利息总额:<span class="total-interest">{{calculateInterest().toFixed(2)}}</span>元</h4>
+        </div>
+        <canvas width="600" height="400">
+        </canvas>
+    </div>
+    <script type="text/javascript" src='../../script/angular.js '></script>
+    <script type="text/javascript" src="plotDateChart.js"></script>
+    <script src='return_money.js '></script>
+</body>
+
+</html>

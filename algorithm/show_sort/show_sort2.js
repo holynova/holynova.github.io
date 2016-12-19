@@ -33,7 +33,7 @@ window.onload = function() {
         this.width = canvasElem.width;
         this.height = canvasElem.height;
         this.color = 'rgba(255,0,0,0.3)';
-        this.highlightColor = 'rgba(0,0,0,0.9)'
+        this.highlightColor = 'rgba(0,0,0,0.9)';
         this.ctx.fillStyle = this.color;
         // this.ctx.fillStyle = 'rgba(255,0,0,0.3)';
     }
