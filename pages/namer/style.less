@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+@my_grey :#7a7f80;
+@my_green :#2ec7bf;
+.shawdow {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);
+    border-radius: 2px;
+}
+
+.test {
+    // border: 1px solid grey;
+}
+
+@media all and (max-width:720px) {
+    li.name-box {
+        width: 90%;
+    }
+    .input-box {
+        width: 90%;
+    }
+}
+
+@media all and (min-width:721px) {
+    li.name-box {
+        width: 40%;
+        margin-right: 5%;
+        min-height: 12rem;
+    }
+    .input-box {
+        width: 90%;
+    }
+}
+
+body {
+    background-color: #eee;
+}
+
+html {
+    // box-sizing: border-box;
+    font-size: 14px;
+    .wrapper {
+        .test;
+        width: 80%;
+        margin: 3rem auto;
+        padding: 1rem;
+        .input-box {
+            .test;
+            .shawdow;
+            background-color: #fff;
+            // margin: 1rem;
+            padding: 1rem;
+            vertical-align: center;
+            // width: 100%;
+            input[type='button'] {
+                background-color: @my_green;
+                color: #fff;
+                border-radius: 2px;
+                padding: 0.5rem 1rem;
+                border: none;
+                margin-left: 2rem;
+            }
+            h3 {
+                line-height: 3rem;
+            }
+            input,
+            select {
+                box-sizing: border-box;
+                margin: 0.2rem 0;
+                width: 8rem;
+                vertical-align: middle;
+            }
+            label {
+                vertical-align: middle;
+            }
+        }
+        ul {
+            .test;
+            width: 100%;
+            list-style-type: none;
+            // vertical-align: top;
+            li.name-box {
+                // display: inline
+                float: left;
+                // width: 40%;
+                // margin: 1rem 0.5rem;
+                // margin-left: 0;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding: 2rem 1rem;
+                .shawdow;
+                background-color: @my_grey;
+                font-size: 1rem;
+                h3 {
+                    font-size: 3rem;
+                    color: #fff;
+                    text-align: center;
+                }
+                p.sentence {
+                    color: #fff;
+                    line-height: 1.5rem;
+                    span {
+                        color: @my_green;
+                    }
+                }
+                p.book {
+                    color: @my_green;
+                    display: inline-block;
+                    text-align: left;
+                }
+                p.author {
+                    color: @my_green;
+                    display: inline-block;
+                    // text-align: right;
+                    // margin-left: 2rem;
+                    float: right;
+                }
+                p,
+                h3 {
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}

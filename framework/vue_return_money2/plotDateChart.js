@@ -1,7 +1,7 @@
-window.onload = function() {
-    // unitTest();
-    // var p1 = new PlotClass(document.getElementsByTagName('canvas')[0]);
-    // console.log(p1);
+/*
+2016年12月19日 桑益民
+ */
+function plotDateChart(canvasElem, borrowData, returnData) {
     function PlotClass(canvasElem) {
         this.width = canvasElem.width;
         this.height = canvasElem.height;
@@ -14,6 +14,7 @@ window.onload = function() {
             this.ctx.clearRect(0, 0, this.width, this.height);
         },
         plotDateChart: function(dataArr, minDate, maxDate, fillColor, maxY) {
+            dataArr = dataArr.slice();
             // dataArr format: [{date:d1,value:v1},{date:d2,value:v2}]
             dataArr.sort(function(a, b) {
                 return a.date - b.date;
@@ -68,7 +69,7 @@ window.onload = function() {
             }
             var minDate = Math.min.apply(null, dateArr);
             var maxDate = Math.max.apply(null, dateArr);
-            console.log(minDate, maxDate);
+            // console.log(minDate, maxDate);
             this.clear();
             //找到共同的Y轴最大值
             var borrowTotal = borrowData.reduce(function(a, b) {
@@ -78,7 +79,7 @@ window.onload = function() {
                 return a + b.value;
             }, 0)
             var maxY = Math.max(borrowTotal, returnTotal);
-            console.log(maxY, borrowTotal, returnTotal);
+            // console.log(maxY, borrowTotal, returnTotal);
             //找到最后一笔还款,把这个日期加入到借款的最后一个位置中.
             var borrowDataPlus = borrowData.slice();
             borrowDataPlus.push({
@@ -90,75 +91,6 @@ window.onload = function() {
             // var minBorrowDate = Math.min.apply(null, borrowData);
         }
     };
-    unitTest2();
-    // function unitTest() {
-    //     var data = [];
-    //     data = randomDateData(2);
-    //     draw(data, 'rgba(255,0,0,0.3)');
-    //     data = randomDateData(5);
-    //     draw(data, 'rgba(0,255,0,0.3)');
-    // }
-    function randomDateData(N) {
-        var data = [];
-        N = N || 5;
-        for (var i = 0; i < N; i++) {
-            var item = {};
-            item.value = randBetween(0, 1000);
-            item.date = new Date(randBetween(2010, 2019), randBetween(0, 11), randBetween(1, 28));
-            data.push(item);
-        }
-        return data;
-    }
-
-    function randBetween(min, max) {
-        return min + Math.floor(Math.random() * (max - min + 1));
-    }
-
-    function draw(data, color) {
-        console.log(data);
-        var canvas = document.getElementsByTagName('canvas')[0];
-        var ctx = canvas.getContext('2d');
-        ctx.fillStyle = color;
-        ctx.strokeStyle = color;
-        // ctx.fillStyle = color;
-        //按时间排序
-        data.sort(function(a, b) {
-            return a.date - b.date;
-        });
-        var latestDate = data[data.length - 1].date;
-        var oldestDate = data[0].date;
-        var totalValue = data.reduce(function(a, b) {
-            return a + b.value;
-        }, 0);
-        // console.log(latestDate.toLocaleDateString(), oldestDate.toLocaleDateString(), totalValue);
-        var ratio = 0.8;
-        var accX = 0,
-            prevHeight = 0;
-        var accValue = 0;
-        var xOffset = 2;
-        ctx.beginPath();
-        ctx.moveTo(xOffset, canvas.height);
-        for (var i = 0, len = data.length; i < len; i++) {
-            accX = (data[i].date - oldestDate) / (latestDate - oldestDate) * 0.95 * canvas.width;
-            ctx.lineTo(xOffset + accX, canvas.height - prevHeight);
-            accValue += data[i].value;
-            var height = accValue / totalValue * ratio * canvas.height;
-            ctx.lineTo(xOffset + accX, canvas.height - height);
-            prevHeight = height;
-        }
-        ctx.lineTo(xOffset + accX + xOffset, canvas.height - prevHeight);
-        ctx.lineTo(2 * xOffset + accX, canvas.height);
-        ctx.fill();
-    }
-
-    function unitTest2() {
-        var borrowData = randomDateData(5);
-        var returnData = randomDateData(5);
-        console.log(JSON.stringify(borrowData));
-        var canvasElem = document.getElementsByTagName('canvas')[0];
-        var p = new PlotClass(canvasElem);
-        // p.plotDateChart(returnData);
-        p.plotBorrowReturnChart(borrowData, returnData);
-        console.log(p);
-    }
-};
+    var p = new PlotClass(canvasElem);
+    p.plotBorrowReturnChart(borrowData, returnData);
+}

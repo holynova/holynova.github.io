@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>deep clone</title>
+</head>
+
+<body>
+    <p>deepclone 详见代码和控制台</p>
+</body>
+<script type="text/javascript">
+function deepClone(obj) {
+    if (obj === null || typeof obj !== 'object') {
+        return obj;
+    }
+    if (obj instanceof Array) {
+        return deepCloneArray(obj);
+    }
+    if (obj instanceof Date) {
+        return deepCloneDate(obj);
+    }
+    if (obj instanceof Object) {
+        return deepCloneObj(obj);
+    }
+
+    function deepCloneArray(arr) {
+        // return arr.slice('');
+        var copy = [];
+        for (var i = 0; i < arr.length; i++) {
+            copy.push(deepClone(arr[i]));
+        }
+        return copy;
+    }
+
+    function deepCloneDate(date) {
+        var copy = new Date();
+        copy.setTime(date.getTime());
+        return copy;
+    }
+
+    function deepCloneObj(obj) {
+        var copy = {};
+        for (var name in obj) {
+            if (obj.hasOwnProperty(name)) {
+                copy[name] = deepClone(obj[name])
+            }
+        }
+    }
+}
+
+function testClone() {
+    var arr = [1, 2, 3, 4, 5],
+        date = new Date(),
+        obj = {
+            name: 'tom',
+            age: 15,
+            friends: ['jerry', 'lucy'],
+            company: {
+                name: 'cctv',
+                city: 'beijing',
+                num: [1, 2, 3]
+            }
+        },
+        num = 42;
+    var testCases = [arr, date, obj, num];
+
+    for (var i = 0; i < testCases.length; i++) {
+        var item = testCases[i];
+        var copy = deepClone(item);
+        console.log(item, copy, item == copy, item === copy);
+
+    }
+    var copyCases = deepClone(testCases);
+    arr.push(999);
+    date.setYear(2222);
+    obj.friends.push('newman');
+    obj.name = 'changedname';
+    num = -999;
+    console.log(testCases, copyCases, testCases == copyCases, testCases === copyCases);
+
+
+
+}
+testClone();
+
+function testClone2() {
+    var arr = [1, 2, 3, 4, 5],
+        date = new Date(),
+        obj = {
+            name: 'tom',
+            age: 15,
+            friends: ['jerry', 'lucy'],
+            company: {
+                name: 'cctv',
+                city: 'beijing',
+                num: [1, 2, 3]
+            }
+        },
+        num = 42;
+    var testCases = [arr, date, obj, num];
+    var copy = deepClone(arr);
+    arr.push(9999);
+    console.log(arr, copy, arr === copy);
+
+    console.log(date);
+    copy = deepClone(date);
+    date.setYear(2222);
+    console.log(date, copy, date === copy);
+
+
+
+
+}
+</script>
+
+</html>

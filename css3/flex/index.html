@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>css3 flex</title>
+    <style type="text/css">
+    .wrapper {
+        width: 80%;
+        height: 500px;
+    }
+    
+    .box {
+        width: 100px;
+        height: 100px;
+        /*background-color: rgba(255, 0, 0, 0.3);*/
+        /*border: 1px solid red;*/
+        /*display: flex;*/
+        background: linear-gradient(-45deg, #788cff, #b4c8ff);
+    }
+    
+    .container {
+        width: 100%;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+    }
+    
+    #div1 {
+        flex: 1;
+        display: flex;
+    }
+    
+    #div2 {
+        flex: 2;
+    }
+    
+    #div3 {
+        flex: 1;
+    }
+    
+    #div4 {
+        flex: 75%;
+    }
+    
+    #div5 {
+        flex: 10%;
+    }
+    
+    #div6 {
+        flex: 15%;
+    }
+    
+    #div7,
+    #div8,
+    #div9 {
+        /*flex: 25%;*/
+        /*flex: 1;*/
+        /*width: 200px;*/
+        /*height: 150px;*/
+    }
+    
+    #container2 {
+        flex-flow: column;
+    }
+    
+    #container3 {
+        height: 300px;
+        background-color: rgba(255, 0, 0, 0.2);
+        justify-content: center;
+        align-items: center;
+    }
+    /*.mini {}*/
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+        var boxes = document.querySelectorAll('.box,.mini');
+        for (var i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor = randRgba();
+        }
+
+        function randRgba() {
+            var rgbArr = [];
+            for (var i = 0; i < 3; i++) {
+                rgbArr.push(randBetween(0, 255));
+            }
+            var opacity = 0.5;
+            rgbArr.push(opacity);
+
+
+            return 'rgba(' + rgbArr.join(',') + ')';
+
+        }
+
+        function randBetween(min, max) {
+            return min + Math.floor(Math.random() * (max - min + 1));
+        }
+    };
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="container1" class="container">container1
+            <div id="div1" class="box">
+                <div class="mini" id="mini1">mini1</div>
+                <div class="mini" id="mini2">mini2</div>
+                <div class="mini" id="mini3">mini3</div>
+            </div>
+            <div id="div2" class="box">div2</div>
+            <div id="div3" class="box">div3</div>
+        </div>
+        <div id="container2" class="container">container2
+            <div id="div4" class="box">div4</div>
+            <div id="div5" class="box">div5</div>
+            <div id="div6" class="box">div6</div>
+        </div>
+        <div id="container3" class="container">
+            <div id="div7" class="box">div7</div>
+            <div id="div8" class="box">div8</div>
+            <div id="div9" class="box">div9</div>
+        </div>
+    </div>
+</body>
+
+</html>

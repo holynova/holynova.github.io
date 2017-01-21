@@ -1,7 +1,6 @@
 function show(msg = 'default msg') {
     console.log(msg);
 }
-
 show('hello');
 show();
 
@@ -14,33 +13,25 @@ Person1.prototype = {
         console.log('My name is %s,I am %d years old', this.name, this.age);
     },
 };
-
 class Person {
     constructor(name = 'default name', age = '-1') {
         this.name = name;
         this.age = age;
-
     }
     show() {
         console.log('My name is %s,I am %d years old', this.name, this.age);
     }
 }
-
 class Student extends Person {
     constructor(name, age, grade = -1) {
         super(name, age);
         this.grade = grade;
-
     }
     show() {
         super.show();
         console.log('My name is %s,I am %d years old,I am in grade %d.', this.name, this.age, this.grade);
     }
 }
-// class Student {
-//     constructor
-// }
-
 var tom = new Person('tom', 26);
 var nobody = new Person();
 var nobody2 = new Person1();

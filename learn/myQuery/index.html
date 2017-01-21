@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>my jquery</title>
+    <style type="text/css">
+    li {
+        height: 50px;
+        border: 1px solid black;
+        margin: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>li01</li>
+        <li>li02</li>
+        <li>li03</li>
+        <li>li04</li>
+        <li>li05</li>
+    </ul>
+    <ol>
+        <li>ol li01</li>
+        <li>ol li02</li>
+        <li>ol li03</li>
+        <li>ol li04</li>
+        <li>ol li05</li>
+    </ol>
+    <script type="text/javascript">
+    window.onload = function() {
+        console.log('ready');
+        var q = new MyQuery();
+    };
+
+    function MyQuery() {
+
+
+    }
+    MyQuery.prototype = {
+        selector: function(parent, str) {
+
+            //str的几种情况
+            //#id
+            //.classname
+            //div.classname
+            //tag
+            //ul li a
+            str = trim(str);
+            var segments = str.split(/\b/g);
+            var res = [];
+            for (var i = 0; i < segments.length; i++) {
+
+            }
+
+            function trim() {
+                return str.replace(/^\s+|\s+$/g, '');
+            }
+
+            function getByClassname(parent, classname) {
+                if (parent.getElementsByClassName) {
+                    return parent.getElementsByClassName(classname);
+                }
+                var allChildren = parent.getElementsByTagName('*');
+                var res = [];
+                for (var i = 0; i < allChildren.length; i++) {
+                    var reg = new RegExp('^|\\b' + classname + '\\b|$', g);
+                    if (reg.test(allChildren[i].className)) {
+                        res.push(allChildren[i]);
+                    }
+                }
+                return res;
+            }
+
+            function selectSegment(parent, segment) {
+                // var res = undefined;
+                var firstChar = segment.charAt(0);
+                if (firstChar === '#') {
+                    return parent.getElementById(segment.substr(1));
+                } else if (firstChar === '.') {
+                    return getByClassname(parent, segment.substr(1));
+                } else if () {
+
+                }
+                return res;
+            }
+
+
+        }
+
+    };
+    </script>
+</body>
+
+</html>

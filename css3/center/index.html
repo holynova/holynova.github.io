@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>居中</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    p {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    html {
+        font-size: 12px;
+    }
+    
+    .wrapper {
+        /*font-size: 1.8rem;*/
+        width: 50%;
+        height: 200px;
+        margin: 10px auto;
+        background-color: rgba(255, 255, 0, 0.3);
+        position: relative;
+        /*opacity: 0.3;*/
+    }
+    
+    .box {
+        width: 300px;
+        height: 100px;
+        background-color: rgba(255, 0, 0, 0.2);
+        margin-bottom: 10px;
+    }
+    
+    #div1 {
+        /*text-align: center;*/
+        transform: translate(100px, 200px);
+    }
+    
+    #div2 {
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    #div1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #container2 {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        /*align-content: center;*/
+        align-items: center;
+        /*align-self: center;*/
+    }
+    
+    #div4 {
+        /*width: 150px;*/
+        /*height: 100px;*/
+    }
+    
+    #container3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container4 {
+        text-align: center;
+    }
+    
+    img {
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+    
+    .mini-box {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(-45deg, #788cff, #b4c8ff);
+    }
+    
+    #div7 {
+        order: -5;
+    }
+    
+    #div9 {
+        flex: 1;
+    }
+    
+    #div10 {
+        flex: 2;
+    }
+    
+    #div11 {
+        flex: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div id='container1' class="wrapper">
+        <!-- wrapper -->
+        <div id="div1" class='box'>
+            <p>block元素居中</p>
+            当前元素CSS
+            <code>
+            <br>position: absolute;
+            <br>left: 50%;
+            <br>top: 50%;
+            <br>transform: translate(-50%, -50%);
+            </code>
+        </div>
+        <!--         <div id="div2" class='box'>
+            单行文字居中 height: 200px; line-height: 200px;text-align:center;
+        </div>
+ -->
+        <!--  <div id="div3" class='box'>
+            多行长文字居中,多行长文字居中,多行长文字居中,多行长文字居中,多行长文字居中,多行长文字居中,多行长文字居中,多行长文字居中,多行长文字居中 d
+        </div>
+ --></div>
+    <div id="container2" class="wrapper">
+        <div id="div4" class="box">
+            <p>flex居中</p>
+            父元素CSS:
+            <code>
+            <br> display: flex;
+            <br> display: -webkit-flex;
+            <br> justify-content: center;
+            <br> align-items: center;
+            </code>
+        </div>
+    </div>
+    <div id="container3" class="wrapper">
+        <p>单行文字居中</p>
+        <code>
+        line-height :父元素高度;
+        <br>
+        text-align:center;
+    </code>
+    </div>
+    <div id="container4" class="wrapper">
+        inline元<img src="xxx" alt="">素居中
+        <p>vertical-align用于多个inline元素在一起时的排列,比如图文混排</p>
+    </div>
+</body>
+
+</html>

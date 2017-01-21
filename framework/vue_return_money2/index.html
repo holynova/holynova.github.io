@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>还款利息计算器vue</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    canvas {
+        border: 1px solid #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id='app'>
+        <h2>还款利息计算器 vue版本</h2>
+        <div class="interest-form">
+            <h3>第一步:设定利率</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>参考利率</td>
+                        <td>倍数</td>
+                        <td>利率</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select id="base-interest" v-model='base'>
+                                <<!-- option ng-repeat='option in intere
+st.baseArr' value="{{option.value}}">{{option.text}}</option> -->
+                                    <option v-for="option in baseArr" v-bind:value="option.value">{{option.text}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" v-model='ratio' placeholder="1.0" step=".1">
+                        </td>
+                        <td>{{interest}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="borrow-form">
+            <h3>第二步:填写借款信息</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>日期</td>
+                        <td>金额</td>
+                        <td>百分比</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class='row ' v-for='row in borrowData'>
+                        <td>{{$index+1}}</td>
+                        <td>
+                            <input type="date" v-model='row.date'>
+                        </td>
+                        <td>
+                            <input type="number" v-model='row.value'>
+                        </td>
+                        <td>
+                            {{(row.value/borrowTotal*100).toFixed(2)}}%
+                        </td>
+                        <td>
+                            <input type="button" value="x" v-on:click='changeRow("del","borrow",row)'>
+                        </td>
+                    </tr>
+                    <tr class='sum '>
+                        <td></td>
+                        <td>合计</td>
+                        <td>{{borrowTotal}}</td>
+                        <td>100.00%</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" value="增加一条借款信息" class='btn-add' v-on:click='changeRow( "add", "borrow") '>
+        </div>
+        <div class="return-form">
+            <h3>第三步:填写还款信息</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>日期</td>
+                        <td>金额</td>
+                        <td>百分比</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class='row' v-for='row in returnData'>
+                        <td>{{$index+1}}</td>
+                        <td>
+                            <input type="date" v-model='row.date'>
+                        </td>
+                        <td>
+                            <input type="number" v-model='row.value'>
+                        </td>
+                        <td> {{ (row.value/returnTotal*100 ).toFixed(2)+'%'}}</td>
+                        <td>
+                            <input type="button" value="x" v-on:click='changeRow( "del", "return",row)'>
+                        </td>
+                    </tr>
+                    <tr class="sum">
+                        <td></td>
+                        <td>合计</td>
+                        <td>{{returnTotal}}</td>
+                        <td>{{(returnTotal/borrowTotal*100).toFixed(2)+'%'}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" value="增加一条还款信息" class="btn-add" v-on:click='changeRow( "add", "return") '>
+        </div>
+        <div class="result">
+            <h3>计算结果</h3>
+            <h4>最后一次还款日期:<span class='last-return-date '>{{lastReturnDate.toLocaleDateString()}}</span></h4>
+            <h4>利息总额:<span class="total-interest">{{totalInterest}}</span>元</h4>
+        </div>
+        <canvas width="600" height="400">
+        </canvas>
+        <input type="button" name="" v-on:click='plot' value='刷新图示'>
+    </div>
+    <script src='../../script/vue.js '></script>
+    <script src="plotDateChart.js"></script>
+    <script src='vue_return_money.js '></script>
+</body>
+
+</html>

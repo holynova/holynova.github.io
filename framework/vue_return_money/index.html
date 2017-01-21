@@ -12,7 +12,7 @@
     <div id='my-app' class="wrapper">
         <h2>vue.js 利息计算器</h2>
         <div class="interest-setter">
-            <select name="base" v-model='baseInterest'>
+            <select name="base">
                 <option v-for="item in baseArr" value={{item.value}}>{{item.text}}</option>
             </select>
             <label>利息倍数
