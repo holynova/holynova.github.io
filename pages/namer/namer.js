@@ -23,7 +23,7 @@ $(function() {
     function name2html(nameObj) {
         var familyName = $('input[type=text]').val();
         nameObj['familyName'] = familyName;
-        var template = "<li class='name-box'><h3>{{familyName}}{{name}}</h3><p class='sentence'><span>「</span>{{sentence}}<span>」</span></p><p class = 'book'>----{{book}} <<{{title}}>></p><p class = 'author'>[{{dynasty}}]{{author}}</p></li>";
+        var template = "<li class='name-box'><h3>{{familyName}}{{name}}</h3><p class='sentence'><span>「</span>{{sentence}}<span>」</span></p><p class = 'book'>{{book}}•{{title}}</p><p class = 'author'>[{{dynasty}}]{{author}}</p></li>";
         return getHtmlFromTemplate(template, nameObj);
         // return '<li class="name-box"><h3>' +
         //     familyName + nameObj.name +

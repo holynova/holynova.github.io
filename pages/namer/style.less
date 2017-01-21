@@ -55,16 +55,31 @@ html {
             padding: 1rem;
             vertical-align: center;
             // width: 100%;
-            input[type='button'] {
+            // input[type='button'] {
+            //     background-color: @my_green;
+            //     color: #fff;
+            //     border-radius: 2px;
+            //     padding: 0.5rem 1rem;
+            //     border: none;
+            //     margin-left: 2rem;
+            // }
+            div#btn-go {
                 background-color: @my_green;
                 color: #fff;
                 border-radius: 2px;
-                padding: 0.5rem 1rem;
+                padding: 0.2rem 1.1rem;
                 border: none;
-                margin-left: 2rem;
+                // margin-left: 2rem;
+                text-align: center;
+                width: 8rem;
+                margin-top: 0.2rem;
             }
-            h3 {
-                line-height: 3rem;
+            h3,
+            label,
+            input,
+            div {
+                line-height: 2.2rem;
+                height: 2.2rem;
             }
             input,
             select {
@@ -72,9 +87,15 @@ html {
                 margin: 0.2rem 0;
                 width: 8rem;
                 vertical-align: middle;
+                font-size: 1rem;
+                height: 2rem;
+                line-height: 2rem;
             }
             label {
                 vertical-align: middle;
+            }
+            input {
+                padding-left: 0.5rem;
             }
         }
         ul {

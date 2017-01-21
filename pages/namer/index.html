@@ -12,28 +12,26 @@
 <body>
     <div class="wrapper">
         <div class="input-box">
-            <h3>你的名字<small>--古诗文自动起名</small></h3>
-            <form>
-                <p>
-                    <label>来源
-                        <select>
-                            <option value='json/shijing.json'>诗经</option>
-                            <option value='json/chuci.json'>楚辞</option>
-                            <option value='json/tangshi.json'>唐诗</option>
-                            <option value='json/songci.json'>宋词</option>
-                            <option value='json/yuefu.json'>乐府诗集</option>
-                            <option value='json/gushi.json'>古诗三百首</option>
-                            <option value='json/cifu.json'>辞赋</option>
-                        </select>
-                    </label>
-                </p>
-                <p>
-                    <label>姓氏
-                        <input type="text" name="" value="桑">
-                    </label>
-                </p>
-                <input type="button" value="生成姓名" id='btn-go'>
-            </form>
+            <h3>你的名字<small> 古诗文起名</small></h3>
+            <p>
+                <label for='src-select'>来源
+                </label>
+                <select name='src-select'>
+                    <option value='json/shijing.json'>诗经</option>
+                    <option value='json/chuci.json'>楚辞</option>
+                    <option value='json/tangshi.json'>唐诗</option>
+                    <option value='json/songci.json'>宋词</option>
+                    <option value='json/yuefu.json'>乐府诗集</option>
+                    <option value='json/gushi.json'>古诗三百首</option>
+                    <option value='json/cifu.json'>辞赋</option>
+                </select>
+            </p>
+            <p>
+                <label for='family-name'>姓氏 </label>
+                <input type="text" name="family-name" value="桑">
+            </p>
+            <!-- <input type="button" value="生成姓名" id='btn-go'> -->
+            <div id='btn-go'>起名</div>
         </div>
         <ul>
             <li class='name-box'>
