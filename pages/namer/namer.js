@@ -119,7 +119,7 @@ $(function() {
         name.book = randPoem.book;
         name.sentence = randSentence;
         name.content = randPoem.content;
-        name.author = randPoem.author;
+        name.author = randPoem.author ? randPoem.author : '佚名';
         name.dynasty = randPoem.dynasty;
         var cleanSentence = cleanPunctuation(randSentence);
         name.name = randCharFromStr(cleanSentence, 2);
