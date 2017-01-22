@@ -11,9 +11,13 @@ $(function() {
             dataType: 'json',
             success: function(dataArr) {
                 var html = '';
-                for (var i = 0; i < num; i++) {
-                    var name = genName(dataArr);
-                    html += name2html(name);
+                var cnt = 0;
+                while (cnt < num) {
+                    var nameObj = genName(dataArr);
+                    if (!hasBanWord(nameObj.name)) {
+                        html += name2html(nameObj);
+                        cnt++;
+                    }
                 }
                 $('ul').html(html);
             }
@@ -25,12 +29,6 @@ $(function() {
         nameObj['familyName'] = familyName;
         var template = "<li class='name-box'><h3>{{familyName}}{{name}}</h3><p class='sentence'><span>「</span>{{sentence}}<span>」</span></p><p class = 'book'>{{book}}•{{title}}</p><p class = 'author'>[{{dynasty}}]{{author}}</p></li>";
         return getHtmlFromTemplate(template, nameObj);
-        // return '<li class="name-box"><h3>' +
-        //     familyName + nameObj.name +
-        //     '</h3>' + '<p><span>『</span>' +
-        //     nameObj.sentence +
-        //     '<span>』</span></p>' + '<p>' + nameObj.book + '•' +
-        //     nameObj.title + '</p><p>[' + nameObj.dynasty + '] ' + nameObj.author + '</p> </li>'
     }
 
     function getHtmlFromTemplate(template, dataJson) {
@@ -131,5 +129,18 @@ $(function() {
     function cleanPunctuation(str) {
         var puncReg = /[<>《》！*\(\^\)\$%~!@#…&%￥—\+=、。，？；‘’“”：·`]/g;
         return str.replace(puncReg, '');
+    }
+
+    function hasBanWord(str) {
+        var banStr = '鸟鸡我邪罪凶丑仇鼠蟋蟀淫秽妹狐鸡鸭蝇悔鱼肉苦犬吠窥血丧饥女搔父母昏死潦哀痒害蛇牲畜烂';
+        var banArr = banStr.split('');
+        // console.log(banArr);
+        for (var i = 0; i < banArr.length; i++) {
+            if (str.indexOf(banArr[i]) !== -1) {
+                // console.log(str, banArr[i]);
+                return true;
+            }
+        }
+        return false;
     }
 });
