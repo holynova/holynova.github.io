@@ -1,7 +1,7 @@
 var http = require('http'),
     fs = require('fs'),
-    url = require('url');
-querystring = require('querystring');
+    url = require('url'),
+    querystring = require('querystring');
 var port = 8888;
 http.createServer(function(request, response) {
     var urlObj = url.parse(request.url);
