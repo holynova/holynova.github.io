@@ -132,7 +132,7 @@ $(function() {
     }
 
     function hasBanWord(str) {
-        var banStr = '鸟鸡我邪罪凶丑仇鼠蟋蟀淫秽妹狐鸡鸭蝇悔鱼肉苦犬吠窥血丧饥女搔父母昏死潦哀痒害蛇牲畜烂兽靡爪氓';
+        var banStr = '鸟鸡我邪罪凶丑仇鼠蟋蟀淫秽妹狐鸡鸭蝇悔鱼肉苦犬吠窥血丧饥女搔父母昏死潦哀痒害蛇牲妇狸鹅穴畜烂兽靡爪氓劫鬣螽毛婚姻匪婆羞辱';
         var banArr = banStr.split('');
         // console.log(banArr);
         for (var i = 0; i < banArr.length; i++) {
