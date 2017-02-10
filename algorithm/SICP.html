@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SICP</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //换零钱,找到钱的数量最少的方案
+    function minChange(target, coinKinds) {
+        // var coinKinds = [1, 5, 10, 25, 50];
+        coinKinds = coinKinds.sort(function(a, b) {
+            return b - a;
+        })
+        var changeMethods = [];
+        changeMethods[0] = {
+            num: 0,
+            combination: []
+        };
+        for (var i = 1; i <= target; i++) {
+            var min = {
+                num: target + 1,
+                combination: ['error']
+            }
+            for (var j = 0; j < coinKinds.length; j++) {
+                var coin = coinKinds[j];
+                if (i >= coin && changeMethods[i - coin].num !== -1) {
+                    var curNum = changeMethods[i - coin].num + 1;
+                    if (min.num >= curNum) {
+                        min.num = curNum;
+                        var combination = changeMethods[i - coin].combination.slice('');
+                        combination.push(coin);
+                        min.combination = combination;
+                    }
+                }
+            }
+            if (min.num === target + 1) {
+                changeMethods[i] = {
+                    num: -1,
+                    combination: ['error']
+                }
+            } else {
+                changeMethods[i] = {
+                    num: min.num,
+                    combination: min.combination.slice('')
+                };
+            }
+            console.log(i + '=' + array2shortStr(changeMethods[i].combination) + ' total:' + changeMethods[i].num);
+            var resStr = array2shortStr(changeMethods[i].combination);
+            if (resStr.indexOf('error') !== -1) {
+                console.log('error');
+            } else {
+                console.log(i === eval(resStr));
+            }
+        }
+        console.log(target + '=' + array2shortStr(changeMethods[target].combination) + ' total:' + changeMethods[target].num);
+    }
+    //函数,找到换零钱的所有方式的数目
+    function countChangeMethod(target, coins) {
+        //分治法
+        //分为两类
+        //假设有个硬币的面值是x
+        //换零钱的方式就分成了两类
+        //用x硬币的方案总数 + 不用x硬币的方案总数
+        //其中 用x硬币的方案总数 = 用所有硬币凑成target-x的方案数
+        //target-x是至少用了一个x硬币
+        if (target == 0) return 1;
+        if (target < 0) return 0;
+        if (coins.length === 0) return 0;
+        var cloneCoins = cloneArray(coins);
+        var x = cloneCoins.pop();
+        // console.log('1:' + (target - x) + ',' + coins);
+        // console.log('2:' + (target) + ',' + cloneCoins);
+        var cntWithX = countChangeMethod(target - x, coins);
+        var cntWithoutX = countChangeMethod(target, cloneCoins);
+        return cntWithoutX + cntWithX;
+    }
+
+    function cloneArray(arr) {
+        return arr.slice('');
+    }
+    //0 0 
+    //1 0+1
+    //2 1+1
+    //3 2+1
+    //4 3+1
+    //5 4+1,0+5 
+    //6 5+1
+    //7 6+1,2+5
+    //8 7+1,3+5
+    //9 8+1,4+5
+    //10 9+1,5+5,0+10
+    //11 10+1,6+5,1+10
+    //26:
+    //25+1
+    //21+5
+    //16+10
+    //1+25
+    // 25
+    // 25+0
+    // 24+1
+    // 19+5
+    // 15+10
+    // 25
+    function array2shortStr(arr) {
+        arr.sort();
+        var str = '';
+        var dict = {};
+        for (var i = 0; i < arr.length; i++) {
+            if (dict.hasOwnProperty(arr[i])) {
+                dict[arr[i]] += 1;
+            } else {
+                dict[arr[i]] = 1;
+            }
+        }
+        return dict2str(dict);
+    }
+
+    function dict2str(dict) {
+        var arr = [];
+        for (var name in dict) {
+            arr.push(name + '*' + dict[name]);
+        }
+        return arr.join('+');
+    }
+    unitTest();
+    //SICP 1.11
+    function funcRecurtion(N) {
+        if (N < 3) {
+            return N;
+        }
+        return funcRecurtion(n - 1) + 2 * funcRecurtion(n - 2) + 3 * funcRecurtion(n - 3);
+    }
+
+    function funcIteration(N) {
+        var results = [0, 1, 2];
+        for (var i = 3; i <= N; i++) {
+            var result = results[i - 1] + 2 * results[i - 2] + 3 * results[i - 3];
+            results.push(result);
+        }
+        return results[N];
+    }
+    //SICP 1.12 杨辉三角
+    function triangel(N) {
+        var arr = [];
+    }
+    // 1.16求幂函数 
+    function power(base, exp) {
+        // //plan a
+        // if (exp === 0) return 1;
+        // if (exp === 1) return base;
+        // return base * power(base, exp - 1);
+        // // plan b
+        // if (exp === 0) return 1;
+        // if (exp === 1) return base;
+        // if (exp % 2 === 0) {
+        //     var sqrt = power(base, exp / 2);
+        //     return sqrt * sqrt;
+        // } else {
+        //     return base * power(base, exp - 1);
+        // }
+        // iteration
+        var temp = 1;
+        while (1) {
+            if (exp === 0) {
+                return temp;
+            }
+            if (exp % 2 === 0) {
+                base *= base;
+                exp /= 2;
+            } else {
+                exp -= 1;
+                temp *= base;
+            }
+        }
+    }
+    //1.17快速求乘积
+    function fastMultiple(a, b) {
+        var temp = 0;
+        while (1) {
+            if (b === 0) return temp;
+            if (b % 2 === 0) {
+                a = double(a);
+                b = half(b);
+            } else {
+                b = b - 1;
+                temp += a;
+            }
+        }
+
+        function double(num) {
+            return num << 1;
+        }
+
+        function half(num) {
+            return num >> 1;
+        }
+    }
+    //1.20 最大公约数 greatest common divider
+    function gcd(x, y) {
+        var reminder;
+        while (1) {
+            reminder = x % y;
+            x = y;
+            y = reminder;
+            if (y === 0) {
+                return x;
+            }
+        }
+    }
+    //1.21 找因子
+    function minDivider(N) {
+        if (N <= 2) {
+            return N;
+        }
+        for (var i = 2; i <= N; i++) {
+            if (N % i === 0) {
+                return i;
+            }
+        }
+    }
+    //1.29
+    //f = func(start)+func(start+1)+...+func(b)
+    function sum(start, end, funcTerm, funcNext) {
+        if (start > end) return 0;
+        var res = 0;
+        while (start <= end) {
+            res += funcTerm(start);
+            start = funcNext(start);
+        }
+        return res;
+    }
+
+    function sumRecurtion(start, end, funcTerm, funcNext) {
+        if (start > end) {
+            return 0;
+        }
+        return funcTerm(start) + sumRecurtion(funcNext(start), end, funcTerm, funcNext);
+        // start = funcNext(start);
+    }
+
+    function integral1(func, start, end, dx) {
+        var res = 0;
+        res = sum(start, end, function(x) {
+            return func(x + dx / 2);
+        }, function(x) {
+            return x + dx;
+        });
+        res *= dx;
+        return res;
+    }
+    //1.29
+    function integral(func, start, end, n) {
+        var res;
+        var h = (end - start) / n;
+        res = sum(0, n, function(x) {
+            var factor = 1;
+            if (x === 0 || x === n) {
+                factor = 1;
+            } else {
+                factor = x % 2 === 0 ? 2 : 4;
+            }
+            return factor * func(start + x * h);
+        }, function(x) {
+            return x + 1;
+        })
+        res = h / 3 * res;
+        return res;
+    }
+    //1.31
+    function product(start, end, funcTerm, funcNext) {
+        if (start > end) return 0;
+        var res = 1;
+        while (start <= end) {
+            res *= funcTerm(start);
+            start = funcNext(start);
+        }
+        return res;
+    }
+    //1.31
+    function findPi(n) {
+        function increment(x) {
+            return x + 1;
+        }
+
+        function evenTerm(x) {
+            return (x % 2 === 0) ? x + 2 : x + 3;
+        }
+
+        function oddTerm(x) {
+            return (x % 2 === 0) ? x + 3 : x + 2;
+        }
+        var res = 0;
+        // res = product(0, n, evenTerm, increment) / product(0, n, oddTerm, increment);
+        // console.log()
+        res = product(0, n, function(x) {
+            return (x % 2 === 0) ? (x + 2) / (x + 3) : (x + 3) / (x + 2);
+        }, increment)
+        return res * 4;
+    }
+    //1.32
+    function accumulate(start, end, funcTerm, funcNext, funcCombine, nullValue) {
+        if (start > end) {
+            throw new Error('start > end');
+        }
+        var res = nullValue;
+        var index = start;
+        while (index <= end) {
+            var curItem = funcTerm(index);
+            res = funcCombine(res, curItem);
+            index = funcNext(index);
+        }
+        return res;
+    }
+
+    function sumByAccumulate(start, end, funcTerm, funcNext) {
+        function combine(result, curItem) {
+            return result + curItem;
+        }
+        return accumulate(start, end, funcTerm, funcNext, combine, 0);
+    }
+
+    function productByAccumulate(start, end, funcTerm, funcNext) {
+        function combine(result, curItem) {
+            return result * curItem;
+        }
+        return accumulate(start, end, funcTerm, funcNext, combine, 1);
+    }
+    //1.33 
+    //args = {start, end, funcTerm, funcNext, funcCombine, nullValue,filter}
+    //start:索引起始值
+    //end:索引最终值(最后一个索引是包括在内的)
+    //funcTerm:类型:函数 作用:生成迭代中一个项目 参数:当前索引
+    //funcNext: 类型:函数  作用:利用当前索引找到下一个索引  参数:当前索引
+    //funcCombine:类型:函数 参数2个:当前累积值result, 当前项目  作用:规定当前累积值和当前新项目的结合方式
+    //nullValue:结果的初始值
+    //filter:类型:函数,作用:过滤器,参数:当前item 返回值:true false;
+    function filteredAccumulate(args) {
+        if (args.start > args.end) {
+            throw new Error('start > end');
+        }
+        var res = args.nullValue;
+        var index = args.start;
+        while (index <= args.end) {
+            var curItem = args.funcTerm(index);
+            if (args.filter(curItem)) {
+                res = args.funcCombine(res, curItem);
+            }
+            index = args.funcNext(index);
+        }
+        return res;
+    }
+
+    function isPrime(num) {
+        if (num === 2) {
+            return true;
+        }
+        if (num % 2 === 0 || num === 1) {
+            return false;
+        }
+        var max = Math.sqrt(num);
+        max = Math.floor(max);
+        for (var i = 3; i <= max; i += 2) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function test133() {
+        var res;
+        res = filteredAccumulate({
+            start: 1,
+            end: 9,
+            funcTerm: (x) => (x),
+            funcNext: (x) => (x + 1),
+            funcCombine: (a, b) => (a + b),
+            nullValue: 0,
+            filter: isPrime
+        });
+        console.log(res);
+        //1.33 b
+        res = filteredAccumulate({
+            start: 1,
+            end: 99,
+            funcTerm: (x) => (x),
+            funcNext: (x) => (x + 1),
+            funcCombine: (a, b) => (a * b),
+            nullValue: 1,
+            filter: function(item) {
+                return gcd(item, 99) === 1;
+            }
+        });
+        console.log(res);
+    }
+    //1.3.3
+    function findRoot(start, end, func, permitError) {
+        function findPoints(start, end, func) {
+            var posPoint, negPoint;
+            var startValue = func(start);
+            var endValue = func(end);
+            if (startValue > 0 && endValue < 0) {
+                posPoint = start;
+                negPoint = end;
+            } else if (startValue < 0 && endValue > 0) {
+                posPoint = end;
+                negPoint = start;
+            } else {
+                throw new Error('findRoot Error');
+            }
+            return {
+                posPoint: posPoint,
+                negPoint: negPoint
+            };
+        }
+
+        function findZero(posPoint, negPoint, func, permitError) {
+            function isGoodEnough(val, target, permitError) {
+                return Math.abs(val - target) <= permitError;
+            }
+            var lo = negPoint,
+                hi = posPoint;
+            var mid;
+            var cnt = 0;
+            var MAX_LOOP = 99999;
+            while (cnt < MAX_LOOP) {
+                cnt++;
+                mid = (lo + hi) / 2;
+                var midValue = func(mid);
+                if (isGoodEnough(midValue, 0, permitError)) {
+                    return mid;
+                } else {
+                    if (midValue > 0) {
+                        hi = mid;
+                    } else {
+                        lo = mid;
+                    }
+                }
+            }
+            throw new Error('cnt >= MAX_LOOP');
+        }
+        var pointDict = findPoints(start, end, func);
+        var res = findZero(pointDict.posPoint, pointDict.negPoint, func, permitError);
+        return res;
+    }
+
+    function findFixedPoint(func, start, tolerance) {
+        function isCloseEnough(v1, v2) {
+            return Math.abs(v1 - v2) <= tolerance;
+        }
+        // var next = func(start);
+        var item = start;
+        var itemValue;
+        var cnt = 0;
+        var MAX_LOOP = 99999;
+        while (1) {
+            cnt++;
+            if (cnt >= MAX_LOOP) {
+                throw new Error('cnt>=MAX_LOOP');
+            }
+            itemValue = func(item);
+            console.log(cnt + ':(' + item + ',' + itemValue + ')');
+            if (isCloseEnough(item, itemValue)) {
+                return item;
+            } else {
+                item = itemValue;
+            }
+        }
+    }
+
+    function sqrt(num) {
+        return findFixedPoint((x) => ((x + num / x) / 2), 1, 1e-10)
+    }
+    //1.37
+    function contFracRecurtion(funcN, funcD, k) {
+        function funcItem(x) {
+            var res;
+            if (x === k) {
+                res = funcN(x) / funcD(x);
+            } else {
+                res = funcN(x) / (funcD(x) + funcItem(x + 1))
+            }
+            return res;
+        }
+        var res;
+        res = funcItem(1);
+        return res;
+    }
+
+    function contFracIter(funcN, funcD, k) {
+        var result = new Array(k + 1);
+        result[k] = funcN(k) / funcD(k);
+        for (var i = k - 1; i > 0; i--) {
+            result[i] = funcN(i) / (funcD(i) + result[i + 1]);
+        }
+        return result[1];
+    }
+    //1.39
+    function tanByFrac(x, k) {
+        function funcN(index) {
+            return index === 1 ? x : -x * x;
+        }
+
+        function funcD(index) {
+            return 2 * index - 1;
+        }
+        var res;
+        res = contFracIter(funcN, funcD, k);
+        return res;
+    }
+    //求导数/微分
+    function deriv(func) {
+        var dx = 1e-5;
+        return function(x) {
+            return (func(x + dx) - func(x)) / dx
+        }
+    }
+    //1.3.4牛顿法
+    function newtonTransform(func) {
+        return findFixedPoint(function(x) {
+            return x - func(x) / deriv(func)(x);
+        }, 1, 1e-5);
+    }
+
+    function sqrtByNewton(num) {
+        return newtonTransform(function(x) {
+            return x * x - num;
+        });
+    }
+    //1.42
+    function compose(funcF, funcG) {
+        return function(val) {
+            return funcF(funcG(val));
+        }
+    }
+    //1.43
+    function repeat(func, n) {
+        function double(func) {
+            return function(val) {
+                return func(func(val));
+            }
+        }
+        var res = func;
+        if (n === 1) {
+            return func;
+        }
+        for (var i = 2; i <= n; i++) {
+            res = double(res);
+        }
+        return res;
+    }
+
+    //1.44
+    function smooth(func) {
+        var dx = 1e-5;
+        return function(val) {
+            return (func(val - dx) + func(val) + func(val + dx)) / 3;
+        }
+    }
+
+    function repeatSmooth(func, n) {
+        return repeat(func, n);
+    }
+
+    function unitTest() {
+        var res = 0;
+        // console.log(deriv((x) => (x * x * x))(5));
+        // res = sqrtByNewton(2);
+        // res = compose((x) => (x * x), (x) => (x + 1))(6);
+        res = repeat((x) => (x * x), 3)(5)
+        console.log(res);
+        // res = findRoot(1, 2, (x) => (x * x * x - 2 * x - 3), 0.001);
+        // res = findRoot(2, 4, (x) => (Math.sin(x)), 1e-15);
+        // res = findFixedPoint((x) => (Math.sin(x) + Math.cos(x)), 1, 0.001);
+        // res = sqrt(2);
+        //1.35
+        // res = findFixedPoint((x) => (1 + 1 / x), 1, 1e-5);
+        //1.36
+        // res = findFixedPoint((x) => (Math.log(1000) / Math.log(x)), 1.1, 1e-5);
+        // res = findFixedPoint((x) => ((x + Math.log(1000) / Math.log(x)) / 2), 1.1, 1e-5);
+        // console.log(Math.pow(4.556, 4.556))
+        // res = contFracIter((x) => (1), (x) => (1), 100)
+        // 
+        // (x) => (2 / 3 * (x + 2))
+        // // 
+        // function funcD4E(x) {
+        //     if ((x + 1) % 3 === 0) {
+        //         return 2 / 3 * (x + 1);
+        //     } else {
+        //         return 1;
+        //     }
+        // }
+        // res = contFracIter((x) => (1), funcD4E, 1e7);
+        // // 1.39
+        // for (var i = 0; i <= Math.PI * 2; i += 0.1) {
+        //     console.log(tanByFrac(i, 1e3), Math.tan(i));
+        // }
+        // console.log(res + 2, Math.E);
+        // console.log(1 / res);
+    }
+    </script>
+</body>
+
+</html>

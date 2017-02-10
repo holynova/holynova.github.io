@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>sicp chapter2</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // 2.1
+    function MyNum(numerator, denominator) {
+        //最大公约数    
+        function getGCD(v1, v2) {
+            var temp;
+            while (true) {
+                if (v2 === 0) return v1;
+                temp = v1 % v2;
+                v1 = v2;
+                v2 = temp;
+            }
+        }
+
+        function isSameSign(v1, v2) {
+            if ((v1 > 0 && v2 < 0) || (v1 < 0 && v2 > 0)) {
+                return false;
+            }
+            return true;
+        }
+        var gcd = getGCD(Math.abs(numerator), Math.abs(denominator));
+        var signNum = isSameSign(numerator, denominator) ? 1 : -1;
+        this.numerator = signNum * Math.abs(numerator / gcd);
+        this.denominator = Math.abs(denominator / gcd);
+        if (this.denominator === 0) {
+            throw new Error('分母为0');
+        }
+    }
+    MyNum.prototype = {
+        show: function() {
+            console.log(this.numerator + '/' + this.denominator);
+        },
+    }
+
+    function plus(n1, n2) {
+        var numerator = n1.numerator * n2.denominator + n2.numerator * n1.denominator;
+        var denominator = n1.denominator * n2.denominator;
+        return new MyNum(numerator, denominator);
+    }
+
+    function minus(n1, n2) {
+        var numerator = n1.numerator * n2.denominator - n2.numerator * n1.denominator;
+        var denominator = n1.denominator * n2.denominator;
+        return new MyNum(numerator, denominator);
+    }
+
+    function multiple(n1, n2) {
+        return new MyNum(n1.numerator * n2.numerator, n1.denominator * n2.denominator);
+    }
+
+    function divide(n1, n2) {
+        return new MyNum(n1.numerator * n2.denominator, n1.denominator * n2.numerator);
+    }
+
+    function equal(v1, v2) {
+        return n1.numerator * n2.denominator === n1.denominator * n1.numerator;
+    }
+
+    function unitTest1() {
+        var n1 = new MyNum(6, 9);
+        var n2 = new MyNum(4, -16);
+        n1.show();
+        n2.show();
+        plus(n1, n2).show();
+        minus(n1, n2).show();
+        multiple(n1, n2).show();
+        divide(n1, n2).show();
+    }
+    //点
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    Point.prototype = {
+        show: function() {
+            console.log('(' + this.x + ',' + this.y + ')');
+        },
+    };
+    //线段
+    function Segment(startPoint, endPoint) {
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+    }
+    //2.5
+    function Pair(x, y) {
+        this.data = Math.pow(2, x) * Math.pow(3, y);
+        this.getX = function() {
+            return this.getNumber(2);
+        };
+        this.getY = function() {
+            return this.getNumber(3);
+        };
+        this.getNumber = function(mod) {
+            var cnt = 0;
+            var data = this.data;
+            while (data % mod === 0) {
+                data /= mod;
+                cnt++;
+            }
+            return cnt;
+        }
+    }
+
+    function randBetween(min, max) {
+        //max itself is not included
+        return min + Math.floor(Math.random() * (max - min));
+    }
+
+    function test2() {
+        for (var i = 0; i < 10; i++) {
+            var x = randBetween(0, 10);
+            var y = randBetween(0, 10);
+            var pair = new Pair(x, y);
+            console.log(x, pair.getX());
+            console.log(y, pair.getY());
+        }
+    }
+
+    // test2();
+    // unitTest();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+html {
+    font-size: 14px;
+    .wrapper {
+        .ie-test .test-box {
+            border: 1px solid #ccc;
+        }
+        #show1 {
+            .lt-ie9 {
+                background-color: #f60\9;
+            }
+            .lt-ie8 {
+                *background-color: #f60;
+            }
+            .lt-ie7 {
+                _background-color: #f60;
+            }
+            .morden {
+                background-color: #f60;
+            }
+        }
+    }
+}
+
+html.lt-ie9 {
+    #show2 .lt-ie9 {
+        background-color: #f60;
+    }
+}
+
+html.lt-ie8 {
+    #show2 .lt-ie8 {
+        background-color: #f60;
+    }
+}
+
+html.lt-ie7 {
+    #show2 .lt-ie7 {
+        background-color: #f60;
+    }
+}
+
+html.morden {
+    .morden {
+        background-color: #f60;
+    }
+}

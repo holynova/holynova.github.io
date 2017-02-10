@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7">lt7 <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8">7 <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9">8 <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>IE兼容</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul>
+            <li>
+                <h3>利用user agent判断IE类型</h3>
+                <div id="user-agent"></div>
+            </li>
+            <li>
+                <h3>css hack</h3>
+                <div class="ie-test" id='show1'>
+                    <div class="lt-ie9 test-box">&lt;ie9</div>
+                    <div class="lt-ie8 test-box">&lt;ie8</div>
+                    <div class="lt-ie7 test-box">&lt;ie7</div>
+                    <div class="morden test-box ">morden</div>
+                </div>
+            </li>
+            <li>
+                <h3>利用条件语句给html标签设定className</h3>
+            </li>
+            <li>
+                <h3>html中关于IE的条件语句</h3>
+                <!-- [if !IE]><!-->
+                <div>not IE</div>
+                <!--<![endif]-->
+                <!-- [if IE 6]>
+                <div>IE 6</div>
+                <![endif]-->
+                <!-- [if IE 7]>
+                <div>IE 7</div>
+                <![endif]-->
+                <!-- [if IE 8]>
+                <div>IE 8</div>
+                <![endif]-->
+                <!-- [if IE 9]>
+                <div>IE 9</div>
+                <![endif]-->
+            </li>
+            <li>
+                <h3>利用html的条件语句,动态插入一个元素</h3>
+                <div class="ie-test" id='show3'>
+                    <div class="lt-ie9 test-box">&lt;ie9</div>
+                    <div class="lt-ie8 test-box">&lt;ie8</div>
+                    <div class="lt-ie7 test-box">&lt;ie7</div>
+                    <div class="morden test-box ">morden</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+        function getUserAgent() {
+            var agentBox = document.getElementById('user-agent');
+            agentBox.innerHTML = navigator.userAgent;
+
+        }
+
+        function isIE(version) {
+            var elem = document.createElement('b');
+            elem.innerHTML = '<!--[if IE ' + version + ']><i></i> < ![endif]-- > ';
+            // b.innerHTML = '<!--[if IE ' + ver     + ']><i></i>
+            // < ![endif]-- > '
+
+            // document.appendChild(elem);
+            return elem.getElementsByTagName('i').length === 1;
+        }
+
+        function showMethod2() {
+            console.log('showMethod2');
+            console.log(document.getElementsByTagName('html')[0]);
+        }
+
+        function showMethod3() {
+            var divShow3 = document.getElementById('show3');
+            var html = '';
+            for (var i = 6; i <= 9; i++) {
+                html += '<p>isIE(' + i + ')? ' + (isIE(i) ? 'true' : 'false') + '</p>';
+            }
+            // console.log(html);
+            divShow3.innerHTML = html;
+
+
+        }
+        showMethod2();
+        showMethod3();
+
+        getUserAgent();
+
+    }
+    </script>
+</body>
+
+</html>

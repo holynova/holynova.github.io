@@ -1,33 +1,61 @@
 $(function() {
-    console.log('ready');
+    // console.log('ready');
+    $('ul').on('click', 'li.name-box span.icon-star', setStar);
+    $('ul').on('click', 'li.name-box span.icon-bin', send2bin);
+
+    function setStar(event) {
+        var $li = $(event.target).parents('li.name-box');
+        $li.toggleClass('star').removeClass('bin');
+        console.log($li.nameObj);
+    }
+
+    function send2bin() {
+        $(event.target).parents('li.name-box')
+            .toggleClass('bin').removeClass('star');
+    }
     $('#btn-go').on('click', function() {
             refreshName(10)
         })
         // refreshName(3);
-    function refreshName(num) {
+    function refreshName(N) {
         var jsonFilename = $('select').val();
         $.ajax({
             url: jsonFilename,
             dataType: 'json',
-            success: function(dataArr) {
-                var html = '';
-                var cnt = 0;
-                while (cnt < num) {
-                    var nameObj = genName(dataArr);
-                    if (!hasBanWord(nameObj.name)) {
-                        html += name2html(nameObj);
-                        cnt++;
-                    }
-                }
-                $('ul').html(html);
+            success: function(jsonData) {
+                addNameToDom(N, jsonData);
             }
-        })
+        });
+    }
+
+    function addNameToDom(N, jsonData) {
+        $('ul').html('');
+        var cnt = 0;
+        while (cnt < N) {
+            var nameObj = genName(jsonData);
+            if (addOneNameToDom(nameObj)) {
+                cnt++;
+            }
+        }
+    }
+
+    function addOneNameToDom(nameObj) {
+        if (hasBanWord(nameObj.name)) {
+            return false;
+        } else {
+            var liHtml = name2html(nameObj);
+            var $li = $(liHtml);
+            $li.nameObj = nameObj;
+            console.log($li);
+            $('ul').append($li);
+            return true;
+        }
     }
 
     function name2html(nameObj) {
         var familyName = $('input[type=text]').val();
         nameObj['familyName'] = familyName;
-        var template = "<li class='name-box'><h3>{{familyName}}{{name}}</h3><p class='sentence'><span>「</span>{{sentence}}<span>」</span></p><p class = 'book'>{{book}}•{{title}}</p><p class = 'author'>[{{dynasty}}]{{author}}</p></li>";
+        var template = "<li class='name-box'><h3>{{familyName}}{{name}}</h3><p class='sentence'><span>「</span>{{sentence}}<span>」</span></p><div class='author-box'><p class='book'>{{book}}•{{title}}</p><p class='author'>[{{dynasty}}]{{author}}</p></div><div class='icon-box'><span class='icon-star'><img src='imgs/star-empty.png'>收藏</span><span class='icon-bin'><img src='imgs/bin.png'>屏蔽</span></div></li>";
         return getHtmlFromTemplate(template, nameObj);
     }
 
@@ -114,16 +142,24 @@ $(function() {
         var randPoem = genRandPoem(dataArr);
         var sentences = splitSentence(randPoem.content);
         var randSentence = sentences[randBetween(0, sentences.length)];
-        var name = {};
-        name.title = randPoem.title;
-        name.book = randPoem.book;
-        name.sentence = randSentence;
-        name.content = randPoem.content;
-        name.author = randPoem.author ? randPoem.author : '佚名';
-        name.dynasty = randPoem.dynasty;
+        // var name = {};
+        // name.title = randPoem.title;
+        // name.book = randPoem.book;
+        // name.sentence = randSentence;
+        // name.content = randPoem.content;
+        // name.author = randPoem.author ? randPoem.author : '佚名';
+        // name.dynasty = randPoem.dynasty;
+        var nameObj = {
+            'title': randPoem.title,
+            'book': randPoem.book,
+            'sentence': randSentence,
+            'content': randPoem.content,
+            'author': randPoem.author ? randPoem.author : '佚名',
+            'dynasty': randPoem.dynasty,
+        }
         var cleanSentence = cleanPunctuation(randSentence);
-        name.name = randCharFromStr(cleanSentence, 2);
-        return name
+        nameObj.name = randCharFromStr(cleanSentence, 2);
+        return nameObj;
     }
     //清除标点符号
     function cleanPunctuation(str) {

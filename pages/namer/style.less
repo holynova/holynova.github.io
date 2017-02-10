@@ -92,13 +92,25 @@ html {
                 padding-left: 0.5rem;
             }
             input#ban-str {
-                width: 15rem;
+                // max-width: 80%;
+                width: 10rem;
             }
         }
         ul {
             .test;
             width: 100%;
             list-style-type: none;
+            li.name-box:last-of-type {
+                margin-bottom: 1rem;
+            }
+            li.name-box.star {
+                background-color: darken(@my_green, 40%);
+                opacity: 1;
+            }
+            li.name-box.bin {
+                background-color: @my_grey;
+                opacity: 0.5;
+            }
             li.name-box {
                 float: left;
                 margin-top: 1rem;
@@ -132,8 +144,29 @@ html {
                     float: right;
                 }
                 p,
-                h3 {
+                h3,
+                div {
                     padding: 0.5rem;
+                }
+                .icon-box {
+                    // position: relative;
+                    // height: 2rem;
+                    text-align: right;
+                    span {
+                        color: #fff;
+                        img {
+                            vertical-align: middle;
+                            height: 1rem;
+                            // width: 1rem;
+                        }
+                        vertical-align:middle;
+                        cursor: pointer;
+                        margin-right:1rem;
+                        // position: absolute;
+                        &:hover {
+                            color: @my_green;
+                        }
+                    }
                 }
             }
         }
