@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>test</title>
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        transition: all 0.5s;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    a:hover {
+        background-color: #f60;
+        color: #fff;
+    }
+    
+    .wrapper {
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .nav-horizon ul {
+        height: 2rem;
+        font-size: 0;
+    }
+    
+    .nav-horizon li {
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+        background-color: #cfcfcf;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+    
+    .nav-horizon a {
+        display: block;
+    }
+    
+    .nav-vertical ul {
+        width: 100px;
+    }
+    
+    .nav-vertical li {
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        background-color: #999;
+    }
+    
+    .nav-vertical a {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav-horizon">
+            <ul>
+                <li><a href="javascript:;">nav01</a></li>
+                <li><a href="javascript:;">nav02</a></li>
+                <li><a href="javascript:;">nav03</a></li>
+                <li><a href="javascript:;">nav04</a></li>
+                <li><a href="javascript:;">nav05</a></li>
+                <li><a href="javascript:;">nav06</a></li>
+                <li><a href="javascript:;">nav07</a></li>
+                <li><a href="javascript:;">nav08</a></li>
+            </ul>
+        </div>
+        <div class="nav-vertical">
+            <ul>
+                <li><a href="javascript:;">nav01</a></li>
+                <li><a href="javascript:;">nav02</a></li>
+                <li><a href="javascript:;">nav03</a></li>
+                <li><a href="javascript:;">nav04</a></li>
+                <li><a href="javascript:;">nav05</a></li>
+                <li><a href="javascript:;">nav06</a></li>
+                <li><a href="javascript:;">nav07</a></li>
+                <li><a href="javascript:;">nav08</a></li>
+            </ul>
+        </div>
+        <ul>
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+        </ul>
+    </div>
+    <script>
+    Object.prototype.method = function(funcName, func) {
+        this.prototype[funcName] = func;
+        // return this;
+    }
+    Number.method('toInt', function() {
+        return Math[this > 0 ? 'floor' : 'ceil'](this);
+    });
+    console.log(-5.5.toInt());
+    var nodes = document.getElementsByTagName('li');
+
+
+    function helper(i) {
+        return function() {
+            console.log(i);
+        }
+    }
+    for (var i = 0; i < nodes.length; i++) {
+        // //1
+        // nodes[i].addEventnodestener('click', helper(i), false);
+        // //2
+        // (function(index) {
+        //     nodes[i].addEventnodestener('click', function() {
+        //         console.log(index);
+        //     }, false);
+        // })(i);
+        // //3
+        // nodes[i].addEventnodestener('click', function(index) {
+        //     return function() {
+        //         console.log(index);
+        //     };
+        // }(i), false);
+        // //4
+        // nodes[i].onclick = (function(index) {
+        //     return function() {
+        //         console.log(index);
+        //     };
+        // })(i);
+        // 
+
+        // nodes[i].onclick = (function() { // var temp = i; // return function() { // console.log(temp); // }; // })();
+        nodes[i].onclick = new Function('console.log(' + i + ')');
+
+        // nodes[i].addEventnodestener('click',function(){
+
+        // },false);
+    }
+    </script>
+</body>
+
+</html>

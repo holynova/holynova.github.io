@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>width-top-left</title>
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        width: 2000px;
+        height: 2000px;
+        background-color: #ccc;
+        position: relative;
+    }
+    
+    .box {
+        position: absolute;
+        border: 5px solid #f60;
+        background-color: rgba(255, 0, 0, 0.3);
+        width: 100px;
+        height: 100px;
+        margin: 3px;
+    }
+    
+    #box1 {}
+    
+    #box2 {
+        left: 200px;
+        top: 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="box1" class="box">
+            box1
+        </div>
+        <div id="box2" class="box">
+            box2
+        </div>
+        <div id="info">
+        </div>
+    </div>
+    <script>
+    window.onload = function() {
+        function init() {}
+
+        function getInfoObj(elem) {
+            var info = {};
+            var left = ['scroll', 'offset', 'client', 'screen'];
+            var right = ['left', 'right', 'top', 'bottom', 'width', 'height', 'x', 'y'];
+            var attrs = getCombineAttr(left, right);
+            for (var i = 0; i < attrs.length; i++) {
+                // var infoObj = {}
+                info[attrs[i]] = elem[attrs[i]];
+            }
+            // info['bounding'] = elem.getBoundingClientRect();
+            // info['getBoundingClientRect'] = elem.getBoundingClientRect();
+            return info;
+        }
+
+        function obj2str(obj) {
+            // return JSON.stringify(obj);
+            var str = '';
+            for (var name in obj) {
+                if (typeof obj[name] !== 'undefined') {
+
+                    var line = name + '=' + obj[name] + '\n';
+                    str += line;
+                }
+            }
+            return str;
+        }
+
+
+        function getCombineAttr(leftArr, rightArr) {
+            function combine(leftStr, rightStr) {
+                return leftStr + capitalize(rightStr);
+            }
+
+            function capitalize(str) {
+                return str.charAt(0).toUpperCase() + str.substr(1);
+            }
+            var res = [];
+            for (var i = 0; i < leftArr.length; i++) {
+                for (var j = 0; j < rightArr.length; j++) {
+                    res.push(combine(leftArr[i], rightArr[j]));
+                }
+            }
+            return res;
+        }
+
+
+
+        function mousedownHandler(event) {
+            function showScrollInfo() {
+                console.log('window.scroll = (' + window.scrollX + ',' + window.scrollY + ')');
+                console.log('event.page = (' + event.pageX + ',' + event.pageY + ')');
+                console.log('event.client = (' + event.clientX + ',' + event.clientY + ')');
+
+            }
+
+            function showMousePos() {
+
+                var infoObj = {};
+                var attrs = getCombineAttr(['client', 'screen'], ['x', 'y']);
+                for (var i = 0; i < attrs.length; i++) {
+                    infoObj[attrs[i]] = event[attrs[i]];
+                }
+                console.log(infoObj);
+            }
+
+
+            // showScrollInfo();
+            var box1 = document.getElementById('box1');
+            var box2 = document.getElementById('box2');
+            console.log(showElemInfo(box2));
+
+        }
+
+        function showElemInfo(elem) {
+            console.log(elem.getBoundingClientRect());
+            console.log(getInfoObj(elem));
+            // console.log()
+        }
+
+        document.addEventListener('mousedown', mousedownHandler, false);
+        // console.log(getCombineAttr(left, right));
+        var box1 = document.getElementById('box1');
+        var box2 = document.getElementById('box2');
+
+
+        console.log((getInfoObj(box1)));
+        console.log(box1.getBoundingClientRect());
+        console.log((getInfoObj(box2)));
+        console.log((getInfoObj(window)));
+    };
+    </script>
+</body>
+
+</html>

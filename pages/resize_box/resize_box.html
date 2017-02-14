@@ -79,11 +79,20 @@
     .bottom {
         bottom: 0;
     }
+    
+    #info {
+        margin-top: 500px;
+        font-size: 12px;
+        padding: 20px;
+        /*padding-left: 50px;*/
+        margin-left: 50px;
+    }
     </style>
 </head>
 
 <body>
     <p>拖拽边和角缩放,拖拽中间移动</p>
+    <div id='info'>info</div>
     <div class="box">
         <div class="bar top"></div>
         <div class="bar bottom"></div>
@@ -94,6 +103,8 @@
         <div class="corner right top"></div>
         <div class="corner right bottom"></div>
     </div>
+    </div>
+    <script src='show_pos_info.js'></script>
     <script src="resize_box.js"></script>
 </body>
 

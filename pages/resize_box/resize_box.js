@@ -4,11 +4,11 @@ window.onload = function() {
         downMouse = new Mouse(-1, -1),
         rect = new Rect(),
         minSize = 50;
-    EventUtil.addHandler(oBox, 'mousedown', downHandler);
+    EventUtil.addHandler(oBox, 'mousedown', mouseDownHandler);
 
-    function downHandler(event) {
-        EventUtil.addHandler(document, 'mousemove', moveHandler);
-        EventUtil.addHandler(document, 'mouseup', upHandler);
+    function mouseDownHandler(event) {
+        EventUtil.addHandler(document, 'mousemove', mouseMoveHandler);
+        EventUtil.addHandler(document, 'mouseup', mouseUpHandler);
         event = EventUtil.getEvent(event);
         tar = EventUtil.getTarget(event);
         downMouse.x = event.clientX;
@@ -18,10 +18,31 @@ window.onload = function() {
         rect.width = oBox.offsetWidth;
         rect.height = oBox.offsetHeight;
         EventUtil.preventDefault(event);
-
     }
 
-    function moveHandler(event) {
+    function showPosSize(elem) {
+        function getInfoStr() {
+            var infoObj = getAttributsObj(elem, ['offsetLeft', 'offsetTop', 'offsetWidth', 'offsetHeight']);
+            var rect = elem.getBoundingClientRect();
+            infoObj['boundingLeft'] = rect.left;
+            infoObj['boundingTop'] = rect.top;
+            infoObj['boundingWidth'] = rect.width;
+            infoObj['boundingHeight'] = rect.height;
+            infoObj['window.scrollX'] = window.scrollX;
+            infoObj['window.scrollY'] = window.scrollY;
+            return obj2str(infoObj);
+        }
+
+        function show(infoStr) {
+            var infoBox = document.getElementById('info');
+            infoBox.innerHTML = infoStr;
+        }
+        show(getInfoStr());
+    }
+
+    function showMousePos() {}
+
+    function mouseMoveHandler(event) {
         event = EventUtil.getEvent(event);
         var diffX = event.clientX - downMouse.x,
             diffY = event.clientY - downMouse.y,
@@ -53,13 +74,15 @@ window.onload = function() {
             curRect.set(oBox);
         }
         EventUtil.preventDefault(event);
+        //2017年2月10日增加, 显示box的各种位置参数
+        showPosSize(oBox);
     }
 
-    function upHandler(event) {
+    function mouseUpHandler(event) {
         event = EventUtil.getEvent(event);
         tar = EventUtil.getTarget(event);
-        EventUtil.removeHandler(document, 'mousemove', moveHandler);
-        EventUtil.removeHandler(document, 'mouseup', upHandler);
+        EventUtil.remouseMoveHandler(document, 'mousemove', mouseMoveHandler);
+        EventUtil.remouseMoveHandler(document, 'mouseup', mouseUpHandler);
         EventUtil.preventDefault(event);
     }
 };
@@ -100,7 +123,7 @@ EventUtil = {
             element['on' + type] = handler;
         }
     },
-    removeHandler: function(element, type, handler) {
+    remouseMoveHandler: function(element, type, handler) {
         if (element.removeEventListener) {
             element.removeEventListener(type, handler, false);
         } else if (element.attachEvent) {
