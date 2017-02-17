@@ -22,9 +22,7 @@ function windowLoadHandler() {
             height: 100,
             // color: '#E18BE8'
         });
-
 }
-
 // 定义滑动条类
 // 传入一个对象args
 // keys of args:
@@ -57,16 +55,12 @@ Slide.prototype = {
         this.bg.style.height = this.height + 'px';
         this.progress.style.height = this.height - 2 + 'px';
         this.progress.style.backgroundColor = this.color;
-
         this.handle.style.width = Math.floor(this.width / 10) + "px";
         this.handle.style.height = this.height - 2 + 'px';
         this.handle.style.lineHeight = this.height - 2 + 'px';
-
         var span = this.progress.querySelector('span');
         span.style.width = this.width + 'px';
         span.style.lineHeight = this.height - 2 + 'px';
-
-
     },
     getDOM: function() {
         this.slide = this.parent.querySelector('.slide');
@@ -85,17 +79,14 @@ Slide.prototype = {
             isMousedown = false,
             isSuccess = false;
         console.log('bgWidth' + bgWidth + ' handleWidth' + handleWidth);
-
         EventUtil.addEvent(document, 'mouseup', up);
         EventUtil.addEvent(document, 'mousemove', move);
         EventUtil.addEvent(that.handle, 'mousedown', down);
-
 
         function down(event) {
             if (!isSuccess) {
                 isMousedown = true;
                 startX = event.clientX;
-
             }
         }
 
@@ -123,12 +114,10 @@ Slide.prototype = {
                 }
                 that.progress.style.width = (x - offsetLeft) + 'px';
                 that.handle.style.left = x + 'px';
-
             }
         }
     }
 };
-
 var EventUtil = {
     addEvent: function(elem, event, func) {
         return elem.attachEvent ? elem.attachEvent('on' + event, func) : elem.addEventListener(event, func, false);
@@ -136,5 +125,4 @@ var EventUtil = {
     removeEvent: function(elem, event) {
         return elem.detachEvent ? elem.detachEvent('on' + event, func) : elem.removeEventListener(event, func);
     }
-
 };

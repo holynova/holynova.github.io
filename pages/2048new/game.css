@@ -1,2 +1,1 @@
-*{padding:0;margin:0}.wrapper{margin:30px auto;text-align:center}.wrapper .game-settings{height:2rem}.wrapper .game-info{height:2rem}.wrapper #game-box{margin:0 auto;background-color:#ccc;position:relative;border-radius:5px}.wrapper #game-box .cell{position:absolute;background-color:#fff;border-radius:5px;text-align:center}
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+*{padding:0;margin:0}.wrapper{margin:30px auto;text-align:center}.wrapper .game-info,.wrapper .game-settings{height:2rem}.wrapper #game-box{margin:0 auto;background-color:#ccc;position:relative;border-radius:5px}.wrapper #game-box .cell{position:absolute;background-color:#fff;border-radius:5px;text-align:center}

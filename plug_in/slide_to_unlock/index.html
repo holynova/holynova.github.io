@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="http://statics.1024tools.com/css/markdown/github.css" rel="stylesheet" />
+    <style type="text/css" media="screen">
+    html {
+        font-size: 14px;
+    }
+    
+    .wrapper {
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    .bar {
+        margin: 50px;
+        height: 40px;
+        width: 300px;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    tr,
+    td {
+        line-height: 2rem;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="slide_to_unlock.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 id="jquery-">jQuery 滑动解锁插件</h1>
+        <h2>下载</h2>
+        <a href="https://github.com/holynova/holynova.github.io">https://github.com/holynova/holynova.github.io</a>
+        <h2 id="-">使用方法</h2>
+        <ol>
+            <li>引入插件文件</li>
+        </ol>
+        <pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;slide_to_unlock.css&quot;&gt; 
+&lt;script src=&#39;jquery.slide_to_unlock.js&#39;&gt;&lt;/script&gt;
+</code></pre>
+        <ol>
+            <li>创建一个div,作为容器,比如<code>$container</code></li>
+            <li>在脚本中初始化</li>
+        </ol>
+        <pre><code>$container.slideToUnlock(options);
+</code></pre>
+        <p>其中options为可选参数,有默认值 options参数列表
+        </p>
+        <h2 id="-">参数列表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>describe</th>
+                    <th>default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>width</td>
+                    <td>width of the slider</td>
+                    <td>width of container element</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td>height of the slider</td>
+                    <td>height of container element</td>
+                </tr>
+                <tr>
+                    <td>bgColor</td>
+                    <td>background color</td>
+                    <td>#E8E8E8</td>
+                </tr>
+                <tr>
+                    <td>progressColor</td>
+                    <td>color of the progress bar</td>
+                    <td>#FFE97F</td>
+                </tr>
+                <tr>
+                    <td>handleColor</td>
+                    <td>color of the handler</td>
+                    <td>#fff</td>
+                </tr>
+                <tr>
+                    <td>succColor</td>
+                    <td>background color when successfully unlocked</td>
+                    <td>#78D02E</td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>text on the progress bar</td>
+                    <td>&#39;slide to unlock&#39;</td>
+                </tr>
+                <tr>
+                    <td>textColor</td>
+                    <td>color of text</td>
+                    <td>#000</td>
+                </tr>
+                <tr>
+                    <td>succText</td>
+                    <td>text on the progress bar when successfully unlocked</td>
+                    <td>&#39;ok!&#39;</td>
+                </tr>
+                <tr>
+                    <td>succTextColor</td>
+                    <td>color of succText</td>
+                    <td>#000</td>
+                </tr>
+                <tr>
+                    <td>succFunc</td>
+                    <td>callback function when success</td>
+                    <td><code>function() { alert(&#39;successfully unlock!&#39;); }</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="demo">demo</h2>
+        <div class="bar1 bar"></div>
+        <div class="bar2 bar"></div>
+        <div class="bar3 bar"></div>
+        <div class="bar4 bar"></div>
+        <div class="bar5 bar"></div>
+    </div>
+    <script src='http://cdn.staticfile.org/jquery/1.10.0/jquery.min.js'></script>
+    <script src='jquery.slide_to_unlock.js'></script>
+    <script>
+    $('.bar1').slideToUnlock();
+    $('.bar2').slideToUnlock({
+        height: 50,
+        width: 200,
+
+    });
+    $('.bar3').slideToUnlock({
+        text: '未解锁的文字',
+        succText: '解锁成功的文字'
+    });
+    $('.bar4').slideToUnlock({
+        bgColor: '#fce',
+        progressColor: '#f60',
+        succColor: '#f00',
+        textColor: '#fff',
+        succTextColor: '#fff',
+    });
+    </script>
+</body>
+
+</html>

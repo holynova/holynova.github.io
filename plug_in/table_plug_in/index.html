@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>test plug in</title>
+    <style type="text/css" media="screen">
+    .odd {
+        background-color: #fff;
+    }
+    
+    .even {
+        background-color: #ccc;
+    }
+    
+    .selected {
+        background-color: #f60;
+        color: #fff;
+    }
+    
+    .odd1 {
+        background-color: #1ff;
+    }
+    
+    .even1 {
+        background-color: #cce;
+    }
+    
+    .selected1 {
+        background-color: #f00;
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <table>
+            <caption>table title </caption>
+            <thead>
+                <tr>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>table title </caption>
+            <thead>
+                <tr>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>table title </caption>
+            <thead>
+                <tr>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>table title </caption>
+            <thead>
+                <tr>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                    <th>header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src='http://cdn.staticfile.org/jquery/1.10.0/jquery.min.js'></script>
+    <script src='jquery.table.js'></script>
+    <script>
+    $(function() {
+        // $('table').eq(1).alterBgColor(); // $('table').eq(3).alterBgColor();
+
+        $('table').eq(0).alterBgColor().end().eq(3).alterBgColor({
+            evenRowClass: 'even1',
+            oddRowClass: 'odd1',
+            hoverRowClass: 'selected1'
+        });
+
+    });
+    </script>
+</body>
+
+</html>
