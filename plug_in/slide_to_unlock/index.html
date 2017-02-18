@@ -4,16 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>slide to unlock plug-in</title>
     <link href="http://statics.1024tools.com/css/markdown/github.css" rel="stylesheet" />
-    <style type="text/css" media="screen">
+    <style type="text/css">
     html {
         font-size: 14px;
     }
     
     .wrapper {
-        width: 60%;
-        margin: 0 auto;
+        margin: 50px auto;
+    }
+    
+    @media all and (min-width:600px) {
+        .wrapper {
+            width: 60%;
+            /*margin: 20px auto;*/
+        }
+    }
+    
+    @media all and (max-width: 600px) {
+        .wrapper {
+            padding: 2rem;
+        }
     }
     
     .bar {
@@ -38,7 +51,7 @@
     <div class="wrapper">
         <h1 id="jquery-">jQuery 滑动解锁插件</h1>
         <h2>下载</h2>
-        <a href="https://github.com/holynova/holynova.github.io">https://github.com/holynova/holynova.github.io</a>
+        <a href="https://github.com/holynova/slide_to_unlock_plug_in/">github链接</a>
         <h2 id="-">使用方法</h2>
         <ol>
             <li>引入插件文件</li>
