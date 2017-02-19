@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+    ul {
+        list-style-type: none;
+    }
+    
+    li {
+        height: 100px;
+        width: 30%;
+        margin: 20px;
+        display: inline-block;
+    }
+    /*    li:nth-of-type(1) {
+        height: 50px;
+        width: 200px;
+    }
+    
+    li:nth-of-type(2) {
+        height: 150px;
+        width: 300px;
+    }*/
+    
+    #ul2 {
+        font-size: 0;
+    }
+    
+    .box {
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        margin: 0;
+        /*rgb(170,230,238)*/
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul>
+            <li class="clock"></li>
+            <li class="clock"></li>
+            <li class="clock"></li>
+            <li class="clock"></li>
+            <li class="clock"></li>
+            <li class="clock"></li>
+        </ul>
+        <ul id='ul2'>
+        </ul>
+    </div>
+    <script src='http://cdn.staticfile.org/jquery/1.10.0/jquery.min.js'></script>
+    <script src='jquery_cololful_time.js'></script>
+    <script>
+    for (var i = 0; i < $('li').length; i++) {
+        var $elem = $('li').eq(i);
+        $elem.colorfulTime({
+            mode: i + 1
+        });
+
+    }
+
+    // function unitTest() {
+    //     function hsl2rgb(h, s, l) {
+    //         var r, g, b;
+    //         if (s == 0) {
+    //             r = g = b = l; // achromatic
+    //         } else {
+    //             var hue2rgb = function hue2rgb(p, q, t) {
+    //                 if (t < 0) t += 1;
+    //                 if (t > 1) t -= 1;
+    //                 if (t < 1 / 6) return p + (q - p) * 6 * t;
+    //                 if (t < 1 / 2) return q;
+    //                 if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+    //                 return p;
+    //             }
+    //             var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    //             var p = 2 * l - q;
+    //             r = hue2rgb(p, q, h + 1 / 3);
+    //             g = hue2rgb(p, q, h);
+    //             b = hue2rgb(p, q, h - 1 / 3);
+    //         }
+    //         return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+    //     }
+    //     console.log(hsl2rgb(Math.random(), Math.random(), Math.random()))
+    // }
+    // unitTest();
+
+    // function showColorRange(fromColor, toColor) {
+    //     if (typeof fromColor === 'undefined') {
+    //         fromColor = {
+    //             r: 0,
+    //             g: 0,
+    //             b: 0
+    //         }
+    //     }
+    //     if (typeof toColor === 'undefined') {
+    //         toColor = {
+    //             r: 23,
+    //             g: 59,
+    //             b: 59
+    //         }
+    //     }
+
+    //     function getColorStr(r, g, b) {
+    //         return 'rgb(' + r + ',' + g + ',' + b + ')';
+    //     }
+    //     var $container = $('ul').eq(1);
+    //     var html = '';
+    //     for (var r = fromColor.r, increR = fromColor.r > toColor.r ? -1 : 1; r <= toColor.r; r += increR) {
+    //         for (var g = fromColor.g, increG = fromColor.g > toColor.g ? -1 : 1; g <= toColor.g; g += increG) {
+    //             for (var b = fromColor.b, increB = fromColor.b > toColor.b ? -1 : 1; b <= toColor.b; b += increB) {
+    //                 var box = '<div class = "box" style="background-color:' + getColorStr(r, g, b) + '"></div>';
+    //                 // console.info(box);
+    //                 html += box;
+
+    //                 // var $box = $('<div class = "box"></div>');
+    //                 // $box.css('backgroundColor', getColorStr(r, g, b));
+    //                 // $container.append($box);
+    //             }
+    //         }
+    //     }
+    //     $container.html(html);
+
+    // }
+    </script>
+</body>
+
+</html>
