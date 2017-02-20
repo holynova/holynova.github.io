@@ -4,29 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>slide to unlock plug-in</title>
+    <title></title>
     <link href="http://statics.1024tools.com/css/markdown/github.css" rel="stylesheet" />
-    <style type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" media="screen">
     html {
+        font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
         font-size: 14px;
     }
     
     .wrapper {
-        margin: 50px auto;
-    }
-    
-    @media all and (min-width:600px) {
-        .wrapper {
-            width: 60%;
-            /*margin: 20px auto;*/
-        }
-    }
-    
-    @media all and (max-width: 600px) {
-        .wrapper {
-            padding: 2rem;
-        }
+        /*background-color: #f7f7f7;*/
+        padding: 1rem 10%;
+        margin: 2rem auto;
+        min-width: 300px;
+        max-width: 1200px;
+        width: 70%;
     }
     
     .bar {
@@ -50,21 +43,30 @@
 <body>
     <div class="wrapper">
         <h1 id="jquery-">jQuery 滑动解锁插件</h1>
-        <h2>下载</h2>
-        <a href="https://github.com/holynova/slide_to_unlock_plug_in/">github链接</a>
+        <h2 id="-">功能</h2>
+        <ul>
+            <li>滑动解锁插</li>
+            <li>尺寸、颜色、字体大小等都可以个性化定制</li>
+            <li>完成解锁后会有回调函数，用来触发进一步的数据处理</li>
+        </ul>
+        <h2 id="demo">demo</h2>
+        <p><a href="http://xiaosang.net/plug_in/slide_to_unlock/index.html">demo</a></p>
+        <h2 id="-">下载</h2>
+        <p><a href="https://github.com/holynova/slide_to_unlock_plug_in">github链接</a></p>
         <h2 id="-">使用方法</h2>
         <ol>
             <li>引入插件文件</li>
-        </ol>
-        <pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;slide_to_unlock.css&quot;&gt; 
+            <pre><code class="lang-javascript">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;jquery.slide_to_unlock.css&quot;&gt; 
 &lt;script src=&#39;jquery.slide_to_unlock.js&#39;&gt;&lt;/script&gt;
 </code></pre>
-        <ol>
-            <li>创建一个div,作为容器,比如<code>$container</code></li>
+            <li>创建一个div,作为容器,比如:<pre><code>&lt;div id = &#39;foo&#39;&gt;  
+&lt;/div&gt;
+</code></pre></li>
             <li>在脚本中初始化</li>
-        </ol>
-        <pre><code>$container.slideToUnlock(options);
+            <pre><code>var $container = $(&#39;#foo&#39;);
+$container.slideToUnlock(options);
 </code></pre>
+        </ol>
         <p>其中options为可选参数,有默认值 options参数列表
         </p>
         <h2 id="-">参数列表</h2>
@@ -134,6 +136,8 @@
                 </tr>
             </tbody>
         </table>
+        <h2 id="-">联系作者</h2>
+        <p>holy_nova#126.com</p>
         <h2 id="demo">demo</h2>
         <div class="bar1 bar"></div>
         <div class="bar2 bar"></div>

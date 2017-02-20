@@ -4,18 +4,66 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>colorfulTime demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://statics.1024tools.com/css/markdown/github.css" rel="stylesheet" />
     <style>
-    ul {
+    html {
+        font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        font-size: 14px;
+    }
+    
+    .wrapper {
+        /*background-color: #f7f7f7;*/
+        padding: 2rem 10%;
+        margin: 2rem auto;
+        min-width: 300px;
+        max-width: 1000px;
+        width: 70%;
+    }
+    /*    @media all and (max-width:420px) {
+        .wrapper {
+            width: 300px;
+            margin: 10px auto;
+        }
+    }
+    
+    @media all and (max-width:770px) and (min-width: 421px) {
+        .wrapper {
+            width: 80%;
+            margin: 10px auto;
+        }
+    }
+    
+    @media all and (min-width: 771px) {
+        .wrapper {
+            width: 780px;
+            margin: 10px auto;
+        }
+    }*/
+    /*    .wrapper {
+        background-color: #f7f7f7;
+        padding: 4rem 10%;
+        margin: 2rem auto;
+        min-width: 300px;
+        max-width: 700px;
+        width: 70%;
+    }*/
+    
+    ul#demo {
         list-style-type: none;
     }
     
-    li {
+    ul#demo li {
         height: 100px;
-        width: 30%;
-        margin: 20px;
+        width: 62%;
+        margin: 20px auto;
         display: inline-block;
+    }
+    
+    table {
+        margin: 0 auto;
+        width: 100%;
     }
     /*    li:nth-of-type(1) {
         height: 50px;
@@ -43,27 +91,124 @@
 
 <body>
     <div class="wrapper">
-        <ul>
+        <h1 id="-jquery-">时间的颜色 jQuery 插件</h1>
+        <h2 id="-">功能</h2>
+        <p>产生一个会随着时间变化颜色的时钟, 有六种变色方式</p>
+        <h2 id="demo">demo</h2>
+        <p><a href="http://xiaosang.net/plug_in/colorful_time/index.html">demo</a></p>
+        <h2 id="-">下载和安装</h2>
+        <p><a href="https://github.com/holynova/colorful_time_plug_in">github下载地址</a></p>
+        <h2 id="-">使用方法</h2>
+        <ol>
+            <li>加载插件js文件<pre><code>&lt;script src=&#39;jquery_cololful_time.js&#39;&gt;&lt;/script&gt;
+</code></pre></li>
+            <li>给时钟创建一个容器, 并设定容器宽高<pre><code>var $container = $(&#39;foo&#39;);
+</code></pre></li>
+            <li>在脚本中运行<pre><code>$container.colorfulTime({
+ fontSize:14px,
+ mode:3
+})
+//或者完全采用默认参数
+$container.colorfulTime()
+</code></pre>
+                <h2 id="-">参数设置</h2>
+            </li>
+        </ol>
+        <table>
+            <thead>
+                <tr>
+                    <th>参数</th>
+                    <th>描述</th>
+                    <th>默认值</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>fontSize</td>
+                    <td>时间的字体大小</td>
+                    <td>容器高度的三分之一</td>
+                </tr>
+                <tr>
+                    <td>mode</td>
+                    <td>变色模式</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 id="6-">6种变色模式</h4>
+        <p>时分秒分别对应hsl色彩模式的色相\饱和度\明度</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>mode</th>
+                    <th>色相h</th>
+                    <th>饱和度s</th>
+                    <th>明度l</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>seconds</td>
+                    <td>minutes</td>
+                    <td>hours</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>seconds</td>
+                    <td>hours</td>
+                    <td>minutes</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>minutes</td>
+                    <td>seconds</td>
+                    <td>hours</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>minutes</td>
+                    <td>hours</td>
+                    <td>seconds</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>hours</td>
+                    <td>seconds</td>
+                    <td>minutes</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>hours</td>
+                    <td>minutes</td>
+                    <td>seconds</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <ul id='demo'>
             <li class="clock"></li>
             <li class="clock"></li>
             <li class="clock"></li>
             <li class="clock"></li>
             <li class="clock"></li>
             <li class="clock"></li>
-        </ul>
-        <ul id='ul2'>
         </ul>
     </div>
     <script src='http://cdn.staticfile.org/jquery/1.10.0/jquery.min.js'></script>
     <script src='jquery_cololful_time.js'></script>
     <script>
-    for (var i = 0; i < $('li').length; i++) {
-        var $elem = $('li').eq(i);
-        $elem.colorfulTime({
-            mode: i + 1
-        });
+    $(function() {
 
-    }
+        for (var i = 0; i < $('ul#demo li').length; i++) {
+            var $elem = $('ul#demo li').eq(i);
+            $elem.colorfulTime({
+                mode: i + 1,
+
+            });
+
+        }
+    });
 
     // function unitTest() {
     //     function hsl2rgb(h, s, l) {
