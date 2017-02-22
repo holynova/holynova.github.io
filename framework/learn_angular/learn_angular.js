@@ -1,37 +1,46 @@
 // window.onload = function() {
 //     var arr = 'sangyimin'.split('');
-
 // };
-
 var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    // $scope.arr = 'sangyimin'.split('');
-    // $scope.arr = ["sang", 'df'];
-    // $scope.arr = ["s", "a", "n", "g", "y", "i", "m", "i", "n"];
-    $scope.arr = '112233'.split('');
-    $scope.a = 'a changed';
-    var cnt = 0;
-    $scope.changeHandler = function() {
-        // $scope.a += cnt;
-        // cnt++;
-        // alert(1);
-        $scope.arr = $scope.a.split('');
-    };
+app.controller('myCtrl', function($scope, $timeout, $interval) {
+    $scope.btnCnt = 10;
     $scope.btnClick = function() {
-        $scope.arr = 'world'.split('');
-    };
-
-    $scope.students = [{
-        name: 'adam',
-        age: 22
-    }, {
-        name: 'Duck',
-        age: 11
-    }, {
-        name: "Haha",
-        age: 99
-    }];
-
+            alert('click');
+            console.log('btnClick');
+            // var timer = setTimeout(countDown, 1000);
+            // function countDown() {
+            //     $scope.btnCnt -= 1;
+            //     console.log($scope.btnCnt);
+            //     if ($scope.btnCnt === 0) {
+            //         clearTimeout(timer);
+            //     }
+            // }
+        }
+        // $scope.arr = 'sangyimin'.split('');
+        // $scope.arr = ["sang", 'df'];
+        // // $scope.arr = ["s", "a", "n", "g", "y", "i", "m", "i", "n"];
+        // $scope.arr = '112233'.split('');
+        // $scope.a = 'a changed';
+        // var cnt = 0;
+        // $scope.changeHandler = function() {
+        //     // $scope.a += cnt;
+        //     // cnt++;
+        //     // alert(1);
+        //     $scope.arr = $scope.a.split('');
+        // };
+        // $scope.btnClick = function() {
+        //     $scope.arr = 'world'.split('');
+        // };
+        // $scope.students = [{
+        //     name: 'adam',
+        //     age: 22
+        // }, {
+        //     name: 'Duck',
+        //     age: 11
+        // }, {
+        //     name: "Haha",
+        //     age: 99
+        // }];
 });
 app.directive('sym', function() {
     return {
@@ -54,7 +63,6 @@ app.directive('sym', function() {
 //     // transclude: true,
 //     // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
 //     // link: function($scope, iElm, iAttrs, controller) {
-
 //     // }
 // };
 // }]);

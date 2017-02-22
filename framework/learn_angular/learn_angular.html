@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <title>learn angular</title>
     <style type="text/css" media="screen">
-
+    table,
+    tr,
+    td {
+        bo
+    }
     </style>
+    <script src="../../script/angular.js"></script>
 </head>
 
 <body>
-    <script src="../../script/angular.min.js"></script>
     <div class="wrapper" ng-app='myApp' ng-controller="myCtrl">
-        <input type="password" name="" ng-model='a' ng-change='changeHandler()'>
+        <!-- <input type="password" name="" ng-model='a' ng-change='changeHandler()'>
         <input type="button" name="" value="change" ng-click="btnClick()">
         <p>输入的内容是{{a}}</p>
         <ul>
             <li ng-repeat="name in arr track by $index">{{name}}</li>
-            <!-- <li ng-repeat="name in arr track">{{name}}</li> -->
         </ul>
         <hr>
         <input type="text" ng-model='n1' value="" placeholder="">除以
@@ -27,12 +30,94 @@
         <p>自定义指令</p>
         <sym></sym>
         <hr>
-        <input type="text" ng-model = "myFilter" value="" placeholder="">
+        <input type="text" ng-model="myFilter" value="" placeholder="">
         <ul>
             <li ng-repeat="stu in students |orderBy:'age'|filter:myFilter">{{ (stu.name | uppercase) +','+stu.age }}</li>
+        </ul> -->
+        <h1>angular demo</h1>
+        <ul>
+            <li>
+                <h3>timer ralated:$apply</h3>
+                <input type="button" value='计时开始' ng-click="countUp(10,20)">{{btnCnt}}
+            </li>
+            <li>
+                <h3>timer ralated:$interval</h3>
+                <!-- <input type="button" value='计时开始' ng-click="countUp()">{{btnCnt}} -->
+            </li>
+            <li>
+                <h3>ng-repeat</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>value</td>
+                            <td>$index</td>
+                            <td>$first</td>
+                            <td>$last</td>
+                            <td>$even</td>
+                            <td>$odd</td>
+                            <td>$eq(2)</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat='row in dataRows'>
+                            <td>{{row.value}}</td>
+                            <td>{{$index}}</td>
+                            <td>{{$first}}</td>
+                            <td>{{$last}}</td>
+                            <td>{{$even}}</td>
+                            <td>{{$odd}}</td>
+                            <td>{{$eq(2)}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
         </ul>
     </div>
-    <script src="learn_angular.js"></script>
+    <!-- <script src="learn_angular.js"></script> -->
+    <script type="text/javascript">
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope, $timeout, $interval) {
+        $scope.btnCnt = 0;
+        var timer = null;
+        $scope.dataRows = genData(10);
+
+        function genData(N) {
+            var arr = [];
+
+            for (var i = 0; i < N; i++) {
+                arr.push({
+                    value: 'i am No.' + i
+                })
+            }
+            return arr;
+        }
+
+        $scope.countUp = function(from, to) {
+            $scope.btnCnt = from;
+            clearInterval(timer);
+            timer = setInterval(function() {
+                $scope.btnCnt++;
+                $scope.$apply($scope.btnCnt);
+                console.log($scope.btnCnt);
+                if ($scope.btnCnt >= to) {
+                    clearInterval(timer);
+                }
+
+            }, 200);
+            // [{
+            //     value: 'one'
+            // }, {
+            //     value: 'two'
+            // }];
+
+
+
+            // var timer = $interval(function() {}, 1000);
+
+        };
+    });
+    </script>
 </body>
 
 </html>
