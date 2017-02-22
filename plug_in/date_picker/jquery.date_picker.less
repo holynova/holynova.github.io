@@ -1,0 +1,114 @@
+@width: 200px;
+@color: #89d9bb;
+@padding: 10px;
+@smallFont: 12px;
+.date-picker-wrapper {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        font-size: 10px;
+        ul {
+            list-style-type: none;
+        }
+    }
+    position: relative;
+    // left: 20%;
+    .today {
+        text-align: center;
+        position: relative;
+        line-height: @smallFont*2;
+        height: @smallFont*2;
+        background-color: @color;
+        // padding:10px;
+        span.btn-today {
+            padding: 0 10px;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: @color;
+            }
+        }
+    }
+    .box {
+        &.date-box {
+            box-shadow: 0 0 20px #ccc;
+        }
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        z-index: 10;
+        background-color: #fff;
+        position:absolute;
+        display:none;
+        left:0;
+        &.year-box,
+        &.month-box {
+            display: none;
+            z-index: 20;
+            // top:0;
+        }
+        width: @width;
+        height:232px;
+        // padding:@padding;
+        // border: 1px solid @color;
+        .picker {
+            border-bottom: 1px solid @color;
+            font-weight: bold;
+            text-align: center;
+            height: 2*@smallFont;
+            line-height: 2*@smallFont;
+        }
+        .cells {
+            table {
+                width: 100%;
+                thead,
+                tbody {
+                    tr {
+                        text-align: center;
+                        td {
+                            height: @smallFont *2;
+                            cursor: pointer;
+                            text-align: center;
+                        }
+                    }
+                }
+                tbody {
+                    td:hover {
+                        color: #fff;
+                        background-color: @color;
+                    }
+                }
+            }
+            &.year-cells,
+            &.month-cells {
+                td {
+                    width: 30%;
+                }
+            }
+        }
+    }
+    td.choosen {
+        background-color: @color;
+        color: #fff;
+    }
+    td.not-this-month {
+        color: #ccc;
+    }
+    input.date-input {
+        width: @width - 2px;
+        z-index: 5;
+    }
+    span {
+        cursor: pointer;
+        padding: 0 2px;
+        &:hover {
+            color: @color;
+        }
+    }
+}
