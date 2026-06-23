@@ -6,6 +6,35 @@
     <title>小桑前端作品展示</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
+        /* ============================================
+           设计系统：基于潮流周刊排版规范
+           ============================================ */
+
+        :root {
+            /* 颜色系统 - Light Mode */
+            --theme-bg: #ffffff;
+            --theme-accent: #a67c52;
+            --theme-text: #262626;
+            --theme-text-secondary: #6b7280;
+            --theme-divider: #e6e6e6;
+            --theme-link: #1d9bf0;
+
+            /* 间距系统 */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-5: 20px;
+            --space-6: 24px;
+            --space-8: 32px;
+
+            /* 圆角 */
+            --radius: 8px;
+
+            /* 过渡 */
+            --transition-base: 0.2s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,135 +42,98 @@
         }
 
         body {
-            font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
-            background-color: #f1f1f1;
-            line-height: 2em;
+            /* 系统字体栈 - 不使用特殊字体 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: var(--theme-text);
+            line-height: 1.75;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            -webkit-font-smoothing: subpixel-antialiased;
         }
 
         a {
-            transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -webkit-transition: all 0.3s;
-            -o-transition: all 0.3s;
+            transition: color var(--transition-base), background-color var(--transition-base), padding var(--transition-base);
         }
 
         .container {
-            background-color: #fff;
-            width: 400px;
+            background-color: var(--theme-bg);
+            width: 300px;
             margin: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            padding: 20px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);
-        }
-
-        /* 移动端适配 */
-        @media screen and (max-width: 440px) {
-            .container {
-                width: 95%;
-                margin-top: 15px;
-                margin-bottom: 15px;
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 1.3em;
-            }
-
-            ul h2 {
-                font-size: 1.1em;
-            }
-
-            .lang-btn {
-                font-size: 11px;
-                padding: 2px 6px;
-            }
-
-            li a {
-                font-size: 14px;
-                padding-left: 0.5em;
-            }
-
-            li a:hover {
-                padding-left: 1.5em;
-            }
-
-            .contact a {
-                font-size: 13px;
-            }
+            margin-top: var(--space-8);
+            padding: var(--space-5);
+            border-radius: var(--radius);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         }
 
         ul {
             list-style: none;
         }
 
-        li a {
-            display: block;
-            text-decoration: none;
-            padding-left: 1em;
-            color: black;
-            border-bottom: 1px solid #eee;
-        }
-
-        li a:hover {
-            background-color: #f60;
-            color: white;
-            padding-left: 2em;
-            font-weight: bold;
-        }
-
-        ul h2 {
-            font-weight: bold;
-            font-size: 1.2em;
-            border-bottom: 1px solid #ccc;
-            line-height: 2.4em;
-            display: block;
-        }
-
         h1 {
-            font-size: 1.5em;
-            line-height: 2.4em;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1.33;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: var(--space-4);
+            border-bottom: 2px solid var(--theme-accent);
         }
 
         ul > a {
             display: block;
-            color: #404040;
+            color: var(--theme-text);
             text-decoration: none;
             cursor: pointer;
         }
 
         ul > a:hover {
-            background-color: #00ABD8;
+            background-color: var(--theme-accent);
             color: white;
-            padding-left: 1em;
+        }
+
+        ul h2 {
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 2;
+            display: block;
+            border-bottom: 1px solid var(--theme-divider);
+            letter-spacing: 0.5px;
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            padding: 0.35em 0 0.35em 1em;
+            color: var(--theme-text);
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        li a:hover {
+            background-color: var(--theme-accent);
+            color: white;
+            padding-left: 1.5em;
+            font-weight: 500;
         }
 
         .contact {
-            margin-top: 15px;
-            padding-top: 10px;
-            border-top: 1px solid #eee;
+            margin-top: var(--space-6);
+            padding-top: var(--space-4);
+            border-top: 2px solid var(--theme-accent);
         }
 
         .contact a {
-            font-size: 14px;
+            font-size: 0.875rem;
             text-decoration: none;
-            color: #333;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            color: var(--theme-text-secondary);
         }
 
         .contact a:hover {
-            background-color: #00ABD8;
+            background-color: var(--theme-accent);
             color: #fff;
-        }
-
-        .icon {
-            width: 16px;
-            height: 16px;
-            vertical-align: middle;
         }
 
         .menu-items {
@@ -154,19 +146,23 @@
 
         /* 语言切换按钮 */
         .lang-btn {
-            float: right;
-            font-size: 12px;
-            padding: 2px 8px;
-            background: #00ABD8;
+            font-size: 0.75rem;
+            padding: var(--space-1) var(--space-2);
+            background: var(--theme-accent);
             color: white;
             border: none;
-            border-radius: 3px;
+            border-radius: 4px;
             cursor: pointer;
-            margin-top: 10px;
+            transition: background-color var(--transition-base);
         }
 
         .lang-btn:hover {
-            background: #f60;
+            background: #8b6642;
+        }
+
+        /* 分类标题中的 emoji 间距 */
+        ul h2 span {
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
@@ -181,7 +177,7 @@
         <!-- 1.创意编程与视觉效果 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="1.创意编程与视觉效果" data-en="1.Creative Coding & Visual Effects">1.创意编程与视觉效果</span></h2>
+                <h2><span data-zh="1. 创意编程与视觉效果" data-en="1. Creative Coding & Visual Effects">1. 创意编程与视觉效果</span></h2>
             </a>
             <div class="menu-items">
                 <li><a target='_blank' href="https://holynova.github.io/100-clocks/"><span data-zh="百种时钟收藏" data-en="100 Clocks Collection">百种时钟收藏</span></a></li>
@@ -191,9 +187,9 @@
                 <li><a target='_blank' href="https://holynova.github.io/spinning-drawer/"><span data-zh="电子螺旋绘图仪" data-en="Spirograph Simulator">电子螺旋绘图仪</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/hilbert/"><span data-zh="希尔伯特曲线" data-en="Hilbert Curve">希尔伯特曲线</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/music_pulse/"><span data-zh="音乐驱动生成艺术" data-en="Music-driven Generative Art">音乐驱动生成艺术</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/web-motion-showcase/"><span data-zh="Web动画展示" data-en="Web Animation Showcase">Web动画展示</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/p5js_playground/"><span data-zh="p5.js创意编程" data-en="p5.js Creative Coding">p5.js创意编程</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/card-3d-depth-lab/"><span data-zh="3D卡片深度效果" data-en="3D Card Depth Effect">3D卡片深度效果</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/web-motion-showcase/"><span data-zh="Web 动画展示" data-en="Web Animation Showcase">Web 动画展示</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/p5js_playground/"><span data-zh="p5.js 创意编程" data-en="p5.js Creative Coding">p5.js 创意编程</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/card-3d-depth-lab/"><span data-zh="3D 卡片深度效果" data-en="3D Card Depth Effect">3D 卡片深度效果</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/string_alchemy/"><span data-zh="化学元素弹幕文字" data-en="Chemical Element Text">化学元素弹幕文字</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/double-spin-drawer/"><span data-zh="螺旋曲线生成器" data-en="Hypotrochoid Generator">螺旋曲线生成器</span></a></li>
             </div>
@@ -202,10 +198,10 @@
         <!-- 2.诗词文化工具 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="2.诗词文化工具" data-en="2.Poetry & Cultural Tools">2.诗词文化工具</span></h2>
+                <h2><span data-zh="2. 诗词文化工具" data-en="2. Poetry & Cultural Tools">2. 诗词文化工具</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/gushi_namer/">⭐ <span data-zh="古诗文起名机器人 (2231 stars)" data-en="Poetic Baby Namer (2231 stars)">古诗文起名机器人 (2231 stars)</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/gushi_namer/">⭐ <span data-zh="古诗文起名机器人（2231 stars）" data-en="Poetic Baby Namer (2231 stars)">古诗文起名机器人（2231 stars）</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/head_tail_poem/"><span data-zh="藏头诗生成器" data-en="Acrostic Poem Generator">藏头诗生成器</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/char_finder/"><span data-zh="汉字查找工具" data-en="Chinese Character Finder">汉字查找工具</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/pinyin_web/"><span data-zh="拼音转换器" data-en="Pinyin Converter">拼音转换器</span></a></li>
@@ -219,32 +215,32 @@
         <!-- 3.AI与自动化 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="3.AI与自动化" data-en="3.AI & Automation">3.AI与自动化</span></h2>
+                <h2><span data-zh="3. AI 与自动化" data-en="3. AI & Automation">3. AI 与自动化</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/prompt_one_by_one/"><span data-zh="批量AI图片生成" data-en="Batch AI Image Generation">批量AI图片生成</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/ai-gallery/"><span data-zh="AI图片画廊" data-en="AI Image Gallery">AI图片画廊</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/ask_all_ai/"><span data-zh="批量查询多个AI" data-en="Query Multiple AIs">批量查询多个AI</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/video_prompt_generator/"><span data-zh="AI视频提示词生成器" data-en="AI Video Prompt Generator">AI视频提示词生成器</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/ai_draw_chrome_extension/"><span data-zh="AI绘画Chrome扩展" data-en="AI Drawing Chrome Extension">AI绘画Chrome扩展</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/auto-install-skills/"><span data-zh="AI Agent技能安装" data-en="AI Agent Skill Installer">AI Agent技能安装</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/image_local_llm/"><span data-zh="本地LLM图片处理" data-en="Local LLM Image Processing">本地LLM图片处理</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/notebooklm_one_by_one/"><span data-zh="YouTube转NotebookLM" data-en="YouTube to NotebookLM">YouTube转NotebookLM</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/MiniMax-image/"><span data-zh="MiniMax图片API" data-en="MiniMax Image API">MiniMax图片API</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/langchain_tool/"><span data-zh="LangChain工具实验" data-en="LangChain Tool Experiments">LangChain工具实验</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/prompt_one_by_one/"><span data-zh="批量 AI 图片生成" data-en="Batch AI Image Generation">批量 AI 图片生成</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/ai-gallery/"><span data-zh="AI 图片画廊" data-en="AI Image Gallery">AI 图片画廊</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/ask_all_ai/"><span data-zh="批量查询多个 AI" data-en="Query Multiple AIs">批量查询多个 AI</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/video_prompt_generator/"><span data-zh="AI 视频提示词生成器" data-en="AI Video Prompt Generator">AI 视频提示词生成器</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/ai_draw_chrome_extension/"><span data-zh="AI 绘画 Chrome 扩展" data-en="AI Drawing Chrome Extension">AI 绘画 Chrome 扩展</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/auto-install-skills/"><span data-zh="AI Agent 技能安装" data-en="AI Agent Skill Installer">AI Agent 技能安装</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/image_local_llm/"><span data-zh="本地 LLM 图片处理" data-en="Local LLM Image Processing">本地 LLM 图片处理</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/notebooklm_one_by_one/"><span data-zh="YouTube 转 NotebookLM" data-en="YouTube to NotebookLM">YouTube 转 NotebookLM</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/MiniMax-image/"><span data-zh="MiniMax 图片 API" data-en="MiniMax Image API">MiniMax 图片 API</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/langchain_tool/"><span data-zh="LangChain 工具实验" data-en="LangChain Tool Experiments">LangChain 工具实验</span></a></li>
             </div>
         </ul>
 
         <!-- 4.效率与生活工具 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="4.效率与生活工具" data-en="4.Productivity & Life Tools">4.效率与生活工具</span></h2>
+                <h2><span data-zh="4. 效率与生活工具" data-en="4. Productivity & Life Tools">4. 效率与生活工具</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/offer_compare/"><span data-zh="Offer对比计算器" data-en="Offer Comparison Calculator">Offer对比计算器</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/offer_calculator/"><span data-zh="Offer计算器" data-en="Offer Calculator">Offer计算器</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/offer_compare/"><span data-zh="Offer 对比计算器" data-en="Offer Comparison Calculator">Offer 对比计算器</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/offer_calculator/"><span data-zh="Offer 计算器" data-en="Offer Calculator">Offer 计算器</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/pre_tax_salary_calculator/"><span data-zh="税前工资反算器" data-en="Pre-tax Salary Calculator">税前工资反算器</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/pdf2wechat/"><span data-zh="PDF转微信朋友圈" data-en="PDF to WeChat Moments">PDF转微信朋友圈</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/pdf2wechat/"><span data-zh="PDF 转微信朋友圈" data-en="PDF to WeChat Moments">PDF 转微信朋友圈</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/life_bar_chart/"><span data-zh="人生甘特图" data-en="Life Gantt Chart">人生甘特图</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/collection_miner/"><span data-zh="书签收藏整理器" data-en="Bookmark Organizer">书签收藏整理器</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/bookshelf_manager/"><span data-zh="书架管理工具" data-en="Bookshelf Manager">书架管理工具</span></a></li>
@@ -255,12 +251,12 @@
         <!-- 5.Chrome扩展 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="5.Chrome扩展" data-en="5.Chrome Extensions">5.Chrome扩展</span></h2>
+                <h2><span data-zh="5. Chrome 扩展" data-en="5. Chrome Extensions">5. Chrome 扩展</span></h2>
             </a>
             <div class="menu-items">
                 <li><a target='_blank' href="https://holynova.github.io/scrape-to-markdown.chrome/"><span data-zh="网页转Markdown" data-en="Web to Markdown">网页转Markdown</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/random_fill_form/"><span data-zh="随机填表扩展" data-en="Random Form Filler">随机填表扩展</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/youtube-channel-scraper-chrome/"><span data-zh="YouTube频道采集" data-en="YouTube Channel Scraper">YouTube频道采集</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/youtube-channel-scraper-chrome/"><span data-zh="YouTube 频道采集" data-en="YouTube Channel Scraper">YouTube 频道采集</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/mouse_scroll_heath_check/"><span data-zh="鼠标滚轮健康检测" data-en="Mouse Scroll Health Check">鼠标滚轮健康检测</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/douban-quark-clawer/"><span data-zh="豆瓣夸克网盘采集" data-en="Douban to Quark Scraper">豆瓣夸克网盘采集</span></a></li>
             </div>
@@ -269,10 +265,10 @@
         <!-- 6.游戏 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="6.游戏" data-en="6.Games">6.游戏</span></h2>
+                <h2><span data-zh="6. 游戏" data-en="6. Games">6. 游戏</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/2048/"><span data-zh="2048数字游戏" data-en="2048 Number Puzzle">2048数字游戏</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/2048/"><span data-zh="2048 数字游戏" data-en="2048 Number Puzzle">2048 数字游戏</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/slot_machine/"><span data-zh="老虎机抽奖" data-en="Slot Machine">老虎机抽奖</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/tank-tactics-game/"><span data-zh="四坦大战" data-en="Tank Tactics Game">四坦大战</span></a></li>
             </div>
@@ -281,17 +277,17 @@
         <!-- 7.开发工具 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="7.开发工具" data-en="7.Developer Tools">7.开发工具</span></h2>
+                <h2><span data-zh="7. 开发工具" data-en="7. Developer Tools">7. 开发工具</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/json_to_ts/"><span data-zh="JSON转TypeScript" data-en="JSON to TypeScript">JSON转TypeScript</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/json_to_ts/"><span data-zh="JSON 转 TypeScript" data-en="JSON to TypeScript">JSON 转 TypeScript</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/tree_folder_generator/"><span data-zh="树形目录生成器" data-en="Tree Folder Generator">树形目录生成器</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/equal_width/"><span data-zh="等宽文字格式化" data-en="Equal Width Formatter">等宽文字格式化</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/CURD_generator/"><span data-zh="CRUD代码生成器" data-en="CRUD Generator">CRUD代码生成器</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/CURD_generator/"><span data-zh="CRUD 代码生成器" data-en="CRUD Generator">CRUD 代码生成器</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/agreement2html_web/"><span data-zh="协议转HTML工具" data-en="Agreement to HTML">协议转HTML工具</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/agreement2markdown/"><span data-zh="协议转Markdown" data-en="Agreement to Markdown">协议转Markdown</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/generator-sang/"><span data-zh="静态网站脚手架" data-en="Static Site Generator">静态网站脚手架</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/xmind_to_js/"><span data-zh="XMind转JS" data-en="XMind to JS">XMind转JS</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/xmind_to_js/"><span data-zh="XMind 转 JS" data-en="XMind to JS">XMind 转 JS</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/cleaner_for_coders/"><span data-zh="开发者文件清理器" data-en="File Cleaner for Coders">开发者文件清理器</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/auto_repo_show/"><span data-zh="仓库自动展示" data-en="Auto Repo Display">仓库自动展示</span></a></li>
             </div>
@@ -300,22 +296,22 @@
         <!-- 8.框架实践 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="8.框架实践" data-en="8.Framework Playgrounds">8.框架实践</span></h2>
+                <h2><span data-zh="8. 框架实践" data-en="8. Framework Playgrounds">8. 框架实践</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/react_playground/"><span data-zh="React实验场" data-en="React Playground">React实验场</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/react18_playground/"><span data-zh="React 18实验场" data-en="React 18 Playground">React 18实验场</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/vite-react-playground/"><span data-zh="Vite+React+TS" data-en="Vite+React+TS">Vite+React+TS</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/nextjs-dashboard/"><span data-zh="Next.js仪表盘" data-en="Next.js Dashboard">Next.js仪表盘</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/next_pure_playground/"><span data-zh="Next.js SSR实验" data-en="Next.js SSR Playground">Next.js SSR实验</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/umi_demo/"><span data-zh="Umi.js演示" data-en="Umi.js Demo">Umi.js演示</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/react_playground/"><span data-zh="React 实验场" data-en="React Playground">React 实验场</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/react18_playground/"><span data-zh="React 18 实验场" data-en="React 18 Playground">React 18 实验场</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/vite-react-playground/"><span data-zh="Vite + React + TS" data-en="Vite + React + TS">Vite + React + TS</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/nextjs-dashboard/"><span data-zh="Next.js 仪表盘" data-en="Next.js Dashboard">Next.js 仪表盘</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/next_pure_playground/"><span data-zh="Next.js SSR 实验" data-en="Next.js SSR Playground">Next.js SSR 实验</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/umi_demo/"><span data-zh="Umi.js 演示" data-en="Umi.js Demo">Umi.js 演示</span></a></li>
             </div>
         </ul>
 
         <!-- 9.爬虫与数据采集 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="9.爬虫与数据采集" data-en="9.Web Scrapers & Data">9.爬虫与数据采集</span></h2>
+                <h2><span data-zh="9. 爬虫与数据采集" data-en="9. Web Scrapers & Data">9. 爬虫与数据采集</span></h2>
             </a>
             <div class="menu-items">
                 <li><a target='_blank' href="https://holynova.github.io/hero_kill_spider/"><span data-zh="英雄杀数据采集" data-en="Hero Kill Data Scraper">英雄杀数据采集</span></a></li>
@@ -328,12 +324,12 @@
         <!-- 10.服务端与后端 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="10.服务端与后端" data-en="10.Server & Backend">10.服务端与后端</span></h2>
+                <h2><span data-zh="10. 服务端与后端" data-en="10. Server & Backend">10. 服务端与后端</span></h2>
             </a>
             <div class="menu-items">
                 <li><a target='_blank' href="https://holynova.github.io/node_data_server/"><span data-zh="测试数据服务器" data-en="Test Data Server">测试数据服务器</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/node_server/"><span data-zh="Node HTTP服务器" data-en="Node HTTP Server">Node HTTP服务器</span></a></li>
-                <li><a target='_blank' href="https://holynova.github.io/anti_CSRF/"><span data-zh="CSRF攻防演示" data-en="CSRF Attack/Defense Demo">CSRF攻防演示</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/node_server/"><span data-zh="Node HTTP 服务器" data-en="Node HTTP Server">Node HTTP 服务器</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/anti_CSRF/"><span data-zh="CSRF 攻防演示" data-en="CSRF Attack/Defense Demo">CSRF 攻防演示</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/server_sent_message/"><span data-zh="Server-Sent Events" data-en="Server-Sent Events">Server-Sent Events</span></a></li>
             </div>
         </ul>
@@ -341,10 +337,10 @@
         <!-- 11.CSS与布局 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="11.CSS与布局" data-en="11.CSS & Layout">11.CSS与布局</span></h2>
+                <h2><span data-zh="11. CSS 与布局" data-en="11. CSS & Layout">11. CSS 与布局</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/flex_layout/"><span data-zh="Flexbox布局实验" data-en="Flexbox Layout Experiments">Flexbox布局实验</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/flex_layout/"><span data-zh="Flexbox 布局实验" data-en="Flexbox Layout Experiments">Flexbox 布局实验</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/mobile_layout/"><span data-zh="移动端响应式布局" data-en="Mobile Responsive Layout">移动端响应式布局</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/furniture_web/"><span data-zh="家具网站设计" data-en="Furniture Website Design">家具网站设计</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/my-design-system/"><span data-zh="设计系统实验" data-en="Design System Experiments">设计系统实验</span></a></li>
@@ -354,10 +350,10 @@
         <!-- 12.Python脚本 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="12.Python脚本" data-en="12.Python Scripts">12.Python脚本</span></h2>
+                <h2><span data-zh="12. Python 脚本" data-en="12. Python Scripts">12. Python 脚本</span></h2>
             </a>
             <div class="menu-items">
-                <li><a target='_blank' href="https://holynova.github.io/python_demo/"><span data-zh="Python示例合集" data-en="Python Demos">Python示例合集</span></a></li>
+                <li><a target='_blank' href="https://holynova.github.io/python_demo/"><span data-zh="Python 示例合集" data-en="Python Demos">Python 示例合集</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/python_excel/"><span data-zh="Excel处理脚本" data-en="Excel Processing Scripts">Excel处理脚本</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/sales_pipeline_merge/"><span data-zh="销售数据合并" data-en="Sales Pipeline Merge">销售数据合并</span></a></li>
                 <li><a target='_blank' href="https://holynova.github.io/flask_book/"><span data-zh="Flask书籍练习" data-en="Flask Book Exercises">Flask书籍练习</span></a></li>
@@ -367,7 +363,7 @@
         <!-- Archive: holynova.github.io 原有项目 -->
         <ul>
             <a href="javascript:void(0)" class="menu-toggle">
-                <h2><span data-zh="📦 Archive: 原有项目" data-en="📦 Archive: Legacy Projects">📦 Archive: 原有项目</span></h2>
+                <h2><span data-zh="📦 存档：原有项目" data-en="📦 Archive: Legacy Projects">📦 存档：原有项目</span></h2>
             </a>
             <div class="menu-items">
                 <li><a target='_blank' href="pages/2048new/index.html"><span data-zh="个性化定制2048游戏" data-en="Customized 2048 Game">个性化定制2048游戏</span></a></li>
@@ -378,29 +374,29 @@
                 <li><a target='_blank' href="plug_in/colorful_time/index.html"><span data-zh="时间的颜色插件" data-en="Colorful Time Plugin">时间的颜色插件</span></a></li>
                 <li><a target='_blank' href="plug_in/date_picker/demo.html"><span data-zh="日期选择器插件" data-en="Date Picker Plugin">日期选择器插件</span></a></li>
                 <li><a target='_blank' href="pages/tabs4.0/tabs4.0.html"><span data-zh="面向对象的选项卡" data-en="OOP Tab Component">面向对象的选项卡</span></a></li>
-                <li><a target='_blank' href="pages/my_page/index.html"><span data-zh="bootstrap个人网站" data-en="Bootstrap Personal Site">bootstrap个人网站</span></a></li>
+                <li><a target='_blank' href="pages/my_page/index.html"><span data-zh="Bootstrap 个人网站" data-en="Bootstrap Personal Site">Bootstrap 个人网站</span></a></li>
                 <li><a target='_blank' href="pages/my_page/frequency.html"><span data-zh="词频统计" data-en="Word Frequency">词频统计</span></a></li>
                 <li><a target='_blank' href="pages/cable_name/cable_name.html"><span data-zh="电缆型号翻译" data-en="Cable Type Finder">电缆型号翻译</span></a></li>
-                <li><a target='_blank' href="framework/react/index.html"><span data-zh="React购物清单" data-en="React Shopping List">React购物清单</span></a></li>
-                <li><a target='_blank' href="framework/react_tictactoe/index.html"><span data-zh="React井字棋" data-en="React Tic-Tac-Toe">React井字棋</span></a></li>
-                <li><a target='_blank' href="framework/learn_angular/ng_comments/index.html"><span data-zh="AngularJS留言板" data-en="AngularJS Message Board">AngularJS留言板</span></a></li>
-                <li><a target='_blank' href="framework/vue_return_money2/index.html"><span data-zh="vue还款利息计算器" data-en="Vue Loan Calculator">vue还款利息计算器</span></a></li>
-                <li><a target='_blank' href="css3/return_money/index.html"><span data-zh="H5还款利息计算器" data-en="H5 Loan Calculator">H5还款利息计算器</span></a></li>
-                <li><a target='_blank' href="framework/angular_return_money/index.html"><span data-zh="Angular还款利息计算器" data-en="Angular Loan Calculator">Angular还款利息计算器</span></a></li>
+                <li><a target='_blank' href="framework/react/index.html"><span data-zh="React 购物清单" data-en="React Shopping List">React 购物清单</span></a></li>
+                <li><a target='_blank' href="framework/react_tictactoe/index.html"><span data-zh="React 井字棋" data-en="React Tic-Tac-Toe">React 井字棋</span></a></li>
+                <li><a target='_blank' href="framework/learn_angular/ng_comments/index.html"><span data-zh="AngularJS 留言板" data-en="AngularJS Message Board">AngularJS 留言板</span></a></li>
+                <li><a target='_blank' href="framework/vue_return_money2/index.html"><span data-zh="Vue 还款利息计算器" data-en="Vue Loan Calculator">Vue 还款利息计算器</span></a></li>
+                <li><a target='_blank' href="css3/return_money/index.html"><span data-zh="H5 还款利息计算器" data-en="H5 Loan Calculator">H5 还款利息计算器</span></a></li>
+                <li><a target='_blank' href="framework/angular_return_money/index.html"><span data-zh="Angular 还款利息计算器" data-en="Angular Loan Calculator">Angular 还款利息计算器</span></a></li>
                 <li><a target='_blank' href="layout/jingdong/index.html"><span data-zh="京东布局" data-en="JD.com Layout">京东布局</span></a></li>
                 <li><a target='_blank' href="pages/qq.com/index.html"><span data-zh="腾讯布局" data-en="Tencent Layout">腾讯布局</span></a></li>
                 <li><a target='_blank' href="pages/furnitureV1.0/index.html"><span data-zh="家具网站布局1.0" data-en="Furniture Website v1.0">家具网站布局1.0</span></a></li>
                 <li><a target='_blank' href="pages/furnitureV2.0/full_screen.html"><span data-zh="家具网站布局2.0" data-en="Furniture Website v2.0">家具网站布局2.0</span></a></li>
-                <li><a target='_blank' href="pages/mobile/index.html"><span data-zh="jquery mobile" data-en="jQuery Mobile">jquery mobile</span></a></li>
-                <li><a target='_blank' href="tech/cookie/index.html"><span data-zh="cookie演示" data-en="Cookie Demo">cookie演示</span></a></li>
-                <li><a target='_blank' href="tech/ajax/index.html"><span data-zh="ajax演示" data-en="Ajax Demo">ajax演示</span></a></li>
-                <li><a target='_blank' href="tech/custom_event/index.html"><span data-zh="js自定义事件" data-en="JS Custom Events">js自定义事件</span></a></li>
-                <li><a target='_blank' href="tech/jsonp/index.html"><span data-zh="jsonp搜索建议" data-en="JSONP Search Suggest">jsonp搜索建议</span></a></li>
-                <li><a target='_blank' href="tech/optimize_web/index.html"><span data-zh="web性能优化" data-en="Web Performance">web性能优化</span></a></li>
+                <li><a target='_blank' href="pages/mobile/index.html"><span data-zh="jQuery Mobile" data-en="jQuery Mobile">jQuery Mobile</span></a></li>
+                <li><a target='_blank' href="tech/cookie/index.html"><span data-zh="Cookie 演示" data-en="Cookie Demo">Cookie 演示</span></a></li>
+                <li><a target='_blank' href="tech/ajax/index.html"><span data-zh="Ajax 演示" data-en="Ajax Demo">Ajax 演示</span></a></li>
+                <li><a target='_blank' href="tech/custom_event/index.html"><span data-zh="JS 自定义事件" data-en="JS Custom Events">JS 自定义事件</span></a></li>
+                <li><a target='_blank' href="tech/jsonp/index.html"><span data-zh="JSONP 搜索建议" data-en="JSONP Search Suggest">JSONP 搜索建议</span></a></li>
+                <li><a target='_blank' href="tech/optimize_web/index.html"><span data-zh="Web 性能优化" data-en="Web Performance">Web 性能优化</span></a></li>
                 <li><a target='_blank' href="pages/shopping_cart/shopping_cart.html"><span data-zh="购物车" data-en="Shopping Cart">购物车</span></a></li>
                 <li><a target='_blank' href="pages/tabs2.0/tabs2.0.html"><span data-zh="标签选项卡" data-en="Tab Component">标签选项卡</span></a></li>
                 <li><a target='_blank' href="pages/nav_menu/nav_menu.html"><span data-zh="多级导航菜单" data-en="Multi-level Navigation">多级导航菜单</span></a></li>
-                <li><a target='_blank' href="pages/table_verify/index.html"><span data-zh="原生JS表单验证" data-en="Form Validation">原生JS表单验证</span></a></li>
+                <li><a target='_blank' href="pages/table_verify/index.html"><span data-zh="原生 JS 表单验证" data-en="Form Validation">原生 JS 表单验证</span></a></li>
                 <li><a target='_blank' href="pages/rich_edit/rich_edit.html"><span data-zh="富文本编辑器" data-en="Rich Text Editor">富文本编辑器</span></a></li>
                 <li><a target='_blank' href="pages/magnify_glassV2/magnify.html"><span data-zh="任意比例放大镜" data-en="Magnifying Glass">任意比例放大镜</span></a></li>
                 <li><a target='_blank' href="pages/css_sprite/css_sprite.html"><span data-zh="CSS Sprite" data-en="CSS Sprite">CSS Sprite</span></a></li>
@@ -408,7 +404,7 @@
                 <li><a target='_blank' href="pages/clock/index.html"><span data-zh="变色时钟" data-en="Color-changing Clock">变色时钟</span></a></li>
                 <li><a target='_blank' href="pages/slide/slide.html"><span data-zh="图片轮播" data-en="Image Carousel">图片轮播</span></a></li>
                 <li><a target='_blank' href="pages/waterfall/waterfall.html"><span data-zh="瀑布流" data-en="Waterfall Layout">瀑布流</span></a></li>
-                <li><a target='_blank' href="pages/360spin/index.html"><span data-zh="360旋转" data-en="360° Rotation">360旋转</span></a></li>
+                <li><a target='_blank' href="pages/360spin/index.html"><span data-zh="360° 旋转" data-en="360° Rotation">360° 旋转</span></a></li>
                 <li><a target='_blank' href="pages/star_grade/index.html"><span data-zh="豆瓣打分" data-en="Star Rating">豆瓣打分</span></a></li>
                 <li><a target='_blank' href="pages/top10_tab/index.html"><span data-zh="手风琴菜单" data-en="Accordion Menu">手风琴菜单</span></a></li>
                 <li><a target='_blank' href="pages/drag/drag.html"><span data-zh="图标拖拽" data-en="Drag and Drop">图标拖拽</span></a></li>
@@ -416,34 +412,19 @@
                 <li><a target='_blank' href="pages/animation_framework2/animation.html"><span data-zh="动画框架" data-en="Animation Framework">动画框架</span></a></li>
                 <li><a target='_blank' href="pages/clock_animation/clock.html"><span data-zh="动态时钟" data-en="Dynamic Clock">动态时钟</span></a></li>
                 <li><a target='_blank' href="pages/slide_with_animations/slide.html"><span data-zh="幻灯片切换" data-en="Slide Transitions">幻灯片切换</span></a></li>
-                <li><a target='_blank' href="animations/menu/index.html"><span data-zh="手风琴菜单(动画)" data-en="Animated Accordion">手风琴菜单(动画)</span></a></li>
+                <li><a target='_blank' href="animations/menu/index.html"><span data-zh="手风琴菜单（动画）" data-en="Animated Accordion">手风琴菜单（动画）</span></a></li>
                 <li><a target='_blank' href="animations/typing/index.html"><span data-zh="打字效果" data-en="Typing Effect">打字效果</span></a></li>
-                <li><a target='_blank' href="animations/macdock/index.html"><span data-zh="Mac Dock效果" data-en="Mac Dock Effect">Mac Dock效果</span></a></li>
-                <li><a target='_blank' href="css3/rotate/index.html"><span data-zh="重力倾斜box" data-en="Gravity Tilt Box">重力倾斜box</span></a></li>
+                <li><a target='_blank' href="animations/macdock/index.html"><span data-zh="Mac Dock 效果" data-en="Mac Dock Effect">Mac Dock 效果</span></a></li>
+                <li><a target='_blank' href="css3/rotate/index.html"><span data-zh="重力倾斜 Box" data-en="Gravity Tilt Box">重力倾斜 Box</span></a></li>
                 <li><a target='_blank' href="css3/center/index.html"><span data-zh="水平垂直居中" data-en="Centering Solutions">水平垂直居中</span></a></li>
-                <li><a target='_blank' href="css3/flex/index.html"><span data-zh="flex测试" data-en="Flex Test">flex测试</span></a></li>
+                <li><a target='_blank' href="css3/flex/index.html"><span data-zh="Flex 测试" data-en="Flex Test">Flex 测试</span></a></li>
             </div>
         </ul>
 
         <!-- 联系方式 -->
         <div class='contact'>
-            <p>
-                <a href='mailto:holy_nova@126.com'>
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                    </svg>
-                    holy_nova@126.com
-                </a>
-            </p>
-            <p>
-                <a target='_blank' href="https://github.com/holynova">
-                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
-            </p>
+            <p><a href='mailto:holy_nova@126.com'>E-mail:holy_nova@126.com</a></p>
+            <p><a target='_blank' href="https://github.com/holynova" title="">Fork me on GitHub</a></p>
         </div>
     </div>
 
