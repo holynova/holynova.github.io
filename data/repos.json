@@ -1,0 +1,296 @@
+{
+  "lastUpdated": "2026-06-23",
+  "categories": [
+    {
+      "id": "creative-coding",
+      "icon": "🎨",
+      "name": {
+        "zh": "创意编程与视觉效果",
+        "en": "Creative Coding & Visual Effects"
+      },
+      "repos": [
+        {"name": "100-clocks", "lang": "HTML", "desc": {"zh": "百种时钟收藏", "en": "Collection of 100 clocks"}, "url": "https://github.com/holynova/100-clocks"},
+        {"name": "card-3d-depth-lab", "lang": "CSS", "desc": {"zh": "3D 卡片深度效果实验", "en": "3D card depth effect experiments"}, "url": "https://github.com/holynova/card-3d-depth-lab"},
+        {"name": "card-effects-kit", "lang": "CSS", "desc": {"zh": "卡片视觉效果工具包", "en": "Card visual effects toolkit"}, "url": "https://github.com/holynova/card-effects-kit"},
+        {"name": "double-spin-drawer", "lang": "JavaScript", "desc": {"zh": "螺旋曲线生成器", "en": "Spirograph / hypotrochoid generator"}, "url": "https://github.com/holynova/double-spin-drawer"},
+        {"name": "hand_fireworks", "lang": "HTML", "desc": {"zh": "手势触发烟花效果", "en": "Fireworks triggered by hand gestures"}, "url": "https://github.com/holynova/hand_fireworks", "homepage": "https://holynova.github.io/hand_fireworks"},
+        {"name": "hilbert", "lang": "JavaScript", "desc": {"zh": "希尔伯特曲线生成器", "en": "Hilbert curve generator"}, "url": "https://github.com/holynova/hilbert"},
+        {"name": "music_pulse", "lang": "TypeScript", "desc": {"zh": "音乐驱动生成艺术", "en": "Music-driven generative art"}, "url": "https://github.com/holynova/music_pulse"},
+        {"name": "p5js_playground", "lang": "HTML", "desc": {"zh": "p5.js 创意编程实验", "en": "p5.js creative coding experiments"}, "url": "https://github.com/holynova/p5js_playground"},
+        {"name": "raytracing-demo", "lang": "JavaScript", "desc": {"zh": "光线追踪渲染器演示", "en": "Raytracing renderer demo"}, "url": "https://github.com/holynova/raytracing-demo"},
+        {"name": "sort_animation", "lang": "JavaScript", "desc": {"zh": "排序算法可视化动画", "en": "Sorting algorithm visualizer"}, "url": "https://github.com/holynova/sort_animation"},
+        {"name": "spinning-drawer", "lang": "HTML", "desc": {"zh": "电子螺旋绘图仪", "en": "Electronic spirograph simulator"}, "url": "https://github.com/holynova/spinning-drawer"},
+        {"name": "string_alchemy", "lang": "JavaScript", "desc": {"zh": "化学元素弹幕文字", "en": "Chemical element text enchantment"}, "url": "https://github.com/holynova/string_alchemy"},
+        {"name": "web-motion-showcase", "lang": "JavaScript", "desc": {"zh": "Web 动画展示", "en": "Web animation showcase"}, "url": "https://github.com/holynova/web-motion-showcase"}
+      ]
+    },
+    {
+      "id": "games",
+      "icon": "🎮",
+      "name": {
+        "zh": "游戏与互动",
+        "en": "Games & Interactive"
+      },
+      "repos": [
+        {"name": "2048", "lang": "CSS", "desc": {"zh": "2048 数字游戏", "en": "2048 number puzzle game"}, "url": "https://github.com/holynova/2048", "homepage": "https://holynova.github.io/pages/2048new/index.html"},
+        {"name": "js_game", "lang": "JavaScript", "desc": {"zh": "JS 游戏实验合集", "en": "JS game experiments"}, "url": "https://github.com/holynova/js_game"},
+        {"name": "slot_machine", "lang": "JavaScript", "desc": {"zh": "老虎机抽奖演示", "en": "Slot machine lottery demo"}, "url": "https://github.com/holynova/slot_machine"},
+        {"name": "tank-tactics-game", "lang": "TypeScript", "desc": {"zh": "四坦大战游戏", "en": "Tank tactics game"}, "url": "https://github.com/holynova/tank-tactics-game"}
+      ]
+    },
+    {
+      "id": "chinese-tools",
+      "icon": "📝",
+      "name": {
+        "zh": "中文语言与诗词工具",
+        "en": "Chinese Language & Poetry Tools"
+      },
+      "repos": [
+        {"name": "gushi_namer", "lang": "TypeScript", "stars": 2231, "desc": {"zh": "古诗文起名机器人 ⭐ 最受欢迎", "en": "Poetic baby namer from classical poetry ⭐ Most popular"}, "url": "https://github.com/holynova/gushi_namer", "homepage": "https://holynova.github.io/gushi_namer"},
+        {"name": "gushi_spider", "lang": "Python", "desc": {"zh": "古诗文数据库爬虫", "en": "Classical poetry database scraper"}, "url": "https://github.com/holynova/gushi_spider"},
+        {"name": "head_tail_poem", "lang": "TypeScript", "desc": {"zh": "藏头诗生成器", "en": "Acrostic poem generator"}, "url": "https://github.com/holynova/head_tail_poem"},
+        {"name": "head_tail_poem_generator", "lang": "JavaScript", "desc": {"zh": "藏头诗生成器（旧版）", "en": "Acrostic poem generator (legacy)"}, "url": "https://github.com/holynova/head_tail_poem_generator"},
+        {"name": "char_finder", "lang": "TypeScript", "desc": {"zh": "汉字查找工具", "en": "Chinese character finder"}, "url": "https://github.com/holynova/char_finder"},
+        {"name": "char_frequency", "lang": "Python", "desc": {"zh": "中文词频分析", "en": "Chinese word frequency analysis"}, "url": "https://github.com/holynova/char_frequency"},
+        {"name": "pinyinConverter.js", "lang": "JavaScript", "desc": {"zh": "拼音转换器", "en": "Pinyin converter"}, "url": "https://github.com/holynova/pinyinConverter.js"},
+        {"name": "pinyin_web", "lang": "JavaScript", "desc": {"zh": "拼音转换器网页版", "en": "Pinyin converter web version"}, "url": "https://github.com/holynova/pinyin_web", "homepage": "https://holynova.github.io/pages/pinyin_converter"},
+        {"name": "haiku-flow", "lang": "TypeScript", "desc": {"zh": "俳句信息流", "en": "Haiku information feed"}, "url": "https://github.com/holynova/haiku-flow"}
+      ]
+    },
+    {
+      "id": "ai-tools",
+      "icon": "🤖",
+      "name": {
+        "zh": "AI 与自动化",
+        "en": "AI & Automation"
+      },
+      "repos": [
+        {"name": "ai-updater-skill", "lang": "Python", "desc": {"zh": "AI 更新技能", "en": "AI updater skill"}, "url": "https://github.com/holynova/ai-updater-skill"},
+        {"name": "ai_draw_chrome_extension", "lang": "TypeScript", "desc": {"zh": "AI 绘画提示词 Chrome 扩展", "en": "AI drawing prompt Chrome extension"}, "url": "https://github.com/holynova/ai_draw_chrome_extension"},
+        {"name": "ai_draw_prompt", "lang": "JavaScript", "desc": {"zh": "AI 绘画提示词采集", "en": "AI drawing prompt scraper"}, "url": "https://github.com/holynova/ai_draw_prompt"},
+        {"name": "ai-gallery", "lang": "TypeScript", "desc": {"zh": "AI 图片画廊", "en": "AI image gallery"}, "url": "https://github.com/holynova/ai-gallery"},
+        {"name": "ask_all_ai", "lang": "HTML", "desc": {"zh": "批量查询多个 AI", "en": "Query multiple AI services"}, "url": "https://github.com/holynova/ask_all_ai"},
+        {"name": "auto-xiao-hong-shu", "lang": "JavaScript", "desc": {"zh": "小红书自动化", "en": "Xiaohongshu automation"}, "url": "https://github.com/holynova/auto-xiao-hong-shu"},
+        {"name": "auto-install-skills", "lang": "TypeScript", "desc": {"zh": "AI Agent 技能自动安装", "en": "Auto-install skills to AI agents"}, "url": "https://github.com/holynova/auto-install-skills"},
+        {"name": "image_local_llm", "lang": "JavaScript", "desc": {"zh": "本地 LLM 图片处理", "en": "Local LLM image processing"}, "url": "https://github.com/holynova/image_local_llm"},
+        {"name": "MiniMax-image", "lang": "JavaScript", "desc": {"zh": "MiniMax 图片 API 集成", "en": "MiniMax image API integration"}, "url": "https://github.com/holynova/MiniMax-image"},
+        {"name": "notebooklm_one_by_one", "lang": "JavaScript", "desc": {"zh": "YouTube 转 NotebookLM 幻灯片", "en": "YouTube to NotebookLM slides"}, "url": "https://github.com/holynova/notebooklm_one_by_one"},
+        {"name": "prompt_one_by_one", "lang": "JavaScript", "stars": 6, "desc": {"zh": "批量 AI 图片生成", "en": "Batch AI image generation via Gemini"}, "url": "https://github.com/holynova/prompt_one_by_one"},
+        {"name": "video_prompt_generator", "lang": "HTML", "desc": {"zh": "AI 视频提示词生成器", "en": "AI video prompt generator"}, "url": "https://github.com/holynova/video_prompt_generator"},
+        {"name": "langchain_tool", "lang": "JavaScript", "desc": {"zh": "LangChain 工具实验", "en": "LangChain tool experiments"}, "url": "https://github.com/holynova/langchain_tool"}
+      ]
+    },
+    {
+      "id": "productivity",
+      "icon": "💰",
+      "name": {
+        "zh": "效率与财务工具",
+        "en": "Productivity & Finance"
+      },
+      "repos": [
+        {"name": "offer_compare", "lang": "JavaScript", "desc": {"zh": "Offer 对比计算器", "en": "Job offer comparison calculator"}, "url": "https://github.com/holynova/offer_compare"},
+        {"name": "offer_calculator", "lang": "TypeScript", "desc": {"zh": "Offer 计算器", "en": "Offer calculator"}, "url": "https://github.com/holynova/offer_calculator"},
+        {"name": "offer_helper", "lang": "Svelte", "desc": {"zh": "Offer 助手", "en": "Offer comparison helper"}, "url": "https://github.com/holynova/offer_helper"},
+        {"name": "pre_tax_salary_calculator", "lang": "CSS", "desc": {"zh": "税前工资反算器", "en": "Pre-tax salary calculator"}, "url": "https://github.com/holynova/pre_tax_salary_calculator", "homepage": "https://holynova.github.io/pages/buy_house/index.html"},
+        {"name": "pdf2wechat", "lang": "TypeScript", "desc": {"zh": "PDF 转微信朋友圈图片", "en": "PDF to WeChat Moments images"}, "url": "https://github.com/holynova/pdf2wechat"},
+        {"name": "life_bar_chart", "lang": "TypeScript", "desc": {"zh": "人生甘特图生成器", "en": "Life Gantt chart generator"}, "url": "https://github.com/holynova/life_bar_chart"},
+        {"name": "life_chart", "lang": "JavaScript", "desc": {"zh": "人生图表", "en": "Life chart"}, "url": "https://github.com/holynova/life_chart"},
+        {"name": "collection_miner", "lang": "JavaScript", "desc": {"zh": "书签收藏整理器", "en": "Bookmark organizer"}, "url": "https://github.com/holynova/collection_miner"},
+        {"name": "bookshelf_manager", "lang": "TypeScript", "desc": {"zh": "书架管理工具", "en": "Bookshelf manager"}, "url": "https://github.com/holynova/bookshelf_manager"}
+      ]
+    },
+    {
+      "id": "chrome-extensions",
+      "icon": "🔌",
+      "name": {
+        "zh": "Chrome 扩展",
+        "en": "Chrome Extensions"
+      },
+      "repos": [
+        {"name": "ai_draw_chrome_extension", "lang": "TypeScript", "desc": {"zh": "AI 绘画提示词扩展", "en": "AI drawing prompt extension"}, "url": "https://github.com/holynova/ai_draw_chrome_extension"},
+        {"name": "scrape-to-markdown.chrome", "lang": "TypeScript", "desc": {"zh": "网页转 Markdown", "en": "Scrape web to Markdown"}, "url": "https://github.com/holynova/scrape-to-markdown.chrome"},
+        {"name": "random_fill_form", "lang": "JavaScript", "desc": {"zh": "随机填表扩展", "en": "Random form filler"}, "url": "https://github.com/holynova/random_fill_form"},
+        {"name": "frontend_tools.chrome", "lang": "JavaScript", "desc": {"zh": "前端工具扩展", "en": "Frontend tools extension"}, "url": "https://github.com/holynova/frontend_tools.chrome"},
+        {"name": "youtube-channel-scraper-chrome", "lang": "JavaScript", "desc": {"zh": "YouTube 频道数据采集", "en": "YouTube channel scraper"}, "url": "https://github.com/holynova/youtube-channel-scraper-chrome"},
+        {"name": "mouse_scroll_heath_check", "lang": "HTML", "desc": {"zh": "鼠标滚轮健康检测", "en": "Mouse scroll health check"}, "url": "https://github.com/holynova/mouse_scroll_heath_check"},
+        {"name": "douban-quark-clawer", "lang": "HTML", "desc": {"zh": "豆瓣夸克网盘链接采集", "en": "Douban to Quark drive scraper"}, "url": "https://github.com/holynova/douban-quark-clawer"}
+      ]
+    },
+    {
+      "id": "scrapers",
+      "icon": "🕷️",
+      "name": {
+        "zh": "爬虫与数据采集",
+        "en": "Web Scrapers & Data Collection"
+      },
+      "repos": [
+        {"name": "gushi_spider", "lang": "Python", "desc": {"zh": "古诗文爬虫", "en": "Classical poetry scraper"}, "url": "https://github.com/holynova/gushi_spider"},
+        {"name": "hero_kill_spider", "lang": "JavaScript", "desc": {"zh": "英雄杀数据采集", "en": "Hero Kill data scraper"}, "url": "https://github.com/holynova/hero_kill_spider"},
+        {"name": "js_spider", "lang": "JavaScript", "desc": {"zh": "通用 JS 爬虫", "en": "General JS web scraper"}, "url": "https://github.com/holynova/js_spider"},
+        {"name": "collect_data_from_bidding_result", "lang": "Python", "desc": {"zh": "招标结果数据采集", "en": "Bidding result data collector"}, "url": "https://github.com/holynova/collect_data_from_bidding_result"},
+        {"name": "xiaoyuzhou-transcript-downloader", "lang": "JavaScript", "desc": {"zh": "小宇宙播客文字稿下载", "en": "Xiaoyuzhou podcast transcript downloader"}, "url": "https://github.com/holynova/xiaoyuzhou-transcript-downloader"},
+        {"name": "web2list", "lang": "JavaScript", "desc": {"zh": "网站转新闻列表", "en": "Convert websites to news lists"}, "url": "https://github.com/holynova/web2list"},
+        {"name": "geo_ranking", "lang": "TypeScript", "desc": {"zh": "地理排名数据", "en": "Geographic ranking data"}, "url": "https://github.com/holynova/geo_ranking"}
+      ]
+    },
+    {
+      "id": "layout-css",
+      "icon": "📐",
+      "name": {
+        "zh": "布局与 CSS 实验",
+        "en": "Layout & CSS Experiments"
+      },
+      "repos": [
+        {"name": "flex_layout", "lang": "CSS", "desc": {"zh": "Flexbox 布局实验", "en": "Flexbox layout experiments"}, "url": "https://github.com/holynova/flex_layout"},
+        {"name": "mobile_layout", "lang": "HTML", "desc": {"zh": "移动端响应式布局", "en": "Mobile responsive layout"}, "url": "https://github.com/holynova/mobile_layout"},
+        {"name": "furniture_web", "lang": "CSS", "desc": {"zh": "家具网站设计", "en": "Furniture website design"}, "url": "https://github.com/holynova/furniture_web", "homepage": "https://holynova.github.io/pages/furnitureV2.0/full_screen.html"},
+        {"name": "menu_tree", "lang": "JavaScript", "desc": {"zh": "树形菜单实验", "en": "Tree menu experiments"}, "url": "https://github.com/holynova/menu_tree"},
+        {"name": "mobile_tools", "lang": "TypeScript", "desc": {"zh": "移动端开发工具", "en": "Mobile development tools"}, "url": "https://github.com/holynova/mobile_tools"}
+      ]
+    },
+    {
+      "id": "dev-tools",
+      "icon": "🛠️",
+      "name": {
+        "zh": "开发工具",
+        "en": "Developer Tools"
+      },
+      "repos": [
+        {"name": "cleaner_for_coders", "lang": "Rust", "desc": {"zh": "开发者文件清理器", "en": "File cleaner for developers"}, "url": "https://github.com/holynova/cleaner_for_coders"},
+        {"name": "auto_repo_show", "lang": "Rust", "desc": {"zh": "仓库自动展示工具", "en": "Auto-display repositories"}, "url": "https://github.com/holynova/auto_repo_show"},
+        {"name": "json_to_ts", "lang": "TypeScript", "desc": {"zh": "JSON 转 TypeScript 类型", "en": "JSON to TypeScript converter"}, "url": "https://github.com/holynova/json_to_ts"},
+        {"name": "tree_folder_generator", "lang": "JavaScript", "desc": {"zh": "树形目录生成器", "en": "Tree folder structure generator"}, "url": "https://github.com/holynova/tree_folder_generator"},
+        {"name": "equal_width", "lang": "JavaScript", "desc": {"zh": "等宽文字格式化", "en": "Equal-width text formatting"}, "url": "https://github.com/holynova/equal_width"},
+        {"name": "CURD_maker", "lang": "JavaScript", "desc": {"zh": "CRUD 代码生成器", "en": "CRUD API/page generator"}, "url": "https://github.com/holynova/CURD_maker"},
+        {"name": "CURD_generator", "lang": "TypeScript", "desc": {"zh": "CRUD 模型生成器", "en": "CRUD model generator"}, "url": "https://github.com/holynova/CURD_generator"},
+        {"name": "agreement2html_web", "lang": "HTML", "desc": {"zh": "协议转 HTML 工具", "en": "Agreement to HTML converter"}, "url": "https://github.com/holynova/agreement2html_web", "homepage": "https://holynova.github.io/agreement2html_web"},
+        {"name": "agreement2markdown", "lang": "JavaScript", "desc": {"zh": "协议转 Markdown", "en": "Agreement to Markdown"}, "url": "https://github.com/holynova/agreement2markdown"},
+        {"name": "generator-sang", "lang": "JavaScript", "desc": {"zh": "静态网站脚手架生成器", "en": "Static site scaffolding generator"}, "url": "https://github.com/holynova/generator-sang"},
+        {"name": "xmind_to_js", "lang": "JavaScript", "desc": {"zh": "XMind 转 JS", "en": "XMind to JavaScript converter"}, "url": "https://github.com/holynova/xmind_to_js"},
+        {"name": "my-design-system", "lang": "HTML", "desc": {"zh": "设计系统实验", "en": "Design system experiments"}, "url": "https://github.com/holynova/my-design-system"}
+      ]
+    },
+    {
+      "id": "learning",
+      "icon": "📚",
+      "name": {
+        "zh": "学习项目",
+        "en": "Learning Projects"
+      },
+      "repos": [
+        {"name": "algorithm_template", "lang": "JavaScript", "desc": {"zh": "算法模板", "en": "Algorithm templates"}, "url": "https://github.com/holynova/algorithm_template"},
+        {"name": "algorithm", "lang": "JavaScript", "desc": {"zh": "算法学习", "en": "Algorithm study"}, "url": "https://github.com/holynova/algorithm"},
+        {"name": "design_patterns", "lang": "JavaScript", "desc": {"zh": "设计模式学习", "en": "Design patterns study"}, "url": "https://github.com/holynova/design_patterns"},
+        {"name": "SICP", "lang": "Scheme", "desc": {"zh": "SICP 计算机程序构造与解释", "en": "SICP study"}, "url": "https://github.com/holynova/SICP"},
+        {"name": "udacity_cs212", "lang": "Python", "desc": {"zh": "Udacity CS212 课程", "en": "Udacity CS212 course"}, "url": "https://github.com/holynova/udacity_cs212"},
+        {"name": "learn_next", "lang": "JavaScript", "desc": {"zh": "Next.js 学习", "en": "Next.js learning"}, "url": "https://github.com/holynova/learn_next"},
+        {"name": "learn_node", "lang": "JavaScript", "desc": {"zh": "Node.js 学习", "en": "Node.js learning"}, "url": "https://github.com/holynova/learn_node"},
+        {"name": "learn_flask", "lang": "HTML", "desc": {"zh": "Flask 学习", "en": "Flask learning"}, "url": "https://github.com/holynova/learn_flask"},
+        {"name": "learn_sqlalchemy", "lang": "Python", "desc": {"zh": "SQLAlchemy 学习", "en": "SQLAlchemy learning"}, "url": "https://github.com/holynova/learn_sqlalchemy"},
+        {"name": "react_updates_playground", "lang": "JavaScript", "desc": {"zh": "React 新特性实验", "en": "React new features experiments"}, "url": "https://github.com/holynova/react_updates_playground"}
+      ]
+    },
+    {
+      "id": "frameworks",
+      "icon": "⚛️",
+      "name": {
+        "zh": "框架实践",
+        "en": "Framework Playgrounds"
+      },
+      "repos": [
+        {"name": "react_playground", "lang": "JavaScript", "desc": {"zh": "React 实验场", "en": "React playground"}, "url": "https://github.com/holynova/react_playground"},
+        {"name": "react18_playground", "lang": "JavaScript", "desc": {"zh": "React 18 实验场", "en": "React 18 playground"}, "url": "https://github.com/holynova/react18_playground"},
+        {"name": "react_native_expo_playground", "lang": "TypeScript", "desc": {"zh": "React Native Expo 实验", "en": "React Native Expo playground"}, "url": "https://github.com/holynova/react_native_expo_playground"},
+        {"name": "vite-react-playground", "lang": "TypeScript", "desc": {"zh": "Vite + React + TypeScript", "en": "Vite + React + TypeScript playground"}, "url": "https://github.com/holynova/vite-react-playground"},
+        {"name": "nextjs-dashboard", "lang": "TypeScript", "desc": {"zh": "Next.js 仪表盘", "en": "Next.js dashboard"}, "url": "https://github.com/holynova/nextjs-dashboard"},
+        {"name": "next_pure_playground", "lang": "JavaScript", "desc": {"zh": "Next.js SSR 实验", "en": "Next.js SSR with Redux/Saga"}, "url": "https://github.com/holynova/next_pure_playground"},
+        {"name": "umi_demo", "lang": "JavaScript", "desc": {"zh": "Umi.js 演示", "en": "Umi.js demo"}, "url": "https://github.com/holynova/umi_demo"}
+      ]
+    },
+    {
+      "id": "backend",
+      "icon": "🖥️",
+      "name": {
+        "zh": "服务端",
+        "en": "Server & Backend"
+      },
+      "repos": [
+        {"name": "node_data_server", "lang": "JavaScript", "desc": {"zh": "简单测试数据服务器", "en": "Simple test data server"}, "url": "https://github.com/holynova/node_data_server"},
+        {"name": "node_server", "lang": "JavaScript", "desc": {"zh": "Node HTTP 服务器学习", "en": "Node HTTP server learning"}, "url": "https://github.com/holynova/node_server"},
+        {"name": "anti_CSRF", "lang": "HTML", "desc": {"zh": "CSRF 攻防演示", "en": "CSRF attack/defense demo"}, "url": "https://github.com/holynova/anti_CSRF"},
+        {"name": "server_sent_message", "lang": "JavaScript", "desc": {"zh": "Server-Sent Events 演示", "en": "Server-Sent Events demo"}, "url": "https://github.com/holynova/server_sent_message"}
+      ]
+    },
+    {
+      "id": "python",
+      "icon": "🐍",
+      "name": {
+        "zh": "Python 脚本",
+        "en": "Python Scripts"
+      },
+      "repos": [
+        {"name": "python_demo", "lang": "Python", "desc": {"zh": "Python 示例合集", "en": "Python demos"}, "url": "https://github.com/holynova/python_demo"},
+        {"name": "python_excel", "lang": "Python", "desc": {"zh": "Excel 处理脚本", "en": "Excel processing scripts"}, "url": "https://github.com/holynova/python_excel"},
+        {"name": "excel_handler", "lang": "Python", "desc": {"zh": "Excel 处理器", "en": "Excel handler"}, "url": "https://github.com/holynova/excel_handler"},
+        {"name": "sales_pipeline_merge", "lang": "Python", "desc": {"zh": "销售数据合并", "en": "Sales pipeline data merge"}, "url": "https://github.com/holynova/sales_pipeline_merge"},
+        {"name": "collect_data_from_qef_in_folder", "lang": "Python", "desc": {"zh": "QEF 数据采集", "en": "QEF data collector"}, "url": "https://github.com/holynova/collect_data_from_qef_in_folder"},
+        {"name": "walk_dir", "lang": "Python", "desc": {"zh": "目录遍历工具", "en": "Directory walker"}, "url": "https://github.com/holynova/walk_dir"},
+        {"name": "flask_book", "lang": "Python", "desc": {"zh": "Flask 书籍练习", "en": "Flask book exercises"}, "url": "https://github.com/holynova/flask_book"}
+      ]
+    },
+    {
+      "id": "archive",
+      "icon": "📦",
+      "name": {
+        "zh": "holynova.github.io 原有项目",
+        "en": "holynova.github.io Legacy Projects"
+      },
+      "repos": [
+        {"name": "2048 游戏", "lang": "JavaScript", "desc": {"zh": "个性化定制 2048 游戏", "en": "Customized 2048 game"}, "url": "https://holynova.github.io/pages/2048new/index.html"},
+        {"name": "排序算法可视化", "lang": "JavaScript", "desc": {"zh": "多种排序算法可视化展示", "en": "Sorting algorithm visualization"}, "url": "https://holynova.github.io/algorithm/show_sort/index.html"},
+        {"name": "二手房计算器", "lang": "JavaScript", "desc": {"zh": "房贷计算工具", "en": "Mortgage calculator"}, "url": "https://holynova.github.io/pages/buy_house/index.html"},
+        {"name": "日期选择器", "lang": "JavaScript", "desc": {"zh": "自定义日期选择器插件", "en": "Custom date picker plugin"}, "url": "https://holynova.github.io/plug_in/date_picker/demo.html"},
+        {"name": "滑动解锁插件", "lang": "JavaScript", "desc": {"zh": "iOS 风格滑动解锁", "en": "iOS-style slide to unlock"}, "url": "https://holynova.github.io/plug_in/slide_to_unlock/index.html"},
+        {"name": "面向对象选项卡", "lang": "JavaScript", "desc": {"zh": "OOP 实现的选项卡组件", "en": "OOP tab component"}, "url": "https://holynova.github.io/pages/tabs4.0/tabs4.0.html"},
+        {"name": "词频统计", "lang": "JavaScript", "desc": {"zh": "文本词频分析工具", "en": "Text word frequency analyzer"}, "url": "https://holynova.github.io/pages/my_page/frequency.html"},
+        {"name": "电缆型号翻译", "lang": "JavaScript", "desc": {"zh": "电缆型号查询工具", "en": "Cable type finder"}, "url": "https://holynova.github.io/pages/cable_name/cable_name.html"},
+        {"name": "购物清单 (React)", "lang": "React", "desc": {"zh": "React 购物清单", "en": "React shopping list"}, "url": "https://holynova.github.io/framework/react/index.html"},
+        {"name": "井字棋 (React)", "lang": "React", "desc": {"zh": "React 井字棋游戏", "en": "React tic-tac-toe"}, "url": "https://holynova.github.io/framework/react_tictactoe/index.html"},
+        {"name": "留言板 (Angular)", "lang": "Angular", "desc": {"zh": "AngularJS 留言板", "en": "AngularJS message board"}, "url": "https://holynova.github.io/framework/learn_angular/ng_comments/index.html"},
+        {"name": "还款计算器 (Vue)", "lang": "Vue", "desc": {"zh": "Vue 还款利息计算器", "en": "Vue loan calculator"}, "url": "https://holynova.github.io/framework/vue_return_money2/index.html"},
+        {"name": "还款计算器 (H5)", "lang": "HTML5", "desc": {"zh": "H5 还款利息计算器", "en": "H5 loan calculator"}, "url": "https://holynova.github.io/css3/return_money/index.html"},
+        {"name": "还款计算器 (Angular)", "lang": "Angular", "desc": {"zh": "Angular 还款利息计算器", "en": "Angular loan calculator"}, "url": "https://holynova.github.io/framework/angular_return_money/index.html"},
+        {"name": "京东布局", "lang": "HTML", "desc": {"zh": "京东商城首页复刻", "en": "JD.com layout clone"}, "url": "https://holynova.github.io/layout/jingdong/index.html"},
+        {"name": "腾讯布局", "lang": "HTML", "desc": {"zh": "腾讯首页复刻", "en": "Tencent layout clone"}, "url": "https://holynova.github.io/pages/qq.com/index.html"},
+        {"name": "家具网站 v1.0", "lang": "HTML", "desc": {"zh": "家具电商布局", "en": "Furniture website v1.0"}, "url": "https://holynova.github.io/pages/furnitureV1.0/index.html"},
+        {"name": "家具网站 v2.0", "lang": "Bootstrap", "desc": {"zh": "Bootstrap 响应式布局", "en": "Bootstrap responsive layout"}, "url": "https://holynova.github.io/pages/furnitureV2.0/full_screen.html"},
+        {"name": "购物车", "lang": "JavaScript", "desc": {"zh": "购物车功能实现", "en": "Shopping cart implementation"}, "url": "https://holynova.github.io/pages/shopping_cart/shopping_cart.html"},
+        {"name": "表单验证", "lang": "JavaScript", "desc": {"zh": "原生 JS 表单验证", "en": "Vanilla JS form validation"}, "url": "https://holynova.github.io/pages/table_verify/index.html"},
+        {"name": "富文本编辑器", "lang": "JavaScript", "desc": {"zh": "富文本编辑功能", "en": "Rich text editor"}, "url": "https://holynova.github.io/pages/rich_edit/rich_edit.html"},
+        {"name": "放大镜", "lang": "JavaScript", "desc": {"zh": "任意比例放大镜", "en": "Magnifying glass"}, "url": "https://holynova.github.io/pages/magnify_glassV2/magnify.html"},
+        {"name": "倒计时", "lang": "JavaScript", "desc": {"zh": "倒计时功能", "en": "Countdown timer"}, "url": "https://holynova.github.io/pages/count_down/index.html"},
+        {"name": "变色时钟", "lang": "JavaScript", "desc": {"zh": "动态变色时钟", "en": "Color-changing clock"}, "url": "https://holynova.github.io/pages/clock/index.html"},
+        {"name": "图片轮播", "lang": "JavaScript", "desc": {"zh": "图片轮播组件", "en": "Image carousel"}, "url": "https://holynova.github.io/pages/slide/slide.html"},
+        {"name": "瀑布流", "lang": "JavaScript", "desc": {"zh": "瀑布流布局", "en": "Waterfall layout"}, "url": "https://holynova.github.io/pages/waterfall/waterfall.html"},
+        {"name": "360° 旋转", "lang": "JavaScript", "desc": {"zh": "360 度旋转展示", "en": "360° rotation display"}, "url": "https://holynova.github.io/pages/360spin/index.html"},
+        {"name": "豆瓣打分", "lang": "JavaScript", "desc": {"zh": "星级评分组件", "en": "Star rating component"}, "url": "https://holynova.github.io/pages/star_grade/index.html"},
+        {"name": "手风琴菜单", "lang": "JavaScript", "desc": {"zh": "手风琴折叠效果", "en": "Accordion menu"}, "url": "https://holynova.github.io/pages/top10_tab/index.html"},
+        {"name": "图标拖拽", "lang": "JavaScript", "desc": {"zh": "拖拽功能实现", "en": "Drag and drop"}, "url": "https://holynova.github.io/pages/drag/drag.html"},
+        {"name": "自定义滚动条", "lang": "JavaScript", "desc": {"zh": "自定义滚动条样式", "en": "Custom scrollbar"}, "url": "https://holynova.github.io/pages/custom_scroll_bar/custom_scroll_bar.html"},
+        {"name": "动画框架", "lang": "JavaScript", "desc": {"zh": "自定义动画框架", "en": "Custom animation framework"}, "url": "https://holynova.github.io/pages/animation_framework2/animation.html"},
+        {"name": "动态时钟", "lang": "Canvas", "desc": {"zh": "Canvas 动态时钟", "en": "Canvas dynamic clock"}, "url": "https://holynova.github.io/pages/clock_animation/clock.html"},
+        {"name": "幻灯片切换", "lang": "JavaScript", "desc": {"zh": "多种切换效果", "en": "Multiple slide transitions"}, "url": "https://holynova.github.io/pages/slide_with_animations/slide.html"},
+        {"name": "手风琴菜单 (动画)", "lang": "JavaScript", "desc": {"zh": "动画手风琴效果", "en": "Animated accordion"}, "url": "https://holynova.github.io/animations/menu/index.html"},
+        {"name": "打字效果", "lang": "JavaScript", "desc": {"zh": "打字机动画", "en": "Typing effect"}, "url": "https://holynova.github.io/animations/typing/index.html"},
+        {"name": "Mac Dock 效果", "lang": "JavaScript", "desc": {"zh": "macOS Dock 栏动画", "en": "macOS Dock effect"}, "url": "https://holynova.github.io/animations/macdock/index.html"},
+        {"name": "重力倾斜", "lang": "CSS3", "desc": {"zh": "重力感应倾斜效果", "en": "Gravity tilt effect"}, "url": "https://holynova.github.io/css3/rotate/index.html"},
+        {"name": "水平垂直居中", "lang": "CSS3", "desc": {"zh": "多种居中方案", "en": "Centering solutions"}, "url": "https://holynova.github.io/css3/center/index.html"},
+        {"name": "Flex 布局", "lang": "CSS3", "desc": {"zh": "Flex 弹性布局演示", "en": "Flexbox layout demo"}, "url": "https://holynova.github.io/css3/flex/index.html"},
+        {"name": "Cookie 演示", "lang": "JavaScript", "desc": {"zh": "Cookie 操作演示", "en": "Cookie operations demo"}, "url": "https://holynova.github.io/tech/cookie/index.html"},
+        {"name": "Ajax 演示", "lang": "JavaScript", "desc": {"zh": "Ajax 请求演示", "en": "Ajax request demo"}, "url": "https://holynova.github.io/tech/ajax/index.html"},
+        {"name": "JSONP 搜索建议", "lang": "JavaScript", "desc": {"zh": "JSONP 跨域演示", "en": "JSONP cross-domain demo"}, "url": "https://holynova.github.io/tech/jsonp/index.html"},
+        {"name": "Web 性能优化", "lang": "JavaScript", "desc": {"zh": "性能优化技巧", "en": "Performance optimization"}, "url": "https://holynova.github.io/tech/optimize_web/index.html"}
+      ]
+    }
+  ]
+}
