@@ -237,3 +237,10 @@ npx http-server -p 8080
 <p align="center">
   <sub>用 ❤️ 和 JavaScript 构建</sub>
 </p>
+
+## Demo 分享卡片
+
+[![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://holynova.github.io/holynova.github.io/)
+
+移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://holynova.github.io/holynova.github.io/>
+
