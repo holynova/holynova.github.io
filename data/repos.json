@@ -84,8 +84,7 @@
           },
           "url": "https://github.com/holynova/spinning-drawer",
           "pushed_at": "2026-08-11",
-          "stars": 1,
-          "homepage": "https://holynova.github.io/spinning-drawer/"
+          "stars": 1
         },
         {
           "name": "100-clocks",
@@ -205,8 +204,7 @@
             "en": "Visual step-by-step animations of classic sorting algorithms"
           },
           "url": "https://github.com/holynova/sort_animation",
-          "pushed_at": "2019-03-05",
-          "homepage": "https://holynova.github.io/sort_animation/"
+          "pushed_at": "2019-03-05"
         }
       ]
     },
@@ -314,8 +312,7 @@
           },
           "url": "https://github.com/holynova/prompt_one_by_one",
           "pushed_at": "2026-08-01",
-          "stars": 6,
-          "homepage": "https://holynova.github.io/prompt_one_by_one/"
+          "stars": 6
         },
         {
           "name": "opencli-pipeline",
@@ -518,8 +515,7 @@
           },
           "url": "https://github.com/holynova/gushi_namer",
           "pushed_at": "2026-08-07",
-          "stars": 2242,
-          "homepage": "https://holynova.github.io/gushi_namer/"
+          "stars": 2242
         },
         {
           "name": "char_finder",
@@ -551,8 +547,7 @@
             "en": "Chinese name character-to-pinyin conversion and polyphone calibration tool"
           },
           "url": "https://github.com/holynova/pinyin_web",
-          "pushed_at": "2018-10-10",
-          "homepage": "https://holynova.github.io/pinyin_web/"
+          "pushed_at": "2018-10-10"
         },
         {
           "name": "pinyinConverter.js",
@@ -782,8 +777,7 @@
             "en": "Chrome side-panel extension to save web content as Markdown and export media"
           },
           "url": "https://github.com/holynova/scrape-to-markdown.chrome",
-          "pushed_at": "2026-07-26",
-          "homepage": "https://holynova.github.io/scrape-to-markdown.chrome/"
+          "pushed_at": "2026-07-26"
         },
         {
           "name": "hn-codex-skills",
@@ -1019,8 +1013,7 @@
             "en": "Personal and family health knowledge management and metric tracker"
           },
           "url": "https://github.com/holynova/health-book",
-          "pushed_at": "2026-08-08",
-          "homepage": "https://holynova.github.io/health-book/"
+          "pushed_at": "2026-08-08"
         },
         {
           "name": "collection_miner",
@@ -1042,8 +1035,7 @@
           },
           "url": "https://github.com/holynova/pdf2wechat",
           "pushed_at": "2025-11-29",
-          "stars": 1,
-          "homepage": "https://holynova.github.io/pdf2wechat/"
+          "stars": 1
         },
         {
           "name": "douban-quark-clawer",
@@ -1064,8 +1056,7 @@
             "en": "Life timeline visualization as Gantt charts, built with React and Canvas"
           },
           "url": "https://github.com/holynova/life_bar_chart",
-          "pushed_at": "2025-03-16",
-          "homepage": "https://holynova.github.io/life_bar_chart/"
+          "pushed_at": "2025-03-16"
         },
         {
           "name": "pre_tax_salary_calculator",
@@ -1075,8 +1066,7 @@
             "en": "Calculate pre-tax salary from post-tax income for the Chinese tax system"
           },
           "url": "https://github.com/holynova/pre_tax_salary_calculator",
-          "pushed_at": "2024-12-23",
-          "homepage": "https://holynova.github.io/pre_tax_salary_calculator/"
+          "pushed_at": "2024-12-23"
         },
         {
           "name": "offer_calculator",
@@ -1108,8 +1098,7 @@
             "en": "Visualize life milestones as a Gantt chart from custom dates"
           },
           "url": "https://github.com/holynova/life_chart",
-          "pushed_at": "2021-04-05",
-          "homepage": "https://holynova.github.io/life_chart/"
+          "pushed_at": "2021-04-05"
         }
       ]
     },
@@ -1247,8 +1236,7 @@
             "en": "Generate 4K video contact sheets — see an entire movie at a glance"
           },
           "url": "https://github.com/holynova/one_second_movie",
-          "pushed_at": "2025-11-20",
-          "homepage": "https://holynova.github.io/one_second_movie/"
+          "pushed_at": "2025-11-20"
         },
         {
           "name": "slot_machine",
@@ -1258,8 +1246,7 @@
             "en": "A pure JavaScript slot machine lottery animation webpage"
           },
           "url": "https://github.com/holynova/slot_machine",
-          "pushed_at": "2017-09-19",
-          "homepage": "https://holynova.github.io/slot_machine/"
+          "pushed_at": "2017-09-19"
         },
         {
           "name": "js_game",
@@ -1269,8 +1256,7 @@
             "en": "A JavaScript pinball and bouncing ball physics game"
           },
           "url": "https://github.com/holynova/js_game",
-          "pushed_at": "2017-09-11",
-          "homepage": "https://holynova.github.io/js_game/"
+          "pushed_at": "2017-09-11"
         }
       ]
     },
@@ -1300,8 +1286,7 @@
             "en": "Next.js App Router course dashboard full-stack starter template"
           },
           "url": "https://github.com/holynova/nextjs-dashboard",
-          "pushed_at": "2025-05-04",
-          "homepage": "https://holynova.github.io/nextjs-dashboard/"
+          "pushed_at": "2025-05-04"
         },
         {
           "name": "web2list",
@@ -1311,8 +1296,7 @@
             "en": "Extract and convert arbitrary web pages into a clean, readable news list"
           },
           "url": "https://github.com/holynova/web2list",
-          "pushed_at": "2024-07-27",
-          "homepage": "https://holynova.github.io/web2list/"
+          "pushed_at": "2024-07-27"
         },
         {
           "name": "vite-react-playground",
@@ -1333,8 +1317,7 @@
             "en": "Classic software design patterns implemented in modern JavaScript"
           },
           "url": "https://github.com/holynova/design_patterns",
-          "pushed_at": "2022-08-13",
-          "homepage": "https://holynova.github.io/design_patterns/"
+          "pushed_at": "2022-08-13"
         },
         {
           "name": "tools",
@@ -1344,8 +1327,7 @@
             "en": "Frontend JavaScript utility and helper function library"
           },
           "url": "https://github.com/holynova/tools",
-          "pushed_at": "2022-05-14",
-          "homepage": "https://holynova.github.io/tools/"
+          "pushed_at": "2022-05-14"
         },
         {
           "name": "rn_playground",
@@ -1375,8 +1357,7 @@
             "en": "React playground and experimentation sandbox bootstrapped with CRA"
           },
           "url": "https://github.com/holynova/react_playground",
-          "pushed_at": "2021-12-15",
-          "homepage": "https://holynova.github.io/react_playground/"
+          "pushed_at": "2021-12-15"
         },
         {
           "name": "config_template",
@@ -1417,8 +1398,7 @@
             "en": "Algorithm learning playground: LeetCode, data structures, and sorting"
           },
           "url": "https://github.com/holynova/algorithm",
-          "pushed_at": "2020-12-06",
-          "homepage": "https://holynova.github.io/algorithm/"
+          "pushed_at": "2020-12-06"
         },
         {
           "name": "react_updates_playground",
@@ -1428,8 +1408,7 @@
             "en": "Playground for experimenting with new React features"
           },
           "url": "https://github.com/holynova/react_updates_playground",
-          "pushed_at": "2019-03-26",
-          "homepage": "https://holynova.github.io/react_updates_playground/"
+          "pushed_at": "2019-03-26"
         },
         {
           "name": "xiansang_collection",
@@ -1439,8 +1418,7 @@
             "en": "Frontend portfolio built with React and Create React App"
           },
           "url": "https://github.com/holynova/xiansang_collection",
-          "pushed_at": "2019-03-15",
-          "homepage": "https://holynova.github.io/xiansang_collection/"
+          "pushed_at": "2019-03-15"
         },
         {
           "name": "webpack_multi_pages",
@@ -1450,8 +1428,7 @@
             "en": "Webpack multi-page application best practices"
           },
           "url": "https://github.com/holynova/webpack_multi_pages",
-          "pushed_at": "2018-12-27",
-          "homepage": "https://holynova.github.io/webpack_multi_pages/"
+          "pushed_at": "2018-12-27"
         },
         {
           "name": "generator-sang",
@@ -1492,8 +1469,7 @@
             "en": "Next.js server-side rendering experiment with Redux and Redux-Saga integration"
           },
           "url": "https://github.com/holynova/next_pure_playground",
-          "pushed_at": "2018-11-03",
-          "homepage": "https://holynova.github.io/next_pure_playground/"
+          "pushed_at": "2018-11-03"
         },
         {
           "name": "daodao_node",
@@ -1523,8 +1499,7 @@
             "en": "Fake Chinese national ID card number generator"
           },
           "url": "https://github.com/holynova/fake_id_generator",
-          "pushed_at": "2018-10-16",
-          "homepage": "https://holynova.github.io/fake_id_generator/"
+          "pushed_at": "2018-10-16"
         },
         {
           "name": "read_line_and_format",
@@ -1545,8 +1520,7 @@
             "en": "A Next.js learning and demo project"
           },
           "url": "https://github.com/holynova/learn_next",
-          "pushed_at": "2018-02-28",
-          "homepage": "https://holynova.github.io/learn_next/"
+          "pushed_at": "2018-02-28"
         },
         {
           "name": "anti_CSRF",
@@ -1556,8 +1530,7 @@
             "en": "CSRF attack and defense demonstration with Node.js"
           },
           "url": "https://github.com/holynova/anti_CSRF",
-          "pushed_at": "2018-01-10",
-          "homepage": "https://holynova.github.io/anti_CSRF/"
+          "pushed_at": "2018-01-10"
         },
         {
           "name": "flex_layout",
@@ -1578,8 +1551,7 @@
             "en": "Interactive tree menu component experiment"
           },
           "url": "https://github.com/holynova/menu_tree",
-          "pushed_at": "2017-12-04",
-          "homepage": "https://holynova.github.io/menu_tree/"
+          "pushed_at": "2017-12-04"
         },
         {
           "name": "weex_learn",
@@ -1589,8 +1561,7 @@
             "en": "Weex cross-platform app development sandbox and learning project"
           },
           "url": "https://github.com/holynova/weex_learn",
-          "pushed_at": "2017-10-07",
-          "homepage": "https://holynova.github.io/weex_learn/"
+          "pushed_at": "2017-10-07"
         },
         {
           "name": "node_server",
@@ -1640,8 +1611,7 @@
             "en": "Frontend web application for the Feishudai microcredit platform"
           },
           "url": "https://github.com/holynova/Feishudai_frontend",
-          "pushed_at": "2017-05-14",
-          "homepage": "https://holynova.github.io/Feishudai_frontend/"
+          "pushed_at": "2017-05-14"
         },
         {
           "name": "learn_node",
@@ -1661,8 +1631,7 @@
             "en": "A jQuery date picker plugin with keyboard input and quick month/year navigation"
           },
           "url": "https://github.com/holynova/date_picker_plug_in",
-          "pushed_at": "2017-02-22",
-          "homepage": "https://holynova.github.io/date_picker_plug_in/"
+          "pushed_at": "2017-02-22"
         },
         {
           "name": "slide_to_unlock_plug_in",
@@ -1785,8 +1754,7 @@
             "en": "Hands-on Flask web framework examples and templates"
           },
           "url": "https://github.com/holynova/learn_flask",
-          "pushed_at": "2016-06-17",
-          "homepage": "https://holynova.github.io/learn_flask/"
+          "pushed_at": "2016-06-17"
         },
         {
           "name": "test_html",
