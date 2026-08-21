@@ -469,29 +469,27 @@
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-card-rest);
-  transition: transform 0.3s var(--ease-spring), border-color 0.22s ease, box-shadow 0.32s var(--ease-spring);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   will-change: transform, box-shadow;
 }
 
 /* Web Motion: Hover Shadow - Soften & expand shadow projection simulating light source lift */
 .detail-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px) !important;
   border-color: var(--border-hover);
   box-shadow: var(--shadow-card-hover);
 }
 
 .detail-card:active {
-  transform: translateY(-2px);
+  transform: translateY(-2px) !important;
   box-shadow: var(--shadow-md);
   transition-duration: 0.1s;
 }
 
 /* Card Entry Animation for Infinite/Progressive Scroll */
 .card-appear {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: cardEntry 0.36s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: cardEntry 0.36s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @keyframes cardEntry {

@@ -432,6 +432,12 @@
     card.style.animationDelay = `${Math.min(delayIndex * 0.035, 0.35)}s`;
     card.setAttribute('data-repo-index', index);
 
+    // Clean up animation class once completed so transform is fully unlocked for hover motion
+    card.addEventListener('animationend', () => {
+      card.classList.remove('card-appear');
+      card.style.animationDelay = '';
+    }, { once: true });
+
     const descText = repo.desc[state.currentLang] || repo.desc.zh;
     const catName = repo.categoryName[state.currentLang] || repo.categoryName.zh;
     const isLiked = state.likedRepos.has(repo.name);
