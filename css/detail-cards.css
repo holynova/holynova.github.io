@@ -644,36 +644,6 @@
   color: var(--text-secondary);
 }
 
-/* Hover Action Tag */
-.media-hover-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.18s var(--ease-spring);
-  z-index: 10;
-}
-
-.detail-card:hover .media-hover-overlay {
-  opacity: 1;
-}
-
-.overlay-action-pill {
-  padding: 5px 12px;
-  font-size: 11.5px;
-  font-weight: 600;
-  border-radius: var(--pill-radius);
-  background: var(--text-primary);
-  color: var(--text-inverse);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
 /* Card Body */
 .card-body {
   padding: 16px 18px 18px;
