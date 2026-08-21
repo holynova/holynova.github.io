@@ -428,11 +428,11 @@
 }
 
 /* =========================================================================
-   Masonry Grid Layout (Clean Detail.design Columns)
+   Masonry Grid Layout (3 Columns Max Layout)
    ========================================================================= */
 .detail-masonry-grid {
   column-count: 1;
-  column-gap: 20px;
+  column-gap: 22px;
   width: 100%;
 }
 
@@ -442,15 +442,9 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .detail-masonry-grid {
     column-count: 3;
-  }
-}
-
-@media (min-width: 1360px) {
-  .detail-masonry-grid {
-    column-count: 4;
   }
 }
 
