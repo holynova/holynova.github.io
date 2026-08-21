@@ -476,13 +476,13 @@
 
 /* Web Motion: Hover Shadow - Soften & expand shadow projection simulating light source lift */
 .detail-card:hover {
-  transform: translateY(-6px) scale(1.004);
+  transform: translateY(-5px);
   border-color: var(--border-hover);
   box-shadow: var(--shadow-card-hover);
 }
 
 .detail-card:active {
-  transform: translateY(-2px) scale(0.998);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   transition-duration: 0.1s;
 }
@@ -586,11 +586,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.25s var(--ease-spring);
-}
-
-.detail-card:hover .card-demo-image {
-  transform: scale(1.02);
 }
 
 .card-name-placeholder {
