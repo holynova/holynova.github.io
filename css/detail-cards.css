@@ -205,25 +205,28 @@
   top: 0px;
   z-index: 90;
   margin-bottom: 24px;
-  padding: 10px 0;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  padding: 12px 0;
 }
 
+/* Full-width Screen Blur Effect across 100vw */
 .progressive-blur-bg {
   position: absolute;
-  inset: -10px -24px;
+  top: -12px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   pointer-events: none;
   z-index: -1;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   background: linear-gradient(to bottom, 
-    rgba(var(--bg-page-rgb), 0.95) 0%, 
-    rgba(var(--bg-page-rgb), 0.88) 70%, 
+    rgba(var(--bg-page-rgb), 0.96) 0%, 
+    rgba(var(--bg-page-rgb), 0.90) 80%, 
     rgba(var(--bg-page-rgb), 0) 100%
   );
-  mask: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
-  -webkit-mask: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+  mask: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+  -webkit-mask: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
 }
 
 .toolbar-container {
