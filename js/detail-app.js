@@ -33,18 +33,22 @@
     }).catch(() => {});
   }
 
+  const BATCH_SIZE = 12; // 12 cards per batch (4 rows of 3 columns)
+
   // Application State
   const state = {
     allRepos: [],
     categories: [],
     activeCategory: 'all', // 'all', 'favorites', or category id
     searchQuery: '',
-    sortMode: 'latest', // 'latest', 'stars', 'likes', 'demo', 'alpha'
+    sortMode: 'latest', // 'latest', 'stars', 'alpha'
     likedRepos: loadLikes(),
     currentLang: localStorage.getItem('detail_portfolio_lang') || 'zh',
     currentTheme: localStorage.getItem('detail_portfolio_theme') || 'dark',
     activeModalIndex: -1,
-    filteredRepos: []
+    filteredRepos: [],
+    renderedCount: 0,
+    isLoadingMore: false
   };
 
   // DOM Cache
@@ -93,6 +97,8 @@
     DOM.modalLiveBtn = document.getElementById('inspector-live-btn');
     DOM.modalGithubBtn = document.getElementById('inspector-github-btn');
     DOM.ambientGlowLayer = document.getElementById('ambient-glow-layer');
+    DOM.scrollSentinel = document.getElementById('scroll-sentinel');
+    DOM.scrollStatus = document.getElementById('scroll-status');
   }
 
   // Bind Listeners
@@ -178,6 +184,9 @@
         closeInspectorModal();
       }
     });
+
+    // Initialize Infinite Scroll Intersection Observer
+    initScrollObserver();
   }
 
   // Load Data
@@ -377,12 +386,171 @@
     return list;
   }
 
-  // Render Masonry Cards
+  // Scroll Observer for Progressive Infinite Scroll
+  let scrollObserver = null;
+
+  function initScrollObserver() {
+    if (!('IntersectionObserver' in window)) return;
+    if (scrollObserver) scrollObserver.disconnect();
+
+    scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !state.isLoadingMore && state.renderedCount < state.filteredRepos.length) {
+          loadNextBatch();
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '380px 0px',
+      threshold: 0.01
+    });
+
+    if (DOM.scrollSentinel) {
+      scrollObserver.observe(DOM.scrollSentinel);
+    }
+  }
+
+  // Render Card Element
+  function createCardElement(repo, index, delayIndex = 0) {
+    const card = document.createElement('article');
+    card.className = 'detail-card card-appear';
+    card.style.animationDelay = `${Math.min(delayIndex * 0.035, 0.35)}s`;
+    card.setAttribute('data-repo-index', index);
+
+    const descText = repo.desc[state.currentLang] || repo.desc.zh;
+    const catName = repo.categoryName[state.currentLang] || repo.categoryName.zh;
+    const isLiked = state.likedRepos.has(repo.name);
+    const totalLikes = isLiked ? 1 : 0;
+    const aspectClass = 'aspect-16-10';
+
+    // Status Badge
+    let statusBadgeHtml = '';
+    if (repo.stars && repo.stars > 0) {
+      statusBadgeHtml = `<span class="card-status-badge star-badge">★ ${repo.stars > 1000 ? (repo.stars / 1000).toFixed(1) + 'k' : repo.stars}</span>`;
+    } else if (repo.pushed_at && repo.pushed_at.startsWith('2026-08')) {
+      statusBadgeHtml = `<span class="card-status-badge new-badge">NEW</span>`;
+    }
+
+    const mediaHtml = repo.screenshot
+      ? `<img src="${repo.screenshot}" alt="${repo.name}" class="card-demo-image" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=\\'card-name-placeholder\\'><span class=\\'placeholder-repo-name\\'>${repo.name}</span></div>'">`
+      : `<div class="card-name-placeholder"><span class="placeholder-repo-name">${repo.name}</span></div>`;
+
+    card.innerHTML = `
+      <div class="card-media-box ${aspectClass}">
+        <div class="visual-canvas-container">
+          ${mediaHtml}
+        </div>
+        <div class="media-hover-overlay">
+          <span class="overlay-action-pill">
+            <span>Inspect</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+          </span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta-header">
+          <span class="card-category-tag">${catName}</span>
+          ${statusBadgeHtml}
+        </div>
+        <h3 class="card-title">${repo.name}</h3>
+        <p class="card-description">${descText}</p>
+        <div class="card-footer-row">
+          <div class="card-tech-pills">
+            <span class="card-tech-pill">${repo.lang || 'Code'}</span>
+            ${(repo.commit_time || repo.pushed_at) ? `<span class="card-tech-pill">${(repo.commit_time || repo.pushed_at).slice(0, 10)}</span>` : ''}
+          </div>
+          <div class="card-action-links">
+            <!-- Like Button -->
+            <button class="card-like-btn ${isLiked ? 'liked' : ''}" data-repo-name="${repo.name}" title="点赞/收藏" onclick="toggleLike('${repo.name}', event)">
+              <svg class="heart-icon" width="13" height="13" viewBox="0 0 24 24" fill="${isLiked ? '#ef4444' : 'none'}" stroke="${isLiked ? '#ef4444' : 'currentColor'}" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <span class="like-count">${totalLikes}</span>
+            </button>
+
+            ${repo.homepage ? `
+              <a href="${repo.homepage}" target="_blank" class="card-link-icon-btn" title="Live Demo" onclick="event.stopPropagation();">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            ` : ''}
+            <a href="${repo.url}" target="_blank" class="card-link-icon-btn" title="GitHub Repo" onclick="event.stopPropagation();">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openInspectorModal(index));
+    return card;
+  }
+
+  // Load Next Batch for Progressive Scroll
+  function loadNextBatch(isInitial = false) {
+    if (state.renderedCount >= state.filteredRepos.length) {
+      updateScrollStatus(true);
+      return;
+    }
+
+    state.isLoadingMore = true;
+    if (!isInitial) {
+      updateScrollStatus(false, true);
+    }
+
+    const startIndex = state.renderedCount;
+    const endIndex = Math.min(startIndex + BATCH_SIZE, state.filteredRepos.length);
+    const slice = state.filteredRepos.slice(startIndex, endIndex);
+
+    const fragment = document.createDocumentFragment();
+    slice.forEach((repo, i) => {
+      const actualIndex = startIndex + i;
+      const card = createCardElement(repo, actualIndex, i);
+      fragment.appendChild(card);
+    });
+
+    DOM.grid.appendChild(fragment);
+    state.renderedCount = endIndex;
+    state.isLoadingMore = false;
+
+    updateScrollStatus(state.renderedCount >= state.filteredRepos.length);
+  }
+
+  // Update Status Indicator at Bottom
+  function updateScrollStatus(isEnd, isLoading = false) {
+    if (!DOM.scrollStatus) return;
+    const isZh = state.currentLang === 'zh';
+
+    if (isLoading) {
+      DOM.scrollStatus.innerHTML = `
+        <div class="scroll-loading-spinner">
+          <div class="spinner-icon"></div>
+          <span>${isZh ? '加载更多灵感...' : 'Loading more projects...'}</span>
+        </div>
+      `;
+    } else if (isEnd) {
+      if (state.filteredRepos.length > BATCH_SIZE) {
+        DOM.scrollStatus.innerHTML = `
+          <div class="scroll-end-badge">
+            <span>✨</span>
+            <span>${isZh ? `已展现全部 ${state.filteredRepos.length} 个精选项目` : `All ${state.filteredRepos.length} curated projects displayed`}</span>
+          </div>
+        `;
+      } else {
+        DOM.scrollStatus.innerHTML = '';
+      }
+    } else {
+      DOM.scrollStatus.innerHTML = '';
+    }
+  }
+
+  // Filter & Initial Batch Trigger
   function renderFilteredRepos() {
     state.filteredRepos = getFilteredAndSortedRepos();
     if (DOM.totalCounter) {
       DOM.totalCounter.textContent = `${state.filteredRepos.length} ${state.currentLang === 'zh' ? '项' : 'details'}`;
     }
+
+    DOM.grid.innerHTML = '';
+    state.renderedCount = 0;
+    state.isLoadingMore = false;
 
     if (state.filteredRepos.length === 0) {
       const isFavEmpty = state.activeCategory === 'favorites';
@@ -397,83 +565,15 @@
             : (state.currentLang === 'zh' ? '请尝试调整搜索关键词或选择其他分类' : 'Try adjusting your search terms or choosing another category')}</div>
         </div>
       `;
+      if (DOM.scrollStatus) DOM.scrollStatus.innerHTML = '';
+      if (DOM.scrollSentinel) DOM.scrollSentinel.style.display = 'none';
       return;
     }
 
-    DOM.grid.innerHTML = '';
+    if (DOM.scrollSentinel) DOM.scrollSentinel.style.display = 'block';
 
-    // Scheme A: Unified standard 16:10 golden ratio across all cards
-    const aspectClass = 'aspect-16-10';
-
-    state.filteredRepos.forEach((repo, index) => {
-      const card = document.createElement('article');
-      card.className = 'detail-card';
-      card.setAttribute('data-repo-index', index);
-
-      const descText = repo.desc[state.currentLang] || repo.desc.zh;
-      const catName = repo.categoryName[state.currentLang] || repo.categoryName.zh;
-      const isLiked = state.likedRepos.has(repo.name);
-      const totalLikes = isLiked ? 1 : 0;
-
-      // Status Badge
-      let statusBadgeHtml = '';
-      if (repo.stars && repo.stars > 0) {
-        statusBadgeHtml = `<span class="card-status-badge star-badge">★ ${repo.stars > 1000 ? (repo.stars / 1000).toFixed(1) + 'k' : repo.stars}</span>`;
-      } else if (repo.pushed_at && repo.pushed_at.startsWith('2026-08')) {
-        statusBadgeHtml = `<span class="card-status-badge new-badge">NEW</span>`;
-      }
-
-      const mediaHtml = repo.screenshot
-        ? `<img src="${repo.screenshot}" alt="${repo.name}" class="card-demo-image" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'card-name-placeholder\\'><span class=\\'placeholder-repo-name\\'>${repo.name}</span></div>'">`
-        : `<div class="card-name-placeholder"><span class="placeholder-repo-name">${repo.name}</span></div>`;
-
-      card.innerHTML = `
-        <div class="card-media-box ${aspectClass}">
-          <div class="visual-canvas-container">
-            ${mediaHtml}
-          </div>
-          <div class="media-hover-overlay">
-            <span class="overlay-action-pill">
-              <span>Inspect</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
-            </span>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-meta-header">
-            <span class="card-category-tag">${catName}</span>
-            ${statusBadgeHtml}
-          </div>
-          <h3 class="card-title">${repo.name}</h3>
-          <p class="card-description">${descText}</p>
-          <div class="card-footer-row">
-            <div class="card-tech-pills">
-              <span class="card-tech-pill">${repo.lang || 'Code'}</span>
-              ${(repo.commit_time || repo.pushed_at) ? `<span class="card-tech-pill">${(repo.commit_time || repo.pushed_at).slice(0, 10)}</span>` : ''}
-            </div>
-            <div class="card-action-links">
-              <!-- Like Button -->
-              <button class="card-like-btn ${isLiked ? 'liked' : ''}" data-repo-name="${repo.name}" title="点赞/收藏" onclick="toggleLike('${repo.name}', event)">
-                <svg class="heart-icon" width="13" height="13" viewBox="0 0 24 24" fill="${isLiked ? '#ef4444' : 'none'}" stroke="${isLiked ? '#ef4444' : 'currentColor'}" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                <span class="like-count">${totalLikes}</span>
-              </button>
-
-              ${repo.homepage ? `
-                <a href="${repo.homepage}" target="_blank" class="card-link-icon-btn" title="Live Demo" onclick="event.stopPropagation();">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-              ` : ''}
-              <a href="${repo.url}" target="_blank" class="card-link-icon-btn" title="GitHub Repo" onclick="event.stopPropagation();">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
-
-      card.addEventListener('click', () => openInspectorModal(index));
-      DOM.grid.appendChild(card);
-    });
+    // Render Initial Batch of 12 Cards
+    loadNextBatch(true);
   }
 
   // Detail Inspector Modal
