@@ -238,7 +238,13 @@
   padding: 12px 14px;
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.25s ease, box-shadow 0.35s var(--ease-spring), transform 0.25s var(--ease-spring);
+}
+
+/* Web Motion: Scroll Shadow - Soft elevation shadow when scrolled away from top */
+.sticky-toolbar-wrapper.is-scrolled .toolbar-container {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-scroll-nav);
 }
 
 .toolbar-container:focus-within {
@@ -462,8 +468,23 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  transition: transform 0.22s var(--ease-spring), border-color 0.2s ease, box-shadow 0.22s ease;
+  box-shadow: var(--shadow-card-rest);
+  transition: transform 0.3s var(--ease-spring), border-color 0.22s ease, box-shadow 0.32s var(--ease-spring);
   cursor: pointer;
+  will-change: transform, box-shadow;
+}
+
+/* Web Motion: Hover Shadow - Soften & expand shadow projection simulating light source lift */
+.detail-card:hover {
+  transform: translateY(-6px) scale(1.004);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.detail-card:active {
+  transform: translateY(-2px) scale(0.998);
+  box-shadow: var(--shadow-md);
+  transition-duration: 0.1s;
 }
 
 /* Card Entry Animation for Infinite/Progressive Scroll */

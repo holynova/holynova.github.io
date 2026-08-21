@@ -99,10 +99,25 @@
     DOM.ambientGlowLayer = document.getElementById('ambient-glow-layer');
     DOM.scrollSentinel = document.getElementById('scroll-sentinel');
     DOM.scrollStatus = document.getElementById('scroll-status');
+    DOM.stickyToolbar = document.querySelector('.sticky-toolbar-wrapper');
   }
 
   // Bind Listeners
   function bindEvents() {
+    // Scroll Shadow Motion on Sticky Toolbar
+    let lastScrolled = false;
+    function updateScrollShadow() {
+      const isScrolled = window.scrollY > 16;
+      if (isScrolled !== lastScrolled) {
+        lastScrolled = isScrolled;
+        if (DOM.stickyToolbar) {
+          DOM.stickyToolbar.classList.toggle('is-scrolled', isScrolled);
+        }
+      }
+    }
+    window.addEventListener('scroll', updateScrollShadow, { passive: true });
+    updateScrollShadow();
+
     // Mouse tracking for ambient background spotlight
     window.addEventListener('mousemove', (e) => {
       document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
