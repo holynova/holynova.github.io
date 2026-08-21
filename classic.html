@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>holynova · 前端作品与开源实验目录</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Analytics -->
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"
+      data-domains="holynova.github.io"
+      data-exclude-search="true"
+      data-exclude-hash="true"
+    ></script>
+
+    <style>
+        :root {
+            --bg-page: #09090b;
+            --bg-hover-row: rgba(255, 255, 255, 0.035);
+            --border-line: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.25);
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent-glow: rgba(255, 255, 255, 0.08);
+            --accent-link: #38bdf8;
+            --tag-bg: rgba(255, 255, 255, 0.06);
+            --tag-text: #d4d4d8;
+            --demo-badge-bg: rgba(56, 189, 248, 0.12);
+            --demo-badge-text: #38bdf8;
+            --demo-badge-border: rgba(56, 189, 248, 0.3);
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+        }
+
+        [data-theme="light"] {
+            --bg-page: #fafafa;
+            --bg-hover-row: rgba(0, 0, 0, 0.03);
+            --border-line: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(0, 0, 0, 0.25);
+            --text-primary: #09090b;
+            --text-secondary: #52525b;
+            --text-muted: #a1a1aa;
+            --accent-glow: rgba(0, 0, 0, 0.04);
+            --accent-link: #0284c7;
+            --tag-bg: rgba(0, 0, 0, 0.05);
+            --tag-text: #3f3f46;
+            --demo-badge-bg: rgba(2, 132, 199, 0.08);
+            --demo-badge-text: #0284c7;
+            --demo-badge-border: rgba(2, 132, 199, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            min-height: 100vh;
+            line-height: 1.5;
+            transition: background-color 0.25s var(--ease-out-expo), color 0.25s var(--ease-out-expo);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Pointer Spotlight Canvas / Overlay */
+        .ambient-spotlight {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--accent-glow), transparent 70%);
+            transition: opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 56px 28px 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        header.site-header {
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .header-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .brand-block {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .brand-title {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-badge {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 500;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: var(--tag-bg);
+            color: var(--text-secondary);
+            letter-spacing: 0.05em;
+        }
+
+        .brand-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 580px;
+            line-height: 1.6;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 1px solid var(--border-line);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 7px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s var(--ease-out-expo);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--border-hover);
+            background: var(--bg-hover-row);
+            transform: translateY(-1px);
+        }
+
+        .nav-btn.special {
+            color: var(--accent-link);
+            border-color: var(--demo-badge-border);
+            background: var(--demo-badge-bg);
+        }
+
+        .nav-btn.special:hover {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-link);
+        }
+
+        /* Search & Filter Nav */
+        .filter-nav-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 16px 0 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-line);
+            transition: background-color 0.25s ease;
+        }
+
+        [data-theme="light"] .filter-nav-sticky {
+            background: rgba(250, 250, 250, 0.88);
+        }
+
+        .search-row {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--bg-hover-row);
+            border: 1px solid var(--border-line);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 14px;
+            padding: 10px 48px 10px 16px;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.2s var(--ease-out-expo);
+        }
+
+        .search-input:focus {
+            border-color: var(--border-hover);
+            background: transparent;
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        .search-key {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+            background: var(--tag-bg);
+            border: 1px solid var(--border-line);
+            padding: 1px 6px;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        .nav-category-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .pills-container {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .cat-nav-item {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 12.5px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: color 0.15s ease, background 0.15s ease, transform 0.15s var(--ease-out-expo);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cat-nav-item:hover {
+            color: var(--text-primary);
+            background: var(--bg-hover-row);
+        }
+
+        .cat-nav-item.active {
+            color: var(--text-primary);
+            background: var(--tag-bg);
+            font-weight: 600;
+        }
+
+        .items-counter {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        /* Minimalist List Container */
+        .list-section-block {
+            margin-bottom: 48px;
+        }
+
+        .section-header-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 12px 0 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .section-title-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .section-meta-count {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Pure List Items - Focus on Rich Hover & Kinetic Transitions */
+        .repo-list-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .repo-list-item {
+            display: grid;
+            grid-template-columns: 240px 1fr auto;
+            align-items: baseline;
+            gap: 20px;
+            padding: 16px 14px;
+            border-bottom: 1px solid var(--border-line);
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            border-radius: 8px;
+            transition: transform 0.22s var(--ease-out-expo), background-color 0.2s ease, opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        /* Hover & Stagger Effects */
+        .repo-list-item:hover {
+            background-color: var(--bg-hover-row);
+            transform: translateX(6px);
+        }
+
+        .repo-primary-cell {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .repo-index-num {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+            width: 22px;
+            flex-shrink: 0;
+        }
+
+        .repo-name-text {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: color 0.15s ease;
+        }
+
+        .repo-list-item:hover .repo-name-text {
+            color: var(--accent-link);
+        }
+
+        .repo-desc-cell {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            white-space: normal;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            transition: color 0.15s ease;
+        }
+
+        .repo-list-item:hover .repo-desc-cell {
+            color: var(--text-primary);
+        }
+
+        .repo-action-cell {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .live-demo-tag {
+            font-size: 11.5px;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 5px;
+            background: var(--demo-badge-bg);
+            color: var(--demo-badge-text);
+            border: 1px solid var(--demo-badge-border);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            transition: all 0.15s var(--ease-out-expo);
+        }
+
+        .live-demo-tag:hover {
+            background: rgba(56, 189, 248, 0.22);
+            transform: translateY(-1px);
+        }
+
+        .repo-star-tag {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            color: #eab308;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .repo-lang-tag {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+            padding: 2px 6px;
+            background: var(--tag-bg);
+            border-radius: 4px;
+        }
+
+        .repo-date-tag {
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            color: var(--text-muted);
+        }
+
+        /* Empty State */
+        .empty-search-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer.site-footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-line);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 16px;
+            transition: color 0.15s ease;
+        }
+
+        footer a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 820px) {
+            .container {
+                padding: 32px 16px 60px;
+            }
+            .repo-list-item {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                padding: 14px 10px;
+            }
+            .repo-action-cell {
+                justify-content: flex-start;
+                margin-top: 4px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .repo-list-item, .nav-btn, .cat-nav-item {
+                transition: none !important;
+                transform: none !important;
+            }
+            .ambient-spotlight {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient Pointer Spotlight Layer -->
+    <div class="ambient-spotlight" id="ambient-spotlight"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-top">
+                <div class="brand-block">
+                    <h1 class="brand-title">
+                        <span>holynova · 小桑</span>
+                        <span class="brand-badge">ARCHIVE</span>
+                    </h1>
+                    <p class="brand-desc" id="brand-bio"
+                       data-zh="168 个 GitHub 真实原创开源项目与交互实验归档 · 极简主义列表呈现"
+                       data-en="Curated archive of 168 verified original GitHub repositories & experiments">
+                       168 个 GitHub 真实原创开源项目与交互实验归档 · 极简主义列表呈现
+                    </p>
+                </div>
+                <div class="header-controls">
+                    <a href="./index.html" class="nav-btn" style="border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-hover-row);">
+                        <span>Detail 视觉版</span>
+                        <span>↗</span>
+                    </a>
+                    <a href="https://holynova.github.io/ai-coding-report/" target="_blank" class="nav-btn special">
+                        <span>📊</span>
+                        <span id="report-nav-text" data-zh="AI 编程年度报告" data-en="AI Coding Report">AI 编程年度报告</span>
+                    </a>
+                    <a href="https://github.com/holynova" target="_blank" class="nav-btn">
+                        <span>GitHub</span>
+                    </a>
+                    <button class="nav-btn" onclick="toggleLang()" id="lang-btn" title="Toggle Language">
+                        <span id="lang-btn-text">EN</span>
+                    </button>
+                    <button class="nav-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle Dark/Light Mode">
+                        <span id="theme-icon">🌗</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sticky Filter & Search Bar -->
+        <div class="filter-nav-sticky">
+            <div class="search-row">
+                <input type="text" class="search-input" id="search-input"
+                       placeholder="搜索项目名称、技术栈或功能描述 (按 / 聚焦)..."
+                       oninput="handleSearch()">
+                <span class="search-key">/</span>
+            </div>
+            <div class="nav-category-bar">
+                <div class="pills-container" id="pills-container">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="items-counter" id="items-counter">
+                    168 项
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Minimalist List Showcase -->
+        <main id="list-main-container">
+            <!-- Dynamically populated list rows -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div>© 2014-2026 holynova. Minimalist kinetic portfolio.</div>
+            <div>
+                <a href="mailto:holy_nova@126.com">holy_nova@126.com</a>
+                <a href="https://github.com/holynova" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                <a href="https://holynova.github.io/ai-coding-report/" target="_blank">AI Coding Wrapped</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Data & Client Motion Controller -->
+    <script src="data/repos-store.js"></script>
+    <script>
+        const store = window.store;性盒模型 (Flexbox) 经典布局模式与实战演练", "en": "CSS flexbox layout playground and experiments"}, "url": "https://github.com/holynova/flex_layout", "pushed_at": "2017-12-28", "homepage": "https://holynova.github.io/flex_layout/"}, {"name": "menu_tree", "lang": "JavaScript", "desc": {"zh": "支持无限层级与折叠展开的交互式树形菜单组件", "en": "Interactive tree menu component experiment"}, "url": "https://github.com/holynova/menu_tree", "pushed_at": "2017-12-04"}, {"name": "weex_learn", "lang": "JavaScript", "desc": {"zh": "Weex 跨平台移动端原生渲染框架学习与开发实践", "en": "Weex cross-platform app development sandbox and learning project"}, "url": "https://github.com/holynova/weex_learn", "pushed_at": "2017-10-07"}, {"name": "node_server", "lang": "JavaScript", "desc": {"zh": "Node.js 原生 HTTP、Koa 与 Express 服务端框架对比示例", "en": "Node.js HTTP server learning examples with native http, Koa, and Express"}, "url": "https://github.com/holynova/node_server", "pushed_at": "2017-09-25"}, {"name": "xiaoyaoji_format", "lang": "JavaScript", "desc": {"zh": "小幺鸡 API 文档数据解析与多格式配置文件导出工具", "en": "Document data formatter for Xiaoyaoji that generates common config file formats"}, "url": "https://github.com/holynova/xiaoyaoji_format", "pushed_at": "2017-09-15"}, {"name": "train_station_stat", "lang": "Other", "desc": {"zh": "基于 12306 全铁路线车站数据的汉字字频与命名构词统计", "en": "Chinese railway station statistics, character frequency analysis, and word formation using 12306 data"}, "url": "https://github.com/holynova/train_station_stat", "pushed_at": "2017-08-30"}, {"name": "mock", "lang": "JavaScript", "desc": {"zh": "轻量本地 Mock API 服务器，支持动态路由与响应配置", "en": "Lightweight mock API server with configurable routes and responses"}, "url": "https://github.com/holynova/mock", "pushed_at": "2017-06-25"}, {"name": "Feishudai_frontend", "lang": "JavaScript", "desc": {"zh": "飞鼠贷微金融业务平台前端 Web 应用程序", "en": "Frontend web application for the Feishudai microcredit platform"}, "url": "https://github.com/holynova/Feishudai_frontend", "pushed_at": "2017-05-14"}, {"name": "learn_node", "lang": "JavaScript", "desc": {"zh": "Node.js 核心模块与异步 I/O 编程实战演练", "en": "Node.js learning exercises and examples"}, "url": "https://github.com/holynova/learn_node", "pushed_at": "2017-05-12"}, {"name": "date_picker_plug_in", "lang": "JavaScript", "desc": {"zh": "支持键盘输入与年月快速切换的轻量日期选择器插件", "en": "A jQuery date picker plugin with keyboard input and quick month/year navigation"}, "url": "https://github.com/holynova/date_picker_plug_in", "pushed_at": "2017-02-22"}, {"name": "slide_to_unlock_plug_in", "lang": "HTML", "desc": {"zh": "支持自定义滑块与回调触发的纯 JS 滑动解锁插件", "en": "A customizable jQuery slide-to-unlock plugin with callback support"}, "url": "https://github.com/holynova/slide_to_unlock_plug_in", "pushed_at": "2017-02-20", "homepage": "https://holynova.github.io/slide_to_unlock_plug_in/"}, {"name": "colorful_time_plug_in", "lang": "HTML", "desc": {"zh": "基于 HSL 颜色渐变算法的动态变色时钟插件", "en": "A jQuery clock plugin that shifts colors over time using HSL color mapping"}, "url": "https://github.com/holynova/colorful_time_plug_in", "pushed_at": "2017-02-20", "homepage": "https://holynova.github.io/colorful_time_plug_in/"}, {"name": "sublime_mac", "lang": "Python", "desc": {"zh": "macOS、Windows 与 Linux 下 Sublime Text 配置路径与 CLI 指南", "en": "Sublime Text user data folder paths and CLI notes for macOS, Windows, and Linux."}, "url": "https://github.com/holynova/sublime_mac", "pushed_at": "2016-12-10"}, {"name": "sublime_pack_backup", "lang": "Other", "desc": {"zh": "个人 Sublime Text 常用插件与按键绑定配置文件备份", "en": "Personal Sublime Text packages and user configuration backup"}, "url": "https://github.com/holynova/sublime_pack_backup", "pushed_at": "2016-11-16"}, {"name": "homework", "lang": "JavaScript", "desc": {"zh": "JavaScript 核心语法与前端开发作业练习代码集", "en": "JavaScript homework assignments and exercises"}, "url": "https://github.com/holynova/homework", "pushed_at": "2016-08-19", "homepage": "https://holynova.github.io/homework/"}, {"name": "excel_handler", "lang": "Python", "desc": {"zh": "基于 Python 开发的 Excel 表格数据批量读取与处理库", "en": "A Python library for reading, writing, and manipulating Excel files"}, "url": "https://github.com/holynova/excel_handler", "pushed_at": "2016-07-29"}, {"name": "sales_pipeline_merge", "lang": "Python", "desc": {"zh": "销售线索漏斗数据多源比对与合并处理脚本", "en": "Merge and reconcile sales pipeline data from multiple sources"}, "url": "https://github.com/holynova/sales_pipeline_merge", "pushed_at": "2016-06-30"}, {"name": "learn_sqlalchemy", "lang": "Python", "desc": {"zh": "Python SQLAlchemy ORM 数据库建模与查询实战学习", "en": "Learn SQLAlchemy ORM for Python database management"}, "url": "https://github.com/holynova/learn_sqlalchemy", "pushed_at": "2016-06-27"}, {"name": "flask_book", "lang": "Python", "desc": {"zh": "基于 Miguel Grinberg《Flask Web开发》的实战代码练习", "en": "Flask web development exercises from Miguel Grinberg's book"}, "url": "https://github.com/holynova/flask_book", "pushed_at": "2016-06-27"}, {"name": "learn_git2", "lang": "Other", "desc": {"zh": "Git 版本控制进阶分支策略与冲突解决实战练习", "en": "Hands-on exercises for learning Git version control"}, "url": "https://github.com/holynova/learn_git2", "pushed_at": "2016-06-24"}, {"name": "learn_git", "lang": "Other", "desc": {"zh": "Git 核心版本控制工作流与基础命令学习资源", "en": "Learning resources and exercises for Git version control"}, "url": "https://github.com/holynova/learn_git", "pushed_at": "2016-06-23"}, {"name": "learn_flask", "lang": "HTML", "desc": {"zh": "Python Flask 微框架 Web 应用开发示例与模板", "en": "Hands-on Flask web framework examples and templates"}, "url": "https://github.com/holynova/learn_flask", "pushed_at": "2016-06-17"}, {"name": "test_html", "lang": "HTML", "desc": {"zh": "HTML5 新特性与浏览器渲染边界实验沙盒", "en": "HTML test and experimentation sandbox"}, "url": "https://github.com/holynova/test_html", "pushed_at": "2016-06-03", "homepage": "https://holynova.github.io/test_html/"}, {"name": "collect_data_from_bidding_result", "lang": "Python", "desc": {"zh": "招投标公示平台结果数据采集与自动化解析爬虫", "en": "Collect and parse data from bidding result platforms"}, "url": "https://github.com/holynova/collect_data_from_bidding_result", "pushed_at": "2016-05-17", "stars": 1}, {"name": "learn_json", "lang": "Python", "desc": {"zh": "Python JSON 数据解析、序列化与复杂结构操作实践", "en": "Learn JSON parsing, serialization, and manipulation with Python"}, "url": "https://github.com/holynova/learn_json", "pushed_at": "2016-05-13"}, {"name": "2016sis", "lang": "Python", "desc": {"zh": "基于 Python 编写的简易学生信息管理系统 (2016)", "en": "A Python-based student information system project from 2016."}, "url": "https://github.com/holynova/2016sis", "pushed_at": "2016-05-09"}, {"name": "collect_data_from_qef_in_folder", "lang": "Python", "desc": {"zh": "批量提取与汇总本地文件夹内 QEF 数据文件的工具", "en": "Collect and extract data from QEF files in a folder."}, "url": "https://github.com/holynova/collect_data_from_qef_in_folder", "pushed_at": "2016-05-04"}, {"name": "walk_dir", "lang": "Python", "desc": {"zh": "Python 递归目录遍历与文件属性分析工具", "en": "Recursively traverse and list directory contents with Python"}, "url": "https://github.com/holynova/walk_dir", "pushed_at": "2016-05-04"}, {"name": "python_excel", "lang": "Python", "desc": {"zh": "Python Excel 表格批量自动化读写与格式化脚本", "en": "Python library for reading, writing, and manipulating Excel spreadsheets"}, "url": "https://github.com/holynova/python_excel", "pushed_at": "2016-04-19"}, {"name": "gae_lesson2", "lang": "Python", "desc": {"zh": "Google App Engine 云端应用开发与 Udacity 课程实例", "en": "Learning Google App Engine with Udacity course examples and Hello World app"}, "url": "https://github.com/holynova/gae_lesson2", "pushed_at": "2016-02-23"}, {"name": "price_table", "lang": "Other", "desc": {"zh": "多供应商比价与采购报价审核评估表单组件", "en": "Price quotation review and evaluation form"}, "url": "https://github.com/holynova/price_table", "pushed_at": "2014-07-20"}]}]};
+        let currentLang = localStorage.getItem('holynova_lang') || 'zh';
+        let activeCategory = 'all';
+        let currentTheme = localStorage.getItem('holynova_theme') || 'dark';
+
+        // Apply theme
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        // Ambient Mouse Spotlight Controller
+        const spotlight = document.getElementById('ambient-spotlight');
+        window.addEventListener('pointermove', (e) => {
+            const x = Math.round(e.clientX);
+            const y = Math.round(e.clientY);
+            document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+        }, { passive: true });
+
+        function toggleTheme() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('holynova_theme', currentTheme);
+        }
+
+        function toggleLang() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            localStorage.setItem('holynova_lang', currentLang);
+            updateLangUI();
+            renderCategoryPills();
+            handleSearch();
+        }
+
+        function updateLangUI() {
+            document.documentElement.setAttribute('lang', currentLang === 'zh' ? 'zh-CN' : 'en');
+            
+            const langBtnText = document.getElementById('lang-btn-text');
+            langBtnText.innerText = currentLang === 'zh' ? 'EN' : '中文';
+
+            const bio = document.getElementById('brand-bio');
+            bio.innerText = bio.getAttribute(`data-${currentLang}`);
+
+            const reportLink = document.getElementById('report-nav-text');
+            if (reportLink) {
+                reportLink.innerText = reportLink.getAttribute(`data-${currentLang}`);
+            }
+
+            const searchInput = document.getElementById('search-input');
+            searchInput.placeholder = currentLang === 'zh' 
+                ? '搜索项目名称、技术栈或功能描述 (按 / 聚焦)...' 
+                : 'Search project name, tech stack or keywords (press / to focus)...';
+        }
+
+        function renderCategoryPills() {
+            const container = document.getElementById('pills-container');
+            const total = store.totalRepos;
+            
+            let pillsHtml = `
+                <button class="cat-nav-item ${activeCategory === 'all' ? 'active' : ''}" onclick="setCategory('all')">
+                    ${currentLang === 'zh' ? '全部' : 'All'} (${total})
+                </button>
+            `;
+
+            store.categories.forEach(cat => {
+                const count = cat.repos.length;
+                const name = cat.name[currentLang] || cat.name.zh;
+                const isActive = activeCategory === cat.id;
+                pillsHtml += `
+                    <button class="cat-nav-item ${isActive ? 'active' : ''}" onclick="setCategory('${cat.id}')">
+                        ${name} (${count})
+                    </button>
+                `;
+            });
+
+            container.innerHTML = pillsHtml;
+        }
+
+        function setCategory(catId) {
+            activeCategory = catId;
+            renderCategoryPills();
+            handleSearch();
+        }
+
+        function handleSearch() {
+            const query = (document.getElementById('search-input').value || '').toLowerCase().trim();
+            const container = document.getElementById('list-main-container');
+            const countLabel = document.getElementById('items-counter');
+
+            let totalMatches = 0;
+            let outputHtml = '';
+
+            const categoriesToSearch = activeCategory === 'all' 
+                ? store.categories 
+                : store.categories.filter(c => c.id === activeCategory);
+
+            categoriesToSearch.forEach(cat => {
+                const matchedRepos = cat.repos.filter(r => {
+                    if (!query) return true;
+                    const name = r.name.toLowerCase();
+                    const lang = (r.lang || '').toLowerCase();
+                    const descZh = (r.desc && r.desc.zh ? r.desc.zh : '').toLowerCase();
+                    const descEn = (r.desc && r.desc.en ? r.desc.en : '').toLowerCase();
+                    return name.includes(query) || lang.includes(query) || descZh.includes(query) || descEn.includes(query);
+                });
+
+                if (matchedRepos.length > 0) {
+                    totalMatches += matchedRepos.length;
+                    const catName = cat.name[currentLang] || cat.name.zh;
+
+                    outputHtml += `
+                        <section class="list-section-block">
+                            <div class="section-header-row">
+                                <h2 class="section-title-text">${catName}</h2>
+                                <span class="section-meta-count">${matchedRepos.length} ${currentLang === 'zh' ? '项' : 'items'}</span>
+                            </div>
+                            <div class="repo-list-group">
+                                ${matchedRepos.map((r, idx) => renderListRow(r, idx + 1)).join('')}
+                            </div>
+                        </section>
+                    `;
+                }
+            });
+
+            if (totalMatches === 0) {
+                outputHtml = `
+                    <div class="empty-search-state">
+                        ${currentLang === 'zh' ? '无匹配的项目，请尝试其他关键词' : 'No matching projects found. Try different keywords.'}
+                    </div>
+                `;
+            }
+
+            countLabel.innerText = currentLang === 'zh' 
+                ? `${totalMatches} 项` 
+                : `${totalMatches} items`;
+
+            container.innerHTML = outputHtml;
+        }
+
+        function renderListRow(r, idx) {
+            const desc = (r.desc && r.desc[currentLang]) ? r.desc[currentLang] : (r.desc?.zh || r.name);
+            const dateStr = (r.pushed_at || '').substring(0, 7);
+            const indexFormatted = String(idx).padStart(2, '0');
+            
+            const demoTag = r.homepage ? `
+                <a href="${r.homepage}" target="_blank" rel="noopener noreferrer" class="live-demo-tag" onclick="event.stopPropagation()" title="${currentLang === 'zh' ? '体验在线 Demo' : 'Open Live Demo'}">
+                    <span>Live Demo</span>
+                    <span>↗</span>
+                </a>
+            ` : '';
+
+            const starTag = r.stars ? `
+                <span class="repo-star-tag" title="GitHub Stars">★ ${r.stars >= 1000 ? (r.stars/1000).toFixed(1) + 'k' : r.stars}</span>
+            ` : '';
+
+            return `
+                <div class="repo-list-item" onclick="window.open('${r.url}', '_blank')">
+                    <div class="repo-primary-cell">
+                        <span class="repo-index-num">${indexFormatted}</span>
+                        <span class="repo-name-text">${r.name}</span>
+                    </div>
+                    <div class="repo-desc-cell">${desc}</div>
+                    <div class="repo-action-cell">
+                        ${starTag}
+                        ${demoTag}
+                        <span class="repo-lang-tag">${r.lang || 'Other'}</span>
+                        <span class="repo-date-tag">${dateStr}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Keyboard Shortcut: '/' to focus search
+        window.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+                document.getElementById('search-input').focus();
+            }
+        });
+
+        // Init
+        updateLangUI();
+        renderCategoryPills();
+        handleSearch();
+    </script>
+</body>
+</html>

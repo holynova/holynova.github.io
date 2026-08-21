@@ -1,0 +1,122 @@
+/**
+ * Detail.design Authentic Minimalist Design System
+ * Clean, Monochromatic, High-Craft Editorial Tokens
+ * For holynova Portfolio v2
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+:root {
+  /* Dark Mode (Default) - Pure, Disciplined, Architectural */
+  --bg-page: #09090b;
+  --bg-page-rgb: 9, 9, 11;
+  --surface-primary: #121214;
+  --surface-secondary: #18181b;
+  --surface-tertiary: #27272a;
+  --surface-hover: #212124;
+  
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.22);
+  --border-focus: rgba(255, 255, 255, 0.4);
+
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --text-inverse: #09090b;
+
+  /* Restrained Functional Accents - No AI Slop Rainbows */
+  --accent-action: #ffffff;
+  --accent-star: #eab308;
+  --accent-pill-bg: rgba(255, 255, 255, 0.06);
+  --accent-pill-border: rgba(255, 255, 255, 0.1);
+  --accent-pill-text: #e4e4e7;
+
+  --card-radius: 20px;
+  --media-radius: 14px;
+  --pill-radius: 9999px;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
+
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+}
+
+[data-theme="light"] {
+  --bg-page: #fafafa;
+  --bg-page-rgb: 250, 250, 250;
+  --surface-primary: #ffffff;
+  --surface-secondary: #f4f4f5;
+  --surface-tertiary: #e4e4e7;
+  --surface-hover: #ebebee;
+  
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.11);
+  --border-hover: rgba(0, 0, 0, 0.2);
+  --border-focus: rgba(0, 0, 0, 0.4);
+
+  --text-primary: #09090b;
+  --text-secondary: #52525b;
+  --text-muted: #a1a1aa;
+  --text-inverse: #ffffff;
+
+  --accent-action: #09090b;
+  --accent-star: #ca8a04;
+  --accent-pill-bg: rgba(0, 0, 0, 0.04);
+  --accent-pill-border: rgba(0, 0, 0, 0.08);
+  --accent-pill-text: #27272a;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.09);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  line-height: 1.5;
+  transition: background-color 0.25s var(--ease-spring), color 0.25s var(--ease-spring);
+  overflow-x: hidden;
+  position: relative;
+}
+
+::selection {
+  background: var(--text-primary);
+  color: var(--bg-page);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
