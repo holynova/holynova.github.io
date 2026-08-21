@@ -682,6 +682,12 @@
                     return name.includes(query) || lang.includes(query) || descZh.includes(query) || descEn.includes(query);
                 });
 
+                matchedRepos.sort((a, b) => {
+                    const dateA = new Date(a.commit_time || a.pushed_at || 0).getTime() || 0;
+                    const dateB = new Date(b.commit_time || b.pushed_at || 0).getTime() || 0;
+                    return dateB - dateA;
+                });
+
                 if (matchedRepos.length > 0) {
                     totalMatches += matchedRepos.length;
                     const catName = cat.name[currentLang] || cat.name.zh;

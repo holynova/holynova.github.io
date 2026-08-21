@@ -361,25 +361,25 @@
 
     // Sorting
     list.sort((a, b) => {
-      const timeA = a.commit_time || a.pushed_at || '1970-01-01';
-      const timeB = b.commit_time || b.pushed_at || '1970-01-01';
+      const dateA = new Date(a.commit_time || a.pushed_at || 0).getTime() || 0;
+      const dateB = new Date(b.commit_time || b.pushed_at || 0).getTime() || 0;
 
       if (state.sortMode === 'stars') {
-        return (b.stars || 0) - (a.stars || 0) || timeB.localeCompare(timeA);
+        return (b.stars || 0) - (a.stars || 0) || (dateB - dateA);
       } else if (state.sortMode === 'likes') {
         const likedA = state.likedRepos.has(a.name) ? 1 : 0;
         const likedB = state.likedRepos.has(b.name) ? 1 : 0;
-        return likedB - likedA || timeB.localeCompare(timeA);
+        return likedB - likedA || (dateB - dateA);
       } else if (state.sortMode === 'demo') {
         const aHas = a.homepage ? 1 : 0;
         const bHas = b.homepage ? 1 : 0;
         if (aHas !== bHas) return bHas - aHas;
-        return timeB.localeCompare(timeA);
+        return dateB - dateA;
       } else if (state.sortMode === 'alpha') {
         return a.name.localeCompare(b.name);
       } else {
-        // Latest First: exact commit timestamp descending
-        return timeB.localeCompare(timeA);
+        // Latest First: exact chronological timestamp descending
+        return dateB - dateA;
       }
     });
 

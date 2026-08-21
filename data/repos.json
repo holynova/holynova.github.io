@@ -17,7 +17,7 @@
             "en": "Face alignment and animated MP4/GIF timeline timelapse exporter"
           },
           "url": "https://github.com/holynova/photo_align",
-          "pushed_at": "2026-08-08",
+          "pushed_at": "2026-07-13",
           "commit_time": "2026-07-13T12:32:10+08:00",
           "homepage": "https://holynova.github.io/photo_align/",
           "screenshot": "screenshots/photo_align.png",
@@ -33,7 +33,7 @@
           },
           "url": "https://github.com/holynova/web-motion-showcase",
           "pushed_at": "2026-08-11",
-          "commit_time": "2026-08-08T12:00:00+08:00",
+          "commit_time": "2026-08-11T08:55:12Z",
           "homepage": "https://holynova.github.io/web-motion-showcase/",
           "screenshot": "screenshots/web-motion-showcase.png",
           "hidden": true,
@@ -47,7 +47,7 @@
             "en": "Web-based digital photo weaving and image deconstruction art tool"
           },
           "url": "https://github.com/holynova/cut_and_remix",
-          "pushed_at": "2026-08-11",
+          "pushed_at": "2026-05-23",
           "commit_time": "2026-05-23T14:02:45+08:00",
           "homepage": "https://holynova.github.io/cut_and_remix/",
           "screenshot": "screenshots/cut_and_remix.png",
@@ -111,7 +111,8 @@
           "homepage": "https://holynova.github.io/text_book_pics/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/text_book_pics.png"
+          "screenshot": "screenshots/text_book_pics.png",
+          "commit_time": "2026-08-11T08:57:45Z"
         },
         {
           "name": "director-motorcycle-cinema",
@@ -125,7 +126,8 @@
           "homepage": "https://holynova.github.io/director-motorcycle-cinema/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/director-motorcycle-cinema.png"
+          "screenshot": "screenshots/director-motorcycle-cinema.png",
+          "commit_time": "2026-08-11T08:57:07Z"
         },
         {
           "name": "card-3d-depth-lab",
@@ -199,7 +201,8 @@
           "homepage": "https://holynova.github.io/raytracing-demo/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/raytracing-demo.png"
+          "screenshot": "screenshots/raytracing-demo.png",
+          "commit_time": "2026-08-11T08:52:59Z"
         },
         {
           "name": "string_alchemy",
@@ -224,10 +227,10 @@
             "en": "Reference library of 24 categories × 50 visual seed parameters for AI imagery"
           },
           "url": "https://github.com/holynova/50-seeds",
-          "pushed_at": "2026-08-01",
+          "pushed_at": "2026-08-21",
           "homepage": "https://holynova.github.io/50-seeds/",
           "screenshot": "screenshots/50-seeds.png",
-          "commit_time": "2026-08-01T22:04:37+08:00",
+          "commit_time": "2026-08-21T14:34:31+08:00",
           "hidden": false,
           "is_featured": true
         },
@@ -257,7 +260,8 @@
           "pushed_at": "2019-03-05",
           "screenshot": "screenshots/sort_animation.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "commit_time": "2019-03-05T11:46:32Z"
         }
       ]
     },
@@ -277,7 +281,7 @@
           },
           "url": "https://github.com/holynova/ai-agent-interview-report",
           "pushed_at": "2026-08-08",
-          "commit_time": "2026-08-08T12:00:00+08:00",
+          "commit_time": "2026-08-08T00:45:43Z",
           "homepage": "https://holynova.github.io/ai-agent-interview-report/",
           "screenshot": "screenshots/ai-agent-interview-report.png",
           "hidden": true,
@@ -295,7 +299,8 @@
           "homepage": "https://holynova.github.io/ai-gallery/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/ai-gallery.png"
+          "screenshot": "screenshots/ai-gallery.png",
+          "commit_time": "2026-08-11T08:58:24Z"
         },
         {
           "name": "ask_all_ai",
@@ -309,7 +314,8 @@
           "homepage": "https://holynova.github.io/ask_all_ai/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/ask_all_ai.png"
+          "screenshot": "screenshots/ask_all_ai.png",
+          "commit_time": "2026-08-11T08:55:44Z"
         },
         {
           "name": "anthropic-learn-assets",
@@ -323,7 +329,8 @@
           "homepage": "https://holynova.github.io/anthropic-learn-assets/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/anthropic-learn-assets.png"
+          "screenshot": "screenshots/anthropic-learn-assets.png",
+          "commit_time": "2026-08-11T08:54:10Z"
         },
         {
           "name": "video_prompt_generator",
@@ -352,7 +359,8 @@
           "homepage": "https://holynova.github.io/image_local_llm/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/image_local_llm.png"
+          "screenshot": "screenshots/image_local_llm.png",
+          "commit_time": "2026-08-08T00:43:16Z"
         },
         {
           "name": "prompt_one_by_one",
@@ -380,7 +388,8 @@
           "pushed_at": "2026-07-18",
           "homepage": "https://github.com/holynova/opencli-pipeline",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "commit_time": "2026-07-18T08:14:31Z"
         },
         {
           "name": "notebooklm_one_by_one",
@@ -492,7 +501,8 @@
           "homepage": "https://holynova.github.io/poetry-flow/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/poetry-flow.png"
+          "screenshot": "screenshots/poetry-flow.png",
+          "commit_time": "2026-08-08T00:40:01Z"
         },
         {
           "name": "flash-words",
@@ -506,7 +516,8 @@
           "homepage": "https://holynova.github.io/flash-words/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/flash-words.png"
+          "screenshot": "screenshots/flash-words.png",
+          "commit_time": "2026-08-07T13:51:53Z"
         },
         {
           "name": "poem-formula",
@@ -520,7 +531,8 @@
           "homepage": "https://holynova.github.io/poem-formula/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/poem-formula.png"
+          "screenshot": "screenshots/poem-formula.png",
+          "commit_time": "2026-08-07T13:46:14Z"
         },
         {
           "name": "brand-etymology",
@@ -560,10 +572,10 @@
             "en": "Classical Chinese poetry baby namer (2200+ GitHub Stars)"
           },
           "url": "https://github.com/holynova/gushi_namer",
-          "pushed_at": "2026-01-13",
+          "pushed_at": "2026-08-07",
           "stars": 2242,
           "screenshot": "screenshots/gushi_namer.png",
-          "commit_time": "2026-01-13T13:11:52+08:00",
+          "commit_time": "2026-08-07T13:45:51Z",
           "hidden": false,
           "is_featured": true
         },
@@ -600,7 +612,7 @@
           },
           "url": "https://github.com/holynova/js-go-compare",
           "pushed_at": "2026-08-08",
-          "commit_time": "2026-08-08T12:00:00+08:00",
+          "commit_time": "2026-08-08T00:56:12Z",
           "homepage": "https://holynova.github.io/js-go-compare/",
           "screenshot": "screenshots/js-go-compare.png",
           "hidden": true,
@@ -614,7 +626,7 @@
             "en": "Online icon generator and exporter for Chrome extensions and Favicons"
           },
           "url": "https://github.com/holynova/tiny-icons",
-          "pushed_at": "2026-08-07",
+          "pushed_at": "2026-08-01",
           "commit_time": "2026-08-01T22:57:05+08:00",
           "homepage": "https://holynova.github.io/tiny-icons/",
           "screenshot": "screenshots/tiny-icons.png",
@@ -633,7 +645,8 @@
           "homepage": "https://holynova.github.io/github-pages-detector-extension/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/github-pages-detector-extension.png"
+          "screenshot": "screenshots/github-pages-detector-extension.png",
+          "commit_time": "2026-08-11T08:55:59Z"
         },
         {
           "name": "equal_width",
@@ -648,7 +661,8 @@
           "homepage": "https://holynova.github.io/equal_width/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/equal_width.png"
+          "screenshot": "screenshots/equal_width.png",
+          "commit_time": "2026-08-11T08:50:42Z"
         },
         {
           "name": "one-punch",
@@ -662,7 +676,8 @@
           "homepage": "https://holynova.github.io/one-punch/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/one-punch.png"
+          "screenshot": "screenshots/one-punch.png",
+          "commit_time": "2026-08-11T06:05:23Z"
         },
         {
           "name": "ui-compare-privacy-policy",
@@ -707,7 +722,8 @@
           "homepage": "https://holynova.github.io/json-workbench-extension/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/json-workbench-extension.png"
+          "screenshot": "screenshots/json-workbench-extension.png",
+          "commit_time": "2026-08-08T00:46:38Z"
         },
         {
           "name": "multi-screen-view",
@@ -785,7 +801,7 @@
           },
           "url": "https://github.com/holynova/industry-book-recommender",
           "pushed_at": "2026-08-08",
-          "commit_time": "2026-08-08T12:00:00+08:00",
+          "commit_time": "2026-08-08T00:47:39Z",
           "homepage": "https://holynova.github.io/industry-book-recommender/",
           "screenshot": "screenshots/industry-book-recommender.png",
           "hidden": true,
@@ -800,7 +816,7 @@
           },
           "url": "https://github.com/holynova/health-book",
           "pushed_at": "2026-08-08",
-          "commit_time": "2026-08-08T12:00:00+08:00",
+          "commit_time": "2026-08-08T00:48:31Z",
           "homepage": "https://holynova.github.io/health-book/",
           "screenshot": "screenshots/health-book.png",
           "hidden": true,
@@ -829,9 +845,9 @@
             "en": "Personal GitHub profile showcase and dynamic activity status repository"
           },
           "url": "https://github.com/holynova/holynova",
-          "pushed_at": "2026-05-25",
+          "pushed_at": "2026-08-21",
           "screenshot": "screenshots/holynova.png",
-          "commit_time": "2026-05-25T22:06:50+08:00",
+          "commit_time": "2026-08-21T14:26:49+08:00",
           "hidden": false,
           "is_featured": true
         },
@@ -847,7 +863,8 @@
           "homepage": "https://holynova.github.io/wenwu-checkin/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/wenwu-checkin.png"
+          "screenshot": "screenshots/wenwu-checkin.png",
+          "commit_time": "2026-08-11T08:55:28Z"
         },
         {
           "name": "xiaoyuzhou-transcript-downloader",
@@ -861,7 +878,8 @@
           "homepage": "https://holynova.github.io/xiaoyuzhou-transcript-downloader/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/xiaoyuzhou-transcript-downloader.png"
+          "screenshot": "screenshots/xiaoyuzhou-transcript-downloader.png",
+          "commit_time": "2026-08-11T08:55:04Z"
         },
         {
           "name": "bookshelf_manager",
@@ -890,7 +908,8 @@
           "homepage": "https://holynova.github.io/mouse_scroll_heath_check/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/mouse_scroll_heath_check.png"
+          "screenshot": "screenshots/mouse_scroll_heath_check.png",
+          "commit_time": "2026-08-11T08:52:35Z"
         },
         {
           "name": "shanghai-public-facilities",
@@ -900,10 +919,10 @@
             "en": "Legacy compatibility entry redirecting to city-public-facilities"
           },
           "url": "https://github.com/holynova/shanghai-public-facilities",
-          "pushed_at": "2026-08-09",
+          "pushed_at": "2026-08-08",
           "homepage": "https://holynova.github.io/shanghai-public-facilities/",
           "screenshot": "screenshots/shanghai-public-facilities.png",
-          "commit_time": "2026-08-09T00:29:19+09:00",
+          "commit_time": "2026-08-08T15:38:23Z",
           "hidden": false,
           "is_featured": true
         },
@@ -919,7 +938,8 @@
           "homepage": "https://holynova.github.io/city-public-facilities/",
           "screenshot": "screenshots/city-public-facilities.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "commit_time": "2026-08-08T15:29:22Z"
         },
         {
           "name": "holynova.github.io",
@@ -929,11 +949,11 @@
             "en": "Personal GitHub Pages portfolio and master project navigation hub"
           },
           "url": "https://github.com/holynova/holynova.github.io",
-          "pushed_at": "2026-08-19",
+          "pushed_at": "2026-08-21",
           "stars": 3,
           "homepage": "https://holynova.github.io/holynova.github.io/",
           "screenshot": "screenshots/holynova.github.io.png",
-          "commit_time": "2026-08-19T19:50:30+08:00",
+          "commit_time": "2026-08-21T14:27:00+08:00",
           "hidden": false,
           "is_featured": true
         },
@@ -949,7 +969,8 @@
           "homepage": "https://holynova.github.io/hotpot-timer/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/hotpot-timer.png"
+          "screenshot": "screenshots/hotpot-timer.png",
+          "commit_time": "2026-08-08T00:53:40Z"
         },
         {
           "name": "holiday-visualizer",
@@ -963,7 +984,8 @@
           "homepage": "https://holynova.github.io/holiday-visualizer/",
           "screenshot": "screenshots/holiday-visualizer.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "commit_time": "2026-08-08T00:50:22Z"
         },
         {
           "name": "collection_miner",
@@ -1069,7 +1091,7 @@
             "en": "Generate 4K video contact sheets — see an entire movie at a glance"
           },
           "url": "https://github.com/holynova/one_second_movie",
-          "pushed_at": "2025-11-20",
+          "pushed_at": "2025-11-21",
           "commit_time": "2025-11-21T01:36:36+08:00",
           "homepage": "https://holynova.github.io/one_second_movie/",
           "screenshot": "screenshots/one_second_movie.png",
@@ -1088,7 +1110,8 @@
           "homepage": "https://holynova.github.io/24points/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/24points.png"
+          "screenshot": "screenshots/24points.png",
+          "commit_time": "2026-08-11T08:57:16Z"
         },
         {
           "name": "keyboard_sentence",
@@ -1113,9 +1136,9 @@
             "en": "Turn-based tactical grid tank combat game in TypeScript"
           },
           "url": "https://github.com/holynova/tank-tactics-game",
-          "pushed_at": "2025-12-06",
+          "pushed_at": "2026-08-11",
           "homepage": "https://holynova.github.io/tank-tactics-game/",
-          "commit_time": "2025-12-06T21:59:05+08:00",
+          "commit_time": "2026-08-11T08:51:46Z",
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/tank-tactics-game.png"
@@ -1132,7 +1155,8 @@
           "homepage": "https://holynova.github.io/mobile-sensor-playground/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/mobile-sensor-playground.png"
+          "screenshot": "screenshots/mobile-sensor-playground.png",
+          "commit_time": "2026-08-08T00:59:47Z"
         },
         {
           "name": "mercator-country-compare",
@@ -1146,7 +1170,8 @@
           "homepage": "https://holynova.github.io/mercator-country-compare/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/mercator-country-compare.png"
+          "screenshot": "screenshots/mercator-country-compare.png",
+          "commit_time": "2026-08-08T00:58:53Z"
         },
         {
           "name": "game-rating-lookup",
@@ -1160,7 +1185,8 @@
           "homepage": "https://holynova.github.io/game-rating-lookup/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/game-rating-lookup.png"
+          "screenshot": "screenshots/game-rating-lookup.png",
+          "commit_time": "2026-08-08T00:49:22Z"
         },
         {
           "name": "texas-holdem-hand-probability",
@@ -1174,7 +1200,8 @@
           "homepage": "https://holynova.github.io/texas-holdem-hand-probability/",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/texas-holdem-hand-probability.png"
+          "screenshot": "screenshots/texas-holdem-hand-probability.png",
+          "commit_time": "2026-08-08T00:44:48Z"
         },
         {
           "name": "emoji_life",
