@@ -409,14 +409,14 @@
 
     DOM.grid.innerHTML = '';
 
-    const aspectClasses = ['aspect-16-10', 'aspect-16-9', 'aspect-4-3', 'aspect-16-10'];
+    // Scheme A: Unified standard 16:10 golden ratio across all cards
+    const aspectClass = 'aspect-16-10';
 
     state.filteredRepos.forEach((repo, index) => {
       const card = document.createElement('article');
       card.className = 'detail-card';
       card.setAttribute('data-repo-index', index);
 
-      const aspectClass = aspectClasses[index % aspectClasses.length];
       const descText = repo.desc[state.currentLang] || repo.desc.zh;
       const catName = repo.categoryName[state.currentLang] || repo.categoryName.zh;
       const isLiked = state.likedRepos.has(repo.name);
