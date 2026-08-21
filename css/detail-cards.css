@@ -437,30 +437,31 @@
 }
 
 /* =========================================================================
-   Masonry Grid Layout (3 Columns Max Layout)
+   Standard Aligned Grid Layout (3 Columns, No Masonry Waterfall)
    ========================================================================= */
 .detail-masonry-grid {
-  column-count: 1;
-  column-gap: 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
   width: 100%;
 }
 
 @media (min-width: 640px) {
   .detail-masonry-grid {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 960px) {
   .detail-masonry-grid {
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Detail Card Item (No Fake Halos, Precision Borders & Elevation) */
+/* Detail Card Item (Standard 16:10 Aligned Grid Card) */
 .detail-card {
-  break-inside: avoid;
-  margin-bottom: 22px;
+  height: 100%;
+  margin-bottom: 0;
   background: var(--surface-primary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--card-radius);
@@ -560,14 +561,16 @@
 .card-media-box {
   position: relative;
   width: 100%;
+  aspect-ratio: 16 / 10;
   background: var(--surface-secondary);
   border-bottom: 1px solid var(--border-subtle);
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .aspect-16-10 { aspect-ratio: 16 / 10; }
-.aspect-16-9  { aspect-ratio: 16 / 9; }
-.aspect-4-3   { aspect-ratio: 4 / 3; }
+.aspect-16-9  { aspect-ratio: 16 / 10; }
+.aspect-4-3   { aspect-ratio: 16 / 10; }
 
 .visual-canvas-container {
   width: 100%;
@@ -637,11 +640,12 @@
   color: var(--text-secondary);
 }
 
-/* Card Body */
+/* Card Body (Flex Column Stretched to Align Rows Perfectly) */
 .card-body {
   padding: 16px 18px 18px;
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 10px;
 }
 
@@ -688,6 +692,11 @@
   line-height: 1.35;
   color: var(--text-primary);
   transition: color 0.15s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .detail-card:hover .card-title {
@@ -699,9 +708,10 @@
   color: var(--text-secondary);
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 39px;
 }
 
 .card-footer-row {
@@ -710,7 +720,7 @@
   justify-content: space-between;
   padding-top: 10px;
   border-top: 1px solid var(--border-subtle);
-  margin-top: 2px;
+  margin-top: auto;
 }
 
 .card-tech-pills {
