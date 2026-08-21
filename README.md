@@ -1,5 +1,9 @@
 # 小桑前端作品集 (Xiaosang Frontend Portfolio)
 
+
+![Screenshot](./screenshot.png)
+
+
 <p align="center">
   <img src="head.png" alt="小桑前端作品集" width="180" height="180">
 </p>
@@ -243,4 +247,3 @@ npx http-server -p 8080
 [![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://holynova.github.io/holynova.github.io/)
 
 移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://holynova.github.io/holynova.github.io/>
-
