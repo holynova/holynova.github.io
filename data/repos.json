@@ -5,8 +5,8 @@
     {
       "id": "creative-coding",
       "name": {
-        "zh": "创意编程与图形视觉",
-        "en": "Creative Coding & Visual Labs"
+        "zh": "创意视觉",
+        "en": "Creative"
       },
       "repos": [
         {
@@ -268,8 +268,8 @@
     {
       "id": "ai-tools",
       "name": {
-        "zh": "AI 与自动化工具",
-        "en": "AI & Automation Toolchains"
+        "zh": "AI 工具",
+        "en": "AI Tools"
       },
       "repos": [
         {
@@ -423,8 +423,8 @@
     {
       "id": "chinese-tools",
       "name": {
-        "zh": "语言文化与诗词工具",
-        "en": "Language, Culture & Poetry"
+        "zh": "语言文化",
+        "en": "Language"
       },
       "repos": [
         {
@@ -599,8 +599,8 @@
     {
       "id": "dev-tools",
       "name": {
-        "zh": "Chrome 扩展与开发工具",
-        "en": "Chrome Extensions & Developer Tools"
+        "zh": "开发工具",
+        "en": "Dev Tools"
       },
       "repos": [
         {
@@ -788,8 +788,8 @@
     {
       "id": "productivity",
       "name": {
-        "zh": "效率计算与生活实用",
-        "en": "Productivity, Finance & Life"
+        "zh": "生活效率",
+        "en": "Productivity"
       },
       "repos": [
         {
@@ -1079,8 +1079,8 @@
     {
       "id": "games",
       "name": {
-        "zh": "游戏与趣味交互",
-        "en": "Games & Interactive"
+        "zh": "游戏交互",
+        "en": "Games"
       },
       "repos": [
         {
