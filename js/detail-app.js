@@ -330,8 +330,8 @@
     });
 
     const labels = {
-      zh: { latest: '最新优先', stars: '标星最多', likes: '点赞最多', demo: '在线演示优先', alpha: '名称排序 A-Z' },
-      en: { latest: 'Latest first', stars: 'Most starred', likes: 'Most liked', demo: 'Live demo first', alpha: 'Name A-Z' }
+      zh: { latest: '最新', stars: 'Star', alpha: '字母顺序' },
+      en: { latest: 'Latest', stars: 'Star', alpha: 'Name A-Z' }
     };
     DOM.sortLabel.textContent = labels[state.currentLang][mode] || mode;
     renderFilteredRepos();
@@ -366,15 +366,6 @@
 
       if (state.sortMode === 'stars') {
         return (b.stars || 0) - (a.stars || 0) || (dateB - dateA);
-      } else if (state.sortMode === 'likes') {
-        const likedA = state.likedRepos.has(a.name) ? 1 : 0;
-        const likedB = state.likedRepos.has(b.name) ? 1 : 0;
-        return likedB - likedA || (dateB - dateA);
-      } else if (state.sortMode === 'demo') {
-        const aHas = a.homepage ? 1 : 0;
-        const bHas = b.homepage ? 1 : 0;
-        if (aHas !== bHas) return bHas - aHas;
-        return dateB - dateA;
       } else if (state.sortMode === 'alpha') {
         return a.name.localeCompare(b.name);
       } else {
@@ -389,7 +380,9 @@
   // Render Masonry Cards
   function renderFilteredRepos() {
     state.filteredRepos = getFilteredAndSortedRepos();
-    DOM.totalCounter.textContent = `${state.filteredRepos.length} ${state.currentLang === 'zh' ? '项' : 'details'}`;
+    if (DOM.totalCounter) {
+      DOM.totalCounter.textContent = `${state.filteredRepos.length} ${state.currentLang === 'zh' ? '项' : 'details'}`;
+    }
 
     if (state.filteredRepos.length === 0) {
       const isFavEmpty = state.activeCategory === 'favorites';
