@@ -3,6 +3,104 @@
   "totalRepos": 78,
   "categories": [
     {
+      "id": "chrome-extensions",
+      "name": {
+        "zh": "Chrome 插件",
+        "en": "Chrome Extensions"
+      },
+      "repos": [
+        {
+          "name": "prompt_one_by_one",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "Chrome 扩展：在 Gemini / AI 平台逐条批量执行提示词生成",
+            "en": "Chrome extension for sequential batch prompt generation on Gemini and AI platforms"
+          },
+          "url": "https://github.com/holynova/prompt_one_by_one",
+          "pushed_at": "2026-08-01",
+          "stars": 6,
+          "screenshot": "screenshots/prompt_one_by_one.png",
+          "commit_time": "2026-08-01T16:19:14+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "github-pages-detector-extension",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "Chrome 扩展：自动检测当前 GitHub 仓库是否存在 Pages 在线预览",
+            "en": "Chrome extension detecting active GitHub Pages for repositories automatically"
+          },
+          "url": "https://github.com/holynova/github-pages-detector-extension",
+          "pushed_at": "2026-08-11",
+          "homepage": "https://holynova.github.io/github-pages-detector-extension/",
+          "hidden": false,
+          "is_featured": true,
+          "screenshot": "screenshots/github-pages-detector-extension.png",
+          "commit_time": "2026-08-11T08:55:59Z"
+        },
+        {
+          "name": "json-workbench-extension",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "结构化 JSON 可视化编辑、语法校验与转换 Chrome 扩展",
+            "en": "Chrome extension for structured JSON visual editing, validation, and conversion"
+          },
+          "url": "https://github.com/holynova/json-workbench-extension",
+          "pushed_at": "2026-08-08",
+          "homepage": "https://holynova.github.io/json-workbench-extension/",
+          "hidden": false,
+          "is_featured": true,
+          "screenshot": "screenshots/json-workbench-extension.png",
+          "commit_time": "2026-08-08T00:46:38Z"
+        },
+        {
+          "name": "scrape-to-markdown.chrome",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "Chrome 侧边栏扩展：一键提取网页为 Markdown、导出社交数据与媒体",
+            "en": "Chrome side-panel extension to save web content as Markdown and export media"
+          },
+          "url": "https://github.com/holynova/scrape-to-markdown.chrome",
+          "pushed_at": "2026-07-26",
+          "screenshot": "screenshots/scrape-to-markdown.chrome.png",
+          "commit_time": "2026-07-26T13:10:57+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "youtube-channel-scraper-chrome",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "Chrome 扩展：自动滚动抓取 YouTube 频道视频信息并导出 JSON",
+            "en": "Chrome extension to scrape YouTube channel video info with auto-scroll and JSON export"
+          },
+          "url": "https://github.com/holynova/youtube-channel-scraper-chrome",
+          "pushed_at": "2026-03-06",
+          "stars": 1,
+          "commit_time": "2026-03-06T13:49:25+08:00",
+          "hidden": false,
+          "is_featured": true,
+          "screenshot": "screenshots/youtube-channel-scraper-chrome.png"
+        },
+        {
+          "name": "collection_miner",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "Chrome 新标签页智能唤醒与重温历史书签扩展",
+            "en": "Chrome extension that resurfaces forgotten bookmarks on each new tab"
+          },
+          "url": "https://github.com/holynova/collection_miner",
+          "pushed_at": "2026-06-20",
+          "homepage": "https://holynova.github.io/collection_miner/",
+          "screenshot": "screenshots/collection_miner.png",
+          "commit_time": "2026-06-20T20:04:49+08:00",
+          "hidden": false,
+          "is_featured": true
+        }
+      ]
+    },
+    {
       "id": "content-only",
       "name": {
         "zh": "纯内容网站",
@@ -402,21 +500,6 @@
           "commit_time": "2026-08-08T00:43:16Z"
         },
         {
-          "name": "prompt_one_by_one",
-          "lang": "JavaScript",
-          "desc": {
-            "zh": "Chrome 扩展：在 Gemini / AI 平台逐条批量执行提示词生成",
-            "en": "Chrome extension for sequential batch prompt generation on Gemini and AI platforms"
-          },
-          "url": "https://github.com/holynova/prompt_one_by_one",
-          "pushed_at": "2026-08-01",
-          "stars": 6,
-          "screenshot": "screenshots/prompt_one_by_one.png",
-          "commit_time": "2026-08-01T16:19:14+08:00",
-          "hidden": false,
-          "is_featured": true
-        },
-        {
           "name": "opencli-pipeline",
           "lang": "JavaScript",
           "desc": {
@@ -658,21 +741,6 @@
           "is_featured": false
         },
         {
-          "name": "github-pages-detector-extension",
-          "lang": "JavaScript",
-          "desc": {
-            "zh": "Chrome 扩展：自动检测当前 GitHub 仓库是否存在 Pages 在线预览",
-            "en": "Chrome extension detecting active GitHub Pages for repositories automatically"
-          },
-          "url": "https://github.com/holynova/github-pages-detector-extension",
-          "pushed_at": "2026-08-11",
-          "homepage": "https://holynova.github.io/github-pages-detector-extension/",
-          "hidden": false,
-          "is_featured": true,
-          "screenshot": "screenshots/github-pages-detector-extension.png",
-          "commit_time": "2026-08-11T08:55:59Z"
-        },
-        {
           "name": "equal_width",
           "lang": "JavaScript",
           "desc": {
@@ -735,21 +803,6 @@
           "screenshot": "screenshots/json_to_ts.png"
         },
         {
-          "name": "json-workbench-extension",
-          "lang": "TypeScript",
-          "desc": {
-            "zh": "结构化 JSON 可视化编辑、语法校验与转换 Chrome 扩展",
-            "en": "Chrome extension for structured JSON visual editing, validation, and conversion"
-          },
-          "url": "https://github.com/holynova/json-workbench-extension",
-          "pushed_at": "2026-08-08",
-          "homepage": "https://holynova.github.io/json-workbench-extension/",
-          "hidden": false,
-          "is_featured": true,
-          "screenshot": "screenshots/json-workbench-extension.png",
-          "commit_time": "2026-08-08T00:46:38Z"
-        },
-        {
           "name": "multi-screen-view",
           "lang": "JavaScript",
           "desc": {
@@ -778,34 +831,6 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/chrome-session-tui.png"
-        },
-        {
-          "name": "scrape-to-markdown.chrome",
-          "lang": "TypeScript",
-          "desc": {
-            "zh": "Chrome 侧边栏扩展：一键提取网页为 Markdown、导出社交数据与媒体",
-            "en": "Chrome side-panel extension to save web content as Markdown and export media"
-          },
-          "url": "https://github.com/holynova/scrape-to-markdown.chrome",
-          "pushed_at": "2026-07-26",
-          "screenshot": "screenshots/scrape-to-markdown.chrome.png",
-          "commit_time": "2026-07-26T13:10:57+08:00",
-          "hidden": false,
-          "is_featured": true
-        },
-        {
-          "name": "youtube-channel-scraper-chrome",
-          "lang": "JavaScript",
-          "desc": {
-            "zh": "Chrome 扩展：自动滚动抓取 YouTube 频道视频信息并导出 JSON",
-            "en": "Chrome extension to scrape YouTube channel video info with auto-scroll and JSON export"
-          },
-          "url": "https://github.com/holynova/youtube-channel-scraper-chrome",
-          "pushed_at": "2026-03-06",
-          "stars": 1,
-          "commit_time": "2026-03-06T13:49:25+08:00",
-          "hidden": false,
-          "is_featured": true
         }
       ]
     },
@@ -995,21 +1020,6 @@
           "hidden": false,
           "is_featured": true,
           "commit_time": "2026-08-08T00:50:22Z"
-        },
-        {
-          "name": "collection_miner",
-          "lang": "JavaScript",
-          "desc": {
-            "zh": "Chrome 新标签页智能唤醒与重温历史书签扩展",
-            "en": "Chrome extension that resurfaces forgotten bookmarks on each new tab"
-          },
-          "url": "https://github.com/holynova/collection_miner",
-          "pushed_at": "2026-06-20",
-          "homepage": "https://holynova.github.io/collection_miner/",
-          "screenshot": "screenshots/collection_miner.png",
-          "commit_time": "2026-06-20T20:04:49+08:00",
-          "hidden": false,
-          "is_featured": true
         },
         {
           "name": "pdf2wechat",

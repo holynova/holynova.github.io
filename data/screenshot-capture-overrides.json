@@ -1,0 +1,10 @@
+{
+  "offer_calculator": {
+    "skip": true,
+    "reason": "Live URL currently returns an empty Vite shell; retain the last verified screenshot until the source deployment is restored."
+  },
+  "one_second_movie": {
+    "skip": true,
+    "reason": "Live URL currently returns 404; retain the last verified screenshot until the Pages route is restored."
+  }
+}
