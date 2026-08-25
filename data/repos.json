@@ -1,7 +1,46 @@
 {
-  "lastUpdated": "2026-08-21",
+  "lastUpdated": "2026-08-25",
   "totalRepos": 78,
   "categories": [
+    {
+      "id": "content-only",
+      "name": {
+        "zh": "纯内容网站",
+        "en": "Content-only"
+      },
+      "repos": [
+        {
+          "name": "health-book",
+          "lang": "HTML",
+          "desc": {
+            "zh": "个人与家庭健康知识管理、常见疾病科普与用药指标记录",
+            "en": "Personal and family health knowledge management and medication guide"
+          },
+          "url": "https://github.com/holynova/health-book",
+          "pushed_at": "2026-08-08",
+          "commit_time": "2026-08-08T00:48:31Z",
+          "homepage": "https://holynova.github.io/health-book/",
+          "screenshot": "screenshots/health-book.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "poem-formula",
+          "lang": "HTML",
+          "desc": {
+            "zh": "古诗词格律、韵脚规则与结构特征拆解工具",
+            "en": "Structural formula and rhyming pattern breakdown for classical poetry"
+          },
+          "url": "https://github.com/holynova/poem-formula",
+          "pushed_at": "2026-08-07",
+          "homepage": "https://holynova.github.io/poem-formula/",
+          "hidden": false,
+          "is_featured": true,
+          "screenshot": "screenshots/poem-formula.png",
+          "commit_time": "2026-08-07T13:46:14Z"
+        }
+      ]
+    },
     {
       "id": "creative-coding",
       "name": {
@@ -520,21 +559,6 @@
           "commit_time": "2026-08-07T13:51:53Z"
         },
         {
-          "name": "poem-formula",
-          "lang": "HTML",
-          "desc": {
-            "zh": "古诗词格律、韵脚规则与结构特征拆解工具",
-            "en": "Structural formula and rhyming pattern breakdown for classical poetry"
-          },
-          "url": "https://github.com/holynova/poem-formula",
-          "pushed_at": "2026-08-07",
-          "homepage": "https://holynova.github.io/poem-formula/",
-          "hidden": false,
-          "is_featured": true,
-          "screenshot": "screenshots/poem-formula.png",
-          "commit_time": "2026-08-07T13:46:14Z"
-        },
-        {
           "name": "brand-etymology",
           "lang": "TypeScript",
           "desc": {
@@ -804,21 +828,6 @@
           "commit_time": "2026-08-08T00:47:39Z",
           "homepage": "https://holynova.github.io/industry-book-recommender/",
           "screenshot": "screenshots/industry-book-recommender.png",
-          "hidden": true,
-          "is_featured": false
-        },
-        {
-          "name": "health-book",
-          "lang": "HTML",
-          "desc": {
-            "zh": "个人与家庭健康知识管理、常见疾病科普与用药指标记录",
-            "en": "Personal and family health knowledge management and medication guide"
-          },
-          "url": "https://github.com/holynova/health-book",
-          "pushed_at": "2026-08-08",
-          "commit_time": "2026-08-08T00:48:31Z",
-          "homepage": "https://holynova.github.io/health-book/",
-          "screenshot": "screenshots/health-book.png",
           "hidden": true,
           "is_featured": false
         },
