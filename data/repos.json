@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-25",
-  "totalRepos": 78,
+  "lastUpdated": "2026-08-27",
+  "totalRepos": 80,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -107,6 +107,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "shanghai-through-walls",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "以上海地标为对象的证据型建筑剖透图册，区分可核实结构与受约束的推断复原",
+            "en": "Evidence-backed Shanghai architectural cutaway atlas distinguishing verified structure from constrained inference"
+          },
+          "url": "https://github.com/holynova/shanghai-through-walls",
+          "homepage": "https://holynova.github.io/shanghai-through-walls/",
+          "screenshot": "screenshots/shanghai-through-walls.jpg",
+          "pushed_at": "2026-08-27",
+          "commit_time": "2026-08-27T23:07:00+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "print-atlas",
           "lang": "HTML",
