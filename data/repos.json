@@ -108,6 +108,21 @@
       },
       "repos": [
         {
+          "name": "print-atlas",
+          "lang": "HTML",
+          "desc": {
+            "zh": "从木刻、凹凸平孔版到半调网点与 CMYK 套印的互动印刷图鉴",
+            "en": "Interactive atlas of printmaking, halftone reproduction, and CMYK overprinting"
+          },
+          "url": "https://github.com/holynova/print-atlas",
+          "pushed_at": "2026-08-27",
+          "homepage": "https://holynova.github.io/print-atlas/",
+          "screenshot": "screenshots/print-atlas.png",
+          "hidden": false,
+          "is_featured": true,
+          "commit_time": "2026-08-27T22:54:23+08:00"
+        },
+        {
           "name": "health-book",
           "lang": "HTML",
           "desc": {
