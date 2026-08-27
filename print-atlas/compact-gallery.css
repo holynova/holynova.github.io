@@ -1,0 +1,15 @@
+/* Compact contact-sheet override: keep every sample scannable in one view. */
+.case-stage{max-width:460px;justify-self:end;width:100%}
+.case-stage img{height:clamp(300px,32vw,470px);aspect-ratio:auto}
+.gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 14px}
+.gallery-item{min-width:0}
+.gallery-item img{height:clamp(190px,21vw,300px);aspect-ratio:auto}
+.gallery-item figcaption{padding:8px 0 0;gap:8px;font-size:12px;line-height:1.35}
+@media(max-width:780px){
+  .case-stage{max-width:none}
+  .case-stage img{height:330px;aspect-ratio:auto}
+  .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 10px;margin-top:36px}
+  .gallery-item{margin:0}
+  .gallery-item img{height:190px}
+  .gallery-item figcaption{font-size:10px}
+}
