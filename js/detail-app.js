@@ -215,17 +215,21 @@
 
   // Load Data
   async function loadData() {
-    if (window.store) {
-      processLoadedData(window.store);
-      return;
-    }
     try {
-      const response = await fetch('./data/repos.json');
+      const response = await fetch('./data/repos.json', { cache: 'no-store' });
       if (!response.ok) throw new Error('Network error');
       const data = await response.json();
       processLoadedData(data);
     } catch (err) {
-      console.warn('Direct fetch failed:', err);
+      console.warn('Portfolio data fetch failed:', err);
+      if (DOM.grid) {
+        DOM.grid.innerHTML = `
+          <div class="empty-state-box">
+            <div class="empty-state-title">项目目录暂时无法加载</div>
+            <div>请刷新页面后重试。</div>
+          </div>
+        `;
+      }
     }
   }
 
