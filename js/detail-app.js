@@ -208,13 +208,6 @@
     DOM.imageLightbox.addEventListener('click', (event) => {
       if (event.target === DOM.imageLightbox) closeImageLightbox();
     });
-    document.addEventListener('click', (event) => {
-      const previewButton = event.target.closest('.card-image-preview');
-      if (!previewButton) return;
-      event.preventDefault();
-      event.stopPropagation();
-      openImageLightbox(previewButton.dataset.previewSrc, previewButton.dataset.previewAlt);
-    });
 
     // Initialize Infinite Scroll Intersection Observer
     initScrollObserver();
@@ -510,6 +503,14 @@
       </div>
     `;
 
+    const previewButton = card.querySelector('.card-image-preview');
+    if (previewButton) {
+      previewButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        openImageLightbox(previewButton.dataset.previewSrc, previewButton.dataset.previewAlt);
+      });
+    }
     card.addEventListener('click', () => openInspectorModal(index));
     return card;
   }
