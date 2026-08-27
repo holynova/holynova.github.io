@@ -96,6 +96,9 @@
     DOM.modalStarsVal = document.getElementById('inspector-stars-val');
     DOM.modalLiveBtn = document.getElementById('inspector-live-btn');
     DOM.modalGithubBtn = document.getElementById('inspector-github-btn');
+    DOM.imageLightbox = document.getElementById('image-lightbox');
+    DOM.imageLightboxImage = document.getElementById('image-lightbox-image');
+    DOM.imageLightboxCloseBtn = document.getElementById('image-lightbox-close');
     DOM.ambientGlowLayer = document.getElementById('ambient-glow-layer');
     DOM.scrollSentinel = document.getElementById('scroll-sentinel');
     DOM.scrollStatus = document.getElementById('scroll-status');
@@ -138,7 +141,9 @@
         e.preventDefault();
         DOM.searchInput.focus();
       } else if (e.key === 'Escape') {
-        if (state.activeModalIndex >= 0) {
+        if (DOM.imageLightbox.classList.contains('open')) {
+          closeImageLightbox();
+        } else if (state.activeModalIndex >= 0) {
           closeInspectorModal();
         } else if (isInput) {
           DOM.searchInput.blur();
@@ -198,6 +203,17 @@
       if (e.target === DOM.modalBackdrop) {
         closeInspectorModal();
       }
+    });
+    DOM.imageLightboxCloseBtn.addEventListener('click', closeImageLightbox);
+    DOM.imageLightbox.addEventListener('click', (event) => {
+      if (event.target === DOM.imageLightbox) closeImageLightbox();
+    });
+    document.addEventListener('click', (event) => {
+      const previewButton = event.target.closest('.card-image-preview');
+      if (!previewButton) return;
+      event.preventDefault();
+      event.stopPropagation();
+      openImageLightbox(previewButton.dataset.previewSrc, previewButton.dataset.previewAlt);
     });
 
     // Initialize Infinite Scroll Intersection Observer
@@ -453,7 +469,7 @@
     }
 
     const mediaHtml = repo.screenshot
-      ? `<img src="${repo.screenshot}" alt="${repo.name}" class="card-demo-image" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=\\'card-name-placeholder\\'><span class=\\'placeholder-repo-name\\'>${repo.name}</span></div>'">`
+      ? `<button type="button" class="card-image-preview" data-preview-src="${repo.screenshot}" data-preview-alt="${repo.name} 项目预览大图" aria-label="查看 ${repo.name} 的大图"><img src="${repo.screenshot}" alt="${repo.name}" class="card-demo-image" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=\\'card-name-placeholder\\'><span class=\\'placeholder-repo-name\\'>${repo.name}</span></div>'"></button>`
       : `<div class="card-name-placeholder"><span class="placeholder-repo-name">${repo.name}</span></div>`;
 
     card.innerHTML = `
@@ -647,6 +663,23 @@
     document.body.style.overflow = '';
   }
 
+  function openImageLightbox(src, alt) {
+    if (!src) return;
+    DOM.imageLightboxImage.src = src;
+    DOM.imageLightboxImage.alt = alt || '项目预览大图';
+    DOM.imageLightbox.classList.add('open');
+    DOM.imageLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    DOM.imageLightboxCloseBtn.focus();
+  }
+
+  function closeImageLightbox() {
+    DOM.imageLightbox.classList.remove('open');
+    DOM.imageLightbox.setAttribute('aria-hidden', 'true');
+    DOM.imageLightboxImage.removeAttribute('src');
+    document.body.style.overflow = '';
+  }
+
   function navigateModal(direction) {
     if (state.activeModalIndex < 0) return;
     let nextIdx = state.activeModalIndex + direction;
@@ -670,6 +703,7 @@
   // Language
   function applyLanguage(lang) {
     state.currentLang = lang;
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     localStorage.setItem('detail_portfolio_lang', lang);
     if (DOM.langLabel) {
       DOM.langLabel.textContent = lang === 'zh' ? 'EN' : '中文';

@@ -49,6 +49,7 @@
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  --font-sans-zh: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
 }
 
 [data-theme="light"] {
@@ -104,6 +105,12 @@ body {
   transition: background-color 0.25s var(--ease-spring), color 0.25s var(--ease-spring);
   overflow-x: hidden;
   position: relative;
+}
+
+html[lang="zh-CN"] body {
+  font-family: var(--font-sans-zh);
+  line-height: 1.68;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
