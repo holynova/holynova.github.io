@@ -138,6 +138,21 @@
           "commit_time": "2026-08-27T22:54:23+08:00"
         },
         {
+          "name": "game-style-transfer-atlas",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "用三套城市照片比较 15 款热门游戏的实机风格、提示词与 16:9 横屏转译",
+            "en": "Compare 15 game visual styles, prompts, and 16:9 landscape transfers from three city photos"
+          },
+          "url": "https://github.com/holynova/game-style-transfer-atlas",
+          "homepage": "https://holynova.github.io/game-style-transfer-atlas/",
+          "screenshot": "screenshots/game-style-transfer-atlas.jpg",
+          "pushed_at": "2026-08-28",
+          "hidden": false,
+          "is_featured": true,
+          "commit_time": "2026-08-28T17:00:00+08:00"
+        },
+        {
           "name": "health-book",
           "lang": "HTML",
           "desc": {
