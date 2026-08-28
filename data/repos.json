@@ -108,6 +108,21 @@
       },
       "repos": [
         {
+          "name": "art-style-showcase",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "AI 艺术风格全景对比实验室：3 大基准场景 × 14 种流派控制变量视觉矩阵与双画风同屏对比台",
+            "en": "AI Art Style Matrix & Comparator with 42 visual prompt sets and interactive side-by-side comparison"
+          },
+          "url": "https://github.com/holynova/art-style-showcase",
+          "homepage": "https://holynova.github.io/art-style-showcase/",
+          "screenshot": "screenshots/art-style-showcase.png",
+          "pushed_at": "2026-08-28",
+          "commit_time": "2026-08-28T12:13:35Z",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
           "name": "shanghai-through-walls",
           "lang": "JavaScript",
           "desc": {
