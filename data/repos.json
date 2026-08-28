@@ -111,8 +111,8 @@
           "name": "art-style-showcase",
           "lang": "JavaScript",
           "desc": {
-            "zh": "AI 艺术风格全景对比实验室：3 大基准场景 × 14 种流派控制变量视觉矩阵与双画风同屏对比台",
-            "en": "AI Art Style Matrix & Comparator with 42 visual prompt sets and interactive side-by-side comparison"
+            "zh": "画风图谱：14 种经典绘画与插画流派视觉解构、结构化 Prompt 对照与双画风同屏对比台",
+            "en": "Art Style Archive: Visual taxonomy of 14 art movements across 3 benchmark scenes with side-by-side comparison"
           },
           "url": "https://github.com/holynova/art-style-showcase",
           "homepage": "https://holynova.github.io/art-style-showcase/",
