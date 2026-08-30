@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-27",
-  "totalRepos": 80,
+  "lastUpdated": "2026-08-30",
+  "totalRepos": 81,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -107,6 +107,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "daily-necessities-library",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "30 个常见日用品与家用电器的去品牌、纯色白底 PNG 素材库，支持分类筛选、搜索、预览与下载",
+            "en": "A 30-item unbranded PNG library of everyday products and home appliances with filtering, search, preview, and download"
+          },
+          "url": "https://github.com/holynova/daily-necessities-library",
+          "homepage": "https://holynova.github.io/daily-necessities-library/",
+          "screenshot": "screenshots/daily-necessities-library.png",
+          "pushed_at": "2026-08-30",
+          "commit_time": "2026-08-30T20:30:00+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "art-style-showcase",
           "lang": "JavaScript",
