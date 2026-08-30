@@ -2,7 +2,7 @@
 <html lang="zh-CN" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>holynova · Where Craft Lives | 作品集 Detail 视觉版</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
@@ -27,7 +27,7 @@
   <!-- Top Floating Header -->
   <header class="site-header">
     <div class="nav-left">
-      <a href="./index.html" class="brand-pill" title="holynova portfolio">
+      <a href="./index.html" class="brand-pill" title="holynova portfolio" aria-label="holynova portfolio home">
         <img src="head.png" alt="holynova" class="brand-avatar" onerror="this.src='favicon.png'">
         <span class="brand-name">holynova</span>
         <span class="brand-badge-pulse">
@@ -39,12 +39,12 @@
 
     <div class="nav-right">
       <!-- Language Toggle -->
-      <button class="nav-action-btn" id="lang-toggle-btn" title="Toggle Language">
+      <button class="nav-action-btn" id="lang-toggle-btn" type="button" title="Toggle Language">
         <span id="lang-label">EN</span>
       </button>
 
       <!-- Theme Toggle -->
-      <button class="nav-action-btn" id="theme-toggle-btn" title="Toggle Dark/Light Mode">
+      <button class="nav-action-btn" id="theme-toggle-btn" type="button" title="Toggle Dark/Light Mode">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="theme-icon-svg"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
       </button>
     </div>
@@ -57,13 +57,13 @@
         small ideas, better products
       </h1>
       <p class="hero-subtitle" 
-         data-zh="A curated collection of 80 fine-crafted engineering & design projects shaping better products."
-         data-en="A curated collection of 80 fine-crafted engineering & design projects shaping better products.">
-        A curated collection of 80 fine-crafted engineering & design projects shaping better products.
+         data-zh="精选收录 84 个工程与设计项目，持续探索更好的产品。"
+         data-en="A curated collection of 84 fine-crafted engineering & design projects shaping better products.">
+        A curated collection of 84 fine-crafted engineering & design projects shaping better products.
       </p>
       <div class="hero-author-row">
-        <span>Curated by</span>
-        <a href="https://github.com/holynova" target="_blank" class="author-sig-link">
+        <span data-zh="精选自" data-en="Curated by">Curated by</span>
+        <a href="https://github.com/holynova" target="_blank" rel="noopener noreferrer" class="author-sig-link">
           <img src="head.png" alt="holynova" style="width: 18px; height: 18px; border-radius: 50%;" onerror="this.style.display='none'">
           <span>holynova · 小桑</span>
         </a>
@@ -78,33 +78,38 @@
           <!-- Search Box -->
           <div class="search-box">
             <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <label class="visually-hidden" for="search-input" data-zh="搜索项目" data-en="Search projects">搜索项目</label>
             <input type="text" class="search-input-field" id="search-input" 
-                   placeholder="Search details (按 / 聚焦)..." 
+                   placeholder="搜索项目、描述或语言（按 / 聚焦）…"
+                   aria-describedby="results-summary"
                    autocomplete="off" spellcheck="false">
+            <button class="search-clear-btn" id="search-clear-btn" type="button" aria-label="清除搜索" hidden>
+              <span aria-hidden="true">×</span>
+            </button>
             <span class="search-kbd-hint" id="search-kbd-hint">/</span>
           </div>
 
           <!-- Sort Menu (Simplified: Latest, Star, Alpha) -->
           <div class="toolbar-controls-right">
             <div class="sort-select-wrapper">
-              <button class="sort-button" id="sort-dropdown-btn">
+              <button class="sort-button" id="sort-dropdown-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="sort-menu">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 16 4 4 4-4"></path><path d="M7 20V4"></path><path d="M11 4h4"></path><path d="M11 8h7"></path><path d="M11 12h10"></path></svg>
                 <span id="sort-current-label">最新</span>
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </button>
-              <div class="sort-menu-dropdown" id="sort-menu">
-                <div class="sort-menu-item selected" data-sort="latest">
+              <div class="sort-menu-dropdown" id="sort-menu" role="menu" aria-label="排序">
+                <button class="sort-menu-item selected" type="button" role="menuitemradio" aria-checked="true" tabindex="0" data-sort="latest">
                   <span data-zh="最新" data-en="Latest">最新</span>
                   <span>↓</span>
-                </div>
-                <div class="sort-menu-item" data-sort="stars">
+                </button>
+                <button class="sort-menu-item" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-sort="stars">
                   <span data-zh="Star" data-en="Star">Star</span>
                   <span>★</span>
-                </div>
-                <div class="sort-menu-item" data-sort="alpha">
+                </button>
+                <button class="sort-menu-item" type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-sort="alpha">
                   <span data-zh="字母顺序" data-en="Name A-Z">字母顺序</span>
                   <span>A-Z</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -117,6 +122,11 @@
       </div>
     </div>
 
+    <div class="results-summary-row">
+      <p class="results-summary" id="results-summary" role="status" aria-live="polite">显示 0 / 0 个项目</p>
+      <button class="clear-filters-btn" id="clear-filters-btn" type="button" hidden>清除筛选</button>
+    </div>
+
     <!-- Main Masonry Cards Grid -->
     <main>
       <div class="detail-masonry-grid" id="masonry-grid">
@@ -124,7 +134,7 @@
       </div>
       <!-- Progressive Infinite Scroll Sentinel & Status Indicator -->
       <div class="scroll-sentinel" id="scroll-sentinel"></div>
-      <div class="scroll-status-container" id="scroll-status"></div>
+      <div class="scroll-status-container" id="scroll-status" aria-live="polite"></div>
     </main>
 
     <!-- Footer -->
@@ -134,30 +144,31 @@
         <a href="./classic.html" data-zh="极简经典版" data-en="Classic Archive">极简经典版</a>
         <a href="mailto:holy_nova@126.com">holy_nova@126.com</a>
         <a href="https://github.com/holynova" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-        <a href="https://holynova.github.io/ai-coding-report/" target="_blank">AI Coding Wrapped</a>
+        <a href="https://holynova.github.io/ai-coding-report/" target="_blank" rel="noopener noreferrer">AI Coding Wrapped</a>
       </div>
     </footer>
   </div>
 
   <!-- Detail Inspector Modal / Drawer -->
-  <div class="detail-inspector-backdrop" id="detail-inspector">
-    <div class="detail-inspector-card" id="inspector-card">
+  <div class="detail-inspector-backdrop" id="detail-inspector" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="inspector-title" aria-describedby="inspector-desc" tabindex="-1">
+    <div class="detail-inspector-card" id="inspector-card" role="document">
       <div class="inspector-header">
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="inspector-header-leading">
           <div class="card-category-tag" id="inspector-category-tag">CATEGORY</div>
-          <button class="inspector-like-btn" id="inspector-like-btn" title="点赞/收藏">
+          <button class="inspector-like-btn" id="inspector-like-btn" type="button" title="收藏项目" aria-pressed="false">
             <svg class="heart-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
             <span class="like-count" id="inspector-like-count">0</span>
           </button>
         </div>
         <div class="inspector-nav-group">
-          <button class="inspector-icon-btn" id="inspector-prev-btn" title="上一个项目 (←)">
+          <span class="inspector-position" id="inspector-position" aria-live="polite">0 / 0</span>
+          <button class="inspector-icon-btn" id="inspector-prev-btn" type="button" title="上一个项目 (←)" aria-label="上一个项目">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
-          <button class="inspector-icon-btn" id="inspector-next-btn" title="下一个项目 (→)">
+          <button class="inspector-icon-btn" id="inspector-next-btn" type="button" title="下一个项目 (→)" aria-label="下一个项目">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
-          <button class="inspector-icon-btn" id="inspector-close-btn" title="关闭 (ESC)">
+          <button class="inspector-icon-btn" id="inspector-close-btn" type="button" title="关闭 (ESC)" aria-label="关闭详情">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
         </div>
@@ -188,14 +199,14 @@
               <span class="inspector-meta-val" id="inspector-date-val">2026-08</span>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
-              <a href="#" target="_blank" class="inspector-btn-primary" id="inspector-live-btn">
-                <span>Try Live Demo</span>
+            <div class="inspector-action-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="inspector-btn-primary" id="inspector-live-btn" hidden>
+                <span data-zh="在线演示" data-en="Try Live Demo">在线演示</span>
                 <span>↗</span>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" class="inspector-btn-secondary" id="inspector-github-btn">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                <span>GitHub Source</span>
+                <span data-zh="GitHub 源码" data-en="GitHub Source">GitHub 源码</span>
               </a>
             </div>
           </div>
@@ -204,12 +215,12 @@
     </div>
   </div>
 
-  <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="项目预览大图" aria-hidden="true">
+  <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-labelledby="image-lightbox-close" aria-hidden="true" tabindex="-1">
     <button class="image-lightbox-close" id="image-lightbox-close" type="button" aria-label="关闭大图预览">关闭 <span aria-hidden="true">×</span></button>
-    <img id="image-lightbox-image" alt="">
+    <img id="image-lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
   </div>
 
   <!-- Static Data Store & Scripts -->
-  <script src="js/detail-app.js?v=20260827-json"></script>
+  <script src="js/detail-app.js?v=20260831-ux"></script>
 </body>
 </html>
