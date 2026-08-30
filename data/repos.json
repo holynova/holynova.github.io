@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-08-30",
-  "totalRepos": 83,
+  "totalRepos": 84,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -107,6 +107,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "citypop-shanghai-exploration",
+          "lang": "HTML",
+          "desc": {
+            "zh": "上海与北京的粗颗粒 City Pop 绘画、提示词与版画规律实验档案",
+            "en": "Rough-grain City Pop painting and prompt archive exploring Shanghai and Beijing"
+          },
+          "url": "https://github.com/holynova/citypop-shanghai-exploration",
+          "pushed_at": "2026-08-30",
+          "homepage": "https://holynova.github.io/citypop-shanghai-exploration/",
+          "screenshot": "screenshots/citypop-shanghai-exploration.png",
+          "commit_time": "2026-08-30T12:30:00Z",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "daily-necessities-library",
           "lang": "TypeScript",
