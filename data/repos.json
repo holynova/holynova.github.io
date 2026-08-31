@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-30",
-  "totalRepos": 84,
+  "lastUpdated": "2026-08-31",
+  "totalRepos": 85,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -107,6 +107,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "city-stamp",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "城市印记：上海、苏州、北京三座城市的 30 个地标六边形徽章打卡档案，支持点亮、发光与时间记录",
+            "en": "City Stamp: a 30-landmark check-in archive for Shanghai, Suzhou, and Beijing with illuminated hexagonal badges"
+          },
+          "url": "https://github.com/holynova/city-stamp",
+          "homepage": "https://holynova.github.io/city-stamp/",
+          "pushed_at": "2026-08-31",
+          "screenshot": "screenshots/city-stamp.jpg",
+          "commit_time": "2026-08-31T20:15:00+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "citypop-shanghai-exploration",
           "lang": "HTML",
@@ -1115,16 +1130,16 @@
           "name": "hotpot-timer",
           "lang": "TypeScript",
           "desc": {
-            "zh": "按食材类别计算最佳涮烫时间的智能秒表计时器",
-            "en": "Stopwatch timer for optimal cooking times by hotpot ingredient category"
+            "zh": "Three.js 沉浸式倒计时与 A–Z 立体字母逐个变换工具",
+            "en": "Cinematic Three.js countdown with one-letter-at-a-time A–Z transformations"
           },
           "url": "https://github.com/holynova/hotpot-timer",
-          "pushed_at": "2026-08-08",
+          "pushed_at": "2026-08-31",
           "homepage": "https://holynova.github.io/hotpot-timer/",
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/hotpot-timer.png",
-          "commit_time": "2026-08-08T00:53:40Z"
+          "commit_time": "2026-08-31T00:00:00+08:00"
         },
         {
           "name": "pdf2wechat",
