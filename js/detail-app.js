@@ -123,6 +123,54 @@
       .replaceAll("'", '&#039;');
   }
 
+  // Pull a tiny average palette from the local screenshot so its backplate can
+  // borrow a restrained amount of color without changing the artwork itself.
+  function applyMediaPalette(imageLink, image) {
+    const sample = () => {
+      if (!image.naturalWidth || !image.naturalHeight) return;
+
+      try {
+        const size = 6;
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d', { willReadFrequently: true });
+        if (!context) return;
+
+        canvas.width = size;
+        canvas.height = size;
+        context.drawImage(image, 0, 0, size, size);
+
+        const pixels = context.getImageData(0, 0, size, size).data;
+        let red = 0;
+        let green = 0;
+        let blue = 0;
+        let count = 0;
+
+        for (let index = 0; index < pixels.length; index += 4) {
+          if (pixels[index + 3] < 16) continue;
+          red += pixels[index];
+          green += pixels[index + 1];
+          blue += pixels[index + 2];
+          count += 1;
+        }
+
+        if (!count) return;
+        imageLink.style.setProperty(
+          '--media-tint',
+          `rgb(${Math.round(red / count)} ${Math.round(green / count)} ${Math.round(blue / count)})`
+        );
+      } catch (error) {
+        // A failed canvas read must never prevent the card or its link from working.
+      }
+    };
+
+    const scheduleSample = () => window.requestAnimationFrame(sample);
+    if (image.complete) {
+      scheduleSample();
+    } else {
+      image.addEventListener('load', scheduleSample, { once: true });
+    }
+  }
+
   function repoDescription(repo) {
     const desc = repo?.desc || {};
     return desc[state.currentLang] || desc.zh || desc.en || '';
@@ -715,6 +763,11 @@
     if (imageLink) {
       const image = imageLink.querySelector('.card-demo-image');
       if (image) {
+        const imageSource = image.currentSrc || image.src;
+        const cssSafeImageSource = imageSource.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
+        imageLink.style.setProperty('--card-image', `url("${cssSafeImageSource}")`);
+        applyMediaPalette(imageLink, image);
+
         image.addEventListener('error', () => {
           imageLink.replaceWith(createNamePlaceholder('card-name-placeholder', repoName));
         }, { once: true });

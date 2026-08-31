@@ -32,6 +32,19 @@
   --accent-pill-border: rgba(255, 255, 255, 0.1);
   --accent-pill-text: #e4e4e7;
 
+  /* Media stage: keep screenshots expressive while giving the grid one visual rhythm. */
+  --media-stage: #18181b;
+  --media-tint-strength: 16%;
+  --media-halo-opacity: 0.66;
+  --media-halo-brightness: 0.7;
+  --media-halo-saturation: 0.76;
+  --media-overlay: rgba(9, 9, 11, 0.1);
+  --media-overlay-hover: rgba(9, 9, 11, 0.18);
+  --card-hover-ring: rgba(255, 255, 255, 0.16);
+  --action-primary-bg: #ffffff;
+  --action-primary-fg: #09090b;
+  --action-primary-hover: #e4e4e7;
+
   --card-radius: 20px;
   --media-radius: 14px;
   --pill-radius: 9999px;
@@ -75,6 +88,18 @@
   --accent-pill-bg: rgba(0, 0, 0, 0.04);
   --accent-pill-border: rgba(0, 0, 0, 0.08);
   --accent-pill-text: #27272a;
+
+  --media-stage: #f0f0f2;
+  --media-tint-strength: 14%;
+  --media-halo-opacity: 0.58;
+  --media-halo-brightness: 1.02;
+  --media-halo-saturation: 0.78;
+  --media-overlay: rgba(9, 9, 11, 0.035);
+  --media-overlay-hover: rgba(9, 9, 11, 0.11);
+  --card-hover-ring: rgba(0, 0, 0, 0.13);
+  --action-primary-bg: #09090b;
+  --action-primary-fg: #ffffff;
+  --action-primary-hover: #27272a;
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.06);
