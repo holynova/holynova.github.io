@@ -1,6 +1,6 @@
 /**
  * Detail.design Main Application Controller
- * Handles data fetching, filtering, sorting, likes/favorites, masonry rendering, detail inspector & shortcuts
+ * Handles data fetching, filtering, sorting, likes/favorites, progressive card rendering & shortcuts
  * For holynova Portfolio v2
  */
 
@@ -46,29 +46,20 @@
       sort: '排序',
       all: '全部',
       liked: '已点赞',
-      detail: '查看 {name} 详情',
-      viewDetails: '查看详情',
-      imagePreview: '查看 {name} 的大图',
       favorite: '收藏 {name}',
       unfavorite: '取消收藏 {name}',
       liveDemo: '在线演示',
       github: 'GitHub 源码',
-      closeDetails: '关闭详情',
-      previous: '上一个项目',
-      next: '下一个项目',
-      projectPosition: '第 {current} / {total} 个项目',
-      closeImage: '关闭大图预览',
+      liveDemoAction: 'Try Live Demo',
+      githubAction: 'GitHub',
       resultSummary: '显示 {shown} / {total} 个项目',
       noResults: '没有符合条件的项目',
       clearFilters: '清除筛选',
       loadMore: '加载更多项目',
       loading: '加载更多项目…',
       allShown: '已显示全部 {total} 个项目',
-      new: '新近更新',
-      code: '代码',
-      recently: '最近更新',
       emptyFavoritesTitle: '暂无已点赞的项目',
-      emptyFavoritesBody: '点击项目卡片右下角的爱心按钮即可收藏',
+      emptyFavoritesBody: '点击卡片顶部的爱心按钮即可收藏',
       emptySearchTitle: '未找到相关项目',
       emptySearchBody: '请尝试调整搜索关键词或选择其他分类',
       loadErrorTitle: '项目目录暂时无法加载',
@@ -87,29 +78,20 @@
       sort: 'Sort projects',
       all: 'All',
       liked: 'Liked',
-      detail: 'View details for {name}',
-      viewDetails: 'View details',
-      imagePreview: 'View a larger preview of {name}',
       favorite: 'Save {name}',
       unfavorite: 'Remove {name} from saved projects',
       liveDemo: 'Try Live Demo',
       github: 'GitHub Source',
-      closeDetails: 'Close details',
-      previous: 'Previous project',
-      next: 'Next project',
-      projectPosition: 'Project {current} of {total}',
-      closeImage: 'Close image preview',
+      liveDemoAction: 'Try Live Demo',
+      githubAction: 'GitHub',
       resultSummary: 'Showing {shown} of {total} projects',
       noResults: 'No matching projects',
       clearFilters: 'Clear filters',
       loadMore: 'Load more projects',
       loading: 'Loading more projects…',
       allShown: 'All {total} curated projects displayed',
-      new: 'Recently updated',
-      code: 'Code',
-      recently: 'Recently updated',
       emptyFavoritesTitle: 'No liked projects yet',
-      emptyFavoritesBody: 'Use the heart button on any project card to save it here',
+      emptyFavoritesBody: 'Use the heart button at the top of any card to save it',
       emptySearchTitle: 'No matching repositories found',
       emptySearchBody: 'Try adjusting your search terms or choosing another category',
       loadErrorTitle: 'The project directory is temporarily unavailable',
@@ -165,12 +147,6 @@
     return false;
   }
 
-  function syncBodyScrollLock() {
-    const modalOpen = state.activeModalIndex >= 0;
-    const lightboxOpen = DOM.imageLightbox?.classList.contains('open');
-    document.body.style.overflow = modalOpen || lightboxOpen ? 'hidden' : '';
-  }
-
   function createNamePlaceholder(className, name) {
     const placeholder = document.createElement('div');
     placeholder.className = className;
@@ -191,9 +167,6 @@
     likedRepos: loadLikes(),
     currentLang: localStorage.getItem('detail_portfolio_lang') || 'zh',
     currentTheme: localStorage.getItem('detail_portfolio_theme') || 'dark',
-    activeModalIndex: -1,
-    modalReturnFocus: null,
-    imageReturnFocus: null,
     filteredRepos: [],
     renderedCount: 0,
     isLoadingMore: false,
@@ -232,63 +205,10 @@
     DOM.themeBtn = document.getElementById('theme-toggle-btn');
     DOM.langBtn = document.getElementById('lang-toggle-btn');
     DOM.langLabel = document.getElementById('lang-label');
-    DOM.modalBackdrop = document.getElementById('detail-inspector');
-    DOM.modalCard = document.getElementById('inspector-card');
-    DOM.modalCloseBtn = document.getElementById('inspector-close-btn');
-    DOM.modalPrevBtn = document.getElementById('inspector-prev-btn');
-    DOM.modalNextBtn = document.getElementById('inspector-next-btn');
-    DOM.modalLikeBtn = document.getElementById('inspector-like-btn');
-    DOM.modalLikeCount = document.getElementById('inspector-like-count');
-    DOM.modalPosition = document.getElementById('inspector-position');
-    DOM.modalIframeContainer = document.getElementById('inspector-iframe-container');
-    DOM.modalTitle = document.getElementById('inspector-title');
-    DOM.modalDesc = document.getElementById('inspector-desc');
-    DOM.modalCategoryTag = document.getElementById('inspector-category-tag');
-    DOM.modalLangVal = document.getElementById('inspector-lang-val');
-    DOM.modalDateVal = document.getElementById('inspector-date-val');
-    DOM.modalStarsVal = document.getElementById('inspector-stars-val');
-    DOM.modalLiveBtn = document.getElementById('inspector-live-btn');
-    DOM.modalGithubBtn = document.getElementById('inspector-github-btn');
-    DOM.imageLightbox = document.getElementById('image-lightbox');
-    DOM.imageLightboxImage = document.getElementById('image-lightbox-image');
-    DOM.imageLightboxCloseBtn = document.getElementById('image-lightbox-close');
     DOM.ambientGlowLayer = document.getElementById('ambient-glow-layer');
     DOM.scrollSentinel = document.getElementById('scroll-sentinel');
     DOM.scrollStatus = document.getElementById('scroll-status');
     DOM.stickyToolbar = document.querySelector('.sticky-toolbar-wrapper');
-  }
-
-  function getFocusableElements(container) {
-    if (!container) return [];
-    return Array.from(container.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-    )).filter(element => {
-      const styles = window.getComputedStyle(element);
-      return !element.hidden
-        && element.getAttribute('aria-hidden') !== 'true'
-        && styles.display !== 'none'
-        && styles.visibility !== 'hidden'
-        && element.getClientRects().length > 0;
-    });
-  }
-
-  function trapFocus(container, event) {
-    const focusable = getFocusableElements(container);
-    if (focusable.length === 0) {
-      event.preventDefault();
-      focusElement(container);
-      return;
-    }
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (event.shiftKey && (document.activeElement === first || !container.contains(document.activeElement))) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && (document.activeElement === last || !container.contains(document.activeElement))) {
-      event.preventDefault();
-      first.focus();
-    }
   }
 
   function setSortMenuOpen(isOpen) {
@@ -369,43 +289,12 @@
       });
     }
 
-    // Global Keyboard Shortcuts and modal focus management
+    // Global Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
       const isInput = document.activeElement === DOM.searchInput;
-      const isLightboxOpen = DOM.imageLightbox.classList.contains('open');
-      const isModalOpen = state.activeModalIndex >= 0;
 
-      if (!isLightboxOpen && !isModalOpen && !isInput && ['ArrowDown', 'PageDown', ' '].includes(e.key)) {
+      if (!isInput && ['ArrowDown', 'PageDown', ' '].includes(e.key)) {
         state.userHasScrolled = true;
-      }
-
-      if (isLightboxOpen) {
-        if (e.key === 'Escape') {
-          e.preventDefault();
-          closeImageLightbox();
-        } else if (e.key === 'Tab') {
-          trapFocus(DOM.imageLightbox, e);
-        }
-        return;
-      }
-
-      if (isModalOpen) {
-        if (e.key === 'Escape') {
-          e.preventDefault();
-          closeInspectorModal();
-        } else if (e.key === 'Tab') {
-          trapFocus(DOM.modalCard, e);
-        } else if (e.key === 'ArrowLeft') {
-          e.preventDefault();
-          navigateModal(-1);
-        } else if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          navigateModal(1);
-        } else if (e.key.toLowerCase() === 'l' && !isInput) {
-          const repo = state.filteredRepos[state.activeModalIndex];
-          if (repo) toggleLike(repo.name);
-        }
-        return;
       }
 
       if ((e.key === '/' || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k')) && !isInput) {
@@ -473,32 +362,6 @@
     DOM.langBtn.addEventListener('click', () => {
       const nextLang = state.currentLang === 'zh' ? 'en' : 'zh';
       applyLanguage(nextLang);
-    });
-
-    // Inspector Modal Controls
-    DOM.modalCloseBtn.addEventListener('click', closeInspectorModal);
-    DOM.modalPrevBtn.addEventListener('click', () => navigateModal(-1));
-    DOM.modalNextBtn.addEventListener('click', () => navigateModal(1));
-    if (DOM.modalLikeBtn) {
-      DOM.modalLikeBtn.addEventListener('click', () => {
-        const repo = state.filteredRepos[state.activeModalIndex];
-        if (repo) toggleLike(repo.name);
-      });
-    }
-    DOM.modalBackdrop.addEventListener('click', (e) => {
-      if (e.target === DOM.modalBackdrop) {
-        closeInspectorModal();
-      }
-    });
-    DOM.modalIframeContainer.addEventListener('click', (event) => {
-      const previewButton = event.target.closest('.inspector-image-button');
-      if (previewButton) {
-        openImageLightbox(previewButton.dataset.previewSrc, previewButton.dataset.previewAlt, previewButton);
-      }
-    });
-    DOM.imageLightboxCloseBtn.addEventListener('click', closeImageLightbox);
-    DOM.imageLightbox.addEventListener('click', (event) => {
-      if (event.target === DOM.imageLightbox) closeImageLightbox();
     });
 
     DOM.scrollStatus.addEventListener('click', (event) => {
@@ -598,24 +461,13 @@
 
     const nowLiked = state.likedRepos.has(repoName);
 
-    // Update matching card buttons without relying on a selector built from user data.
+    // Update the compact favorite control on every rendered copy of the card.
     document.querySelectorAll('.card-like-btn').forEach(btn => {
       if (btn.dataset.repoName === repoName) updateLikeButton(btn, repoName, nowLiked);
     });
 
-    // Update modal button if open for this repo.
-    const currentModalRepo = state.filteredRepos[state.activeModalIndex];
-    if (currentModalRepo && currentModalRepo.name === repoName) {
-      updateLikeButton(DOM.modalLikeBtn, repoName, nowLiked);
-    }
-
     // Re-render the filter controls so the saved count and state remain truthful.
     renderCategoryPills();
-
-    // A project removed from the saved-only view no longer belongs in the open detail.
-    if (state.activeCategory === 'favorites' && !nowLiked && currentModalRepo?.name === repoName) {
-      closeInspectorModal();
-    }
 
     if (state.activeCategory === 'favorites') {
       renderFilteredRepos();
@@ -805,17 +657,31 @@
     const isLiked = state.likedRepos.has(repo.name);
     const aspectClass = 'aspect-16-10';
 
-    // Status Badge
+    // Keep only useful status context in the card header. "Recently updated"
+    // is intentionally omitted so the card stays focused on the project.
     let statusBadgeHtml = '';
     if (repo.stars && repo.stars > 0) {
       statusBadgeHtml = `<span class="card-status-badge star-badge" aria-label="${escapeHtml(formatStars(repo.stars))} GitHub stars">★ ${escapeHtml(formatStars(repo.stars))}</span>`;
-    } else if (repo.pushed_at && repo.pushed_at.startsWith('2026-08')) {
-      statusBadgeHtml = `<span class="card-status-badge new-badge">${escapeHtml(t('new'))}</span>`;
     }
 
-    const mediaHtml = repo.screenshot
-      ? `<button type="button" class="card-image-preview" data-preview-src="${escapeHtml(repo.screenshot)}" data-preview-alt="${escapeHtml(t('imagePreview', { name: repoName }))}" aria-label="${escapeHtml(t('imagePreview', { name: repoName }))}"><img src="${escapeHtml(repo.screenshot)}" alt="${escapeHtml(repoName)}" class="card-demo-image" loading="lazy" decoding="async"></button>`
+    const cardLikeButtonHtml = `
+      <button class="card-like-btn ${isLiked ? 'liked' : ''}" type="button" data-repo-name="${escapeHtml(repoName)}" title="${escapeHtml(isLiked ? t('unfavorite', { name: repoName }) : t('favorite', { name: repoName }))}" aria-label="${escapeHtml(isLiked ? t('unfavorite', { name: repoName }) : t('favorite', { name: repoName }))}" aria-pressed="${String(isLiked)}">
+        <svg class="heart-icon" width="13" height="13" viewBox="0 0 24 24" fill="${isLiked ? '#ef4444' : 'none'}" stroke="${isLiked ? '#ef4444' : 'currentColor'}" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      </button>
+    `;
+
+    const imageTarget = repo.homepage || repo.url;
+    const imageActionLabel = repo.homepage ? t('liveDemo') : t('github');
+    const mediaHtml = repo.screenshot && imageTarget
+      ? `<a href="${escapeHtml(imageTarget)}" target="_blank" rel="noopener noreferrer" class="card-image-link" aria-label="${escapeHtml(`${imageActionLabel}: ${repoName}`)}"><img src="${escapeHtml(repo.screenshot)}" alt="${escapeHtml(repoName)}" class="card-demo-image" loading="lazy" decoding="async"></a>`
       : `<div class="card-name-placeholder"><span class="placeholder-repo-name">${escapeHtml(repoName)}</span></div>`;
+
+    const liveDemoActionHtml = repo.homepage ? `
+      <a href="${escapeHtml(repo.homepage)}" target="_blank" rel="noopener noreferrer" class="card-action-btn card-live-demo-btn" aria-label="${escapeHtml(t('liveDemo'))}">
+        <span>${escapeHtml(t('liveDemoAction'))}</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    ` : '';
 
     card.innerHTML = `
       <div class="card-media-box ${aspectClass}">
@@ -826,51 +692,31 @@
       <div class="card-body">
         <div class="card-meta-header">
           <span class="card-category-tag">${escapeHtml(catName)}</span>
-          ${statusBadgeHtml}
+          <div class="card-meta-actions">
+            ${statusBadgeHtml}
+            ${cardLikeButtonHtml}
+          </div>
         </div>
         <h3 class="card-title">${escapeHtml(repoName)}</h3>
         <p class="card-description">${escapeHtml(descText)}</p>
-        <button type="button" class="card-detail-trigger" data-detail-index="${index}" aria-label="${escapeHtml(t('detail', { name: repoName }))}">
-          <span>${escapeHtml(t('viewDetails'))}</span>
-          <span aria-hidden="true">→</span>
-        </button>
-        <div class="card-footer-row">
-          <div class="card-tech-pills">
-            <span class="card-tech-pill">${escapeHtml(repo.lang || t('code'))}</span>
-            ${(repo.commit_time || repo.pushed_at) ? `<span class="card-tech-pill">${escapeHtml(String(repo.commit_time || repo.pushed_at).slice(0, 10))}</span>` : ''}
-          </div>
+        <div class="card-hover-actions">
           <div class="card-action-links">
-            <!-- Like Button -->
-            <button class="card-like-btn ${isLiked ? 'liked' : ''}" type="button" data-repo-name="${escapeHtml(repoName)}" title="${escapeHtml(isLiked ? t('unfavorite', { name: repoName }) : t('favorite', { name: repoName }))}" aria-label="${escapeHtml(isLiked ? t('unfavorite', { name: repoName }) : t('favorite', { name: repoName }))}" aria-pressed="${String(isLiked)}">
-              <svg class="heart-icon" width="13" height="13" viewBox="0 0 24 24" fill="${isLiked ? '#ef4444' : 'none'}" stroke="${isLiked ? '#ef4444' : 'currentColor'}" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-              <span class="like-count">${isLiked ? '1' : '0'}</span>
-            </button>
-
-            ${repo.homepage ? `
-              <a href="${escapeHtml(repo.homepage)}" target="_blank" rel="noopener noreferrer" class="card-link-icon-btn" title="${escapeHtml(t('liveDemo'))}" aria-label="${escapeHtml(t('liveDemo'))}">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </a>
-            ` : ''}
-            <a href="${escapeHtml(repo.url)}" target="_blank" rel="noopener noreferrer" class="card-link-icon-btn" title="${escapeHtml(t('github'))}" aria-label="${escapeHtml(t('github'))}">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            ${liveDemoActionHtml}
+            <a href="${escapeHtml(repo.url)}" target="_blank" rel="noopener noreferrer" class="card-action-btn card-github-btn" aria-label="${escapeHtml(t('github'))}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>${escapeHtml(t('githubAction'))}</span>
             </a>
           </div>
         </div>
       </div>
     `;
 
-    const previewButton = card.querySelector('.card-image-preview');
-    if (previewButton) {
-      previewButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        openImageLightbox(previewButton.dataset.previewSrc, previewButton.dataset.previewAlt, previewButton);
-      });
-
-      const image = previewButton.querySelector('.card-demo-image');
+    const imageLink = card.querySelector('.card-image-link');
+    if (imageLink) {
+      const image = imageLink.querySelector('.card-demo-image');
       if (image) {
         image.addEventListener('error', () => {
-          previewButton.replaceWith(createNamePlaceholder('card-name-placeholder', repoName));
+          imageLink.replaceWith(createNamePlaceholder('card-name-placeholder', repoName));
         }, { once: true });
       }
     }
@@ -880,18 +726,29 @@
       likeButton.addEventListener('click', event => window.toggleLike(repoName, event));
     }
 
-    const detailButton = card.querySelector('.card-detail-trigger');
-    if (detailButton) {
-      detailButton.addEventListener('click', event => {
-        event.stopPropagation();
-        openInspectorModal(index, detailButton);
+    // Navigation is intentionally explicit: the image and CTA links own the card actions.
+    // Web Motion: project a cursor-tracked radial spotlight across the card
+    // surface and its border. requestAnimationFrame keeps mousemove cheap.
+    let spotlightFrame = 0;
+    let spotlightPoint = { x: 0, y: 0 };
+    card.addEventListener('mousemove', event => {
+      const rect = card.getBoundingClientRect();
+      spotlightPoint = {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+      };
+      if (spotlightFrame) return;
+      spotlightFrame = window.requestAnimationFrame(() => {
+        card.style.setProperty('--spotlight-x', `${spotlightPoint.x}px`);
+        card.style.setProperty('--spotlight-y', `${spotlightPoint.y}px`);
+        card.style.setProperty('--spotlight-opacity', '1');
+        spotlightFrame = 0;
       });
-    }
-
-    // Preserve the fast mouse interaction on the card surface while leaving every nested action independent.
-    card.addEventListener('click', event => {
-      if (event.target.closest('a, button')) return;
-      openInspectorModal(index, detailButton);
+    });
+    card.addEventListener('mouseleave', () => {
+      if (spotlightFrame) window.cancelAnimationFrame(spotlightFrame);
+      spotlightFrame = 0;
+      card.style.setProperty('--spotlight-opacity', '0');
     });
     return card;
   }
@@ -995,149 +852,6 @@
     loadNextBatch(true);
   }
 
-  // Detail Inspector Modal
-  function populateInspector(index) {
-    const repo = state.filteredRepos[index];
-    if (!repo) return false;
-
-    const repoName = String(repo.name || 'Untitled project');
-    const isLiked = state.likedRepos.has(repo.name);
-    const dateLabel = repo.commit_time
-      ? String(repo.commit_time).slice(0, 10)
-      : (repo.pushed_at ? String(repo.pushed_at).slice(0, 10) : t('recently'));
-
-    DOM.modalTitle.textContent = repoName;
-    DOM.modalDesc.textContent = repoDescription(repo);
-    DOM.modalCategoryTag.textContent = categoryName(repo);
-    DOM.modalLangVal.textContent = repo.lang || t('code');
-    DOM.modalDateVal.textContent = dateLabel;
-    DOM.modalStarsVal.textContent = repo.stars ? `★ ${formatStars(repo.stars)}` : '0';
-    DOM.modalGithubBtn.href = repo.url || '#';
-    DOM.modalGithubBtn.setAttribute('aria-label', t('github'));
-
-    updateLikeButton(DOM.modalLikeBtn, repoName, isLiked);
-    if (DOM.modalPosition) {
-      DOM.modalPosition.textContent = `${index + 1} / ${state.filteredRepos.length}`;
-      DOM.modalPosition.setAttribute('aria-label', t('projectPosition', {
-        current: index + 1,
-        total: state.filteredRepos.length
-      }));
-    }
-    DOM.modalPrevBtn.disabled = state.filteredRepos.length <= 1;
-    DOM.modalNextBtn.disabled = state.filteredRepos.length <= 1;
-    DOM.modalPrevBtn.setAttribute('aria-label', t('previous'));
-    DOM.modalNextBtn.setAttribute('aria-label', t('next'));
-    DOM.modalCloseBtn.setAttribute('aria-label', t('closeDetails'));
-    DOM.modalCloseBtn.title = `${t('closeDetails')} (ESC)`;
-
-    // Consistency: preview matches the card image, and is itself an explicit image action.
-    DOM.modalIframeContainer.innerHTML = '';
-    if (repo.screenshot) {
-      const previewButton = document.createElement('button');
-      previewButton.type = 'button';
-      previewButton.className = 'inspector-image-button';
-      previewButton.dataset.previewSrc = repo.screenshot;
-      previewButton.dataset.previewAlt = t('imagePreview', { name: repoName });
-      previewButton.setAttribute('aria-label', previewButton.dataset.previewAlt);
-
-      const image = document.createElement('img');
-      image.src = repo.screenshot;
-      image.alt = repoName;
-      image.className = 'inspector-demo-image';
-      image.decoding = 'async';
-      image.addEventListener('error', () => {
-        previewButton.replaceWith(createNamePlaceholder('inspector-name-placeholder', repoName));
-      }, { once: true });
-      previewButton.appendChild(image);
-      DOM.modalIframeContainer.appendChild(previewButton);
-    } else {
-      DOM.modalIframeContainer.appendChild(createNamePlaceholder('inspector-name-placeholder', repoName));
-    }
-
-    if (repo.homepage) {
-      DOM.modalLiveBtn.hidden = false;
-      DOM.modalLiveBtn.removeAttribute('aria-hidden');
-      DOM.modalLiveBtn.href = repo.homepage;
-      DOM.modalLiveBtn.setAttribute('aria-label', t('liveDemo'));
-    } else {
-      DOM.modalLiveBtn.hidden = true;
-      DOM.modalLiveBtn.setAttribute('aria-hidden', 'true');
-      DOM.modalLiveBtn.removeAttribute('href');
-    }
-
-    return true;
-  }
-
-  function openInspectorModal(index, trigger = null) {
-    const repo = state.filteredRepos[index];
-    if (!repo) return;
-
-    if (state.activeModalIndex < 0) {
-      state.modalReturnFocus = trigger || document.activeElement;
-    }
-    state.activeModalIndex = index;
-    if (!populateInspector(index)) return;
-
-    DOM.modalBackdrop.classList.add('open');
-    DOM.modalBackdrop.setAttribute('aria-hidden', 'false');
-    syncBodyScrollLock();
-    focusElement(DOM.modalCloseBtn);
-  }
-
-  function closeInspectorModal() {
-    const returnFocus = state.modalReturnFocus;
-    state.activeModalIndex = -1;
-    state.modalReturnFocus = null;
-    DOM.modalBackdrop.classList.remove('open');
-    DOM.modalBackdrop.setAttribute('aria-hidden', 'true');
-    DOM.modalIframeContainer.innerHTML = '';
-    syncBodyScrollLock();
-    if (!focusElement(returnFocus)) focusElement(DOM.searchInput);
-  }
-
-  function openImageLightbox(src, alt, trigger = null) {
-    if (!src) return;
-    state.imageReturnFocus = trigger || document.activeElement;
-    DOM.imageLightboxImage.src = src;
-    DOM.imageLightboxImage.alt = alt || t('closeImage');
-    DOM.imageLightboxCloseBtn.setAttribute('aria-label', t('closeImage'));
-    DOM.imageLightbox.classList.add('open');
-    DOM.imageLightbox.setAttribute('aria-hidden', 'false');
-    syncBodyScrollLock();
-    focusElement(DOM.imageLightboxCloseBtn);
-  }
-
-  function closeImageLightbox() {
-    if (!DOM.imageLightbox.classList.contains('open')) return;
-    const returnFocus = state.imageReturnFocus;
-    state.imageReturnFocus = null;
-    DOM.imageLightbox.classList.remove('open');
-    DOM.imageLightbox.setAttribute('aria-hidden', 'true');
-    DOM.imageLightboxImage.removeAttribute('src');
-    syncBodyScrollLock();
-    if (!focusElement(returnFocus)) {
-      focusElement(state.activeModalIndex >= 0 ? DOM.modalCard : DOM.searchInput);
-    }
-  }
-
-  function navigateModal(direction) {
-    if (state.activeModalIndex < 0 || state.filteredRepos.length <= 1) return;
-    let nextIdx = state.activeModalIndex + direction;
-    if (nextIdx < 0) nextIdx = state.filteredRepos.length - 1;
-    if (nextIdx >= state.filteredRepos.length) nextIdx = 0;
-    openInspectorModal(nextIdx);
-  }
-
-  function refreshOpenModal() {
-    if (state.activeModalIndex < 0) return;
-    const currentRepo = state.filteredRepos[state.activeModalIndex];
-    if (!currentRepo) {
-      closeInspectorModal();
-      return;
-    }
-    populateInspector(state.activeModalIndex);
-  }
-
   // Theme
   function applyTheme(theme) {
     state.currentTheme = theme;
@@ -1184,7 +898,6 @@
       renderFilteredRepos();
     }
     updateResultsSummary();
-    refreshOpenModal();
   }
 
 })();

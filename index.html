@@ -149,78 +149,7 @@
     </footer>
   </div>
 
-  <!-- Detail Inspector Modal / Drawer -->
-  <div class="detail-inspector-backdrop" id="detail-inspector" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="inspector-title" aria-describedby="inspector-desc" tabindex="-1">
-    <div class="detail-inspector-card" id="inspector-card" role="document">
-      <div class="inspector-header">
-        <div class="inspector-header-leading">
-          <div class="card-category-tag" id="inspector-category-tag">CATEGORY</div>
-          <button class="inspector-like-btn" id="inspector-like-btn" type="button" title="收藏项目" aria-pressed="false">
-            <svg class="heart-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-            <span class="like-count" id="inspector-like-count">0</span>
-          </button>
-        </div>
-        <div class="inspector-nav-group">
-          <span class="inspector-position" id="inspector-position" aria-live="polite">0 / 0</span>
-          <button class="inspector-icon-btn" id="inspector-prev-btn" type="button" title="上一个项目 (←)" aria-label="上一个项目">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-          <button class="inspector-icon-btn" id="inspector-next-btn" type="button" title="下一个项目 (→)" aria-label="下一个项目">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-          <button class="inspector-icon-btn" id="inspector-close-btn" type="button" title="关闭 (ESC)" aria-label="关闭详情">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="inspector-scroll-body">
-        <div class="inspector-live-preview" id="inspector-iframe-container">
-          <!-- Populated by detail-app.js -->
-        </div>
-
-        <div class="inspector-content-grid">
-          <div class="inspector-info-col">
-            <h2 class="inspector-title" id="inspector-title">Repository Title</h2>
-            <p class="inspector-desc" id="inspector-desc">Repository description goes here.</p>
-          </div>
-
-          <div class="inspector-sidebar-col">
-            <div class="inspector-meta-row">
-              <span class="inspector-meta-label" data-zh="技术语言" data-en="Language">技术语言</span>
-              <span class="inspector-meta-val" id="inspector-lang-val">TypeScript</span>
-            </div>
-            <div class="inspector-meta-row">
-              <span class="inspector-meta-label" data-zh="GitHub 标星" data-en="Stars">GitHub 标星</span>
-              <span class="inspector-meta-val" id="inspector-stars-val">0</span>
-            </div>
-            <div class="inspector-meta-row">
-              <span class="inspector-meta-label" data-zh="更新时间" data-en="Updated">更新时间</span>
-              <span class="inspector-meta-val" id="inspector-date-val">2026-08</span>
-            </div>
-
-            <div class="inspector-action-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="inspector-btn-primary" id="inspector-live-btn" hidden>
-                <span data-zh="在线演示" data-en="Try Live Demo">在线演示</span>
-                <span>↗</span>
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="inspector-btn-secondary" id="inspector-github-btn">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                <span data-zh="GitHub 源码" data-en="GitHub Source">GitHub 源码</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-labelledby="image-lightbox-close" aria-hidden="true" tabindex="-1">
-    <button class="image-lightbox-close" id="image-lightbox-close" type="button" aria-label="关闭大图预览">关闭 <span aria-hidden="true">×</span></button>
-    <img id="image-lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
-  </div>
-
   <!-- Static Data Store & Scripts -->
-  <script src="js/detail-app.js?v=20260831-ux"></script>
+  <script src="js/detail-app.js?v=20260831-direct-links"></script>
 </body>
 </html>
