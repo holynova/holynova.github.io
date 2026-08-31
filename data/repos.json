@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-30",
+  "lastUpdated": "2026-08-31",
   "totalRepos": 84,
   "categories": [
     {
@@ -1115,16 +1115,16 @@
           "name": "hotpot-timer",
           "lang": "TypeScript",
           "desc": {
-            "zh": "按食材类别计算最佳涮烫时间的智能秒表计时器",
-            "en": "Stopwatch timer for optimal cooking times by hotpot ingredient category"
+            "zh": "Three.js 沉浸式倒计时与 A–Z 立体字母逐个变换工具",
+            "en": "Cinematic Three.js countdown with one-letter-at-a-time A–Z transformations"
           },
           "url": "https://github.com/holynova/hotpot-timer",
-          "pushed_at": "2026-08-08",
+          "pushed_at": "2026-08-31",
           "homepage": "https://holynova.github.io/hotpot-timer/",
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/hotpot-timer.png",
-          "commit_time": "2026-08-08T00:53:40Z"
+          "commit_time": "2026-08-31T00:00:00+08:00"
         },
         {
           "name": "pdf2wechat",
