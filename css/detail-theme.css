@@ -108,7 +108,8 @@ body {
 }
 
 html[lang="zh-CN"] body {
-  font-family: var(--font-sans-zh);
+  /* Keep the English page's Latin face; CJK glyphs fall back to the Chinese stack. */
+  font-family: var(--font-sans);
   line-height: 1.68;
   text-rendering: optimizeLegibility;
 }

@@ -922,7 +922,8 @@ html[lang="zh-CN"] .card-description {
 html[lang="zh-CN"] .card-category-tag,
 html[lang="zh-CN"] .cat-pill-btn,
 html[lang="zh-CN"] .sort-button {
-  font-family: var(--font-sans-zh);
+  /* Match the English page for Latin labels while preserving CJK fallback. */
+  font-family: var(--font-sans);
   letter-spacing: 0.015em;
 }
 
