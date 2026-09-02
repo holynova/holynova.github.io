@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-31",
-  "totalRepos": 85,
+  "lastUpdated": "2026-09-02",
+  "totalRepos": 86,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -107,6 +107,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "rubber-stamp-world-cities",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "橡胶戳旅行实地笔记：30 座世界著名城市的 4:5 橡胶戳海报画廊，融合手工多色套印与旅行手账质感",
+            "en": "Rubber Stamp World Cities: 30 world city travel field-note poster gallery in vintage multi-color stamp print style"
+          },
+          "url": "https://github.com/holynova/rubber-stamp-world-cities",
+          "homepage": "https://holynova.github.io/rubber-stamp-world-cities/",
+          "pushed_at": "2026-09-02",
+          "screenshot": "screenshots/rubber-stamp-world-cities.png",
+          "commit_time": "2026-09-02T20:07:00+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "city-stamp",
           "lang": "JavaScript",
