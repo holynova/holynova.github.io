@@ -1,0 +1,16 @@
+{
+  "name": "holynova-github-io",
+  "account_id": "ef7863c4de93e71c3496f940c8ab4865",
+  "compatibility_date": "2026-09-03",
+  "workers_dev": false,
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    {
+      "pattern": "xiaosang.cc",
+      "custom_domain": true
+    }
+  ]
+}
