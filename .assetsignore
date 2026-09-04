@@ -1,6 +1,12 @@
 .git/
+.git
+.git/**
 .github/
+.github/**
 .idea/
+.idea/**
+.wrangler/
+.wrangler/**
 README.md
 git_log.txt
 server.py
