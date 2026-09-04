@@ -1,0 +1,12 @@
+.git/
+.github/
+.idea/
+README.md
+git_log.txt
+server.py
+scripts/
+data/screenshot-capture-report.json
+data/screenshot-capture-overrides.json
+wrangler.jsonc
+.gitignore
+.assetsignore

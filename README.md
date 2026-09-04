@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://holynova.github.io">🌐 在线预览</a> •
+  <a href="https://xiaosang.cc">🌐 在线预览</a> •
   <a href="https://github.com/holynova/holynova.github.io">📦 GitHub</a> •
   <a href="mailto:holy_nova@126.com">📧 联系我</a>
 </p>
@@ -26,7 +26,7 @@
 
 ## 🚀 在线预览
 
-**👉 [https://holynova.github.io](https://holynova.github.io)**
+**👉 [https://xiaosang.cc](https://xiaosang.cc)**
 
 ## 📸 项目截图
 
@@ -244,6 +244,6 @@ npx http-server -p 8080
 
 ## Demo 分享卡片
 
-[![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://holynova.github.io/holynova.github.io/)
+[![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://xiaosang.cc/)
 
-移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://holynova.github.io/holynova.github.io/>
+移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://xiaosang.cc/>
