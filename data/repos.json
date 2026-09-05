@@ -111,14 +111,14 @@
           "name": "rubber-stamp-world-cities",
           "lang": "JavaScript",
           "desc": {
-            "zh": "橡胶戳旅行实地笔记：30 座世界著名城市的 4:5 橡胶戳海报画廊，融合手工多色套印与旅行手账质感",
-            "en": "Rubber Stamp World Cities: 30 world city travel field-note poster gallery in vintage multi-color stamp print style"
+            "zh": "橡胶戳艺术印记：世界城市(30)、十二生肖(12)与二十四节气(24)共 66 枚复古手工纯印章艺术画廊",
+            "en": "Rubber Stamp Art Prints: 66 vintage hand-carved stamp posters covering World Cities (30), Chinese Zodiac (12), and 24 Solar Terms (24)"
           },
           "url": "https://github.com/holynova/rubber-stamp-world-cities",
           "homepage": "https://holynova.github.io/rubber-stamp-world-cities/",
-          "pushed_at": "2026-09-02",
+          "pushed_at": "2026-09-05",
           "screenshot": "screenshots/rubber-stamp-world-cities.png",
-          "commit_time": "2026-09-02T20:07:00+08:00",
+          "commit_time": "2026-09-05T21:30:00+08:00",
           "hidden": false,
           "is_featured": true
         },
