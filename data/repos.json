@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-02",
-  "totalRepos": 86,
+  "lastUpdated": "2026-09-09",
+  "totalRepos": 87,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "system-design-learning-lab",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "系统设计面试学习实验室：28 章架构追踪、思维导图、限流与一致性哈希实验",
+            "en": "Interactive system design study lab with 28 chapter traces, mind maps, rate limiting, and consistent hashing experiments"
+          },
+          "url": "https://github.com/holynova/system-design-learning-lab",
+          "homepage": "https://holynova.github.io/system-design-learning-lab/",
+          "pushed_at": "2026-09-09",
+          "screenshot": "screenshots/system-design-learning-lab.png",
+          "commit_time": "2026-09-09T00:17:03+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "rubber-stamp-world-cities",
           "lang": "JavaScript",
