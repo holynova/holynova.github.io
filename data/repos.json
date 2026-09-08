@@ -114,14 +114,14 @@
           "name": "system-design-learning-lab",
           "lang": "JavaScript",
           "desc": {
-            "zh": "系统设计面试学习实验室：28 章架构追踪、思维导图、限流与一致性哈希实验",
-            "en": "Interactive system design study lab with 28 chapter traces, mind maps, rate limiting, and consistent hashing experiments"
+            "zh": "系统设计实验册：聚焦 V1 第 6—8 章，交互验证 KV 副本、Snowflake ID 与短网址缓存，附思维导图和复述练习",
+            "en": "System design workbook: hands-on KV replication, Snowflake IDs and URL shortening, with concept maps and recall exercises"
           },
           "url": "https://github.com/holynova/system-design-learning-lab",
           "homepage": "https://holynova.github.io/system-design-learning-lab/",
           "pushed_at": "2026-09-09",
           "screenshot": "screenshots/system-design-learning-lab.png",
-          "commit_time": "2026-09-09T00:17:03+08:00",
+          "commit_time": "2026-09-08T16:46:38.242Z",
           "hidden": false,
           "is_featured": true
         },
