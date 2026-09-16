@@ -3,6 +3,11 @@
 
 浏览 JavaScript 工具、CSS 动画、布局练习和框架示例，点击分类中的演示链接即可体验。
 
+<p align="center">
+  <img src="assets/readme/hero.svg" width="100%" alt="小桑前端作品集 (Xiaosang Frontend Portfolio): 浏览 JavaScript 工具、CSS 动画、布局练习和框架示例，点击分类中的演示链接即可体验。">
+</p>
+
+
 
 
 <p align="center">
