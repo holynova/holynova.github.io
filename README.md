@@ -1,7 +1,13 @@
 # 小桑前端作品集 (Xiaosang Frontend Portfolio)
 
 
-![Screenshot](./screenshot.png)
+浏览 JavaScript 工具、CSS 动画、布局练习和框架示例，点击分类中的演示链接即可体验。
+
+<p align="center">
+  <img src="assets/readme/hero.svg" width="100%" alt="小桑前端作品集 (Xiaosang Frontend Portfolio): 浏览 JavaScript 工具、CSS 动画、布局练习和框架示例，点击分类中的演示链接即可体验。">
+</p>
+
+
 
 
 <p align="center">
@@ -198,7 +204,7 @@ cd holynova.github.io
 
 # 使用任意静态服务器启动，例如：
 # 方法 1: 使用 Python
-python -m http.server 8080
+python3 -m http.server 8080
 
 # 方法 2: 使用 Node.js (需要先安装 http-server)
 npx http-server -p 8080
@@ -215,7 +221,7 @@ npx http-server -p 8080
 1. 准备 200px 宽度的截图（建议使用 PNG 格式）
 2. 将截图放入 `screenshots/` 目录
 3. 命名规则：`项目名称.png`（如 `2048.png`、`sort.png`）
-4. 截图会自动显示在 README 中
+4. 在 README 对应图片标签的 `src` 属性中填写截图路径；新增图片不会自动加入表格
 
 ## 🤝 贡献
 
@@ -229,7 +235,7 @@ npx http-server -p 8080
 
 ## 📄 许可证
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+仓库当前未包含独立的 LICENSE 文件；各历史示例及第三方依赖的授权请查看对应目录说明。
 
 ## 📧 联系方式
 
@@ -241,9 +247,3 @@ npx http-server -p 8080
 <p align="center">
   <sub>用 ❤️ 和 JavaScript 构建</sub>
 </p>
-
-## Demo 分享卡片
-
-[![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://holynova.github.io/holynova.github.io/)
-
-移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://holynova.github.io/holynova.github.io/>
