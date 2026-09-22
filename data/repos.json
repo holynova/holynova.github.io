@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-09-09",
-  "totalRepos": 87,
+  "totalRepos": 88,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -949,6 +949,21 @@
         "en": "Dev Tools"
       },
       "repos": [
+        {
+          "name": "image-gallery-template",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "图片优先的 AI 原生画廊模板：用主题与图片生成可发布网站，内置 Sharp 压缩、内容校验、Umami 统计与静态部署",
+            "en": "AI-native image gallery template that turns a theme and a folder of images into a shippable static site with Sharp processing, validation, Umami analytics, and deployment guidance"
+          },
+          "url": "https://github.com/holynova/image-gallery-template",
+          "pushed_at": "2026-09-22",
+          "homepage": "https://image-gallery-template.xiaosang.cc/",
+          "screenshot": "screenshots/image-gallery-template.png",
+          "commit_time": "2026-09-22T20:08:00+08:00",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "tiny-icons",
           "lang": "TypeScript",
