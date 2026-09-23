@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-09",
-  "totalRepos": 88,
+  "lastUpdated": "2026-09-24",
+  "totalRepos": 89,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -107,6 +107,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "system-design-algorithms-js",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "系统设计经典算法全景图解：基于 Alex Xu《系统设计面试》全 28 章的经典算法纯原生 JS 实现，配矢量 SVG 架构图、Mermaid 时序流转与在线交互实验室",
+            "en": "Classic system design algorithms from Alex Xu's System Design Interview (28 chapters) implemented in vanilla JS, featuring SVG architecture diagrams, Mermaid workflows, and interactive playgrounds"
+          },
+          "url": "https://github.com/holynova/system-design-algorithms-js",
+          "homepage": "https://system-design-algorithms-js.xiaosang.cc/",
+          "pushed_at": "2026-09-24",
+          "screenshot": "screenshots/system-design-algorithms-js.png",
+          "commit_time": "2026-09-24T00:36:52Z",
+          "hidden": false,
+          "is_featured": true
+        },
         {
           "name": "system-design-learning-lab",
           "lang": "JavaScript",
