@@ -18,10 +18,21 @@ const viewport = { width: 1280, height: 800, deviceScaleFactor: 1 };
 const { chromium } = await import(playwrightModule);
 const data = JSON.parse(await fs.readFile(dataPath, 'utf8'));
 const overrides = JSON.parse(await fs.readFile(overridesPath, 'utf8'));
+function isPortfolioDemo(homepage) {
+  if (!homepage) return false;
+  try {
+    const hostname = new URL(homepage).hostname;
+    return hostname === 'holynova.github.io' ||
+      hostname === 'xiaosang.cc' ||
+      hostname.endsWith('.xiaosang.cc');
+  } catch {
+    return false;
+  }
+}
 const projects = data.categories.flatMap((category) =>
   category.repos.map((repo) => ({ ...repo, categoryId: category.id }))
 ).filter((repo) => (
-  repo.homepage?.startsWith('https://holynova.github.io/') &&
+  isPortfolioDemo(repo.homepage) &&
   repo.categoryId !== 'chrome-extensions' &&
   !overrides[repo.name]?.skip
 ));

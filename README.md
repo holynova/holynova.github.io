@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://holynova.github.io">🌐 在线预览</a> •
+  <a href="https://xiaosang.cc/">🌐 在线预览</a> •
   <a href="https://github.com/holynova/holynova.github.io">📦 GitHub</a> •
   <a href="mailto:holy_nova@126.com">📧 联系我</a>
 </p>
@@ -26,7 +26,19 @@
 
 ## 🚀 在线预览
 
-**👉 [https://holynova.github.io](https://holynova.github.io)**
+**👉 [https://xiaosang.cc/](https://xiaosang.cc/)**
+
+GitHub Pages 仍可作为备用入口：[holynova.github.io](https://holynova.github.io/)。两个入口的作品 Demo 均由 `master` 分支的 `data/repos.json` 决定。
+
+### 发布方式
+
+`master` 是唯一的作品数据来源。合并前运行 `node scripts/check-demo-links.mjs`，确保 Demo 不会退回 GitHub Pages 链接。GitHub Pages 读取 `master` 根目录；当前绑定 `xiaosang.cc` 的 Cloudflare Worker 是 `xiaosang-portfolio`，从同一提交手动发布：
+
+```bash
+npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc
+```
+
+发布后读取 `https://xiaosang.cc/data/repos.json` 并实际点击作品卡片的 Demo，确认页面指向 `*.xiaosang.cc`。Git 提交或 GitHub Pages 更新不会自动发布 Cloudflare。
 
 ## 📸 项目截图
 
@@ -244,6 +256,6 @@ npx http-server -p 8080
 
 ## Demo 分享卡片
 
-[![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://holynova.github.io/holynova.github.io/)
+[![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://xiaosang.cc/)
 
-移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://holynova.github.io/holynova.github.io/>
+移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://xiaosang.cc/>

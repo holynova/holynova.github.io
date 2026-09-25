@@ -1,0 +1,17 @@
+name: Check portfolio Demo links
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  check-demo-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/check-demo-links.mjs
+      - run: node scripts/verify-data-source.mjs
