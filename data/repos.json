@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-24",
-  "totalRepos": 89,
+  "lastUpdated": "2026-10-01",
+  "totalRepos": 90,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,20 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "the-creation-variants",
+          "lang": "HTML",
+          "desc": {
+            "zh": "创世纪 · 触碰的四十种可能：致敬米开朗基罗《创造亚当》经典构图，探索科技、宇宙、哲学、艺术、自然与人间温情中生命与造物指尖相触的 40 幅名画变种数字展厅",
+            "en": "The Genesis Touch: 40 Variations of Divine Creation paying homage to Michelangelo's Sistine ceiling masterpiece with progressive image loading and dual theme aesthetics"
+          },
+          "url": "https://github.com/holynova/the-creation-variants",
+          "homepage": "https://the-creation-variants.xiaosang.cc/",
+          "pushed_at": "2026-10-01",
+          "screenshot": "screenshots/the-creation-variants.png",
+          "commit_time": "2026-10-02T00:10:00+08:00",
+          "hidden": false
+        },
         {
           "name": "system-design-algorithms-js",
           "lang": "JavaScript",
