@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>山海夜市 - Web Survivor</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script type="module" crossorigin src="/demos/web-survivor-game-agy/assets/index-DcnFO6Lq.js"></script>
+    <link rel="stylesheet" crossorigin href="/demos/web-survivor-game-agy/assets/index-fSYHqtQF.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- 游戏主画布容器 -->
+      <div id="game-container"></div>
+
+      <!-- 竖屏建议横屏提示 -->
+      <div id="portrait-hint" class="portrait-hint">📱 建议旋转手机为横屏以获得全屏最佳体验</div>
+
+      <!-- 启动与手势解锁层 (全屏夜市美术背景) -->
+      <div id="start-overlay" class="overlay full-cover-overlay" style="background-image: linear-gradient(rgba(6, 11, 13, 0.45), rgba(6, 11, 13, 0.78)), url('./assets/ui/cover_night_market.jpg'); background-size: cover; background-position: center;">
+        <div class="modal-card full-screen-hero-card">
+          <div class="cover-content">
+            <div class="badge">🏮 Shanhai Night Market · 全新版本 🏮</div>
+            <h1 class="title">山 海 夜 市</h1>
+            <p class="subtitle">幽冥小怪夜袭，化厨具为神兵！构筑你的战斗厨房！</p>
+            <div class="controls-hint">
+              <div><span>[W/A/S/D]</span> 或 <span>[方向键]</span> 移动走位与智能索敌</div>
+              <div><span>[Esc]</span> 暂停查看装备与属性 | <span>[F2]</span> 呼出测试指令面板</div>
+            </div>
+            <button id="start-btn" class="btn primary-btn pulse-glow">🔥 开启夜市营业 🔥</button>
+            <div class="version-tag" id="app-version-tag">v0.2.2 · 五级难度挑战 · 武器装备栏 & 开发者指令已就绪</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 全局错误边界 -->
+      <div id="error-boundary" class="overlay hidden">
+        <div class="modal-card error-card">
+          <h2 class="error-title">⚠️ 运行异常</h2>
+          <p id="error-message" class="error-text">发生了意外错误。</p>
+          <pre id="error-stack" class="error-stack"></pre>
+          <button id="reload-btn" class="btn">重新加载游戏</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

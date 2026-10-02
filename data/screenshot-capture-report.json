@@ -1,8 +1,8 @@
 {
   "generatedAt": "2026-10-02T03:16:00.800345+00:00",
-  "scope": "all 90 catalog entries, including hidden entries",
-  "count": 90,
-  "captured": 88,
+  "scope": "All 101 catalog entries, including hidden entries",
+  "count": 101,
+  "captured": 99,
   "retained": 2,
   "customDomainIssues": [
     "equal_width",
@@ -1588,6 +1588,160 @@
       "screenshot": "screenshots/youtube-channel-scraper-chrome.png",
       "source": "latest remote extension in isolated Chromium",
       "startedAt": "2026-10-02T03:16:00.773401+00:00"
+    },
+    {
+      "name": "tank-tactics-3d",
+      "status": "captured",
+      "homepage": "https://tank-tactics-3d.xiaosang.cc/",
+      "screenshot": "screenshots/tank-tactics-3d.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735489+00:00",
+      "metrics": {
+        "title": "二打一 · 3D 战术沙盘",
+        "text": "二打一\n月背攻城线\n红方\n4\n寒光炮队行动\n蓝方\n4\n拖动旋转 · 滚轮缩放\n\n双方正在争夺先手…\n\n蓝方取得先手\n\n点选一个己方单位",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "iron-corridor",
+      "status": "captured",
+      "homepage": "https://iron-corridor.xiaosang.cc/",
+      "screenshot": "screenshots/iron-corridor.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735689+00:00",
+      "metrics": {
+        "title": "铁甲回廊 · Iron Corridor",
+        "text": "GitHub\nPlay Online",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "snake-rogue",
+      "status": "captured",
+      "homepage": "https://snake-rogue.xiaosang.cc/",
+      "screenshot": "screenshots/snake-rogue.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735697+00:00",
+      "metrics": {
+        "title": "蛇渊 · Snake Rogue",
+        "text": "GitHub · holynova/snake-rogue",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "ouroboros-rogue-snake",
+      "status": "captured",
+      "homepage": "https://ouroboros-rogue-snake.xiaosang.cc/",
+      "screenshot": "screenshots/ouroboros-rogue-snake.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735701+00:00",
+      "metrics": {
+        "title": "衔尾者 · OUROBOROS",
+        "text": "HP\n6/6\n长度\n5\n撕咬\n1\nDEPTH 1\n腐锈回廊\n残敌 5\n➤\n9\n精华\n0\n等级\n1\n分数\n205\nSPACE · 突进\nESC 暂停 · TAB 图鉴\nOUROBOROS\n腐锈回廊",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "game-narrative-archive",
+      "status": "captured",
+      "homepage": "https://game-narrative-archive.xiaosang.cc/",
+      "screenshot": "screenshots/game-narrative-archive.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735703+00:00",
+      "metrics": {
+        "title": "《巫师 3：狂猎》 · 阅读 · 游戏剧情档案馆",
+        "text": "GAME / ARCHIVE\n游戏剧情档案馆\n阅读\n目录\n附录\nTHE WITCHER 3\nCYBERPUNK 2077\nGTA 5\n阅读工具\n《巫师 3：狂猎》\n《赛博朋克 2077》\n《GTA 5》\n目录\n11 章\n从头开始阅读\n本体 · 旅程\n01\n战争已经先到了\n04\n一座城市如何把人变成标签\n06\n两个继承人：英雄不等于好国王\n07\n乌马：关键线索常常长得最不起眼\n08\n凯尔莫罕之战：失去维瑟米尔之后\n09\n希里的五个小选择\n本体 · 支线\n02\n血腥男爵：一个家庭并不是受害者之家\n03\n林中夫人：童话只是权力的化妆\n05\n生死攸关：逃亡不是浪漫的冒险\n扩展 · DLC\nD1\n欧吉尔德：救他，是奖励还是惩罚？\nD2\n童话王国的连环谋杀案\n附录\n人物关系\n选择与结局\n分析方法\nTHE WITCHER 3 / WILD HUNT\n一场关于\n如何放手的旅程\n\n从白果园的一口井，到希里（Ciri）最终要走向的世界。这里不急着解释所有支线，也不要求你先看懂所有关系，只从第一页开始，连续读下去。\n\n本体 + 2 个 DLC\n全剧透\n约 40 分钟\n序\n\n《巫师 3》的真正主线，不是杰洛特（Geralt）消灭了多少怪物，而是他如何在每一次没有干净答案的选择里，继续和别人一起生活。\n\n01\n序章 · 白果园\n战争已经先到了\n\n一场寻找叶奈法（Yennefer）的旅程，从一口井里的鬼魂开始。\n\n《巫师 3》开场时，有三个人必须先理解：杰洛特、叶奈法、希里。杰洛特是猎魔人；叶奈法是女术士，也是杰洛特长期纠缠、分分合合的爱人；希里虽然不是两人的亲生女儿，但在情感关系上，基本就是他们共同的女儿。\n\n希里还有一个极其特殊的身份：她拥有上古之血，能够穿越空间，甚至穿越不同的世界。因此狂猎一直在寻找她。不了解小说背景时，游戏很容易被玩成「我要找一个白头发女孩」；但更准确的说法是：一对关系复杂的父母正在寻找失踪的女儿，而整个世界最危险的一群人也在寻找她。\n\n游戏第一次出现希里，并不是现实。杰洛特梦见自己回到凯尔莫罕，年轻的希里正在接受猎魔人训练，叶奈法和维瑟米尔（Vesemir）也在屋里。一切几乎像一个家庭。然后狂猎出现。\n\n这段梦已经把整部游戏的情感核心说出来了。杰洛特最想得到的，未必是拯救世界；他只是想让这些人重新在一起。\n\n醒来以后，杰洛特正和老猎魔人维瑟米尔一起寻找叶奈法。他们来到白果园。尼弗迦德帝国刚刚入侵北方，这座村庄已经被占领。\n\n所以你第一次进入这个世界时看到的不是英雄、国王和魔法，而是尸体、战场、逃难者、吊死的人和占领军。游戏从一开始就在提醒你：「拯救世界」这件事，对普通人而言没有那么浪漫。\n\n为了得到叶奈法的消息，杰洛特答应替尼弗迦德驻军杀掉一只狮鹫。若只是赶任务，你会记得：找草药，调查尸体，杀狮鹫。可调查下去才知道，它的伴侣曾被士兵杀死，于是它开始攻击人类。\n\n怪物的行为背后通常有原因，但理解原因不等于可以放着它继续杀人。杰洛特仍然得拔剑。这就是猎魔人的典型困境：解释，不等于宽恕。\n\n白果园酒馆里，杰洛特还遇到一个奇怪的秃头男人：刚特·欧迪姆（Gaunter O'Dimm）。他热心地告诉杰洛特叶奈法的线索，然后消失。那时他看起来只是一个神秘路人；等到《石之心》，你才会发现，游戏开头几乎第一个遇到的人之一，竟是整个《巫师 3》宇宙里最恐怖的存在。\n\n杀掉狮鹫之后，杰洛特终于见到叶奈法。但她不是来叙旧的，而是直接把他带到维吉玛皇宫——皇帝恩希尔（Emhyr var Emreis）要见他。恩希尔是希里的亲生父亲，他告诉杰洛特：狂猎正在追捕希里，而她最后",
+        "canvas": 0,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "neon-survivors",
+      "status": "captured",
+      "homepage": "https://neon-survivors.xiaosang.cc/",
+      "screenshot": "screenshots/neon-survivors.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735705+00:00",
+      "metrics": {
+        "title": "NEON SURVIVORS — 霓虹幸存者",
+        "text": "100 / 100\nLv 1\nXP 0/8\n猎人\nVanguard\nE\n过载冲锋\n3 秒内移速 +80%、攻速 +60%\nWAVE 1\n0:54\n战斗中\n击杀\n0\n金币\n0\n伤害\n0\n场上敌人\n3\n⚔\n1\nWAVE 1\n猎人\nGitHub ↗",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "spud-squad",
+      "status": "captured",
+      "homepage": "https://spud-squad.xiaosang.cc/",
+      "screenshot": "screenshots/spud-squad.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735707+00:00",
+      "metrics": {
+        "title": "Spud Squad - 3D Survivors",
+        "text": "100 / 100\n波次: 1\n击杀: 0\n金币: 0\n等级: 1\n第 1 波",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "last-spud",
+      "status": "captured",
+      "homepage": "https://last-spud.xiaosang.cc/",
+      "screenshot": "screenshots/last-spud.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735708+00:00",
+      "metrics": {
+        "title": "地牢幸存者 · Dungeon Survivors",
+        "text": "第 1 / 12 波\n24\n0\n60 / 60\nLv.1\n★\n第 1 波\nM 静音",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "tuber-survivors",
+      "status": "captured",
+      "homepage": "https://tuber-survivors.xiaosang.cc/",
+      "screenshot": "screenshots/tuber-survivors.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735710+00:00",
+      "metrics": {
+        "title": "TUBER SURVIVORS — 块茎幸存者",
+        "text": "第 1 波\n21\n◆ 0\n200/200\nLV 1\n🌀 环刃\n普通\n空武器槽\n空武器槽\n伤害 85%\n攻速 95%\n移速 88%\n暴击 8%\n护甲 8\n冲刺\nGitHub",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "web-survivor-game-agy",
+      "status": "captured",
+      "homepage": "https://xiaosang.cc/demos/web-survivor-game-agy/",
+      "screenshot": "screenshots/web-survivor-game-agy.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735712+00:00",
+      "metrics": {
+        "title": "山海夜市 - Web Survivor",
+        "text": "",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
+    },
+    {
+      "name": "battle-city-roguelike",
+      "status": "captured",
+      "homepage": "https://xiaosang.cc/demos/battle-city-roguelike/",
+      "screenshot": "screenshots/battle-city-roguelike.png",
+      "source": "verified current demo",
+      "startedAt": "2026-10-02T03:37:56.735714+00:00",
+      "metrics": {
+        "title": "钢铁誓约：重装肉鸽坦克 | Battle City: Rogue Bastion",
+        "text": "BASTION TACTICAL HUD\n🎯 自动瞄准: 开 (T)\n🔊 BGM: 开",
+        "canvas": 1,
+        "unloadedImages": 0
+      }
     }
   ]
 }

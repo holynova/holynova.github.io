@@ -460,7 +460,10 @@
   }
 
   function processLoadedData(data) {
-    state.categories = Array.isArray(data.categories) ? data.categories : [];
+    state.categories = (Array.isArray(data.categories) ? data.categories : []).map(category => ({
+      ...category,
+      repos: (Array.isArray(category.repos) ? category.repos : []).filter(repo => !repo.hidden)
+    }));
     const flattened = [];
 
     state.categories.forEach(cat => {

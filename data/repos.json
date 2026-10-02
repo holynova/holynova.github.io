@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-02",
-  "totalRepos": 90,
+  "totalRepos": 101,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -111,6 +111,21 @@
       },
       "repos": [
         {
+          "name": "game-narrative-archive",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "游戏剧情档案馆：手机优先的剧情阅读、人物关系、选择后果与结局分析",
+            "en": "Story Atlas — mobile-first game-story reading with character relationships, choices and ending analysis"
+          },
+          "url": "https://github.com/holynova/game-narrative-archive",
+          "pushed_at": "2026-09-16",
+          "commit_time": "2026-09-16T11:52:38Z",
+          "homepage": "https://game-narrative-archive.xiaosang.cc/",
+          "screenshot": "screenshots/game-narrative-archive.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
           "name": "the-creation-variants",
           "lang": "HTML",
           "desc": {
@@ -158,14 +173,14 @@
           "name": "rubber-stamp-world-cities",
           "lang": "JavaScript",
           "desc": {
-            "zh": "橡胶戳艺术印记：世界城市(30)、名胜风景(50)、十二生肖(12)、二十四节气(24)与山海神异(10)共 126 枚复古手工纯印章艺术画廊，支持盖章手账拼贴工坊、触感声音盖章收集册、专属藏书票工坊与原色/黑白/红白配色切换",
-            "en": "Rubber Stamp Art Prints: 126 vintage hand-carved stamp posters covering World Cities (30), China 5A Scenic Spots (50), Chinese Zodiac (12), 24 Solar Terms (24), and Shan Hai Jing (10), featuring Stamp Journal collage studio, tactile audio stamping passport, Ex-Libris studio, and Original/B&W/Cinnabar ink modes"
+            "zh": "橡胶戳艺术画廊：350 枚作品、13 个系列，支持手账拼贴、印记收集、藏书票工坊与多种配色",
+            "en": "Rubber Stamp Art: 350 prints across 13 collections, with journal collage, stamp collection, ex-libris workshops and ink palettes"
           },
-          "url": "https://github.com/holynova/rubber-stamp-world-cities",
+          "url": "https://github.com/holynova/rubber-stamp",
           "homepage": "https://rubber-stamp-world-cities.xiaosang.cc/",
-          "pushed_at": "2026-09-07",
+          "pushed_at": "2026-10-02",
           "screenshot": "screenshots/rubber-stamp-world-cities.png",
-          "commit_time": "2026-09-07T01:00:00+08:00",
+          "commit_time": "2026-10-02T02:12:00Z",
           "hidden": false,
           "is_featured": true
         },
@@ -594,8 +609,8 @@
           "commit_time": "2026-05-23T14:02:45+08:00",
           "homepage": "https://cut-and-remix.xiaosang.cc/",
           "screenshot": "screenshots/cut_and_remix.png",
-          "hidden": true,
-          "is_featured": false
+          "hidden": false,
+          "is_featured": true
         },
         {
           "name": "win98-screen-saver",
@@ -868,8 +883,8 @@
           "commit_time": "2026-08-13T00:32:10+08:00",
           "homepage": "https://flash-card.xiaosang.cc/",
           "screenshot": "screenshots/flash-card.png",
-          "hidden": true,
-          "is_featured": false
+          "hidden": false,
+          "is_featured": true
         },
         {
           "name": "head_tail_poem_generator",
@@ -1015,8 +1030,8 @@
           "commit_time": "2026-08-01T22:57:05+08:00",
           "homepage": "https://tiny-icons.xiaosang.cc/",
           "screenshot": "screenshots/tiny-icons.png",
-          "hidden": true,
-          "is_featured": false
+          "hidden": false,
+          "is_featured": true
         },
         {
           "name": "equal_width",
@@ -1116,8 +1131,8 @@
           "commit_time": "2026-08-19T10:07:42+08:00",
           "homepage": "https://psy-talks.xiaosang.cc/",
           "screenshot": "screenshots/psy-talks.png",
-          "hidden": true,
-          "is_featured": false
+          "hidden": false,
+          "is_featured": true
         },
         {
           "name": "xiaoyuzhou-transcript-downloader",
@@ -1312,6 +1327,111 @@
       },
       "repos": [
         {
+          "name": "battle-city-roguelike",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "钢铁誓约：高清坦克大战与 Roguelite 战役，结合基地防守、路线选择与战备强化",
+            "en": "Battle City: Rogue Bastion — high-resolution tank combat with base defense, campaign routes and roguelite upgrades"
+          },
+          "url": "https://github.com/holynova/battle-city-roguelike",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:11:32Z",
+          "homepage": "https://xiaosang.cc/demos/battle-city-roguelike/",
+          "screenshot": "screenshots/battle-city-roguelike.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "iron-corridor",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "铁甲回廊：像素风坦克 Roguelike，包含程序化战场、三选一强化与永久成长",
+            "en": "Iron Corridor — pixel-art tank roguelike with procedural arenas, upgrade drafts and permanent progression"
+          },
+          "url": "https://github.com/holynova/iron-corridor",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:14:40Z",
+          "homepage": "https://iron-corridor.xiaosang.cc/",
+          "screenshot": "screenshots/iron-corridor.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "tank-tactics-3d",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "二打一：Three.js 三维回合制战术沙盘，支持双人对战与电脑 AI",
+            "en": "Tank Tactics 3D — a Three.js turn-based tactical board with local multiplayer and AI opponents"
+          },
+          "url": "https://github.com/holynova/tank-tactics-3d",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:13:04Z",
+          "homepage": "https://tank-tactics-3d.xiaosang.cc/",
+          "screenshot": "screenshots/tank-tactics-3d.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "snake-rogue",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "蛇渊：贪食蛇与地牢 Roguelike，结合毒液战斗、迷雾探索与十层地下城",
+            "en": "Snake Rogue — snake-based dungeon roguelike with venom combat, fog of war and ten dungeon floors"
+          },
+          "url": "https://github.com/holynova/snake-rogue",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:11:42Z",
+          "homepage": "https://snake-rogue.xiaosang.cc/",
+          "screenshot": "screenshots/snake-rogue.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "ouroboros-rogue-snake",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "衔尾者：程序化贪食蛇 Roguelike，包含十二层地牢、遗物构筑与永久强化",
+            "en": "Ouroboros — procedural snake roguelike with twelve dungeon floors, relic builds and permanent upgrades"
+          },
+          "url": "https://github.com/holynova/ouroboros-rogue-snake",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:13:42Z",
+          "homepage": "https://ouroboros-rogue-snake.xiaosang.cc/",
+          "screenshot": "screenshots/ouroboros-rogue-snake.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "neon-survivors",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "霓虹幸存者：Three.js 三维波次生存游戏，模型与音效程序化生成",
+            "en": "Neon Survivors — a Three.js 3D survivor roguelite with procedural models and synthesized audio"
+          },
+          "url": "https://github.com/holynova/neon-survivors",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:12:14Z",
+          "homepage": "https://neon-survivors.xiaosang.cc/",
+          "screenshot": "screenshots/neon-survivors.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
+          "name": "web-survivor-game-agy",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "山海夜市：中式妖怪夜市题材的幸存者游戏，用厨具与口味组合战斗构筑",
+            "en": "Shanhai Night Market — a Chinese-fantasy survivor game with kitchen-tool and flavor-based combat builds"
+          },
+          "url": "https://github.com/holynova/web-survivor-game-agy",
+          "pushed_at": "2026-09-16",
+          "commit_time": "2026-09-16T12:03:16Z",
+          "homepage": "https://xiaosang.cc/demos/web-survivor-game-agy/",
+          "screenshot": "screenshots/web-survivor-game-agy.png",
+          "hidden": false,
+          "is_featured": true
+        },
+        {
           "name": "one_second_movie",
           "lang": "TypeScript",
           "desc": {
@@ -1430,6 +1550,60 @@
           "commit_time": "2026-05-23T21:18:27+08:00",
           "hidden": false,
           "is_featured": true
+        }
+      ]
+    },
+    {
+      "id": "game-experiments",
+      "name": {
+        "zh": "游戏实验",
+        "en": "Game Experiments"
+      },
+      "repos": [
+        {
+          "name": "spud-squad",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "游戏实验：土豆小队，Three.js 三维幸存者竞技场与多职业战斗",
+            "en": "Game experiment: Spud Squad — a Three.js 3D survivor arena with multiple character classes"
+          },
+          "url": "https://github.com/holynova/spud-squad",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:14:46Z",
+          "homepage": "https://spud-squad.xiaosang.cc/",
+          "screenshot": "screenshots/spud-squad.png",
+          "hidden": false,
+          "is_featured": false
+        },
+        {
+          "name": "tuber-survivors",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "游戏实验：块茎幸存者，三维波次战斗、多武器装备与局间商店",
+            "en": "Game experiment: Tuber Survivors — 3D wave combat, multi-weapon loadouts and between-wave shops"
+          },
+          "url": "https://github.com/holynova/tuber-survivors",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T02:16:56Z",
+          "homepage": "https://tuber-survivors.xiaosang.cc/",
+          "screenshot": "screenshots/tuber-survivors.png",
+          "hidden": false,
+          "is_featured": false
+        },
+        {
+          "name": "last-spud",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "游戏实验：地牢幸存者，Canvas 波次生存、职业选择与武器构筑",
+            "en": "Game experiment: Dungeon Survivors — Canvas wave survival with character selection and weapon builds"
+          },
+          "url": "https://github.com/holynova/last-spud",
+          "pushed_at": "2026-09-16",
+          "commit_time": "2026-09-16T12:03:24Z",
+          "homepage": "https://last-spud.xiaosang.cc/",
+          "screenshot": "screenshots/last-spud.png",
+          "hidden": false,
+          "is_featured": false
         }
       ]
     }
