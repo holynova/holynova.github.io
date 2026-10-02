@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-02",
-  "totalRepos": 101,
+  "totalRepos": 102,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1326,6 +1326,18 @@
         "en": "Games"
       },
       "repos": [
+        {
+          "name": "rift-survivors",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "五英雄八波生存竞技场：主动技能、升级构筑、精英与Boss、采样音效和战斗音乐",
+            "en": "Five-hero survival arena with eight waves, active skills, upgrade builds, elites, a boss, sampled audio and music"
+          },
+          "homepage": "https://rift-survivors.xiaosang.cc/",
+          "screenshot": "screenshots/rift-survivors.png",
+          "pushed_at": "2026-10-02",
+          "hidden": false
+        },
         {
           "name": "battle-city-roguelike",
           "lang": "TypeScript",
