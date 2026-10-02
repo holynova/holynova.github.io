@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-02",
-  "totalRepos": 102,
+  "totalRepos": 103,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1326,6 +1326,22 @@
         "en": "Games"
       },
       "repos": [
+        {
+          "name": "fallwell",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "坠井者：四名角色、三种进化核心与遗物构筑的像素下落动作肉鸽，落地补弹、踩怪连击。",
+            "en": "FALLWELL: a pixel descent roguelite with four characters, three evolving cores, relic builds, landing reloads and stomp combos."
+          },
+          "url": "https://github.com/holynova/fallwell",
+          "homepage": "https://fallwell.xiaosang.cc/",
+          "screenshot": "screenshots/fallwell.png",
+          "pushed_at": "2026-10-02",
+          "commit_time": "2026-10-02T21:37:01+08:00",
+          "hidden": false,
+          "stars": 0,
+          "is_featured": false
+        },
         {
           "name": "rift-survivors",
           "lang": "TypeScript",
