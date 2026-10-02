@@ -1336,7 +1336,8 @@
           "homepage": "https://rift-survivors.xiaosang.cc/",
           "screenshot": "screenshots/rift-survivors.png",
           "pushed_at": "2026-10-02",
-          "hidden": false
+          "hidden": false,
+          "url": "https://github.com/holynova/rift-survivors"
         },
         {
           "name": "battle-city-roguelike",
