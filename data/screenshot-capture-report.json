@@ -1,20 +1,25 @@
 {
-  "generatedAt": "2026-08-25T09:20:08.180Z",
-  "viewport": {
-    "width": 1280,
-    "height": 800,
-    "deviceScaleFactor": 1
-  },
-  "settleMs": 1800,
-  "count": 59,
+  "generatedAt": "2026-10-02T03:16:00.800345+00:00",
+  "scope": "all 90 catalog entries, including hidden entries",
+  "count": 90,
+  "captured": 88,
+  "retained": 2,
+  "customDomainIssues": [
+    "equal_width",
+    "haiku-flow",
+    "head_tail_poem",
+    "hotpot-timer",
+    "offer_calculator",
+    "pre_tax_salary_calculator"
+  ],
   "results": [
     {
       "name": "100-clocks",
-      "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/100-clocks/",
+      "categoryId": "content-only",
+      "homepage": "https://100-clocks.xiaosang.cc/",
       "screenshot": "screenshots/100-clocks.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:31.120Z",
+      "startedAt": "2026-10-02T03:03:54.624Z",
       "metrics": {
         "bodyTextLength": 380,
         "visibleTextLength": 200,
@@ -29,10 +34,10 @@
     {
       "name": "24points",
       "categoryId": "games",
-      "homepage": "https://holynova.github.io/24points/",
+      "homepage": "https://24points.xiaosang.cc/",
       "screenshot": "screenshots/24points.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:06.438Z",
+      "startedAt": "2026-10-02T03:06:34.734Z",
       "metrics": {
         "bodyTextLength": 169,
         "visibleTextLength": 138,
@@ -47,28 +52,30 @@
     {
       "name": "50-seeds",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/50-seeds/",
+      "homepage": "https://50-seeds.xiaosang.cc/",
       "screenshot": "screenshots/50-seeds.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:36.457Z",
+      "startedAt": "2026-10-02T03:05:17.576Z",
       "metrics": {
-        "bodyTextLength": 2279,
-        "visibleTextLength": 1950,
+        "bodyTextLength": 481,
+        "visibleTextLength": 388,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 1395,
+        "documentHeight": 1034,
         "title": "50 Seeds · AI 作图视觉种子库"
       },
-      "consoleErrors": []
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ]
     },
     {
       "name": "ai-agent-interview-report",
-      "categoryId": "ai-tools",
-      "homepage": "https://holynova.github.io/ai-agent-interview-report/",
+      "categoryId": "content-only",
+      "homepage": "https://ai-agent-interview-report.xiaosang.cc/",
       "screenshot": "screenshots/ai-agent-interview-report.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:41.699Z",
+      "startedAt": "2026-10-02T03:04:00.320Z",
       "metrics": {
         "bodyTextLength": 7752,
         "visibleTextLength": 7472,
@@ -82,11 +89,11 @@
     },
     {
       "name": "ai-gallery",
-      "categoryId": "ai-tools",
-      "homepage": "https://holynova.github.io/ai-gallery/",
+      "categoryId": "content-only",
+      "homepage": "https://ai-gallery.xiaosang.cc/",
       "screenshot": "screenshots/ai-gallery.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:41.786Z",
+      "startedAt": "2026-10-02T03:04:02.457Z",
       "metrics": {
         "bodyTextLength": 7615,
         "visibleTextLength": 7535,
@@ -100,11 +107,11 @@
     },
     {
       "name": "anthropic-learn-assets",
-      "categoryId": "ai-tools",
-      "homepage": "https://holynova.github.io/anthropic-learn-assets/",
+      "categoryId": "content-only",
+      "homepage": "https://anthropic-learn-assets.xiaosang.cc/",
       "screenshot": "screenshots/anthropic-learn-assets.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:46.645Z",
+      "startedAt": "2026-10-02T03:04:05.138Z",
       "metrics": {
         "bodyTextLength": 6708,
         "visibleTextLength": 6569,
@@ -117,12 +124,30 @@
       "consoleErrors": []
     },
     {
+      "name": "art-style-showcase",
+      "categoryId": "content-only",
+      "homepage": "https://art-style-showcase.xiaosang.cc/",
+      "screenshot": "screenshots/art-style-showcase.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:46.865Z",
+      "metrics": {
+        "bodyTextLength": 2177,
+        "visibleTextLength": 2095,
+        "visibleImageCount": 43,
+        "unloadedImageCount": 20,
+        "viewportHeight": 800,
+        "documentHeight": 7816,
+        "title": "Art Style Archive · 41 Art Styles Benchmark Matrix"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "ask_all_ai",
       "categoryId": "ai-tools",
-      "homepage": "https://holynova.github.io/ask_all_ai/",
+      "homepage": "https://ask-all-ai.xiaosang.cc/",
       "screenshot": "screenshots/ask_all_ai.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:45.246Z",
+      "startedAt": "2026-10-02T03:05:20.472Z",
       "metrics": {
         "bodyTextLength": 214,
         "visibleTextLength": 480,
@@ -135,12 +160,30 @@
       "consoleErrors": []
     },
     {
+      "name": "auto-xiao-hong-shu",
+      "categoryId": "ai-tools",
+      "homepage": "https://auto-xiao-hong-shu.xiaosang.cc/",
+      "screenshot": "screenshots/auto-xiao-hong-shu.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:05:28.012Z",
+      "metrics": {
+        "bodyTextLength": 304,
+        "visibleTextLength": 294,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 880,
+        "title": "Auto XHS Publisher"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "bookshelf_manager",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/bookshelf_manager/",
+      "homepage": "https://bookshelf-manager.xiaosang.cc/",
       "screenshot": "screenshots/bookshelf_manager.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:42.036Z",
+      "startedAt": "2026-10-02T03:06:11.162Z",
       "metrics": {
         "bodyTextLength": 378,
         "visibleTextLength": 307,
@@ -154,11 +197,11 @@
     },
     {
       "name": "brand-etymology",
-      "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/brand-etymology/",
+      "categoryId": "content-only",
+      "homepage": "https://brand-etymology.xiaosang.cc/",
       "screenshot": "screenshots/brand-etymology.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:02.025Z",
+      "startedAt": "2026-10-02T03:04:12.582Z",
       "metrics": {
         "bodyTextLength": 94342,
         "visibleTextLength": 85806,
@@ -173,10 +216,10 @@
     {
       "name": "card-3d-depth-lab",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/card-3d-depth-lab/",
+      "homepage": "https://card-3d-depth-lab.xiaosang.cc/",
       "screenshot": "screenshots/card-3d-depth-lab.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:29.932Z",
+      "startedAt": "2026-10-02T03:04:59.244Z",
       "metrics": {
         "bodyTextLength": 509,
         "visibleTextLength": 499,
@@ -192,14 +235,14 @@
     },
     {
       "name": "char_finder",
-      "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/char_finder/",
+      "categoryId": "content-only",
+      "homepage": "https://char-finder.xiaosang.cc/",
       "screenshot": "screenshots/char_finder.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:06.531Z",
+      "startedAt": "2026-10-02T03:04:29.739Z",
       "metrics": {
-        "bodyTextLength": 1385,
-        "visibleTextLength": 1354,
+        "bodyTextLength": 1386,
+        "visibleTextLength": 1355,
         "visibleImageCount": 1,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
@@ -211,10 +254,10 @@
     {
       "name": "chrome-session-tui",
       "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/chrome-session-tui/",
+      "homepage": "https://chrome-session-tui.xiaosang.cc/",
       "screenshot": "screenshots/chrome-session-tui.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:26.495Z",
+      "startedAt": "2026-10-02T03:06:06.577Z",
       "metrics": {
         "bodyTextLength": 487,
         "visibleTextLength": 458,
@@ -229,28 +272,75 @@
     {
       "name": "city-public-facilities",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/city-public-facilities/",
+      "homepage": "https://city-public-facilities.xiaosang.cc/",
       "screenshot": "screenshots/city-public-facilities.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:51.666Z",
+      "startedAt": "2026-10-02T03:06:16.759Z",
       "metrics": {
-        "bodyTextLength": 442,
-        "visibleTextLength": 388,
+        "bodyTextLength": 419,
+        "visibleTextLength": 407,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 985,
+        "documentHeight": 987,
         "title": "近邻 | 城市公共设施近邻检索"
       },
       "consoleErrors": []
     },
     {
+      "name": "city-stamp",
+      "categoryId": "content-only",
+      "homepage": "https://city-stamp.xiaosang.cc/",
+      "screenshot": "screenshots/city-stamp.jpg",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:40.489Z",
+      "metrics": {
+        "bodyTextLength": 1273,
+        "visibleTextLength": 1048,
+        "visibleImageCount": 11,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 3266,
+        "title": "城市印记 · City Stamp"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "citypop-shanghai-exploration",
+      "categoryId": "content-only",
+      "homepage": "https://citypop-shanghai-exploration.xiaosang.cc/",
+      "screenshot": "screenshots/citypop-shanghai-exploration.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:43.013Z",
+      "metrics": {
+        "bodyTextLength": 3775,
+        "visibleTextLength": 6488,
+        "visibleImageCount": 47,
+        "unloadedImageCount": 22,
+        "viewportHeight": 800,
+        "documentHeight": 13664,
+        "title": "Shanghai Afterglow — City Pop Prompt Archive"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "collection_miner",
+      "status": "captured",
+      "sourceURL": "chrome-extension://onmhnmllclnnnpnifpicoabnnpjodiih/newtab.html",
+      "entry": "newtab.html",
+      "errors": [],
+      "screenshot": "screenshots/collection_miner.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-10-02T03:16:00.773404+00:00",
+      "sampleData": "Six public demo bookmarks created in the isolated profile; no personal bookmarks accessed."
+    },
+    {
       "name": "cut_and_remix",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/cut_and_remix/",
+      "homepage": "https://cut-and-remix.xiaosang.cc/",
       "screenshot": "screenshots/cut_and_remix.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:01.092Z",
+      "startedAt": "2026-10-02T03:04:52.862Z",
       "metrics": {
         "bodyTextLength": 516,
         "visibleTextLength": 354,
@@ -263,12 +353,30 @@
       "consoleErrors": []
     },
     {
+      "name": "daily-necessities-library",
+      "categoryId": "content-only",
+      "homepage": "https://daily-necessities-library.xiaosang.cc/",
+      "screenshot": "screenshots/daily-necessities-library.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:43.312Z",
+      "metrics": {
+        "bodyTextLength": 994,
+        "visibleTextLength": 909,
+        "visibleImageCount": 15,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1783,
+        "title": "撕标签｜去除包装标签的产品图素材库"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "director-motorcycle-cinema",
-      "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/director-motorcycle-cinema/",
+      "categoryId": "content-only",
+      "homepage": "https://director-motorcycle-cinema.xiaosang.cc/",
       "screenshot": "screenshots/director-motorcycle-cinema.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:11.361Z",
+      "startedAt": "2026-10-02T03:03:52.506Z",
       "metrics": {
         "bodyTextLength": 8963,
         "visibleTextLength": 8757,
@@ -281,12 +389,30 @@
       "consoleErrors": []
     },
     {
+      "name": "douban-quark-clawer",
+      "categoryId": "productivity",
+      "homepage": "https://douban-quark-clawer.xiaosang.cc/",
+      "screenshot": "screenshots/douban-quark-clawer.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:06:26.570Z",
+      "metrics": {
+        "bodyTextLength": 239,
+        "visibleTextLength": 184,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "豆瓣夸克资源自动搜刮器"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "emoji_life",
       "categoryId": "games",
-      "homepage": "https://holynova.github.io/emoji_life/",
+      "homepage": "https://emoji-life.xiaosang.cc/",
       "screenshot": "screenshots/emoji_life.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:27.137Z",
+      "startedAt": "2026-10-02T03:06:45.938Z",
       "metrics": {
         "bodyTextLength": 785,
         "visibleTextLength": 773,
@@ -301,10 +427,11 @@
     {
       "name": "equal_width",
       "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/equal_width/",
+      "homepage": "https://equal-width.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/equal_width/",
       "screenshot": "screenshots/equal_width.png",
-      "status": "manual-approved",
-      "startedAt": "2026-08-25T09:14:13.707Z",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:13:02.872Z",
       "metrics": {
         "bodyTextLength": 10,
         "visibleTextLength": 9,
@@ -314,16 +441,15 @@
         "documentHeight": 1063,
         "title": "equal-width"
       },
-      "consoleErrors": [],
-      "reviewNote": "Initial page contains a compact UI, but the screenshot is non-empty and visually usable."
+      "consoleErrors": []
     },
     {
       "name": "flash-card",
       "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/flash-card/",
+      "homepage": "https://flash-card.xiaosang.cc/",
       "screenshot": "screenshots/flash-card.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:52.319Z",
+      "startedAt": "2026-10-02T03:05:28.587Z",
       "metrics": {
         "bodyTextLength": 167,
         "visibleTextLength": 110,
@@ -338,10 +464,10 @@
     {
       "name": "flash-words",
       "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/flash-words/",
+      "homepage": "https://flash-words.xiaosang.cc/",
       "screenshot": "screenshots/flash-words.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:00.821Z",
+      "startedAt": "2026-10-02T03:05:35.741Z",
       "metrics": {
         "bodyTextLength": 838,
         "visibleTextLength": 659,
@@ -355,11 +481,11 @@
     },
     {
       "name": "game-rating-lookup",
-      "categoryId": "games",
-      "homepage": "https://holynova.github.io/game-rating-lookup/",
+      "categoryId": "content-only",
+      "homepage": "https://game-rating-lookup.xiaosang.cc/",
       "screenshot": "screenshots/game-rating-lookup.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:21.687Z",
+      "startedAt": "2026-10-02T03:04:48.059Z",
       "metrics": {
         "bodyTextLength": 109,
         "visibleTextLength": 105,
@@ -372,15 +498,62 @@
       "consoleErrors": []
     },
     {
+      "name": "game-style-transfer-atlas",
+      "categoryId": "content-only",
+      "homepage": "https://game-style-transfer-atlas.xiaosang.cc/",
+      "screenshot": "screenshots/game-style-transfer-atlas.jpg",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:03:14.214Z",
+      "metrics": {
+        "bodyTextLength": 3401,
+        "visibleTextLength": 3179,
+        "visibleImageCount": 48,
+        "unloadedImageCount": 24,
+        "viewportHeight": 800,
+        "documentHeight": 9304,
+        "title": "Game Style Transfer Atlas"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "github-pages-detector-extension",
+      "status": "captured",
+      "sourceURL": "https://github.com/holynova/tank-tactics-3d",
+      "entry": null,
+      "errors": [],
+      "screenshot": "screenshots/github-pages-detector-extension.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-10-02T03:16:00.773399+00:00"
+    },
+    {
+      "name": "gushi_namer",
+      "categoryId": "chinese-tools",
+      "homepage": "https://gushi-namer.xiaosang.cc/",
+      "screenshot": "screenshots/gushi_namer.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:05:41.903Z",
+      "metrics": {
+        "bodyTextLength": 475,
+        "visibleTextLength": 470,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 906,
+        "title": "古诗文起名 - 翻阅经典，遇见好名字"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "haiku-flow",
       "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/haiku-flow/",
+      "homepage": "https://haiku-flow.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/haiku-flow/",
       "screenshot": "screenshots/haiku-flow.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:55.751Z",
+      "startedAt": "2026-10-02T03:13:02.873Z",
       "metrics": {
-        "bodyTextLength": 120,
-        "visibleTextLength": 113,
+        "bodyTextLength": 131,
+        "visibleTextLength": 124,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
@@ -392,10 +565,10 @@
     {
       "name": "hand_fireworks",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/hand_fireworks/",
+      "homepage": "https://hand-fireworks.xiaosang.cc/",
       "screenshot": "screenshots/hand_fireworks.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:31.248Z",
+      "startedAt": "2026-10-02T03:05:08.243Z",
       "metrics": {
         "bodyTextLength": 48,
         "visibleTextLength": 81,
@@ -410,17 +583,18 @@
     {
       "name": "head_tail_poem",
       "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/head_tail_poem/",
+      "homepage": "https://head-tail-poem.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/head_tail_poem/",
       "screenshot": "screenshots/head_tail_poem.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:57.041Z",
+      "startedAt": "2026-10-02T03:13:02.873Z",
       "metrics": {
-        "bodyTextLength": 327,
-        "visibleTextLength": 717,
+        "bodyTextLength": 330,
+        "visibleTextLength": 721,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 934,
+        "documentHeight": 944,
         "title": "藏头诗生成器"
       },
       "consoleErrors": []
@@ -428,10 +602,10 @@
     {
       "name": "head_tail_poem_generator",
       "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/head_tail_poem_generator/",
+      "homepage": "https://head-tail-poem-generator.xiaosang.cc/",
       "screenshot": "screenshots/head_tail_poem_generator.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:53.167Z",
+      "startedAt": "2026-10-02T03:05:30.289Z",
       "metrics": {
         "bodyTextLength": 39,
         "visibleTextLength": 39,
@@ -446,10 +620,10 @@
     {
       "name": "health-book",
       "categoryId": "content-only",
-      "homepage": "https://holynova.github.io/health-book/",
+      "homepage": "https://health-book.xiaosang.cc/",
       "screenshot": "screenshots/health-book.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:12:56.197Z",
+      "startedAt": "2026-10-02T03:03:19.013Z",
       "metrics": {
         "bodyTextLength": 3201,
         "visibleTextLength": 2558,
@@ -463,36 +637,43 @@
     },
     {
       "name": "holiday-visualizer",
-      "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/holiday-visualizer/",
+      "categoryId": "content-only",
+      "homepage": "https://holiday-visualizer.xiaosang.cc/",
       "screenshot": "screenshots/holiday-visualizer.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:01.373Z",
+      "startedAt": "2026-10-02T03:04:42.368Z",
       "metrics": {
         "bodyTextLength": 4841,
         "visibleTextLength": 4841,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 7053,
+        "documentHeight": 7068,
         "title": "节假日可视化统计 - 小桑作品集"
       },
       "consoleErrors": []
     },
     {
+      "name": "holynova",
+      "status": "captured",
+      "sourceURL": "https://github.com/holynova/holynova",
+      "source": "public profile README",
+      "screenshot": "screenshots/holynova.png"
+    },
+    {
       "name": "holynova.github.io",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/holynova.github.io/",
+      "homepage": "https://xiaosang.cc/",
       "screenshot": "screenshots/holynova.github.io.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:54.965Z",
+      "startedAt": "2026-10-02T03:06:17.848Z",
       "metrics": {
-        "bodyTextLength": 1240,
-        "visibleTextLength": 1214,
+        "bodyTextLength": 1658,
+        "visibleTextLength": 1630,
         "visibleImageCount": 14,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 2583,
+        "documentHeight": 2745,
         "title": "holynova · Where Craft Lives | 作品集 Detail 视觉版"
       },
       "consoleErrors": []
@@ -500,28 +681,47 @@
     {
       "name": "hotpot-timer",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/hotpot-timer/",
+      "homepage": "https://hotpot-timer.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/hotpot-timer/",
       "screenshot": "screenshots/hotpot-timer.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:56.694Z",
+      "startedAt": "2026-10-02T03:13:02.873Z",
       "metrics": {
-        "bodyTextLength": 598,
-        "visibleTextLength": 597,
+        "bodyTextLength": 115,
+        "visibleTextLength": 208,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 1388,
-        "title": "火锅定时计时器 - 小桑作品集"
+        "documentHeight": 800,
+        "title": "TRA / Cinematic Countdown"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "image-gallery-template",
+      "categoryId": "dev-tools",
+      "homepage": "https://image-gallery-template.xiaosang.cc/",
+      "screenshot": "screenshots/image-gallery-template.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:05:47.953Z",
+      "metrics": {
+        "bodyTextLength": 108,
+        "visibleTextLength": 97,
+        "visibleImageCount": 2,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "光影画廊"
       },
       "consoleErrors": []
     },
     {
       "name": "image_local_llm",
       "categoryId": "ai-tools",
-      "homepage": "https://holynova.github.io/image_local_llm/",
+      "homepage": "https://image-local-llm.xiaosang.cc/",
       "screenshot": "screenshots/image_local_llm.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:50.347Z",
+      "startedAt": "2026-10-02T03:05:22.777Z",
       "metrics": {
         "bodyTextLength": 282,
         "visibleTextLength": 231,
@@ -541,11 +741,11 @@
     },
     {
       "name": "industry-book-recommender",
-      "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/industry-book-recommender/",
+      "categoryId": "content-only",
+      "homepage": "https://industry-book-recommender.xiaosang.cc/",
       "screenshot": "screenshots/industry-book-recommender.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:26.747Z",
+      "startedAt": "2026-10-02T03:04:40.007Z",
       "metrics": {
         "bodyTextLength": 21133,
         "visibleTextLength": 20189,
@@ -559,11 +759,11 @@
     },
     {
       "name": "js-go-compare",
-      "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/js-go-compare/",
+      "categoryId": "content-only",
+      "homepage": "https://js-go-compare.xiaosang.cc/",
       "screenshot": "screenshots/js-go-compare.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:08.822Z",
+      "startedAt": "2026-10-02T03:04:34.559Z",
       "metrics": {
         "bodyTextLength": 1889,
         "visibleTextLength": 1325,
@@ -576,12 +776,22 @@
       "consoleErrors": []
     },
     {
+      "name": "json-workbench-extension",
+      "status": "captured",
+      "sourceURL": "chrome-extension://ehmgagpnifljhpogolejflhcepeoejdi/workbench.html",
+      "entry": "workbench.html",
+      "errors": [],
+      "screenshot": "screenshots/json-workbench-extension.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-10-02T03:16:00.773406+00:00"
+    },
+    {
       "name": "json_to_ts",
       "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/json_to_ts/",
+      "homepage": "https://json-to-ts.xiaosang.cc/",
       "screenshot": "screenshots/json_to_ts.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:21.568Z",
+      "startedAt": "2026-10-02T03:05:58.541Z",
       "metrics": {
         "bodyTextLength": 2547,
         "visibleTextLength": 2018,
@@ -596,10 +806,10 @@
     {
       "name": "kaleidoscope-studio",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/kaleidoscope-studio/",
+      "homepage": "https://kaleidoscope-studio.xiaosang.cc/",
       "screenshot": "screenshots/kaleidoscope-studio.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:07.128Z",
+      "startedAt": "2026-10-02T03:04:59.010Z",
       "metrics": {
         "bodyTextLength": 383,
         "visibleTextLength": 334,
@@ -614,10 +824,10 @@
     {
       "name": "keyboard_sentence",
       "categoryId": "games",
-      "homepage": "https://holynova.github.io/keyboard_sentence/",
+      "homepage": "https://keyboard-sentence.xiaosang.cc/",
       "screenshot": "screenshots/keyboard_sentence.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:11.133Z",
+      "startedAt": "2026-10-02T03:06:35.869Z",
       "metrics": {
         "bodyTextLength": 493,
         "visibleTextLength": 437,
@@ -630,12 +840,30 @@
       "consoleErrors": []
     },
     {
+      "name": "life_bar_chart",
+      "categoryId": "productivity",
+      "homepage": "https://life-bar-chart.xiaosang.cc/",
+      "screenshot": "screenshots/life_bar_chart.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:06:27.939Z",
+      "metrics": {
+        "bodyTextLength": 24,
+        "visibleTextLength": 24,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1553,
+        "title": "React App"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "mercator-country-compare",
       "categoryId": "games",
-      "homepage": "https://holynova.github.io/mercator-country-compare/",
+      "homepage": "https://mercator-country-compare.xiaosang.cc/",
       "screenshot": "screenshots/mercator-country-compare.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:16.401Z",
+      "startedAt": "2026-10-02T03:06:41.631Z",
       "metrics": {
         "bodyTextLength": 264,
         "visibleTextLength": 210,
@@ -645,21 +873,18 @@
         "documentHeight": 800,
         "title": "mercator-country-compare"
       },
-      "consoleErrors": [
-        "Error",
-        "Error"
-      ]
+      "consoleErrors": []
     },
     {
       "name": "mobile-sensor-playground",
       "categoryId": "games",
-      "homepage": "https://holynova.github.io/mobile-sensor-playground/",
+      "homepage": "https://mobile-sensor-playground.xiaosang.cc/",
       "screenshot": "screenshots/mobile-sensor-playground.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:16.145Z",
+      "startedAt": "2026-10-02T03:06:39.567Z",
       "metrics": {
-        "bodyTextLength": 973,
-        "visibleTextLength": 938,
+        "bodyTextLength": 972,
+        "visibleTextLength": 933,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
@@ -671,10 +896,10 @@
     {
       "name": "mouse_scroll_heath_check",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/mouse_scroll_heath_check/",
+      "homepage": "https://mouse-scroll-heath-check.xiaosang.cc/",
       "screenshot": "screenshots/mouse_scroll_heath_check.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:46.994Z",
+      "startedAt": "2026-10-02T03:06:13.407Z",
       "metrics": {
         "bodyTextLength": 3216,
         "visibleTextLength": 3080,
@@ -689,10 +914,10 @@
     {
       "name": "multi-screen-view",
       "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/multi-screen-view/",
+      "homepage": "https://multi-screen-view.xiaosang.cc/",
       "screenshot": "screenshots/multi-screen-view.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:21.843Z",
+      "startedAt": "2026-10-02T03:06:04.234Z",
       "metrics": {
         "bodyTextLength": 731,
         "visibleTextLength": 603,
@@ -707,10 +932,10 @@
     {
       "name": "music_pulse",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/music_pulse/",
+      "homepage": "https://music-pulse.xiaosang.cc/",
       "screenshot": "screenshots/music_pulse.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:41.699Z",
+      "startedAt": "2026-10-02T03:05:17.681Z",
       "metrics": {
         "bodyTextLength": 652,
         "visibleTextLength": 585,
@@ -724,29 +949,66 @@
     },
     {
       "name": "my-design-system",
-      "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/my-design-system/",
+      "categoryId": "content-only",
+      "homepage": "https://my-design-system.xiaosang.cc/",
       "screenshot": "screenshots/my-design-system.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:01.780Z",
+      "startedAt": "2026-10-02T03:03:46.709Z",
       "metrics": {
-        "bodyTextLength": 1387,
-        "visibleTextLength": 1384,
+        "bodyTextLength": 1886,
+        "visibleTextLength": 1883,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 2089,
+        "documentHeight": 2620,
         "title": "设计系统目录 · Design Systems Hub"
       },
       "consoleErrors": []
     },
     {
+      "name": "notebooklm_one_by_one",
+      "categoryId": "ai-tools",
+      "homepage": "https://notebooklm-one-by-one.xiaosang.cc/",
+      "screenshot": "screenshots/notebooklm_one_by_one.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:05:27.036Z",
+      "metrics": {
+        "bodyTextLength": 370,
+        "visibleTextLength": 360,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "NotebookLM One by One"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "offer_calculator",
+      "categoryId": "productivity",
+      "homepage": "https://offer-calculator.xiaosang.cc/",
+      "screenshot": "screenshots/offer_calculator.png",
+      "status": "retained",
+      "startedAt": "2026-10-02T03:06:31.025Z",
+      "metrics": {
+        "bodyTextLength": 101,
+        "visibleTextLength": 61,
+        "visibleImageCount": 1,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "Offer Calculator"
+      },
+      "consoleErrors": [],
+      "error": "Default Vite/React starter in custom domain, GitHub Pages and latest GitHub source; previous screenshot retained."
+    },
+    {
       "name": "one-punch",
       "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/one-punch/",
+      "homepage": "https://one-punch.xiaosang.cc/",
       "screenshot": "screenshots/one-punch.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:16.982Z",
+      "startedAt": "2026-10-02T03:05:54.020Z",
       "metrics": {
         "bodyTextLength": 1170,
         "visibleTextLength": 936,
@@ -759,12 +1021,66 @@
       "consoleErrors": []
     },
     {
+      "name": "one_second_movie",
+      "categoryId": "games",
+      "homepage": "https://one-second-movie.xiaosang.cc/",
+      "screenshot": "screenshots/one_second_movie.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:06:32.720Z",
+      "metrics": {
+        "bodyTextLength": 260,
+        "visibleTextLength": 259,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 803,
+        "title": "client"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "opencli-pipeline",
+      "categoryId": "ai-tools",
+      "homepage": "https://opencli-pipeline.xiaosang.cc/",
+      "screenshot": "screenshots/opencli-pipeline.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:05:25.519Z",
+      "metrics": {
+        "bodyTextLength": 328,
+        "visibleTextLength": 318,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 907,
+        "title": "OpenCLI Pipeline"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "pdf2wechat",
+      "categoryId": "productivity",
+      "homepage": "https://pdf2wechat.xiaosang.cc/",
+      "screenshot": "screenshots/pdf2wechat.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:06:24.481Z",
+      "metrics": {
+        "bodyTextLength": 91,
+        "visibleTextLength": 78,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "pdf2wechat"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "photo_align",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/photo_align/",
+      "homepage": "https://photo-align.xiaosang.cc/",
       "screenshot": "screenshots/photo_align.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:12:56.197Z",
+      "startedAt": "2026-10-02T03:04:48.889Z",
       "metrics": {
         "bodyTextLength": 128,
         "visibleTextLength": 70,
@@ -779,10 +1095,10 @@
     {
       "name": "poem-formula",
       "categoryId": "content-only",
-      "homepage": "https://holynova.github.io/poem-formula/",
+      "homepage": "https://poem-formula.xiaosang.cc/",
       "screenshot": "screenshots/poem-formula.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:12:56.197Z",
+      "startedAt": "2026-10-02T03:03:24.208Z",
       "metrics": {
         "bodyTextLength": 8632,
         "visibleTextLength": 6232,
@@ -797,13 +1113,13 @@
     {
       "name": "poetry-flow",
       "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/poetry-flow/",
+      "homepage": "https://poetry-flow.xiaosang.cc/",
       "screenshot": "screenshots/poetry-flow.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:58.098Z",
+      "startedAt": "2026-10-02T03:05:35.387Z",
       "metrics": {
-        "bodyTextLength": 254,
-        "visibleTextLength": 239,
+        "bodyTextLength": 229,
+        "visibleTextLength": 216,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
@@ -813,30 +1129,78 @@
       "consoleErrors": []
     },
     {
+      "name": "pre_tax_salary_calculator",
+      "categoryId": "productivity",
+      "homepage": "https://pre-tax-salary-calculator.xiaosang.cc/",
+      "screenshot": "screenshots/pre_tax_salary_calculator.png",
+      "status": "retained",
+      "startedAt": "2026-10-02T03:06:29.599Z",
+      "metrics": {
+        "bodyTextLength": 111,
+        "visibleTextLength": 83,
+        "visibleImageCount": 2,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "Vite + React + TS"
+      },
+      "consoleErrors": [],
+      "error": "Default Vite/React starter in custom domain, GitHub Pages and latest GitHub source; previous screenshot retained."
+    },
+    {
+      "name": "print-atlas",
+      "categoryId": "content-only",
+      "homepage": "https://print-atlas.xiaosang.cc/",
+      "screenshot": "screenshots/print-atlas.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:03:14.215Z",
+      "metrics": {
+        "bodyTextLength": 6181,
+        "visibleTextLength": 5898,
+        "visibleImageCount": 26,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 10249,
+        "title": "压印之间 · 版画与报刊印刷图鉴"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "prompt_one_by_one",
+      "status": "captured",
+      "sourceURL": "https://gemini.google.com/?gemini_sidebar_open=1",
+      "entry": null,
+      "errors": [],
+      "screenshot": "screenshots/prompt_one_by_one.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-10-02T03:16:00.773277+00:00",
+      "sampleData": "Actual extension sidebar on a blank capture host; no AI generation initiated."
+    },
+    {
       "name": "psy-talks",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/psy-talks/",
+      "homepage": "https://psy-talks.xiaosang.cc/",
       "screenshot": "screenshots/psy-talks.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:31.744Z",
+      "startedAt": "2026-10-02T03:06:07.322Z",
       "metrics": {
-        "bodyTextLength": 2407,
-        "visibleTextLength": 3088,
+        "bodyTextLength": 24803,
+        "visibleTextLength": 23401,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 6940,
-        "title": "助人对话练习册｜心理咨询常见对话技巧"
+        "documentHeight": 36131,
+        "title": "助人对话训练手册｜阅读版练习"
       },
       "consoleErrors": []
     },
     {
       "name": "raytracing-demo",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/raytracing-demo/",
+      "homepage": "https://raytracing-demo.xiaosang.cc/",
       "screenshot": "screenshots/raytracing-demo.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:36.251Z",
+      "startedAt": "2026-10-02T03:05:10.746Z",
       "metrics": {
         "bodyTextLength": 658,
         "visibleTextLength": 616,
@@ -849,48 +1213,166 @@
       "consoleErrors": []
     },
     {
+      "name": "rubber-stamp-world-cities",
+      "categoryId": "content-only",
+      "homepage": "https://rubber-stamp-world-cities.xiaosang.cc/",
+      "screenshot": "screenshots/rubber-stamp-world-cities.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:36.210Z",
+      "metrics": {
+        "bodyTextLength": 290,
+        "visibleTextLength": 267,
+        "visibleImageCount": 12,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1242,
+        "title": "rubber world · 极简橡胶戳艺术印记"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "scrape-to-markdown.chrome",
+      "status": "captured",
+      "sourceURL": "chrome-extension://nejbigmnpkcfpmbfbfcgoobhdloaihkl/sidepanel.html",
+      "entry": "sidepanel.html",
+      "errors": [],
+      "screenshot": "screenshots/scrape-to-markdown.chrome.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-10-02T03:16:00.773407+00:00"
+    },
+    {
       "name": "shanghai-public-facilities",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/shanghai-public-facilities/",
+      "homepage": "https://shanghai-public-facilities.xiaosang.cc/",
       "screenshot": "screenshots/shanghai-public-facilities.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:48.855Z",
+      "startedAt": "2026-10-02T03:06:14.457Z",
       "metrics": {
-        "bodyTextLength": 442,
-        "visibleTextLength": 388,
+        "bodyTextLength": 419,
+        "visibleTextLength": 407,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 985,
+        "documentHeight": 987,
         "title": "近邻 | 城市公共设施近邻检索"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "shanghai-through-walls",
+      "categoryId": "content-only",
+      "homepage": "https://shanghai-through-walls.xiaosang.cc/",
+      "screenshot": "screenshots/shanghai-through-walls.jpg",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:03:05.805Z",
+      "metrics": {
+        "bodyTextLength": 2832,
+        "visibleTextLength": 2542,
+        "visibleImageCount": 10,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 7142,
+        "title": "穿墙透壁，上海建筑剖透图册"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "sort_animation",
+      "categoryId": "creative-coding",
+      "homepage": "https://sort-animation.xiaosang.cc/",
+      "screenshot": "screenshots/sort_animation.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:05:19.501Z",
+      "metrics": {
+        "bodyTextLength": 78,
+        "visibleTextLength": 14,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "排序算法可视化"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "spinning-drawer",
+      "categoryId": "creative-coding",
+      "homepage": "https://spinning-drawer.xiaosang.cc/",
+      "screenshot": "screenshots/spinning-drawer.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:05:05.543Z",
+      "metrics": {
+        "bodyTextLength": 346,
+        "visibleTextLength": 346,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "Spinning Drawer"
       },
       "consoleErrors": []
     },
     {
       "name": "string_alchemy",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/string_alchemy/",
+      "homepage": "https://string-alchemy.xiaosang.cc/",
       "screenshot": "screenshots/string_alchemy.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:36.251Z",
+      "startedAt": "2026-10-02T03:05:14.542Z",
       "metrics": {
         "bodyTextLength": 132,
         "visibleTextLength": 77,
-        "visibleImageCount": 3,
+        "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 824,
+        "documentHeight": 823,
         "title": "弹幕附魔:为文字增加化学元素"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "system-design-algorithms-js",
+      "categoryId": "content-only",
+      "homepage": "https://system-design-algorithms-js.xiaosang.cc/",
+      "screenshot": "screenshots/system-design-algorithms-js.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:36.215Z",
+      "metrics": {
+        "bodyTextLength": 4167,
+        "visibleTextLength": 7081,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 2609,
+        "title": "系统设计经典算法全景图解与可交互实验室 | System Design Interview Algorithms"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "system-design-learning-lab",
+      "categoryId": "content-only",
+      "homepage": "https://holynova.github.io/system-design-learning-lab/",
+      "screenshot": "screenshots/system-design-learning-lab.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:36.215Z",
+      "metrics": {
+        "bodyTextLength": 2490,
+        "visibleTextLength": 2369,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 4888,
+        "title": "系统设计实验册 · 06—08"
       },
       "consoleErrors": []
     },
     {
       "name": "tank-tactics-game",
       "categoryId": "games",
-      "homepage": "https://holynova.github.io/tank-tactics-game/",
+      "homepage": "https://tank-tactics-game.xiaosang.cc/",
       "screenshot": "screenshots/tank-tactics-game.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:11.139Z",
+      "startedAt": "2026-10-02T03:06:37.406Z",
       "metrics": {
         "bodyTextLength": 112,
         "visibleTextLength": 76,
@@ -905,10 +1387,10 @@
     {
       "name": "texas-holdem-hand-probability",
       "categoryId": "games",
-      "homepage": "https://holynova.github.io/texas-holdem-hand-probability/",
+      "homepage": "https://texas-holdem-hand-probability.xiaosang.cc/",
       "screenshot": "screenshots/texas-holdem-hand-probability.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:15:23.781Z",
+      "startedAt": "2026-10-02T03:06:41.794Z",
       "metrics": {
         "bodyTextLength": 216,
         "visibleTextLength": 206,
@@ -922,16 +1404,16 @@
     },
     {
       "name": "text_book_pics",
-      "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/text_book_pics/",
+      "categoryId": "content-only",
+      "homepage": "https://text-book-pics.xiaosang.cc/",
       "screenshot": "screenshots/text_book_pics.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:10.830Z",
+      "startedAt": "2026-10-02T03:03:50.523Z",
       "metrics": {
         "bodyTextLength": 8567,
         "visibleTextLength": 8242,
         "visibleImageCount": 198,
-        "unloadedImageCount": 0,
+        "unloadedImageCount": 29,
         "viewportHeight": 800,
         "documentHeight": 24130,
         "title": "课本插图照片风格转换试样"
@@ -939,12 +1421,30 @@
       "consoleErrors": []
     },
     {
+      "name": "the-creation-variants",
+      "categoryId": "content-only",
+      "homepage": "https://the-creation-variants.xiaosang.cc/",
+      "screenshot": "screenshots/the-creation-variants.png",
+      "status": "captured",
+      "startedAt": "2026-10-02T03:02:36.215Z",
+      "metrics": {
+        "bodyTextLength": 2037,
+        "visibleTextLength": 7436,
+        "visibleImageCount": 41,
+        "unloadedImageCount": 31,
+        "viewportHeight": 800,
+        "documentHeight": 7715,
+        "title": "创世纪 · 触碰的四十种可能 | The Genesis Touch - 40 Variations of Creation"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "tiny-icons",
       "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/tiny-icons/",
+      "homepage": "https://tiny-icons.xiaosang.cc/",
       "screenshot": "screenshots/tiny-icons.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:11.884Z",
+      "startedAt": "2026-10-02T03:05:48.486Z",
       "metrics": {
         "bodyTextLength": 876,
         "visibleTextLength": 761,
@@ -958,11 +1458,11 @@
     },
     {
       "name": "ui-compare-privacy-policy",
-      "categoryId": "dev-tools",
-      "homepage": "https://holynova.github.io/ui-compare-privacy-policy/",
+      "categoryId": "content-only",
+      "homepage": "https://ui-compare-privacy-policy.xiaosang.cc/",
       "screenshot": "screenshots/ui-compare-privacy-policy.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:18.776Z",
+      "startedAt": "2026-10-02T03:04:37.290Z",
       "metrics": {
         "bodyTextLength": 2338,
         "visibleTextLength": 1619,
@@ -977,10 +1477,10 @@
     {
       "name": "video_prompt_generator",
       "categoryId": "ai-tools",
-      "homepage": "https://holynova.github.io/video_prompt_generator/",
+      "homepage": "https://video-prompt-generator.xiaosang.cc/",
       "screenshot": "screenshots/video_prompt_generator.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:47.651Z",
+      "startedAt": "2026-10-02T03:05:22.335Z",
       "metrics": {
         "bodyTextLength": 1577,
         "visibleTextLength": 1605,
@@ -994,32 +1494,32 @@
     },
     {
       "name": "web-motion-showcase",
-      "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/web-motion-showcase/",
+      "categoryId": "content-only",
+      "homepage": "https://web-motion-showcase.xiaosang.cc/",
       "screenshot": "screenshots/web-motion-showcase.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:12:56.196Z",
+      "startedAt": "2026-10-02T03:03:41.026Z",
       "metrics": {
-        "bodyTextLength": 1800,
-        "visibleTextLength": 6125,
+        "bodyTextLength": 1365,
+        "visibleTextLength": 4828,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 8766,
+        "documentHeight": 8767,
         "title": "网页 UI 动效灵感库 | Web Motion Showcase - 60+ 经典与现代网页动效与 AI 提示词"
       },
       "consoleErrors": []
     },
     {
       "name": "wenwu-checkin",
-      "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/wenwu-checkin/",
+      "categoryId": "content-only",
+      "homepage": "https://wenwu-checkin.xiaosang.cc/",
       "screenshot": "screenshots/wenwu-checkin.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:35.361Z",
+      "startedAt": "2026-10-02T03:04:42.205Z",
       "metrics": {
-        "bodyTextLength": 16774,
-        "visibleTextLength": 12559,
+        "bodyTextLength": 16736,
+        "visibleTextLength": 12521,
         "visibleImageCount": 195,
         "unloadedImageCount": 160,
         "viewportHeight": 800,
@@ -1031,10 +1531,10 @@
     {
       "name": "win98-screen-saver",
       "categoryId": "creative-coding",
-      "homepage": "https://holynova.github.io/win98-screen-saver/",
+      "homepage": "https://win98-screen-saver.xiaosang.cc/",
       "screenshot": "screenshots/win98-screen-saver.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:13:07.072Z",
+      "startedAt": "2026-10-02T03:04:54.244Z",
       "metrics": {
         "bodyTextLength": 306,
         "visibleTextLength": 213,
@@ -1049,10 +1549,10 @@
     {
       "name": "xiaoyuzhou-transcript-downloader",
       "categoryId": "productivity",
-      "homepage": "https://holynova.github.io/xiaoyuzhou-transcript-downloader/",
+      "homepage": "https://xiaoyuzhou-transcript-downloader.xiaosang.cc/",
       "screenshot": "screenshots/xiaoyuzhou-transcript-downloader.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:37.228Z",
+      "startedAt": "2026-10-02T03:06:08.848Z",
       "metrics": {
         "bodyTextLength": 967,
         "visibleTextLength": 930,
@@ -1067,10 +1567,10 @@
     {
       "name": "xieyin",
       "categoryId": "chinese-tools",
-      "homepage": "https://holynova.github.io/xieyin/",
+      "homepage": "https://xieyin.xiaosang.cc/",
       "screenshot": "screenshots/xieyin.png",
       "status": "captured",
-      "startedAt": "2026-08-25T09:14:03.355Z",
+      "startedAt": "2026-10-02T03:05:41.472Z",
       "metrics": {
         "bodyTextLength": 4427,
         "visibleTextLength": 3024,
@@ -1081,16 +1581,13 @@
         "title": "古籍谐音梗追踪器"
       },
       "consoleErrors": []
-    }
-  ],
-  "skipped": [
-    {
-      "name": "offer_calculator",
-      "reason": "Live URL currently returns an empty Vite shell; retained the last verified screenshot."
     },
     {
-      "name": "one_second_movie",
-      "reason": "Live URL currently returns 404; retained the last verified screenshot."
+      "name": "youtube-channel-scraper-chrome",
+      "status": "captured",
+      "screenshot": "screenshots/youtube-channel-scraper-chrome.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-10-02T03:16:00.773401+00:00"
     }
   ]
 }

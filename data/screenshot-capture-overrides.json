@@ -1,10 +1,26 @@
 {
+  "equal_width": {
+    "captureUrl": "https://holynova.github.io/equal_width/",
+    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
+  },
+  "haiku-flow": {
+    "captureUrl": "https://holynova.github.io/haiku-flow/",
+    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
+  },
+  "head_tail_poem": {
+    "captureUrl": "https://holynova.github.io/head_tail_poem/",
+    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
+  },
+  "hotpot-timer": {
+    "captureUrl": "https://holynova.github.io/hotpot-timer/",
+    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
+  },
   "offer_calculator": {
     "skip": true,
-    "reason": "Live URL currently returns an empty Vite shell; retain the last verified screenshot until the source deployment is restored."
+    "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored."
   },
-  "one_second_movie": {
+  "pre_tax_salary_calculator": {
     "skip": true,
-    "reason": "Live URL currently returns 404; retain the last verified screenshot until the Pages route is restored."
+    "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored."
   }
 }

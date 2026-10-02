@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01",
+  "lastUpdated": "2026-10-02",
   "totalRepos": 90,
   "categories": [
     {
@@ -814,7 +814,8 @@
           "homepage": "https://opencli-pipeline.xiaosang.cc/",
           "hidden": false,
           "is_featured": true,
-          "commit_time": "2026-07-18T08:14:31Z"
+          "commit_time": "2026-07-18T08:14:31Z",
+          "screenshot": "screenshots/opencli-pipeline.png"
         },
         {
           "name": "notebooklm_one_by_one",
@@ -843,7 +844,8 @@
           "commit_time": "2026-04-06T13:29:51+08:00",
           "hidden": false,
           "is_featured": true,
-          "homepage": "https://auto-xiao-hong-shu.xiaosang.cc/"
+          "homepage": "https://auto-xiao-hong-shu.xiaosang.cc/",
+          "screenshot": "screenshots/auto-xiao-hong-shu.png"
         }
       ]
     },
@@ -1267,7 +1269,8 @@
           "commit_time": "2025-03-16T21:48:42+08:00",
           "hidden": false,
           "is_featured": true,
-          "homepage": "https://life-bar-chart.xiaosang.cc/"
+          "homepage": "https://life-bar-chart.xiaosang.cc/",
+          "screenshot": "screenshots/life_bar_chart.png"
         },
         {
           "name": "pre_tax_salary_calculator",

@@ -29,12 +29,13 @@ function isPortfolioDemo(homepage) {
     return false;
   }
 }
+const requestedNames = new Set(process.argv.slice(2));
 const projects = data.categories.flatMap((category) =>
   category.repos.map((repo) => ({ ...repo, categoryId: category.id }))
 ).filter((repo) => (
   isPortfolioDemo(repo.homepage) &&
-  repo.categoryId !== 'chrome-extensions' &&
-  !overrides[repo.name]?.skip
+  repo.categoryId !== 'chrome-extensions' && !overrides[repo.name]?.skip &&
+  (!requestedNames.size || requestedNames.has(repo.name))
 ));
 
 await fs.mkdir(screenshotsDir, { recursive: true });
@@ -57,9 +58,9 @@ async function waitForStableContent(page) {
     const loadingNodes = document.querySelectorAll(
       '[aria-busy="true"], [data-loading="true"], .skeleton, .loading-spinner'
     );
-    const hasContent = body.innerText.trim().length >= 20 || body.querySelector('canvas, svg, video, img');
+    const hasContent = body.innerText.trim().length >= 5 || body.querySelector('canvas, svg, video, img, textarea, input');
     return imagesReady && loadingNodes.length === 0 && hasContent;
-  }, { timeout: 10000 }).catch(() => {});
+  }, undefined, { timeout: 10000 }).catch(() => {});
   await page.waitForTimeout(settleMs);
   await page.addStyleTag({
     content: `
@@ -103,22 +104,29 @@ async function capture(browser, repo) {
   });
   page.on('pageerror', (error) => consoleErrors.push(error.message));
 
-  const target = new URL(repo.homepage);
+  const captureUrl = overrides[repo.name]?.captureUrl || repo.homepage;
+  const target = new URL(captureUrl);
   target.searchParams.set('_portfolio_capture', Date.now().toString());
   const output = screenshotPath(repo);
   const startedAt = new Date().toISOString();
 
   try {
-    await page.goto(target.toString(), { waitUntil: 'domcontentloaded', timeout: 30000 });
+    const response = await page.goto(target.toString(), { waitUntil: 'domcontentloaded', timeout: 45000 });
+    if (response && !response.ok()) throw new Error(`HTTP ${response.status()} at ${page.url()}`);
     await waitForStableContent(page);
-    await page.screenshot({ path: output, type: 'png', fullPage: false });
     const metrics = await inspectPage(page);
+    const bodyText = await page.locator('body').innerText();
+    if (/Vite \+ React|Click on the Vite and React logos/i.test(bodyText)) throw new Error('Default starter template; previous screenshot retained');
+    if (metrics.bodyTextLength < 5 && metrics.visibleImageCount === 0) throw new Error('Empty page; previous screenshot retained');
+    const type = /\.jpe?g$/i.test(output) ? 'jpeg' : 'png';
+    await page.screenshot({ path: output, type, fullPage: false });
     return {
       name: repo.name,
       categoryId: repo.categoryId,
       homepage: repo.homepage,
+      captureUrl,
       screenshot: path.relative(projectRoot, output),
-      status: metrics.bodyTextLength >= 20 || metrics.visibleImageCount > 0 ? 'captured' : 'review',
+      status: metrics.bodyTextLength >= 5 || metrics.visibleImageCount > 0 ? 'captured' : 'review',
       startedAt,
       metrics,
       consoleErrors: consoleErrors.slice(0, 10)
@@ -128,6 +136,7 @@ async function capture(browser, repo) {
       name: repo.name,
       categoryId: repo.categoryId,
       homepage: repo.homepage,
+      captureUrl,
       screenshot: path.relative(projectRoot, output),
       status: 'failed',
       startedAt,
@@ -161,9 +170,7 @@ await fs.writeFile(reportPath, `${JSON.stringify({
   viewport,
   settleMs,
   count: results.length,
-  skipped: Object.entries(overrides)
-    .filter(([, override]) => override.skip)
-    .map(([name, override]) => ({ name, reason: override.reason })),
+  skipped: Object.entries(overrides).filter(([, override]) => override.skip).map(([name, override]) => ({ name, reason: override.reason })),
   results
 }, null, 2)}\n`);
 
