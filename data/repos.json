@@ -188,14 +188,14 @@
           "name": "city-stamp",
           "lang": "JavaScript",
           "desc": {
-            "zh": "城市印记：上海、苏州、北京三座城市的 30 个地标六边形徽章打卡档案，支持点亮、发光与时间记录",
-            "en": "City Stamp: a 30-landmark check-in archive for Shanghai, Suzhou, and Beijing with illuminated hexagonal badges"
+            "zh": "城市印记：上海、苏州、北京、杭州四座城市的 40 个地标六边形徽章打卡档案，支持点亮、发光与时间记录",
+            "en": "City Stamp: a 40-landmark check-in archive for Shanghai, Suzhou, Beijing, and Hangzhou with illuminated hexagonal badges"
           },
           "url": "https://github.com/holynova/city-stamp",
           "homepage": "https://city-stamp.xiaosang.cc/",
-          "pushed_at": "2026-08-31",
+          "pushed_at": "2026-10-02",
           "screenshot": "screenshots/city-stamp.jpg",
-          "commit_time": "2026-08-31T20:15:00+08:00",
+          "commit_time": "2026-10-02T15:04:47+08:00",
           "hidden": false,
           "is_featured": true
         },
