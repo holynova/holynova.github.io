@@ -1346,15 +1346,15 @@
           "name": "rift-survivors",
           "lang": "TypeScript",
           "desc": {
-            "zh": "六武器构筑生存竞技场：三类角色、12种武器四级合成、30件道具、12波怪潮与原创配乐",
-            "en": "Six-weapon survival builds with three roles, twelve upgradeable weapons, thirty items, twelve waves and original music"
+            "zh": "六武器构筑生存竞技场：三类角色、武器合成、30件道具、12波怪潮、近战接触打击与原创配乐",
+            "en": "Six-weapon survival builds with three roles, weapon merging, thirty items, twelve waves, contact-based melee and original music"
           },
           "homepage": "https://rift-survivors.xiaosang.cc/",
           "screenshot": "screenshots/rift-survivors.png",
           "pushed_at": "2026-10-03",
           "hidden": false,
           "url": "https://github.com/holynova/rift-survivors",
-          "commit_time": "2026-10-03T17:14:46+08:00"
+          "commit_time": "2026-10-03T22:11:07+08:00"
         },
         {
           "name": "battle-city-roguelike",
