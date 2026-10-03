@@ -218,14 +218,14 @@
           "name": "daily-necessities-library",
           "lang": "TypeScript",
           "desc": {
-            "zh": "40 个常见日用品、饮料与食品的去品牌、纯色白底 PNG 素材库，支持分类筛选、搜索、预览与下载",
-            "en": "A 40-item unbranded PNG library of everyday products, beverages, and food with filtering, search, preview, and download"
+            "zh": "Wander 分类瀑布流素材库：116 张去标签产品 PNG 与 21 组静物合集，支持搜索、收藏、分享和原图下载",
+            "en": "A Wander masonry library with 116 unbranded product PNGs and 21 still-life collections, search, favorites, sharing, and original downloads"
           },
           "url": "https://github.com/holynova/daily-necessities-library",
           "homepage": "https://daily-necessities-library.xiaosang.cc/",
           "screenshot": "screenshots/daily-necessities-library.png",
-          "pushed_at": "2026-08-30",
-          "commit_time": "2026-08-30T20:30:00+08:00",
+          "pushed_at": "2026-10-03",
+          "commit_time": "2026-10-03T21:45:29+08:00",
           "hidden": false,
           "is_featured": true
         },
