@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02",
+  "lastUpdated": "2026-10-03",
   "totalRepos": 103,
   "categories": [
     {
@@ -1346,14 +1346,15 @@
           "name": "rift-survivors",
           "lang": "TypeScript",
           "desc": {
-            "zh": "五英雄八波生存竞技场：主动技能、升级构筑、精英与Boss、采样音效和战斗音乐",
-            "en": "Five-hero survival arena with eight waves, active skills, upgrade builds, elites, a boss, sampled audio and music"
+            "zh": "六武器构筑生存竞技场：三类角色、12种武器四级合成、30件道具、12波怪潮与原创配乐",
+            "en": "Six-weapon survival builds with three roles, twelve upgradeable weapons, thirty items, twelve waves and original music"
           },
           "homepage": "https://rift-survivors.xiaosang.cc/",
           "screenshot": "screenshots/rift-survivors.png",
-          "pushed_at": "2026-10-02",
+          "pushed_at": "2026-10-03",
           "hidden": false,
-          "url": "https://github.com/holynova/rift-survivors"
+          "url": "https://github.com/holynova/rift-survivors",
+          "commit_time": "2026-10-03T17:14:46+08:00"
         },
         {
           "name": "battle-city-roguelike",
