@@ -702,6 +702,7 @@
       card.style.animationDelay = '';
     }, { once: true });
 
+    const repoTitle = repo.title?.[state.currentLang] || repo.title?.zh || repo.name;
     const repoName = String(repo.name || 'Untitled project');
     const descText = repoDescription(repo);
     const catName = categoryName(repo);
@@ -748,7 +749,7 @@
             ${cardLikeButtonHtml}
           </div>
         </div>
-        <h3 class="card-title">${escapeHtml(repoName)}</h3>
+        <h3 class="card-title">${escapeHtml(repoTitle || repoName)}</h3>
         <p class="card-description">${escapeHtml(descText)}</p>
         <div class="card-hover-actions">
           <div class="card-action-links">

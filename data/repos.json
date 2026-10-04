@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-04",
+  "lastUpdated": "2026-10-05",
   "totalRepos": 118,
   "categories": [
     {
@@ -140,7 +140,7 @@
         },
         {
           "name": "dark-souls-3-lore",
-          "hidden": false,
+          "hidden": true,
           "lang": "HTML",
           "desc": {
             "zh": "以中文旁白和分幕视频回顾传火循环、薪王与灰烬的终局选择。",
@@ -196,7 +196,7 @@
         },
         {
           "name": "cyberpunk-2077-lore",
-          "hidden": false,
+          "hidden": true,
           "lang": "HTML",
           "desc": {
             "zh": "用六幕中文视频串起绀碧大厦劫案、Relic危机、强尼银手与荒坂塔终局。",
@@ -210,7 +210,7 @@
         },
         {
           "name": "rdr2-lore",
-          "hidden": false,
+          "hidden": true,
           "lang": "HTML",
           "desc": {
             "zh": "用六幕中文视频回顾范德林德帮的衰落，以及亚瑟走向救赎的过程。",
@@ -224,7 +224,7 @@
         },
         {
           "name": "gta5-lore",
-          "hidden": false,
+          "hidden": true,
           "lang": "HTML",
           "desc": {
             "zh": "围绕麦克、富兰克林和崔佛，用六幕视频串起背叛、重逢与联合储蓄劫案。",
@@ -238,7 +238,7 @@
         },
         {
           "name": "witcher-3-lore",
-          "hidden": false,
+          "hidden": true,
           "lang": "HTML",
           "desc": {
             "zh": "用六幕中文视频回顾杰洛特寻找希里、凯尔莫罕之战与狂猎终局。",
@@ -255,14 +255,18 @@
           "hidden": false,
           "lang": "HTML",
           "desc": {
-            "zh": "用六幕中文视频梳理黄金律法、黑刀之夜、破碎战争与褪色者的终局。",
-            "en": "A six-chapter Chinese video tracing the Golden Order, the Shattering and the Tarnished’s ending."
+            "zh": "六款游戏的中文剧情视频合集：艾尔登法环、赛博朋克2077、荒野大镖客2、GTA5、巫师三、黑暗之魂3。按游戏切换，支持章节跳转。",
+            "en": "Chinese lore videos for Elden Ring, Cyberpunk 2077, Red Dead Redemption 2, GTA V, The Witcher 3 and Dark Souls III, with game navigation and chapter seeking."
           },
           "url": "https://github.com/holynova/elden-ring-lore",
           "homepage": "https://elden-ring-lore.xiaosang.cc/",
           "screenshot": "screenshots/elden-ring-lore.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:30:37+08:00"
+          "pushed_at": "2026-10-05",
+          "commit_time": "2026-10-05T00:14:00+08:00",
+          "title": {
+            "zh": "游戏剧情视频合集",
+            "en": "Game Lore Video Collection"
+          }
         },
         {
           "name": "builder-atlas",
