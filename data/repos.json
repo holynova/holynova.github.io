@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-03",
-  "totalRepos": 103,
+  "lastUpdated": "2026-10-04",
+  "totalRepos": 104,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,22 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "builder-atlas",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "AI 建造者研究工作台：30 份档案、66 条代表内容与 27 条近期 X 观点，支持三栏证据核对、收藏与练习笔记。",
+            "en": "AI builder research workbench: 30 profiles, 66 representative sources and 27 recent X insights, with evidence inspection, bookmarks and learning notes."
+          },
+          "url": "https://github.com/holynova/builder-atlas",
+          "homepage": "https://builder-atlas.xiaosang.cc/",
+          "screenshot": "screenshots/builder-atlas.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-03T17:09:40+08:00",
+          "hidden": false,
+          "stars": 0,
+          "is_featured": false
+        },
         {
           "name": "game-narrative-archive",
           "lang": "TypeScript",
