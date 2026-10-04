@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-04",
-  "totalRepos": 105,
+  "totalRepos": 118,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -111,17 +111,171 @@
       },
       "repos": [
         {
+          "name": "karpathy-deep-explainer-artifacts",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "通过独立交互页面探索前端、分布式系统、提示词工程及两位创作者的观点整理。",
+            "en": "Interactive learning artifacts for frontend systems, distributed design, prompts and creator insights."
+          },
+          "url": "https://github.com/holynova/karpathy-deep-explainer-artifacts",
+          "homepage": "https://karpathy-deep-explainer-artifacts.xiaosang.cc/",
+          "screenshot": "screenshots/karpathy-deep-explainer-artifacts.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:05+08:00"
+        },
+        {
+          "name": "elden-ring-liveaction",
+          "hidden": false,
+          "lang": "Python",
+          "desc": {
+            "zh": "将艾尔登法环、赛博朋克2077与塞尔达角色和场景转译为摄影风格AI图像。",
+            "en": "A photography-style AI image gallery reimagining Elden Ring, Cyberpunk 2077 and Zelda."
+          },
+          "url": "https://github.com/holynova/elden-ring-liveaction",
+          "homepage": "https://elden-ring-liveaction.xiaosang.cc/",
+          "screenshot": "screenshots/elden-ring-liveaction.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:05+08:00"
+        },
+        {
+          "name": "dark-souls-3-lore",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "以中文旁白和分幕视频回顾传火循环、薪王与灰烬的终局选择。",
+            "en": "A Chinese narrated video exploring the linking of the fire, Lords of Cinder and final choices."
+          },
+          "url": "https://github.com/holynova/dark-souls-3-lore",
+          "homepage": "https://dark-souls-3-lore.xiaosang.cc/",
+          "screenshot": "screenshots/dark-souls-3-lore.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:30:58+08:00"
+        },
+        {
+          "name": "crossover-folk-gallery",
+          "hidden": false,
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "AI生成的动漫联名皮肤概念与江南水乡农民画画廊，支持筛选、灯箱和图片下载。",
+            "en": "An AI-generated concept gallery with anime crossover skins, folk art, filters and downloads."
+          },
+          "url": "https://github.com/holynova/crossover-folk-gallery",
+          "homepage": "https://crossover-folk-gallery.xiaosang.cc/",
+          "screenshot": "screenshots/crossover-folk-gallery.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:24:00+08:00"
+        },
+        {
+          "name": "folk-gallery",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "浏览农民画、文物橡皮图章、橡皮图章与游戏印章的静态图鉴。",
+            "en": "A static visual collection of folk paintings, artifact stamps and game-inspired prints."
+          },
+          "url": "https://github.com/holynova/folk-gallery",
+          "homepage": "https://folk-gallery.xiaosang.cc/",
+          "screenshot": "screenshots/folk-gallery.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:04+08:00"
+        },
+        {
+          "name": "elden-ring-lore-video",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "五章节中文剧情短片：从黄金律法、黑刀之夜，到破碎战争与三种结局。",
+            "en": "A five-chapter Chinese lore short with chapter navigation and three ending summaries."
+          },
+          "url": "https://github.com/holynova/elden-ring-lore-video",
+          "homepage": "https://elden-ring-lore-video.xiaosang.cc/",
+          "screenshot": "screenshots/elden-ring-lore-video.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:30:55+08:00"
+        },
+        {
+          "name": "cyberpunk-2077-lore",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "用六幕中文视频串起绀碧大厦劫案、Relic危机、强尼银手与荒坂塔终局。",
+            "en": "A six-chapter Chinese video connecting the heist, Relic crisis and Arasaka finale."
+          },
+          "url": "https://github.com/holynova/cyberpunk-2077-lore",
+          "homepage": "https://cyberpunk-2077-lore.xiaosang.cc/",
+          "screenshot": "screenshots/cyberpunk-2077-lore.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:30:52+08:00"
+        },
+        {
+          "name": "rdr2-lore",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "用六幕中文视频回顾范德林德帮的衰落，以及亚瑟走向救赎的过程。",
+            "en": "A six-chapter Chinese recap of the Van der Linde gang’s decline and Arthur’s redemption."
+          },
+          "url": "https://github.com/holynova/rdr2-lore",
+          "homepage": "https://rdr2-lore.xiaosang.cc/",
+          "screenshot": "screenshots/rdr2-lore.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:30:48+08:00"
+        },
+        {
+          "name": "gta5-lore",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "围绕麦克、富兰克林和崔佛，用六幕视频串起背叛、重逢与联合储蓄劫案。",
+            "en": "A six-chapter Chinese recap of Michael, Franklin and Trevor’s intertwined story."
+          },
+          "url": "https://github.com/holynova/gta5-lore",
+          "homepage": "https://gta5-lore.xiaosang.cc/",
+          "screenshot": "screenshots/gta5-lore.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:30:45+08:00"
+        },
+        {
+          "name": "witcher-3-lore",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "用六幕中文视频回顾杰洛特寻找希里、凯尔莫罕之战与狂猎终局。",
+            "en": "A six-chapter Chinese video following Geralt’s search for Ciri and the Wild Hunt finale."
+          },
+          "url": "https://github.com/holynova/witcher-3-lore",
+          "homepage": "https://witcher-3-lore.xiaosang.cc/",
+          "screenshot": "screenshots/witcher-3-lore.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:30:42+08:00"
+        },
+        {
+          "name": "elden-ring-lore",
+          "hidden": false,
+          "lang": "HTML",
+          "desc": {
+            "zh": "用六幕中文视频梳理黄金律法、黑刀之夜、破碎战争与褪色者的终局。",
+            "en": "A six-chapter Chinese video tracing the Golden Order, the Shattering and the Tarnished’s ending."
+          },
+          "url": "https://github.com/holynova/elden-ring-lore",
+          "homepage": "https://elden-ring-lore.xiaosang.cc/",
+          "screenshot": "screenshots/elden-ring-lore.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:30:37+08:00"
+        },
+        {
           "name": "builder-atlas",
           "lang": "JavaScript",
           "desc": {
-            "zh": "AI 建造者观点研究工作台：30 份来源绑定档案，4 份专题复核、26 份初步整理；逐条标注出处、已读章节、代表性理由与边界。",
-            "en": "AI builder research workbench: 30 source-bound profiles, four thematic reviews and 26 preliminary profiles, with source locations, access scope and claim limitations."
+            "zh": "浏览30份来源绑定的建造者档案，按阅读路线查看观点、出处、收藏和练习笔记。",
+            "en": "A source-bound reading workbench for 30 builders, with reading paths, bookmarks and notes."
           },
           "url": "https://github.com/holynova/builder-atlas",
           "homepage": "https://builder-atlas.xiaosang.cc/",
           "screenshot": "screenshots/builder-atlas.png",
           "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T21:06:41+08:00",
+          "commit_time": "2026-10-04T23:21:05+08:00",
           "hidden": false,
           "stars": 0,
           "is_featured": false
@@ -1343,17 +1497,45 @@
       },
       "repos": [
         {
+          "name": "rogue-snake",
+          "hidden": false,
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "用不断生长的蛇身穿过地牢，通过撕咬、突进与遗物升级清空敌人并下潜。",
+            "en": "A snake dungeon roguelike where body length, dash attacks and relics shape each run."
+          },
+          "url": "https://github.com/holynova/rogue-snake",
+          "homepage": "https://rogue-snake.xiaosang.cc/",
+          "screenshot": "screenshots/rogue-snake.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:06+08:00"
+        },
+        {
+          "name": "tank-roguelike",
+          "hidden": false,
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "在程序化回廊中驾驶坦克作战，以三选一强化和废料升级挑战更深层地牢。",
+            "en": "A tank dungeon roguelike with procedural corridors, upgrades, bosses and scrap progression."
+          },
+          "url": "https://github.com/holynova/tank-roguelike",
+          "homepage": "https://tank-roguelike.xiaosang.cc/",
+          "screenshot": "screenshots/tank-roguelike.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:05+08:00"
+        },
+        {
           "name": "fallwell",
           "lang": "TypeScript",
           "desc": {
-            "zh": "坠井者：四名角色、三种进化核心与遗物构筑的像素下落动作肉鸽，落地补弹、踩怪连击。",
-            "en": "FALLWELL: a pixel descent roguelite with four characters, three evolving cores, relic builds, landing reloads and stomp combos."
+            "zh": "向井底不断下落，靠射击减速、踩怪连击与落地补弹构筑自己的动作肉鸽。",
+            "en": "A descent roguelite with shot-assisted falls, stomp combos, reloads, cores and relic builds."
           },
           "url": "https://github.com/holynova/fallwell",
           "homepage": "https://fallwell.xiaosang.cc/",
           "screenshot": "screenshots/fallwell.png",
-          "pushed_at": "2026-10-02",
-          "commit_time": "2026-10-02T21:37:01+08:00",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:05+08:00",
           "hidden": false,
           "stars": 0,
           "is_featured": false
@@ -1362,27 +1544,27 @@
           "name": "rift-survivors",
           "lang": "TypeScript",
           "desc": {
-            "zh": "六武器构筑生存竞技场：三类角色、武器合成、30件道具、12波怪潮、近战接触打击与原创配乐",
-            "en": "Six-weapon survival builds with three roles, weapon merging, thirty items, twelve waves, contact-based melee and original music"
+            "zh": "在怪潮之间购买、合成与搭配武器和道具，构筑自己的生存竞技场打法。",
+            "en": "A browser survival arena with independent weapons, contact melee and between-wave shops."
           },
           "homepage": "https://rift-survivors.xiaosang.cc/",
           "screenshot": "screenshots/rift-survivors.png",
-          "pushed_at": "2026-10-03",
+          "pushed_at": "2026-10-04",
           "hidden": false,
           "url": "https://github.com/holynova/rift-survivors",
-          "commit_time": "2026-10-03T22:11:07+08:00"
+          "commit_time": "2026-10-04T23:21:05+08:00"
         },
         {
           "name": "battle-city-roguelike",
           "lang": "TypeScript",
           "desc": {
-            "zh": "钢铁誓约：高清坦克大战与 Roguelite 战役，结合基地防守、路线选择与战备强化",
-            "en": "Battle City: Rogue Bastion — high-resolution tank combat with base defense, campaign routes and roguelite upgrades"
+            "zh": "驾驶坦克守卫老鹰基地，在战役中切换元素主炮并选择强化。",
+            "en": "A browser tank roguelite combining base defense, elemental weapons and campaign upgrades."
           },
           "url": "https://github.com/holynova/battle-city-roguelike",
-          "pushed_at": "2026-10-02",
-          "commit_time": "2026-10-02T02:11:32Z",
-          "homepage": "https://xiaosang.cc/demos/battle-city-roguelike/",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:05+08:00",
+          "homepage": "https://battle-city-roguelike.xiaosang.cc/",
           "screenshot": "screenshots/battle-city-roguelike.png",
           "hidden": false,
           "is_featured": true
@@ -1421,12 +1603,12 @@
           "name": "snake-rogue",
           "lang": "JavaScript",
           "desc": {
-            "zh": "蛇渊：贪食蛇与地牢 Roguelike，结合毒液战斗、迷雾探索与十层地下城",
-            "en": "Snake Rogue — snake-based dungeon roguelike with venom combat, fog of war and ten dungeon floors"
+            "zh": "在带视线迷雾的网格地牢中移动、进食、喷吐毒液，寻找地下遗物。",
+            "en": "A grid-based snake dungeon crawler with fog of war, venom attacks and hunger management."
           },
           "url": "https://github.com/holynova/snake-rogue",
-          "pushed_at": "2026-10-02",
-          "commit_time": "2026-10-02T02:11:42Z",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:06+08:00",
           "homepage": "https://snake-rogue.xiaosang.cc/",
           "screenshot": "screenshots/snake-rogue.png",
           "hidden": false,
@@ -1434,14 +1616,14 @@
         },
         {
           "name": "ouroboros-rogue-snake",
-          "lang": "TypeScript",
+          "lang": "JavaScript",
           "desc": {
-            "zh": "衔尾者：程序化贪食蛇 Roguelike，包含十二层地牢、遗物构筑与永久强化",
-            "en": "Ouroboros — procedural snake roguelike with twelve dungeon floors, relic builds and permanent upgrades"
+            "zh": "贪食蛇与地牢肉鸽结合，以程序化美术、合成音效和遗物构筑呈现浏览器冒险。",
+            "en": "A browser snake roguelike with procedural visuals, synthesized audio and relic builds."
           },
           "url": "https://github.com/holynova/ouroboros-rogue-snake",
-          "pushed_at": "2026-10-02",
-          "commit_time": "2026-10-02T02:13:42Z",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T23:21:06+08:00",
           "homepage": "https://ouroboros-rogue-snake.xiaosang.cc/",
           "screenshot": "screenshots/ouroboros-rogue-snake.png",
           "hidden": false,
@@ -1610,14 +1792,14 @@
           "name": "hearthstone-match",
           "lang": "TypeScript",
           "desc": {
-            "zh": "炉石匹配实验室：React 曲面滚筒、指针抖动、火花粒子与合成音效，可调参数和自定义对手",
-            "en": "React Hearthstone matchmaking lab with a cylindrical spinner, moving pointers, sparks, synthesized audio and configurable opponents"
+            "zh": "可调参数的炉石匹配界面复刻，观察滚筒减速、指针抖动、粒子和合成音效。",
+            "en": "An adjustable React matchmaking recreation with spinner motion, sparks and synthesized audio."
           },
           "url": "https://github.com/holynova/hearthstone-match",
           "homepage": "https://hearthstone-match.xiaosang.cc/",
           "screenshot": "screenshots/hearthstone-match.png",
           "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T12:43:27.088243+00:00",
+          "commit_time": "2026-10-04T23:21:03+08:00",
           "hidden": false,
           "stars": 0
         },
