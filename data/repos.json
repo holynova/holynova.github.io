@@ -1233,7 +1233,7 @@
           "url": "https://github.com/holynova/one-punch",
           "pushed_at": "2026-08-11",
           "homepage": "https://one-punch.xiaosang.cc/",
-          "hidden": false,
+          "hidden": true,
           "is_featured": true,
           "screenshot": "screenshots/one-punch.png",
           "commit_time": "2026-08-11T06:05:23Z"
@@ -1365,7 +1365,7 @@
           "homepage": "https://shanghai-public-facilities.xiaosang.cc/",
           "screenshot": "screenshots/shanghai-public-facilities.png",
           "commit_time": "2026-08-08T15:38:23Z",
-          "hidden": false,
+          "hidden": true,
           "is_featured": true
         },
         {
@@ -1396,7 +1396,7 @@
           "homepage": "https://xiaosang.cc/",
           "screenshot": "screenshots/holynova.github.io.png",
           "commit_time": "2026-08-21T14:27:00+08:00",
-          "hidden": false,
+          "hidden": true,
           "is_featured": true
         },
         {
@@ -1502,7 +1502,7 @@
       "repos": [
         {
           "name": "rogue-snake",
-          "hidden": false,
+          "hidden": true,
           "lang": "JavaScript",
           "desc": {
             "zh": "用不断生长的蛇身穿过地牢，通过撕咬、突进与遗物升级清空敌人并下潜。",
@@ -1516,7 +1516,7 @@
         },
         {
           "name": "tank-roguelike",
-          "hidden": false,
+          "hidden": true,
           "lang": "TypeScript",
           "desc": {
             "zh": "在程序化回廊中驾驶坦克作战，以三选一强化和废料升级挑战更深层地牢。",
@@ -1585,7 +1585,7 @@
           "commit_time": "2026-10-02T02:14:40Z",
           "homepage": "https://iron-corridor.xiaosang.cc/",
           "screenshot": "screenshots/iron-corridor.png",
-          "hidden": false,
+          "hidden": true,
           "is_featured": true
         },
         {
@@ -1600,7 +1600,7 @@
           "commit_time": "2026-10-02T02:13:04Z",
           "homepage": "https://tank-tactics-3d.xiaosang.cc/",
           "screenshot": "screenshots/tank-tactics-3d.png",
-          "hidden": false,
+          "hidden": true,
           "is_featured": true
         },
         {
@@ -1615,7 +1615,7 @@
           "commit_time": "2026-10-04T23:21:06+08:00",
           "homepage": "https://snake-rogue.xiaosang.cc/",
           "screenshot": "screenshots/snake-rogue.png",
-          "hidden": false,
+          "hidden": true,
           "is_featured": true
         },
         {
@@ -1630,7 +1630,7 @@
           "commit_time": "2026-10-04T23:21:06+08:00",
           "homepage": "https://ouroboros-rogue-snake.xiaosang.cc/",
           "screenshot": "screenshots/ouroboros-rogue-snake.png",
-          "hidden": false,
+          "hidden": true,
           "is_featured": true
         },
         {
@@ -1849,7 +1849,7 @@
           "commit_time": "2026-09-16T12:03:24Z",
           "homepage": "https://last-spud.xiaosang.cc/",
           "screenshot": "screenshots/last-spud.png",
-          "hidden": false,
+          "hidden": true,
           "is_featured": false
         }
       ]
