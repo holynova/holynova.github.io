@@ -114,14 +114,14 @@
           "name": "builder-atlas",
           "lang": "JavaScript",
           "desc": {
-            "zh": "AI 建造者观点研究工作台：四人完成限定范围的一手材料复核，其余 26 份档案标为 TODO；逐条核对出处、代表性理由与适用边界。",
-            "en": "AI builder research workbench: four profiles reviewed against selected primary sources, 26 marked TODO, with claim-level evidence and research limitations."
+            "zh": "AI 建造者观点研究工作台：30 份来源绑定档案，4 份专题复核、26 份初步整理；逐条标注出处、已读章节、代表性理由与边界。",
+            "en": "AI builder research workbench: 30 source-bound profiles, four thematic reviews and 26 preliminary profiles, with source locations, access scope and claim limitations."
           },
           "url": "https://github.com/holynova/builder-atlas",
           "homepage": "https://builder-atlas.xiaosang.cc/",
           "screenshot": "screenshots/builder-atlas.png",
           "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T10:55:30+08:00",
+          "commit_time": "2026-10-04T21:06:41+08:00",
           "hidden": false,
           "stars": 0,
           "is_featured": false
