@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-04",
-  "totalRepos": 104,
+  "totalRepos": 105,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1606,6 +1606,21 @@
         "en": "Game Experiments"
       },
       "repos": [
+        {
+          "name": "hearthstone-match",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "炉石匹配实验室：React 曲面滚筒、指针抖动、火花粒子与合成音效，可调参数和自定义对手",
+            "en": "React Hearthstone matchmaking lab with a cylindrical spinner, moving pointers, sparks, synthesized audio and configurable opponents"
+          },
+          "url": "https://github.com/holynova/hearthstone-match",
+          "homepage": "https://hearthstone-match.xiaosang.cc/",
+          "screenshot": "screenshots/hearthstone-match.png",
+          "pushed_at": "2026-10-04",
+          "commit_time": "2026-10-04T12:43:27.088243+00:00",
+          "hidden": false,
+          "stars": 0
+        },
         {
           "name": "spud-squad",
           "lang": "JavaScript",
