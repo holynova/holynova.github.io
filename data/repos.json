@@ -114,14 +114,14 @@
           "name": "builder-atlas",
           "lang": "JavaScript",
           "desc": {
-            "zh": "AI 建造者研究工作台：30 份档案、66 条代表内容与 27 条近期 X 观点，支持三栏证据核对、收藏与练习笔记。",
-            "en": "AI builder research workbench: 30 profiles, 66 representative sources and 27 recent X insights, with evidence inspection, bookmarks and learning notes."
+            "zh": "AI 建造者观点研究工作台：四人完成限定范围的一手材料复核，其余 26 份档案标为 TODO；逐条核对出处、代表性理由与适用边界。",
+            "en": "AI builder research workbench: four profiles reviewed against selected primary sources, 26 marked TODO, with claim-level evidence and research limitations."
           },
           "url": "https://github.com/holynova/builder-atlas",
           "homepage": "https://builder-atlas.xiaosang.cc/",
           "screenshot": "screenshots/builder-atlas.png",
           "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-03T17:09:40+08:00",
+          "commit_time": "2026-10-04T10:55:30+08:00",
           "hidden": false,
           "stars": 0,
           "is_featured": false
