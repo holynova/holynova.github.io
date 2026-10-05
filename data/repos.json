@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-05",
-  "totalRepos": 118,
+  "totalRepos": 119,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,26 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "world-landmarks",
+          "title": {
+            "zh": "世界景点 · 纸上旅行",
+            "en": "World Landmarks · Paper Travels"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "以平涂水粉与纸张肌理绘制西班牙、中国、日本和美国的40处著名景点，每国10张，支持国家筛选、高清查看和下载。",
+            "en": "Forty paper-textured gouache illustrations of famous landmarks in Spain, China, Japan and the USA, with country filters, large previews and downloads."
+          },
+          "url": "https://github.com/holynova/world-landmarks",
+          "homepage": "https://world-landmarks.xiaosang.cc/",
+          "screenshot": "screenshots/world-landmarks.png",
+          "pushed_at": "2026-10-05",
+          "commit_time": "2026-10-05T23:28:34+08:00",
+          "hidden": false,
+          "stars": 0,
+          "is_featured": false
+        },
         {
           "name": "karpathy-deep-explainer-artifacts",
           "hidden": false,
