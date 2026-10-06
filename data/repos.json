@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-06",
-  "totalRepos": 120,
+  "totalRepos": 121,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,26 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "translucent-toy-guard",
+          "title": {
+            "zh": "半透明玩具兵",
+            "en": "Translucent Toy Guard"
+          },
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "20个卡通收藏玩具角色，以磨砂半透明甲壳、硬挺制服与鲜亮撞色展现各类卫士，支持分类、高清预览和分享。",
+            "en": "Twenty cartoon collectible guards with frosted translucent armor, rigid uniforms and vibrant palettes, with category filters, large previews and sharing."
+          },
+          "url": "https://github.com/holynova/translucent-toy-guard",
+          "homepage": "https://translucent-toy-guard.xiaosang.cc/",
+          "screenshot": "screenshots/translucent-toy-guard.png",
+          "pushed_at": "2026-10-06",
+          "commit_time": "2026-10-06T09:52:49+08:00",
+          "hidden": false,
+          "stars": 0,
+          "is_featured": false
+        },
         {
           "name": "shanhe-gallery",
           "title": "山河入版 · 套色木刻画廊",
