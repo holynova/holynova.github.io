@@ -153,14 +153,14 @@
           },
           "lang": "JavaScript",
           "desc": {
-            "zh": "以平涂水粉与纸张肌理绘制西班牙、中国、日本和美国的40处著名景点，每国10张，支持国家筛选、高清查看和下载。",
-            "en": "Forty paper-textured gouache illustrations of famous landmarks in Spain, China, Japan and the USA, with country filters, large previews and downloads."
+            "zh": "50幅纸纹平涂水粉插画：海岸夏日、多样风景各5张，西班牙、中国、日本、美国景点各10张，支持分类、完整预览和原图下载。",
+            "en": "50 paper-textured gouache illustrations: two scene collections and landmarks from four countries, with filters, full-image previews and original downloads."
           },
           "url": "https://github.com/holynova/world-landmarks",
           "homepage": "https://world-landmarks.xiaosang.cc/",
           "screenshot": "screenshots/world-landmarks.png",
-          "pushed_at": "2026-10-05",
-          "commit_time": "2026-10-05T23:28:34+08:00",
+          "pushed_at": "2026-10-06",
+          "commit_time": "2026-10-06T17:17:09+08:00",
           "hidden": false,
           "stars": 0,
           "is_featured": false
