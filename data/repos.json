@@ -212,28 +212,28 @@
           "hidden": false,
           "lang": "JavaScript",
           "desc": {
-            "zh": "AI生成的动漫联名皮肤概念与江南水乡农民画画廊，支持筛选、灯箱和图片下载。",
-            "en": "An AI-generated concept gallery with anime crossover skins, folk art, filters and downloads."
+            "zh": "104幅AI概念作品：45款深度联动、6款首测、45款存档皮肤与8幅水乡农民画，支持筛选、高清预览及下载。",
+            "en": "104 AI concept artworks: 45 deep-fusion skins, 6 tests, 45 archived skins and 8 folk paintings, with filters, full-resolution previews and downloads."
           },
           "url": "https://github.com/holynova/crossover-folk-gallery",
           "homepage": "https://crossover-folk-gallery.xiaosang.cc/",
           "screenshot": "screenshots/crossover-folk-gallery.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:24:00+08:00"
+          "pushed_at": "2026-10-06",
+          "commit_time": "2026-10-06T16:00:06+08:00"
         },
         {
           "name": "folk-gallery",
           "hidden": false,
           "lang": "HTML",
           "desc": {
-            "zh": "浏览农民画、文物橡皮图章、橡皮图章与游戏印章的静态图鉴。",
-            "en": "A static visual collection of folk paintings, artifact stamps and game-inspired prints."
+            "zh": "321幅农民画与印章图鉴，网格加载缩略图，灯箱显示高清原图，支持键盘切换。",
+            "en": "321 folk paintings and stamp artworks with thumbnail browsing, full-resolution lightboxes and keyboard navigation."
           },
           "url": "https://github.com/holynova/folk-gallery",
           "homepage": "https://folk-gallery.xiaosang.cc/",
           "screenshot": "screenshots/folk-gallery.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:21:04+08:00"
+          "pushed_at": "2026-10-06",
+          "commit_time": "2026-10-06T16:00:06+08:00"
         },
         {
           "name": "elden-ring-lore-video",
