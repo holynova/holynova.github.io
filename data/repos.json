@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-05",
-  "totalRepos": 119,
+  "lastUpdated": "2026-10-06",
+  "totalRepos": 120,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,21 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "shanhe-gallery",
+          "title": "山河入版 · 套色木刻画廊",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "185张套色木刻风格AI画作，涵盖山河、名胜、生活、节日、海外风光与十一城五景；支持分类、放大和下载。",
+            "en": "185 original AI woodcut-style artworks: landscapes, landmarks, daily life, festivals and five scenes from eleven cities, with filters, lightbox and downloads."
+          },
+          "url": "https://github.com/holynova/shanhe-gallery",
+          "homepage": "https://shanhe-gallery.xiaosang.cc/",
+          "screenshot": "screenshots/shanhe-gallery.png",
+          "pushed_at": "2026-10-06",
+          "commit_time": "2026-10-06T09:49:23+08:00",
+          "hidden": false
+        },
         {
           "name": "world-landmarks",
           "title": {
