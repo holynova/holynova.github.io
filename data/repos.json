@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-07",
-  "totalRepos": 121,
+  "totalRepos": 122,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,24 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "dihao",
+          "title": {
+            "zh": "帝号 · 皇帝称呼解码",
+            "en": "Dihao · Imperial Name Decoder"
+          },
+          "lang": "HTML",
+          "desc": {
+            "zh": "移动端皇帝称呼科普：16位人物、32条年号，图解姓名、庙号、谥号与尊号，支持对照、检索和小测验。",
+            "en": "Mobile-first guide to imperial naming with 16 rulers, 32 era records, source-linked comparisons and quizzes."
+          },
+          "url": "https://github.com/holynova/dihao",
+          "homepage": "https://dihao.xiaosang.cc/",
+          "screenshot": "screenshots/dihao.png",
+          "pushed_at": "2026-10-07",
+          "commit_time": "2026-10-07T18:32:26+08:00",
+          "hidden": false
+        },
         {
           "name": "translucent-toy-guard",
           "title": {
