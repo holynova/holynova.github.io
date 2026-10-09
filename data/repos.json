@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-08",
+  "lastUpdated": "2026-10-09",
   "totalRepos": 123,
   "categories": [
     {
@@ -833,14 +833,14 @@
           "name": "time-slider-clock",
           "lang": "JavaScript",
           "desc": {
-            "zh": "镂空像素滑轨时钟：分列与整位两版，默认秒数、仅时钟模式和快进测试",
-            "en": "Perforated-grid mechanical clock with column and whole-digit variants, seconds, clock-only mode and accelerated testing"
+            "zh": "镂空像素滑轨时钟：分列、整位、原作双轨与 5×7 字母栅格，支持秒数、夜光主题和快进测试",
+            "en": "Perforated-grid clock with column, whole-digit, original dual rails and a 5×7 alphabet matrix, seconds, neon themes and accelerated testing"
           },
           "url": "https://github.com/holynova/time-slider-clock",
           "homepage": "https://xiaosang.cc/time-slider-clock/",
           "screenshot": "screenshots/time-slider-clock.png",
-          "pushed_at": "2026-10-08",
-          "commit_time": "2026-10-08T11:43:57+08:00",
+          "pushed_at": "2026-10-09",
+          "commit_time": "2026-10-09T10:20:18+08:00",
           "hidden": false,
           "stars": 0
         },
