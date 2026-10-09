@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-09",
-  "totalRepos": 123,
+  "totalRepos": 124,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,24 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "forty-classic-books",
+          "title": {
+            "zh": "经典书导读（70 本）",
+            "en": "Classic Books Guide (70 Books)"
+          },
+          "lang": "HTML",
+          "desc": {
+            "zh": "精选软件工程、系统设计、UI/UX、产品经理、中国历史、建筑学、艺术 7 大核心领域各 10 本经典，共 70 本书深度导读。含总体主张、核心观点解读与案例、结构剖析与沉浸式全局目录。",
+            "en": "Curated guide for 70 classic books across 7 domains with real-world examples, structured outlines, and distraction-free navigation."
+          },
+          "url": "https://github.com/holynova/forty-classic-books",
+          "homepage": "https://xiaosang.cc/forty-classic-books/",
+          "screenshot": "screenshots/forty-classic-books.png",
+          "pushed_at": "2026-10-09",
+          "commit_time": "2026-10-09T22:35:11+08:00",
+          "hidden": false
+        },
         {
           "name": "dihao",
           "title": {

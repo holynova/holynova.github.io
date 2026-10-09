@@ -7,6 +7,11 @@
 (function() {
   'use strict';
 
+  // Immediately initiate data fetch in background to overlap with DOM readiness
+  const reposFetchPromise = fetch('./data/repos.json', { cache: 'no-store' })
+    .then(res => res.ok ? res.json() : null)
+    .catch(() => null);
+
   // Load Likes from localStorage
   function loadLikes() {
     try {
@@ -163,7 +168,13 @@
       }
     };
 
-    const scheduleSample = () => window.requestAnimationFrame(sample);
+    const scheduleSample = () => {
+      if (typeof window.requestIdleCallback === 'function') {
+        window.requestIdleCallback(sample, { timeout: 1000 });
+      } else {
+        setTimeout(sample, 20);
+      }
+    };
     if (image.complete) {
       scheduleSample();
     } else {
@@ -428,9 +439,12 @@
   async function loadData() {
     if (DOM.grid) DOM.grid.setAttribute('aria-busy', 'true');
     try {
-      const response = await fetch('./data/repos.json', { cache: 'no-store' });
-      if (!response.ok) throw new Error('Network error');
-      const data = await response.json();
+      let data = await reposFetchPromise;
+      if (!data) {
+        const response = await fetch('./data/repos.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Network error');
+        data = await response.json();
+      }
       processLoadedData(data);
     } catch (err) {
       console.warn('Portfolio data fetch failed:', err);
@@ -724,8 +738,13 @@
 
     const imageTarget = repo.homepage || repo.url;
     const imageActionLabel = repo.homepage ? t('liveDemo') : t('github');
+    const isLcp = index === 0;
+    const isEager = delayIndex < 2;
+    const webpScreenshot = repo.screenshot ? repo.screenshot.replace(/\.(png|jpg|jpeg)$/i, '.webp') : '';
+    const loadingAttr = isEager ? 'loading="eager"' : 'loading="lazy"';
+    const priorityAttr = isLcp ? 'fetchpriority="high"' : (isEager ? '' : 'decoding="async"');
     const mediaHtml = repo.screenshot && imageTarget
-      ? `<a href="${escapeHtml(imageTarget)}" target="_blank" rel="noopener noreferrer" class="card-image-link" aria-label="${escapeHtml(`${imageActionLabel}: ${repoName}`)}"><img src="${escapeHtml(repo.screenshot)}" alt="${escapeHtml(repoName)}" class="card-demo-image" loading="lazy" decoding="async"></a>`
+      ? `<a href="${escapeHtml(imageTarget)}" target="_blank" rel="noopener noreferrer" class="card-image-link" aria-label="${escapeHtml(`${imageActionLabel}: ${repoName}`)}"><picture class="card-picture">${webpScreenshot ? `<source srcset="${escapeHtml(webpScreenshot)}" type="image/webp">` : ''}<img src="${escapeHtml(repo.screenshot)}" alt="${escapeHtml(repoName)}" class="card-demo-image" width="400" height="250" ${loadingAttr} ${priorityAttr}></picture></a>`
       : `<div class="card-name-placeholder"><span class="placeholder-repo-name">${escapeHtml(repoName)}</span></div>`;
 
     const liveDemoActionHtml = repo.homepage ? `
@@ -767,10 +786,18 @@
     if (imageLink) {
       const image = imageLink.querySelector('.card-demo-image');
       if (image) {
-        const imageSource = image.currentSrc || image.src;
-        const cssSafeImageSource = imageSource.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
-        imageLink.style.setProperty('--card-image', `url("${cssSafeImageSource}")`);
-        applyMediaPalette(imageLink, image);
+        const updateImageEffect = () => {
+          const imageSource = image.currentSrc || webpScreenshot || image.src;
+          const cssSafeImageSource = imageSource.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
+          imageLink.style.setProperty('--card-image', `url("${cssSafeImageSource}")`);
+          applyMediaPalette(imageLink, image);
+        };
+
+        if (image.complete && image.naturalWidth) {
+          updateImageEffect();
+        } else {
+          image.addEventListener('load', updateImageEffect, { once: true });
+        }
 
         image.addEventListener('error', () => {
           imageLink.replaceWith(createNamePlaceholder('card-name-placeholder', repoName));
