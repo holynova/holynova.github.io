@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-09",
-  "totalRepos": 124,
+  "totalRepos": 128,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -111,22 +111,40 @@
       },
       "repos": [
         {
-          "name": "forty-classic-books",
-          "title": {
-            "zh": "经典书导读（70 本）",
-            "en": "Classic Books Guide (70 Books)"
-          },
+          "name": "up-series-70years",
           "lang": "HTML",
           "desc": {
-            "zh": "精选软件工程、系统设计、UI/UX、产品经理、中国历史、建筑学、艺术 7 大核心领域各 10 本经典，共 70 本书深度导读。含总体主张、核心观点解读与案例、结构剖析与沉浸式全局目录。",
-            "en": "Curated guide for 70 classic books across 7 domains with real-world examples, structured outlines, and distraction-free navigation."
+            "zh": "记录《人生七年》14 位主角从 7 岁到 70 岁的 63 年人生轨迹：纪录片纪事、人物档案与横向变迁对比",
+            "en": "Documentary archive tracing 14 lives across 63 years from age 7 to 70 with complete timelines and profiles"
+          },
+          "url": "https://github.com/holynova/up-series-70years",
+          "homepage": "https://xiaosang.cc/up-series-70years/",
+          "screenshot": "screenshots/up-series-70years.png",
+          "pushed_at": "2026-10-09",
+          "commit_time": "2026-10-09T22:51:43+08:00",
+          "hidden": false,
+          "title": {
+            "zh": "《人生七年》时间线",
+            "en": "Up Series 70 Years"
+          }
+        },
+        {
+          "name": "forty-classic-books",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "精选 7 大核心领域 70 本经典书深度导读：总体观点、核心观点与全书结构剖析，纯干货说人话",
+            "en": "Curated reading guides for 70 classic books across 7 domains with core perspectives and clear examples"
           },
           "url": "https://github.com/holynova/forty-classic-books",
           "homepage": "https://xiaosang.cc/forty-classic-books/",
           "screenshot": "screenshots/forty-classic-books.png",
           "pushed_at": "2026-10-09",
-          "commit_time": "2026-10-09T22:35:11+08:00",
-          "hidden": false
+          "commit_time": "2026-10-09T22:51:34+08:00",
+          "hidden": false,
+          "title": {
+            "zh": "经典书导读 (70 本)",
+            "en": "Forty Classic Books"
+          }
         },
         {
           "name": "dihao",
@@ -847,6 +865,42 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "doraemon-house-3d",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "基于 Three.js 制作的野比大雄家 3D 立体空间导览：建筑外观、室内各层、空间拆解与点击交互",
+            "en": "Interactive 3D walk-through of Nobita Nobi's house from Doraemon built with Three.js with exploded floor views"
+          },
+          "url": "https://github.com/holynova/doraemon-house-3d",
+          "homepage": "https://xiaosang.cc/doraemon-house-3d/",
+          "screenshot": "screenshots/doraemon-house-3d.png",
+          "pushed_at": "2026-10-09",
+          "commit_time": "2026-10-09T22:51:52+08:00",
+          "hidden": false,
+          "title": {
+            "zh": "哆啦A梦的家 3D导览",
+            "en": "Doraemon House 3D"
+          }
+        },
+        {
+          "name": "video-gallery",
+          "lang": "HTML",
+          "desc": {
+            "zh": "用代码与 AI 绘画制作的短视频作品展：Remotion 与 Motion Canvas 代码渲染引擎生成的 6 部短视频",
+            "en": "Video exhibition of 6 programmatic films rendered with Remotion and Motion Canvas plus generative visual art"
+          },
+          "url": "https://github.com/holynova/video-gallery",
+          "homepage": "https://xiaosang.cc/video-gallery/",
+          "screenshot": "screenshots/video-gallery.png",
+          "pushed_at": "2026-10-09",
+          "commit_time": "2026-10-09T22:51:48+08:00",
+          "hidden": false,
+          "title": {
+            "zh": "光影集视频作品展",
+            "en": "Video Gallery"
+          }
+        },
         {
           "name": "time-slider-clock",
           "lang": "JavaScript",
@@ -1606,6 +1660,24 @@
         "en": "Games"
       },
       "repos": [
+        {
+          "name": "24-solver",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "单文件网页版 24 点纸牌求解器：自定义选牌或随机发牌，穷举算式与结合律去重，配流光牌面与音效",
+            "en": "Single-file 24-point poker solver: custom or random deal with algebraic deduplication and card animations"
+          },
+          "url": "https://github.com/holynova/24-solver",
+          "homepage": "https://xiaosang.cc/24-solver/",
+          "screenshot": "screenshots/24-solver.png",
+          "pushed_at": "2026-10-09",
+          "commit_time": "2026-10-09T22:51:38+08:00",
+          "hidden": false,
+          "title": {
+            "zh": "24点纸牌求解器",
+            "en": "24 Solver"
+          }
+        },
         {
           "name": "rogue-snake",
           "hidden": true,
