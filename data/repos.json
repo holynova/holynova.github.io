@@ -132,18 +132,18 @@
           "name": "forty-classic-books",
           "lang": "JavaScript",
           "desc": {
-            "zh": "精选 7 大核心领域 70 本经典书深度导读：总体观点、核心观点与全书结构剖析，纯干货说人话",
-            "en": "Curated reading guides for 70 classic books across 7 domains with core perspectives and clear examples"
+            "zh": "精选 8 大核心领域 112 本经典书严谨导读：章节严格对齐原书真实目录，总体观点、核心观点与全书结构剖析，拒绝虚假杜撰",
+            "en": "Curated reading guides for 112 verified classic books across 8 domains with authentic chapter fidelity and real-world examples"
           },
           "url": "https://github.com/holynova/forty-classic-books",
           "homepage": "https://xiaosang.cc/forty-classic-books/",
           "screenshot": "screenshots/forty-classic-books.png",
-          "pushed_at": "2026-10-09",
+          "pushed_at": "2026-10-10",
           "commit_time": "2026-10-09T22:51:34+08:00",
           "hidden": false,
           "title": {
-            "zh": "经典书导读 (70 本)",
-            "en": "Forty Classic Books"
+            "zh": "经典书导读 (112 本严选核实版)",
+            "en": "Classic Books Guide (112 Verified Books)"
           }
         },
         {
