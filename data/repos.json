@@ -266,14 +266,14 @@
           "hidden": false,
           "lang": "JavaScript",
           "desc": {
-            "zh": "155张王者荣耀联名英雄概念图，按28个动漫与游戏主题分类，支持高清大图浏览。",
-            "en": "155 Honor of Kings crossover concepts across 28 anime and game themes, with responsive images and fullscreen previews."
+            "zh": "155张王者荣耀联名英雄概念图，28个等宽主题标签，支持高清浏览与主题原图打包下载。",
+            "en": "155 Honor of Kings crossover concepts, 28 theme filters, fullscreen previews and original-image ZIP downloads."
           },
           "url": "https://github.com/holynova/crossover-folk-gallery",
           "homepage": "https://crossover-folk-gallery.xiaosang.cc/",
           "screenshot": "screenshots/crossover-folk-gallery.png",
           "pushed_at": "2026-10-11",
-          "commit_time": "2026-10-11T01:01:59+08:00"
+          "commit_time": "2026-10-11T11:28:37+08:00"
         },
         {
           "name": "folk-gallery",
