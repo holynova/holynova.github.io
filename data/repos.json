@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-11",
+  "lastUpdated": "2026-10-13",
   "totalRepos": 129,
   "categories": [
     {
@@ -114,14 +114,14 @@
           "name": "podcast-atlas",
           "lang": "Python / JavaScript",
           "desc": {
-            "zh": "播客图文知识库：按专题读懂半拿铁与知行小酒馆，搭配时间线、人物关系和中文漫画幻灯片",
-            "en": "A visual podcast library with thematic guides, timelines, people maps and Chinese comic slide decks"
+            "zh": "播客图文知识库：两档播客分专题整理，支持关键词搜索，文字先读、中文漫画幻灯片逐步补齐",
+            "en": "A podcast reading library with separate topic collections, keyword search, and articles published before illustrated Chinese slide decks."
           },
           "url": "https://github.com/holynova/podcast-atlas",
           "homepage": "https://xiaosang.cc/podcast-atlas/",
           "screenshot": "screenshots/podcast-atlas.png",
-          "pushed_at": "2026-10-11",
-          "commit_time": "2026-10-11T15:26:52+08:00",
+          "pushed_at": "2026-10-13",
+          "commit_time": "2026-10-13T00:38:33+08:00",
           "hidden": false
         },
         {
