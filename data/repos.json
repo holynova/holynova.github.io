@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-13",
-  "totalRepos": 129,
+  "lastUpdated": "2026-10-17",
+  "totalRepos": 138,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -880,6 +880,150 @@
       },
       "repos": [
         {
+          "name": "jade-relief-cards",
+          "title": {
+            "zh": "玉石浮雕扑克牌艺术馆",
+            "en": "Jade Relief Cards"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "名著、漫画、游戏三大系列 75 张精美玉雕扑克牌，支持分类筛选、3D 翻牌互动与全卡流光特效",
+            "en": "Jade relief playing card art gallery featuring 75 jade-carved cards across classics, manga, and games, with 3D flip interaction."
+          },
+          "url": "https://github.com/holynova/jade-relief-cards",
+          "homepage": "https://xiaosang.cc/jade-relief-cards/",
+          "screenshot": "screenshots/jade-relief-cards.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:23:02Z",
+          "hidden": false
+        },
+        {
+          "name": "jade-cards-lab",
+          "title": {
+            "zh": "玉石卡牌实验室",
+            "en": "Jade Cards Lab"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "四大主题 108 张精选卡牌，Neo Kinpaku 黑漆金箔风格排版、侧边竖排导航与点击翻面互动",
+            "en": "Laboratory edition of the Jade Relief Card Gallery with 108 cards, Neo Kinpaku black lacquer styling, and 3D card flip."
+          },
+          "url": "https://github.com/holynova/jade-cards-lab",
+          "homepage": "https://xiaosang.cc/jade-cards-lab/",
+          "screenshot": "screenshots/jade-cards-lab.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:21:35Z",
+          "hidden": false
+        },
+        {
+          "name": "apartment-3d",
+          "title": {
+            "zh": "新家 3D 全景导览",
+            "en": "Apartment 3D"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "基于 Three.js 制作的两室一厅户型 3D 全景导览：入户、客餐厅、双卧、厨房与阳台，支持鸟瞰视角与日夜光照切换",
+            "en": "Interactive 3D walk-through of a two-bedroom apartment with bird-eye floor plan view, room viewpoints, and day/night toggles."
+          },
+          "url": "https://github.com/holynova/apartment-3d",
+          "homepage": "https://xiaosang.cc/apartment-3d/",
+          "screenshot": "screenshots/apartment-3d.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:21:14Z",
+          "hidden": false
+        },
+        {
+          "name": "firelink-shrine-ds3",
+          "title": {
+            "zh": "传火祭祀场 · 黑魂3 3D导览",
+            "en": "Firelink Shrine DS3 3D"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "基于 Three.js 制作的《黑暗之魂3》传火祭祀场 3D 立体导览：五大薪王王座与中央篝火殿堂，支持视角切换与部件导览",
+            "en": "Interactive 3D walk-through of Firelink Shrine from Dark Souls 3 with five thrones, central bonfire hall, and layer controls."
+          },
+          "url": "https://github.com/holynova/firelink-shrine-ds3",
+          "homepage": "https://xiaosang.cc/firelink-shrine-ds3/",
+          "screenshot": "screenshots/firelink-shrine-ds3.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:20:49Z",
+          "hidden": false
+        },
+        {
+          "name": "grand-archives-ds3",
+          "title": {
+            "zh": "大书库 · 黑魂3 3D导览",
+            "en": "Grand Archives DS3 3D"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "基于 Three.js 制作的《黑暗之魂3》大书库 3D 立体空间导览：多层书架、屋顶穹顶与蜡油池，支持视角切换与部件导览",
+            "en": "Interactive 3D walk-through of Grand Archives from Dark Souls 3 with multi-angle views, exploded layers, and landmark annotations."
+          },
+          "url": "https://github.com/holynova/grand-archives-ds3",
+          "homepage": "https://xiaosang.cc/grand-archives-ds3/",
+          "screenshot": "screenshots/grand-archives-ds3.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:20:26Z",
+          "hidden": false
+        },
+        {
+          "name": "firelink-shrine-ds1",
+          "title": {
+            "zh": "传火祭祀场 · 黑魂1 3D导览",
+            "en": "Firelink Shrine DS1 3D"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "基于 Three.js 制作的《黑暗之魂1》传火祭祀场 3D 立体空间导览：篝火遗迹、地下祭坛，支持多视角漫游与部件导览",
+            "en": "Interactive 3D walk-through of Firelink Shrine from Dark Souls 1 with viewpoints, exploded layer controls, and annotations."
+          },
+          "url": "https://github.com/holynova/firelink-shrine-ds1",
+          "homepage": "https://xiaosang.cc/firelink-shrine-ds1/",
+          "screenshot": "screenshots/firelink-shrine-ds1.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:20:00Z",
+          "hidden": false
+        },
+        {
+          "name": "hairline-atlas",
+          "title": {
+            "zh": "线感物集",
+            "en": "Hairline Atlas"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "五组共50幅互动线稿图集：日常物件、交通工具、系统结构、名画与机械原理，指针交互触发动作",
+            "en": "Fifty pointer-responsive line drawings across everyday objects, transport, systems, masterpieces, and mechanics."
+          },
+          "url": "https://github.com/holynova/hairline-atlas",
+          "homepage": "https://xiaosang.cc/hairline-atlas/",
+          "screenshot": "screenshots/hairline-atlas.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:13:49Z",
+          "hidden": false
+        },
+        {
+          "name": "jade-kinpaku-cards",
+          "title": {
+            "zh": "玉石浮雕卡牌馆 · 金箔版",
+            "en": "Jade Relief Cards · Kinpaku"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "玉石浮雕卡牌馆金箔独立版：108 张名著/漫画/游戏/特别卡牌，黑漆底金箔浮雕与铜绿点缀，支持点击翻面",
+            "en": "Kinpaku edition of the jade-relief card gallery: 108 cards across classics, manga, games, and specials in Neo Kinpaku style."
+          },
+          "url": "https://github.com/holynova/jade-kinpaku-cards",
+          "homepage": "https://xiaosang.cc/jade-kinpaku-cards/",
+          "screenshot": "screenshots/jade-kinpaku-cards.png",
+          "pushed_at": "2026-10-17",
+          "commit_time": "2026-10-17T02:12:38Z",
+          "hidden": false
+        },
+        {
           "name": "doraemon-house-3d",
           "lang": "JavaScript",
           "desc": {
@@ -1120,6 +1264,24 @@
         "en": "AI Tools"
       },
       "repos": [
+        {
+          "name": "hospital-ocr",
+          "title": {
+            "zh": "医疗单据 OCR 工作台",
+            "en": "Hospital Receipt OCR"
+          },
+          "lang": "HTML / JavaScript",
+          "desc": {
+            "zh": "在浏览器本地识别医疗发票与病历，核对日期、金额和姓名，批量重命名并导出汇总表格",
+            "en": "Browser-based medical receipt OCR: inspect dates, amounts, and names locally, batch rename files, and export summaries."
+          },
+          "url": "https://github.com/holynova/hospital-ocr",
+          "homepage": "https://hospital-ocr.xiaosang.cc/",
+          "screenshot": "screenshots/hospital-ocr.png",
+          "pushed_at": "2026-10-15",
+          "commit_time": "2026-10-15T05:21:42Z",
+          "hidden": false
+        },
         {
           "name": "ask_all_ai",
           "lang": "HTML",
