@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-19",
-  "totalRepos": 131,
+  "totalRepos": 132,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -893,6 +893,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "jade-cards-lab",
+          "title": {
+            "zh": "玉石浮雕卡牌馆",
+            "en": "Jade Cards Lab"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "四大主题 108 张精雕玉石扑克牌，Neo Kinpaku 黑漆金箔风格艺术展陈，支持 3D 翻转、沉浸大图品鉴与今日灵感抽牌",
+            "en": "Kinpaku art edition of the Jade Relief Playing Card Gallery: 108 cards across four themes with 3D flip, fullscreen inspection, and oracle draw."
+          },
+          "url": "https://github.com/holynova/jade-cards-lab",
+          "homepage": "https://xiaosang.cc/jade-cards-lab/",
+          "screenshot": "screenshots/jade-cards-lab.png",
+          "pushed_at": "2026-10-19",
+          "commit_time": "2026-10-19T14:40:17+08:00",
+          "hidden": false
+        },
         {
           "name": "doraemon-house-3d",
           "lang": "JavaScript",
