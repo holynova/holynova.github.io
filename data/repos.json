@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-17",
-  "totalRepos": 130,
+  "lastUpdated": "2026-10-19",
+  "totalRepos": 131,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,20 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "rock-in-pictures",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "听见画面：30幅摄影意象猜华语乐队，支持3秒揭晓、线索与原图下载。",
+            "en": "Sound in Sight: guess 30 Chinese bands from photographic riddles, with timed reveals, clues, and image downloads."
+          },
+          "url": "https://github.com/holynova/rock-in-pictures",
+          "homepage": "https://xiaosang.cc/rock-in-pictures/",
+          "screenshot": "screenshots/rock-in-pictures.png",
+          "pushed_at": "2026-10-19",
+          "commit_time": "2026-10-19T11:16:44+08:00",
+          "hidden": false
+        },
         {
           "name": "podcast-atlas",
           "lang": "Python / JavaScript",
