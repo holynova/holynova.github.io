@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-19",
-  "totalRepos": 132,
+  "lastUpdated": "2026-10-22",
+  "totalRepos": 133,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -893,6 +893,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "fourier-atlas",
+          "title": {
+            "zh": "傅里叶地图实验室",
+            "en": "Fourier Atlas"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "用旋转圆逐步描绘地图与复杂曲线，支持渐增步长、1024 个圆与历史轨迹叠加。",
+            "en": "Draw maps and intricate curves with Fourier epicycles, adaptive increments, up to 1,024 circles and fading history."
+          },
+          "url": "https://github.com/holynova/fourier-atlas",
+          "homepage": "https://xiaosang.cc/fourier-atlas/",
+          "screenshot": "screenshots/fourier-atlas.png",
+          "pushed_at": "2026-10-22",
+          "commit_time": "2026-10-22T14:18:43+08:00",
+          "hidden": false
+        },
         {
           "name": "jade-cards-lab",
           "title": {
