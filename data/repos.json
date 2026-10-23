@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-10-23",
-  "totalRepos": 133,
+  "totalRepos": 134,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -893,6 +893,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "origami-studio",
+          "title": {
+            "zh": "纸间 · 折纸实验室",
+            "en": "Paper in Motion"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "五种经典折纸的三维动画，支持逐步播放、清晰折痕、纸色切换、展开图与 PNG 导出。",
+            "en": "Explore five classic origami models in 3D with step playback, clear creases, paper colors, crease patterns and PNG export."
+          },
+          "url": "https://github.com/holynova/origami-studio",
+          "homepage": "https://xiaosang.cc/origami-studio/",
+          "screenshot": "screenshots/origami-studio.png",
+          "pushed_at": "2026-10-23",
+          "commit_time": "2026-10-23T20:24:19+08:00",
+          "hidden": false
+        },
         {
           "name": "fourier-atlas",
           "title": {
