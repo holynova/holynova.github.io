@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-22",
+  "lastUpdated": "2026-10-23",
   "totalRepos": 133,
   "categories": [
     {
@@ -901,14 +901,14 @@
           },
           "lang": "JavaScript",
           "desc": {
-            "zh": "用旋转圆逐步描绘地图与复杂曲线，支持渐增步长、1024 个圆与历史轨迹叠加。",
-            "en": "Draw maps and intricate curves with Fourier epicycles, adaptive increments, up to 1,024 circles and fading history."
+            "zh": "用旋转圆描绘地图与四神瓦当纹样，支持圆圈强调、纯净模式和渐进绘制。",
+            "en": "Draw maps and Four Symbols tile motifs with Fourier epicycles, highlighted circles, a clean view and progressive detail."
           },
           "url": "https://github.com/holynova/fourier-atlas",
           "homepage": "https://xiaosang.cc/fourier-atlas/",
           "screenshot": "screenshots/fourier-atlas.png",
-          "pushed_at": "2026-10-22",
-          "commit_time": "2026-10-22T14:18:43+08:00",
+          "pushed_at": "2026-10-23",
+          "commit_time": "2026-10-23T20:19:55+08:00",
           "hidden": false
         },
         {
