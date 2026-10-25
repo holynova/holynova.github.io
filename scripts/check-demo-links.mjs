@@ -4,7 +4,13 @@ const data = JSON.parse(await readFile(new URL('../data/repos.json', import.meta
 const repos = data.categories.flatMap((category) => category.repos);
 const exceptions = new Map([
   // This project's custom domain is not yet serving HTTPS.
-  ['system-design-learning-lab', 'https://holynova.github.io/system-design-learning-lab/']
+  ['system-design-learning-lab', 'https://holynova.github.io/system-design-learning-lab/'],
+  // Cloudflare Workers deploy is blocked (token has Zone read-only, no Workers
+  // permission); Demo temporarily uses the verified GitHub Pages URL until the
+  // <slug>.xiaosang.cc deployment lands.
+  ['baking-encyclopedia', 'https://holynova.github.io/baking-encyclopedia/'],
+  ['world-unsolved-mysteries', 'https://holynova.github.io/world-unsolved-mysteries/'],
+  ['baking-variable-search', 'https://holynova.github.io/baking-variable-search/']
 ]);
 const names = new Set();
 const errors = [];

@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-23",
-  "totalRepos": 134,
+  "lastUpdated": "2026-10-25",
+  "totalRepos": 137,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,48 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "world-unsolved-mysteries",
+          "lang": "HTML",
+          "desc": {
+            "zh": "世界未解之谜：80/90 后童年常听的 20 个谜题，集中展示辟谣结果与硬证据",
+            "en": "World unsolved mysteries: 20 childhood mysteries from the 80s and 90s, with debunking verdicts and hard evidence"
+          },
+          "url": "https://github.com/holynova/world-unsolved-mysteries",
+          "homepage": "https://holynova.github.io/world-unsolved-mysteries/",
+          "screenshot": "screenshots/world-unsolved-mysteries.png",
+          "pushed_at": "2026-10-25",
+          "commit_time": "2026-10-25T17:45:08+08:00",
+          "hidden": false
+        },
+        {
+          "name": "baking-variable-search",
+          "lang": "HTML",
+          "desc": {
+            "zh": "烘焙变量查询：60 种烘焙品多选组合搜索，选一个变量、其余计数实时联动",
+            "en": "Baking variable search: faceted multi-select search across 60 bakes, with live counts that update as you pick"
+          },
+          "url": "https://github.com/holynova/baking-variable-search",
+          "homepage": "https://holynova.github.io/baking-variable-search/",
+          "screenshot": "screenshots/baking-variable-search.png",
+          "pushed_at": "2026-10-25",
+          "commit_time": "2026-10-25T17:42:08+08:00",
+          "hidden": false
+        },
+        {
+          "name": "baking-encyclopedia",
+          "lang": "HTML",
+          "desc": {
+            "zh": "烘焙百科：用六个变量拆解 36 种烘焙品，讲清奇怪名字背后的逻辑",
+            "en": "Baking encyclopedia: 36 bakes decoded through six variables, explaining the logic behind the odd names"
+          },
+          "url": "https://github.com/holynova/baking-encyclopedia",
+          "homepage": "https://holynova.github.io/baking-encyclopedia/",
+          "screenshot": "screenshots/baking-encyclopedia.png",
+          "pushed_at": "2026-10-25",
+          "commit_time": "2026-10-25T17:39:41+08:00",
+          "hidden": false
+        },
         {
           "name": "rock-in-pictures",
           "lang": "JavaScript",
