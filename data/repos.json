@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-02",
-  "totalRepos": 138,
+  "totalRepos": 139,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1802,6 +1802,20 @@
         "en": "Games"
       },
       "repos": [
+        {
+          "name": "mafa-survivor",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "玛法幸存者：战法道三职业、33种技能六级成长、十章地图与装备构筑，含快速测试模式。Alpha版，职业与章节平衡仍在完善。",
+            "en": "Mafa Survivor: three classes, 33 skills with six ranks, ten chapters, equipment builds and quick test mode. Alpha; class and chapter balance are in progress."
+          },
+          "url": "https://github.com/holynova/mafa-survivor",
+          "homepage": "https://xiaosang.cc/mafa-survivor/",
+          "screenshot": "screenshots/mafa-survivor.png",
+          "pushed_at": "2026-11-02",
+          "commit_time": "2026-11-02T22:55:39+08:00",
+          "hidden": false
+        },
         {
           "name": "24-solver",
           "lang": "JavaScript",
