@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-10-26",
-  "totalRepos": 137,
+  "lastUpdated": "2026-11-02",
+  "totalRepos": 138,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1877,6 +1877,20 @@
           "hidden": false,
           "url": "https://github.com/holynova/rift-survivors",
           "commit_time": "2026-10-04T23:21:05+08:00"
+        },
+        {
+          "name": "mafa-survivor-game",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "经典 1.76 热血传奇语汇的战法道三职业单机肉鸽幸存者游戏，支持技能演化与特戒装备构筑。",
+            "en": "Classic 1.76 Legend of Mir 2 roguelite survivor game featuring Warrior, Wizard, and Taoist builds."
+          },
+          "homepage": "https://xiaosang.cc/mafa-survivor-game/",
+          "screenshot": "screenshots/mafa-survivor-game.png",
+          "pushed_at": "2026-11-02",
+          "hidden": false,
+          "url": "https://github.com/holynova/mafa-survivor-game",
+          "commit_time": "2026-11-02T22:48:00+08:00"
         },
         {
           "name": "battle-city-roguelike",
