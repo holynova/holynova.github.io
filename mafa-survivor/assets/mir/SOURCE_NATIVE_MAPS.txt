@@ -1,0 +1,4 @@
+Native map chapter sources (separately pinned):
+https://github.com/mirbeta/MirServer @ f38deae64c521a28f8e0d86f2bf24d4ba7c9ea5c
+https://github.com/fluttergo/mir2-client-js @ c2419cb7803cafe5dea2d366c1948480e944cb09
+Source PNG/JSON rectangles and sparse indices retained in manifest.json. Public project distribution follows the recorded owner confirmation; not independent official-client or rights verification. No third-party client/server implementation is incorporated.
