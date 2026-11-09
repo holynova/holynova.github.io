@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-02",
-  "totalRepos": 139,
+  "lastUpdated": "2026-11-10",
+  "totalRepos": 140,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,20 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "concept-atlas",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "60张竖版知识漫画，一图解释熟悉术语背后的机制，支持分类、搜索与原图下载。",
+            "en": "Sixty illustrated explainers with category filters, search and original PNG downloads."
+          },
+          "url": "https://github.com/holynova/concept-atlas",
+          "homepage": "https://xiaosang.cc/concept-atlas/",
+          "screenshot": "screenshots/concept-atlas.png",
+          "pushed_at": "2026-11-10",
+          "commit_time": "2026-11-10T00:27:05+08:00",
+          "hidden": false
+        },
         {
           "name": "world-unsolved-mysteries",
           "lang": "HTML",
