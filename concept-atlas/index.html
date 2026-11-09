@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17324a">
+  <title>概念探险队 · 一图搞懂一个概念</title>
+  <meta name="description" content="60 张知识漫画，6 个探险领域。从越位到死锁，从月球到选择，用一张图把复杂概念讲明白。">
+  <meta property="og:title" content="概念探险队 · 一图搞懂一个概念">
+  <meta property="og:description" content="60 个概念，60 次「原来如此」。清晰线描知识漫画，适合竖屏阅读与收藏。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://xiaosang.cc/concept-atlas/assets/detail/16-tidal-locking.webp">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">跳到全部作品</a>
+  <header class="masthead">
+    <a href="#" class="brand" aria-label="概念探险队首页"><span>概念探险队</span></a>
+    <nav aria-label="主导航"><button class="nav-download" data-download-all>下载全部</button></nav>
+  </header>
+  <main>
+    <section id="collection" class="collection" aria-labelledby="collection-title">
+      <div class="section-heading"><h1 id="collection-title">一图，搞懂。</h1><button class="random-button" id="random-button">随便看看</button></div>
+      <div class="collection-tools">
+        <div class="filters" role="group" aria-label="按领域筛选"><button class="filter active" data-category="全部" aria-pressed="true">全部 <span>60</span></button><button class="filter" data-category="体育运动" aria-pressed="false">体育运动 <span>10</span></button><button class="filter" data-category="电影摄影" aria-pressed="false">电影摄影 <span>10</span></button><button class="filter" data-category="金融经济" aria-pressed="false">金融经济 <span>10</span></button><button class="filter" data-category="物理科学" aria-pressed="false">物理科学 <span>10</span></button><button class="filter" data-category="计算机技术" aria-pressed="false">计算机技术 <span>10</span></button><button class="filter" data-category="心理与生活" aria-pressed="false">心理与生活 <span>10</span></button></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="搜索概念" aria-label="搜索概念名称、解释或关键词"></label>
+      </div>
+      <div class="results-line"><p id="results-count" role="status">加载中…</p></div>
+      <div id="gallery" class="gallery" aria-label="概念海报作品"></div>
+      <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">?</span><h3>这个概念，还在地图之外。</h3><p>换个关键词，或返回全部图鉴继续探险。</p><button id="reset-search" class="text-button">查看全部作品 ↗</button></div>
+      <noscript><p>请启用 JavaScript 来浏览完整图鉴、下载原图与配套文案。</p></noscript>
+    </section>
+  </main>
+  <footer><span>概念探险队 <small>v1.1.0</small></span><a href="https://github.com/holynova/concept-atlas" target="_blank" rel="noopener noreferrer">GitHub</a></footer>
+  <dialog id="reader" aria-labelledby="reader-title"><div class="reader-top"><span id="reader-index"></span><button id="close-reader" class="icon-button" aria-label="关闭阅读">×</button></div><div class="reader-body"><div class="reader-image-wrap"><img id="reader-image" alt="" width="1200" height="1600"><p id="image-status" role="status"></p></div><div class="reader-info"><p class="eyebrow" id="reader-category"></p><h2 id="reader-title"></h2><p class="reader-english" id="reader-english"></p><p class="reader-hook" id="reader-hook"></p><div class="reader-explanation"><h3>把它讲明白</h3><p id="reader-explanation"></p></div><div class="remember"><span>记住这句</span><p id="reader-summary"></p></div><div class="pitfall"><h3>再多懂一点</h3><p id="reader-pitfall"></p></div><a id="reader-source" target="_blank" rel="noopener noreferrer" class="source-link"></a><div class="reader-actions"><a id="download-poster" class="primary-button" download>下载 PNG 原图 <span aria-hidden="true">↓</span></a><button id="copy-caption" class="secondary-button">复制图文文案</button></div><p class="copy-status" id="copy-status" role="status"></p><div class="reader-paging"><button id="previous-concept">← 上一个概念</button><button id="next-concept">下一个概念 →</button></div></div></div></dialog>
+  <section class="download-progress" id="download-progress" aria-label="整套海报下载进度" hidden><div><strong id="download-heading">正在打包图鉴</strong><p id="download-status" role="status"></p></div><progress id="download-meter" max="60" value="0" aria-label="已下载的海报数"></progress><button id="cancel-download">取消</button></section>
+</body>
+</html>
