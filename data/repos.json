@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-10",
-  "totalRepos": 141,
+  "totalRepos": 142,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1830,6 +1830,20 @@
         "en": "Games"
       },
       "repos": [
+        {
+          "name": "woool-survivor-game",
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "传奇世界幸存者：战法道三职业、原版技能与怪物素材、六大城市要塞地图与四档锯齿难度曲线。",
+            "en": "Legend of World (Woool) survivor roguelite with Warrior/Mage/Taoist builds, authentic sprites, six isometric city maps and four sawtooth difficulty curves."
+          },
+          "url": "https://github.com/holynova/woool-survivor-game",
+          "homepage": "https://xiaosang.cc/woool-survivor-game/",
+          "screenshot": "screenshots/woool-survivor-game.png",
+          "pushed_at": "2026-11-10",
+          "commit_time": "2026-11-10T16:39:52+08:00",
+          "hidden": false
+        },
         {
           "name": "mafa-survivor",
           "lang": "TypeScript",
