@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-10",
-  "totalRepos": 140,
+  "totalRepos": 141,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,20 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "x-prompt-library",
+          "lang": "HTML",
+          "desc": {
+            "zh": "Prompt 收藏册：27 组、71 条 AI 提示词，含原文、28 份中文译文、分类搜索与独立复制。",
+            "en": "71 AI prompts in 27 collections, with original text, 28 Chinese translations, category search and independent copy buttons."
+          },
+          "url": "https://github.com/holynova/x-prompt-library",
+          "homepage": "https://xiaosang.cc/x-prompt-library/",
+          "screenshot": "screenshots/x-prompt-library.png",
+          "pushed_at": "2026-11-10",
+          "commit_time": "2026-11-10T15:56:37+08:00",
+          "hidden": false
+        },
         {
           "name": "concept-atlas",
           "lang": "JavaScript",
