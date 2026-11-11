@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-10",
-  "totalRepos": 142,
+  "lastUpdated": "2026-11-11",
+  "totalRepos": 143,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -110,6 +110,20 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "bernstein-ypc",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "伯恩斯坦《青少年音乐会》导览：提炼每课核心观点与现场实验，附 B 站掘火中译视频与可折叠试听曲目单",
+            "en": "Study guide to Leonard Bernstein's Young People's Concerts with concise takeaways, stage demos, Bilibili videos, and playable repertoire."
+          },
+          "url": "https://github.com/holynova/bernstein-ypc",
+          "homepage": "https://xiaosang.cc/bernstein-ypc/",
+          "screenshot": "screenshots/bernstein-ypc.png",
+          "pushed_at": "2026-11-11",
+          "commit_time": "2026-11-11T16:15:49+08:00",
+          "hidden": false
+        },
         {
           "name": "x-prompt-library",
           "lang": "HTML",
