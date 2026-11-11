@@ -114,14 +114,14 @@
           "name": "bernstein-ypc",
           "lang": "JavaScript",
           "desc": {
-            "zh": "伯恩斯坦《青少年音乐会》导览：提炼每课核心观点与现场实验，附 B 站掘火中译视频与可折叠试听曲目单",
-            "en": "Study guide to Leonard Bernstein's Young People's Concerts with concise takeaways, stage demos, Bilibili videos, and playable repertoire."
+            "zh": "伯恩斯坦《青少年音乐会》全 53 课导览：提炼核心观点与现场实验，支持全文搜索与分类筛选，附 B 站掘火中译视频与可折叠试听曲目单",
+            "en": "Two-column study guide to all 53 Young People's Concerts with live search, category filters, Bilibili links, and playable repertoire previews."
           },
           "url": "https://github.com/holynova/bernstein-ypc",
           "homepage": "https://xiaosang.cc/bernstein-ypc/",
           "screenshot": "screenshots/bernstein-ypc.png",
           "pushed_at": "2026-11-11",
-          "commit_time": "2026-11-11T16:15:49+08:00",
+          "commit_time": "2026-11-11T19:18:06+08:00",
           "hidden": false
         },
         {
