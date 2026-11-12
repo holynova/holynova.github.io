@@ -1,0 +1,11 @@
+/bernstein-ypc/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/bernstein-ypc/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/bernstein-ypc/ep/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/bernstein-ypc/slides/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
