@@ -740,7 +740,9 @@
     const imageActionLabel = repo.homepage ? t('liveDemo') : t('github');
     const isLcp = index === 0;
     const isEager = delayIndex < 2;
-    const webpScreenshot = repo.screenshot ? repo.screenshot.replace(/\.(png|jpg|jpeg)$/i, '.webp') : '';
+    const webpScreenshot = /\.(png|jpe?g)$/i.test(repo.screenshot || '')
+      ? repo.screenshot.replace(/\.(png|jpe?g)$/i, '.webp')
+      : '';
     const loadingAttr = isEager ? 'loading="eager"' : 'loading="lazy"';
     const priorityAttr = isLcp ? 'fetchpriority="high"' : (isEager ? '' : 'decoding="async"');
     const mediaHtml = repo.screenshot && imageTarget
@@ -787,7 +789,7 @@
       const image = imageLink.querySelector('.card-demo-image');
       if (image) {
         const updateImageEffect = () => {
-          const imageSource = image.currentSrc || webpScreenshot || image.src;
+          const imageSource = image.currentSrc || image.src;
           const cssSafeImageSource = imageSource.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
           imageLink.style.setProperty('--card-image', `url("${cssSafeImageSource}")`);
           applyMediaPalette(imageLink, image);
@@ -800,8 +802,13 @@
         }
 
         image.addEventListener('error', () => {
+          const source = image.closest('picture')?.querySelector('source');
+          if (source) {
+            source.remove();
+            return;
+          }
           imageLink.replaceWith(createNamePlaceholder('card-name-placeholder', repoName));
-        }, { once: true });
+        });
       }
     }
 
