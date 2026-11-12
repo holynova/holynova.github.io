@@ -3,7 +3,7 @@ const assetUrl = (path) => new URL(path, baseUrl).href;
 const $ = (selector) => document.querySelector(selector);
 const gallery = $('#gallery');
 const reader = $('#reader');
-const colors = {'体育运动':'#4f8d78','电影摄影':'#3879b8','金融经济':'#c09532','物理科学':'#6761a7','计算机技术':'#427c91','心理与生活':'#d85c43'};
+const colors = {'体育运动':'#4f8d78','电影摄影':'#3879b8','金融经济':'#c09532','物理科学':'#6761a7','心理与生活':'#d85c43','出行交通':'#d85c43','自然与旅行':'#3879b8','居家与饮食':'#c09532','影音与错觉':'#6761a7'};
 let concepts = [], filtered = [], category = '全部', current = null, imageRequest = 0, returnFocus = null, searchTimer;
 
 function text(tag, className, value) {
@@ -103,11 +103,25 @@ function followHash() {
   else if (reader.open) closeReader();
 }
 
-document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
-  category = button.dataset.category;
-  document.querySelectorAll('.filter').forEach(other => {const active=other===button;other.classList.toggle('active',active);other.setAttribute('aria-pressed',String(active));});
-  render();
-}));
+function buildFilters() {
+  const categories = ['全部', ...new Set(concepts.map(item => item.category))];
+  $('#filters').replaceChildren(...categories.map(value => {
+    const button = text('button', 'filter', value);
+    button.dataset.category = value;
+    button.setAttribute('aria-pressed', String(value === category));
+    if (value === category) button.classList.add('active');
+    button.addEventListener('click', () => {
+      category = value;
+      $('#filters').querySelectorAll('.filter').forEach(other => {
+        const active = other === button;
+        other.classList.toggle('active', active);
+        other.setAttribute('aria-pressed', String(active));
+      });
+      render();
+    });
+    return button;
+  }));
+}
 $('#search').addEventListener('input', () => {clearTimeout(searchTimer);searchTimer=setTimeout(render,130);});
 $('#reset-search').addEventListener('click',()=>{$('#search').value='';document.querySelector('.filter[data-category="全部"]').click();});
 $('#random-button').addEventListener('click',()=>{const list=filtered.length?filtered:concepts;if(list.length)navigate(list[Math.floor(Math.random()*list.length)]);});
@@ -156,7 +170,7 @@ document.querySelectorAll('[data-download-all]').forEach(button=>button.addEvent
     const captions=concepts.map(item=>`## ${number(item)} ${item.title}\n\n${item.hook}\n\n${item.explanation}\n\n记住这句：${item.summary}\n\n再多懂一点：${item.pitfall}\n\n来源：${item.sourceTitle}\n${item.sourceUrl}\n\n#概念探险队 #一图搞懂 #${item.category} #${item.title}`).join('\n\n---\n\n');
     files.push({name:'图文文案.md',bytes:new TextEncoder().encode(captions)});
     const blob=makeZip(files), url=URL.createObjectURL(blob), link=document.createElement('a');
-    link.href=url;link.download='概念探险队-60张知识漫画.zip';document.body.append(link);link.click();link.remove();
+    link.href=url;link.download=`概念探险队-${concepts.length}张知识漫画.zip`;document.body.append(link);link.click();link.remove();
     setTimeout(()=>URL.revokeObjectURL(url),60000);
     $('#download-heading').textContent='整套图鉴已打包';$('#download-status').textContent='ZIP 包含全部 PNG 和配套图文文案。';$('#cancel-download').textContent='关闭';
     closeProgressTimer=setTimeout(()=>{if(!downloadController)panel.hidden=true;},12000);
@@ -171,7 +185,7 @@ $('#cancel-download').addEventListener('click',()=>{if(downloadController)downlo
 
 try {
   const response = await fetch(assetUrl('concepts.json')); if(!response.ok)throw new Error(`HTTP ${response.status}`);
-  concepts = (await response.json()).sort((a,b)=>Number(a.id)-Number(b.id)); render(); followHash();
+  concepts = (await response.json()).sort((a,b)=>Number(a.id)-Number(b.id)); buildFilters(); render(); followHash();
 } catch(error) {
   $('#results-count').textContent='图鉴暂时没有打开，请刷新重试。';
   const retry=text('button','text-button','重新打开图鉴 ↻');retry.addEventListener('click',()=>location.reload());gallery.append(retry);
