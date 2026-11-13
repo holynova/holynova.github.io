@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-12",
-  "totalRepos": 143,
+  "lastUpdated": "2026-11-13",
+  "totalRepos": 144,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1627,6 +1627,24 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/chrome-session-tui.png"
+        },
+        {
+          "name": "photo-atlas",
+          "title": {
+            "zh": "照片足迹",
+            "en": "Photo Atlas"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "本地照片元数据足迹图：行政区地图、时间回放与年度行程年鉴；公开演示使用虚构数据。",
+            "en": "A local photo metadata atlas with administrative maps, time playback and annual travel summaries; the public demo uses fictional data."
+          },
+          "url": "https://github.com/holynova/photo-atlas",
+          "homepage": "https://xiaosang.cc/photo-atlas/",
+          "screenshot": "screenshots/photo-atlas.png",
+          "pushed_at": "2026-11-13",
+          "commit_time": "2026-11-13T19:58:46+08:00",
+          "hidden": false
         }
       ]
     },

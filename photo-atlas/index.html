@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>照片足迹 · Photo Atlas Demo</title>
+  <meta name="description" content="用虚构记录体验行政区地图、时间回放和多年轨迹。">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./geo-vendor.js"></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#map" aria-label="照片足迹首页"><span class="brand-mark" aria-hidden="true"></span><span>照片足迹 <small>PHOTO ATLAS</small></span></a>
+    <div class="public-meta"><span>v1.0.2</span><a href="https://github.com/holynova/photo-atlas">GitHub</a></div>
+  </header>
+  <main id="app" aria-busy="true"><p class="initial">正在载入演示数据…</p></main>
+  <dialog id="drawer"><div class="dialog-head"><h2 id="dialog-title"></h2><form method="dialog"><button class="quiet icon" aria-label="关闭">×</button></form></div><div id="dialog-body"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

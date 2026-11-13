@@ -9,3 +9,8 @@
 
 /bernstein-ypc/slides/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/photo-atlas/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff

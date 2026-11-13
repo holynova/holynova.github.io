@@ -38,7 +38,7 @@ GitHub Pages 仍可作为备用入口：[holynova.github.io](https://holynova.gi
 npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc
 ```
 
-发布后读取 `https://xiaosang.cc/data/repos.json` 并实际点击作品卡片的 Demo，确认页面指向 `*.xiaosang.cc`。Git 提交或 GitHub Pages 更新不会自动发布 Cloudflare。
+发布后读取 `https://xiaosang.cc/data/repos.json` 并实际点击作品卡片的 Demo，确认页面指向 `xiaosang.cc` 路径或其子域名。Git 提交或 GitHub Pages 更新不会自动发布 Cloudflare。
 
 ## 📸 项目截图
 
