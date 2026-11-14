@@ -3,7 +3,6 @@ const assetUrl = (path) => new URL(path, baseUrl).href;
 const $ = (selector) => document.querySelector(selector);
 const gallery = $('#gallery');
 const reader = $('#reader');
-const colors = {'体育运动':'#4f8d78','电影摄影':'#3879b8','金融经济':'#c09532','物理科学':'#6761a7','心理与生活':'#d85c43','出行交通':'#d85c43','自然与旅行':'#3879b8','居家与饮食':'#c09532','影音与错觉':'#6761a7'};
 let concepts = [], filtered = [], category = '全部', current = null, imageRequest = 0, returnFocus = null, searchTimer;
 
 function text(tag, className, value) {
@@ -19,7 +18,6 @@ const original = (item) => assetUrl(item.image);
 
 function makeCard(item, index) {
   const card = text('article', 'concept-card', '');
-  card.style.setProperty('--category-color', colors[item.category]);
   const posterButton = text('button', 'poster-button', '');
   posterButton.setAttribute('aria-label', `阅读${item.title}知识漫画`);
   const img = new Image();
@@ -48,7 +46,7 @@ function render() {
   filtered = concepts.filter(item => (category === '全部' || item.category === category) && [item.title,item.english,item.category,item.hook,item.summary,...(item.tags||[])].join(' ').toLocaleLowerCase().includes(query)).reverse();
   gallery.replaceChildren(...filtered.map(makeCard));
   $('#empty-state').hidden = filtered.length > 0;
-  $('#results-count').textContent = query ? `找到 ${filtered.length} 个相关概念 · 全套 ${concepts.length} 张` : `${filtered.length} 个概念`;
+  $('#results-count').textContent = query ? `找到 ${filtered.length} 个相关概念，全套 ${concepts.length} 张` : `${filtered.length} 个概念`;
   $('#random-button').disabled = !filtered.length;
 }
 
@@ -62,12 +60,12 @@ async function showReader(item) {
   if (!reader.open) returnFocus = document.activeElement;
   current = item; const request = ++imageRequest;
   $('.reader-image-wrap').classList.remove('zoomed');
-  $('#reader-index').textContent = `CONCEPT ATLAS / ${number(item)} OF ${concepts.length}`;
+  $('#reader-index').textContent = `第 ${number(item)} 张 / 共 ${concepts.length} 张`;
   $('#reader-category').textContent = `${item.category}`;
   $('#reader-title').textContent = item.title; $('#reader-english').textContent = item.english;
   $('#reader-hook').textContent = item.hook; $('#reader-explanation').textContent = item.explanation;
   $('#reader-summary').textContent = item.summary; $('#reader-pitfall').textContent = item.pitfall;
-  $('#reader-source').textContent = `参考来源 · ${item.sourceTitle} ↗`; $('#reader-source').href = item.sourceUrl;
+  $('#reader-source').textContent = `参考来源：${item.sourceTitle} ↗`; $('#reader-source').href = item.sourceUrl;
   $('#download-poster').href = original(item); $('#download-poster').download = `概念探险队-${number(item)}-${item.title}.png`;
   $('#copy-status').textContent = ''; $('#copy-caption').textContent = '复制图文文案';
   $('#previous-concept').disabled = concepts.indexOf(item) === 0;
@@ -84,7 +82,7 @@ async function showReader(item) {
   try {
     if (typeof high.decode === 'function') await high.decode(); else await loaded;
     if (request !== imageRequest || current !== item || !reader.open) return;
-    visible.src = high.src; $('#image-status').textContent = '高清图已就绪 · 点击图片可放大';
+    visible.src = high.src; $('#image-status').textContent = '高清图已就绪，点击图片可放大';
   } catch {
     if (request === imageRequest && reader.open) $('#image-status').textContent = '高清图暂未加载，仍可阅读预览或下载原图。';
   }
@@ -149,7 +147,8 @@ document.querySelectorAll('[data-download-all]').forEach(button=>button.addEvent
   const controller=new AbortController();downloadController=controller;
   const panel=$('#download-progress');panel.hidden=false;
   $('#download-heading').textContent='正在打包原图';
-  $('#download-status').textContent='首次下载需要一些时间，请保持页面打开。';
+  // 原图总量 215 MB（2026-11-14 按仓库 dist/assets/posters/ 121 个文件实测合计），先让用户知道再开始下载。
+  $('#download-status').textContent='整套 121 张原图约 215 MB，下载需要一些时间，请保持页面打开。';
   $('#download-meter').value=0;$('#download-meter').max=concepts.length;$('#cancel-download').textContent='取消';
   document.querySelectorAll('[data-download-all]').forEach(control=>control.disabled=true);
   try{

@@ -2,7 +2,7 @@ import {day, dayGap, dateLabel, esc, residenceOn} from "./model.js";
 
 const display=(n)=>n.toLocaleString("zh-CN");
 const span=(start,end)=>dateLabel(start)+(start===end ? "" : " – "+dateLabel(end));
-const interval=(days)=>days>=365 ? "约 "+(days/365.2425).toFixed(1)+" 年 · "+display(days)+" 天" : display(days)+" 天";
+const interval=(days)=>days>=365 ? "约 "+(days/365.2425).toFixed(1)+" 年（"+display(days)+" 天）" : display(days)+" 天";
 const newYear=(year)=>({year,dates:new Set(),homeDays:new Map(),places:new Map(),visits:[],newPlaces:[]});
 
 export function historyStats(photos,cities,residences,records) {
@@ -60,8 +60,8 @@ function yearStory(year,cities) {
   const trips=year.visits.filter((visit)=>visit.home);
   const locations=new Set(trips.map((trip)=>trip.city));
   const homes=[...year.homeDays].sort(([,a],[,b])=>b.size-a.size);
-  const homeSummary=homes.length ? homes.map(([id,dates])=>cities[id].name+" · "+dates.size+" 个拍摄日").join(" / ") :
-    "常住地待定";
+  const homeSummary=homes.length ? homes.map(([id,dates])=>cities[id].name+" "+dates.size+" 个拍摄日").join("、") :
+    "暂未推断出常住地";
   const monthly=new Map();
   for (const trip of trips) {
     const month=trip.start.slice(5,7);
@@ -71,31 +71,31 @@ function yearStory(year,cities) {
   return '<div class="history-metrics">'+
     metric("有地点的拍摄日",display(year.dates.size)+" 天")+
     metric("外地行程",display(trips.length)+" 段",trips.length ? locations.size+" 个目的地" : "")+
-    metric("首次出现在示例中",year.newPlaces.length+" 个区划",year.newPlaces.length ? year.newPlaces.slice(0,4).map((p)=>cities[p.city].name).join("、")+(year.newPlaces.length>4?" 等":"") : "")+
+    metric("首次到访地区",year.newPlaces.length+" 个地区",year.newPlaces.length ? year.newPlaces.slice(0,4).map((p)=>cities[p.city].name).join("、")+(year.newPlaces.length>4?" 等":"") : "")+
     metric("常住记录",homeSummary)+
     (busiest ? metric("行程最多的月份",Number(busiest[0])+" 月",busiest[1]+" 段") : "")+
-    '</div>'+(year.visits.length!==trips.length ? '<p class="report-muted">另有 '+(year.visits.length-trips.length)+' 段到访发生在常住地证据不足的时段。</p>' : "");
+    '</div>'+(year.visits.length!==trips.length ? '<p class="report-muted">另有 '+(year.visits.length-trips.length)+' 段到访发生在无法确定常住地的时段。</p>' : "");
 }
 
 export function historyMarkup(stats,scope,selected,selectedYear) {
-  if (!stats.years.length) return '<h2 id="history-title">年度足迹</h2><p class="empty">当前范围没有同时带日期和区划的记录。</p>';
+  if (!stats.years.length) return '<h2 id="history-title">年度足迹</h2><p class="empty">当前范围没有同时带日期和地区的记录。</p>';
   const {cities,years,returns,homePhases,moves,longest}=stats;
   const year=years.find((item)=>item.year===selectedYear)||years[0];
   const favorite=returns.find((item)=>item.id===selected)||returns[0];
   const busiest=[...years].sort((a,b)=>tripCount(b)-tripCount(a)||b.year.localeCompare(a.year))[0];
   const phases=homePhases.length ? homePhases.map((phase)=>'<li><strong>'+esc(cities[phase.city].name)+
-    '</strong><span>'+span(phase.start,phase.end)+'</span><small>'+phase.months+' 个支持月份 · '+phase.days+' 个支持拍摄日</small></li>').join("") :
+    '</strong><span>'+span(phase.start,phase.end)+'</span><small>'+phase.months+' 个支持月份，'+phase.days+' 个支持拍摄日</small></li>').join("") :
     '<li>暂未找到有足够月份支持的常住城市。</li>';
   const changes=moves.map(({from,to})=>'<li><strong>'+esc(cities[from.city].name+' → '+cities[to.city].name)+
     '</strong><span>'+span(from.end,to.start)+'</span></li>').join("");
   const annual=years.map((record)=>{
     const places=[...record.places].sort(([,a],[,b])=>b.size-a.size);
     return '<article class="annual-row"><div>'+mapButton("history-year",record.year,record.year+" 年")+
-      '<span>'+places.length+' 个区划</span></div><div class="annual-places">'+places.map(([id,dates])=>
-        mapButton("history-place",record.year+"/"+id,cities[id].name+" · "+dates.size+" 天",record.homeDays.has(id)?"lead-place":"")).join("")+'</div></article>';
+      '<span>'+places.length+' 个地区</span></div><div class="annual-places">'+places.map(([id,dates])=>
+        mapButton("history-place",record.year+"/"+id,cities[id].name+" "+dates.size+" 天",record.homeDays.has(id)?"lead-place":"")).join("")+'</div></article>';
   }).join("");
   const options=years.map((item)=>'<option value="'+item.year+'"'+(item.year===year.year?" selected":"")+'>'+item.year+' 年</option>').join("");
-  const destinationOptions=returns.map((item)=>'<option value="'+esc(item.id)+'"'+(item===favorite?" selected":"")+'>'+esc(item.name)+" · "+item.visits.length+' 段</option>').join("");
+  const destinationOptions=returns.map((item)=>'<option value="'+esc(item.id)+'"'+(item===favorite?" selected":"")+'>'+esc(item.name)+" "+item.visits.length+' 段</option>').join("");
   return '<div class="report-year"><h2 id="history-title">'+year.year+' 年度足迹</h2><select id="report-year" aria-label="回顾年份">'+options+'</select></div>'+
     yearStory(year,cities)+
     '<div class="history-columns"><section class="report-section"><h3>住在哪里</h3><ol class="home-timeline">'+phases+
@@ -108,14 +108,14 @@ export function historyMarkup(stats,scope,selected,selectedYear) {
       '</select></label><div id="visit-summary">'+visitMarkup(favorite)+'</div>' : "")+'</section></div>'+
     '<details class="history-years"><summary>历年地点</summary>'+annual+'</details>'+
     '<details class="history-note"><summary>统计口径</summary><p>覆盖'+(scope==="domestic"?"国内":"全球")+
-    '区划。常住地按独立拍摄日的月度分布推断，需要至少三个支持月份。搬家窗口取旧常住阶段末次支持日期至新阶段首次支持日期。'+
-    '同日同城的照片合并。间隔超过 7 天，或中间有一天只在其他区划留下记录时，另起一段。日期表示虚构记录范围。</p></details>';
+    '地区。常住地根据每月拍照天数推断，至少需要 3 个月有记录。搬家时间取旧住处最后一次拍照到新住处第一次拍照之间。'+
+    '同一天、同一城市的照片算一次；间隔超过 7 天，或中间去了别的城市，就另算一段。日期均为虚构演示数据。</p></details>';
 }
 
 export function visitMarkup(city) {
   return '<ol class="visit-list">'+city.visits.map((visit,index)=>{
     const earlier=city.visits[index+1];
-    const gap=earlier ? " · 距上次 "+interval(dayGap(earlier.end,visit.start)) : "";
+    const gap=earlier ? "，距上次 "+interval(dayGap(earlier.end,visit.start)) : "";
     return '<li>'+mapButton("visit-range",visit.start+"/"+visit.end+"/"+city.id,span(visit.start,visit.end),"quiet")+
       '<small>'+new Set(visit.items.map(day)).size+' 个拍摄日'+gap+'</small></li>';
   }).join("")+'</ol>';
@@ -126,8 +126,8 @@ export function annualExport(stats,selectedYear) {
   if (!year) return "";
   return '<h2>'+year.year+' 足迹回顾</h2>'+yearStory(year,stats.cities)+
     '<h2>推断的常住阶段</h2><ul>'+stats.homePhases.map((phase)=>'<li>'+esc(stats.cities[phase.city].name)+
-      ' · '+span(phase.start,phase.end)+' · '+phase.months+' 个支持月份</li>').join("")+'</ul>'+
+      '，'+span(phase.start,phase.end)+'，'+phase.months+' 个支持月份</li>').join("")+'</ul>'+
     (stats.moves.length ? '<h2>可能的搬家时间</h2><ul>'+stats.moves.map(({from,to})=>
-      '<li>'+esc(stats.cities[from.city].name+' → '+stats.cities[to.city].name)+' · '+span(from.end,to.start)+'</li>').join("")+'</ul>' : "")+
+      '<li>'+esc(stats.cities[from.city].name+' → '+stats.cities[to.city].name)+'，'+span(from.end,to.start)+'</li>').join("")+'</ul>' : "")+
     '<p>常住和搬家时间根据虚构记录的日期分布推断。</p>';
 }

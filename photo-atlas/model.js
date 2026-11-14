@@ -111,7 +111,7 @@ export function journeyTitle(record, cities) {
 
 const palettes = {
   map: {water:"#11272e", land:"#23454a", border:"#416569", grid:"#1e3941", pin:"#c1f98a"},
-  journal: {water:"#e7eeeb", land:"#c3d3c8", border:"#9eafa4", grid:"#cedbd4", pin:"#ac4a2c"},
+  journal: {water:"#e7eeeb", land:"#c3d3c8", border:"#9eafa4", grid:"#cedbd4", pin:"#2e6b4e"},
   timeline: {water:"#eaf0f9", land:"#d6e1f0", border:"#a9bad1", grid:"#d4dfef", pin:"#324ac3"}
 };
 const radians = Math.PI / 180;
@@ -307,14 +307,14 @@ export function makeReport(photos, cities, world, regions, domestic, records, an
   const entries = records.map((r) => '<article><time>' + dateLabel(r.start) +
     (r.end !== r.start ? " — " + dateLabel(r.end) : "") + '</time><h3>' + esc(journeyTitle(r,cities)) + '</h3><p>' +
     r.items.length + ' 条演示记录</p><details><summary>查看示例记录</summary><ul>' + r.items.map((p) =>
-    '<li>' + esc(p.path) + ' · ' + esc(dateLabel(day(p))) +
+    '<li>' + esc(p.path) + '，' + esc(dateLabel(day(p))) +
     '</li>').join("") + '</ul></details></article>').join("");
   return '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>照片足迹演示报告</title>' +
     '<style>body{max-width:1040px;margin:3rem auto;padding:0 1rem;color:#23332b;background:#f7f5ed;font:16px/1.7 system-ui,sans-serif}h1{font-size:clamp(2rem,6vw,4rem);margin-bottom:0}h2{border-bottom:1px solid #ccc;padding-bottom:.4em;margin-top:2em}h3,p{margin:.3em 0}img{width:100%;display:block;margin-top:1rem}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:.4em;border-bottom:1px solid #ddd}article{border-bottom:1px solid #ddd;padding:1rem 0}li{overflow-wrap:anywhere}@media print{body{margin:0}}</style>' +
-    '<body><h1>照片足迹演示报告</h1><p>' + range + ' · ' + photos.length + ' 条演示记录 · ' + matched.length +
-    ' 个记录区划 · ' + (domestic ? "国内" : "全球") + '</p><img alt="照片足迹地图" src="' + canvas.toDataURL("image/png") +
-    '"><small>区划边界 · Natural Earth</small><h2>行政区记录</h2>' +
-    '<table><thead><tr><th>行政区</th><th>记录</th><th>首条日期</th><th>末条日期</th></tr></thead><tbody>' +
+    '<body><h1>照片足迹演示报告</h1><p>' + range + '，' + photos.length + ' 条演示记录，' + matched.length +
+    ' 个地区，' + (domestic ? "国内" : "全球") + '</p><img alt="照片足迹地图" src="' + canvas.toDataURL("image/png") +
+    '"><small>地区边界：Natural Earth</small><h2>地区记录</h2>' +
+    '<table><thead><tr><th>地区</th><th>记录</th><th>首条日期</th><th>末条日期</th></tr></thead><tbody>' +
     rows + '</tbody></table>' + annual + '<h2>行程年鉴</h2>' + (entries || '<p>当前范围没有同时具备日期与地点的记录。</p>') +
     '<p>此报告由虚构数据生成，仅用于演示。</p></body></html>';
 }

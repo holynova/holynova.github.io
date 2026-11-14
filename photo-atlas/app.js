@@ -47,9 +47,9 @@ const mapSection = '<section class="panel map-panel" aria-labelledby="map-title"
   sectionHead("足迹地图","map",'<div class="map-toolbar"><div class="map-mode" role="group" aria-label="地图视图">' +
     button("map-mode","平面","flat") + button("map-mode","地球仪","globe") +
     '</div><span id="map-count" class="pill"></span></div>') +
-  '<div class="map-frame" id="map-frame"><canvas id="atlas-map" tabindex="0" aria-label="按行政区着色的足迹地图"></canvas><div class="map-labels" id="map-labels" aria-hidden="true"></div><div class="map-controls">' +
+  '<div class="map-frame" id="map-frame"><canvas id="atlas-map" tabindex="0" aria-label="按地区着色的足迹地图"></canvas><div class="map-labels" id="map-labels" aria-hidden="true"></div><div class="map-controls">' +
   button("zoom-in","+","","map-key") + button("zoom-out","−","","map-key") + button("fit","全览","","map-key") +
-  '</div><span class="map-credit">边界 · Natural Earth</span></div><div class="map-foot"><span><i></i>有记录</span><span><i></i>无记录</span><span id="map-hint"></span></div></section>';
+  '</div><span class="map-credit">地区边界：Natural Earth</span></div><div class="map-foot"><span><i></i>有记录</span><span><i></i>无记录</span><span id="map-hint"></span></div></section>';
 const timeSection = '<section class="panel time-panel" aria-labelledby="time-title">' +
   sectionHead("时间回放","time",'<output id="time-label" for="month-range"></output>') +
   '<div class="time-controls"><button id="play" class="accent" type="button" data-action="play">播放</button><div class="time-track"><div class="bars" id="bars" aria-hidden="true"></div>' +
@@ -59,7 +59,7 @@ const journeySection = '<section class="panel journal-panel" aria-labelledby="jo
   sectionHead("行程年鉴","journey",'<span id="journey-count" class="pill"></span>') +
   '<div class="journeys" id="journeys"></div></section>';
 const citySection = '<section class="panel city-panel" aria-labelledby="city-title">' +
-  sectionHead("记录区划","city",'<button id="selected-clear" type="button" data-action="clear-city" class="quiet" hidden>取消选中</button>') +
+  sectionHead("到访地区","city",'<button id="selected-clear" type="button" data-action="clear-city" class="quiet" hidden>取消选中</button>') +
   '<div id="cities"></div></section>';
 
 let observer;
@@ -67,13 +67,13 @@ let projection;
 function layout() {
   observer?.disconnect();
   const header = '<section class="masthead"><div class="mast-copy"><p class="section-meta" id="range-note"></p>' +
-    '<h1>足迹图鉴</h1></div><div id="stats" class="stats"></div></section>';
+    '<h1>足迹图鉴</h1><p>演示数据均为虚构：点地图上的地区查看照片记录，拖动下方时间轴回放多年足迹。</p></div><div id="stats" class="stats"></div></section>';
   const filters = '<section class="filter-bar" aria-label="报告筛选"><label>范围<select id="scope" aria-label="地理范围"><option value="domestic">国内</option><option value="world">全球</option></select></label>' +
     '<label>年份<select id="years" aria-label="筛选年份"></select></label>' +
     '<label>起始<input id="from" type="date" value="' + esc(s.from) + '"></label><label>截止<input id="to" type="date" value="' +
     esc(s.to) + '"></label><label class="checkbox"><input type="checkbox" id="unknown" ' + (s.unknown ? "checked" : "") +
     '> 含日期未知</label><button class="quiet" data-action="clear-filter">重置筛选</button><div class="filter-actions">' +
-    '<button class="quiet" data-action="history">年度报告 ↓</button><button class="outline" data-action="export">导出报告</button></div></section>';
+    '<button class="quiet" data-action="history">年度报告 ↓</button><button class="outline" data-action="export">导出网页报告</button></div></section>';
   app.innerHTML = '<div class="content-shell">' + header + filters + '</div>' + mapSection +
     '<div class="content-shell map-support">' + timeSection +
     '<div class="map-details">' + citySection + journeySection + '</div>' +
@@ -105,10 +105,10 @@ function cityList() {
       (point.items.length > 20 ? button("place-photos","查看全部记录",point.id,"quiet") : "") + '</details></div>';
   }
   const rows = s.points.map((p) => button("city",'<span><i></i>' +
-    esc(p.name) + '</span><b>' + p.items.length + '</b>',
+    esc(p.name) + '</span><b>' + p.items.length + ' 张</b>',
     p.id,"city-row" + (p.id === s.selected ? " selected" : ""))).join("");
   return content + (rows ? '<div class="city-list">' + rows + '</div>' :
-    '<p class="empty">当前范围没有匹配到行政区的照片。</p>');
+    '<p class="empty">当前范围没有匹配到地区的照片。</p>');
 }
 function journalList() {
   if (!s.records.length) return '<p class="empty">当前范围没有同时具备时间和地点的记录。</p>';
@@ -119,7 +119,7 @@ function journalList() {
     year = nextYear;
     const stamp = dateLabel(record.start) + (record.start === record.end ? "" : " – " + dateLabel(record.end));
     return heading + '<article class="journey"><div class="journey-summary"><div><time>' + stamp + '</time><h4>' +
-      esc(journeyTitle(record,s.data.cities)) + '</h4><p>' + (record.home ? '外地行程' : '到访记录 · 常住地待定') + ' · ' + record.items.length + ' 条示例</p></div>' +
+      esc(journeyTitle(record,s.data.cities)) + '</h4><p>' + (record.home ? '外地行程' : '到访记录') + '，' + record.items.length + ' 条示例</p></div>' +
       '</div><div class="journey-actions">' + button("journey","定位地图 ↗",record.id,"quiet") +
       '<details><summary>示例记录</summary><div class="evidence-list">' + record.items.slice(0,20).map(evidence).join("") + '</div>' +
       (record.items.length > 20 ? button("journey-photos","查看全部记录",record.id,"quiet") : "") + '</details></div></article>';
@@ -163,12 +163,12 @@ function update() {
   $("#years").value = s.year;
   $("#range-note").textContent = dates.length ? dateLabel(dates[0]) + " — " + dateLabel(dates.at(-1)) : "虚构示例";
   const totals = [[current.length,"条演示记录"]];
-  if (geo !== current.length) totals.push([geo,"有地点"]);
+  if (geo !== current.length) totals.push([geo,"条有地点记录"]);
   $("#stats").innerHTML = totals.map(([value,label]) =>
     '<div><strong>' + number(value) + '</strong><span>' + label + '</span></div>').join("");
   $("#unknown").disabled = Boolean(s.from || s.to || s.cursor);
-  $("#map-count").textContent = cityCount + " 个区划";
-  $("#map-hint").textContent = point ? point.name : "";
+  $("#map-count").textContent = cityCount + " 个地区";
+  $("#map-hint").textContent = point ? point.name : "点地区查看记录，拖动可平移";
   $("#journey-count").textContent = s.records.length + " 段";
   $("#cities").innerHTML = cityList();
   $("#journeys").innerHTML = journalList();
@@ -316,7 +316,7 @@ function photoDialog(id) {
   const p = s.data.photos.find((item) => item.id === Number(id));
   if (!p) return;
   openDialog("示例记录",'<strong>' + esc(p.path) + '</strong><dl class="evidence-fields"><dt>日期</dt><dd>' +
-    esc(dateLabel(day(p))) + '</dd><dt>行政区</dt><dd>' + esc(s.data.cities[p.city]?.name || "未归属") +
+    esc(dateLabel(day(p))) + '</dd><dt>地区</dt><dd>' + esc(s.data.cities[p.city]?.name || "未归属") +
     '</dd><dt>来源</dt><dd>程序生成的虚构示例</dd></dl>',"photo");
 }
 function exportReport() {
@@ -326,6 +326,7 @@ function exportReport() {
   const url = URL.createObjectURL(new Blob([html],{type:"text/html;charset=utf-8"}));
   const link = document.createElement("a");
   link.href=url; link.download="照片足迹演示报告.html"; link.click();
+  toast("报告已下载，可在浏览器中打开查看");
   setTimeout(() => URL.revokeObjectURL(url),2000);
 }
 function photosDialog(page = 0, context = s.photoContext) {
@@ -335,7 +336,7 @@ function photosDialog(page = 0, context = s.photoContext) {
   const photos = [...(items || [])].sort((a,b) => (b.stamp || "").localeCompare(a.stamp || ""));
   const size = 30;
   const last = Math.max(0,Math.ceil(photos.length/size)-1);
-  openDialog(context ? "示例记录列表" : "时段记录",'<p>' + photos.length + ' 张 · 第 ' + (page+1) + ' / ' + (last+1) + ' 页</p>' +
+  openDialog(context ? "示例记录列表" : "时段记录",'<p>共 ' + photos.length + ' 张，第 ' + (page+1) + ' / ' + (last+1) + ' 页</p>' +
     photos.slice(page*size,(page+1)*size).map(evidence).join("") + '<div class="dialog-actions">' +
     (page > 0 ? button("photo-page","上一页",page-1,"outline") : "") +
     (page < last ? button("photo-page","下一页",page+1,"outline") : "") + '</div>',"photos");
