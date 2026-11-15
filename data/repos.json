@@ -876,16 +876,16 @@
           "name": "holiday-visualizer",
           "lang": "TypeScript",
           "desc": {
-            "zh": "法定节假日调休方案与休假拼假日历可视化视图",
-            "en": "Calendar visualizer for statutory holiday shift arrangements and leave plans"
+            "zh": "中国大陆节假日与调休日历，按月查看请假连休和补班日期",
+            "en": "Mainland China holiday calendar with make-up workdays and month-by-month leave plans"
           },
           "url": "https://github.com/holynova/holiday-visualizer",
-          "pushed_at": "2026-08-08",
+          "pushed_at": "2026-11-15",
           "homepage": "https://holiday-visualizer.xiaosang.cc/",
           "screenshot": "screenshots/holiday-visualizer.png",
           "hidden": false,
           "is_featured": true,
-          "commit_time": "2026-08-08T00:50:22Z"
+          "commit_time": "2026-11-15T23:53:07+08:00"
         },
         {
           "name": "game-rating-lookup",
