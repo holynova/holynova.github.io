@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-15",
-  "totalRepos": 137,
+  "totalRepos": 138,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -9,6 +9,20 @@
         "en": "Chrome Extensions"
       },
       "repos": [
+        {
+          "name": "x-bookmark-recall",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "Chrome 扩展，从 X 书签页导入旧收藏，在推荐页顶部和时间线里回看",
+            "en": "Chrome extension that imports X bookmarks and resurfaces them in the For You timeline"
+          },
+          "url": "https://github.com/holynova/x-bookmark-recall",
+          "homepage": "https://xiaosang.cc/x-bookmark-recall/",
+          "screenshot": "screenshots/x-bookmark-recall.png",
+          "pushed_at": "2026-11-15",
+          "commit_time": "2026-11-15T23:46:20+08:00",
+          "hidden": false
+        },
         {
           "name": "prompt_one_by_one",
           "lang": "JavaScript",
