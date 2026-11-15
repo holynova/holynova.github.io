@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-15",
-  "totalRepos": 138,
+  "lastUpdated": "2026-11-16",
+  "totalRepos": 139,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -911,6 +911,20 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "photo-breakout",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "破框照片编辑器，浏览器本地自动抠像，支持白色网格、竖格和 PNG 导出。",
+            "en": "Create breakout photos with on-device portrait segmentation, white grids, vertical strips, and PNG export."
+          },
+          "url": "https://github.com/holynova/photo-breakout",
+          "homepage": "https://xiaosang.cc/photo-breakout/",
+          "screenshot": "screenshots/photo-breakout.webp",
+          "pushed_at": "2026-11-16",
+          "commit_time": "2026-11-16T00:07:11+08:00",
+          "hidden": false
+        },
         {
           "name": "origami-studio",
           "title": {
