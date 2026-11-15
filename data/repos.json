@@ -21,7 +21,11 @@
           "screenshot": "screenshots/x-bookmark-recall.png",
           "pushed_at": "2026-11-15",
           "commit_time": "2026-11-15T23:46:20+08:00",
-          "hidden": false
+          "hidden": false,
+          "title": {
+            "zh": "X 书签回看",
+            "en": "X Bookmark Recall"
+          }
         },
         {
           "name": "prompt_one_by_one",
