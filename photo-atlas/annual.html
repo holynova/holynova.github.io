@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="用照片、地图和数据图表回顾每一年以及多年的拍摄记录。">
+<title>年度照片足迹 · Photo Atlas</title>
+<link rel="icon" href="./favicon.ico">
+<link rel="stylesheet" href="./annual.css">
+<link rel="stylesheet" href="./story-visuals.css">
+<script defer src="./geo-vendor.js"></script>
+<script type="module" src="./annual.js"></script>
+</head>
+<body>
+<header class="atlas-header">
+  <a class="wordmark" href="./"><span class="brand-mark" aria-hidden="true"></span><span>照片足迹<small>PHOTO ATLAS</small></span></a>
+  <nav aria-label="报告操作">
+    <label class="year-field" hidden><span>报告年份</span><select id="year" aria-label="报告年份"></select></label>
+    <a id="footprint-link" href="./footprint.html">城市足迹</a>
+    <a id="start-link" href="https://github.com/holynova/photo-atlas#本地扫描">本地扫描</a>
+    <button class="share-button" id="share" type="button" hidden>生成分享卡 <span aria-hidden="true">↗</span></button>
+  </nav>
+</header>
+<main id="report" aria-busy="true"><p class="loading">正在加载年度报告…</p></main>
+<footer class="atlas-footer"><a href="./journeys.html">行程年鉴</a><a href="https://github.com/holynova/photo-atlas">GitHub</a><span>v1.1.0</span></footer>
+<dialog id="details" aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><form method="dialog"><button aria-label="关闭">×</button></form></div><div id="dialog-content"></div></dialog>
+</body>
+</html>

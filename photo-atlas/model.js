@@ -111,6 +111,7 @@ export function journeyTitle(record, cities) {
 
 const palettes = {
   map: {water:"#11272e", land:"#23454a", border:"#416569", grid:"#1e3941", pin:"#c1f98a"},
+  footprint: {water:"#11272e", land:"#23454a", border:"#416569", grid:"#1e3941", pin:"#699f3f"},
   journal: {water:"#e7eeeb", land:"#c3d3c8", border:"#9eafa4", grid:"#cedbd4", pin:"#2e6b4e"},
   timeline: {water:"#eaf0f9", land:"#d6e1f0", border:"#a9bad1", grid:"#d4dfef", pin:"#324ac3"}
 };
@@ -175,7 +176,7 @@ function paintRegion(ctx,path,palette,lit,active,lineScale=1) {
 }
 
 export function drawMap(canvas, world, points, options = {}) {
-  const {design = "journal", base = points, camera, exported = false,
+  const {design = "journal", base = points, camera, exported = false, labels = true,
     regions = [], domestic = false, selected, mode = "flat"} = options;
   const palette = palettes[design];
   const width = exported ? 1050 : Math.round(canvas.clientWidth);
@@ -199,7 +200,7 @@ export function drawMap(canvas, world, points, options = {}) {
     const globe=d3.geoOrthographic().translate([width/2,height/2]).scale(radius)
       .rotate([-center.lon,-center.lat,0]).clipAngle(90).precision(.8);
     const path=d3.geoPath(globe,ctx);
-    ctx.fillStyle=design==="map" ? "#0e191d" : palette.grid;
+    ctx.fillStyle=design==="map" || design==="footprint" ? "#0e191d" : palette.grid;
     ctx.fillRect(0,0,width,height);
     ctx.beginPath();
     path(sphere);
@@ -263,7 +264,7 @@ export function drawMap(canvas, world, points, options = {}) {
     }
   }
   ctx.restore();
-  if (exported && points.length < 25) {
+  if (exported && labels && points.length < 25) {
     ctx.font = "12px sans-serif";
     ctx.fillStyle = "#172b26";
     for (const point of points) {

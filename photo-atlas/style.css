@@ -223,3 +223,4 @@ pre { white-space:pre-wrap; overflow-wrap:anywhere; color:var(--muted); font:12p
 
 .public-meta{display:flex;justify-self:end;gap:10px;align-items:center;color:var(--muted);font-size:12px;white-space:nowrap}.public-meta a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:720px){.public-meta{grid-row:1;grid-column:2}}
+@media(max-width:510px){.public-meta{grid-row:2;grid-column:1/-1;justify-self:start;flex-wrap:wrap;white-space:normal;row-gap:6px}}

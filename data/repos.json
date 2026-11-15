@@ -1552,14 +1552,14 @@
           },
           "lang": "JavaScript",
           "desc": {
-            "zh": "本地照片元数据足迹图：行政区地图、时间回放与年度行程年鉴；公开演示使用虚构数据。",
-            "en": "A local photo metadata atlas with administrative maps, time playback and annual travel summaries; the public demo uses fictional data."
+            "zh": "扫描本地照片，生成城市足迹和多年报告。支持全球地球仪、城市打卡、重逢故事和分享卡。",
+            "en": "Scan photos locally to map visited cities, revisit stories across years, and share footprints from an interactive globe."
           },
           "url": "https://github.com/holynova/photo-atlas",
           "homepage": "https://xiaosang.cc/photo-atlas/",
           "screenshot": "screenshots/photo-atlas.png",
-          "pushed_at": "2026-11-13",
-          "commit_time": "2026-11-13T19:58:46+08:00",
+          "pushed_at": "2026-11-15",
+          "commit_time": "2026-11-15T23:51:35+08:00",
           "hidden": false
         }
       ]
