@@ -1,0 +1,7 @@
+MediaPipe SelfieMulticlass, 256 × 256 float32, revision 1
+Copyright Google. Licensed under the Apache License, Version 2.0.
+https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/1/selfie_multiclass_256x256.tflite
+https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Multiclass%20Segmentation.pdf
+
+The MediaPipe Tasks Vision runtime distributed in vendor/ is also licensed under Apache-2.0.
+https://github.com/google-ai-edge/mediapipe
