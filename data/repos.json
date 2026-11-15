@@ -1050,24 +1050,6 @@
           }
         },
         {
-          "name": "video-gallery",
-          "lang": "HTML",
-          "desc": {
-            "zh": "用代码与 AI 绘画制作的短视频作品展：Remotion 与 Motion Canvas 代码渲染引擎生成的 6 部短视频",
-            "en": "Video exhibition of 6 programmatic films rendered with Remotion and Motion Canvas plus generative visual art"
-          },
-          "url": "https://github.com/holynova/video-gallery",
-          "homepage": "https://xiaosang.cc/video-gallery/",
-          "screenshot": "screenshots/video-gallery.png",
-          "pushed_at": "2026-10-09",
-          "commit_time": "2026-10-09T22:51:48+08:00",
-          "hidden": false,
-          "title": {
-            "zh": "光影集视频作品展",
-            "en": "Video Gallery"
-          }
-        },
-        {
           "name": "time-slider-clock",
           "lang": "JavaScript",
           "desc": {
