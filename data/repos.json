@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-13",
-  "totalRepos": 144,
+  "lastUpdated": "2026-11-15",
+  "totalRepos": 137,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -360,18 +360,22 @@
           "commit_time": "2026-10-04T23:21:05+08:00"
         },
         {
-          "name": "dark-souls-3-lore",
-          "hidden": true,
+          "name": "lore-hub",
+          "hidden": false,
           "lang": "HTML",
           "desc": {
-            "zh": "以中文旁白和分幕视频回顾传火循环、薪王与灰烬的终局选择。",
-            "en": "A Chinese narrated video exploring the linking of the fire, Lords of Cinder and final choices."
+            "zh": "七部游戏的中文剧情视频合集：艾尔登法环、巫师三、GTA5、荒野大镖客2、赛博朋克2077、黑暗之魂3与法环编年史。章节跳转，把因果讲明白。",
+            "en": "Chinese lore videos for seven games: Elden Ring, The Witcher 3, GTA V, Red Dead Redemption 2, Cyberpunk 2077, Dark Souls III and the Elden Ring chronicle, with chapter navigation."
           },
-          "url": "https://github.com/holynova/dark-souls-3-lore",
-          "homepage": "https://dark-souls-3-lore.xiaosang.cc/",
-          "screenshot": "screenshots/dark-souls-3-lore.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:30:58+08:00"
+          "url": "https://github.com/holynova/lore-hub",
+          "homepage": "https://lore.xiaosang.cc/",
+          "screenshot": "screenshots/lore-hub.png",
+          "pushed_at": "2026-11-15",
+          "commit_time": "2026-11-15T16:44:10+08:00",
+          "title": {
+            "zh": "游戏剧情视频合集",
+            "en": "Game Lore Video Collection"
+          }
         },
         {
           "name": "crossover-folk-gallery",
@@ -400,94 +404,6 @@
           "screenshot": "screenshots/folk-gallery.png",
           "pushed_at": "2026-10-06",
           "commit_time": "2026-10-06T16:00:06+08:00"
-        },
-        {
-          "name": "elden-ring-lore-video",
-          "hidden": false,
-          "lang": "HTML",
-          "desc": {
-            "zh": "五章节中文剧情短片：从黄金律法、黑刀之夜，到破碎战争与三种结局。",
-            "en": "A five-chapter Chinese lore short with chapter navigation and three ending summaries."
-          },
-          "url": "https://github.com/holynova/elden-ring-lore-video",
-          "homepage": "https://elden-ring-lore-video.xiaosang.cc/",
-          "screenshot": "screenshots/elden-ring-lore-video.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:30:55+08:00"
-        },
-        {
-          "name": "cyberpunk-2077-lore",
-          "hidden": true,
-          "lang": "HTML",
-          "desc": {
-            "zh": "用六幕中文视频串起绀碧大厦劫案、Relic危机、强尼银手与荒坂塔终局。",
-            "en": "A six-chapter Chinese video connecting the heist, Relic crisis and Arasaka finale."
-          },
-          "url": "https://github.com/holynova/cyberpunk-2077-lore",
-          "homepage": "https://cyberpunk-2077-lore.xiaosang.cc/",
-          "screenshot": "screenshots/cyberpunk-2077-lore.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:30:52+08:00"
-        },
-        {
-          "name": "rdr2-lore",
-          "hidden": true,
-          "lang": "HTML",
-          "desc": {
-            "zh": "用六幕中文视频回顾范德林德帮的衰落，以及亚瑟走向救赎的过程。",
-            "en": "A six-chapter Chinese recap of the Van der Linde gang’s decline and Arthur’s redemption."
-          },
-          "url": "https://github.com/holynova/rdr2-lore",
-          "homepage": "https://rdr2-lore.xiaosang.cc/",
-          "screenshot": "screenshots/rdr2-lore.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:30:48+08:00"
-        },
-        {
-          "name": "gta5-lore",
-          "hidden": true,
-          "lang": "HTML",
-          "desc": {
-            "zh": "围绕麦克、富兰克林和崔佛，用六幕视频串起背叛、重逢与联合储蓄劫案。",
-            "en": "A six-chapter Chinese recap of Michael, Franklin and Trevor’s intertwined story."
-          },
-          "url": "https://github.com/holynova/gta5-lore",
-          "homepage": "https://gta5-lore.xiaosang.cc/",
-          "screenshot": "screenshots/gta5-lore.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:30:45+08:00"
-        },
-        {
-          "name": "witcher-3-lore",
-          "hidden": true,
-          "lang": "HTML",
-          "desc": {
-            "zh": "用六幕中文视频回顾杰洛特寻找希里、凯尔莫罕之战与狂猎终局。",
-            "en": "A six-chapter Chinese video following Geralt’s search for Ciri and the Wild Hunt finale."
-          },
-          "url": "https://github.com/holynova/witcher-3-lore",
-          "homepage": "https://witcher-3-lore.xiaosang.cc/",
-          "screenshot": "screenshots/witcher-3-lore.png",
-          "pushed_at": "2026-10-04",
-          "commit_time": "2026-10-04T23:30:42+08:00"
-        },
-        {
-          "name": "elden-ring-lore",
-          "hidden": false,
-          "lang": "HTML",
-          "desc": {
-            "zh": "六款游戏的中文剧情视频合集：艾尔登法环、赛博朋克2077、荒野大镖客2、GTA5、巫师三、黑暗之魂3。按游戏切换，支持章节跳转。",
-            "en": "Chinese lore videos for Elden Ring, Cyberpunk 2077, Red Dead Redemption 2, GTA V, The Witcher 3 and Dark Souls III, with game navigation and chapter seeking."
-          },
-          "url": "https://github.com/holynova/elden-ring-lore",
-          "homepage": "https://elden-ring-lore.xiaosang.cc/",
-          "screenshot": "screenshots/elden-ring-lore.png",
-          "pushed_at": "2026-10-05",
-          "commit_time": "2026-10-05T00:14:00+08:00",
-          "title": {
-            "zh": "游戏剧情视频合集",
-            "en": "Game Lore Video Collection"
-          }
         },
         {
           "name": "builder-atlas",
