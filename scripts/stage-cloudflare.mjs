@@ -56,13 +56,15 @@ function filesIn(path) {
   });
 }
 
+const sourceHead = execFileSync('git', ['rev-parse', 'HEAD'], {cwd: root, encoding: 'utf8'}).trim();
 const temp = mkdtempSync(join(root, '.cloudflare-stage-'));
 try {
-  const archive = join(temp, 'portfolio.tar');
   const stage = join(temp, 'site');
   mkdirSync(stage);
-  execFileSync('git', ['archive', '--format=tar', '--output', archive, 'HEAD'], { cwd: root });
-  execFileSync('tar', ['-xf', archive, '-C', stage]);
+  // Stream the committed snapshot to avoid a second full-size temporary archive.
+  execFileSync('/bin/bash', ['-o', 'pipefail', '-c',
+    'git archive "$1" | tar -xf - -C "$2"', 'stage-cloudflare', sourceHead, stage,
+  ], {cwd: root, stdio: 'inherit'});
   const galleryTarget = join(stage, route);
   if (existsSync(galleryTarget)) throw new Error(`Existing portfolio route conflicts with /${route}/`);
   placeTree(gallery, galleryTarget);
@@ -85,7 +87,7 @@ try {
     throw error;
   }
   console.log(JSON.stringify({
-    portfolio: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
+    portfolio: sourceHead,
     gallery: receipt.commit,
     version: receipt.version,
     files: files.length,
