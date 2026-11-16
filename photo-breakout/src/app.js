@@ -4,13 +4,13 @@ import {downloadBlob} from './download.js';
 import {openShare} from './share.js';
 
 const icons = {
+  more: '<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>',
   logo: '<path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/><path d="m14 13 5-5" stroke-width="3"/>',
   share: '<path d="M12 16V3m-4 4 4-4 4 4M5 11H3v10h18V11h-2"/>',
   guide: '<path d="M12 5v15M3 4h5c2 0 4 1 4 3 0-2 2-3 4-3h5v14h-5c-2 0-4 1-4 2 0-1-2-2-4-2H3z"/>',
   history: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5v14m8-14v14M3 10h5m8 0h5M3 14h5m8 0h5"/>',
   down: '<path d="m5 9 7 7 7-7"/>',
   folder: '<path d="M3 19V5h6l2 2h10v12z"/>',
-  save: '<path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/>',
   eye: '<path d="M2 12c4-7 16-7 20 0-4 7-16 7-20 0Z"/><circle cx="12" cy="12" r="2.5"/>',
   grid: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',
   brush: '<path d="m11 15 9-9a2.1 2.1 0 0 0-3-3l-9 9m3 3c0 4-4 6-8 5 2-1 1-3 2-5 1-2 4-3 6 0Z"/>',
@@ -26,12 +26,22 @@ function button(action, label, symbol, extra = '') {
     (symbolOnly ? ' aria-label="' + label + '" title="' + label + '"' : '') + '>' +
     (symbol ? icon(symbol) : '') + (symbolOnly ? '' : label) + '</button>';
 }
+function exportButton() {
+  return '<button type="button" class="btn" data-action="export" disabled>' +
+    '<span data-export-label>导出成品</span></button>';
+}
+function historyButton() {
+  return '<button type="button" class="btn" data-action="toggleHistory" aria-controls="photo-history" hidden>' +
+    icon('history') + '历史 <span data-history-count></span></button>';
+}
 function header() {
   return '<header class="app-head"><div class="brand"><div class="mark">' + icon('logo') + '</div><h1>破框</h1></div>' +
-    '<div class="head-actions"><button type="button" class="btn header-import" data-action="open" aria-label="导入照片">' +
-    icon('folder') + '<span>导入<span class="import-long">照片</span></span></button>' +
-    button('share', '分享工具', 'share', 'share-button') +
-    '<button type="button" class="btn" data-action="export" disabled>' + icon('save') + '<span data-export-label>导出成品</span></button></div></header>';
+    '<div class="head-actions">' + button('open', '导入照片', 'folder', 'header-import icon-only') +
+    exportButton() +
+    '<button type="button" class="btn icon-only more-button" popovertarget="editor-more" aria-controls="editor-more" aria-label="更多操作">' + icon('more') + '</button></div>' +
+    '<div id="editor-more" class="editor-more" popover role="group" aria-label="更多操作">' +
+    button('original', '原图对比', 'eye') + historyButton() +
+    button('tutorial', '使用教程', 'guide') + button('share', '分享工具', 'share') + '</div></header>';
 }
 function stepper(axis, label) {
   return '<div class="layout-row"><span class="control-label">' + label + '</span><div class="stepper" role="group" aria-label="' + label + '数量">' +
@@ -52,12 +62,8 @@ function brushTools() {
     button('undo', '撤销笔画', 'reset', 'icon-only') + button('finish', '查看网格效果', null, 'primary');
 }
 function preview() {
-  return '<section class="workstage" aria-label="照片预览"><div class="worktop">' + fileName() +
-    '<div class="preview-actions">' +
-    '<button type="button" class="btn" data-action="toggleHistory" aria-controls="photo-history" hidden>' + icon('history') +
-    '历史 <span data-history-count></span></button>' +
-    button('original', '原图', 'eye') + button('tutorial', '教程', 'guide') + '</div></div>' +
-    '<p class="subtle workspace-status" role="status" data-workspace-status></p>' +
+  return '<section class="workstage" aria-label="照片预览"><div class="workspace-meta">' + fileName() +
+    '<p class="subtle workspace-status" role="status" data-workspace-status></p></div>' +
     '<div class="main-image"><div class="image-wrap" data-photo-wrap hidden>' +
     '<canvas data-image="result" role="img" aria-label="照片预览" tabindex="-1"></canvas>' +
     '<span class="brush-cursor" data-brush-cursor aria-hidden="true"></span></div>' +
@@ -93,8 +99,8 @@ function editor() {
     '<div class="tool-head"><div class="tool-switch" role="group" aria-label="编辑工具">' +
     Object.entries(tools).map(([key, [label, symbol]]) =>
       '<button type="button" data-panel-button="' + key + '" aria-controls="tool-' + key + '">' + icon(symbol) + label + '</button>'
-    ).join('') + '</div><div class="tool-actions">' + button('reset', '重置', 'reset', 'text') +
-    button('collapse', '收起编辑工具', 'down', 'icon-only text') + '</div></div>' +
+    ).join('') + '</div><div class="tool-actions">' + button('reset', '重置网格', 'reset', 'icon-only') +
+    button('collapse', '收起编辑工具', 'down', 'icon-only') + '</div></div>' +
     '<div class="tool-panels">' +
     '<div id="tool-grid" class="tool-panel" data-panel="grid">' + gridTools() + '</div>' +
     '<div id="tool-mask" class="tool-panel" data-panel="mask" inert>' + subject() +
@@ -293,7 +299,7 @@ async function openSample() {
   selectedID = undefined;
   showingSample = false;
   historyOpen = false;
-  mobileToolsOpen = false;
+  mobileToolsOpen = true;
   rememberPhoto();
   delete photo.dataset.ready;
   Object.assign(state, defaults, {filename: '', maskStatus: 'empty'});
@@ -427,7 +433,7 @@ async function restoreRemoved() {
   void openPhoto(photo.id);
   refreshHistory({showSelected: true});
   sync();
-  stage.querySelector('[data-action=toggleHistory]').focus({preventScroll: true});
+  stage.querySelector('.more-button').focus({preventScroll: true});
   showStatus('已恢复照片和编辑记录');
 }
 function ratio() {
@@ -668,14 +674,17 @@ stage.addEventListener('click', event => {
   const pressed = event.target.closest('[data-action], [data-axis], [data-panel-button], [data-photo], [data-history-step]');
   if (!pressed) return;
   const {action, axis, step, panelButton, historyStep, photo: id} = pressed.dataset;
-  if (action) actions[action]();
+  if (action) {
+    if (moreMenu.contains(pressed)) closeMoreMenu(true);
+    actions[action]();
+  }
   if (historyStep) {
     historyPage += Number(historyStep);
     refreshHistory();
   }
   if (id) {
     historyOpen = false;
-    stage.querySelector('[data-action=toggleHistory]').focus({preventScroll: true});
+    stage.querySelector('.more-button').focus({preventScroll: true});
     if (id !== selectedID) openPhoto(id);
   }
   if (panelButton) {
@@ -848,6 +857,35 @@ function updateLayout() {
   sync();
 }
 stage.innerHTML = editor();
+const moreMenu = stage.querySelector('#editor-more');
+const moreTrigger = stage.querySelector('.more-button');
+const nativePopover = typeof moreMenu.showPopover === 'function';
+
+function closeMoreMenu(returnFocus = false) {
+  if (nativePopover) {
+    if (moreMenu.matches(':popover-open')) moreMenu.hidePopover();
+  } else {
+    moreMenu.hidden = true;
+    moreTrigger.setAttribute('aria-expanded', 'false');
+  }
+  if (returnFocus) moreTrigger.focus({preventScroll: true});
+}
+
+if (!nativePopover) {
+  moreMenu.hidden = true;
+  moreMenu.removeAttribute('popover');
+  moreTrigger.setAttribute('aria-expanded', 'false');
+  moreTrigger.addEventListener('click', () => {
+    moreMenu.hidden = !moreMenu.hidden;
+    moreTrigger.setAttribute('aria-expanded', String(!moreMenu.hidden));
+  });
+  document.addEventListener('pointerdown', event => {
+    if (!moreMenu.hidden && !moreMenu.contains(event.target) && !moreTrigger.contains(event.target)) closeMoreMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !moreMenu.hidden) closeMoreMenu(true);
+  });
+}
 phone.addEventListener('change', updateLayout);
 updateLayout();
 const catalog = listPhotos().then(photos => {

@@ -1,0 +1,142 @@
+body[data-workbench] {
+  --tap: 44px;
+  --gap: 8px;
+  --rail: clamp(12px, 4vw, 20px);
+  --radius: 8px;
+  --canvas: #edf0eb;
+  --surface: #fafbf8;
+  --line-color: #d9e0d8;
+  --color-ink: #202b23;
+  --color-muted: #506257;
+  --color-accent: #365b46;
+  --tint: #e4eee5;
+  --selected-tint: #d9e8dd;
+  --hover-tint: #edf3ed;
+  background: var(--canvas);
+}
+body[data-workbench] :is(.app, .workstage, dialog, .editor-more) {
+  --paper: var(--surface);
+  --ink: var(--color-ink);
+  --muted: var(--color-muted);
+  --line: var(--line-color);
+  --control: var(--hover-tint);
+  --accent: var(--color-accent);
+  --selected: var(--selected-tint);
+  --on-accent: var(--color-accent);
+}
+body[data-workbench] :is(.app, dialog) { color: var(--ink); background: var(--paper); }
+body[data-workbench] .workstage { background: var(--canvas); }
+body[data-workbench] :is(button.btn, .stepper button, .tool-switch button, .filmstrip button) {
+  box-sizing: border-box;
+  height: var(--tap);
+  min-height: var(--tap);
+  min-width: var(--tap);
+  max-height: var(--tap);
+  border-radius: var(--radius);
+  font-size: 13px;
+}
+body[data-workbench] .app .btn { padding-inline: 10px; }
+body[data-workbench] .app .btn.icon-only { width: var(--tap); padding: 0; }
+body[data-workbench] button.btn.primary {
+  background: var(--tint);
+  color: var(--accent);
+  border-color: var(--line);
+}
+body[data-workbench] button.btn.primary:hover { background: var(--selected); opacity: 1; }
+body[data-workbench] button:focus-visible { outline-color: var(--color-accent); }
+body[data-workbench] .mark {
+  width: 30px; height: 30px; border-radius: 8px; color: var(--accent); background: var(--tint);
+}
+body[data-workbench] .mark svg { width: 20px; height: 20px; }
+body[data-workbench] .brand { gap: 7px; }
+body[data-workbench] .brand h1 { font-size: 20px; letter-spacing: -.035em; }
+
+body[data-workbench] .app-head {
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: var(--gap);
+  min-height: 60px;
+  padding: max(5px, env(safe-area-inset-top)) max(var(--rail), env(safe-area-inset-right)) 5px max(var(--rail), env(safe-area-inset-left));
+}
+body[data-workbench] .head-actions { grid-column: 2/-1; justify-content: end; gap: var(--gap); }
+body[data-workbench] :is(.head-actions .btn svg, .tool-head .btn.icon-only svg) { display: block; width: 17px; height: 17px; }
+body[data-workbench] .workstage {
+  padding: var(--gap) var(--rail); gap: var(--gap);
+}
+.workspace-meta {
+  display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--gap);
+  min-height: 21px; align-items: center;
+}
+.workspace-meta .filename { grid-column: 1 / 3; font-size: 12px; font-weight: 550; }
+.workspace-meta .filename svg { display: none; }
+.workspace-meta .filename span { max-width: 100%; }
+.workspace-meta .workspace-status {
+  grid-column: 3 / -1; padding: 0; text-align: right; font-size: 11px; min-height: 0;
+  line-height: 1.35; min-width: 0;
+}
+.workspace-meta .filename[hidden] + .workspace-status { grid-column: 1/-1; text-align: left; }
+
+body[data-workbench] .image-wrap { box-shadow: 0 6px 22px #23332b12, 0 0 0 1px #23332b16; }
+body[data-workbench] .sample-guide { gap: var(--gap); width: 100%; }
+body[data-workbench] .sample-guide .btn { min-width: 152px; }
+
+body[data-workbench] .inspector { padding-inline: var(--rail); padding-block-start: 5px; }
+body[data-workbench] .mobile .inspector { padding-bottom: max(5px, env(safe-area-inset-bottom)); }
+body[data-workbench] .tool-head {
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); align-items: center;
+  gap: var(--gap); border-bottom: 1px solid var(--line);
+}
+body[data-workbench] .tool-head .tool-switch {
+  grid-column: 1 / 3; justify-content: start; gap: var(--gap);
+}
+body[data-workbench] .tool-switch button {
+  padding-inline: 7px; border-bottom-width: 0; white-space: nowrap;
+  font-weight: 620; gap: 5px; color: var(--muted);
+}
+body[data-workbench] .tool-switch button[aria-pressed=true] { background: var(--tint); color: var(--accent); }
+body[data-workbench] .tool-switch button svg { width: 15px; height: 15px; }
+body[data-workbench] .tool-actions { grid-column: 3/-1; justify-content: end; gap: var(--gap); }
+body[data-workbench] .tool-panel { gap: var(--gap); padding-block: var(--gap) 4px; }
+body[data-workbench] :is(.layout-controls,.tool-sliders) { gap: var(--gap); grid-template-columns: repeat(2,minmax(0,1fr)); }
+body[data-workbench] .layout-row { grid-template-columns: minmax(0,1fr); gap: 3px; }
+body[data-workbench] .layout-row .stepper { grid-template-columns: var(--tap) minmax(0,1fr) var(--tap); padding: 0; }
+body[data-workbench] .layout-row .stepper output { white-space: nowrap; font-size: 12px; }
+body[data-workbench] .tool-sliders input { height: var(--tap); }
+body[data-workbench] .mobile-brush :is(.btn,.btn.icon-only) { padding-inline: 6px; }
+body[data-workbench] .filmstrip button { padding: 2px; grid-template-rows: minmax(0,1fr) auto; gap: 0; overflow: hidden; }
+body[data-workbench] .filmstrip img { height: 100%; min-height: 0; }
+body[data-workbench] .filmstrip span { line-height: 12px; }
+
+.editor-more {
+  position: fixed; box-sizing: border-box; z-index: 4; margin: 0;
+  inset: max(62px, calc(env(safe-area-inset-top) + 52px)) var(--rail) auto auto;
+  width: min(204px, calc(100vw - 24px)); padding: var(--gap);
+  border: 1px solid var(--line); border-radius: 12px;
+  background: var(--paper); color: var(--ink); box-shadow: 0 8px 26px #24352c17;
+}
+.editor-more:popover-open { display: grid; gap: 4px; }
+.editor-more:not([popover]):not([hidden]) { display: grid; gap: 4px; }
+body[data-workbench] .editor-more [inert] { display: none; }
+body[data-workbench] .editor-more .btn {
+  width: 100%; justify-content: flex-start; gap: var(--gap);
+  border-color: transparent; background: transparent;
+}
+body[data-workbench] .editor-more .btn:hover { background: var(--control); }
+body[data-workbench] .editor-more .btn:is([aria-pressed=true], [aria-expanded=true]) {
+  background: var(--selected); color: var(--accent);
+}
+body[data-workbench] dialog .btn { padding-inline: 10px; }
+
+@media (max-width: 375px) {
+  body[data-workbench] .app .tool-switch button { padding-inline: 6px; }
+  body[data-workbench] .workspace-meta .workspace-status { font-size: 10px; }
+}
+@media (orientation: landscape) and (max-height: 480px) {
+  body[data-workbench] .app-head { min-height: 54px; }
+  body[data-workbench] .mobile .workstage { padding-inline-end: var(--gap); gap: 5px; }
+  body[data-workbench] .mobile .inspector { padding-inline: 8px var(--rail); }
+  body[data-workbench] .tool-panel { padding-block: 5px 3px; }
+  body[data-workbench] .tool-switch button { padding-inline: 5px; }
+  body[data-workbench] .tool-switch button svg { display: none; }
+}
+
+body[data-workbench] .mobile-brush [data-action=undo] { flex: 0 0 var(--tap); }
+body[data-workbench] .mobile-brush [data-action=finish] { flex: 0 0 auto; }

@@ -75,14 +75,6 @@ canvas[data-edit=true] { cursor: crosshair; touch-action: none; }
   min-height: 0; min-width: 0; display: flex; flex-direction: column;
   gap: 12px; padding: 12px 18px 18px; background: #edf0ec; color: var(--ink);
 }
-.worktop, .preview-actions { display: flex; align-items: center; gap: 6px; }
-.worktop { min-height: 40px; justify-content: space-between; }
-.preview-actions { margin-inline-start: auto; flex: none; }
-.worktop .filename { padding-inline: 4px; font-size: 13px; }
-.worktop .btn[aria-pressed=true], .worktop .btn[aria-expanded=true] {
-  background: var(--selected); color: var(--accent); border-color: transparent;
-}
-.worktop .btn { padding-inline: 11px; }
 .workspace-status { min-height: 1.6em; padding-inline: 4px; }
 .workstage .main-image {
   position: relative; display: grid; min-width: 0; min-height: 0; align-items: center; justify-items: center;
@@ -171,11 +163,6 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
   flex: 1; min-height: 0; gap: 6px;
   padding: 5px max(8px, env(safe-area-inset-right)) 7px max(8px, env(safe-area-inset-left));
 }
-.mobile .worktop { padding-inline: 4px; min-height: 44px; }
-.mobile .worktop .btn { min-height: 44px; min-width: 44px; padding-inline: 9px; }
-.mobile .worktop .filename { padding-inline: 0; }
-.mobile .worktop .filename [data-filename] { max-width: none; }
-.mobile .worktop .filename svg { display: none; }
 .mobile .sample-guide .btn { min-height: 44px; }
 .tool-head { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); }
 .tool-switch { display: flex; gap: 17px; }
@@ -209,10 +196,7 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
   .app:not(.mobile) .inspector { padding-inline: 14px; }
 }
 @media (max-width: 375px) {
-  .mobile .import-long { display: none; }
   .mobile .head-actions .btn svg { display: none; }
-  .mobile .worktop .btn svg { display: none; }
-  .mobile .worktop .btn { padding-inline: 8px; }
 }
 @media (max-width: 700px) {
   .status { top: 76px; bottom: auto; }
@@ -247,7 +231,6 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 }
 .share-status { margin: 8px 0 0; min-height: 19px; }
 #share-dialog .dialog-actions { flex-wrap: wrap; }
-.mobile .head-actions .share-button svg { display: none; }
 .mobile .history { gap: 4px; }
 .mobile .filmstrip {
   display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
@@ -264,7 +247,7 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 .inspector .tool-panel { padding-block: 16px; }
 .inspector .tool-sliders { gap: 12px; }
 .mobile .inspector {
-  background: var(--paper); border: 0; border-top: 1px solid var(--line); border-radius: 20px 20px 0 0;
+  background: var(--paper); border: 0; border-top: 1px solid var(--line);
   flex: none; overflow: visible;
   padding: 0 max(10px, env(safe-area-inset-right)) max(5px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
 }
@@ -299,7 +282,7 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 @media (orientation: landscape) and (max-height: 480px) {
   .mobile .workbody { display: grid; grid-template-columns: minmax(0, 1fr) minmax(262px, 42vw); }
   .mobile .inspector {
-    border-radius: 0; border: 0; border-left: 1px solid var(--line);
+    border: 0; border-left: 1px solid var(--line);
     padding-left: 10px;
   }
   .mobile .workstage { padding-right: 8px; }
