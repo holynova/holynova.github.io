@@ -12,5 +12,8 @@
       "pattern": "xiaosang.cc",
       "custom_domain": true
     }
-  ]
+  ],
+  "build": {
+    "command": "node scripts/stage-cloudflare.mjs"
+  }
 }
