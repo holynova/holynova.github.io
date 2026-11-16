@@ -57,6 +57,7 @@ body[data-workbench] .app-head {
   padding: max(5px, env(safe-area-inset-top)) max(var(--rail), env(safe-area-inset-right)) 5px max(var(--rail), env(safe-area-inset-left));
 }
 body[data-workbench] .head-actions { grid-column: 2/-1; justify-content: end; gap: var(--gap); }
+body[data-workbench] .head-actions .btn { width: var(--tap); padding-inline: 0; }
 body[data-workbench] :is(.head-actions .btn svg, .tool-head .btn.icon-only svg) { display: block; width: 17px; height: 17px; }
 body[data-workbench] .workstage {
   padding: var(--gap) var(--rail); gap: var(--gap);
@@ -75,8 +76,6 @@ body[data-workbench] .workstage {
 .workspace-meta .filename[hidden] + .workspace-status { grid-column: 1/-1; text-align: left; }
 
 body[data-workbench] .image-wrap { box-shadow: 0 6px 22px #23332b12, 0 0 0 1px #23332b16; }
-body[data-workbench] .sample-guide { gap: var(--gap); width: 100%; }
-body[data-workbench] .sample-guide .btn { min-width: 152px; }
 
 body[data-workbench] .inspector { padding-inline: var(--rail); padding-block-start: 5px; }
 body[data-workbench] .mobile .inspector { padding-bottom: max(5px, env(safe-area-inset-bottom)); }

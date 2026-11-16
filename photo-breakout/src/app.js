@@ -32,7 +32,7 @@ function historyButton() {
 }
 function header() {
   return '<header class="app-head"><div class="brand"><div class="mark">' + icon('logo') + '</div><h1>破框</h1></div>' +
-    '<div class="head-actions"><button type="button" class="btn header-import icon-only" data-action="open" aria-label="导入照片">' +
+    '<div class="head-actions"><button type="button" class="btn header-import" data-action="open" aria-label="导入照片">' +
     icon('folder') + '<span hidden>导入</span></button>' +
     '<button type="button" class="btn" data-action="export" disabled>导出</button>' +
     '<button type="button" class="btn icon-only more-button" popovertarget="editor-more" aria-controls="editor-more" aria-label="更多操作">' + icon('more') + '</button></div>' +
@@ -68,10 +68,7 @@ function preview() {
     button('restore', '撤销', null) + '</div>' +
     '<p id="mask-keys" class="sr-only">用方向键移动画笔，按空格落笔。按住 Shift 可加快移动。按 Tab 退出画布。</p>' +
     '<p class="sr-only" data-brush-position role="status"></p>' +
-    '<div class="empty-photo" data-empty>' + icon('folder') + button('open', '打开照片', null, 'primary') +
-    '<span class="subtle">可一次选择多张</span></div></div>' +
-    '<div class="sample-guide" data-sample-guide hidden>' +
-    button('open', '导入我的照片', 'folder', 'primary') + '</div>' +
+    '<p class="subtle" data-empty>从顶栏导入照片，可一次选择多张</p></div>' +
     '<section id="photo-history" class="history" aria-label="编辑历史" data-history hidden>' +
     '<button type="button" class="btn history-arrow" data-history-step="-1" aria-label="上一页历史" hidden>‹</button>' +
     '<div class="filmstrip" data-filmstrip></div>' +
@@ -534,11 +531,8 @@ function sync() {
   app.querySelector('.filename').hidden = !state.filename;
   app.querySelector('[data-photo-wrap]').hidden = !ready;
   app.querySelector('[data-empty]').hidden = ready || !!selectedID;
-  app.querySelector('[data-sample-guide]').hidden = !showingSample;
   const headerImport = app.querySelector('.header-import');
   const hasSelectedPhoto = Boolean(selectedID);
-  headerImport.hidden = showingSample;
-  headerImport.classList.toggle('icon-only', !hasSelectedPhoto);
   headerImport.querySelector('svg').toggleAttribute('hidden', hasSelectedPhoto);
   headerImport.querySelector('span').hidden = !hasSelectedPhoto;
   const message = workspaceMessage(ready);
