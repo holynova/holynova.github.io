@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="照片在浏览器本地自动抠像，加上穿过画面的白色网格或竖格，导出 PNG。">
+  <meta name="description" content="照片在浏览器本地自动抠像，给照片添加横纵白色网格，支持多图编辑、本机历史和 PNG 导出。">
   <meta name="theme-color" content="#f8f9f6">
   <title>破框 · Photo Breakout</title>
   <link rel="canonical" href="https://xiaosang.cc/photo-breakout/">
@@ -12,19 +12,22 @@
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"></script>
 </head>
 <body>
-  <div id="stage" data-version="v1.0.0"></div>
+  <div id="stage" data-version="v1.1.0"></div>
   <div id="status" class="status" role="status" hidden></div>
-  <dialog id="choose" aria-labelledby="choose-title">
+  <input type="file" id="local-file" accept="image/*" multiple hidden>
+  <dialog id="share-dialog" aria-labelledby="share-title">
     <div class="dialog-head">
-      <h2 id="choose-title">打开照片</h2>
-      <form method="dialog"><button class="btn" aria-label="关闭">关闭</button></form>
+      <h2 id="share-title">分享破框</h2>
+      <form method="dialog"><button class="btn" aria-label="关闭分享">关闭</button></form>
     </div>
-    <p class="subtle" id="choose-note">选择一张照片，在本机自动识别人像。</p>
+    <div class="share-preview"><canvas width="1080" height="1160" role="img" aria-label="破框介绍和二维码" hidden></canvas></div>
+    <input class="share-link" type="url" readonly aria-label="工具链接">
     <div class="dialog-actions">
-      <button type="button" id="sample-choice" class="btn">打开雪山示例</button>
-      <button type="button" id="browse-choice" class="btn primary">从本机选择</button>
+      <button class="btn" type="button" data-share="copy">复制链接</button>
+      <button class="btn primary" type="button" data-share="download" disabled>下载卡片</button>
+      <button class="btn" type="button" data-share="native" hidden>系统分享</button>
     </div>
-    <input type="file" id="local-file" accept="image/*" hidden>
+    <p class="subtle share-status" role="status"></p>
   </dialog>
   <script type="module" src="./src/app.js"></script>
 </body>

@@ -929,8 +929,8 @@
           "name": "photo-breakout",
           "lang": "JavaScript",
           "desc": {
-            "zh": "破框照片编辑器，浏览器本地自动抠像，支持白色网格、竖格和 PNG 导出。",
-            "en": "Create breakout photos with on-device portrait segmentation, white grids, vertical strips, and PNG export."
+            "zh": "浏览器本地自动抠像，可调横纵白色网格，支持多图历史和 PNG 导出。",
+            "en": "Create breakout photos with on-device portrait segmentation, adjustable white grids, local photo history, and PNG export."
           },
           "url": "https://github.com/holynova/photo-breakout",
           "homepage": "https://xiaosang.cc/photo-breakout/",
