@@ -99,10 +99,6 @@ canvas[data-edit=true]:focus + .brush-cursor { display: block; }
 }
 .removal-recovery span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .removal-recovery .btn { min-height: 44px; min-width: 48px; padding: 0 9px; flex: none; }
-.sample-guide {
-  align-self: center; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
-  gap: 10px; color: var(--muted); font-size: 13px;
-}
 .inspector {
   min-height: 0; overflow-y: auto; display: flex; flex-direction: column;
   padding: 16px 20px; border-left: 1px solid var(--line);
@@ -163,7 +159,6 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
   flex: 1; min-height: 0; gap: 6px;
   padding: 5px max(8px, env(safe-area-inset-right)) 7px max(8px, env(safe-area-inset-left));
 }
-.mobile .sample-guide .btn { min-height: 44px; }
 .tool-head { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); }
 .tool-switch { display: flex; gap: 17px; }
 .tool-switch button {
@@ -205,10 +200,6 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
   .btn { transition: none; }
 }
 
-.empty-photo {
-  display: grid; justify-items: center; gap: 12px; align-content: center;
-}
-.empty-photo > svg { width: 34px; height: 34px; color: var(--accent); }
 .history {
   display: flex; min-width: 0; align-items: center; gap: 10px;
   border-top: 1px solid var(--line); padding-top: 5px;
