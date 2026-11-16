@@ -86,10 +86,11 @@ function editor() {
       '<button type="button" data-panel-button="' + key + '" aria-controls="tool-' + key + '">' + icon(symbol) + label + '</button>'
     ).join('') + '</div><div class="tool-actions">' + button('reset', '重置', 'reset', 'text') +
     button('collapse', '收起编辑工具', 'down', 'icon-only text') + '</div></div>' +
+    '<div class="tool-panels">' +
     '<div id="tool-grid" class="tool-panel" data-panel="grid">' + gridTools() + '</div>' +
-    '<div id="tool-mask" class="tool-panel" data-panel="mask" hidden>' + subject() +
-    '<div class="mobile-brush" data-brush-tools hidden>' + brushTools() + '</div>' +
-    '<p class="subtle mask-instruction" data-brush-tools hidden>在照片上涂抹，标记挡住白线的区域。</p></div>' +
+    '<div id="tool-mask" class="tool-panel" data-panel="mask" inert>' + subject() +
+    '<div class="mobile-brush" data-brush-tools inert>' + brushTools() + '</div>' +
+    '<p class="subtle mask-instruction" data-brush-tools inert>在照片上涂抹，标记挡住白线的区域。</p></div></div>' +
     footer() + '</aside></main></div>';
 }
 
@@ -460,10 +461,13 @@ function sync() {
   app.querySelectorAll('[data-filename]').forEach(node => node.textContent = state.filename);
   app.querySelectorAll('[data-mask-status]').forEach(node => node.textContent = maskStatusText[state.maskStatus]);
   const toolsVisible = !phone.matches || mobileToolsOpen;
+  app.querySelector('.tool-panels').hidden = !toolsVisible;
   app.querySelectorAll('[data-panel-button]').forEach(node => {
     node.setAttribute('aria-pressed', toolsVisible && node.dataset.panelButton === state.panel);
   });
-  app.querySelectorAll('[data-panel]').forEach(node => node.hidden = !toolsVisible || node.dataset.panel !== state.panel);
+  app.querySelectorAll('[data-panel]').forEach(node => {
+    node.inert = !toolsVisible || node.dataset.panel !== state.panel;
+  });
   app.querySelectorAll('[data-count]').forEach(node => node.value = state[node.dataset.count] + ' 格');
   app.querySelectorAll('[data-axis]').forEach(node => {
     const next = state[node.dataset.axis] + Number(node.dataset.step);
@@ -480,13 +484,15 @@ function sync() {
   app.querySelector('[data-action=original]').setAttribute('aria-pressed', state.original);
   app.querySelectorAll('[data-action=open]').forEach(node => node.disabled = importing || removing);
   app.querySelectorAll('[data-action=original], [data-action=reset]').forEach(node => node.disabled = !ready || removing);
-  app.querySelector('[data-action=reset]').hidden = !toolsVisible || state.panel === 'mask';
-  app.querySelector('[data-action=collapse]').hidden = !phone.matches || !mobileToolsOpen;
+  app.querySelector('[data-action=reset]').inert = !toolsVisible || state.panel !== 'grid';
+  const collapse = app.querySelector('[data-action=collapse]');
+  collapse.hidden = !phone.matches;
+  collapse.inert = !mobileToolsOpen;
   app.querySelector('[data-action=remove]').disabled = importing || removing || !selectedID;
   app.querySelector('[data-action=export]').disabled = !ready || removing || state.maskStatus === 'preparing';
   app.querySelectorAll('[data-action=add], [data-action=erase]').forEach(node => node.setAttribute('aria-pressed', state.brush === node.dataset.action));
   app.querySelectorAll('[data-action=undo]').forEach(node => node.disabled = removing || !undoStack.length);
-  app.querySelectorAll('[data-brush-tools]').forEach(node => node.hidden = !state.brush);
+  app.querySelectorAll('[data-brush-tools]').forEach(node => node.inert = !state.brush);
   app.querySelectorAll('[data-image=result]').forEach(node => {
     node.dataset.edit = Boolean(state.brush);
     node.setAttribute('aria-label', state.brush ? '照片和已选中的人物蒙版' : '照片预览');
@@ -524,6 +530,7 @@ const actions = {
     state.original = original;
   },
   finish: () => {
+    stage.querySelector('[data-panel-button=grid]').focus({preventScroll: true});
     setPanel('grid');
     mobileToolsOpen = false;
   },

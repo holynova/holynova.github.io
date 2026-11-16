@@ -173,7 +173,10 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 .tool-switch button[aria-pressed=true] { border-color: var(--accent); color: var(--accent); }
 .tool-switch svg { width: 16px; height: 16px; }
 .tool-head .btn { min-height: 44px; }
-.tool-panel { display: grid; align-content: start; min-height: 177px; gap: 12px; padding-top: 12px; }
+.tool-panels { display: grid; }
+/* Both panels contribute to the same row, so switching tools never resizes the preview. */
+.tool-panel { grid-area: 1 / 1; display: grid; align-content: start; min-height: 177px; gap: 12px; padding-top: 12px; }
+.tool-panel[inert], .tool-panel [inert], .tool-actions [inert] { visibility: hidden; }
 .mobile .layout-controls { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; }
 .mobile .layout-row { grid-template-columns: minmax(0,1fr); gap: 4px; }
 .mobile .control-label { padding-inline-start: 2px; }
