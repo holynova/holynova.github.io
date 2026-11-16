@@ -1,6 +1,6 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync, linkSync, copyFileSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { homedir } from 'node:os';
 
@@ -61,10 +61,25 @@ const temp = mkdtempSync(join(root, '.cloudflare-stage-'));
 try {
   const stage = join(temp, 'site');
   mkdirSync(stage);
-  // Stream the committed snapshot to avoid a second full-size temporary archive.
-  execFileSync('/bin/bash', ['-o', 'pipefail', '-c',
-    'git archive "$1" | tar -xf - -C "$2"', 'stage-cloudflare', sourceHead, stage,
-  ], {cwd: root, stdio: 'inherit'});
+  if (process.platform === 'darwin') {
+    // APFS clones remain independent of later edits and avoid a second full copy.
+    // A clean tracked tree is required to represent the recorded commit exactly.
+    execFileSync('git', ['diff', '--quiet', 'HEAD', '--'], {cwd: root});
+    const tracked = execFileSync('git', ['ls-tree', '-rz', '--name-only', sourceHead], {cwd: root, encoding: 'utf8'}).split('\0').filter(Boolean);
+    for (const relative of tracked) {
+      const target = join(stage, relative);
+      mkdirSync(dirname(target), {recursive: true});
+      execFileSync('/bin/cp', ['-cPp', join(root, relative), target]);
+    }
+    if (execFileSync('git', ['rev-parse', 'HEAD'], {cwd: root, encoding: 'utf8'}).trim() !== sourceHead) {
+      throw new Error('Source commit changed while staging');
+    }
+    execFileSync('git', ['diff', '--quiet', sourceHead, '--'], {cwd: root});
+  } else {
+    execFileSync('/bin/bash', ['-o', 'pipefail', '-c',
+      'git archive "$1" | tar -xf - -C "$2"', 'stage-cloudflare', sourceHead, stage,
+    ], {cwd: root, stdio: 'inherit'});
+  }
   const galleryTarget = join(stage, route);
   if (existsSync(galleryTarget)) throw new Error(`Existing portfolio route conflicts with /${route}/`);
   placeTree(gallery, galleryTarget);
