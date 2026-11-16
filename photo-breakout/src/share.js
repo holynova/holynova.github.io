@@ -10,7 +10,7 @@ const card = {
 };
 const steps = [
   {image: 'snow.jpg', title: '1. 导入照片', lines: ['选择人像照片', '可一次导入多张']},
-  {image: 'guide-mask.webp', title: '2. 自动抠像', lines: ['绿色标出选中的人物', '用画笔修整蒙版']},
+  {image: 'guide-mask.webp', title: '2. 自动抠图', lines: ['绿色标出选中的人物', '用画笔修整人物边缘']},
   {image: 'guide-result.webp', title: '3. 网格与导出', lines: ['独立调整横纵格数', '保存成品 PNG']},
 ];
 const dialog = document.getElementById('share-dialog');

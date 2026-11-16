@@ -26,18 +26,15 @@ function button(action, label, symbol, extra = '') {
     (symbolOnly ? ' aria-label="' + label + '" title="' + label + '"' : '') + '>' +
     (symbol ? icon(symbol) : '') + (symbolOnly ? '' : label) + '</button>';
 }
-function exportButton() {
-  return '<button type="button" class="btn" data-action="export" disabled>' +
-    '<span data-export-label>导出成品</span></button>';
-}
 function historyButton() {
   return '<button type="button" class="btn" data-action="toggleHistory" aria-controls="photo-history" hidden>' +
     icon('history') + '历史 <span data-history-count></span></button>';
 }
 function header() {
   return '<header class="app-head"><div class="brand"><div class="mark">' + icon('logo') + '</div><h1>破框</h1></div>' +
-    '<div class="head-actions">' + button('open', '导入照片', 'folder', 'header-import icon-only') +
-    exportButton() +
+    '<div class="head-actions"><button type="button" class="btn header-import icon-only" data-action="open" aria-label="导入照片">' +
+    icon('folder') + '<span hidden>导入</span></button>' +
+    '<button type="button" class="btn" data-action="export" disabled>导出</button>' +
     '<button type="button" class="btn icon-only more-button" popovertarget="editor-more" aria-controls="editor-more" aria-label="更多操作">' + icon('more') + '</button></div>' +
     '<div id="editor-more" class="editor-more" popover role="group" aria-label="更多操作">' +
     button('original', '原图对比', 'eye') + historyButton() +
@@ -86,9 +83,9 @@ function footer() {
 }
 function subject() {
   return '<div class="subject-card"><span class="subject-icon">' + icon('person') + '</span>' +
-    '<strong>人物蒙版</strong><span class="subtle" role="status" data-mask-status></span></div>';
+    '<strong>人物抠图</strong><span class="subtle" role="status" data-mask-status></span></div>';
 }
-const tools = {grid: ['网格', 'grid'], mask: ['蒙版', 'brush']};
+const tools = {grid: ['网格', 'grid'], mask: ['抠图', 'brush']};
 function gridTools() {
   return '<div class="layout-controls">' + stepper('rows', '横格') + stepper('columns', '竖格') + '</div>' +
     '<div class="tool-sliders">' + widthControl() + insetControl() + '</div>';
@@ -139,6 +136,7 @@ const pendingRemovals = new Map();
 const removalWindow = 20000;
 const brushPosition = {x: .5, y: .5};
 const lastPhotoKey = 'photo-breakout-active-photo';
+const tutorialSeenKey = 'photo-breakout-tutorial-seen';
 let selectedID;
 let showingSample = false;
 let historyOpen = false;
@@ -248,19 +246,19 @@ function setPanel(panel) {
   state.original = false;
   state.brush = panel === 'mask' && photo.dataset.ready && state.maskStatus !== 'preparing' ? 'add' : null;
 }
-async function openPhoto(id, showMask = false) {
+async function openPhoto(id, {showTools = false} = {}) {
   const entry = entries.get(id);
   if (!entry) return;
   finishStroke();
   const revision = ++photoRevision;
   selectedID = id;
   showingSample = false;
-  mobileToolsOpen = showMask;
+  mobileToolsOpen = showTools;
   rememberPhoto(id);
   delete photo.dataset.ready;
   for (const key of Object.keys(defaults)) state[key] = entry.settings?.[key] ?? defaults[key];
   Object.assign(state, {filename: entry.name, maskStatus: 'preparing'});
-  setPanel(showMask ? 'mask' : 'grid');
+  setPanel('grid');
   sync();
   let image;
   let saved;
@@ -537,7 +535,12 @@ function sync() {
   app.querySelector('[data-photo-wrap]').hidden = !ready;
   app.querySelector('[data-empty]').hidden = ready || !!selectedID;
   app.querySelector('[data-sample-guide]').hidden = !showingSample;
-  app.querySelector('.header-import').hidden = showingSample;
+  const headerImport = app.querySelector('.header-import');
+  const hasSelectedPhoto = Boolean(selectedID);
+  headerImport.hidden = showingSample;
+  headerImport.classList.toggle('icon-only', !hasSelectedPhoto);
+  headerImport.querySelector('svg').toggleAttribute('hidden', hasSelectedPhoto);
+  headerImport.querySelector('span').hidden = !hasSelectedPhoto;
   const message = workspaceMessage(ready);
   const status = app.querySelector('[data-workspace-status]');
   if (status.textContent !== message) status.textContent = message;
@@ -590,11 +593,8 @@ function sync() {
   collapse.inert = !mobileToolsOpen;
   app.querySelector('[data-action=remove]').disabled = importing || removing || !selectedID;
   const exportAction = app.querySelector('[data-action=export]');
-  const comparing = Boolean(state.original || state.brush);
   exportAction.disabled = !ready || importing || removing || state.maskStatus === 'preparing';
   exportAction.classList.toggle('primary', !showingSample);
-  exportAction.querySelector('[data-export-label]').textContent =
-    comparing ? '查看成品' : showingSample ? '导出示例' : '导出成品';
   app.querySelectorAll('[data-action=add], [data-action=erase]').forEach(node => node.setAttribute('aria-pressed', state.brush === node.dataset.action));
   app.querySelectorAll('[data-action=undo]').forEach(node => node.disabled = removing || !undoStack.length);
   app.querySelectorAll('[data-brush-tools]').forEach(node => node.inert = !state.brush);
@@ -603,7 +603,7 @@ function sync() {
     node.dataset.edit = editing;
     node.tabIndex = editing ? 0 : -1;
     node.setAttribute('role', editing ? 'application' : 'img');
-    node.setAttribute('aria-label', editing ? '人物蒙版编辑画布' : '照片预览');
+    node.setAttribute('aria-label', editing ? '人物抠图画布' : '照片预览');
     if (editing) node.setAttribute('aria-describedby', 'mask-keys');
     else node.removeAttribute('aria-describedby');
     syncBrushPosition();
@@ -612,10 +612,7 @@ function sync() {
 }
 function exportImage() {
   if (!photo.dataset.ready) return;
-  if (state.original || state.brush || comparePointer?.held) {
-    setPanel('grid');
-    return;
-  }
+  finishStroke();
   const name = state.filename.replace(/\.[^.]+$/, '') + ' · 破框.png';
   composite();
   result.toBlob(blob => {
@@ -747,7 +744,7 @@ fileInput.addEventListener('change', async () => {
   if (first) historyPage = 0;
   refreshHistory();
   if (first) {
-    openPhoto(first, true);
+    openPhoto(first, {showTools: true});
     stage.querySelector('[data-filmstrip]').scrollLeft = 0;
   } else if (!selectedID && !showingSample) openSample();
   else sync();
@@ -856,6 +853,17 @@ function updateLayout() {
   refreshHistory({showSelected: true});
   sync();
 }
+
+function showFirstVisitTutorial() {
+  try {
+    if (localStorage.getItem(tutorialSeenKey)) return;
+  } catch { /* The tutorial is still available when storage is blocked. */ }
+  guide.showModal();
+  try {
+    localStorage.setItem(tutorialSeenKey, '1');
+  } catch { /* The editor still works without storage. */ }
+}
+
 stage.innerHTML = editor();
 const moreMenu = stage.querySelector('#editor-more');
 const moreTrigger = stage.querySelector('.more-button');
@@ -901,3 +909,4 @@ const catalog = listPhotos().then(photos => {
   if (id) openPhoto(id);
   else openSample();
 });
+showFirstVisitTutorial();
