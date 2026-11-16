@@ -35,11 +35,10 @@ GitHub Pages 仍可作为备用入口：[holynova.github.io](https://holynova.gi
 `master` 是唯一的作品数据来源。合并前运行 `node scripts/check-demo-links.mjs`，确保 Demo 不会退回 GitHub Pages 链接。GitHub Pages 读取 `master` 根目录；当前绑定 `xiaosang.cc` 的 Cloudflare Worker 是 `xiaosang-portfolio`，从同一提交手动发布：
 
 ```bash
-node scripts/stage-cloudflare.mjs ../xiaosang-gallery/dist
 npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc
 ```
 
-`stage-cloudflare.mjs` 把本仓库的当前提交与图库项目从 `main` 构建的 `dist` 组装起来。图库完整图片只进入 Cloudflare 产物。图库产物所在位置可通过脚本参数指定。
+`stage-cloudflare.mjs` 把本仓库的当前提交与图库项目从 `main` 构建的 `dist` 组装起来。图库完整图片只进入 Cloudflare 产物。Wrangler 的 build 步骤每次自动执行组装，并校验图库入口与图片数量。默认查找相邻图库项目及本机 ~/Code/xiaosang-gallery/dist，也可通过 XIAOSANG_GALLERY_DIST 环境变量指定。发布前会更新远端主分支引用并拒绝使用落后的提交，防止覆盖其他项目的新版本。
 
 发布后读取 `https://xiaosang.cc/data/repos.json` 并实际点击作品卡片的 Demo，确认页面指向 `xiaosang.cc` 路径或其子域名。Git 提交或 GitHub Pages 更新不会自动发布 Cloudflare。
 
@@ -265,6 +264,6 @@ npx http-server -p 8080
 
 ### 仅发布已提交作品
 
-图库外部产物不存在且线上 `/xiaosang-gallery/` 返回 404 时，可显式运行 `node scripts/stage-cloudflare.mjs --portfolio-only`；它从当前 master 的 Git archive 构建全部已提交页面，保留其他项目。图库一旦上线，此模式会拒绝发布，必须提供图库完整产物。
+图库外部产物不存在且线上 `/xiaosang-gallery/` 返回 404 时，可显式运行 `node scripts/stage-cloudflare.mjs`；它从当前 master 的 Git archive 构建全部已提交页面，保留其他项目。图库一旦上线，此模式会拒绝发布，必须提供图库完整产物。
 
 上海地铁页面位于 `shanghai-metro-night/`，从 `holynova/shanghai-metro-night` 的 main/dist 同步；来源提交记录在该目录 release.json。

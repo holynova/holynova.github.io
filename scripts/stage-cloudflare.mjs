@@ -2,21 +2,36 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync, linkSync, copyFileSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { homedir } from 'node:os';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const portfolioOnly = process.argv.includes('--portfolio-only');
-const gallery = resolve((portfolioOnly ? null : process.argv[2]) || join(root, '../xiaosang-gallery/dist'));
+if (process.argv.includes('--portfolio-only')) {
+  throw new Error('This Worker includes xiaosang-gallery. Supply its production build for every deployment.');
+}
+const requestedGallery = process.argv[2] || process.env.XIAOSANG_GALLERY_DIST;
+const candidates = requestedGallery ? [resolve(requestedGallery)] : [
+  resolve(root, '../xiaosang-gallery/dist'),
+  join(homedir(), 'Code/xiaosang-gallery/dist'),
+];
+const gallery = candidates.find(path => existsSync(join(path, 'release.json')));
+if (!gallery) throw new Error('Gallery build missing. Set XIAOSANG_GALLERY_DIST to the complete production dist directory.');
 const directory = join(root, '.cloudflare-build');
 const route = 'xiaosang-gallery';
-// Explicit archive-only publishing is safe only while the external gallery is absent online.
-if (portfolioOnly) {
-  const response = await fetch('https://xiaosang.cc/xiaosang-gallery/', {redirect:'follow', signal:AbortSignal.timeout(15000)});
-  if (response.status !== 404) throw new Error('Preserve the live gallery: supply its full production build instead');
-}
-const receipt = portfolioOnly ? null : JSON.parse(readFileSync(join(gallery, 'release.json'), 'utf8'));
-if (!portfolioOnly && (receipt.project !== route || !/^[a-f0-9]{40}$/.test(receipt.commit) || !receipt.works)) {
+const receipt = JSON.parse(readFileSync(join(gallery, 'release.json'), 'utf8'));
+if (receipt.project !== route || !/^[a-f0-9]{40}$/.test(receipt.commit) || !receipt.works) {
   throw new Error('Expected the xiaosang-gallery production build and source commit');
 }
+for (const required of ['index.html', 'overview.html', 'skills/index.html', 'data/index.js', '_headers']) {
+  if (!existsSync(join(gallery, required))) throw new Error('Incomplete gallery build: ' + required);
+}
+const originals = filesIn(join(gallery, 'originals'));
+const media = filesIn(join(gallery, 'media'));
+if (originals.length < receipt.works || media.length < receipt.works * 3) {
+  throw new Error('Incomplete gallery image library');
+}
+// A stale checkout can replace every project on the shared Worker.
+execFileSync('git', ['fetch', 'origin', 'master'], {cwd: root, stdio: 'inherit'});
+execFileSync('git', ['merge-base', '--is-ancestor', 'origin/master', 'HEAD'], {cwd: root});
 
 function placeTree(source, destination) {
   mkdirSync(destination, { recursive: true });
@@ -48,7 +63,6 @@ try {
   mkdirSync(stage);
   execFileSync('git', ['archive', '--format=tar', '--output', archive, 'HEAD'], { cwd: root });
   execFileSync('tar', ['-xf', archive, '-C', stage]);
-  if (!portfolioOnly) {
   const galleryTarget = join(stage, route);
   if (existsSync(galleryTarget)) throw new Error(`Existing portfolio route conflicts with /${route}/`);
   placeTree(gallery, galleryTarget);
@@ -59,7 +73,6 @@ try {
   const headers = join(stage, '_headers');
   const oldHeaders = existsSync(headers) ? readFileSync(headers, 'utf8').trimEnd() : '';
   writeFileSync(headers, [oldHeaders, galleryHeaders].filter(Boolean).join('\n\n') + '\n');
-  }
   const files = filesIn(stage);
   if (files.length > 20_000 || files.some(file => lstatSync(file).size > 25 * 1024 ** 2)) {
     throw new Error(`Staged portfolio exceeds Workers Static Assets limits (${files.length} files)`);
@@ -73,8 +86,8 @@ try {
   }
   console.log(JSON.stringify({
     portfolio: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
-    gallery: receipt?.commit ?? null,
-    version: receipt?.version ?? null,
+    gallery: receipt.commit,
+    version: receipt.version,
     files: files.length,
   }));
 } finally {
