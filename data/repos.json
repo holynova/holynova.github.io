@@ -1607,7 +1607,7 @@
           },
           "lang": "Swift",
           "desc": {
-            "zh": "Mac 热点流量记录：网卡用量、进程排行、异常提醒、可选断连与重启续接。",
+            "zh": "热点账本：Mac 网卡用量与进程活动排行，支持异常提醒、可选断连和重启续接。",
             "en": "Local macOS hotspot monitoring with interface usage, process activity, alerts, optional disconnection and session resumption."
           },
           "url": "https://github.com/holynova/hotspot-ledger",
