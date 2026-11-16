@@ -62,8 +62,15 @@ export async function readFile(id) {
 export async function savePhoto(photo) {
   if (mediaFallback.has(photo.id)) return false;
   try {
-    await transact(['photos'], 'readwrite', store => store('photos').put(photo, photo.id));
-    return true;
+    const previous = await transact(['photos'], 'readwrite', store => {
+      const request = store('photos').get(photo.id);
+      request.onsuccess = () => {
+        const current = request.result;
+        if (current && !current.removedAt) store('photos').put({...current, settings: photo.settings}, photo.id);
+      };
+      return request;
+    });
+    return !!previous && !previous.removedAt;
   } catch {
     return false;
   }
@@ -78,7 +85,14 @@ export async function readMask(id) {
 export async function saveMask(id, edit) {
   if (!mediaFallback.has(id)) {
     try {
-      await transact(['masks'], 'readwrite', store => store('masks').put(edit, id));
+      const photo = await transact(['photos', 'masks'], 'readwrite', store => {
+        const request = store('photos').get(id);
+        request.onsuccess = () => {
+          if (request.result && !request.result.removedAt) store('masks').put(edit, id);
+        };
+        return request;
+      });
+      if (!photo || photo.removedAt) return false;
       masksFallback.delete(id);
       return true;
     } catch {
@@ -89,12 +103,43 @@ export async function saveMask(id, edit) {
   return false;
 }
 
-export async function removePhoto(id) {
+export async function setPhotoRemoval(id, expected, removedAt) {
+  if (mediaFallback.has(id)) return true;
+  try {
+    const previous = await transact(['photos'], 'readwrite', store => {
+      const request = store('photos').get(id);
+      request.onsuccess = () => {
+        const current = request.result;
+        if (!current || current.removedAt !== expected) return;
+        const photo = {...current};
+        if (removedAt === undefined) delete photo.removedAt;
+        else photo.removedAt = removedAt;
+        store('photos').put(photo, id);
+      };
+      return request;
+    });
+    return !!previous && previous.removedAt === expected;
+  } catch {
+    return false;
+  }
+}
+
+export async function removePhoto(id, expectedRemoval) {
   if (!mediaFallback.has(id)) {
     try {
+      let matched = true;
       await transact(['photos', 'files', 'masks'], 'readwrite', store => {
-        for (const name of ['photos', 'files', 'masks']) store(name).delete(id);
+        const deleteAll = () => {
+          for (const name of ['photos', 'files', 'masks']) store(name).delete(id);
+        };
+        if (expectedRemoval === undefined) return deleteAll();
+        const request = store('photos').get(id);
+        request.onsuccess = () => {
+          matched = request.result?.removedAt === expectedRemoval;
+          if (matched) deleteAll();
+        };
       });
+      if (!matched) return false;
     } catch {
       return false;
     }

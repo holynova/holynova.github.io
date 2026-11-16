@@ -1,5 +1,5 @@
 import {estimatePortrait} from './segment.js';
-import {addPhoto, listPhotos, readFile, readMask, removePhoto, saveMask, savePhoto} from './history.js';
+import {addPhoto, listPhotos, readFile, readMask, removePhoto, saveMask, savePhoto, setPhotoRemoval} from './history.js';
 import {downloadBlob} from './download.js';
 import {openShare} from './share.js';
 
@@ -28,13 +28,16 @@ function button(action, label, symbol, extra = '') {
 }
 function header() {
   return '<header class="app-head"><div class="brand"><div class="mark">' + icon('logo') + '</div><h1>破框</h1></div>' +
-    '<div class="head-actions">' + button('open', '打开照片', 'folder', 'header-import') + button('share', '分享工具', 'share', 'icon-only share-button') + button('export', '导出 PNG', 'save', 'primary') + '</div></header>';
+    '<div class="head-actions"><button type="button" class="btn header-import" data-action="open" aria-label="导入照片">' +
+    icon('folder') + '<span>导入<span class="import-long">照片</span></span></button>' +
+    button('share', '分享工具', 'share', 'share-button') +
+    '<button type="button" class="btn" data-action="export" disabled>' + icon('save') + '<span data-export-label>导出成品</span></button></div></header>';
 }
 function stepper(axis, label) {
-  return '<div class="layout-row"><span class="control-label">' + label + '</span><div class="stepper" role="group" aria-label="' + label + '格数">' +
-    '<button type="button" data-axis="' + axis + '" data-step="-1" aria-label="减少' + label + '格数">−</button>' +
+  return '<div class="layout-row"><span class="control-label">' + label + '</span><div class="stepper" role="group" aria-label="' + label + '数量">' +
+    '<button type="button" data-axis="' + axis + '" data-step="-1" aria-label="减少' + label + '数量">−</button>' +
     '<output data-count="' + axis + '" aria-live="polite"></output>' +
-    '<button type="button" data-axis="' + axis + '" data-step="1" aria-label="增加' + label + '格数">+</button></div></div>';
+    '<button type="button" data-axis="' + axis + '" data-step="1" aria-label="增加' + label + '数量">+</button></div></div>';
 }
 function field(key, label, min, max, step) {
   return '<div class="field"><div class="range-label"><label for="' + key + '">' + label +
@@ -46,7 +49,7 @@ const insetControl = () => field('inset', '外框内缩', 1, 18, .5);
 const fileName = () => '<div class="filename">' + icon('folder') + '<span data-filename></span></div>';
 function brushTools() {
   return button('add', '保留', null) + button('erase', '擦除', null) +
-    button('undo', '撤销', 'reset', 'icon-only') + button('finish', '完成', null, 'primary');
+    button('undo', '撤销笔画', 'reset', 'icon-only') + button('finish', '查看网格效果', null, 'primary');
 }
 function preview() {
   return '<section class="workstage" aria-label="照片预览"><div class="worktop">' + fileName() +
@@ -54,20 +57,26 @@ function preview() {
     '<button type="button" class="btn" data-action="toggleHistory" aria-controls="photo-history" hidden>' + icon('history') +
     '历史 <span data-history-count></span></button>' +
     button('original', '原图', 'eye') + button('tutorial', '教程', 'guide') + '</div></div>' +
-    '<div class="main-image"><div class="image-wrap" data-photo-wrap hidden><canvas data-image="result" role="img" aria-label="照片预览"></canvas></div>' +
+    '<p class="subtle workspace-status" role="status" data-workspace-status></p>' +
+    '<div class="main-image"><div class="image-wrap" data-photo-wrap hidden>' +
+    '<canvas data-image="result" role="img" aria-label="照片预览" tabindex="-1"></canvas>' +
+    '<span class="brush-cursor" data-brush-cursor aria-hidden="true"></span></div>' +
+    '<div class="removal-recovery" hidden><span data-removal-message role="status"></span>' +
+    button('restore', '撤销', null) + '</div>' +
+    '<p id="mask-keys" class="sr-only">用方向键移动画笔，按空格落笔。按住 Shift 可加快移动。按 Tab 退出画布。</p>' +
+    '<p class="sr-only" data-brush-position role="status"></p>' +
     '<div class="empty-photo" data-empty>' + icon('folder') + button('open', '打开照片', null, 'primary') +
     '<span class="subtle">可一次选择多张</span></div></div>' +
-    '<div class="sample-guide" data-sample-guide hidden><span>试试调节格数</span>' +
+    '<div class="sample-guide" data-sample-guide hidden>' +
     button('open', '导入我的照片', 'folder', 'primary') + '</div>' +
     '<section id="photo-history" class="history" aria-label="编辑历史" data-history hidden>' +
     '<button type="button" class="btn history-arrow" data-history-step="-1" aria-label="上一页历史" hidden>‹</button>' +
     '<div class="filmstrip" data-filmstrip></div>' +
     '<button type="button" class="btn history-arrow" data-history-step="1" aria-label="下一页历史" hidden>›</button>' +
-    '<button type="button" class="btn text" data-action="remove" aria-label="移除当前照片">移除</button></section></section>';
+    '<button type="button" class="btn text" data-action="remove">从历史移除</button></section></section>';
 }
 function footer() {
-  return '<footer class="editor-footer subtle"><span><span class="dot"></span>照片在本机处理</span>' +
-    '<a href="https://github.com/holynova/photo-breakout">GitHub</a><span class="numbers">' + stage.dataset.version + '</span></footer>';
+  return '<footer class="editor-footer subtle"><a href="https://github.com/holynova/photo-breakout">GitHub</a><span class="numbers">' + stage.dataset.version + '</span></footer>';
 }
 function subject() {
   return '<div class="subject-card"><span class="subject-icon">' + icon('person') + '</span>' +
@@ -75,7 +84,7 @@ function subject() {
 }
 const tools = {grid: ['网格', 'grid'], mask: ['蒙版', 'brush']};
 function gridTools() {
-  return '<div class="layout-controls">' + stepper('rows', '横向') + stepper('columns', '纵向') + '</div>' +
+  return '<div class="layout-controls">' + stepper('rows', '横格') + stepper('columns', '竖格') + '</div>' +
     '<div class="tool-sliders">' + widthControl() + insetControl() + '</div>';
 }
 function editor() {
@@ -90,7 +99,8 @@ function editor() {
     '<div id="tool-grid" class="tool-panel" data-panel="grid">' + gridTools() + '</div>' +
     '<div id="tool-mask" class="tool-panel" data-panel="mask" inert>' + subject() +
     '<div class="mobile-brush" data-brush-tools inert>' + brushTools() + '</div>' +
-    '<p class="subtle mask-instruction" data-brush-tools inert>在照片上涂抹，标记挡住白线的区域。</p></div></div>' +
+    '<div class="mask-instruction" data-brush-tools inert><p class="subtle">涂抹照片，标记挡住白线的位置</p>' +
+    button('focusMask', '键盘修整', null, 'text') + '</div></div></div>' +
     footer() + '</aside></main></div>';
 }
 
@@ -119,6 +129,9 @@ const entries = new Map();
 const thumbnailUrls = new Map();
 const pendingMasks = new Map();
 const pendingSettings = new Map();
+const pendingRemovals = new Map();
+const removalWindow = 20000;
+const brushPosition = {x: .5, y: .5};
 const lastPhotoKey = 'photo-breakout-active-photo';
 let selectedID;
 let showingSample = false;
@@ -132,6 +145,7 @@ let drawFrame;
 let activePointer;
 let comparePointer;
 let importing = false;
+let importProgress;
 let removing = false;
 let warnedStorage = false;
 
@@ -165,6 +179,7 @@ function setPhoto(image) {
   photo.getContext('2d').drawImage(image, 0, 0, w, h);
   photo.dataset.ready = 'true';
   undoStack.length = 0;
+  brushPosition.x = brushPosition.y = .5;
   sync();
 }
 function showStatus(message, duration = 4200) {
@@ -339,27 +354,81 @@ function refreshHistory({showSelected = false} = {}) {
   strip.replaceChildren(...items);
   strip.scrollLeft = scroll;
 }
+function latestRemoval() {
+  return [...pendingRemovals.values()].at(-1);
+}
+function scheduleRemoval(entry) {
+  const expire = () => {
+    pendingRemovals.delete(entry.id);
+    void removePhoto(entry.id, entry.removedAt);
+    syncRecovery();
+  };
+  const remaining = entry.removedAt + removalWindow - Date.now();
+  if (remaining <= 0) return expire();
+  pendingRemovals.set(entry.id, {entry, timer: setTimeout(expire, remaining)});
+}
+function syncRecovery() {
+  const recovery = stage.querySelector('.removal-recovery');
+  const removal = latestRemoval();
+  recovery.hidden = !removal;
+  if (!removal) return;
+  const label = recovery.querySelector('[data-removal-message]');
+  const text = removal.entry.name + ' 已从历史移除';
+  if (label.textContent !== text) label.textContent = text;
+  recovery.querySelector('[data-action=restore]').disabled = importing || removing;
+}
 async function deleteSelected() {
   if (importing || removing || !selectedID) return;
   finishStroke();
-  removing = true;
   const id = selectedID;
+  const entry = entries.get(id);
+  if (!entry) return;
+  const returnFocus = document.activeElement?.dataset.action === 'remove';
+  removing = true;
   ++photoRevision;
   sync();
   await Promise.all([pendingMasks.get(id), pendingSettings.get(id)]);
-  const removed = await removePhoto(id);
+  const removedAt = Date.now();
+  const removed = await setPhotoRemoval(id, undefined, removedAt);
   removing = false;
   if (!removed) {
-    showStatus('无法移除此照片，请重试');
+    showStatus('无法从历史移除，请重试');
     return openPhoto(id);
   }
   entries.delete(id);
   if (thumbnailUrls.has(id)) URL.revokeObjectURL(thumbnailUrls.get(id));
   thumbnailUrls.delete(id);
+  scheduleRemoval({...entry, removedAt});
   refreshHistory();
   const next = stage.querySelector('[data-photo]')?.dataset.photo;
-  if (next) return openPhoto(next);
-  return openSample();
+  if (next) void openPhoto(next);
+  else void openSample();
+  if (returnFocus) stage.querySelector('[data-action=restore]').focus({preventScroll: true});
+}
+async function restoreRemoved() {
+  const removal = latestRemoval();
+  if (!removal || importing || removing) return;
+  const {entry, timer} = removal;
+  const {removedAt, ...photo} = entry;
+  if (Date.now() >= removedAt + removalWindow) return;
+  finishStroke();
+  clearTimeout(timer);
+  removing = true;
+  sync();
+  const restored = await setPhotoRemoval(photo.id, removedAt, undefined);
+  removing = false;
+  pendingRemovals.delete(photo.id);
+  if (!restored) {
+    scheduleRemoval(entry);
+    showStatus('无法撤销移除，请重试');
+    return sync();
+  }
+  entries.set(photo.id, photo);
+  void openPhoto(photo.id);
+  refreshHistory({showSelected: true});
+  sync();
+  stage.querySelector('[data-action=toggleHistory]').focus({preventScroll: true});
+  showStatus('已恢复照片和编辑记录');
 }
 function ratio() {
   const pad = Math.min(photo.width, photo.height) * state.inset / 100;
@@ -432,6 +501,27 @@ function queueRender() {
     render();
   });
 }
+function workspaceMessage(ready) {
+  if (importing && importProgress) {
+    const {current, total} = importProgress;
+    return total > 1 ? '正在读取照片 ' + current + ' / ' + total : '正在读取照片…';
+  }
+  if (state.maskStatus === 'preparing') return ready ? '正在识别人像…' : '正在读取照片…';
+  if (state.original) return '正在查看原图，可切回网格效果';
+  if (state.maskStatus === 'manual') return '未自动选中人物，可以用画笔标记';
+  if (state.brush && state.maskStatus === 'ready' && !showingSample) return '人物已选中，可查看网格效果';
+  return '在本机处理 · 历史保存在此浏览器';
+}
+function syncBrushPosition(announce = false) {
+  const cursor = stage.querySelector('[data-brush-cursor]');
+  cursor.style.left = brushPosition.x * 100 + '%';
+  cursor.style.top = brushPosition.y * 100 + '%';
+  if (announce) {
+    const x = Math.round(brushPosition.x * 100);
+    const y = Math.round(brushPosition.y * 100);
+    stage.querySelector('[data-brush-position]').textContent = '横向 ' + x + '%，纵向 ' + y + '%';
+  }
+}
 function sync() {
   const app = stage.querySelector('.app');
   if (!app) return;
@@ -442,6 +532,10 @@ function sync() {
   app.querySelector('[data-empty]').hidden = ready || !!selectedID;
   app.querySelector('[data-sample-guide]').hidden = !showingSample;
   app.querySelector('.header-import').hidden = showingSample;
+  const message = workspaceMessage(ready);
+  const status = app.querySelector('[data-workspace-status]');
+  if (status.textContent !== message) status.textContent = message;
+  syncRecovery();
   app.querySelector('[data-history]').hidden = !historyOpen || entries.size === 0;
   app.querySelector('[data-history-count]').textContent = entries.size;
   app.querySelectorAll('[data-history-step]').forEach(node => {
@@ -489,18 +583,33 @@ function sync() {
   collapse.hidden = !phone.matches;
   collapse.inert = !mobileToolsOpen;
   app.querySelector('[data-action=remove]').disabled = importing || removing || !selectedID;
-  app.querySelector('[data-action=export]').disabled = !ready || removing || state.maskStatus === 'preparing';
+  const exportAction = app.querySelector('[data-action=export]');
+  const comparing = Boolean(state.original || state.brush);
+  exportAction.disabled = !ready || importing || removing || state.maskStatus === 'preparing';
+  exportAction.classList.toggle('primary', !showingSample);
+  exportAction.querySelector('[data-export-label]').textContent =
+    comparing ? '查看成品' : showingSample ? '导出示例' : '导出成品';
   app.querySelectorAll('[data-action=add], [data-action=erase]').forEach(node => node.setAttribute('aria-pressed', state.brush === node.dataset.action));
   app.querySelectorAll('[data-action=undo]').forEach(node => node.disabled = removing || !undoStack.length);
   app.querySelectorAll('[data-brush-tools]').forEach(node => node.inert = !state.brush);
   app.querySelectorAll('[data-image=result]').forEach(node => {
-    node.dataset.edit = Boolean(state.brush);
-    node.setAttribute('aria-label', state.brush ? '照片和已选中的人物蒙版' : '照片预览');
+    const editing = Boolean(state.brush);
+    node.dataset.edit = editing;
+    node.tabIndex = editing ? 0 : -1;
+    node.setAttribute('role', editing ? 'application' : 'img');
+    node.setAttribute('aria-label', editing ? '人物蒙版编辑画布' : '照片预览');
+    if (editing) node.setAttribute('aria-describedby', 'mask-keys');
+    else node.removeAttribute('aria-describedby');
+    syncBrushPosition();
   });
   queueRender();
 }
 function exportImage() {
   if (!photo.dataset.ready) return;
+  if (state.original || state.brush || comparePointer?.held) {
+    setPanel('grid');
+    return;
+  }
   const name = state.filename.replace(/\.[^.]+$/, '') + ' · 破框.png';
   composite();
   result.toBlob(blob => {
@@ -523,6 +632,12 @@ const actions = {
   },
   share: openShare,
   remove: deleteSelected,
+  restore: restoreRemoved,
+  focusMask: () => {
+    const canvas = stage.querySelector('[data-image]');
+    canvas.focus({preventScroll: true, focusVisible: true});
+    syncBrushPosition(true);
+  },
   export: exportImage,
   original: () => {
     const original = !state.original;
@@ -532,7 +647,6 @@ const actions = {
   finish: () => {
     stage.querySelector('[data-panel-button=grid]').focus({preventScroll: true});
     setPanel('grid');
-    mobileToolsOpen = false;
   },
   add: () => { finishStroke(); state.brush = 'add'; },
   erase: () => { finishStroke(); state.brush = 'erase'; },
@@ -598,6 +712,7 @@ fileInput.addEventListener('change', async () => {
   fileInput.value = '';
   if (!files.length || importing) return;
   importing = true;
+  importProgress = {current: 1, total: files.length};
   sync();
   await catalog;
   let failed = 0;
@@ -605,6 +720,8 @@ fileInput.addEventListener('change', async () => {
   let first;
   const stamp = Date.now();
   for (const [index, file] of files.entries()) {
+    importProgress.current = index + 1;
+    sync();
     try {
       const image = await loadBlob(file);
       const id = crypto.randomUUID();
@@ -617,6 +734,7 @@ fileInput.addEventListener('change', async () => {
     }
   }
   importing = false;
+  importProgress = undefined;
   if (first) historyPage = 0;
   refreshHistory();
   if (first) {
@@ -669,15 +787,41 @@ function paint(start, end) {
   ctx.stroke();
   ctx.restore();
 }
+function rememberStroke() {
+  undoStack.push(mask.getContext('2d').getImageData(0, 0, mask.width, mask.height));
+  if (undoStack.length > 8) undoStack.shift();
+}
+stage.addEventListener('keydown', event => {
+  if (!state.brush || removing || activePointer || event.target.dataset.image !== 'result') return;
+  const directions = {ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1]};
+  const direction = directions[event.key];
+  if (direction) {
+    event.preventDefault();
+    const step = event.shiftKey ? .06 : .018;
+    const [dx, dy] = direction;
+    brushPosition.x = Math.max(.018, Math.min(.982, brushPosition.x + dx * step));
+    brushPosition.y = Math.max(.018, Math.min(.982, brushPosition.y + dy * step));
+    syncBrushPosition(true);
+    return;
+  }
+  if (event.code !== 'Space') return;
+  event.preventDefault();
+  if (event.repeat) return;
+  const spot = {x: brushPosition.x * mask.width, y: brushPosition.y * mask.height};
+  rememberStroke();
+  paint(spot, spot);
+  commitMask();
+  sync();
+});
 stage.addEventListener('pointerdown', event => {
   const canvas = event.target;
   if (removing || canvas.dataset.image !== 'result' || event.button !== 0 || activePointer) return;
   if (!state.brush) return startComparison(event, canvas);
+  event.preventDefault();
   const start = point(event, canvas);
   activePointer = {id: event.pointerId, canvas, last: start};
   canvas.setPointerCapture(event.pointerId);
-  undoStack.push(mask.getContext('2d').getImageData(0, 0, mask.width, mask.height));
-  if (undoStack.length > 8) undoStack.shift();
+  rememberStroke();
   paint(start, start);
   sync();
 });
@@ -707,7 +851,10 @@ stage.innerHTML = editor();
 phone.addEventListener('change', updateLayout);
 updateLayout();
 const catalog = listPhotos().then(photos => {
-  for (const entry of photos) entries.set(entry.id, entry);
+  for (const entry of photos) {
+    if (entry.removedAt) scheduleRemoval(entry);
+    else entries.set(entry.id, entry);
+  }
   refreshHistory();
   let last;
   try { last = localStorage.getItem(lastPhotoKey); } catch { /* Use the latest photo. */ }
