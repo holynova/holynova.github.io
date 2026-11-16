@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-16",
-  "totalRepos": 141,
+  "totalRepos": 142,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1824,6 +1824,24 @@
         "en": "Games"
       },
       "repos": [
+        {
+          "name": "plant-survivors-ui",
+          "title": {
+            "zh": "植物幸存者",
+            "en": "Plant Survivors"
+          },
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "经典后院生存游戏：自动攻击、阳光升级、植物进化与三关首领战",
+            "en": "Garden survival game with auto-attacks, sunlight upgrades, plant evolution and three boss stages"
+          },
+          "url": "https://github.com/holynova/plant-survivors-ui",
+          "homepage": "https://xiaosang.cc/plant-survivors-ui/",
+          "screenshot": "screenshots/plant-survivors-ui.png",
+          "pushed_at": "2026-11-16",
+          "commit_time": "2026-11-16T18:06:04+08:00",
+          "hidden": false
+        },
         {
           "name": "woool-survivor-game",
           "lang": "TypeScript",
