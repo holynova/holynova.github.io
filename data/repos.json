@@ -1886,14 +1886,14 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "全屏手机幸存者：自适应横竖屏、三位主角、大型精英与冲锋、植物图鉴、冷却和战斗音效",
-            "en": "Full-viewport mobile survivor with responsive portrait and landscape play, three heroes, larger charging elites, field guide, cooldowns and audio"
+            "zh": "手机幸存者：自由触控、大地图卷动、26 种植物、15 类敌人、金币钻石解锁与永久成长、原版原声播放器",
+            "en": "Mobile survivor with free-position touch controls, large scrolling worlds, 26 plants, 15 enemy types, coin/diamond unlocks and the official soundtrack player"
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
           "screenshot": "screenshots/plant-survivors-ui.png",
           "pushed_at": "2026-11-16",
-          "commit_time": "2026-11-16T21:05:40+08:00",
+          "commit_time": "2026-11-16T22:44:54+08:00",
           "hidden": false
         },
         {
