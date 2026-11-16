@@ -1643,14 +1643,14 @@
           },
           "lang": "JavaScript",
           "desc": {
-            "zh": "上海地铁时间地图：14 条线路、338 站，按官方首末班逐段变灰，支持浅色与深色模式",
-            "en": "Explore 14 Shanghai Metro lines and 338 stations through official boarding timetables, with light and dark themes"
+            "zh": "末班之后：全屏上海地铁时间地图，悬浮控件、双向首末班与浅深色模式，覆盖 14 条线路、338 站",
+            "en": "Shanghai Metro Night: a full-screen timetable map with floating controls, light and dark themes, 14 lines and 338 stations"
           },
           "url": "https://github.com/holynova/shanghai-metro-night",
           "homepage": "https://xiaosang.cc/shanghai-metro-night/",
           "screenshot": "screenshots/shanghai-metro-night.png",
           "pushed_at": "2026-11-16",
-          "commit_time": "2026-11-16T20:23:54+08:00",
+          "commit_time": "2026-11-16T21:48:20+08:00",
           "hidden": false
         },
         {
