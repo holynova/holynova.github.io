@@ -4,7 +4,7 @@ const url = document.querySelector('link[rel=canonical]').href;
 const card = {
   title: '破框',
   description: '让人物跃出白色网格',
-  details: '照片本地抠像 · 多种网格和裁切',
+  details: '照片本地抠像 · 横纵网格可调',
   url,
   brand: '#294b35',
   qr: new URL('../share-qr.png', import.meta.url).href,

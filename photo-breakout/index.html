@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="照片在浏览器本地自动抠像，给照片添加方格、斜格、菱形格或透视格，可裁切、调整构图和导出 PNG。">
+  <meta name="description" content="照片在浏览器本地自动抠像，添加横纵白色网格并导出 PNG。打开网页即有示例和三步教程。">
   <meta name="theme-color" content="#f8f9f6">
   <title>破框 · Photo Breakout</title>
   <link rel="canonical" href="https://xiaosang.cc/photo-breakout/">
@@ -12,9 +12,36 @@
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"></script>
 </head>
 <body>
-  <div id="stage" data-version="v1.2.0"></div>
+  <div id="stage" data-version="v1.3.0"></div>
   <div id="status" class="status" role="status" hidden></div>
   <input type="file" id="local-file" accept="image/*" multiple hidden>
+  <dialog id="guide-dialog" aria-labelledby="guide-title">
+    <div class="dialog-head">
+      <h2 id="guide-title">三步做一张破框图</h2>
+      <form method="dialog"><button class="btn" aria-label="关闭教程">关闭</button></form>
+    </div>
+    <ol class="guide-steps">
+      <li>
+        <img src="./sample/snow.jpg" alt="还没加网格的原图" width="240" height="240" loading="lazy">
+        <strong>1. 导入照片</strong>
+        <p>选一张或多张人像照片。</p>
+      </li>
+      <li>
+        <img src="./sample/guide-mask.webp" alt="绿色覆盖已选中的人物" width="240" height="240" loading="lazy">
+        <strong>2. 调整效果</strong>
+        <p>人物会自动选中。可调节横纵格数或修蒙版。</p>
+      </li>
+      <li>
+        <img src="./sample/guide-result.webp" alt="人物挡在白色网格前的成品" width="240" height="240" loading="lazy">
+        <strong>3. 保存成品</strong>
+        <p>点「导出 PNG」保存。</p>
+      </li>
+    </ol>
+    <div class="guide-footer">
+      <p class="subtle">按住照片可对比原图</p>
+      <button class="btn primary" type="button" data-guide-import>导入我的照片</button>
+    </div>
+  </dialog>
   <dialog id="share-dialog" aria-labelledby="share-title">
     <div class="dialog-head">
       <h2 id="share-title">分享破框</h2>
