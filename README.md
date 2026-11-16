@@ -264,6 +264,6 @@ npx http-server -p 8080
 
 ### 仅发布已提交作品
 
-图库外部产物不存在且线上 `/xiaosang-gallery/` 返回 404 时，可显式运行 `node scripts/stage-cloudflare.mjs`；它从当前 master 的 Git archive 构建全部已提交页面，保留其他项目。图库一旦上线，此模式会拒绝发布，必须提供图库完整产物。
+共用 Worker 的每次发布均包含图库完整产物。线上出现 404 时，使用完整图库构建恢复发布；发布命令会自动校验必需页面、原图和衍生图数量。
 
 上海地铁页面位于 `shanghai-metro-night/`，从 `holynova/shanghai-metro-night` 的 main/dist 同步；来源提交记录在该目录 release.json。
