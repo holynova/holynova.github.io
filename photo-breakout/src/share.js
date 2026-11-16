@@ -4,11 +4,15 @@ const url = document.querySelector('link[rel=canonical]').href;
 const card = {
   title: '破框',
   description: '让人物跃出白色网格',
-  details: '照片本地抠像 · 横纵网格可调',
   url,
   brand: '#294b35',
   qr: new URL('../share-qr.png', import.meta.url).href,
 };
+const steps = [
+  {image: 'snow.jpg', title: '1. 导入照片', lines: ['选择人像照片', '可一次导入多张']},
+  {image: 'guide-mask.webp', title: '2. 自动抠像', lines: ['绿色标出选中的人物', '用画笔修整蒙版']},
+  {image: 'guide-result.webp', title: '3. 网格与导出', lines: ['独立调整横纵格数', '保存成品 PNG']},
+];
 const dialog = document.getElementById('share-dialog');
 const canvas = dialog.querySelector('canvas');
 const download = dialog.querySelector('[data-share=download]');
@@ -28,48 +32,48 @@ function text(ctx, value, size, weight, color, x, y) {
   ctx.font = weight + ' ' + size + 'px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif';
   ctx.fillText(value, x, y);
 }
+async function loadImage(source) {
+  const image = new Image();
+  image.src = source;
+  await image.decode();
+  return image;
+}
 async function makeCard() {
-  const qr = new Image();
-  qr.src = card.qr;
-  await Promise.all([qr.decode(), document.fonts.ready]);
+  const [qr, pictures] = await Promise.all([
+    loadImage(card.qr),
+    Promise.all(steps.map(step => loadImage(new URL('../sample/' + step.image, import.meta.url)))),
+    document.fonts.ready,
+  ]);
   const ctx = canvas.getContext('2d');
+  const ink = '#203126';
+  const muted = '#4f6254';
   ctx.fillStyle = '#e8eee4';
-  ctx.fillRect(0, 0, 1080, 1160);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#fffef9';
+  ctx.fillRect(36, 36, 1008, 1088);
   ctx.fillStyle = card.brand;
-  ctx.fillRect(40, 40, 1000, 760);
+  ctx.fillRect(36, 36, 1008, 238);
 
-  ctx.save();
-  ctx.beginPath();
-  ctx.rect(40, 40, 1000, 760);
-  ctx.clip();
-  ctx.translate(803, 502);
-  ctx.rotate(-.14);
-  ctx.strokeStyle = '#cbd8bd';
-  ctx.lineWidth = 8;
-  ctx.strokeRect(-113, -151, 430, 430);
-  for (const i of [1, 2]) {
-    const offset = i * 430 / 3;
-    ctx.beginPath();
-    ctx.moveTo(-113 + offset, -151);
-    ctx.lineTo(-113 + offset, 279);
-    ctx.moveTo(-113, -151 + offset);
-    ctx.lineTo(317, -151 + offset);
-    ctx.stroke();
+  text(ctx, card.title, 102, 760, '#fffef9', 76, 161);
+  text(ctx, card.description, 42, 620, '#e7f0df', 81, 226);
+  text(ctx, '三步做一张破框图', 40, 720, ink, 76, 346);
+
+  const imageSize = 288;
+  for (const [index, step] of steps.entries()) {
+    const x = 76 + index * 320;
+    ctx.drawImage(pictures[index], x, 382, imageSize, imageSize);
+    text(ctx, step.title, 34, 700, ink, x, 729);
+    for (const [line, label] of step.lines.entries()) {
+      text(ctx, label, 26, 450, muted, x, 779 + line * 35);
+    }
   }
-  ctx.fillStyle = '#e4a770';
-  ctx.beginPath();
-  ctx.ellipse(71, 92, 137, 86, -.52, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
 
-  text(ctx, 'PHOTO BREAKOUT', 25, 650, '#d6e3cc', 104, 139);
-  text(ctx, card.title, 150, 770, '#fffef8', 88, 340);
-  text(ctx, card.description, 50, 680, '#fffef8', 104, 461);
-  text(ctx, card.details, 32, 450, '#d6e3cc', 104, 530);
-  text(ctx, '扫码打开破框', 46, 700, '#233e2a', 104, 933);
-  text(ctx, card.url, 29, 530, '#334c39', 105, 999);
+  ctx.fillStyle = '#e4eddf';
+  ctx.fillRect(36, 854, 1008, 270);
+  text(ctx, '扫码打开破框', 44, 720, ink, 76, 965);
+  text(ctx, card.url, 31, 500, muted, 76, 1025);
   ctx.imageSmoothingEnabled = false;
-  ctx.drawImage(qr, 754, 832, 240, 240);
+  ctx.drawImage(qr, 758, 875, 228, 228);
   const output = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
   if (!output) throw new Error('Could not render share card');
   return output;
