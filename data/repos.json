@@ -915,14 +915,14 @@
           "name": "pingye",
           "lang": "JavaScript",
           "desc": {
-            "zh": "拼页：把照片、作品和成绩拼成个人海报，支持六种 Bento 版式、画布裁剪和高清 PNG 导出。",
-            "en": "Make personal Bento posters from photos, projects, and milestones with six layouts, direct image cropping, and PNG export."
+            "zh": "拼页：用九种版式制作个人海报、产品速览或城市导览，支持图片裁剪和高清 PNG 导出。",
+            "en": "Make personal, product, and city posters with nine layouts, direct image cropping, and high-resolution PNG export."
           },
           "url": "https://github.com/holynova/pingye",
           "homepage": "https://xiaosang.cc/pingye/",
           "screenshot": "screenshots/pingye.png",
           "pushed_at": "2026-11-16",
-          "commit_time": "2026-11-16T00:34:54+08:00",
+          "commit_time": "2026-11-16T15:57:11+08:00",
           "hidden": false
         },
         {
