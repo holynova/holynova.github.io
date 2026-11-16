@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-16",
-  "totalRepos": 140,
+  "totalRepos": 141,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1599,6 +1599,24 @@
         "en": "Productivity"
       },
       "repos": [
+        {
+          "name": "hotspot-ledger",
+          "title": {
+            "zh": "热点账本",
+            "en": "Hotspot Ledger"
+          },
+          "lang": "Swift",
+          "desc": {
+            "zh": "Mac 热点流量记录：网卡用量、进程排行、异常提醒、可选断连与重启续接。",
+            "en": "Local macOS hotspot monitoring with interface usage, process activity, alerts, optional disconnection and session resumption."
+          },
+          "url": "https://github.com/holynova/hotspot-ledger",
+          "homepage": "https://xiaosang.cc/hotspot-ledger/",
+          "screenshot": "screenshots/hotspot-ledger.png",
+          "pushed_at": "2026-11-16",
+          "commit_time": "2026-11-16T16:47:11+08:00",
+          "hidden": false
+        },
         {
           "name": "psy-talks",
           "lang": "TypeScript",
