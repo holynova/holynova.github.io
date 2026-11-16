@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-16",
-  "totalRepos": 142,
+  "totalRepos": 143,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1216,6 +1216,24 @@
         "en": "AI Tools"
       },
       "repos": [
+        {
+          "name": "token-theater",
+          "title": {
+            "zh": "Token Theater · 速度体验实验室",
+            "en": "Token Theater"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "在手机、终端、网页和桌面界面并排体验大模型的输出速度、首字等待和流式节奏",
+            "en": "Compare LLM streaming speed, first-token delay, and delivery cadence across mobile, terminal, web, and desktop interfaces."
+          },
+          "url": "https://github.com/holynova/token-theater",
+          "homepage": "https://xiaosang.cc/token-theater/",
+          "screenshot": "screenshots/token-theater.webp",
+          "pushed_at": "2026-11-16",
+          "commit_time": "2026-11-16T19:10:08+08:00",
+          "hidden": false
+        },
         {
           "name": "hospital-ocr",
           "title": {
