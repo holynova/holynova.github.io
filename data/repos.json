@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-16",
-  "totalRepos": 143,
+  "totalRepos": 144,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -128,6 +128,24 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "xiaosang-gallery",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "汇集 22 个系列、3,666 张作品的统一图库，支持多图帖、分组搜索、沉浸滑览、单图下载和生成 Prompt。",
+            "en": "A unified gallery of 3,666 images across 22 collections, with grouped posts, filters, full-screen swiping, downloads, and reusable prompts."
+          },
+          "url": "https://github.com/holynova/xiaosang-gallery",
+          "homepage": "https://xiaosang.cc/xiaosang-gallery/",
+          "screenshot": "screenshots/xiaosang-gallery.png",
+          "pushed_at": "2026-11-16",
+          "commit_time": "2026-11-16T10:07:09+08:00",
+          "hidden": false,
+          "title": {
+            "zh": "xiaosang AI图集",
+            "en": "xiaosang AI Gallery"
+          }
+        },
         {
           "name": "bernstein-ypc",
           "lang": "JavaScript",
