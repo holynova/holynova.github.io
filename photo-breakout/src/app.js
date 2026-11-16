@@ -60,7 +60,10 @@ function preview() {
     '<div class="sample-guide" data-sample-guide hidden><span>试试调节格数</span>' +
     button('open', '导入我的照片', 'folder', 'primary') + '</div>' +
     '<section id="photo-history" class="history" aria-label="编辑历史" data-history hidden>' +
-    '<div class="filmstrip" data-filmstrip></div>' + button('remove', '移除当前照片', null, 'text') + '</section></section>';
+    '<button type="button" class="btn history-arrow" data-history-step="-1" aria-label="上一页历史" hidden>‹</button>' +
+    '<div class="filmstrip" data-filmstrip></div>' +
+    '<button type="button" class="btn history-arrow" data-history-step="1" aria-label="下一页历史" hidden>›</button>' +
+    '<button type="button" class="btn text" data-action="remove" aria-label="移除当前照片">移除</button></section></section>';
 }
 function footer() {
   return '<footer class="editor-footer subtle"><span><span class="dot"></span>照片在本机处理</span>' +
@@ -91,7 +94,7 @@ function editor() {
 }
 
 const stage = document.getElementById('stage');
-const phone = matchMedia('(max-width: 700px)');
+const phone = matchMedia('(max-width: 700px), (orientation: landscape) and (max-height: 480px) and (max-width: 960px)');
 const defaults = {rows: 3, columns: 3, width: 1.4, inset: 6};
 const state = {...defaults, original: false, brush: null, panel: 'grid', maskStatus: 'empty', filename: ''};
 const photo = document.createElement('canvas');
@@ -119,6 +122,8 @@ const lastPhotoKey = 'photo-breakout-active-photo';
 let selectedID;
 let showingSample = false;
 let historyOpen = false;
+let historyPage = 0;
+const historyPageSize = 3;
 let mobileToolsOpen = false;
 let photoRevision = 0;
 let statusTimer;
@@ -303,11 +308,16 @@ function thumbnailFor(image) {
   canvas.getContext('2d').drawImage(image, (image.naturalWidth-size)/2, (image.naturalHeight-size)/2, size, size, 0, 0, 128, 128);
   return new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', .79));
 }
-function refreshHistory() {
+function refreshHistory({showSelected = false} = {}) {
   const strip = stage.querySelector('[data-filmstrip]');
-  if (!strip) return;
   const scroll = strip.scrollLeft;
-  const items = [...entries.values()].sort((a,b) => b.createdAt - a.createdAt).map(entry => {
+  const ordered = [...entries.values()].sort((a,b) => b.createdAt - a.createdAt);
+  const selectedIndex = showSelected ? ordered.findIndex(entry => entry.id === selectedID) : -1;
+  if (selectedIndex >= 0 && phone.matches) historyPage = Math.floor(selectedIndex / historyPageSize);
+  historyPage = Math.min(historyPage, Math.max(0, Math.ceil(ordered.length / historyPageSize) - 1));
+  const offset = historyPage * historyPageSize;
+  const visible = phone.matches ? ordered.slice(offset, offset + historyPageSize) : ordered;
+  const items = visible.map(entry => {
     const item = document.createElement('button');
     item.type = 'button';
     item.dataset.photo = entry.id;
@@ -433,6 +443,11 @@ function sync() {
   app.querySelector('.header-import').hidden = showingSample;
   app.querySelector('[data-history]').hidden = !historyOpen || entries.size === 0;
   app.querySelector('[data-history-count]').textContent = entries.size;
+  app.querySelectorAll('[data-history-step]').forEach(node => {
+    const next = historyPage + Number(node.dataset.historyStep);
+    node.hidden = !phone.matches || entries.size <= historyPageSize;
+    node.disabled = removing || next < 0 || next * historyPageSize >= entries.size;
+  });
   const historyToggle = app.querySelector('[data-action=toggleHistory]');
   historyToggle.hidden = entries.size === 0;
   historyToggle.setAttribute('aria-expanded', historyOpen);
@@ -491,7 +506,10 @@ function exportImage() {
 const actions = {
   open: () => fileInput.click(),
   tutorial: () => guide.showModal(),
-  toggleHistory: () => { historyOpen = !historyOpen; },
+  toggleHistory: () => {
+    historyOpen = !historyOpen;
+    if (historyOpen && phone.matches) refreshHistory({showSelected: true});
+  },
   collapse: () => {
     stage.querySelector('[data-panel-button=' + state.panel + ']').focus({preventScroll: true});
     setPanel('grid');
@@ -526,10 +544,14 @@ const actions = {
   },
 };
 stage.addEventListener('click', event => {
-  const pressed = event.target.closest('[data-action], [data-axis], [data-panel-button], [data-photo]');
+  const pressed = event.target.closest('[data-action], [data-axis], [data-panel-button], [data-photo], [data-history-step]');
   if (!pressed) return;
-  const {action, axis, step, panelButton, photo: id} = pressed.dataset;
+  const {action, axis, step, panelButton, historyStep, photo: id} = pressed.dataset;
   if (action) actions[action]();
+  if (historyStep) {
+    historyPage += Number(historyStep);
+    refreshHistory();
+  }
   if (id) {
     historyOpen = false;
     stage.querySelector('[data-action=toggleHistory]').focus({preventScroll: true});
@@ -588,6 +610,7 @@ fileInput.addEventListener('change', async () => {
     }
   }
   importing = false;
+  if (first) historyPage = 0;
   refreshHistory();
   if (first) {
     openPhoto(first, true);
@@ -670,6 +693,7 @@ stage.addEventListener('pointermove', event => {
 
 function updateLayout() {
   stage.firstElementChild.classList.toggle('mobile', phone.matches);
+  refreshHistory({showSelected: true});
   sync();
 }
 stage.innerHTML = editor();

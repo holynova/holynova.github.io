@@ -72,17 +72,16 @@ canvas[data-edit=true] { cursor: crosshair; touch-action: none; }
 }
 .workbody { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0,1fr) clamp(280px, 24vw, 326px); }
 .workstage {
-  --paper: #303630; --ink: #f6f8f3; --muted: #c5cdc3; --line: #505950;
-  --control: #3b433a; --accent: #c1dfbd; --on-accent: #162718; --selected: #c9e1c8;
+  --paper: #fafbf9; --line: #d5ddd4;
   min-height: 0; min-width: 0; display: flex; flex-direction: column;
-  gap: 12px; padding: 12px 18px 18px; background: #222722; color: var(--ink);
+  gap: 12px; padding: 12px 18px 18px; background: #edf0ec; color: var(--ink);
 }
 .worktop, .preview-actions { display: flex; align-items: center; gap: 6px; }
 .worktop { min-height: 40px; justify-content: space-between; }
 .preview-actions { margin-inline-start: auto; flex: none; }
 .worktop .filename { padding-inline: 4px; font-size: 13px; }
 .worktop .btn[aria-pressed=true], .worktop .btn[aria-expanded=true] {
-  background: var(--selected); color: var(--on-accent); border-color: transparent;
+  background: var(--selected); color: var(--accent); border-color: transparent;
 }
 .worktop .btn { padding-inline: 11px; }
 .workstage .main-image {
@@ -91,7 +90,7 @@ canvas[data-edit=true] { cursor: crosshair; touch-action: none; }
 }
 .workstage .image-wrap {
   width: min(100cqw, calc(100cqh * var(--photo-ratio, 1)));
-  box-shadow: 0 8px 32px #111a, 0 0 0 1px #ffffff18;
+  box-shadow: 0 7px 25px #253a291c, 0 0 0 1px #253a2925;
 }
 .sample-guide {
   align-self: center; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
@@ -140,8 +139,10 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
   --accent: #294b35; --on-accent: #fff; --selected: #deeadf;
   display: flex; flex-direction: column;
 }
+.app.mobile { min-height: 0; }
 .mobile .app-head {
-  min-height: 60px; padding: max(7px, env(safe-area-inset-top)) 12px 7px;
+  min-height: 54px;
+  padding: max(5px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 5px max(12px, env(safe-area-inset-left));
   gap: 10px;
 }
 .mobile .brand { gap: 8px; }
@@ -152,13 +153,16 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 .mobile .head-actions .btn { min-height: 42px; padding-inline: 10px; font-size: 12px; }
 .mobile .head-actions .btn svg { width: 14px; height: 14px; }
 .mobile .workbody { display: flex; flex-direction: column; }
-.mobile .workstage { flex: 1; min-height: 0; padding: 7px 8px 10px; gap: 8px; }
-.mobile .worktop { padding-inline: 4px; min-height: 38px; }
-.mobile .worktop .btn { min-height: 38px; padding-inline: 9px; }
+.mobile .workstage {
+  flex: 1; min-height: 0; gap: 6px;
+  padding: 5px max(8px, env(safe-area-inset-right)) 7px max(8px, env(safe-area-inset-left));
+}
+.mobile .worktop { padding-inline: 4px; min-height: 36px; }
+.mobile .worktop .btn { min-height: 36px; padding-inline: 9px; }
 .mobile .worktop .filename { padding-inline: 0; }
 .mobile .worktop .filename [data-filename] { max-width: none; }
 .mobile .worktop .filename svg { display: none; }
-.mobile .sample-guide .btn { min-height: 40px; }
+.mobile .sample-guide .btn { min-height: 38px; }
 .tool-head { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); }
 .tool-switch { display: flex; gap: 17px; }
 .tool-switch button {
@@ -170,10 +174,11 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 .tool-switch svg { width: 16px; height: 16px; }
 .tool-head .btn { min-height: 44px; }
 .tool-panel { display: grid; align-content: start; min-height: 177px; gap: 12px; padding-top: 12px; }
-.mobile .layout-controls { gap: 8px; }
-.mobile .layout-row { grid-template-columns: 48px minmax(0,1fr); gap: 8px; }
+.mobile .layout-controls { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; }
+.mobile .layout-row { grid-template-columns: minmax(0,1fr); gap: 4px; }
+.mobile .control-label { padding-inline-start: 2px; }
 .mobile .stepper { grid-template-columns: 44px minmax(0,1fr) 44px; }
-.mobile .stepper button { min-height: 40px; }
+.mobile .stepper button { min-height: 44px; }
 .tool-sliders { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 19px; }
 .tool-sliders .field { gap: 0; }
 .tool-sliders input { height: 33px; }
@@ -225,8 +230,14 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 #share-dialog .dialog-actions { flex-wrap: wrap; }
 .mobile .head-actions .share-button { padding-inline: 0; }
 .mobile .head-actions .share-button svg { display: block; }
-.mobile .filmstrip button { flex-basis: 72px; }
-.mobile .filmstrip img { height: 40px; }
+.mobile .history { gap: 4px; }
+.mobile .filmstrip {
+  display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
+  overflow: visible; gap: 5px; padding-inline: 2px;
+}
+.mobile .filmstrip img { height: 34px; }
+.history .history-arrow { min-width: 38px; padding-inline: 0; font-size: 19px; }
+.history [data-action=remove] { min-width: 48px; }
 
 .inspector .tool-switch { gap: 10px; }
 .inspector .tool-switch button { white-space: nowrap; }
@@ -236,13 +247,19 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
 .inspector .tool-sliders { gap: 12px; }
 .mobile .inspector {
   background: var(--paper); border: 0; border-top: 1px solid var(--line); border-radius: 20px 20px 0 0;
-  flex: none; overflow: hidden; padding: 0 12px max(5px, env(safe-area-inset-bottom));
+  flex: none; overflow: visible;
+  padding: 0 max(10px, env(safe-area-inset-right)) max(5px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
 }
 .tool-actions { display: flex; align-items: center; gap: 4px; }
 .mobile .inspector .tool-panel {
-  padding-block: 9px 3px; min-height: 0; max-height: min(29dvh, 15rem); overflow-y: auto;
+  padding-block: 6px 4px; min-height: 0; gap: 6px;
 }
 .mobile .inspector .tool-switch { flex: 1; justify-content: space-around; }
+.mobile .tool-switch button { padding-inline: 10px; }
+.mobile .tool-sliders input { height: 32px; }
+.mobile .subject-card { grid-template-columns: 36px minmax(0, 1fr); }
+.mobile .subject-card .subject-icon { height: 36px; }
+.mobile .mask-instruction { margin-top: 0; }
 .mobile .inspector [data-action=collapse] svg { display: block; }
 .mobile .inspector .editor-footer { display: none; }
 
@@ -260,4 +277,24 @@ dialog h2 { font-size: 21px; letter-spacing: -.04em; }
   .guide-steps strong { font-size: 12px; }
   .guide-steps p { font-size: 12px; }
   .guide-steps img { border-radius: 5px; }
+}
+
+@media (orientation: landscape) and (max-height: 480px) {
+  .mobile .workbody { display: grid; grid-template-columns: minmax(0, 1fr) minmax(262px, 42vw); }
+  .mobile .inspector {
+    border-radius: 0; border: 0; border-left: 1px solid var(--line);
+    padding-left: 10px;
+  }
+  .mobile .workstage { padding-right: 8px; }
+  .mobile .tool-switch button { padding-inline: 4px; }
+  .mobile .stepper { grid-template-columns: 40px minmax(0,1fr) 40px; }
+}
+@media (max-height: 440px) {
+  #guide-dialog { padding: 11px 14px; }
+  .guide-steps { margin-block: 9px; }
+  .guide-steps img { height: 72px; object-fit: cover; }
+  #share-dialog .share-preview canvas { width: min(100%, 108px); }
+  #share-dialog { padding: 12px; }
+  #share-dialog .share-preview { margin-block: 7px; }
+  .mobile .sample-guide .btn { min-height: 36px; }
 }
