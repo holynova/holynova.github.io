@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MOBILE-QA</title><style>body{max-width:980px;margin:32px auto;padding:20px;background:#fff3ce;color:#49351f;font:16px/1.7 system-ui}pre{white-space:pre-wrap;font:inherit}a{color:#527b2f}</style><a href="index.html">← 返回验收报告</a><pre># 固定移动端验收流程
+
+1. 安装依赖，运行 `npm run check:runtime &amp;&amp; npm run check:design &amp;&amp; npm run test:game &amp;&amp; npm run build &amp;&amp; npm run test:sites`。
+2. 准备已安装的 Ego Browser，先阅读 `ego-browser skill`。执行 `npm run test:mobile`，脚本会检查本地预览并在缺失时限时启动，不会无限等待。使用 `GARDEN_QA_URL` 可指定另一个 DEV 预览地址（必须保留 DEV 测试钩子）。
+3. 脚本使用单个 TaskSpace，逐一模拟 12 个手机视口与横屏/安全区配置，各覆盖 14 个场景：营地、音乐面板、选关、准备、战斗、Boss、进化、升级、暂停、本局植物、结算、图鉴、商店、永久成长。DPR 默认 2；正式 Canvas 同样封顶 2。
+4. 每个场景检查原生全屏、无横向溢出、图片成功解码、主要控件边界、按钮高度。逐场景保留 PNG、JSON；HTML 使用 WebP，链接可查看完整截图。报告输出 `docs/reports/mobile/index.html`。失败会保留已完成场景并使命令返回非零。
+5. 在浏览器打开 HTML，依次筛选尺寸与场景，人工确认画面、文字遮挡、画稿风格；特别检查 320 宽、短视口和横屏。HTML 不是自动证明视觉质量。
+6. 性能使用 DEV `window.__gardenQA.benchmark(&#39;normal&#39;|&#39;ceiling&#39;|&#39;extreme&#39;)`，实际调用生产模拟和渲染。先启动一局，再以异步任务启动 benchmark，并轮询结果，避免跨浏览器 evaluate 的 15 秒超时。通过 CDP `Emulation.setCPUThrottlingRate` 设置 1 或 4。完成后恢复为 1，并使用 `stopBenchmark()` 或重新加载。
+7. 性能结果保存 `optimized.json` / `optimized-4x.json`；旧版基线为 `baseline.json` / `baseline-4x.json`。运行 `npm run report:mobile` 重建 HTML。对比必须使用相同种子、视口、DPR、实体数量和宿主。样本少于 60 不通过，不用 0 ms 表示流畅。
+
+视口代表：320×568（旧款小屏）、360×640（紧凑 Android）、375×667（iPhone SE 类）、390×844 / 393×852（常见 iPhone）、412×915（Pixel 类）、430×932（大屏 iPhone）、360×560（浏览器工具栏压缩），另含 667×375 / 844×390 横屏、两种安全区。这里只是 Chromium 尺寸模拟，不能替代 Safari、Android 真机、热降频或手感验收。
+
+固定密度压力场景：normal 50 怪 / 80 弹 / 20 敌弹；ceiling 160 / 240 / 80；extreme 320 / 800 / 160（刻意超过正式上限）。每帧补齐、回收实体，怪物高生命，避免测试因清场变轻。总脚本时间含夹具维护、真实模拟和 Canvas 调用，不含独立 React HUD / 音频开销；实际 rAF 间隔另外记录，以反映合成与调度压力。不要把此测试直接称为实体手机 FPS。
+
+`GARDEN_QA_SPACE` 可复用当前任务的 TaskSpace，此时调用方负责最后单独 finish。没有此变量时脚本创建并关闭自己的空间。禁止并行操作同一浏览器页。
+
+自动化性能入口：预览服务可用后执行 `npm run test:performance`。每个场景都刷新页面，防止前一场景影响后续资源与采样；每帧固定实体规模，结果和现场截图逐项落盘。若热身未完成，查看返回的 elapsedMs / totalFrames / diagnostic，不把缺失数据记为零耗时。
+</pre></html>

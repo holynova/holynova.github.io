@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16",
+  "lastUpdated": "2026-11-17",
   "totalRepos": 145,
   "categories": [
     {
@@ -1886,14 +1886,14 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "手机幸存者：自由触控、大地图卷动、26 种植物、15 类敌人、金币钻石解锁与永久成长、原版原声播放器",
-            "en": "Mobile survivor with free-position touch controls, large scrolling worlds, 26 plants, 15 enemy types, coin/diamond unlocks and the official soundtrack player"
+            "zh": "手机幸存者：自由触控、大地图、26 种植物与 15 类敌人；统一后院设计系统、地面战斗特效，附 168 场景移动端验收报告",
+            "en": "Mobile garden survivor with 26 plants, 15 enemy types, shared design tokens, ground combat effects and a 168-scene mobile QA report"
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
           "screenshot": "screenshots/plant-survivors-ui.png",
-          "pushed_at": "2026-11-16",
-          "commit_time": "2026-11-16T22:44:54+08:00",
+          "pushed_at": "2026-11-17",
+          "commit_time": "2026-11-17T06:47:18+08:00",
           "hidden": false
         },
         {
