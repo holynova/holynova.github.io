@@ -4,11 +4,17 @@ import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const gallery = resolve(process.argv[2] || join(root, '../xiaosang-gallery/dist'));
+const portfolioOnly = process.argv.includes('--portfolio-only');
+const gallery = resolve((portfolioOnly ? null : process.argv[2]) || join(root, '../xiaosang-gallery/dist'));
 const directory = join(root, '.cloudflare-build');
 const route = 'xiaosang-gallery';
-const receipt = JSON.parse(readFileSync(join(gallery, 'release.json'), 'utf8'));
-if (receipt.project !== route || !/^[a-f0-9]{40}$/.test(receipt.commit) || !receipt.works) {
+// Explicit archive-only publishing is safe only while the external gallery is absent online.
+if (portfolioOnly) {
+  const response = await fetch('https://xiaosang.cc/xiaosang-gallery/', {redirect:'follow', signal:AbortSignal.timeout(15000)});
+  if (response.status !== 404) throw new Error('Preserve the live gallery: supply its full production build instead');
+}
+const receipt = portfolioOnly ? null : JSON.parse(readFileSync(join(gallery, 'release.json'), 'utf8'));
+if (!portfolioOnly && (receipt.project !== route || !/^[a-f0-9]{40}$/.test(receipt.commit) || !receipt.works)) {
   throw new Error('Expected the xiaosang-gallery production build and source commit');
 }
 
@@ -42,6 +48,7 @@ try {
   mkdirSync(stage);
   execFileSync('git', ['archive', '--format=tar', '--output', archive, 'HEAD'], { cwd: root });
   execFileSync('tar', ['-xf', archive, '-C', stage]);
+  if (!portfolioOnly) {
   const galleryTarget = join(stage, route);
   if (existsSync(galleryTarget)) throw new Error(`Existing portfolio route conflicts with /${route}/`);
   placeTree(gallery, galleryTarget);
@@ -52,6 +59,7 @@ try {
   const headers = join(stage, '_headers');
   const oldHeaders = existsSync(headers) ? readFileSync(headers, 'utf8').trimEnd() : '';
   writeFileSync(headers, [oldHeaders, galleryHeaders].filter(Boolean).join('\n\n') + '\n');
+  }
   const files = filesIn(stage);
   if (files.length > 20_000 || files.some(file => lstatSync(file).size > 25 * 1024 ** 2)) {
     throw new Error(`Staged portfolio exceeds Workers Static Assets limits (${files.length} files)`);
@@ -65,8 +73,8 @@ try {
   }
   console.log(JSON.stringify({
     portfolio: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
-    gallery: receipt.commit,
-    version: receipt.version,
+    gallery: receipt?.commit ?? null,
+    version: receipt?.version ?? null,
     files: files.length,
   }));
 } finally {

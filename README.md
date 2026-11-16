@@ -262,3 +262,9 @@ npx http-server -p 8080
 [![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://xiaosang.cc/)
 
 移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://xiaosang.cc/>
+
+### 仅发布已提交作品
+
+图库外部产物不存在且线上 `/xiaosang-gallery/` 返回 404 时，可显式运行 `node scripts/stage-cloudflare.mjs --portfolio-only`；它从当前 master 的 Git archive 构建全部已提交页面，保留其他项目。图库一旦上线，此模式会拒绝发布，必须提供图库完整产物。
+
+上海地铁页面位于 `shanghai-metro-night/`，从 `holynova/shanghai-metro-night` 的 main/dist 同步；来源提交记录在该目录 release.json。
