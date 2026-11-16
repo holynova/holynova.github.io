@@ -1868,14 +1868,14 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "花园生存游戏：逐帧角色动作、受击与死亡、升级进化、首领重击、战斗音效与配乐",
-            "en": "Garden survival game with animated characters, hit and death reactions, evolution, boss slams, combat audio and music"
+            "zh": "花园生存游戏：三位主角、精英波次与狂暴首领、植物图鉴、攻击冷却、回旋弹道及战斗音效",
+            "en": "Garden survivor with three heroes, elite waves, enraging bosses, field guide, cooldown HUD, returning projectiles and combat audio"
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
           "screenshot": "screenshots/plant-survivors-ui.png",
           "pushed_at": "2026-11-16",
-          "commit_time": "2026-11-16T19:22:03+08:00",
+          "commit_time": "2026-11-16T20:17:06+08:00",
           "hidden": false
         },
         {
