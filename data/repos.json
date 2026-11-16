@@ -1914,13 +1914,13 @@
           "name": "mafa-survivor",
           "lang": "TypeScript",
           "desc": {
-            "zh": "玛法幸存者：战法道三职业、33种技能六级成长、十章地图与装备构筑，含快速测试模式。Alpha版，职业与章节平衡仍在完善。",
-            "en": "Mafa Survivor: three classes, 33 skills with six ranks, ten chapters, equipment builds and quick test mode. Alpha; class and chapter balance are in progress."
+            "zh": "手机优先的玛法幸存者：三职业、33种技能八级成长、十地图与最终首领，原版模式保留。",
+            "en": "Mobile-first Mafa Survivor: three classes, 33 eight-rank skills, ten maps and final bosses. Original mode retained."
           },
           "url": "https://github.com/holynova/mafa-survivor",
-          "homepage": "https://xiaosang.cc/mafa-survivor/",
+          "homepage": "https://xiaosang.cc/mafa-survivor/?survivor",
           "screenshot": "screenshots/mafa-survivor.png",
-          "pushed_at": "2026-11-02",
+          "pushed_at": "2026-11-16",
           "commit_time": "2026-11-02T22:55:39+08:00",
           "hidden": false
         },

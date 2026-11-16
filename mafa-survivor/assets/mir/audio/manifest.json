@@ -41,6 +41,7 @@
     "trap": "04000100.WAV",
     "groupHeal": "040001D0.WAV",
     "beast": "040001E0.WAV",
+    "coin": "0102006A.WAV",
     "step": "01000001.WAV",
     "attack": "01010034.WAV",
     "unarmed": "01010039.WAV",
@@ -178,6 +179,13 @@
       "sha1": "ba1bbf4597cc8fd9bad221d6ae0f80471e805b62",
       "sha256": "068b2c928df12cb4d7bbca92307dc1236714f17bbc2108384db705b2640cbca2",
       "bytes": 35912,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "0102006A.WAV": {
+      "sourcePath": "sound/seff/0102006A.WAV",
+      "sha1": "8af5b38bd7aee939bdf2cd39fe430ed5c8c2d489",
+      "sha256": "c4d177ce8874a10494e4d135650812724c99dcef21eb42eb0601b486a0d15057",
+      "bytes": 65364,
       "permissionStatus": "project_owner_authorized"
     },
     "0103008A.WAV": {
@@ -1122,6 +1130,12 @@
   "missing": [
     "beastflame"
   ],
+  "coinSoundReference": {
+    "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
+    "sourcePath": "client/src/soundeffectdb.cpp",
+    "sha256": "c531cfce810fe6f36eb1c59d56a53a35fb65b23646b7a5513e36c31dc721357c",
+    "note": "s_money = 106.wav; system sound bank 0x01020000 + 106 = 0102006A.WAV"
+  },
   "monsterSoundReference": {
     "references": {
       "client/src/clientmonster.cpp": {

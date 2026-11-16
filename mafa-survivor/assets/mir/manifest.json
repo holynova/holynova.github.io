@@ -628177,5 +628177,303 @@
       "frame": "ui/ornament"
     }
   },
-  "authorizationEvidence": "docs/asset-authorization.json"
+  "authorizationEvidence": "docs/asset-authorization.json",
+  "skillIcons": {
+    "repository": "https://github.com/etorth/mir2x_res",
+    "ref": "9e21ea6631317d06e064fbfa7e1ea43af6a2d3e6",
+    "mappingSource": "https://github.com/etorth/mir2x/blob/bb6a22287abcd9f248d2aba755074c254c68787a/client/src/gui/skillboard/skillboard.hpp",
+    "frames": {
+      "fireball": {
+        "file": "ui/skills/fireball.png",
+        "sourcePath": "texture/proguse/05001000.PNG",
+        "sourceName": "火球术",
+        "sha1": "20b48e297318d5d022b80431c9a5500367eec1ba",
+        "sha256": "ba60ef2897a64744672308af334f414eeb837682c3edea635dc6389a9246b806",
+        "width": 40,
+        "height": 40
+      },
+      "lightning": {
+        "file": "ui/skills/lightning.png",
+        "sourcePath": "texture/proguse/0500100A.PNG",
+        "sourceName": "雷电术",
+        "sha1": "37a7273b5f0d7524224225826cdbb089aa700f06",
+        "sha256": "a49f0a343f79405585740590247cbf3d1cbf8305c2146f2e6102ef14c7a88d16",
+        "width": 40,
+        "height": 40
+      },
+      "firewall": {
+        "file": "ui/skills/firewall.png",
+        "sourcePath": "texture/proguse/05001015.PNG",
+        "sourceName": "火墙",
+        "sha1": "d4df3852661cc638978f339b268529c570b0deee",
+        "sha256": "b942d050426499b32df123b3cc7da205f3d1be46dd50135e59d5d73bf66d80c9",
+        "width": 40,
+        "height": 40
+      },
+      "shield": {
+        "file": "ui/skills/shield.png",
+        "sourcePath": "texture/proguse/0500101D.PNG",
+        "sourceName": "魔法盾",
+        "sha1": "8ebfe8df4306cac8f30fd57516176c53e97444c0",
+        "sha256": "c4286358509e0f7db72bf06fea2954f4dc99ef1079bd864edb874a171de74853",
+        "width": 40,
+        "height": 40
+      },
+      "repulse": {
+        "file": "ui/skills/repulse.png",
+        "sourcePath": "texture/proguse/05001007.PNG",
+        "sourceName": "抗拒火环",
+        "sha1": "12aca6e31504fff7ebe84ad6733fdb1a88bd07cb",
+        "sha256": "cdba6c7f9e8bcac0531e5eda42c1b9e4ba67d0142f0ee8cc7daa2507f22d2ed5",
+        "width": 40,
+        "height": 40
+      },
+      "hellfire": {
+        "file": "ui/skills/hellfire.png",
+        "sourcePath": "texture/proguse/05001008.PNG",
+        "sourceName": "地狱火",
+        "sha1": "1581df3cec0075b4fc49736e709ee20feb004948",
+        "sha256": "1b7e9ea4b0562ec1ee4c242eeaa743418db85c89fbc71a40e530711389569d76",
+        "width": 40,
+        "height": 40
+      },
+      "bigfireball": {
+        "file": "ui/skills/bigfireball.png",
+        "sourcePath": "texture/proguse/05001004.PNG",
+        "sourceName": "大火球",
+        "sha1": "5a5941552af0bfc821640c7704fe4c152311b101",
+        "sha256": "70a1dd8c56ec4aeaf4bd040c751784678277c3083714876de8877dc8ada79f29",
+        "width": 40,
+        "height": 40
+      },
+      "teleport": {
+        "file": "ui/skills/teleport.png",
+        "sourcePath": "texture/proguse/05001014.PNG",
+        "sourceName": "瞬息移动",
+        "sha1": "b6b0df025a271338090bdfa99434e2614cd64283",
+        "sha256": "b2d6bee32085d153dfe2acc93fb841f0142893aac7f4685aebef6eebcb29b266",
+        "width": 40,
+        "height": 40
+      },
+      "explosion": {
+        "file": "ui/skills/explosion.png",
+        "sourcePath": "texture/proguse/05001016.PNG",
+        "sourceName": "爆裂火焰",
+        "sha1": "44b9cac52092b7f275925b7a02cd3032db4703ed",
+        "sha256": "0e78e36e7545ec3ba751141a59e2020f7ff5fbee7ce4c3c3daa9394f7e2d7a0e",
+        "width": 40,
+        "height": 40
+      },
+      "beam": {
+        "file": "ui/skills/beam.png",
+        "sourcePath": "texture/proguse/05001009.PNG",
+        "sourceName": "疾光电影",
+        "sha1": "00f4e6f69a12d35b099e606ebd95dd89a430a3c6",
+        "sha256": "670ad8e4b19342c98834a296897e8df14a33cb57fae65a21a6102ba5cd4b94b2",
+        "width": 40,
+        "height": 40
+      },
+      "nova": {
+        "file": "ui/skills/nova.png",
+        "sourcePath": "texture/proguse/05001017.PNG",
+        "sourceName": "地狱雷光",
+        "sha1": "c75f984e4beeb0df5bfc84b069ecffe40e323d3e",
+        "sha256": "08e1d00a0bd66c9b011e7cca2ae06d33125a64d4c7387059724c434e10eac393",
+        "width": 40,
+        "height": 40
+      },
+      "holy": {
+        "file": "ui/skills/holy.png",
+        "sourcePath": "texture/proguse/0500101E.PNG",
+        "sourceName": "圣言术",
+        "sha1": "f13a3966a9ee43bdcea1ad67700235d4a54ef37e",
+        "sha256": "523717ff053543dd6c939dd6e8a571d01fedd5efa0953af8315b3d4ecdc708c2",
+        "width": 40,
+        "height": 40
+      },
+      "ice": {
+        "file": "ui/skills/ice.png",
+        "sourcePath": "texture/proguse/0500101F.PNG",
+        "sourceName": "冰咆哮",
+        "sha1": "07e6ea1217517b6f5789f2067a227c4cad57b914",
+        "sha256": "c9e032e78cf0305918ffe284631d5018221f05eadc8b498cc390fea86fc4bdf2",
+        "width": 40,
+        "height": 40
+      },
+      "charm": {
+        "file": "ui/skills/charm.png",
+        "sourcePath": "texture/proguse/05001013.PNG",
+        "sourceName": "诱惑之光",
+        "sha1": "d730958357de948d4d0261bcb3afb7f932a90d33",
+        "sha256": "8f805e676b98baec29cfcd3111892ace3ba41f80ecee2e1ce03d70256130f44d",
+        "width": 40,
+        "height": 40
+      },
+      "swordsmanship": {
+        "file": "ui/skills/swordsmanship.png",
+        "sourcePath": "texture/proguse/05001002.PNG",
+        "sourceName": "基本剑术",
+        "sha1": "aa906b2e94bba912e4f9a58a54b50a5e432f8b0f",
+        "sha256": "5938bf1dff43b0087fe8150b58c8e59608a5b07ce59d24203b1bd9286c7f6087",
+        "width": 40,
+        "height": 40
+      },
+      "powerstrike": {
+        "file": "ui/skills/powerstrike.png",
+        "sourcePath": "texture/proguse/05001006.PNG",
+        "sourceName": "攻杀剑术",
+        "sha1": "09d0bae6362fc90c7ecc70eeaa8aa886ed5b2702",
+        "sha256": "a8817eda5927613308e95d260b00a008999a3b36d7644c48725930ccfce0a48c",
+        "width": 40,
+        "height": 40
+      },
+      "thrust": {
+        "file": "ui/skills/thrust.png",
+        "sourcePath": "texture/proguse/0500100B.PNG",
+        "sourceName": "刺杀剑术",
+        "sha1": "6f49fc016ab380f7aa73a19a7cf8808b55a9a1bc",
+        "sha256": "2711cc3c857b522056fb0d2e8fe86da3f3dd3c848081b6a802e7049903c33aaf",
+        "width": 40,
+        "height": 40
+      },
+      "cleave": {
+        "file": "ui/skills/cleave.png",
+        "sourcePath": "texture/proguse/05001018.PNG",
+        "sourceName": "半月弯刀",
+        "sha1": "cd3d389a3762d63a87076cce4700d88d65b9f6d0",
+        "sha256": "0686152f3bbd603611e5b5886bdf2a8eeb350550e11a263d7547b3b00081fe4a",
+        "width": 40,
+        "height": 40
+      },
+      "dash": {
+        "file": "ui/skills/dash.png",
+        "sourcePath": "texture/proguse/0500101A.PNG",
+        "sourceName": "野蛮冲撞",
+        "sha1": "3ef87fcc2ba62156b87729bdd0e621a6609e8554",
+        "sha256": "a7b50608b72a6019ffac6aadd00258d7749b9f64e22efb63ba63704f132efc1a",
+        "width": 40,
+        "height": 40
+      },
+      "firesword": {
+        "file": "ui/skills/firesword.png",
+        "sourcePath": "texture/proguse/05001019.PNG",
+        "sourceName": "烈火剑法",
+        "sha1": "d272aab4f16e8370a8041bbef5d11e21a5ac758f",
+        "sha256": "a02e4f349d7fd2fc23bf88a7087336aa9f60b2d460c68053cecad640de9d64eb",
+        "width": 40,
+        "height": 40
+      },
+      "heal": {
+        "file": "ui/skills/heal.png",
+        "sourcePath": "texture/proguse/05001001.PNG",
+        "sourceName": "治愈术",
+        "sha1": "eedeb068eceb744fe53499359760c80989ba4e3f",
+        "sha256": "91aad5ecfa97215ad8de730eb1e6e1b64f31a05657dc1d0d628a17f8477f4d97",
+        "width": 40,
+        "height": 40
+      },
+      "spirit": {
+        "file": "ui/skills/spirit.png",
+        "sourcePath": "texture/proguse/05001003.PNG",
+        "sourceName": "精神力战法",
+        "sha1": "aa906b2e94bba912e4f9a58a54b50a5e432f8b0f",
+        "sha256": "5938bf1dff43b0087fe8150b58c8e59608a5b07ce59d24203b1bd9286c7f6087",
+        "width": 40,
+        "height": 40
+      },
+      "poison": {
+        "file": "ui/skills/poison.png",
+        "sourcePath": "texture/proguse/05001005.PNG",
+        "sourceName": "施毒术",
+        "sha1": "0e77a60298b82b41b4d4a83aa4beb5ec694d7d36",
+        "sha256": "0c7b4328c082aad5a13500bf877e32ced19c9b8920b5f73ffe9f956417019aca",
+        "width": 40,
+        "height": 40
+      },
+      "talisman": {
+        "file": "ui/skills/talisman.png",
+        "sourcePath": "texture/proguse/0500100C.PNG",
+        "sourceName": "灵魂火符",
+        "sha1": "76e656982aa3644c270c88a718274054eb25dc18",
+        "sha256": "d3d211eb460de34425bd62e45dec2391d2e55cc69e8526841735bce8bf276577",
+        "width": 40,
+        "height": 40
+      },
+      "skeleton": {
+        "file": "ui/skills/skeleton.png",
+        "sourcePath": "texture/proguse/0500103B.PNG",
+        "sourceName": "召唤骷髅",
+        "sha1": "6d37ae1175136a89719877f772e5cbbd06fd6313",
+        "sha256": "914f98db98173d2d32421229433360f58ac77f010be9af23089867633d4c8f91",
+        "width": 40,
+        "height": 40
+      },
+      "invisible": {
+        "file": "ui/skills/invisible.png",
+        "sourcePath": "texture/proguse/05001011.PNG",
+        "sourceName": "隐身术",
+        "sha1": "cbfa40216889d521f791928be9bd83f94b96d237",
+        "sha256": "f6b007359f3c4a82f00653454577be8e981108fbd5520b33ce6c9b94e2e1db8c",
+        "width": 40,
+        "height": 40
+      },
+      "groupInvisible": {
+        "file": "ui/skills/groupInvisible.png",
+        "sourcePath": "texture/proguse/05001012.PNG",
+        "sourceName": "集体隐身术",
+        "sha1": "27ea856094c683be1e8a80a94f24a19884b4e5db",
+        "sha256": "111c38c61e44af6c582be716b464e1a051bd3ce8062523b711294cd384e3ca99",
+        "width": 40,
+        "height": 40
+      },
+      "ghost": {
+        "file": "ui/skills/ghost.png",
+        "sourcePath": "texture/proguse/0500100D.PNG",
+        "sourceName": "幽灵盾",
+        "sha1": "04d0da0902953a3639a450be91d0b83c9ec5ed48",
+        "sha256": "6fe81e5ac5b7de9d72a796c29cc86725204bfcb79bd99fc3eadd867e215e6574",
+        "width": 40,
+        "height": 40
+      },
+      "armor": {
+        "file": "ui/skills/armor.png",
+        "sourcePath": "texture/proguse/0500100E.PNG",
+        "sourceName": "神圣战甲术",
+        "sha1": "de25eaae9852d38f36df3b1b26b7edd6cfb6b2f4",
+        "sha256": "80152b0874c3b3832b4e0e353ee90c785907af55cc5b59daee56a6ae417abd11",
+        "width": 40,
+        "height": 40
+      },
+      "trap": {
+        "file": "ui/skills/trap.png",
+        "sourcePath": "texture/proguse/0500100F.PNG",
+        "sourceName": "困魔咒",
+        "sha1": "10eabd78dc91d529fd062c210e5b5c105ad73dda",
+        "sha256": "a43977997fb2ce9357e67dc923b629f6994e95a9ab9096631db71de9efb25fdc",
+        "width": 40,
+        "height": 40
+      },
+      "groupHeal": {
+        "file": "ui/skills/groupHeal.png",
+        "sourcePath": "texture/proguse/0500101B.PNG",
+        "sourceName": "群体治愈术",
+        "sha1": "5090b4caa8007ec7f62e3ea0849619b9d35ef907",
+        "sha256": "8e95e4896e6f6e8b1ab0b3850a1dc3ec2dad3009c173a18b208199bb2ffe9782",
+        "width": 40,
+        "height": 40
+      },
+      "beast": {
+        "file": "ui/skills/beast.png",
+        "sourcePath": "texture/proguse/0500101C.PNG",
+        "sourceName": "召唤神兽",
+        "sha1": "0879f3f84ae8f73beba809d7446388a375f44f1c",
+        "sha256": "852b66d25f163284ab5e2e4571feffeaf5b9f44209de93cb28ef0b6178f03339",
+        "width": 40,
+        "height": 40
+      }
+    },
+    "missing": {
+      "reveal": "心灵启示未出现在该固定源的技能按钮映射；显示文字「启」，不冒用其他技能图标。"
+    }
+  }
 }
