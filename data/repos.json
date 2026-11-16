@@ -1868,14 +1868,14 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "经典后院生存游戏：自动攻击、阳光升级、植物进化与三关首领战",
-            "en": "Garden survival game with auto-attacks, sunlight upgrades, plant evolution and three boss stages"
+            "zh": "花园生存游戏：逐帧角色动作、受击与死亡、升级进化、首领重击、战斗音效与配乐",
+            "en": "Garden survival game with animated characters, hit and death reactions, evolution, boss slams, combat audio and music"
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
           "screenshot": "screenshots/plant-survivors-ui.png",
           "pushed_at": "2026-11-16",
-          "commit_time": "2026-11-16T18:06:04+08:00",
+          "commit_time": "2026-11-16T19:22:03+08:00",
           "hidden": false
         },
         {

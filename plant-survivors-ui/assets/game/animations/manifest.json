@@ -1,0 +1,72 @@
+{
+  "dave": {
+    "frames": 16,
+    "cell": 192,
+    "anchor": [
+      0.5,
+      0.84
+    ],
+    "sharedScale": 0.5414012738853503,
+    "alphaMin": 0
+  },
+  "zombie": {
+    "frames": 16,
+    "cell": 192,
+    "anchor": [
+      0.5,
+      0.84
+    ],
+    "sharedScale": 0.5172413793103449,
+    "alphaMin": 0
+  },
+  "cone": {
+    "frames": 16,
+    "cell": 192,
+    "anchor": [
+      0.5,
+      0.84
+    ],
+    "sharedScale": 0.5016722408026756,
+    "alphaMin": 0
+  },
+  "bucket": {
+    "frames": 16,
+    "cell": 192,
+    "anchor": [
+      0.5,
+      0.84
+    ],
+    "sharedScale": 0.5208333333333334,
+    "alphaMin": 0
+  },
+  "boss-trim": {
+    "frames": 16,
+    "cell": 192,
+    "anchor": [
+      0.5,
+      0.84
+    ],
+    "sharedScale": 0.5136986301369864,
+    "alphaMin": 0
+  },
+  "plants": {
+    "frames": 16,
+    "cell": 192,
+    "anchor": [
+      0.5,
+      0.84
+    ],
+    "sharedScale": 0.5725190839694656,
+    "alphaMin": 0
+  },
+  "fx": {
+    "frames": 16,
+    "cell": 192,
+    "anchor": [
+      0.5,
+      0.84
+    ],
+    "sharedScale": 0.4854368932038835,
+    "alphaMin": 0
+  }
+}
