@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-16",
-  "totalRepos": 144,
+  "totalRepos": 145,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1635,6 +1635,24 @@
         "en": "Productivity"
       },
       "repos": [
+        {
+          "name": "shanghai-metro-night",
+          "title": {
+            "zh": "末班之后",
+            "en": "Shanghai Metro Night"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "上海地铁时间地图：14 条线路、338 站，按官方首末班逐段变灰，支持浅色与深色模式",
+            "en": "Explore 14 Shanghai Metro lines and 338 stations through official boarding timetables, with light and dark themes"
+          },
+          "url": "https://github.com/holynova/shanghai-metro-night",
+          "homepage": "https://xiaosang.cc/shanghai-metro-night/",
+          "screenshot": "screenshots/shanghai-metro-night.png",
+          "pushed_at": "2026-11-16",
+          "commit_time": "2026-11-16T20:23:54+08:00",
+          "hidden": false
+        },
         {
           "name": "hotspot-ledger",
           "title": {
