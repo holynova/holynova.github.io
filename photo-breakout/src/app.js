@@ -2,6 +2,9 @@ import {estimatePortrait} from './segment.js';
 import {addPhoto, listPhotos, readFile, readMask, removePhoto, saveMask, savePhoto} from './history.js';
 import {downloadBlob} from './download.js';
 import {openShare} from './share.js';
+import {clamp, cropDefaults, cropRect, dimensions, orientedCenter, ratios, resizeCrop, sourcePoint} from './geometry.js';
+import {drawGrid, gridModes} from './grid.js';
+import {adjustTone, drawCrop, drawOriented, resizeCanvas} from './picture.js';
 
 const icons = {
   logo: '<path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/><path d="m14 13 5-5" stroke-width="3"/>',
@@ -10,6 +13,10 @@ const icons = {
   save: '<path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/>',
   eye: '<path d="M2 12c4-7 16-7 20 0-4 7-16 7-20 0Z"/><circle cx="12" cy="12" r="2.5"/>',
   grid: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',
+  crop: '<path d="M7 2v15h15M2 7h15v15"/>',
+  rotateLeft: '<path d="M3 4v6h6M3.5 10a8.5 8.5 0 1 1 1 7"/>',
+  rotateRight: '<path d="M21 4v6h-6m5.5 0a8.5 8.5 0 1 0-1 7"/>',
+  mirror: '<path d="M12 3v18M9 5 3 18h6zm6 0 6 13h-6z"/>',
   brush: '<path d="m11 15 9-9a2.1 2.1 0 0 0-3-3l-9 9m3 3c0 4-4 6-8 5 2-1 1-3 2-5 1-2 4-3 6 0Z"/>',
   reset: '<path d="M3 11a9 9 0 1 1 2 7M3 5v6h6"/>',
   person: '<circle cx="12" cy="8" r="3"/><path d="M6 19c0-4 2-6 6-6s6 2 6 6M3 9V3h6m6 0h6v6m0 6v6h-6M3 15v6h6"/>',
@@ -27,13 +34,16 @@ function header() {
   return '<header class="app-head"><div class="brand"><div class="mark">' + icon('logo') + '</div><h1>破框</h1></div>' +
     '<div class="head-actions">' + button('open', '打开照片', 'folder') + button('share', '分享工具', 'share', 'icon-only share-button') + button('export', '导出 PNG', 'save', 'primary') + '</div></header>';
 }
-function layouts() {
-  return '<div class="layout-controls">' + [['rows', '横向'], ['columns', '纵向']].map(([axis,label]) =>
-    '<div class="layout-row"><span class="control-label">' + label + '</span><div class="stepper" role="group" aria-label="' + label + '格数">' +
+function options(values, key, label) {
+  return '<div class="option-row" role="group" aria-label="' + label + '">' +
+    Object.entries(values).map(([value, text]) => '<button type="button" class="btn" data-' + key +
+      '="' + value + '">' + text + '</button>').join('') + '</div>';
+}
+function stepper(axis, label) {
+  return '<div class="layout-row"><span class="control-label">' + label + '</span><div class="stepper" role="group" aria-label="' + label + '格数">' +
     '<button type="button" data-axis="' + axis + '" data-step="-1" aria-label="减少' + label + '格数">−</button>' +
     '<output data-count="' + axis + '" aria-live="polite"></output>' +
-    '<button type="button" data-axis="' + axis + '" data-step="1" aria-label="增加' + label + '格数">+</button></div></div>'
-  ).join('') + '</div>';
+    '<button type="button" data-axis="' + axis + '" data-step="1" aria-label="增加' + label + '格数">+</button></div></div>';
 }
 function field(key, label, min, max, step) {
   return '<div class="field"><div class="range-label"><label for="' + key + '">' + label +
@@ -42,15 +52,22 @@ function field(key, label, min, max, step) {
 }
 const widthControl = () => field('width', '线宽', .3, 4, .1);
 const insetControl = () => field('inset', '外框内缩', 1, 18, .5);
+const cropHandles = {nw: '左上', ne: '右上', sw: '左下', se: '右下', n: '上边', s: '下边', w: '左边', e: '右边'};
+function cropOverlay() {
+  return '<div class="crop-overlay" data-crop-overlay hidden><div class="crop-box" data-handle="move" tabindex="0" aria-label="裁切框，方向键移动">' +
+    Object.entries(cropHandles).map(([key, label]) =>
+      '<button type="button" class="crop-handle" data-handle="' + key + '" aria-label="调整裁切框' + label + '"></button>'
+    ).join('') + '</div></div>';
+}
 const fileName = () => '<div class="filename">' + icon('folder') + '<span data-filename></span></div>';
 function brushTools() {
   return button('add', '保留', null) + button('erase', '擦除', null) +
     button('undo', '撤销', 'reset', 'icon-only') + button('finish', '完成', null, 'primary');
 }
-function preview(mobile) {
+function preview() {
   return '<section class="workstage" aria-label="照片预览"><div class="worktop" data-worktop hidden>' + fileName() +
-    button('original', mobile ? '原图' : '查看原图', 'eye') + '</div>' +
-    '<div class="main-image"><div class="image-wrap" data-photo-wrap hidden><canvas data-image="result" role="img" aria-label="照片预览"></canvas></div>' +
+    button('original', '原图', 'eye') + '</div>' +
+    '<div class="main-image"><div class="image-wrap" data-photo-wrap hidden><canvas data-image="result" role="img" aria-label="照片预览"></canvas>' + cropOverlay() + '</div>' +
     '<div class="empty-photo" data-empty>' + icon('folder') + button('open', '打开照片', null, 'primary') +
     '<span class="subtle">可一次选择多张</span></div></div>' +
     '<section class="history" aria-label="编辑历史" data-history hidden><div class="history-head">' +
@@ -64,35 +81,54 @@ function subject() {
   return '<div class="subject-card"><span class="subject-icon">' + icon('person') + '</span>' +
     '<strong>人物蒙版</strong><span class="subtle" role="status" data-mask-status></span></div>';
 }
-function desktopEditor() {
-  return '<div class="app work">' + header() + '<main class="workbody">' + preview(false) +
-    '<aside class="inspector" aria-label="调整面板"><div class="inspector-title"><h2>调整</h2>' +
-    button('reset', '重置', 'reset', 'text') + '</div>' +
-    '<section aria-label="网格设置">' + layouts() + widthControl() + insetControl() + '</section>' +
-    '<section aria-label="人物蒙版">' + subject() + button('refine', '查看蒙版', 'brush', 'refine') +
-    '<div class="mobile-brush" data-brush-tools hidden>' + brushTools() + '</div></section>' +
-    footer() + '</aside></main></div>';
+const tools = {grid: ['网格', 'grid'], compose: ['构图', 'crop'], mask: ['蒙版', 'brush']};
+function gridTools() {
+  return options(gridModes, 'grid-mode', '网格样式') +
+    '<div class="layout-controls" data-grid-group="rect perspective">' + stepper('rows', '横向') + stepper('columns', '纵向') + '</div>' +
+    '<div class="layout-controls" data-grid-group="diagonal diamond" hidden>' + stepper('bands', '斜向') + '</div>' +
+    '<div data-grid-group="diagonal" hidden>' + field('angle', '斜线角度', -75, 75, 1) + '</div>' +
+    '<div data-grid-group="perspective" hidden>' + field('vanishing', '消失点位置', 10, 90, 1) + '</div>' +
+    '<div class="tool-sliders">' + widthControl() + insetControl() + '</div>';
 }
-function mobileEditor() {
-  return '<div class="app work mobile">' + header() + '<main class="workbody">' + preview(true) +
-    '<section class="mobile-tools" aria-label="调整面板">' +
+function compositionTools() {
+  return '<div class="layout-controls">' + options(ratios, 'ratio', '裁切比例') +
+    '<div class="compose-actions"><div class="option-row" role="group" aria-label="方向">' +
+    button('rotateLeft', '向左旋转 90°', 'rotateLeft', 'icon-only') +
+    button('rotateRight', '向右旋转 90°', 'rotateRight', 'icon-only') +
+    button('mirror', '水平镜像', 'mirror', 'icon-only') + '</div>' +
+    button('editFree', '调整裁切框', null) + button('applyFree', '应用裁切', null, 'primary') + '</div>' +
+    field('zoom', '缩放', 100, 400, 1) +
+    '<div class="tool-sliders">' + field('brightness', '亮度', -60, 60, 1) +
+    field('contrast', '对比度', -60, 60, 1) + '</div>' +
+    '<p class="subtle compose-hint" data-compose-hint>拖动照片调整位置 · 双指缩放</p></div>';
+}
+function editor() {
+  return '<div class="app work">' + header() + '<main class="workbody">' + preview() +
+    '<aside class="inspector" aria-label="调整面板">' +
     '<div class="tool-head"><div class="tool-switch" role="group" aria-label="编辑工具">' +
-    '<button type="button" data-panel-button="grid" aria-controls="mobile-grid">' + icon('grid') + '网格</button>' +
-    '<button type="button" data-panel-button="mask" aria-controls="mobile-mask">' + icon('brush') + '蒙版</button></div>' +
-    button('reset', '重置', 'reset', 'text') + '</div>' +
-    '<div id="mobile-grid" class="tool-panel" data-panel="grid">' + layouts() +
-    '<div class="tool-sliders">' + widthControl() + insetControl() + '</div></div>' +
-    '<div id="mobile-mask" class="tool-panel" data-panel="mask" hidden>' + subject() +
+    Object.entries(tools).map(([key, [label, symbol]]) =>
+      '<button type="button" data-panel-button="' + key + '" aria-controls="tool-' + key + '">' + icon(symbol) + label + '</button>'
+    ).join('') + '</div>' + button('reset', '重置', 'reset', 'text') + '</div>' +
+    '<div id="tool-grid" class="tool-panel" data-panel="grid">' + gridTools() + '</div>' +
+    '<div id="tool-compose" class="tool-panel" data-panel="compose" hidden>' + compositionTools() + '</div>' +
+    '<div id="tool-mask" class="tool-panel" data-panel="mask" hidden>' + subject() +
     '<div class="mobile-brush" data-brush-tools hidden>' + brushTools() + '</div>' +
-    '<p class="subtle mask-instruction" data-brush-tools hidden>在照片上涂抹，标记挡住白线的区域。</p></div>' + footer() + '</section></main></div>';
+    '<p class="subtle mask-instruction" data-brush-tools hidden>在照片上涂抹，标记挡住白线的区域。</p></div>' +
+    footer() + '</aside></main></div>';
 }
 
 const stage = document.getElementById('stage');
 const phone = matchMedia('(max-width: 700px)');
-const defaults = {rows: 3, columns: 3, width: 1.4, inset: 6};
+const gridDefaults = {
+  rows: 3, columns: 3, bands: 5, width: 1.4, inset: 6, gridMode: 'rect', angle: 30, vanishing: 50,
+};
+const compositionDefaults = {...cropDefaults, brightness: 0, contrast: 0};
+const defaults = {...gridDefaults, ...compositionDefaults};
 const state = {...defaults, original: false, brush: null, panel: 'grid', maskStatus: 'empty', filename: ''};
 const photo = document.createElement('canvas');
 const mask = document.createElement('canvas');
+const orientedPhoto = document.createElement('canvas');
+const orientedMask = document.createElement('canvas');
 const maskView = document.createElement('canvas');
 const foreground = document.createElement('canvas');
 const lines = document.createElement('canvas');
@@ -116,6 +152,12 @@ let photoRevision = 0;
 let statusTimer;
 let drawFrame;
 let activePointer;
+let freeEditing = false;
+let pictureKey;
+let maskKey;
+let maskRevision = 0;
+const cropPointers = new Map();
+let cropGesture;
 let importing = false;
 let removing = false;
 let warnedStorage = false;
@@ -135,15 +177,12 @@ function setPhoto(image) {
   const scale = Math.min(1, 1800 / Math.max(image.naturalWidth, image.naturalHeight));
   const w = Math.max(1, Math.round(image.naturalWidth * scale));
   const h = Math.max(1, Math.round(image.naturalHeight * scale));
-  for (const canvas of [photo, foreground, lines, result]) {
-    canvas.width = w;
-    canvas.height = h;
-  }
+  resizeCanvas(photo, w, h);
+  photo.getContext('2d').clearRect(0, 0, w, h);
   const maskScale = Math.min(1, 1024 / Math.max(w, h));
-  for (const canvas of [mask, maskView]) {
-    canvas.width = Math.max(1, Math.round(w * maskScale));
-    canvas.height = Math.max(1, Math.round(h * maskScale));
-  }
+  resizeCanvas(mask, Math.max(1, Math.round(w * maskScale)), Math.max(1, Math.round(h * maskScale)));
+  mask.getContext('2d').clearRect(0, 0, mask.width, mask.height);
+  maskRevision++;
   photo.getContext('2d').drawImage(image, 0, 0, w, h);
   photo.dataset.ready = 'true';
   undoStack.length = 0;
@@ -159,6 +198,7 @@ function setMask(alphaImage) {
   const ctx = mask.getContext('2d');
   ctx.clearRect(0, 0, mask.width, mask.height);
   ctx.drawImage(alphaImage, 0, 0, mask.width, mask.height);
+  maskRevision++;
 }
 function rememberPhoto(id) {
   try {
@@ -203,6 +243,8 @@ function finishStroke() {
 }
 function setPanel(panel) {
   finishStroke();
+  endCropGesture();
+  freeEditing = false;
   state.panel = panel;
   state.original = false;
   state.brush = panel === 'mask' && photo.dataset.ready && state.maskStatus !== 'preparing' ? 'add' : null;
@@ -211,6 +253,7 @@ async function openPhoto(id, showMask = false) {
   const entry = entries.get(id);
   if (!entry) return;
   finishStroke();
+  endCropGesture();
   const revision = ++photoRevision;
   selectedID = id;
   rememberPhoto(id);
@@ -284,6 +327,7 @@ function refreshHistory() {
 async function deleteSelected() {
   if (importing || removing || !selectedID) return;
   finishStroke();
+  endCropGesture();
   removing = true;
   const id = selectedID;
   ++photoRevision;
@@ -308,69 +352,98 @@ async function deleteSelected() {
   setPanel('grid');
   sync();
 }
-function ratio() {
-  const pad = Math.min(photo.width, photo.height) * state.inset / 100;
-  const w = photo.width - pad * 2;
-  const h = photo.height - pad * 2;
-  return {pad, w, h};
+function layout() {
+  const {width, height} = dimensions(photo.width, photo.height, state.rotation);
+  return {width, height, crop: cropRect(width, height, state)};
 }
-function composite() {
-  const w = photo.width;
-  const h = photo.height;
-  const box = ratio();
+function refreshPicture() {
+  const key = [photoRevision, state.rotation, state.mirrored, state.brightness, state.contrast].join();
+  if (pictureKey === key) return;
+  drawOriented(orientedPhoto, photo, state);
+  adjustTone(orientedPhoto.getContext('2d'), state.brightness, state.contrast);
+  pictureKey = key;
+}
+function refreshMask() {
+  const key = [maskRevision, state.rotation, state.mirrored].join();
+  if (maskKey === key) return;
+  drawOriented(orientedMask, mask, state);
+  maskKey = key;
+}
+function composite(view) {
+  refreshPicture();
+  refreshMask();
+  const width = Math.max(1, Math.round(view.crop.w));
+  const height = Math.max(1, Math.round(view.crop.h));
+  for (const canvas of [result, lines, foreground]) resizeCanvas(canvas, width, height);
+  const pad = Math.min(width, height) * state.inset / 100;
+  const box = {x: pad, y: pad, w: width - pad * 2, h: height - pad * 2};
   const out = result.getContext('2d');
   const grid = lines.getContext('2d');
   const front = foreground.getContext('2d');
-  grid.clearRect(0, 0, w, h);
-  grid.fillStyle = '#ffffff';
-  const thick = Math.min(w,h) * state.width / 100;
-  for (let step = 1; step < state.columns; step++) {
-    const x = box.pad + box.w * step / state.columns;
-    grid.fillRect(x - thick / 2, box.pad, thick, box.h);
-  }
-  for (let step = 1; step < state.rows; step++) {
-    const y = box.pad + box.h * step / state.rows;
-    grid.fillRect(box.pad, y - thick / 2, box.w, thick);
-  }
+
+  grid.clearRect(0, 0, width, height);
+  drawGrid(grid, box, state);
   grid.globalCompositeOperation = 'destination-out';
-  grid.drawImage(mask, 0, 0, w, h);
+  drawCrop(grid, orientedMask, view.crop, view.width, view.height);
   grid.globalCompositeOperation = 'source-over';
 
-  front.clearRect(0, 0, w, h);
-  front.drawImage(photo, 0, 0);
+  front.clearRect(0, 0, width, height);
+  drawCrop(front, orientedPhoto, view.crop, view.width, view.height);
   front.globalCompositeOperation = 'destination-in';
-  front.drawImage(mask, 0, 0, w, h);
+  drawCrop(front, orientedMask, view.crop, view.width, view.height);
   front.globalCompositeOperation = 'source-over';
 
   out.fillStyle = '#fff';
-  out.fillRect(0, 0, w, h);
+  out.fillRect(0, 0, width, height);
   out.drawImage(foreground, 0, 0);
-  out.drawImage(photo, box.pad, box.pad, box.w, box.h, box.pad, box.pad, box.w, box.h);
+  out.save();
+  out.beginPath();
+  out.rect(box.x, box.y, box.w, box.h);
+  out.clip();
+  drawCrop(out, orientedPhoto, view.crop, view.width, view.height);
+  out.restore();
   out.drawImage(lines, 0, 0);
 }
 function render() {
   if (!photo.dataset.ready) return;
-  const showOriginal = state.original || state.brush || state.maskStatus === 'preparing';
-  if (!showOriginal) composite();
-  if (state.brush) {
-    const visual = maskView.getContext('2d');
-    visual.clearRect(0, 0, maskView.width, maskView.height);
-    visual.drawImage(mask, 0, 0);
-    visual.globalCompositeOperation = 'source-in';
-    visual.fillStyle = 'rgba(119, 245, 157, .42)';
-    visual.fillRect(0, 0, maskView.width, maskView.height);
-    visual.globalCompositeOperation = 'source-over';
-  }
-  stage.querySelectorAll('[data-image]').forEach(canvas => {
-    if (canvas.width !== photo.width || canvas.height !== photo.height) {
-      canvas.width = photo.width;
-      canvas.height = photo.height;
-    }
-    const ctx = canvas.getContext('2d');
+  const canvas = stage.querySelector('[data-image]');
+  const ctx = canvas.getContext('2d');
+  if (state.original) {
+    resizeCanvas(canvas, photo.width, photo.height);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(showOriginal ? photo : result, 0, 0);
-    if (state.brush) ctx.drawImage(maskView, 0, 0, canvas.width, canvas.height);
-  });
+    ctx.drawImage(photo, 0, 0);
+    return;
+  }
+
+  const view = layout();
+  refreshPicture();
+  if (freeEditing) {
+    resizeCanvas(canvas, view.width, view.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(orientedPhoto, 0, 0);
+    return;
+  }
+
+  resizeCanvas(canvas, Math.max(1, Math.round(view.crop.w)), Math.max(1, Math.round(view.crop.h)));
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!state.brush && state.maskStatus !== 'preparing') {
+    composite(view);
+    ctx.drawImage(result, 0, 0);
+    return;
+  }
+
+  drawCrop(ctx, orientedPhoto, view.crop, view.width, view.height);
+  if (!state.brush) return;
+  refreshMask();
+  resizeCanvas(maskView, canvas.width, canvas.height);
+  const visual = maskView.getContext('2d');
+  visual.clearRect(0, 0, maskView.width, maskView.height);
+  drawCrop(visual, orientedMask, view.crop, view.width, view.height);
+  visual.globalCompositeOperation = 'source-in';
+  visual.fillStyle = 'rgba(119, 245, 157, .42)';
+  visual.fillRect(0, 0, maskView.width, maskView.height);
+  visual.globalCompositeOperation = 'source-over';
+  ctx.drawImage(maskView, 0, 0);
 }
 function queueRender() {
   if (drawFrame) return;
@@ -383,7 +456,20 @@ function sync() {
   const app = stage.querySelector('.app');
   if (!app) return;
   const ready = Boolean(photo.dataset.ready);
-  app.style.setProperty('--photo-ratio', ready ? photo.width / photo.height : 1);
+  const view = layout();
+  const aspect = state.original ? photo.width / photo.height
+    : freeEditing ? view.width / view.height : view.crop.w / view.crop.h;
+  app.style.setProperty('--photo-ratio', ready ? aspect : 1);
+  app.dataset.panelView = state.panel;
+  const overlay = app.querySelector('[data-crop-overlay]');
+  overlay.hidden = !ready || !freeEditing || removing;
+  if (!overlay.hidden) {
+    const box = overlay.firstElementChild;
+    box.style.setProperty('--left', view.crop.x * 100 / view.width + '%');
+    box.style.setProperty('--top', view.crop.y * 100 / view.height + '%');
+    box.style.setProperty('--width', view.crop.w * 100 / view.width + '%');
+    box.style.setProperty('--height', view.crop.h * 100 / view.height + '%');
+  }
   app.querySelector('[data-worktop]').hidden = !selectedID;
   app.querySelector('[data-photo-wrap]').hidden = !ready;
   app.querySelector('[data-empty]').hidden = ready || !!selectedID;
@@ -396,6 +482,12 @@ function sync() {
   app.querySelectorAll('[data-mask-status]').forEach(node => node.textContent = maskStatusText[state.maskStatus]);
   app.querySelectorAll('[data-panel-button]').forEach(node => node.setAttribute('aria-pressed', node.dataset.panelButton === state.panel));
   app.querySelectorAll('[data-panel]').forEach(node => node.hidden = node.dataset.panel !== state.panel);
+  app.querySelectorAll('[data-grid-group]').forEach(node => node.hidden = !node.dataset.gridGroup.split(' ').includes(state.gridMode));
+  app.querySelectorAll('[data-grid-mode], [data-ratio]').forEach(node => {
+    const {gridMode, ratio} = node.dataset;
+    node.disabled = !ready || removing;
+    node.setAttribute('aria-pressed', gridMode ? gridMode === state.gridMode : ratio === state.cropMode);
+  });
   app.querySelectorAll('[data-count]').forEach(node => node.value = state[node.dataset.count] + ' 格');
   app.querySelectorAll('[data-axis]').forEach(node => {
     const next = state[node.dataset.axis] + Number(node.dataset.step);
@@ -403,24 +495,34 @@ function sync() {
   });
   app.querySelectorAll('[data-range]').forEach(node => {
     node.value = state[node.dataset.range];
-    node.disabled = !ready || removing;
+    node.disabled = !ready || removing || (node.dataset.range === 'zoom' && freeEditing);
     node.style.setProperty('--fill', (node.valueAsNumber - Number(node.min)) * 100 / (Number(node.max) - Number(node.min)) + '%');
   });
-  app.querySelectorAll('[data-value]').forEach(node => { node.value = Number(state[node.dataset.value].toFixed(2)) + '%'; });
+  app.querySelectorAll('[data-value]').forEach(node => {
+    const key = node.dataset.value;
+    const value = Number(state[key].toFixed(2));
+    const prefix = ['brightness', 'contrast'].includes(key) && value > 0 ? '+' : '';
+    node.value = prefix + value + (key === 'angle' ? '°' : '%');
+  });
   app.querySelector('[data-action=original]').setAttribute('aria-pressed', state.original);
   app.querySelectorAll('[data-action=open]').forEach(node => node.disabled = importing || removing);
-  app.querySelectorAll('[data-action=original], [data-action=reset]').forEach(node => node.disabled = !ready || removing);
+  app.querySelectorAll('[data-action=original], [data-action=reset], [data-action=mirror], [data-action=rotateLeft], [data-action=rotateRight], [data-action=editFree]').forEach(node => node.disabled = !ready || removing);
+  app.querySelector('[data-action=reset]').hidden = state.panel === 'mask';
   app.querySelector('[data-action=remove]').disabled = importing || removing || !selectedID;
   app.querySelector('[data-action=export]').disabled = !ready || removing || state.maskStatus === 'preparing';
-  app.querySelectorAll('.refine').forEach(node => {
-    node.disabled = !ready || removing || state.maskStatus === 'preparing';
-    node.hidden = !!state.brush;
-  });
+  app.querySelector('[data-action=mirror]').setAttribute('aria-pressed', state.mirrored);
+  app.querySelector('[data-action=editFree]').hidden = state.cropMode !== 'free' || freeEditing;
+  app.querySelector('[data-action=applyFree]').hidden = !freeEditing;
+  app.querySelector('[data-compose-hint]').textContent = freeEditing ? '拖动裁切框的边或角来调整范围'
+    : phone.matches ? '拖动照片调整位置 · 双指缩放' : '拖动照片调整位置';
   app.querySelectorAll('[data-action=add], [data-action=erase]').forEach(node => node.setAttribute('aria-pressed', state.brush === node.dataset.action));
   app.querySelectorAll('[data-action=undo]').forEach(node => node.disabled = removing || !undoStack.length);
   app.querySelectorAll('[data-brush-tools]').forEach(node => node.hidden = !state.brush);
   app.querySelectorAll('[data-image=result]').forEach(node => {
     node.dataset.edit = Boolean(state.brush);
+    const canPan = ready && state.panel === 'compose' && !freeEditing && !removing;
+    node.dataset.pan = canPan;
+    node.tabIndex = canPan ? 0 : -1;
     node.setAttribute('aria-label', state.brush ? '照片和已选中的人物蒙版' : '照片预览');
   });
   queueRender();
@@ -428,7 +530,7 @@ function sync() {
 function exportImage() {
   if (!photo.dataset.ready) return;
   const name = state.filename.replace(/\.[^.]+$/, '') + ' · 破框.png';
-  composite();
+  composite(layout());
   result.toBlob(blob => {
     if (!blob) return showStatus('无法生成 PNG');
     downloadBlob(blob, name);
@@ -445,7 +547,21 @@ const actions = {
     setPanel('grid');
     state.original = original;
   },
-  refine: () => setPanel('mask'),
+  rotateLeft: () => rotate(false),
+  rotateRight: () => rotate(true),
+  mirror: () => {
+    endCropGesture();
+    const view = layout();
+    state.cropX = 1 - (view.crop.x + view.crop.w / 2) / view.width;
+    state.mirrored = !state.mirrored;
+    saveSettings();
+  },
+  editFree: () => beginFree(),
+  applyFree: () => {
+    endCropGesture();
+    freeEditing = false;
+    saveSettings();
+  },
   finish: () => setPanel('grid'),
   add: () => { finishStroke(); state.brush = 'add'; },
   erase: () => { finishStroke(); state.brush = 'erase'; },
@@ -454,18 +570,35 @@ const actions = {
     const snapshot = undoStack.pop();
     if (snapshot) {
       mask.getContext('2d').putImageData(snapshot, 0, 0);
+      maskRevision++;
       commitMask();
     }
   },
-  reset: () => { setPanel('grid'); Object.assign(state, defaults); saveSettings(); },
+  reset: () => {
+    setPanel(state.panel);
+    Object.assign(state, state.panel === 'compose' ? compositionDefaults : gridDefaults);
+    saveSettings();
+  },
 };
 stage.addEventListener('click', event => {
-  const pressed = event.target.closest('[data-action], [data-axis], [data-panel-button], [data-photo]');
+  const pressed = event.target.closest('[data-action], [data-axis], [data-panel-button], [data-photo], [data-grid-mode], [data-ratio]');
   if (!pressed) return;
-  const {action, axis, step, panelButton, photo: id} = pressed.dataset;
+  const {action, axis, step, panelButton, gridMode, ratio, photo: id} = pressed.dataset;
   if (action) actions[action]();
   if (id && id !== selectedID) openPhoto(id);
   if (panelButton) setPanel(panelButton);
+  if (gridMode) {
+    state.original = false;
+    state.gridMode = gridMode;
+    saveSettings();
+  }
+  if (ratio) {
+    endCropGesture();
+    state.cropMode = ratio;
+    freeEditing = false;
+    if (ratio === 'free') beginFree();
+    else saveSettings();
+  }
   if (axis) {
     setPanel('grid');
     state[axis] += Number(step);
@@ -476,8 +609,9 @@ stage.addEventListener('click', event => {
 stage.addEventListener('input', event => {
   const key = event.target.dataset.range;
   if (!key) return;
-  setPanel('grid');
+  state.original = false;
   state[key] = Number(event.target.value);
+  if (key === 'zoom') normalizeCropCenter();
   sync();
 });
 stage.addEventListener('change', event => {
@@ -518,13 +652,135 @@ fileInput.addEventListener('change', async () => {
 function point(event, canvas) {
   const rect = canvas.getBoundingClientRect();
   return {
-    x: (event.clientX - rect.left) * mask.width / rect.width,
-    y: (event.clientY - rect.top) * mask.height / rect.height,
+    x: (event.clientX - rect.left) / rect.width,
+    y: (event.clientY - rect.top) / rect.height,
   };
 }
+function maskPoint(event, canvas) {
+  const pointOnCanvas = point(event, canvas);
+  const view = layout();
+  const x = (view.crop.x + pointOnCanvas.x * view.crop.w) / view.width;
+  const y = (view.crop.y + pointOnCanvas.y * view.crop.h) / view.height;
+  const unrotated = sourcePoint(x, y, state.rotation, state.mirrored);
+  return {x: unrotated.x * mask.width, y: unrotated.y * mask.height};
+}
+function setCropCenter(x, y, view) {
+  state.cropX = x / view.width;
+  state.cropY = y / view.height;
+  normalizeCropCenter();
+}
+function normalizeCropCenter() {
+  const {width, height, crop} = layout();
+  state.cropX = (crop.x + crop.w / 2) / width;
+  state.cropY = (crop.y + crop.h / 2) / height;
+}
+function setFreeRect(rect, view) {
+  state.zoom = 100;
+  state.freeWidth = rect.w / view.width;
+  state.freeHeight = rect.h / view.height;
+  setCropCenter(rect.x + rect.w / 2, rect.y + rect.h / 2, view);
+}
+function beginFree() {
+  const view = layout();
+  setFreeRect(view.crop, view);
+  freeEditing = true;
+  saveSettings();
+}
+function rotate(clockwise) {
+  endCropGesture();
+  normalizeCropCenter();
+  const center = orientedCenter(state.cropX, state.cropY, clockwise);
+  state.cropX = center.x;
+  state.cropY = center.y;
+  [state.freeWidth, state.freeHeight] = [state.freeHeight, state.freeWidth];
+  const turn = clockwise !== state.mirrored ? 90 : 270;
+  state.rotation = (state.rotation + turn) % 360;
+  normalizeCropCenter();
+  saveSettings();
+}
+function endCropGesture() {
+  if (!cropGesture) return;
+  cropPointers.clear();
+  if (cropGesture.changed) saveSettings();
+  cropGesture = undefined;
+}
+function gestureBaseline(canvas, handle, changed) {
+  const points = [...cropPointers.values()];
+  const center = points.length === 2 ? {
+    x: (points[0].x + points[1].x) / 2,
+    y: (points[0].y + points[1].y) / 2,
+  } : points[0];
+  const distance = points.length === 2 ? Math.hypot(
+    points[0].clientX - points[1].clientX, points[0].clientY - points[1].clientY,
+  ) : 0;
+  return {canvas, handle, center, distance, view: layout(), zoom: state.zoom, changed};
+}
+function cropPointer(event, canvas) {
+  return {...point(event, canvas), clientX: event.clientX, clientY: event.clientY};
+}
+stage.addEventListener('pointerdown', event => {
+  if (removing || !photo.dataset.ready || state.panel !== 'compose' || event.button !== 0) return;
+  const target = event.target.closest('[data-handle], [data-pan=true]');
+  if (!target || cropPointers.size >= 2 || (freeEditing && cropPointers.size)) return;
+  const canvas = stage.querySelector('[data-image]');
+  cropPointers.set(event.pointerId, cropPointer(event, canvas));
+  cropGesture = gestureBaseline(canvas, target.dataset.handle, cropGesture?.changed ?? false);
+  target.setPointerCapture(event.pointerId);
+});
+stage.addEventListener('pointermove', event => {
+  if (!cropGesture || !cropPointers.has(event.pointerId)) return;
+  const {canvas, handle, center, distance, view, zoom} = cropGesture;
+  const {crop, width, height} = view;
+  const current = cropPointer(event, canvas);
+  cropPointers.set(event.pointerId, current);
+  if (handle) {
+    const resized = resizeCrop(crop, handle, (current.x - center.x) * width, (current.y - center.y) * height, width, height);
+    setFreeRect(resized, view);
+  } else if (distance > 0 && cropPointers.size === 2) {
+    const update = gestureBaseline(canvas, undefined, true);
+    state.zoom = Math.round(clamp(zoom * update.distance / distance, 100, 400));
+    const next = layout().crop;
+    const anchorX = crop.x + center.x * crop.w;
+    const anchorY = crop.y + center.y * crop.h;
+    setCropCenter(anchorX + (.5 - update.center.x) * next.w, anchorY + (.5 - update.center.y) * next.h, view);
+  } else {
+    setCropCenter(crop.x + (.5 + center.x - current.x) * crop.w, crop.y + (.5 + center.y - current.y) * crop.h, view);
+  }
+  cropGesture.changed = true;
+  sync();
+});
+function releaseCropPointer(event) {
+  if (!cropPointers.delete(event.pointerId) || !cropGesture) return;
+  if (cropPointers.size) {
+    const {canvas, handle, changed} = cropGesture;
+    cropGesture = gestureBaseline(canvas, handle, changed);
+  } else {
+    endCropGesture();
+  }
+}
+stage.addEventListener('keydown', event => {
+  const target = event.target.closest('[data-handle], [data-pan=true]');
+  if (!target) return;
+  const directions = {ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1]};
+  const direction = directions[event.key];
+  if (!direction) return;
+  event.preventDefault();
+  const view = layout();
+  const step = event.shiftKey ? .05 : .01;
+  const [dx, dy] = direction;
+  if (target.dataset.handle) {
+    setFreeRect(resizeCrop(view.crop, target.dataset.handle, dx * step * view.width, dy * step * view.height, view.width, view.height), view);
+  } else {
+    setCropCenter(view.crop.x + view.crop.w * (.5 + dx * step), view.crop.y + view.crop.h * (.5 + dy * step), view);
+  }
+  saveSettings();
+  sync();
+});
+
 function paint(start, end) {
   const ctx = mask.getContext('2d');
-  const size = Math.min(mask.width, mask.height) * .038;
+  const {width, height, crop} = layout();
+  const size = Math.min(mask.width, mask.height) * Math.min(crop.w, crop.h) / Math.min(width, height) * .038;
   ctx.save();
   if (state.brush === 'erase') ctx.globalCompositeOperation = 'destination-out';
   ctx.fillStyle = '#fff';
@@ -539,11 +795,12 @@ function paint(start, end) {
   ctx.lineTo(end.x, end.y);
   ctx.stroke();
   ctx.restore();
+  maskRevision++;
 }
 stage.addEventListener('pointerdown', event => {
   const canvas = event.target;
   if (removing || !state.brush || canvas.dataset.image !== 'result' || event.button !== 0 || activePointer) return;
-  const start = point(event, canvas);
+  const start = maskPoint(event, canvas);
   activePointer = {id: event.pointerId, canvas, last: start};
   canvas.setPointerCapture(event.pointerId);
   undoStack.push(mask.getContext('2d').getImageData(0, 0, mask.width, mask.height));
@@ -554,7 +811,7 @@ stage.addEventListener('pointerdown', event => {
 stage.addEventListener('pointermove', event => {
   const drag = activePointer;
   if (!drag || drag.id !== event.pointerId || !state.brush) return;
-  const end = point(event, drag.canvas);
+  const end = maskPoint(event, drag.canvas);
   paint(drag.last, end);
   drag.last = end;
   queueRender();
@@ -562,17 +819,17 @@ stage.addEventListener('pointermove', event => {
 ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(type => {
   stage.addEventListener(type, event => {
     if (activePointer?.id === event.pointerId) finishStroke();
+    releaseCropPointer(event);
   });
 });
 
-function mount() {
-  finishStroke();
-  stage.innerHTML = phone.matches ? mobileEditor() : desktopEditor();
-  refreshHistory();
+function updateLayout() {
+  stage.firstElementChild.classList.toggle('mobile', phone.matches);
   sync();
 }
-phone.addEventListener('change', mount);
-mount();
+stage.innerHTML = editor();
+phone.addEventListener('change', updateLayout);
+updateLayout();
 const catalog = listPhotos().then(photos => {
   for (const entry of photos) entries.set(entry.id, entry);
   refreshHistory();
