@@ -1,0 +1,163 @@
+# holynova · Where Craft Lives
+
+> holynova 的个人作品集：收录游戏、AI 工具、创意视觉、开发工具与生活效率等上百个工程与设计项目——small ideas, better products。
+>
+> 作品集首页：https://xiaosang.cc/ ；源码：https://github.com/holynova
+
+本文件列出作品集收录的全部公开项目，每个项目一句话介绍与演示链接，供 AI 助手索引与引用。
+
+## Chrome 插件
+
+- [X 书签回看](https://xiaosang.cc/x-bookmark-recall/): 自动导入 X 书签，在推荐和正在关注的时间线里重读旧收藏
+- [prompt_one_by_one](https://xiaosang.cc/prompt-one-by-one/): Chrome 扩展：在 Gemini / AI 平台逐条批量执行提示词生成
+- [github-pages-detector-extension](https://xiaosang.cc/github-pages-detector-extension/): Chrome 扩展：自动检测当前 GitHub 仓库是否存在 Pages 在线预览
+- [json-workbench-extension](https://xiaosang.cc/json-workbench-extension/): 结构化 JSON 可视化编辑、语法校验与转换 Chrome 扩展
+- [scrape-to-markdown.chrome](https://xiaosang.cc/scrape-to-markdown-chrome/): Chrome 侧边栏扩展：一键提取网页为 Markdown、导出社交数据与媒体
+- [youtube-channel-scraper-chrome](https://youtube-channel-scraper-chrome.xiaosang.cc/): Chrome 扩展：自动滚动抓取 YouTube 频道视频信息并导出 JSON
+- [collection_miner](https://xiaosang.cc/collection-miner/): Chrome 新标签页智能唤醒与重温历史书签扩展
+
+## 纯内容网站
+
+- [wujun-study](https://xiaosang.cc/wujun-study/): 吴军14门课程的42个学习专题，含17份15页中文漫画图解，支持全文搜索、原课追溯、全屏阅读与PDF下载
+- [xiaosang AI图集](https://xiaosang.cc/xiaosang-gallery/): 汇集 22 个系列、3,666 张作品的统一图库，支持多图帖、分组搜索、沉浸滑览、单图下载和生成 Prompt。
+- [bernstein-ypc](https://xiaosang.cc/bernstein-ypc/): 伯恩斯坦《青少年音乐会》全 53 课导览：提炼核心观点与现场实验，支持全文搜索与分类筛选，附 B 站掘火中译视频与可折叠试听曲目单
+- [x-prompt-library](https://xiaosang.cc/x-prompt-library/): Prompt 收藏册：27 组、71 条 AI 提示词，含原文、28 份中文译文、分类搜索与独立复制。
+- [concept-atlas](https://xiaosang.cc/concept-atlas/): 121张竖版知识漫画，一图解释熟悉术语背后的机制，支持分类、搜索与原图下载。
+- [world-unsolved-mysteries](https://holynova.github.io/world-unsolved-mysteries/): 世界未解之谜：80/90 后童年常听的 20 个谜题，集中展示辟谣结果与硬证据
+- [baking-variable-search](https://holynova.github.io/baking-variable-search/): 烘焙变量查询：60 种烘焙品多选组合搜索，选一个变量、其余计数实时联动
+- [baking-encyclopedia](https://holynova.github.io/baking-encyclopedia/): 烘焙百科：用六个变量拆解 36 种烘焙品，讲清奇怪名字背后的逻辑
+- [rock-in-pictures](https://xiaosang.cc/rock-in-pictures/): 听见画面：60幅摄影意象猜华语乐队，点击即揭晓，支持线索与全部原图打包下载。
+- [podcast-atlas](https://xiaosang.cc/podcast-atlas/): 播客图文知识库：两档播客分专题整理，支持关键词搜索，文字先读、中文漫画幻灯片逐步补齐
+- [《人生七年》时间线](https://xiaosang.cc/up-series-70years/): 记录《人生七年》14 位主角从 7 岁到 70 岁的 63 年人生轨迹：纪录片纪事、人物档案与横向变迁对比
+- [经典书导读 (112 本严选核实版)](https://xiaosang.cc/forty-classic-books/): 精选 8 大核心领域 112 本经典书严谨导读：章节严格对齐原书真实目录，总体观点、核心观点与全书结构剖析，拒绝虚假杜撰
+- [帝号 · 皇帝称呼解码](https://dihao.xiaosang.cc/): 移动端皇帝称呼科普：16位人物、32条年号，图解姓名、庙号、谥号与尊号，支持对照、检索和小测验。
+- [半透明玩具兵](https://translucent-toy-guard.xiaosang.cc/): 20个卡通收藏玩具角色，以磨砂半透明甲壳、硬挺制服与鲜亮撞色展现各类卫士，支持分类、高清预览和分享。
+- [山河入版 · 套色木刻画廊](https://shanhe-gallery.xiaosang.cc/): 185张套色木刻风格AI画作，涵盖山河、名胜、生活、节日、海外风光与十一城五景；支持分类、放大和下载。
+- [世界景点 · 纸上旅行](https://world-landmarks.xiaosang.cc/): 60幅纸纹平涂水粉插画：海岸夏日、多样风景各5张，西班牙、中国、日本、美国、韩国景点各10张，支持分类、整图预览和原图下载。
+- [karpathy-deep-explainer-artifacts](https://karpathy-deep-explainer-artifacts.xiaosang.cc/): 通过独立交互页面探索前端、分布式系统、提示词工程及两位创作者的观点整理。
+- [elden-ring-liveaction](https://elden-ring-liveaction.xiaosang.cc/): 将艾尔登法环、赛博朋克2077与塞尔达角色和场景转译为摄影风格AI图像。
+- [游戏剧情视频合集](https://lore.xiaosang.cc/): 七部游戏的中文剧情视频合集：艾尔登法环、巫师三、GTA5、荒野大镖客2、赛博朋克2077、黑暗之魂3与法环编年史。章节跳转，把因果讲明白。
+- [crossover-folk-gallery](https://crossover-folk-gallery.xiaosang.cc/): 155张王者荣耀联名英雄概念图，28个等宽主题标签，支持高清浏览与主题原图打包下载。
+- [folk-gallery](https://folk-gallery.xiaosang.cc/): 321幅农民画与印章图鉴，网格加载缩略图，灯箱显示高清原图，支持键盘切换。
+- [builder-atlas](https://builder-atlas.xiaosang.cc/): 浏览30份来源绑定的建造者档案，按阅读路线查看观点、出处、收藏和练习笔记。
+- [game-narrative-archive](https://xiaosang.cc/game-narrative-archive/): 游戏剧情档案馆：手机优先的剧情阅读、人物关系、选择后果与结局分析
+- [the-creation-variants](https://the-creation-variants.xiaosang.cc/): 创世纪 · 触碰的四十种可能：致敬米开朗基罗《创造亚当》经典构图，探索科技、宇宙、哲学、艺术、自然与人间温情中生命与造物指尖相触的 40 幅名画变种数字展厅
+- [system-design-algorithms-js](https://xiaosang.cc/system-design-algorithms-js/): 系统设计经典算法全景图解：基于 Alex Xu《系统设计面试》全 28 章的经典算法纯原生 JS 实现，配矢量 SVG 架构图、Mermaid 时序流转与在线交互实验室
+- [system-design-learning-lab](https://holynova.github.io/system-design-learning-lab/): 系统设计实验册：聚焦 V1 第 6—8 章，交互验证 KV 副本、Snowflake ID 与短网址缓存，附思维导图和复述练习
+- [rubber-stamp-world-cities](https://xiaosang.cc/rubber-stamp-world-cities/): 橡胶戳艺术画廊：350 枚作品、13 个系列，支持手账拼贴、印记收集、藏书票工坊与多种配色
+- [city-stamp](https://xiaosang.cc/city-stamp/): 城市印记：上海、苏州、北京、杭州四座城市的 40 个地标六边形徽章打卡档案，支持点亮、发光与时间记录
+- [citypop-shanghai-exploration](https://xiaosang.cc/citypop-shanghai-exploration/): 上海与北京的粗颗粒 City Pop 绘画、提示词与版画规律实验档案
+- [daily-necessities-library](https://daily-necessities-library.xiaosang.cc/): 撕标签 · Wander 分类瀑布流素材库：116 张去标签产品 PNG 与 21 组静物合集，支持搜索、收藏、分享和原图下载
+- [art-style-showcase](https://xiaosang.cc/art-style-showcase/): 画风图谱：9 大基准场景 × 14 种经典绘画与插画流派视觉解构、结构化 Prompt 对照与双画风同屏对比台
+- [shanghai-through-walls](https://shanghai-through-walls.xiaosang.cc/): 以上海地标为对象的证据型建筑剖透图册，区分可核实结构与受约束的推断复原
+- [print-atlas](https://xiaosang.cc/print-atlas/): 从木刻、凹凸平孔版到半调网点与 CMYK 套印的互动印刷图鉴
+- [game-style-transfer-atlas](https://xiaosang.cc/game-style-transfer-atlas/): 用三套城市照片比较 15 款热门游戏的实机风格、提示词与 16:9 横屏转译
+- [health-book](https://health-book.xiaosang.cc/): 个人与家庭健康知识管理、常见疾病科普与用药指标记录
+- [poem-formula](https://xiaosang.cc/poem-formula/): 古诗词格律、韵脚规则与结构特征拆解工具
+- [my-design-system](https://my-design-system.xiaosang.cc/): 个人前端设计系统规范、配色方案与组件库展示
+- [text_book_pics](https://text-book-pics.xiaosang.cc/): 中小学语文教材经典插画数字化收录与视觉重构
+- [director-motorcycle-cinema](https://xiaosang.cc/director-motorcycle-cinema/): 电影镜头语言与机车主题视觉资料静态画廊
+- [100-clocks](https://100-clocks.xiaosang.cc/): 100 款不同创意风格的数字与机械时钟交互集合
+- [ai-gallery](https://ai-gallery.xiaosang.cc/): 静态图片画廊：支持网格/列表切换、搜索与深色模式
+- [anthropic-learn-assets](https://xiaosang.cc/anthropic-learn-assets/): 从 Anthropic Learn 官方页面提取的 SVG 图标与配色资产库
+- [brand-etymology](https://xiaosang.cc/brand-etymology/): 解析全球知名品牌名称词源、发音演变与文化背景
+- [char_finder](https://char-finder.xiaosang.cc/): 移动端中文韵脚检索与拼音、声调分析工具
+- [ui-compare-privacy-policy](https://xiaosang.cc/ui-compare-privacy-policy/): UI Compare 浏览器扩展双语隐私政策页面
+- [wenwu-checkin](https://xiaosang.cc/wenwu-checkin/): 195 件禁止出境展览的中国国家级文物数字化图鉴
+- [holiday-visualizer](https://holiday-visualizer.xiaosang.cc/): 中国大陆节假日与调休日历，按月查看请假连休和补班日期
+- [game-rating-lookup](https://game-rating-lookup.xiaosang.cc/): 主流主机与独立游戏评分、发售信息聚合查询工具
+
+## 创意视觉
+
+- [pingye](https://xiaosang.cc/pingye/): 拼页：用九种版式制作个人海报、产品速览或城市导览，支持图片裁剪和高清 PNG 导出。
+- [photo-breakout](https://xiaosang.cc/photo-breakout/): 浏览器本地自动抠像，可调节横纵白色网格，支持多图历史、图文教程和 PNG 导出。
+- [纸间 · 折纸实验室](https://xiaosang.cc/origami-studio/): 五种经典折纸的三维动画，支持逐步播放、清晰折痕、纸色切换、展开图与 PNG 导出。
+- [傅里叶地图实验室](https://xiaosang.cc/fourier-atlas/): 用旋转圆描绘地图与四神瓦当纹样，支持圆圈强调、纯净模式和渐进绘制。
+- [玉石浮雕卡牌馆](https://xiaosang.cc/jade-cards-lab/): 四大主题 108 张精雕玉石扑克牌，Neo Kinpaku 黑漆金箔风格艺术展陈，支持 3D 翻转、沉浸大图品鉴与今日灵感抽牌
+- [哆啦A梦的家 3D导览](https://xiaosang.cc/doraemon-house-3d/): 基于 Three.js 制作的野比大雄家 3D 立体空间导览：建筑外观、室内各层、空间拆解与点击交互
+- [time-slider-clock](https://xiaosang.cc/time-slider-clock/): 镂空像素滑轨时钟：分列、整位、原作双轨与 5×5 字母滑轨，支持秒数、夜光主题和快进测试
+- [cut_and_remix](https://xiaosang.cc/cut-and-remix/): 基于 Web 的数码照片编织与图像解构重组生成艺术工具
+- [win98-screen-saver](https://xiaosang.cc/win98-screen-saver/): Windows 95/98 经典屏幕保护程序纯 Web 交互复刻
+- [kaleidoscope-studio](https://xiaosang.cc/kaleidoscope-studio/): 三角拖拽取样并实时平铺对称图案的万花筒生成器
+- [card-3d-depth-lab](https://xiaosang.cc/card-3d-depth-lab/): 基于纯 CSS 打造的 3D 景深与指针视差悬浮卡片
+- [spinning-drawer](https://xiaosang.cc/spinning-drawer/): 基于圆、椭圆与多边形定子的电子螺旋绘图仪
+- [hand_fireworks](https://xiaosang.cc/hand-fireworks/): 基于手势识别的 Canvas 粒子烟花动画交互实验
+- [raytracing-demo](https://xiaosang.cc/raytracing-demo/): 纯 Web 端的微型光线追踪（Ray Tracing）渲染演示
+- [string_alchemy](https://xiaosang.cc/string-alchemy/): 字符串格式转换、编解码与哈希计算工具箱
+- [50-seeds](https://xiaosang.cc/50-seeds/): 24 个大类 × 50 组 AI 图像生成视觉 Seed 参数参考库
+- [music_pulse](https://xiaosang.cc/music-pulse/): 基于音频包络曲线的音乐节奏可视化动效演示
+- [sort_animation](https://xiaosang.cc/sort-animation/): 经典排序算法执行过程的可视化动态演示
+
+## AI 工具
+
+- [Token Theater · 速度体验实验室](https://xiaosang.cc/token-theater/): 在手机、终端、网页和桌面界面并排体验大模型的输出速度、首字等待和流式节奏
+- [医疗单据 OCR 工作台](https://hospital-ocr.xiaosang.cc/): 在浏览器本地识别医疗发票与病历，核对日期、金额和姓名，批量重命名并导出汇总表格
+- [ask_all_ai](https://xiaosang.cc/ask-all-ai/): 多模型同屏对比：同时向 ChatGPT、Gemini、Grok 与 DeepSeek 提问
+- [video_prompt_generator](https://video-prompt-generator.xiaosang.cc/): 基于参数模板的中英双语 AI 视频生成提示词构建工具
+- [image_local_llm](https://xiaosang.cc/image-local-llm/): 本地 AI 图像生成工作台：支持批量排队、历史管理与图库展示
+- [opencli-pipeline](https://xiaosang.cc/opencli-pipeline/): 基于 OpenCLI 调度的本地串行 AI 内容生成与处理管道
+- [notebooklm_one_by_one](https://xiaosang.cc/notebooklm-one-by-one/): 基于 NotebookLM 的自动化幻灯片与小红书图文内容生成工具
+- [auto-xiao-hong-shu](https://xiaosang.cc/auto-xiao-hong-shu/): 小红书图文发布自动化工具：支持批量排程、拼图封面与防检测
+
+## 语言文化
+
+- [flash-card](https://xiaosang.cc/flash-card/): 移动端优先的间隔重复记忆闪卡 PWA，支持牌组、离线学习与云同步
+- [head_tail_poem_generator](https://xiaosang.cc/head-tail-poem-generator/): 古风藏头诗与藏尾诗生成排版工具
+- [haiku-flow](https://xiaosang.cc/haiku-flow/): 卡片滑动交互式俳句与古诗词发现与收藏工具
+- [head_tail_poem](https://head-tail-poem.xiaosang.cc/): 古风藏头诗趣味排版与卡片生成工具
+- [poetry-flow](https://poetry-flow.xiaosang.cc/): 古诗词词句流动与意象连线的交互式可视化展示
+- [flash-words](https://flash-words.xiaosang.cc/): 浏览器端动态文字排版与视频、GIF 导出工具
+- [xieyin](https://xiaosang.cc/xieyin/): 中文同音字词与谐音组合检索生成工具
+- [gushi_namer](https://gushi-namer.xiaosang.cc/): 古诗文起名生成工具（GitHub 标星超 2,200+）
+
+## 开发工具
+
+- [image-gallery-template](https://xiaosang.cc/image-gallery-template/): 图片优先的 AI 原生画廊模板：用主题与图片生成可发布网站，内置 Sharp 压缩、内容校验、Umami 统计与静态部署
+- [tiny-icons](https://tiny-icons.xiaosang.cc/): Chrome 扩展及网站 Favicon 图标在线生成与导出工具
+- [equal_width](https://xiaosang.cc/equal-width/): 中英文字符等宽对齐与字间距校准工具
+- [json_to_ts](https://json-to-ts.xiaosang.cc/): 根据 JSON 数据自动推断并生成 TypeScript 类型定义接口
+- [multi-screen-view](https://xiaosang.cc/multi-screen-view/): 在多个模拟 iPhone 尺寸的 Chrome 窗口间同步多端交互操作
+- [chrome-session-tui](https://xiaosang.cc/chrome-session-tui/): macOS 终端下检查与关闭 Chrome 自动化会话的 TUI 工具
+- [照片足迹](https://xiaosang.cc/photo-atlas/): 扫描本地照片，生成城市足迹和多年报告。支持全球地球仪、城市打卡、重逢故事和分享卡。
+
+## 生活效率
+
+- [末班之后](https://xiaosang.cc/shanghai-metro-night/): 末班之后：全屏上海地铁时间地图，收发车自动放映、事件弹幕与浅深色模式，覆盖 14 条线路、338 站
+- [热点账本](https://xiaosang.cc/hotspot-ledger/): 热点账本：Mac 网卡用量与进程活动排行，支持异常提醒、可选断连和重启续接。
+- [psy-talks](https://psy-talks.xiaosang.cc/): 心理咨询常见对话微技能的移动端练习地图，含 v1 练习与 v2 阅读版
+- [xiaoyuzhou-transcript-downloader](https://xiaosang.cc/xiaoyuzhou-transcript-downloader/): 小宇宙播客单集音频信息与文字稿批量下载 CLI 工具
+- [bookshelf_manager](https://xiaosang.cc/bookshelf-manager/): 拍照扫描物理图书并在 3D 虚拟书架中检索管理的 Web 应用
+- [mouse_scroll_heath_check](https://xiaosang.cc/mouse-scroll-heath-check/): 鼠标滚轮寿命、回滚漂移与精准度在线健康测试
+- [city-public-facilities](https://city-public-facilities.xiaosang.cc/): 城市公共文化、交通、医疗、商业设施近邻检索地图
+- [hotpot-timer](https://xiaosang.cc/hotpot-timer/): Three.js 沉浸式倒计时与 A–Z 立体字母逐个变换工具
+- [pdf2wechat](https://xiaosang.cc/pdf2wechat/): 纯前端 PDF 文件转微信长图拼接与分享工具
+- [douban-quark-clawer](https://douban-quark-clawer.xiaosang.cc/): 豆瓣电影想看清单自动检索夸克网盘资源工具
+- [life_bar_chart](https://xiaosang.cc/life-bar-chart/): 基于 React 与 Canvas 的人生甘特图时间线可视化
+- [pre_tax_salary_calculator](https://xiaosang.cc/pre-tax-salary-calculator/): 根据税后到手收入反向倒推税前薪资与五险一金明细
+- [offer_calculator](https://xiaosang.cc/offer-calculator/): 多份 Job Offer 薪酬福利综合对比与决策评估工具
+
+## 游戏交互
+
+- [植物幸存者](https://xiaosang.cc/plant-survivors-ui/): 手机幸存者：三条进化路线、地图救援与地形机制、敌人动作与情境音乐、战局恢复；附 168 场景验收和性能对照报告
+- [woool-survivor-game](https://xiaosang.cc/woool-survivor-game/): 传奇世界幸存者：战法道三职业、原版技能与怪物素材、六大城市要塞地图与四档锯齿难度曲线。
+- [mafa-survivor](https://xiaosang.cc/mafa-survivor/): 手机优先的玛法幸存者：三职业、33种技能八级成长、十地图与最终首领，原版模式保留。
+- [24点纸牌求解器](https://xiaosang.cc/24-solver/): 单文件网页版 24 点纸牌求解器：自定义选牌或随机发牌，穷举算式与结合律去重，配流光牌面与音效
+- [fallwell](https://fallwell.xiaosang.cc/): 向井底不断下落，靠射击减速、踩怪连击与落地补弹构筑自己的动作肉鸽。
+- [rift-survivors](https://rift-survivors.xiaosang.cc/): 在怪潮之间购买、合成与搭配武器和道具，构筑自己的生存竞技场打法。
+- [mafa-survivor-game](https://xiaosang.cc/mafa-survivor-game/): 经典 1.76 热血传奇语汇的战法道三职业单机肉鸽幸存者游戏，支持技能演化与特戒装备构筑。
+- [battle-city-roguelike](https://battle-city-roguelike.xiaosang.cc/): 驾驶坦克守卫老鹰基地，在战役中切换元素主炮并选择强化。
+- [neon-survivors](https://xiaosang.cc/neon-survivors/): 霓虹幸存者：Three.js 三维波次生存游戏，模型与音效程序化生成
+- [web-survivor-game-agy](https://xiaosang.cc/demos/web-survivor-game-agy/): 山海夜市：中式妖怪夜市题材的幸存者游戏，用厨具与口味组合战斗构筑
+- [24points](https://24points.xiaosang.cc/): 24 点数学速算求解器，支持 1820 种四牌组合穷举
+- [keyboard_sentence](https://xiaosang.cc/keyboard-sentence/): iOS 键盘响应式模拟器：支持打字动效与视频导出
+- [tank-tactics-game](https://tank-tactics-game.xiaosang.cc/): 像素美术陆海战术对战：双阵营、履带与炮火动画，支持双人和人机
+- [mobile-sensor-playground](https://xiaosang.cc/mobile-sensor-playground/): 移动端陀螺仪、加速度计等硬件传感器 API 交互实验
+- [mercator-country-compare](https://mercator-country-compare.xiaosang.cc/): 消除墨卡托投影变形的真实国家国土面积互动对比地图
+- [texas-holdem-hand-probability](https://texas-holdem-hand-probability.xiaosang.cc/): 离线运行的高精度德州扑克终局成牌概率计算器
+- [emoji_life](https://xiaosang.cc/emoji-life/): 单文件网页应用：用 Emoji 表情符号生成生动的人生时间线
+
+## 游戏实验
+
+- [hearthstone-match](https://hearthstone-match.xiaosang.cc/): 可调参数的炉石匹配界面复刻，观察滚筒减速、指针抖动、粒子和合成音效。
+- [spud-squad](https://xiaosang.cc/spud-squad/): 游戏实验：土豆小队，Three.js 三维幸存者竞技场与多职业战斗
+- [tuber-survivors](https://xiaosang.cc/tuber-survivors/): 游戏实验：块茎幸存者，三维波次战斗、多武器装备与局间商店
