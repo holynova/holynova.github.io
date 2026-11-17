@@ -2,6 +2,33 @@
   "repository": "https://github.com/etorth/mir2x_res",
   "ref": "9e21ea6631317d06e064fbfa7e1ea43af6a2d3e6",
   "files": {
+    "00010006_B300.mp3": {
+      "sourcePath": "sound/bgm/00010006_B300.mp3",
+      "sha1": "c518eb2352ba082b0a6eaa028b8f5293241c150f",
+      "sha256": "42500f6f06aca7c6ffc21ee4205a270dc64508c09a5470ffd4deb389715bebb9",
+      "bytes": 4768685,
+      "sourceMap": "盟重县_74",
+      "bgmID": 65542,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "00020003_BD02.mp3": {
+      "sourcePath": "sound/bgm/00020003_BD02.mp3",
+      "sha1": "61df2755d9aaaba00f1ddf6a0e9bdf7587e39352",
+      "sha256": "864fd1013493bd33d12afc2c4856e8729aca89ea207ae9b650fdee52267128be",
+      "bytes": 6108860,
+      "sourceMap": "沃玛神殿_D024",
+      "bgmID": 131075,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "00020009_BD99.mp3": {
+      "sourcePath": "sound/bgm/00020009_BD99.mp3",
+      "sha1": "2b2f856c66037682b10046253d2c32761b3b9bb4",
+      "sha256": "ea3d75824beebb2f1dce9b13b50ed760509ee1355abc0f0ffaa9b8a44d8b6e9f",
+      "bytes": 4680175,
+      "sourceMap": "赤月恶魔洞穴_D10162",
+      "bgmID": 131081,
+      "permissionStatus": "project_owner_authorized"
+    },
     "00010001_B000.mp3": {
       "sourcePath": "sound/bgm/00010001_B000.mp3",
       "sha1": "88c1472c6e3ece25620a28a82ba04bf9599cacd6",
@@ -31,6 +58,9 @@
     }
   },
   "mapping": {
+    "desert": "00010006_B300.mp3",
+    "woma": "00020003_BD02.mp3",
+    "redmoon": "00020009_BD99.mp3",
     "field": "00010001_B000.mp3",
     "temple": "00020006_BD50.mp3",
     "cave": "00020008_BD70.mp3"
@@ -41,7 +71,7 @@
     "sourcePath": "common/src/maprecord.inc",
     "sha256": "781881a1029da203cbf1aff4cd242ca9496e21ccdb5f3a5a5f198250dee27f67"
   },
-  "note": "Pinned client map soundtrack assignments identify source tracks. Game chapters reuse field/cave/temple categories; these are not claims of exact 1.76 chapter music. No synthesized or re-encoded music.",
+  "note": "Pinned client map soundtrack assignments identify source tracks. Mengzhong, Woma and Redmoon use their source map-family assignments; other chapters reuse field/cave/temple categories; these are not claims of exact 1.76 chapter music. No synthesized or re-encoded music.",
   "rightsStatus": "AUTHORIZED_BY_PROJECT_OWNER",
   "distribution": "PUBLIC_PROJECT_DISTRIBUTION",
   "releaseStatus": "AUTHORIZED_BY_PROJECT_OWNER",
