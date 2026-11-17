@@ -4,42 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>X 书签回看</title>
-  <meta name="description" content="把 X 收藏放回「为你推荐」时间线。试试从书签页导入，在刷帖时回看旧收藏。">
+  <meta name="description" content="在 X 的时间线里重新读到收藏。试试自动导入和后续插卡。">
   <link rel="icon" href="./icon.png" type="image/png">
   <link rel="stylesheet" href="./style.css">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"></script>
   <script defer src="./demo.js"></script>
 </head>
 <body>
-<div id="stage">
-  <main class="workspace" style="--accent:#075ea1">
-    <header class="workbench">
-      <div>
-        <div class="kicker">CHROME 扩展 · 在线演示</div>
-        <h1>X 书签回看</h1>
-        <div class="release-meta"><p class="release-note">滚动浏览时间线，试试换一条收藏，或从书签页导入。页面使用演示数据。</p></div>
-      </div>
-      <div class="release-meta"><a href="https://github.com/holynova/x-bookmark-recall">GitHub · 源码和安装</a><p>v0.1.0</p></div>
-    </header>
-    <section class="window" aria-label="X 与扩展演示">
-      <div class="toolbar">
-        <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="address" id="address"><span></span></div>
-        <button class="toolbutton" data-action="popup" aria-controls="popup" aria-expanded="true">扩展弹窗</button>
-      </div>
-      <div class="browser">
-        <nav class="side" aria-label="X 导航">
-          <div class="xlogo" aria-label="X">𝕏</div>
-          <a href="#home" data-action="navigate" data-value="home"><span class="nav-label">首页</span><span class="nav-compact" aria-hidden="true">⌂</span></a>
-          <a href="#bookmarks" data-action="navigate" data-value="bookmarks"><span class="nav-label">书签</span><span class="nav-compact" aria-hidden="true">☆</span></a>
-        </nav>
-        <section class="timeline" id="timeline" aria-label="X 页面"></section>
-        <aside class="right"><section class="popup" id="popup" aria-label="扩展弹窗"></section></aside>
-      </div>
-    </section>
-    <div id="toast" class="toast" role="status" hidden></div>
-    <dialog id="detail" aria-labelledby="detail-label"></dialog>
-  </main>
-</div>
+  <main id="app" class="workspace"></main>
+  <dialog id="post-detail" aria-labelledby="detail-title"></dialog>
+  <div id="notice" role="status" hidden></div>
 </body>
 </html>
