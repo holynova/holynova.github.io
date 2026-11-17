@@ -1900,14 +1900,14 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "手机无限生存：四种轮换首领、环绕植物、5 级质变、回血掉落与三种地貌；全新生图特效，附 180 场景验收和性能对照",
-            "en": "Endless mobile garden survival with four rotating bosses, orbiting plants, Lv.5 transformations, healing drops and three biomes; generated combat art with 180-scene QA and performance comparisons"
+            "zh": "手机无限生存：四种首领、环绕植物、5 级质变；简洁战斗 HUD、原版风格墓碑庭院与三种地貌，附 180 场景验收和性能对照",
+            "en": "Endless mobile survival with four bosses, orbiting plants and Lv.5 transformations; minimal HUD, classic-style garden art and three biomes, with 180-scene QA and performance comparisons"
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
           "screenshot": "screenshots/plant-survivors-ui.png",
-          "pushed_at": "2026-11-17",
-          "commit_time": "2026-11-17T22:25:27+08:00",
+          "pushed_at": "2026-11-18",
+          "commit_time": "2026-11-18T00:30:00+08:00",
           "hidden": false
         },
         {
