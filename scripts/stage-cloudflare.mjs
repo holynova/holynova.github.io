@@ -15,6 +15,20 @@ const candidates = requestedGallery ? [resolve(requestedGallery)] : [
 ];
 const gallery = candidates.find(path => existsSync(join(path, 'release.json')));
 if (!gallery) throw new Error('Gallery build missing. Set XIAOSANG_GALLERY_DIST to the complete production dist directory.');
+const mounted = JSON.parse(readFileSync(join(root, 'data/mounted-projects.json'), 'utf8'));
+const wujun = process.env.WUJUN_STUDY_DIST || join(homedir(), 'code/wujun-study/dist');
+if (!existsSync(join(wujun, 'release.json'))) throw new Error('Wu Jun build missing; set WUJUN_STUDY_DIST.');
+const wujunReceipt = JSON.parse(readFileSync(join(wujun, 'release.json'), 'utf8'));
+if (wujunReceipt.project !== 'wujun-study' || wujunReceipt.commit !== mounted['wujun-study'].commit || wujunReceipt.topics !== 42) {
+  throw new Error('Wu Jun release differs from the pinned portfolio mount. Build and synchronize its source commit first.');
+}
+for (const file of ['index.html', '_headers', 'search.json', 'favicon.svg']) {
+  if (!existsSync(join(wujun, file))) throw new Error('Incomplete Wu Jun build: ' + file);
+}
+if (filesIn(join(wujun, 'slides')).filter(x => x.endsWith('.pdf')).length !== wujunReceipt.decks ||
+    filesIn(join(wujun, 'static')).filter(x => x.endsWith('.webp')).length !== wujunReceipt.decks * 15) {
+  throw new Error('Incomplete Wu Jun slide library');
+}
 const directory = join(root, '.cloudflare-build');
 const route = 'xiaosang-gallery';
 const receipt = JSON.parse(readFileSync(join(gallery, 'release.json'), 'utf8'));
@@ -90,6 +104,13 @@ try {
   const headers = join(stage, '_headers');
   const oldHeaders = existsSync(headers) ? readFileSync(headers, 'utf8').trimEnd() : '';
   writeFileSync(headers, [oldHeaders, galleryHeaders].filter(Boolean).join('\n\n') + '\n');
+  const wujunTarget = join(stage, 'wujun-study');
+  if (existsSync(wujunTarget)) throw new Error('Conflicting wujun-study route');
+  placeTree(wujun, wujunTarget);
+  const wujunHeaders = readFileSync(join(wujunTarget, '_headers'), 'utf8').trim()
+    .split('\n').map(line => line.startsWith('/') ? `/wujun-study${line}` : line).join('\n');
+  rmSync(join(wujunTarget, '_headers'));
+  writeFileSync(headers, readFileSync(headers, 'utf8').trimEnd() + '\n\n' + wujunHeaders + '\n');
   const files = filesIn(stage);
   if (files.length > 20_000 || files.some(file => lstatSync(file).size > 25 * 1024 ** 2)) {
     throw new Error(`Staged portfolio exceeds Workers Static Assets limits (${files.length} files)`);
@@ -104,6 +125,7 @@ try {
   console.log(JSON.stringify({
     portfolio: sourceHead,
     gallery: receipt.commit,
+    wujun: wujunReceipt.commit,
     version: receipt.version,
     files: files.length,
   }));

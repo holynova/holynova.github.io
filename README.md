@@ -42,6 +42,8 @@ npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc
 
 macOS 的发布暂存使用 APFS 独立克隆，避免重复占用整份站点空间；暂存前后都要求受版本控制的文件与提交一致。其他平台仍从 Git archive 生成快照。
 
+吴军专题站挂载于 `/wujun-study/`，从 `WUJUN_STUDY_DIST` 或 `~/code/wujun-study/dist` 读取构建；必须与 `data/mounted-projects.json` 固定的源码提交一致，并包含完整幻灯片。每次发布都会同时保留图集与吴军站点。
+
 发布后读取 `https://xiaosang.cc/data/repos.json` 并实际点击作品卡片的 Demo，确认页面指向 `xiaosang.cc` 路径或其子域名。Git 提交或 GitHub Pages 更新不会自动发布 Cloudflare。
 
 ## 📸 项目截图

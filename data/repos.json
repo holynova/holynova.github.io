@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-17",
-  "totalRepos": 145,
+  "totalRepos": 146,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -128,6 +128,20 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "wujun-study",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "吴军14门课程的42个学习专题，含17份15页中文漫画图解，支持全文搜索、原课追溯、全屏阅读与PDF下载",
+            "en": "42 thematic guides to 14 Wu Jun courses, with 17 reviewed Chinese comic slide decks of 15 pages each, full-text search, traceable sources and PDF downloads."
+          },
+          "url": "https://github.com/holynova/wujun-study",
+          "homepage": "https://xiaosang.cc/wujun-study/",
+          "screenshot": "screenshots/wujun-study.png",
+          "pushed_at": "2026-11-17",
+          "commit_time": "2026-11-17T13:38:17+08:00",
+          "hidden": false
+        },
         {
           "name": "xiaosang-gallery",
           "lang": "JavaScript",
