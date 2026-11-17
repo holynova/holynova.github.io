@@ -100,6 +100,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 54.796875
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 46
+          },
+          {
+            "label": "图鉴",
+            "height": 46
+          },
+          {
+            "label": "成长",
+            "height": 46
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44.78125
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44.78125
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44.78125
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 320,
+        "h": 568,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 568,
+          "top": 0,
+          "right": 320,
+          "bottom": 568,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 85.390625,
+              "width": 280,
+              "height": 397.203125,
+              "top": 85.390625,
+              "right": 300,
+              "bottom": 482.59375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -112,7 +194,7 @@
             "height": 77.234375
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 77.25
           },
           {
@@ -235,7 +317,124 @@
         "pass": true
       },
       {
-        "scene": "evolution",
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 320,
+        "h": 568,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 568,
+          "top": 0,
+          "right": 320,
+          "bottom": 568,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 304,
+              "height": 100.296875,
+              "top": 8,
+              "right": 312,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 420,
+              "width": 304,
+              "height": 140,
+              "top": 420,
+              "right": 312,
+              "bottom": 560,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 180.59375,
+              "height": 28,
+              "top": 56.140625,
+              "right": 188.59375,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 176.59375,
+              "height": 24,
+              "top": 58.140625,
+              "right": 186.59375,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
           {
@@ -251,7 +450,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 64
           },
           {
@@ -259,11 +458,89 @@
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 320,
+        "h": 568,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 568,
+          "top": 0,
+          "right": 320,
+          "bottom": 568,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 286,
+              "height": 37.390625,
+              "top": 128,
+              "right": 303,
+              "bottom": 165.390625,
+              "left": 17
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "evolution",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.9s",
             "height": 64
           },
           {
@@ -325,27 +602,27 @@
             "height": 44
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.1s",
             "height": 64
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.4s",
             "height": 64
           },
           {
-            "label": "Lv.30.9s",
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.7s",
             "height": 64
           },
           {
             "label": "Lv.20.9s",
-            "height": 64
-          },
-          {
-            "label": "Lv.21.1s",
             "height": 64
           },
           {
@@ -419,27 +696,27 @@
             "height": 44
           },
           {
-            "label": "Lv.40.3s",
+            "label": "Lv.40.1s",
             "height": 64
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.4s",
             "height": 64
           },
           {
-            "label": "Lv.30.9s",
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.7s",
             "height": 64
           },
           {
             "label": "Lv.20.9s",
-            "height": 64
-          },
-          {
-            "label": "Lv.21.1s",
             "height": 64
           },
           {
@@ -739,15 +1016,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -755,7 +1032,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -771,11 +1048,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -783,31 +1060,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -895,7 +1172,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -931,118 +1208,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 320,
-        "h": 568,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 320,
-          "height": 568,
-          "top": 0,
-          "right": 320,
-          "bottom": 568,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 85.390625,
-              "width": 280,
-              "height": 397.203125,
-              "top": 85.390625,
-              "right": 300,
-              "bottom": 482.59375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 320,
-        "h": 568,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 320,
-          "height": 568,
-          "top": 0,
-          "right": 320,
-          "bottom": 568,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 304,
-              "height": 100.296875,
-              "top": 8,
-              "right": 312,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 420,
-              "width": 304,
-              "height": 140,
-              "top": 420,
-              "right": 312,
-              "bottom": 560,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 320,
-        "h": 568,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 320,
-          "height": 568,
-          "top": 0,
-          "right": 320,
-          "bottom": 568,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 286,
-              "height": 37.390625,
-              "top": 128,
-              "right": 303,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -1147,6 +1312,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 360,
+        "h": 640,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 131.375,
+              "width": 320,
+              "height": 377.234375,
+              "top": 131.375,
+              "right": 340,
+              "bottom": 508.609375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -1159,7 +1406,7 @@
             "height": 107.640625
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 107.640625
           },
           {
@@ -1282,6 +1529,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 360,
+        "h": 640,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 344,
+              "height": 100.296875,
+              "top": 8,
+              "right": 352,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 488,
+              "width": 344,
+              "height": 144,
+              "top": 488,
+              "right": 352,
+              "bottom": 632,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 360,
+        "h": 640,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 326,
+              "height": 37.390625,
+              "top": 128,
+              "right": 343,
+              "bottom": 165.390625,
+              "left": 17
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -1310,7 +1752,7 @@
             "height": 64
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -1392,7 +1834,7 @@
             "height": 64
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -1486,7 +1928,7 @@
             "height": 64
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -1786,15 +2228,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -1802,7 +2244,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -1818,11 +2260,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -1830,31 +2272,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -1942,7 +2384,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -1978,118 +2420,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 360,
-        "h": 640,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 360,
-          "height": 640,
-          "top": 0,
-          "right": 360,
-          "bottom": 640,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 131.375,
-              "width": 320,
-              "height": 377.234375,
-              "top": 131.375,
-              "right": 340,
-              "bottom": 508.609375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 360,
-        "h": 640,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 360,
-          "height": 640,
-          "top": 0,
-          "right": 360,
-          "bottom": 640,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 344,
-              "height": 100.296875,
-              "top": 8,
-              "right": 352,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 488,
-              "width": 344,
-              "height": 144,
-              "top": 488,
-              "right": 352,
-              "bottom": 632,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 360,
-        "h": 640,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 360,
-          "height": 640,
-          "top": 0,
-          "right": 360,
-          "bottom": 640,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 326,
-              "height": 37.390625,
-              "top": 128,
-              "right": 343,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -2194,6 +2524,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 375,
+        "h": 667,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 667,
+          "top": 0,
+          "right": 375,
+          "bottom": 667,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 144.875,
+              "width": 335,
+              "height": 377.234375,
+              "top": 144.875,
+              "right": 355,
+              "bottom": 522.109375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -2206,7 +2618,7 @@
             "height": 116.640625
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 116.640625
           },
           {
@@ -2329,6 +2741,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 375,
+        "h": 667,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 667,
+          "top": 0,
+          "right": 375,
+          "bottom": 667,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 359,
+              "height": 100.296875,
+              "top": 8,
+              "right": 367,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 515,
+              "width": 359,
+              "height": 144,
+              "top": 515,
+              "right": 367,
+              "bottom": 659,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 375,
+        "h": 667,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 667,
+          "top": 0,
+          "right": 375,
+          "bottom": 667,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 341,
+              "height": 37.390625,
+              "top": 128,
+              "right": 358,
+              "bottom": 165.390625,
+              "left": 17
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -2345,7 +2952,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 64
           },
           {
@@ -2353,11 +2960,11 @@
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -2427,7 +3034,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 64
           },
           {
@@ -2435,11 +3042,11 @@
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -2521,7 +3128,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 64
           },
           {
@@ -2529,11 +3136,11 @@
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -2833,15 +3440,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -2849,7 +3456,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -2865,11 +3472,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -2877,31 +3484,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -2989,7 +3596,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -3025,118 +3632,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 375,
-        "h": 667,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 375,
-          "height": 667,
-          "top": 0,
-          "right": 375,
-          "bottom": 667,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 144.875,
-              "width": 335,
-              "height": 377.234375,
-              "top": 144.875,
-              "right": 355,
-              "bottom": 522.109375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 375,
-        "h": 667,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 375,
-          "height": 667,
-          "top": 0,
-          "right": 375,
-          "bottom": 667,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 359,
-              "height": 100.296875,
-              "top": 8,
-              "right": 367,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 515,
-              "width": 359,
-              "height": 144,
-              "top": 515,
-              "right": 367,
-              "bottom": 659,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 375,
-        "h": 667,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 375,
-          "height": 667,
-          "top": 0,
-          "right": 375,
-          "bottom": 667,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 341,
-              "height": 37.390625,
-              "top": 128,
-              "right": 358,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -3241,6 +3736,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 390,
+        "h": 844,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 233.375,
+              "width": 350,
+              "height": 377.234375,
+              "top": 233.375,
+              "right": 370,
+              "bottom": 610.609375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -3253,7 +3830,7 @@
             "height": 175.640625
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 175.640625
           },
           {
@@ -3368,6 +3945,201 @@
               "right": 362,
               "bottom": 265.78125,
               "left": 28
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 390,
+        "h": 844,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 374,
+              "height": 100.296875,
+              "top": 8,
+              "right": 382,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 692,
+              "width": 374,
+              "height": 144,
+              "top": 692,
+              "right": 382,
+              "bottom": 836,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 390,
+        "h": 844,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 356,
+              "height": 37.390625,
+              "top": 128,
+              "right": 373,
+              "bottom": 165.390625,
+              "left": 17
             }
           }
         ],
@@ -3880,15 +4652,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -3896,7 +4668,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -3912,11 +4684,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -3924,31 +4696,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -4036,7 +4808,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -4072,118 +4844,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 390,
-        "h": 844,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 390,
-          "height": 844,
-          "top": 0,
-          "right": 390,
-          "bottom": 844,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 233.375,
-              "width": 350,
-              "height": 377.234375,
-              "top": 233.375,
-              "right": 370,
-              "bottom": 610.609375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 390,
-        "h": 844,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 390,
-          "height": 844,
-          "top": 0,
-          "right": 390,
-          "bottom": 844,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 374,
-              "height": 100.296875,
-              "top": 8,
-              "right": 382,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 692,
-              "width": 374,
-              "height": 144,
-              "top": 692,
-              "right": 382,
-              "bottom": 836,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 390,
-        "h": 844,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 390,
-          "height": 844,
-          "top": 0,
-          "right": 390,
-          "bottom": 844,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 356,
-              "height": 37.390625,
-              "top": 128,
-              "right": 373,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -4288,6 +4948,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 393,
+        "h": 852,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 852,
+          "top": 0,
+          "right": 393,
+          "bottom": 852,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 237.375,
+              "width": 353,
+              "height": 377.234375,
+              "top": 237.375,
+              "right": 373,
+              "bottom": 614.609375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -4300,7 +5042,7 @@
             "height": 178.296875
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 178.3125
           },
           {
@@ -4423,6 +5165,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.8s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 393,
+        "h": 852,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 852,
+          "top": 0,
+          "right": 393,
+          "bottom": 852,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 377,
+              "height": 100.296875,
+              "top": 8,
+              "right": 385,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 700,
+              "width": 377,
+              "height": 144,
+              "top": 700,
+              "right": 385,
+              "bottom": 844,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 393,
+        "h": 852,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 852,
+          "top": 0,
+          "right": 393,
+          "bottom": 852,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 359,
+              "height": 37.390625,
+              "top": 128,
+              "right": 376,
+              "bottom": 165.390625,
+              "left": 17
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -4431,19 +5368,19 @@
             "height": 44
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 64
           },
           {
-            "label": "Lv.30.9s",
+            "label": "Lv.30.8s",
             "height": 64
           },
           {
@@ -4513,19 +5450,19 @@
             "height": 44
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 64
           },
           {
-            "label": "Lv.30.9s",
+            "label": "Lv.30.8s",
             "height": 64
           },
           {
@@ -4607,19 +5544,19 @@
             "height": 44
           },
           {
-            "label": "Lv.40.3s",
+            "label": "Lv.40.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 64
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 64
           },
           {
-            "label": "Lv.30.9s",
+            "label": "Lv.30.8s",
             "height": 64
           },
           {
@@ -4927,15 +5864,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -4943,7 +5880,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -4959,11 +5896,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -4971,31 +5908,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -5083,7 +6020,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -5119,118 +6056,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 393,
-        "h": 852,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 393,
-          "height": 852,
-          "top": 0,
-          "right": 393,
-          "bottom": 852,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 237.375,
-              "width": 353,
-              "height": 377.234375,
-              "top": 237.375,
-              "right": 373,
-              "bottom": 614.609375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 393,
-        "h": 852,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 393,
-          "height": 852,
-          "top": 0,
-          "right": 393,
-          "bottom": 852,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 377,
-              "height": 100.296875,
-              "top": 8,
-              "right": 385,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 700,
-              "width": 377,
-              "height": 144,
-              "top": 700,
-              "right": 385,
-              "bottom": 844,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 393,
-        "h": 852,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 393,
-          "height": 852,
-          "top": 0,
-          "right": 393,
-          "bottom": 852,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 359,
-              "height": 37.390625,
-              "top": 128,
-              "right": 376,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -5335,6 +6160,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 412,
+        "h": 915,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 268.875,
+              "width": 372,
+              "height": 377.234375,
+              "top": 268.875,
+              "right": 392,
+              "bottom": 646.109375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -5347,7 +6254,7 @@
             "height": 199.296875
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 199.3125
           },
           {
@@ -5470,6 +6377,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.8s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 412,
+        "h": 915,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 396,
+              "height": 100.296875,
+              "top": 8,
+              "right": 404,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 763,
+              "width": 396,
+              "height": 144,
+              "top": 763,
+              "right": 404,
+              "bottom": 907,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 412,
+        "h": 915,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 378,
+              "height": 37.390625,
+              "top": 128,
+              "right": 395,
+              "bottom": 165.390625,
+              "left": 17
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -5482,7 +6584,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
@@ -5974,15 +7076,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -5990,7 +7092,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -6006,11 +7108,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -6018,31 +7120,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -6130,7 +7232,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -6166,118 +7268,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 412,
-        "h": 915,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 412,
-          "height": 915,
-          "top": 0,
-          "right": 412,
-          "bottom": 915,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 268.875,
-              "width": 372,
-              "height": 377.234375,
-              "top": 268.875,
-              "right": 392,
-              "bottom": 646.109375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 412,
-        "h": 915,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 412,
-          "height": 915,
-          "top": 0,
-          "right": 412,
-          "bottom": 915,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 396,
-              "height": 100.296875,
-              "top": 8,
-              "right": 404,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 763,
-              "width": 396,
-              "height": 144,
-              "top": 763,
-              "right": 404,
-              "bottom": 907,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 412,
-        "h": 915,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 412,
-          "height": 915,
-          "top": 0,
-          "right": 412,
-          "bottom": 915,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 378,
-              "height": 37.390625,
-              "top": 128,
-              "right": 395,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -6382,6 +7372,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 430,
+        "h": 932,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 932,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 277.375,
+              "width": 390,
+              "height": 377.234375,
+              "top": 277.375,
+              "right": 410,
+              "bottom": 654.609375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -6394,7 +7466,7 @@
             "height": 204.96875
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 204.984375
           },
           {
@@ -6517,6 +7589,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 430,
+        "h": 932,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 932,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 414,
+              "height": 100.296875,
+              "top": 8,
+              "right": 422,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 780,
+              "width": 414,
+              "height": 144,
+              "top": 780,
+              "right": 422,
+              "bottom": 924,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 430,
+        "h": 932,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 932,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 396,
+              "height": 37.390625,
+              "top": 128,
+              "right": 413,
+              "bottom": 165.390625,
+              "left": 17
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -6529,7 +7796,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
@@ -6541,11 +7808,11 @@
             "height": 64
           },
           {
-            "label": "Lv.20.7s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -6611,7 +7878,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
@@ -6623,11 +7890,11 @@
             "height": 64
           },
           {
-            "label": "Lv.20.7s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -6705,7 +7972,7 @@
             "height": 64
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
@@ -6717,11 +7984,11 @@
             "height": 64
           },
           {
-            "label": "Lv.20.7s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -7021,15 +8288,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -7037,7 +8304,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -7053,11 +8320,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -7065,31 +8332,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -7177,7 +8444,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -7213,118 +8480,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 430,
-        "h": 932,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 430,
-          "height": 932,
-          "top": 0,
-          "right": 430,
-          "bottom": 932,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 277.375,
-              "width": 390,
-              "height": 377.234375,
-              "top": 277.375,
-              "right": 410,
-              "bottom": 654.609375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 430,
-        "h": 932,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 430,
-          "height": 932,
-          "top": 0,
-          "right": 430,
-          "bottom": 932,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 414,
-              "height": 100.296875,
-              "top": 8,
-              "right": 422,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 780,
-              "width": 414,
-              "height": 144,
-              "top": 780,
-              "right": 422,
-              "bottom": 924,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 430,
-        "h": 932,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 430,
-          "height": 932,
-          "top": 0,
-          "right": 430,
-          "bottom": 932,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 396,
-              "height": 37.390625,
-              "top": 128,
-              "right": 413,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -7429,6 +8584,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 54.796875
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 46
+          },
+          {
+            "label": "图鉴",
+            "height": 46
+          },
+          {
+            "label": "成长",
+            "height": 46
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 360,
+        "h": 560,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 560,
+          "top": 0,
+          "right": 360,
+          "bottom": 560,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 91.375,
+              "width": 320,
+              "height": 377.234375,
+              "top": 91.375,
+              "right": 340,
+              "bottom": 468.609375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -7441,7 +8678,7 @@
             "height": 80.96875
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 80.984375
           },
           {
@@ -7564,6 +8801,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 360,
+        "h": 560,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 560,
+          "top": 0,
+          "right": 360,
+          "bottom": 560,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 344,
+              "height": 100.296875,
+              "top": 8,
+              "right": 352,
+              "bottom": 108.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 408,
+              "width": 344,
+              "height": 144,
+              "top": 408,
+              "right": 352,
+              "bottom": 552,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 360,
+        "h": 560,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 560,
+          "top": 0,
+          "right": 360,
+          "bottom": 560,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 128,
+              "width": 326,
+              "height": 37.390625,
+              "top": 128,
+              "right": 343,
+              "bottom": 165.390625,
+              "left": 17
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -7572,27 +9004,27 @@
             "height": 44
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
-            "label": "Lv.30.5s",
+            "label": "Lv.30.6s",
             "height": 64
           },
           {
-            "label": "Lv.30.8s",
+            "label": "Lv.30.9s",
             "height": 64
           },
           {
-            "label": "Lv.20.7s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -7654,27 +9086,27 @@
             "height": 44
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
-            "label": "Lv.30.5s",
+            "label": "Lv.30.6s",
             "height": 64
           },
           {
-            "label": "Lv.30.8s",
+            "label": "Lv.30.9s",
             "height": 64
           },
           {
-            "label": "Lv.20.7s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -7748,27 +9180,27 @@
             "height": 44
           },
           {
-            "label": "Lv.40.2s",
+            "label": "Lv.40.3s",
             "height": 64
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 64
           },
           {
-            "label": "Lv.30.5s",
+            "label": "Lv.30.6s",
             "height": 64
           },
           {
-            "label": "Lv.30.8s",
+            "label": "Lv.30.9s",
             "height": 64
           },
           {
-            "label": "Lv.20.7s",
+            "label": "Lv.20.8s",
             "height": 64
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.21.0s",
             "height": 64
           },
           {
@@ -8068,15 +9500,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -8084,7 +9516,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -8100,11 +9532,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -8112,31 +9544,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -8224,7 +9656,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -8260,118 +9692,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 360,
-        "h": 560,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 360,
-          "height": 560,
-          "top": 0,
-          "right": 360,
-          "bottom": 560,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 91.375,
-              "width": 320,
-              "height": 377.234375,
-              "top": 91.375,
-              "right": 340,
-              "bottom": 468.609375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 360,
-        "h": 560,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 360,
-          "height": 560,
-          "top": 0,
-          "right": 360,
-          "bottom": 560,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 344,
-              "height": 100.296875,
-              "top": 8,
-              "right": 352,
-              "bottom": 108.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 408,
-              "width": 344,
-              "height": 144,
-              "top": 408,
-              "right": 352,
-              "bottom": 552,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 360,
-        "h": 560,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 360,
-          "height": 560,
-          "top": 0,
-          "right": 360,
-          "bottom": 560,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 128,
-              "width": 326,
-              "height": 37.390625,
-              "top": 128,
-              "right": 343,
-              "bottom": 165.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -8476,6 +9796,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 44
+          },
+          {
+            "label": "返回游戏",
+            "height": 44
+          }
+        ],
+        "w": 667,
+        "h": 375,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 667,
+          "height": 375,
+          "top": 0,
+          "right": 667,
+          "bottom": 375,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 103.5,
+              "y": 8,
+              "width": 460,
+              "height": 359,
+              "top": 8,
+              "right": 563.5,
+              "bottom": 367,
+              "left": 103.5
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -8488,7 +9890,7 @@
             "height": 93.65625
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 93.671875
           },
           {
@@ -8611,6 +10013,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 113
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 113
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 113
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 113
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 113
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 113
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 113
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 113
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 113
+          }
+        ],
+        "w": 667,
+        "h": 375,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 667,
+          "height": 375,
+          "top": 0,
+          "right": 667,
+          "bottom": 375,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 430,
+              "height": 99.484375,
+              "top": 8,
+              "right": 438,
+              "bottom": 107.484375,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 469,
+              "y": 8,
+              "width": 190,
+              "height": 359,
+              "top": 8,
+              "right": 659,
+              "bottom": 367,
+              "left": 469
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 113
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 113
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 113
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 113
+          },
+          {
+            "label": "Lv.21.0s",
+            "height": 113
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 113
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 113
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 113
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 113
+          }
+        ],
+        "w": 667,
+        "h": 375,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 667,
+          "height": 375,
+          "top": 0,
+          "right": 667,
+          "bottom": 375,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 16,
+              "y": 124,
+              "width": 431,
+              "height": 37.390625,
+              "top": 124,
+              "right": 447,
+              "bottom": 161.390625,
+              "left": 16
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -8635,11 +10232,11 @@
             "height": 113
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.20.8s",
             "height": 113
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 113
           },
           {
@@ -8717,11 +10314,11 @@
             "height": 113
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.20.8s",
             "height": 113
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 113
           },
           {
@@ -8811,11 +10408,11 @@
             "height": 113
           },
           {
-            "label": "Lv.20.9s",
+            "label": "Lv.20.8s",
             "height": 113
           },
           {
-            "label": "Lv.21.1s",
+            "label": "Lv.21.0s",
             "height": 113
           },
           {
@@ -9115,15 +10712,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -9131,7 +10728,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -9147,11 +10744,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -9159,31 +10756,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -9271,7 +10868,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -9307,118 +10904,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 667,
-        "h": 375,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 667,
-          "height": 375,
-          "top": 0,
-          "right": 667,
-          "bottom": 375,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 103.5,
-              "y": 8,
-              "width": 460,
-              "height": 359,
-              "top": 8,
-              "right": 563.5,
-              "bottom": 367,
-              "left": 103.5
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 667,
-        "h": 375,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 667,
-          "height": 375,
-          "top": 0,
-          "right": 667,
-          "bottom": 375,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 430,
-              "height": 99.484375,
-              "top": 8,
-              "right": 438,
-              "bottom": 107.484375,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 469,
-              "y": 8,
-              "width": 190,
-              "height": 359,
-              "top": 8,
-              "right": 659,
-              "bottom": 367,
-              "left": 469
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 667,
-        "h": 375,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 667,
-          "height": 375,
-          "top": 0,
-          "right": 667,
-          "bottom": 375,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 16,
-              "y": 124,
-              "width": 431,
-              "height": 37.390625,
-              "top": 124,
-              "right": 447,
-              "bottom": 161.390625,
-              "left": 16
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -9523,6 +11008,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 44.484375
+          },
+          {
+            "label": "返回游戏",
+            "height": 44.46875
+          }
+        ],
+        "w": 844,
+        "h": 390,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "top": 0,
+          "right": 844,
+          "bottom": 390,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 192,
+              "y": 8,
+              "width": 460,
+              "height": 374,
+              "top": 8,
+              "right": 652,
+              "bottom": 382,
+              "left": 192
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -9535,7 +11102,7 @@
             "height": 98.65625
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 98.671875
           },
           {
@@ -9658,6 +11225,201 @@
         "pass": true
       },
       {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 118
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 118
+          },
+          {
+            "label": "Lv.30.8s",
+            "height": 118
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 118
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 118
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 118
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 118
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 118
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 118
+          }
+        ],
+        "w": 844,
+        "h": 390,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "top": 0,
+          "right": 844,
+          "bottom": 390,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 8,
+              "width": 430,
+              "height": 99.484375,
+              "top": 8,
+              "right": 438,
+              "bottom": 107.484375,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 646,
+              "y": 8,
+              "width": 190,
+              "height": 374,
+              "top": 8,
+              "right": 836,
+              "bottom": 382,
+              "left": 646
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 228,
+              "bottom": 84.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 226,
+              "bottom": 82.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 118
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 118
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 118
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 118
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 118
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 118
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 118
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 118
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 118
+          }
+        ],
+        "w": 844,
+        "h": 390,
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "top": 0,
+          "right": 844,
+          "bottom": 390,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 16,
+              "y": 124,
+              "width": 608,
+              "height": 37.390625,
+              "top": 124,
+              "right": 624,
+              "bottom": 161.390625,
+              "left": 16
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "evolution",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
@@ -9666,7 +11428,7 @@
             "height": 44
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 118
           },
           {
@@ -9674,11 +11436,11 @@
             "height": 118
           },
           {
-            "label": "Lv.30.5s",
+            "label": "Lv.30.6s",
             "height": 118
           },
           {
-            "label": "Lv.30.8s",
+            "label": "Lv.30.9s",
             "height": 118
           },
           {
@@ -9686,7 +11448,7 @@
             "height": 118
           },
           {
-            "label": "Lv.21.0s",
+            "label": "Lv.21.1s",
             "height": 118
           },
           {
@@ -9748,7 +11510,7 @@
             "height": 44
           },
           {
-            "label": "Lv.30.2s",
+            "label": "Lv.30.3s",
             "height": 118
           },
           {
@@ -9756,11 +11518,11 @@
             "height": 118
           },
           {
-            "label": "Lv.30.5s",
+            "label": "Lv.30.6s",
             "height": 118
           },
           {
-            "label": "Lv.30.8s",
+            "label": "Lv.30.9s",
             "height": 118
           },
           {
@@ -9768,7 +11530,7 @@
             "height": 118
           },
           {
-            "label": "Lv.21.0s",
+            "label": "Lv.21.1s",
             "height": 118
           },
           {
@@ -9842,7 +11604,7 @@
             "height": 44
           },
           {
-            "label": "Lv.40.2s",
+            "label": "Lv.40.3s",
             "height": 118
           },
           {
@@ -9850,11 +11612,11 @@
             "height": 118
           },
           {
-            "label": "Lv.30.5s",
+            "label": "Lv.30.6s",
             "height": 118
           },
           {
-            "label": "Lv.30.8s",
+            "label": "Lv.30.9s",
             "height": 118
           },
           {
@@ -9862,7 +11624,7 @@
             "height": 118
           },
           {
-            "label": "Lv.21.0s",
+            "label": "Lv.21.1s",
             "height": 118
           },
           {
@@ -10162,15 +11924,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -10178,7 +11940,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -10194,11 +11956,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -10206,31 +11968,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -10318,7 +12080,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -10354,118 +12116,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 844,
-        "h": 390,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 844,
-          "height": 390,
-          "top": 0,
-          "right": 844,
-          "bottom": 390,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 192,
-              "y": 8,
-              "width": 460,
-              "height": 374,
-              "top": 8,
-              "right": 652,
-              "bottom": 382,
-              "left": 192
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 844,
-        "h": 390,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 844,
-          "height": 390,
-          "top": 0,
-          "right": 844,
-          "bottom": 390,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 8,
-              "width": 430,
-              "height": 99.484375,
-              "top": 8,
-              "right": 438,
-              "bottom": 107.484375,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 646,
-              "y": 8,
-              "width": 190,
-              "height": 374,
-              "top": 8,
-              "right": 836,
-              "bottom": 382,
-              "left": 646
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 844,
-        "h": 390,
-        "frame": {
-          "x": 0,
-          "y": 0,
-          "width": 844,
-          "height": 390,
-          "top": 0,
-          "right": 844,
-          "bottom": 390,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 16,
-              "y": 124,
-              "width": 608,
-              "height": 37.390625,
-              "top": 124,
-              "right": 624,
-              "bottom": 161.390625,
-              "left": 16
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -10570,6 +12220,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 46.09375
+          },
+          {
+            "label": "返回游戏",
+            "height": 46.09375
+          }
+        ],
+        "w": 390,
+        "h": 844,
+        "frame": {
+          "x": 0,
+          "y": 47,
+          "width": 390,
+          "height": 763,
+          "top": 47,
+          "right": 390,
+          "bottom": 810,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 20,
+              "y": 239.875,
+              "width": 350,
+              "height": 377.234375,
+              "top": 239.875,
+              "right": 370,
+              "bottom": 617.109375,
+              "left": 20
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -10582,7 +12314,7 @@
             "height": 148.640625
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 148.640625
           },
           {
@@ -10697,6 +12429,201 @@
               "right": 362,
               "bottom": 312.78125,
               "left": 28
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "battle",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.6s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 390,
+        "h": 844,
+        "frame": {
+          "x": 0,
+          "y": 47,
+          "width": 390,
+          "height": 763,
+          "top": 47,
+          "right": 390,
+          "bottom": 810,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 8,
+              "y": 55,
+              "width": 374,
+              "height": 100.296875,
+              "top": 55,
+              "right": 382,
+              "bottom": 155.296875,
+              "left": 8
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 8,
+              "y": 658,
+              "width": 374,
+              "height": 144,
+              "top": 658,
+              "right": 382,
+              "bottom": 802,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 8,
+              "y": 103.140625,
+              "width": 220,
+              "height": 28,
+              "top": 103.140625,
+              "right": 228,
+              "bottom": 131.140625,
+              "left": 8
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 10,
+              "y": 105.140625,
+              "width": 216,
+              "height": 24,
+              "top": 105.140625,
+              "right": 226,
+              "bottom": 129.140625,
+              "left": 10
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 64
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 64
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 64
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 64
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 64
+          }
+        ],
+        "w": 390,
+        "h": 844,
+        "frame": {
+          "x": 0,
+          "y": 47,
+          "width": 390,
+          "height": 763,
+          "top": 47,
+          "right": 390,
+          "bottom": 810,
+          "left": 0
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 17,
+              "y": 175,
+              "width": 356,
+              "height": 37.390625,
+              "top": 175,
+              "right": 373,
+              "bottom": 212.390625,
+              "left": 17
             }
           }
         ],
@@ -11209,15 +13136,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -11225,7 +13152,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -11241,11 +13168,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -11253,31 +13180,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -11365,7 +13292,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -11401,118 +13328,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 390,
-        "h": 844,
-        "frame": {
-          "x": 0,
-          "y": 47,
-          "width": 390,
-          "height": 763,
-          "top": 47,
-          "right": 390,
-          "bottom": 810,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 20,
-              "y": 239.875,
-              "width": 350,
-              "height": 377.234375,
-              "top": 239.875,
-              "right": 370,
-              "bottom": 617.109375,
-              "left": 20
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 390,
-        "h": 844,
-        "frame": {
-          "x": 0,
-          "y": 47,
-          "width": 390,
-          "height": 763,
-          "top": 47,
-          "right": 390,
-          "bottom": 810,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 8,
-              "y": 55,
-              "width": 374,
-              "height": 100.296875,
-              "top": 55,
-              "right": 382,
-              "bottom": 155.296875,
-              "left": 8
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 8,
-              "y": 658,
-              "width": 374,
-              "height": 144,
-              "top": 658,
-              "right": 382,
-              "bottom": 802,
-              "left": 8
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 390,
-        "h": 844,
-        "frame": {
-          "x": 0,
-          "y": 47,
-          "width": 390,
-          "height": 763,
-          "top": 47,
-          "right": 390,
-          "bottom": 810,
-          "left": 0
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 17,
-              "y": 175,
-              "width": 356,
-              "height": 37.390625,
-              "top": 175,
-              "right": 373,
-              "bottom": 212.390625,
-              "left": 17
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   },
@@ -11617,6 +13432,88 @@
         "pass": true
       },
       {
+        "scene": "music",
+        "experienceColor": null,
+        "touchTargets": [
+          {
+            "label": "开始远征 ▷",
+            "height": 60.59375
+          },
+          {
+            "label": "花园图鉴",
+            "height": 54.796875
+          },
+          {
+            "label": "♫ 原版音乐",
+            "height": 44
+          },
+          {
+            "label": "营地",
+            "height": 54
+          },
+          {
+            "label": "图鉴",
+            "height": 54
+          },
+          {
+            "label": "成长",
+            "height": 54
+          },
+          {
+            "label": "原版游戏音乐",
+            "height": 44
+          },
+          {
+            "label": "离线花园音乐",
+            "height": 44
+          },
+          {
+            "label": "关闭音乐",
+            "height": 44
+          },
+          {
+            "label": "载入官方原声播放器",
+            "height": 44
+          },
+          {
+            "label": "返回游戏",
+            "height": 44
+          }
+        ],
+        "w": 844,
+        "h": 390,
+        "frame": {
+          "x": 47,
+          "y": 0,
+          "width": 750,
+          "height": 369,
+          "top": 0,
+          "right": 797,
+          "bottom": 369,
+          "left": 47
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".original-music>.paper",
+            "rect": {
+              "x": 192,
+              "y": 8,
+              "width": 460,
+              "height": 353,
+              "top": 8,
+              "right": 652,
+              "bottom": 361,
+              "left": 192
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
         "scene": "map",
         "experienceColor": null,
         "touchTargets": [
@@ -11629,7 +13526,7 @@
             "height": 91.65625
           },
           {
-            "label": "月光泳池通关前一关解锁",
+            "label": "月光泳池3.5 分钟 · 击败首领",
             "height": 91.671875
           },
           {
@@ -11752,7 +13649,7 @@
         "pass": true
       },
       {
-        "scene": "evolution",
+        "scene": "battle",
         "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
         "touchTargets": [
           {
@@ -11760,11 +13657,7 @@
             "height": 44
           },
           {
-            "label": "Lv.30.3s",
-            "height": 111
-          },
-          {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.6s",
             "height": 111
           },
           {
@@ -11773,6 +13666,205 @@
           },
           {
             "label": "Lv.30.9s",
+            "height": 111
+          },
+          {
+            "label": "Lv.31.2s",
+            "height": 111
+          },
+          {
+            "label": "Lv.21.1s",
+            "height": 111
+          },
+          {
+            "label": "Lv.21.3s",
+            "height": 111
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 111
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 111
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 111
+          }
+        ],
+        "w": 844,
+        "h": 390,
+        "frame": {
+          "x": 47,
+          "y": 0,
+          "width": 750,
+          "height": 369,
+          "top": 0,
+          "right": 797,
+          "bottom": 369,
+          "left": 47
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".hud",
+            "rect": {
+              "x": 55,
+              "y": 8,
+              "width": 430,
+              "height": 99.484375,
+              "top": 8,
+              "right": 485,
+              "bottom": 107.484375,
+              "left": 55
+            }
+          },
+          {
+            "q": ".weapon-dock",
+            "rect": {
+              "x": 599,
+              "y": 8,
+              "width": 190,
+              "height": 353,
+              "top": 8,
+              "right": 789,
+              "bottom": 361,
+              "left": 599
+            }
+          },
+          {
+            "q": ".health-meter",
+            "rect": {
+              "x": 55,
+              "y": 56.140625,
+              "width": 220,
+              "height": 28,
+              "top": 56.140625,
+              "right": 275,
+              "bottom": 84.140625,
+              "left": 55
+            }
+          },
+          {
+            "q": ".health-value",
+            "rect": {
+              "x": 57,
+              "y": 58.140625,
+              "width": 216,
+              "height": 24,
+              "top": 58.140625,
+              "right": 273,
+              "bottom": 82.140625,
+              "left": 57
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "boss",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 111
+          },
+          {
+            "label": "Lv.30.4s",
+            "height": 111
+          },
+          {
+            "label": "Lv.30.7s",
+            "height": 111
+          },
+          {
+            "label": "Lv.31.0s",
+            "height": 111
+          },
+          {
+            "label": "Lv.20.9s",
+            "height": 111
+          },
+          {
+            "label": "Lv.21.2s",
+            "height": 111
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 111
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 111
+          },
+          {
+            "label": "Lv.1被动",
+            "height": 111
+          }
+        ],
+        "w": 844,
+        "h": 390,
+        "frame": {
+          "x": 47,
+          "y": 0,
+          "width": 750,
+          "height": 369,
+          "top": 0,
+          "right": 797,
+          "bottom": 369,
+          "left": 47
+        },
+        "simulator": false,
+        "overflow": false,
+        "controls": [
+          {
+            "q": ".boss-health",
+            "rect": {
+              "x": 63,
+              "y": 124,
+              "width": 514,
+              "height": 37.390625,
+              "top": 124,
+              "right": 577,
+              "bottom": 161.390625,
+              "left": 63
+            }
+          }
+        ],
+        "images": true,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "scene": "evolution",
+        "experienceColor": "linear-gradient(rgb(255, 241, 172), rgb(244, 203, 83))",
+        "touchTargets": [
+          {
+            "label": "Ⅱ",
+            "height": 44
+          },
+          {
+            "label": "Lv.30.2s",
+            "height": 111
+          },
+          {
+            "label": "Lv.30.3s",
+            "height": 111
+          },
+          {
+            "label": "Lv.30.5s",
+            "height": 111
+          },
+          {
+            "label": "Lv.30.8s",
             "height": 111
           },
           {
@@ -11842,7 +13934,7 @@
             "height": 44
           },
           {
-            "label": "Lv.30.3s",
+            "label": "Lv.30.2s",
             "height": 111
           },
           {
@@ -11850,11 +13942,11 @@
             "height": 111
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 111
           },
           {
-            "label": "Lv.30.9s",
+            "label": "Lv.30.8s",
             "height": 111
           },
           {
@@ -11936,7 +14028,7 @@
             "height": 44
           },
           {
-            "label": "Lv.40.3s",
+            "label": "Lv.40.2s",
             "height": 111
           },
           {
@@ -11944,11 +14036,11 @@
             "height": 111
           },
           {
-            "label": "Lv.30.6s",
+            "label": "Lv.30.5s",
             "height": 111
           },
           {
-            "label": "Lv.30.9s",
+            "label": "Lv.30.8s",
             "height": 111
           },
           {
@@ -12256,15 +14348,15 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -12272,7 +14364,7 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -12288,11 +14380,11 @@
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "60 金币 + 1 钻石 · 不足",
+            "label": "60 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
@@ -12300,31 +14392,31 @@
             "height": 44
           },
           {
-            "label": "65 金币 + 1 钻石 · 不足",
+            "label": "65 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "75 金币 + 2 钻石 · 不足",
+            "label": "75 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "80 金币 + 2 钻石 · 不足",
+            "label": "80 金币 + 2 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "70 金币 + 1 钻石 · 不足",
+            "label": "70 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "100 金币 + 3 钻石 · 不足",
+            "label": "100 金币 + 3 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "55 金币 + 1 钻石 · 不足",
+            "label": "55 金币 + 1 钻石 · 解锁",
             "height": 44
           },
           {
-            "label": "110 金币 + 3 钻石 · 不足",
+            "label": "110 金币 + 3 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -12412,7 +14504,7 @@
             "height": 44
           },
           {
-            "label": "80 金币 + 1 钻石 · 不足",
+            "label": "80 金币 + 1 钻石 · 解锁",
             "height": 44
           }
         ],
@@ -12448,118 +14540,6 @@
         "images": true,
         "errors": [],
         "pass": true
-      },
-      {
-        "scene": "music",
-        "w": 844,
-        "h": 390,
-        "frame": {
-          "x": 47,
-          "y": 0,
-          "width": 750,
-          "height": 369,
-          "top": 0,
-          "right": 797,
-          "bottom": 369,
-          "left": 47
-        },
-        "controls": [
-          {
-            "q": ".original-music>.paper",
-            "rect": {
-              "x": 192,
-              "y": 8,
-              "width": 460,
-              "height": 353,
-              "top": 8,
-              "right": 652,
-              "bottom": 361,
-              "left": 192
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "battle",
-        "w": 844,
-        "h": 390,
-        "frame": {
-          "x": 47,
-          "y": 0,
-          "width": 750,
-          "height": 369,
-          "top": 0,
-          "right": 797,
-          "bottom": 369,
-          "left": 47
-        },
-        "controls": [
-          {
-            "q": ".hud",
-            "rect": {
-              "x": 55,
-              "y": 8,
-              "width": 430,
-              "height": 99.484375,
-              "top": 8,
-              "right": 485,
-              "bottom": 107.484375,
-              "left": 55
-            }
-          },
-          {
-            "q": ".weapon-dock",
-            "rect": {
-              "x": 599,
-              "y": 8,
-              "width": 190,
-              "height": 353,
-              "top": 8,
-              "right": 789,
-              "bottom": 361,
-              "left": 599
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
-      },
-      {
-        "scene": "boss",
-        "w": 844,
-        "h": 390,
-        "frame": {
-          "x": 47,
-          "y": 0,
-          "width": 750,
-          "height": 369,
-          "top": 0,
-          "right": 797,
-          "bottom": 369,
-          "left": 47
-        },
-        "controls": [
-          {
-            "q": ".boss-health",
-            "rect": {
-              "x": 63,
-              "y": 124,
-              "width": 514,
-              "height": 37.390625,
-              "top": 124,
-              "right": 577,
-              "bottom": 161.390625,
-              "left": 63
-            }
-          }
-        ],
-        "images": true,
-        "pass": true,
-        "errors": []
       }
     ]
   }

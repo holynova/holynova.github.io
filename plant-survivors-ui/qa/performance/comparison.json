@@ -1,0 +1,182 @@
+[
+  {
+    "name": "normal",
+    "cpuRate": 1,
+    "counts": {
+      "enemies": 50,
+      "shots": 80,
+      "hostile": 20,
+      "drops": 100,
+      "zones": 6,
+      "events": 200,
+      "beams": 24
+    },
+    "valid": true,
+    "baselineSamples": [
+      180,
+      180
+    ],
+    "optimizedSamples": [
+      180,
+      180
+    ],
+    "baseline": 2.950000047683716,
+    "optimized": 2.6500000953674316,
+    "simulationBefore": 1,
+    "simulationAfter": 0.5,
+    "renderBefore": 2.3000001907348633,
+    "renderAfter": 2.1499998569488525,
+    "frameBefore": 34.29999999999973,
+    "frameAfter": 35.24999999999909
+  },
+  {
+    "name": "ceiling",
+    "cpuRate": 1,
+    "counts": {
+      "enemies": 160,
+      "shots": 240,
+      "hostile": 80,
+      "drops": 450,
+      "zones": 24,
+      "events": 200,
+      "beams": 24
+    },
+    "valid": true,
+    "baselineSamples": [
+      180,
+      180
+    ],
+    "optimizedSamples": [
+      180,
+      180
+    ],
+    "baseline": 5.050000190734863,
+    "optimized": 3.5999999046325684,
+    "simulationBefore": 1.75,
+    "simulationAfter": 0.8999998569488525,
+    "renderBefore": 3.3499999046325684,
+    "renderAfter": 2.9000000953674316,
+    "frameBefore": 34.20000000000027,
+    "frameAfter": 35.15000000000009
+  },
+  {
+    "name": "extreme",
+    "cpuRate": 1,
+    "counts": {
+      "enemies": 320,
+      "shots": 800,
+      "hostile": 160,
+      "drops": 800,
+      "zones": 48,
+      "events": 200,
+      "beams": 24
+    },
+    "valid": true,
+    "baselineSamples": [
+      180,
+      180
+    ],
+    "optimizedSamples": [
+      180,
+      180
+    ],
+    "baseline": 9.450000047683716,
+    "optimized": 2.950000047683716,
+    "simulationBefore": 5.549999952316284,
+    "simulationAfter": 0.9000000953674316,
+    "renderBefore": 3.549999952316284,
+    "renderAfter": 2.049999952316284,
+    "frameBefore": 34.25,
+    "frameAfter": 33.649999999999636
+  },
+  {
+    "name": "normal",
+    "cpuRate": 4,
+    "counts": {
+      "enemies": 50,
+      "shots": 80,
+      "hostile": 20,
+      "drops": 100,
+      "zones": 6,
+      "events": 200,
+      "beams": 24
+    },
+    "valid": true,
+    "baselineSamples": [
+      180,
+      180
+    ],
+    "optimizedSamples": [
+      180,
+      180
+    ],
+    "baseline": 5.650000095367432,
+    "optimized": 2.450000047683716,
+    "simulationBefore": 1.9499998092651367,
+    "simulationAfter": 0.6499998569488525,
+    "renderBefore": 4.450000047683716,
+    "renderAfter": 2.1000001430511475,
+    "frameBefore": 34.19999999999982,
+    "frameAfter": 34.90000000000009
+  },
+  {
+    "name": "ceiling",
+    "cpuRate": 4,
+    "counts": {
+      "enemies": 160,
+      "shots": 240,
+      "hostile": 80,
+      "drops": 450,
+      "zones": 24,
+      "events": 200,
+      "beams": 24
+    },
+    "valid": true,
+    "baselineSamples": [
+      180,
+      180
+    ],
+    "optimizedSamples": [
+      180,
+      180
+    ],
+    "baseline": 11.950000047683716,
+    "optimized": 6,
+    "simulationBefore": 3.799999952316284,
+    "simulationAfter": 1.6000001430511475,
+    "renderBefore": 8.25,
+    "renderAfter": 4.699999809265137,
+    "frameBefore": 34.19999999999891,
+    "frameAfter": 35
+  },
+  {
+    "name": "extreme",
+    "cpuRate": 4,
+    "counts": {
+      "enemies": 320,
+      "shots": 800,
+      "hostile": 160,
+      "drops": 800,
+      "zones": 48,
+      "events": 200,
+      "beams": 24
+    },
+    "valid": false,
+    "baselineSamples": [
+      0,
+      0
+    ],
+    "optimizedSamples": [
+      180,
+      180
+    ],
+    "baseline": null,
+    "optimized": 12.400000095367432,
+    "simulationBefore": null,
+    "simulationAfter": 4.049999952316284,
+    "renderBefore": null,
+    "renderAfter": 8.450000047683716,
+    "frameBefore": null,
+    "frameAfter": 41.849999999999454
+  }
+]

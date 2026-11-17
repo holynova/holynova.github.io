@@ -15,4 +15,14 @@
 `GARDEN_QA_SPACE` 可复用当前任务的 TaskSpace，此时调用方负责最后单独 finish。没有此变量时脚本创建并关闭自己的空间。禁止并行操作同一浏览器页。
 
 自动化性能入口：预览服务可用后执行 `npm run test:performance`。每个场景都刷新页面，防止前一场景影响后续资源与采样；每帧固定实体规模，结果和现场截图逐项落盘。若热身未完成，查看返回的 elapsedMs / totalFrames / diagnostic，不把缺失数据记为零耗时。
+
+## v0.8 前后性能比较与受击回归
+
+- 基线源码为 `ddee8b5`。`scripts/compare-performance.mjs` 使用同一个未改动的固定负载 harness；`GARDEN_QA_PHASE=baseline|optimized GARDEN_QA_SPACE=&lt;当前空间&gt; npm run test:performance:compare` 运行 2 轮 × 3 负载 × 2 CPU 配置，逐项保存 JSON 和真实截图，冷启动每组。禁止并行操纵测试页。
+- `node scripts/performance-report.mjs` 生成 `docs/reports/mobile/performance/index.html`。对比两轮 p95 的中位数；基线无有效样本的组不计算改善百分比，单列诊断和采样完成情况。
+- `tests/performance-equivalence.test.mjs` 从 Git 中固定的旧版源码生成临时参照，以 6 个种子逐帧对照 180 帧的完整战斗状态，覆盖随机掉落、穿透和跨格击退。临时参照只在 `.artifacts` 内，不进入发布。
+- 12 视口战斗截图使用部分生命，检查 `.health-meter` 和数值均在视口内。另用真实碰撞触发损伤，验证音频流非静音；静音、密集音效抢占、事件队列溢出由音频回归覆盖。
+- 最后恢复 CPU 降速为1，关闭本任务测试空间、浏览器标签和临时服务器，保留截图与数据；不清理其他任务资源。
+
+受击浏览器回归：在当前 Ego 脚本内导入 `tests/hurt-feedback.mjs`，调用 `checkHurt(page, 绝对报告目录)`；要求本地 DEV 服务5204、FFmpeg。脚本实际启动游戏、等待一次近身攻击、捕获 Canvas 和 MediaRecorder 音频、离线验证音量以及 HUD 生命比例。音频峰值≤-60dB 判失败。
 </pre></html>
