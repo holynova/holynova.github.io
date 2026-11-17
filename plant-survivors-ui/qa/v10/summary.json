@@ -1,0 +1,224 @@
+{
+  "version": "0.10.0",
+  "sourceFingerprint": "645e40ca9186d5f9fc448af50fab1ea2b2af8f71a1ba0de157f7f99636c2e933",
+  "created": "2026-11-17T14:25:27.726Z",
+  "unitTests": 80,
+  "sitesTests": 4,
+  "mobile": {
+    "profiles": 12,
+    "scenes": 180,
+    "failures": 0
+  },
+  "campaign": {
+    "runs": 81,
+    "milestones": 67,
+    "losses": 2,
+    "survivingAtLimit": 79,
+    "firstUpgradeMedian": 23.8,
+    "level60Median": 4,
+    "level120Median": 7,
+    "finalLevelMedian": 18,
+    "evolutionMedian": 156.8,
+    "eliteCombatMedian": 17,
+    "byStage": [
+      {
+        "stage": 0,
+        "milestones": 27,
+        "total": 27
+      },
+      {
+        "stage": 1,
+        "milestones": 14,
+        "total": 27
+      },
+      {
+        "stage": 2,
+        "milestones": 26,
+        "total": 27
+      }
+    ]
+  },
+  "browser": {
+    "pass": true,
+    "lockedCardDialog": true,
+    "healing": {
+      "hp": 75,
+      "event": {
+        "id": 98,
+        "time": 241.250000000001,
+        "type": "heal",
+        "x": 2400,
+        "y": 2400,
+        "kind": "heal",
+        "value": 25
+      },
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 6,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 9.408,
+        "musicPosition": 9.413333333333332,
+        "enabled": true,
+        "hurtPlayed": 0
+      }
+    },
+    "captures": [
+      {
+        "stage": 0,
+        "time": 161.23333333333431,
+        "boss": "boss-captain",
+        "viewport": [
+          390,
+          844
+        ],
+        "enemies": 3,
+        "shots": 21,
+        "canvas": [
+          780,
+          1518
+        ]
+      },
+      {
+        "stage": 1,
+        "time": 201.250000000001,
+        "boss": "boss-marsh",
+        "viewport": [
+          390,
+          844
+        ],
+        "enemies": 3,
+        "shots": 21,
+        "canvas": [
+          780,
+          1518
+        ]
+      },
+      {
+        "stage": 2,
+        "time": 241.23333333333431,
+        "boss": "boss-mech",
+        "viewport": [
+          390,
+          844
+        ],
+        "enemies": 3,
+        "shots": 21,
+        "canvas": [
+          780,
+          1518
+        ]
+      }
+    ]
+  },
+  "soak": {
+    "pass": true,
+    "durationMs": 300012.19999980927,
+    "frames": 17985,
+    "frameMs": {
+      "p50": 16.69999999999709,
+      "p95": 18.599999999998545,
+      "p99": 18.70000000001164
+    },
+    "errors": []
+  },
+  "performance": [
+    {
+      "rate": 1,
+      "name": "normal",
+      "counts": {
+        "enemies": 50,
+        "shots": 80,
+        "hostile": 20,
+        "drops": 100,
+        "zones": 6,
+        "events": 200,
+        "beams": 24
+      },
+      "before": 2.4499998092651367,
+      "after": 1.8500001430511475,
+      "valid": true
+    },
+    {
+      "rate": 1,
+      "name": "ceiling",
+      "counts": {
+        "enemies": 160,
+        "shots": 240,
+        "hostile": 80,
+        "drops": 450,
+        "zones": 24,
+        "events": 200,
+        "beams": 24
+      },
+      "before": 2.5999999046325684,
+      "after": 2.4000000953674316,
+      "valid": true
+    },
+    {
+      "rate": 1,
+      "name": "extreme",
+      "counts": {
+        "enemies": 320,
+        "shots": 800,
+        "hostile": 160,
+        "drops": 800,
+        "zones": 48,
+        "events": 200,
+        "beams": 24
+      },
+      "before": 4.349999666213989,
+      "after": 3.8999998569488525,
+      "valid": true
+    },
+    {
+      "rate": 4,
+      "name": "normal",
+      "counts": {
+        "enemies": 50,
+        "shots": 80,
+        "hostile": 20,
+        "drops": 100,
+        "zones": 6,
+        "events": 200,
+        "beams": 24
+      },
+      "before": 3.9000000953674316,
+      "after": 3.5,
+      "valid": true
+    },
+    {
+      "rate": 4,
+      "name": "ceiling",
+      "counts": {
+        "enemies": 160,
+        "shots": 240,
+        "hostile": 80,
+        "drops": 450,
+        "zones": 24,
+        "events": 200,
+        "beams": 24
+      },
+      "before": 7.699999809265137,
+      "after": 8.749999761581421,
+      "valid": true
+    },
+    {
+      "rate": 4,
+      "name": "extreme",
+      "counts": {
+        "enemies": 320,
+        "shots": 800,
+        "hostile": 160,
+        "drops": 800,
+        "zones": 48,
+        "events": 200,
+        "beams": 24
+      },
+      "before": 16.850000143051147,
+      "after": 15.25,
+      "valid": true
+    }
+  ]
+}

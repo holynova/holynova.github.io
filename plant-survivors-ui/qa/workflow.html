@@ -48,4 +48,12 @@
 生产资源完整性：`build:release` 自动执行 `scripts/check-release-assets.mjs`，检查应用入口、主报告、v0.9 报告与 CSS 的本地链接，核验 78 张运行图片大小，并要求 HTML application-version 与 package.json 一致。发行时网站图标使用 release/sunflower.webp，不能指向被剔除的原始 PNG。
 
 生产触控回归：在同一 Ego 脚本中调用 `productionFlow(page,生产URL,截图绝对路径)`（`tests/production-flow.mjs`）。用 CDP 真实触摸事件分别从左、右半区拖动，验证移动/停止、暂停恢复、刷新后安全恢复存档，以及无 DEV 钩子、无破图。执行结束前读取返回结果，不跨脚本保留尺寸仿真假设。
+
+## v0.10 无限生存回归
+
+- `test:mobile` 固定 12 配置 × 15 场景，新增灰色植物与解锁弹窗；保留 v10/mobile-first-pass.json 的首轮失败。
+- `node --test tests/endless-v10.test.mjs`：轮换 8 轮首领、跨 2 小时存档、死亡解锁、回血、环绕发射与 5 级质变。
+- `tests/campaign.mjs` 的 81 组模拟现在观察至死亡或 600 秒；到观察边界仍存活是有效结果，不人为结束游戏。结果保存在 v10/campaign.json，不代表人类通关率。
+- 性能比较固定 v0.9 提交 68ff351f4fb38ea7b5283e29a714ccb8699a4b86 与 v0.10；每组 2 轮、1×/4× CPU、3 个相同实体负载。明确标注无效采样及超预算。
+- 新增实际运行的三地形、三新首领、气球/小鬼裁切与回血截图，发布报告位于 qa/v10/。
 </pre></html>

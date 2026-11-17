@@ -1,0 +1,74 @@
+{
+  "pass": true,
+  "lockedCardDialog": true,
+  "healing": {
+    "hp": 75,
+    "event": {
+      "id": 98,
+      "time": 241.250000000001,
+      "type": "heal",
+      "x": 2400,
+      "y": 2400,
+      "kind": "heal",
+      "value": 25
+    },
+    "audio": {
+      "ready": true,
+      "state": "running",
+      "voices": 6,
+      "music": true,
+      "musicTrack": "garden-loop",
+      "musicOffset": 9.408,
+      "musicPosition": 9.413333333333332,
+      "enabled": true,
+      "hurtPlayed": 0
+    }
+  },
+  "captures": [
+    {
+      "stage": 0,
+      "time": 161.23333333333431,
+      "boss": "boss-captain",
+      "viewport": [
+        390,
+        844
+      ],
+      "enemies": 3,
+      "shots": 21,
+      "canvas": [
+        780,
+        1518
+      ]
+    },
+    {
+      "stage": 1,
+      "time": 201.250000000001,
+      "boss": "boss-marsh",
+      "viewport": [
+        390,
+        844
+      ],
+      "enemies": 3,
+      "shots": 21,
+      "canvas": [
+        780,
+        1518
+      ]
+    },
+    {
+      "stage": 2,
+      "time": 241.23333333333431,
+      "boss": "boss-mech",
+      "viewport": [
+        390,
+        844
+      ],
+      "enemies": 3,
+      "shots": 21,
+      "canvas": [
+        780,
+        1518
+      ]
+    }
+  ]
+}

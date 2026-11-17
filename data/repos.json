@@ -1900,14 +1900,14 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "手机幸存者：三条进化路线、地图救援与地形机制、敌人动作与情境音乐、战局恢复；附 168 场景验收和性能对照报告",
-            "en": "Mobile garden survivor with three evolution paths, map objectives, terrain mechanics, enemy actions, adaptive music, resumable runs and a 168-scene QA report"
+            "zh": "手机无限生存：四种轮换首领、环绕植物、5 级质变、回血掉落与三种地貌；全新生图特效，附 180 场景验收和性能对照",
+            "en": "Endless mobile garden survival with four rotating bosses, orbiting plants, Lv.5 transformations, healing drops and three biomes; generated combat art with 180-scene QA and performance comparisons"
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
           "screenshot": "screenshots/plant-survivors-ui.png",
           "pushed_at": "2026-11-17",
-          "commit_time": "2026-11-17T16:21:27+08:00",
+          "commit_time": "2026-11-17T22:25:27+08:00",
           "hidden": false
         },
         {
