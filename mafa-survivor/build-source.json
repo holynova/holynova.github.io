@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/holynova/mafa-survivor",
   "branch": "main",
-  "commit": "1bffb3188398ef31851502f1e203762c8215defa",
-  "version": "0.1.0-alpha.39",
+  "commit": "326e00f045c576c6fe7e9d24ad241254ab226631",
+  "version": "0.1.0-alpha.40",
   "base": "/mafa-survivor/"
 }
