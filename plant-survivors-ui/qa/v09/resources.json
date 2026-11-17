@@ -1,0 +1,10 @@
+{
+  "images": 78,
+  "bytes": 3714212,
+  "estimatedRgbaBytes": 55579968,
+  "baseline": {
+    "images": 104,
+    "compressedMiB": 32.90402889251709,
+    "estimatedRgbaMiB": 111.34083938598633
+  }
+}

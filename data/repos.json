@@ -1900,14 +1900,14 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "手机幸存者：自由触控、大地图、26 种植物与 15 类敌人；统一后院设计系统、地面战斗特效，附 168 场景移动端验收报告",
-            "en": "Mobile garden survivor with 26 plants, 15 enemy types, shared design tokens, ground combat effects and a 168-scene mobile QA report"
+            "zh": "手机幸存者：三条进化路线、地图救援与地形机制、敌人动作与情境音乐、战局恢复；附 168 场景验收和性能对照报告",
+            "en": "Mobile garden survivor with three evolution paths, map objectives, terrain mechanics, enemy actions, adaptive music, resumable runs and a 168-scene QA report"
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
           "screenshot": "screenshots/plant-survivors-ui.png",
           "pushed_at": "2026-11-17",
-          "commit_time": "2026-11-17T06:47:18+08:00",
+          "commit_time": "2026-11-17T16:21:27+08:00",
           "hidden": false
         },
         {

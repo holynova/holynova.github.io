@@ -1,0 +1,36 @@
+{
+  "before": {
+    "ready": true,
+    "state": "running",
+    "voices": 0,
+    "music": true,
+    "musicTrack": "garden-loop",
+    "musicOffset": 0,
+    "musicPosition": 1.2320000000000002,
+    "enabled": true,
+    "hurtPlayed": 0
+  },
+  "paused": {
+    "ready": true,
+    "state": "running",
+    "voices": 0,
+    "music": false,
+    "musicTrack": "garden-loop",
+    "musicOffset": 1.2320000000000002,
+    "musicPosition": 1.2320000000000002,
+    "enabled": true,
+    "hurtPlayed": 0
+  },
+  "after": {
+    "ready": true,
+    "state": "running",
+    "voices": 0,
+    "music": true,
+    "musicTrack": "garden-loop",
+    "musicOffset": 1.2320000000000002,
+    "musicPosition": 1.5306666666666668,
+    "enabled": true,
+    "hurtPlayed": 0
+  },
+  "pass": true
+}

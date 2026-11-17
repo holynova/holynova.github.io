@@ -1,0 +1,5 @@
+{
+  "version": "v0.8",
+  "valid": false,
+  "reason": "First navigation used the browser tool default 15-second load wait and timed out after the document committed. Network settings were restored by finally; this interrupted run is excluded. Retested with domcontentloaded and explicit 50-second bound."
+}

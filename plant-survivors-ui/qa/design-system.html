@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DESIGN-SYSTEM</title><style>body{max-width:980px;margin:32px auto;padding:20px;background:#fff3ce;color:#49351f;font:16px/1.7 system-ui}pre{white-space:pre-wrap;font:inherit}a{color:#527b2f}</style><a href="index.html">← 返回验收报告</a><pre># 经典后院设计系统 · v0.7
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DESIGN-SYSTEM</title><style>body{max-width:980px;margin:32px auto;padding:20px;background:#fff3ce;color:#49351f;font:16px/1.7 system-ui}pre{white-space:pre-wrap;font:inherit}a{color:#527b2f}</style><a href="index.html">← 返回验收报告</a><pre># 经典后院设计系统 · v0.9
 
 视觉方向保持选定的经典后院：纸张承载内容，木框承载导航和操作，叶绿表示植物和充能，阳光金表示经验、奖励及主要行动。禁止经验条使用魔法紫色。
 
@@ -44,4 +44,13 @@
 敌方圆形预警的外沿等于伤害半径，倒计时扇形填满后命中；中心叹号、暖红描边和分段内环共同区分危险。冲锋使用带半圆端部的路径区域，覆盖冲锋距离及身体半径。钻地和施法保留独立目标标记。命中痕迹绘制在角色脚下，1.1 秒内消退。冰冻用冰蓝细环，磁力用紫色虚线，友方火焰用阳光金色火带，均与红色危险区区分。
 
 `attack-geometry.ts` 同时供模拟和预警使用。阴影采用一次生成的透明贴图；高密度战斗只限制装饰性火苗、命中火花及伤害数字，不降低敌人数量、投射物或伤害结算。
+
+
+## v0.9 战斗信息与声音
+
+`tokens.combat` 定义友方效果透明度 0.68、危险边缘宽度 3、受击时间 0.3 秒、伤害标签预算 12。危险填充留在脚下，边缘在友方攻击上层重复绘制；敌弹保留实心与深描边，主角带浅色轮廓。脚底标记使用扁椭圆，不能画成使角色悬空的圆盘。
+
+HUD 一至六个装备槽使用单行，超过六个才用双行；横屏使用原有侧栏。升级卡必须给出伤害或冷却的实际前后值，进化配方始终可查；满被动槽显示替换补救。最后防线用明确倒计时，避免无限延长战斗。
+
+音乐分营地、普通、精英、首领四个状态，切换淡入淡出；暂停保存播放位置。危险音、战斗音与音乐分别调节。受击音继续使用最高优先级，危险提示还必须保留形状/方向/文字信息。原声外部播放器是单独的手动入口，不承诺随游戏自动暂停。
 </pre></html>

@@ -1,0 +1,3467 @@
+{
+  "durationMs": 1200026,
+  "requestedMs": 1200000,
+  "samples": [
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 6725.1,
+      "gameTime": 4.949999999999988,
+      "status": "playing",
+      "enemy": 2,
+      "shots": 2,
+      "heap": 175276587,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 0,
+        "musicPosition": 6.752000000000001,
+        "enabled": true,
+        "hurtPlayed": 0
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 16741.8,
+      "gameTime": 14.96666666666699,
+      "status": "playing",
+      "enemy": 5,
+      "shots": 1,
+      "heap": 91293375,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 0,
+        "musicPosition": 16.768,
+        "enabled": true,
+        "hurtPlayed": 0
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 26758.4,
+      "gameTime": 24.76666666666654,
+      "status": "playing",
+      "enemy": 9,
+      "shots": 2,
+      "heap": 72446275,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 24.208000000000002,
+        "musicPosition": 26.661333333333335,
+        "enabled": true,
+        "hurtPlayed": 0
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 36758.5,
+      "gameTime": 34.76666666666598,
+      "status": "playing",
+      "enemy": 13,
+      "shots": 1,
+      "heap": 64598361,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 24.208000000000002,
+        "musicPosition": 36.66133333333333,
+        "enabled": true,
+        "hurtPlayed": 0
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 46775.1,
+      "gameTime": 44.73333333333208,
+      "status": "playing",
+      "enemy": 17,
+      "shots": 3,
+      "heap": 64804137,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 4.991466666666669,
+        "musicPosition": 6.308800000000007,
+        "enabled": true,
+        "hurtPlayed": 0
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 56791.8,
+      "gameTime": 54.749999999998174,
+      "status": "playing",
+      "enemy": 16,
+      "shots": 1,
+      "heap": 65242610,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 4.991466666666669,
+        "musicPosition": 16.330133333333336,
+        "enabled": true,
+        "hurtPlayed": 1
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 66807.2,
+      "gameTime": 64.78333333333094,
+      "status": "playing",
+      "enemy": 18,
+      "shots": 0,
+      "heap": 64983999,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 4.991466666666669,
+        "musicPosition": 26.346133333333334,
+        "enabled": true,
+        "hurtPlayed": 3
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 76825.2,
+      "gameTime": 74.74999999999704,
+      "status": "playing",
+      "enemy": 22,
+      "shots": 0,
+      "heap": 66082607,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 11.551466666666663,
+        "musicPosition": 19.0768,
+        "enabled": true,
+        "hurtPlayed": 4
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 86856.6,
+      "gameTime": 84.63333333332982,
+      "status": "playing",
+      "enemy": 23,
+      "shots": 9,
+      "heap": 67406216,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 7,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 3.4661333333333246,
+        "musicPosition": 11.722133333333325,
+        "enabled": true,
+        "hurtPlayed": 4
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 96857,
+      "gameTime": 94.49999999999592,
+      "status": "playing",
+      "enemy": 19,
+      "shots": 9,
+      "heap": 71153120,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 0.4634666666666547,
+        "musicPosition": 4.314133333333324,
+        "enabled": true,
+        "hurtPlayed": 7
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 106858.4,
+      "gameTime": 104.51666666666202,
+      "status": "playing",
+      "enemy": 23,
+      "shots": 1,
+      "heap": 67350435,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 0.4634666666666547,
+        "musicPosition": 14.314133333333324,
+        "enabled": true,
+        "hurtPlayed": 10
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 116858.5,
+      "gameTime": 5.199999999999987,
+      "status": "playing",
+      "enemy": 2,
+      "shots": 1,
+      "heap": 66310543,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 0.7674666666666567,
+        "musicPosition": 6.015466666666661,
+        "enabled": true,
+        "hurtPlayed": 12
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 126891.8,
+      "gameTime": 15.23333333333367,
+      "status": "playing",
+      "enemy": 7,
+      "shots": 3,
+      "heap": 65747406,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 0.7674666666666567,
+        "musicPosition": 16.047466666666658,
+        "enabled": true,
+        "hurtPlayed": 12
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 136906.4,
+      "gameTime": 25.23333333333318,
+      "status": "playing",
+      "enemy": 13,
+      "shots": 0,
+      "heap": 70001662,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 22.650133333333322,
+        "musicPosition": 26.05279999999997,
+        "enabled": true,
+        "hurtPlayed": 12
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 146925.2,
+      "gameTime": 35.14999999999929,
+      "status": "playing",
+      "enemy": 15,
+      "shots": 10,
+      "heap": 69346552,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 31.258133333333326,
+        "musicPosition": 35.98346666666664,
+        "enabled": true,
+        "hurtPlayed": 12
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 156941.8,
+      "gameTime": 45.18333333333205,
+      "status": "playing",
+      "enemy": 20,
+      "shots": 8,
+      "heap": 65038235,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 1.103759999999992,
+        "musicPosition": 6.250426666666668,
+        "enabled": true,
+        "hurtPlayed": 13
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 166975.1,
+      "gameTime": 55.14999999999815,
+      "status": "playing",
+      "enemy": 21,
+      "shots": 9,
+      "heap": 69192106,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 13.701093333333317,
+        "musicPosition": 16.271759999999972,
+        "enabled": true,
+        "hurtPlayed": 13
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 176991.8,
+      "gameTime": 65.11666666666426,
+      "status": "playing",
+      "enemy": 17,
+      "shots": 1,
+      "heap": 69606494,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 8.543759999999992,
+        "musicPosition": 8.98109333333332,
+        "enabled": true,
+        "hurtPlayed": 13
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 187008.6,
+      "gameTime": 75.14999999999702,
+      "status": "playing",
+      "enemy": 21,
+      "shots": 2,
+      "heap": 68377879,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 8.543759999999992,
+        "musicPosition": 18.99709333333331,
+        "enabled": true,
+        "hurtPlayed": 13
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 197041.9,
+      "gameTime": 84.9833333333298,
+      "status": "playing",
+      "enemy": 19,
+      "shots": 11,
+      "heap": 70719866,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 10.47442666666663,
+        "musicPosition": 11.615759999999938,
+        "enabled": true,
+        "hurtPlayed": 14
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 207073.6,
+      "gameTime": 95.01666666666256,
+      "status": "playing",
+      "enemy": 16,
+      "shots": 10,
+      "heap": 65667679,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 10.47442666666663,
+        "musicPosition": 21.64775999999995,
+        "enabled": true,
+        "hurtPlayed": 14
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 217108.4,
+      "gameTime": 104.94999999999533,
+      "status": "playing",
+      "enemy": 25,
+      "shots": 0,
+      "heap": 66854312,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.773093333333293,
+        "musicPosition": 14.330426666666625,
+        "enabled": true,
+        "hurtPlayed": 15
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 227108.5,
+      "gameTime": 114.96666666666142,
+      "status": "playing",
+      "enemy": 30,
+      "shots": 1,
+      "heap": 60937259,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.773093333333293,
+        "musicPosition": 24.330426666666625,
+        "enabled": true,
+        "hurtPlayed": 15
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 237123.1,
+      "gameTime": 124.96666666666086,
+      "status": "playing",
+      "enemy": 32,
+      "shots": 9,
+      "heap": 62326503,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.773093333333293,
+        "musicPosition": 34.346426666666616,
+        "enabled": true,
+        "hurtPlayed": 20
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 247123.9,
+      "gameTime": 134.8833333333328,
+      "status": "playing",
+      "enemy": 27,
+      "shots": 10,
+      "heap": 72594692,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 7.391759999999948,
+        "musicPosition": 9.711759999999941,
+        "enabled": true,
+        "hurtPlayed": 20
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 257141.8,
+      "gameTime": 144.88333333334077,
+      "status": "playing",
+      "enemy": 35,
+      "shots": 1,
+      "heap": 63357816,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 8.770157037036975,
+        "musicPosition": 18.631490370370337,
+        "enabled": true,
+        "hurtPlayed": 21
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1382
+      ],
+      "wallMs": 267175.1,
+      "gameTime": 154.85000000001537,
+      "status": "playing",
+      "enemy": 55,
+      "shots": 10,
+      "heap": 61076703,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 4.508823703703648,
+        "musicPosition": 13.234157037037015,
+        "enabled": true,
+        "hurtPlayed": 24
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1382
+      ],
+      "wallMs": 277175.2,
+      "gameTime": 164.86666666669,
+      "status": "playing",
+      "enemy": 56,
+      "shots": 2,
+      "heap": 73333107,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 4.508823703703648,
+        "musicPosition": 23.234157037037015,
+        "enabled": true,
+        "hurtPlayed": 26
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1382
+      ],
+      "wallMs": 287208.5,
+      "gameTime": 174.70000000003117,
+      "status": "playing",
+      "enemy": 50,
+      "shots": 8,
+      "heap": 71275187,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 6,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 2.162157037036984,
+        "musicPosition": 2.4181570370369556,
+        "enabled": true,
+        "hurtPlayed": 27
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 297241.8,
+      "gameTime": 7.4666666666666455,
+      "status": "playing",
+      "enemy": 3,
+      "shots": 1,
+      "heap": 68911148,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 2.9194903703702764,
+        "musicPosition": 11.404823703703578,
+        "enabled": true,
+        "hurtPlayed": 28
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 307258.5,
+      "gameTime": 17.483333333333622,
+      "status": "playing",
+      "enemy": 6,
+      "shots": 1,
+      "heap": 70704232,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 2.9194903703702764,
+        "musicPosition": 21.420823703703597,
+        "enabled": true,
+        "hurtPlayed": 28
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 317275.1,
+      "gameTime": 27.399999999999725,
+      "status": "playing",
+      "enemy": 10,
+      "shots": 0,
+      "heap": 62198756,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 24.594157037036943,
+        "musicPosition": 31.362157037036972,
+        "enabled": true,
+        "hurtPlayed": 28
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 327307.8,
+      "gameTime": 37.416666666665826,
+      "status": "playing",
+      "enemy": 15,
+      "shots": 0,
+      "heap": 63604001,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 24.594157037036943,
+        "musicPosition": 41.399490370370295,
+        "enabled": true,
+        "hurtPlayed": 28
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 337308.5,
+      "gameTime": 47.33333333333193,
+      "status": "playing",
+      "enemy": 20,
+      "shots": 1,
+      "heap": 63967125,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 2.5161706666666266,
+        "musicPosition": 9.849503999999941,
+        "enabled": true,
+        "hurtPlayed": 28
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 347324.7,
+      "gameTime": 57.349999999998026,
+      "status": "playing",
+      "enemy": 25,
+      "shots": 0,
+      "heap": 65463035,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 2.5161706666666266,
+        "musicPosition": 19.86550399999996,
+        "enabled": true,
+        "hurtPlayed": 28
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 357358.4,
+      "gameTime": 67.2833333333308,
+      "status": "playing",
+      "enemy": 30,
+      "shots": 1,
+      "heap": 67944356,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 11.172170666666602,
+        "musicPosition": 12.574837333333278,
+        "enabled": true,
+        "hurtPlayed": 28
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 367374.4,
+      "gameTime": 77.31666666666356,
+      "status": "playing",
+      "enemy": 41,
+      "shots": 2,
+      "heap": 62874508,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 11.172170666666602,
+        "musicPosition": 22.590837333333297,
+        "enabled": true,
+        "hurtPlayed": 29
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 377408.1,
+      "gameTime": 87.33333333332966,
+      "status": "playing",
+      "enemy": 44,
+      "shots": 1,
+      "heap": 60547017,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 11.172170666666602,
+        "musicPosition": 32.62283733333328,
+        "enabled": true,
+        "hurtPlayed": 31
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 387408.5,
+      "gameTime": 97.21666666666243,
+      "status": "playing",
+      "enemy": 44,
+      "shots": 0,
+      "heap": 69387900,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 7,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 3.9881706666666332,
+        "musicPosition": 7.993503999999973,
+        "enabled": true,
+        "hurtPlayed": 32
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 397425.2,
+      "gameTime": 107.23333333332853,
+      "status": "playing",
+      "enemy": 52,
+      "shots": 0,
+      "heap": 64184380,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 3.9881706666666332,
+        "musicPosition": 18.014837333333276,
+        "enabled": true,
+        "hurtPlayed": 32
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 407439.8,
+      "gameTime": 117.08333333332797,
+      "status": "playing",
+      "enemy": 63,
+      "shots": 2,
+      "heap": 60512517,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 8.766837333333314,
+        "musicPosition": 10.601503999999949,
+        "enabled": true,
+        "hurtPlayed": 37
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 417441.8,
+      "gameTime": 4.266666666666657,
+      "status": "playing",
+      "enemy": 2,
+      "shots": 2,
+      "heap": 65800305,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 14.260170666666653,
+        "musicPosition": 19.497503999999964,
+        "enabled": true,
+        "hurtPlayed": 39
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 427458.5,
+      "gameTime": 14.30000000000029,
+      "status": "playing",
+      "enemy": 7,
+      "shots": 2,
+      "heap": 66802849,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 14.260170666666653,
+        "musicPosition": 29.513503999999983,
+        "enabled": true,
+        "hurtPlayed": 39
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 437473.2,
+      "gameTime": 24.2999999999999,
+      "status": "playing",
+      "enemy": 11,
+      "shots": 1,
+      "heap": 61013868,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 14.260170666666653,
+        "musicPosition": 39.52417066666666,
+        "enabled": true,
+        "hurtPlayed": 39
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 447491.8,
+      "gameTime": 34.24999999999934,
+      "status": "playing",
+      "enemy": 17,
+      "shots": 0,
+      "heap": 64333132,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 1.2788373333332927,
+        "musicPosition": 11.065503999999926,
+        "enabled": true,
+        "hurtPlayed": 39
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 457508.4,
+      "gameTime": 44.18333333333211,
+      "status": "playing",
+      "enemy": 21,
+      "shots": 0,
+      "heap": 60618359,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 9.206676800000004,
+        "musicPosition": 11.761343466666666,
+        "enabled": true,
+        "hurtPlayed": 39
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 467525.1,
+      "gameTime": 54.199999999998205,
+      "status": "playing",
+      "enemy": 25,
+      "shots": 0,
+      "heap": 60595976,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 9.206676800000004,
+        "musicPosition": 21.77734346666663,
+        "enabled": true,
+        "hurtPlayed": 39
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 477541.1,
+      "gameTime": 64.16666666666431,
+      "status": "playing",
+      "enemy": 32,
+      "shots": 0,
+      "heap": 60604631,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.753343466666657,
+        "musicPosition": 14.492010133333345,
+        "enabled": true,
+        "hurtPlayed": 39
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 487575.1,
+      "gameTime": 74.18333333333041,
+      "status": "playing",
+      "enemy": 38,
+      "shots": 0,
+      "heap": 65885620,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.753343466666657,
+        "musicPosition": 24.529343466666667,
+        "enabled": true,
+        "hurtPlayed": 40
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 497575.2,
+      "gameTime": 84.1999999999965,
+      "status": "playing",
+      "enemy": 49,
+      "shots": 0,
+      "heap": 61354125,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.753343466666657,
+        "musicPosition": 34.526676800000025,
+        "enabled": true,
+        "hurtPlayed": 41
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 507608.3,
+      "gameTime": 94.14999999999594,
+      "status": "playing",
+      "enemy": 51,
+      "shots": 1,
+      "heap": 66801828,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 6.33734346666666,
+        "musicPosition": 9.942676800000022,
+        "enabled": true,
+        "hurtPlayed": 41
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 517608.5,
+      "gameTime": 104.14999999999537,
+      "status": "playing",
+      "enemy": 56,
+      "shots": 3,
+      "heap": 60208797,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 6.33734346666666,
+        "musicPosition": 19.942676800000022,
+        "enabled": true,
+        "hurtPlayed": 42
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 527641.7,
+      "gameTime": 114.13333333332814,
+      "status": "playing",
+      "enemy": 64,
+      "shots": 3,
+      "heap": 70789212,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 7.766676799999949,
+        "musicPosition": 12.652010133333228,
+        "enabled": true,
+        "hurtPlayed": 42
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 537658.4,
+      "gameTime": 124.14999999999424,
+      "status": "playing",
+      "enemy": 76,
+      "shots": 0,
+      "heap": 60391661,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 8,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 7.766676799999949,
+        "musicPosition": 22.668010133333304,
+        "enabled": true,
+        "hurtPlayed": 43
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 547675.1,
+      "gameTime": 134.16666666666558,
+      "status": "playing",
+      "enemy": 82,
+      "shots": 2,
+      "heap": 67022776,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 7.766676799999949,
+        "musicPosition": 32.68401013333327,
+        "enabled": true,
+        "hurtPlayed": 45
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 557708.5,
+      "gameTime": 144.10000000000682,
+      "status": "playing",
+      "enemy": 74,
+      "shots": 1,
+      "heap": 61361446,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 6,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 1.887416414814723,
+        "musicPosition": 8.191416414814697,
+        "enabled": true,
+        "hurtPlayed": 46
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 567741.9,
+      "gameTime": 154.0000000000147,
+      "status": "lost",
+      "enemy": 89,
+      "shots": 2,
+      "heap": 63011198,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": false,
+        "musicTrack": "boss-loop",
+        "musicOffset": 2.724749748148014,
+        "musicPosition": 2.724749748148014,
+        "enabled": true,
+        "hurtPlayed": 49
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 577758.5,
+      "gameTime": 8.149999999999984,
+      "status": "playing",
+      "enemy": 3,
+      "shots": 1,
+      "heap": 64762926,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 2.724749748148014,
+        "musicPosition": 11.828749748147942,
+        "enabled": true,
+        "hurtPlayed": 49
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 587790.6,
+      "gameTime": 18.15000000000025,
+      "status": "playing",
+      "enemy": 7,
+      "shots": 2,
+      "heap": 64934004,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 2.724749748148014,
+        "musicPosition": 21.86074974814798,
+        "enabled": true,
+        "hurtPlayed": 49
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 597807.5,
+      "gameTime": 28.033333333333022,
+      "status": "playing",
+      "enemy": 11,
+      "shots": 2,
+      "heap": 69557775,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 24.25008308148128,
+        "musicPosition": 31.8020830814813,
+        "enabled": true,
+        "hurtPlayed": 49
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 607841.8,
+      "gameTime": 38.083333333332455,
+      "status": "playing",
+      "enemy": 20,
+      "shots": 0,
+      "heap": 72752181,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 24.25008308148128,
+        "musicPosition": 41.83408308148134,
+        "enabled": true,
+        "hurtPlayed": 50
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 617857.8,
+      "gameTime": 47.99999999999856,
+      "status": "playing",
+      "enemy": 24,
+      "shots": 1,
+      "heap": 66028024,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 2.8717373866665814,
+        "musicPosition": 10.381070719999997,
+        "enabled": true,
+        "hurtPlayed": 50
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 627875.1,
+      "gameTime": 57.99999999999799,
+      "status": "playing",
+      "enemy": 32,
+      "shots": 0,
+      "heap": 60433020,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 2.8717373866665814,
+        "musicPosition": 20.39707071999996,
+        "enabled": true,
+        "hurtPlayed": 52
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 637907.8,
+      "gameTime": 67.88333333333077,
+      "status": "playing",
+      "enemy": 37,
+      "shots": 0,
+      "heap": 73781827,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 8.871737386666666,
+        "musicPosition": 13.026404053333351,
+        "enabled": true,
+        "hurtPlayed": 54
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 647907.9,
+      "gameTime": 77.8833333333302,
+      "status": "playing",
+      "enemy": 50,
+      "shots": 0,
+      "heap": 63987018,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 8.871737386666666,
+        "musicPosition": 23.02640405333335,
+        "enabled": true,
+        "hurtPlayed": 56
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 657908.5,
+      "gameTime": 4.233333333333324,
+      "status": "playing",
+      "enemy": 2,
+      "shots": 1,
+      "heap": 61591802,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 9.463737386666622,
+        "musicPosition": 14.717070719999953,
+        "enabled": true,
+        "hurtPlayed": 57
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 668058.5,
+      "gameTime": 14.216666666666953,
+      "status": "playing",
+      "enemy": 5,
+      "shots": 2,
+      "heap": 61264790,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 9.463737386666622,
+        "musicPosition": 24.86640405333324,
+        "enabled": true,
+        "hurtPlayed": 57
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 678075.1,
+      "gameTime": 24.249999999999904,
+      "status": "playing",
+      "enemy": 8,
+      "shots": 1,
+      "heap": 64108959,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 31.25573738666654,
+        "musicPosition": 34.77573738666652,
+        "enabled": true,
+        "hurtPlayed": 57
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 688091.8,
+      "gameTime": 34.24999999999934,
+      "status": "playing",
+      "enemy": 13,
+      "shots": 1,
+      "heap": 65346740,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 31.25573738666654,
+        "musicPosition": 44.7917373866666,
+        "enabled": true,
+        "hurtPlayed": 57
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 698107.9,
+      "gameTime": 44.09999999999878,
+      "status": "playing",
+      "enemy": 18,
+      "shots": 1,
+      "heap": 77155572,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 5.50908182399999,
+        "musicPosition": 9.541081823999916,
+        "enabled": true,
+        "hurtPlayed": 57
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 708108.5,
+      "gameTime": 54.09999999999821,
+      "status": "playing",
+      "enemy": 21,
+      "shots": 1,
+      "heap": 70423524,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 5.50908182399999,
+        "musicPosition": 19.541081823999917,
+        "enabled": true,
+        "hurtPlayed": 57
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 718141.8,
+      "gameTime": 63.96666666666432,
+      "status": "playing",
+      "enemy": 22,
+      "shots": 1,
+      "heap": 68320526,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 6.378415157333279,
+        "musicPosition": 12.165081823999913,
+        "enabled": true,
+        "hurtPlayed": 58
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 728158.4,
+      "gameTime": 73.98333333333042,
+      "status": "playing",
+      "enemy": 31,
+      "shots": 1,
+      "heap": 66684804,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 6.378415157333279,
+        "musicPosition": 22.181081823999875,
+        "enabled": true,
+        "hurtPlayed": 59
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 738173.3,
+      "gameTime": 83.84999999999653,
+      "status": "playing",
+      "enemy": 39,
+      "shots": 2,
+      "heap": 73807876,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.223748490666566,
+        "musicPosition": 14.799748490666587,
+        "enabled": true,
+        "hurtPlayed": 59
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 748175.2,
+      "gameTime": 93.84999999999596,
+      "status": "playing",
+      "enemy": 45,
+      "shots": 2,
+      "heap": 72387891,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.223748490666566,
+        "musicPosition": 24.799748490666587,
+        "enabled": true,
+        "hurtPlayed": 59
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 758191.8,
+      "gameTime": 103.88333333332872,
+      "status": "playing",
+      "enemy": 55,
+      "shots": 2,
+      "heap": 69406600,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 12.223748490666566,
+        "musicPosition": 34.81574849066655,
+        "enabled": true,
+        "hurtPlayed": 59
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 768206.5,
+      "gameTime": 113.78333333332816,
+      "status": "playing",
+      "enemy": 69,
+      "shots": 1,
+      "heap": 65181899,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 4.143748490666582,
+        "musicPosition": 10.197081823999866,
+        "enabled": true,
+        "hurtPlayed": 59
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 778207,
+      "gameTime": 123.76666666666092,
+      "status": "playing",
+      "enemy": 69,
+      "shots": 0,
+      "heap": 64791996,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 4.143748490666582,
+        "musicPosition": 20.197081823999866,
+        "enabled": true,
+        "hurtPlayed": 61
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 788224.8,
+      "gameTime": 133.69999999999854,
+      "status": "playing",
+      "enemy": 50,
+      "shots": 9,
+      "heap": 66733968,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 6,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 4.506415157333208,
+        "musicPosition": 12.879748490666543,
+        "enabled": true,
+        "hurtPlayed": 62
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 798225.1,
+      "gameTime": 143.51666666667302,
+      "status": "playing",
+      "enemy": 48,
+      "shots": 1,
+      "heap": 69800996,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 8,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 4.972813473184981,
+        "musicPosition": 5.794146806518295,
+        "enabled": true,
+        "hurtPlayed": 65
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 808258.4,
+      "gameTime": 153.53333333334766,
+      "status": "playing",
+      "enemy": 63,
+      "shots": 1,
+      "heap": 63232908,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 6,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 4.972813473184981,
+        "musicPosition": 15.826146806518334,
+        "enabled": true,
+        "hurtPlayed": 65
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 818258.5,
+      "gameTime": 163.36666666668881,
+      "status": "playing",
+      "enemy": 47,
+      "shots": 0,
+      "heap": 65719719,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 10,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 9.735480139851628,
+        "musicPosition": 10.343480139851689,
+        "enabled": true,
+        "hurtPlayed": 65
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 828273.6,
+      "gameTime": 0.4833333333333333,
+      "status": "playing",
+      "enemy": 1,
+      "shots": 0,
+      "heap": 70986681,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 2.4501468065183865,
+        "musicPosition": 3.9221468065183664,
+        "enabled": true,
+        "hurtPlayed": 67
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 838291.9,
+      "gameTime": 10.516666666666769,
+      "status": "playing",
+      "enemy": 4,
+      "shots": 1,
+      "heap": 70592916,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 2.4501468065183865,
+        "musicPosition": 13.93814680651833,
+        "enabled": true,
+        "hurtPlayed": 67
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 848324.2,
+      "gameTime": 20.466666666666786,
+      "status": "playing",
+      "enemy": 7,
+      "shots": 2,
+      "heap": 71825604,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 20.540813473184993,
+        "musicPosition": 23.911480139851687,
+        "enabled": true,
+        "hurtPlayed": 67
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 858325.2,
+      "gameTime": 30.49999999999955,
+      "status": "playing",
+      "enemy": 11,
+      "shots": 0,
+      "heap": 60448457,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 20.540813473184993,
+        "musicPosition": 33.91148013985169,
+        "enabled": true,
+        "hurtPlayed": 67
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 868341.6,
+      "gameTime": 40.39999999999899,
+      "status": "playing",
+      "enemy": 18,
+      "shots": 1,
+      "heap": 68130868,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 2.283366062933277,
+        "musicPosition": 2.6780327295998574,
+        "enabled": true,
+        "hurtPlayed": 67
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 878356.5,
+      "gameTime": 50.43333333333175,
+      "status": "playing",
+      "enemy": 15,
+      "shots": 1,
+      "heap": 65641060,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 2.283366062933277,
+        "musicPosition": 12.694032729599934,
+        "enabled": true,
+        "hurtPlayed": 68
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 888356.7,
+      "gameTime": 60.29999999999786,
+      "status": "playing",
+      "enemy": 18,
+      "shots": 10,
+      "heap": 66415792,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 13.26469939626656,
+        "musicPosition": 22.619366062933288,
+        "enabled": true,
+        "hurtPlayed": 68
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 898358.5,
+      "gameTime": 70.21666666666397,
+      "status": "playing",
+      "enemy": 19,
+      "shots": 2,
+      "heap": 68647048,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 14.811366062933267,
+        "musicPosition": 15.264699396266643,
+        "enabled": true,
+        "hurtPlayed": 68
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 908375.1,
+      "gameTime": 80.2166666666634,
+      "status": "playing",
+      "enemy": 30,
+      "shots": 2,
+      "heap": 73221284,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 6.619366062933306,
+        "musicPosition": 6.832699396266673,
+        "enabled": true,
+        "hurtPlayed": 68
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 918391.8,
+      "gameTime": 90.06666666666284,
+      "status": "playing",
+      "enemy": 23,
+      "shots": 2,
+      "heap": 67121668,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 13.488699396266622,
+        "musicPosition": 16.72603272959999,
+        "enabled": true,
+        "hurtPlayed": 69
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 928408.5,
+      "gameTime": 100.08333333332894,
+      "status": "playing",
+      "enemy": 32,
+      "shots": 1,
+      "heap": 73144289,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 13.488699396266622,
+        "musicPosition": 26.742032729599952,
+        "enabled": true,
+        "hurtPlayed": 72
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 938423.9,
+      "gameTime": 110.09999999999503,
+      "status": "playing",
+      "enemy": 32,
+      "shots": 1,
+      "heap": 72647448,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 13.488699396266622,
+        "musicPosition": 36.75803272960003,
+        "enabled": true,
+        "hurtPlayed": 74
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 948425.2,
+      "gameTime": 119.96666666666114,
+      "status": "playing",
+      "enemy": 39,
+      "shots": 2,
+      "heap": 74989875,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 9.419366062933321,
+        "musicPosition": 12.091366062933346,
+        "enabled": true,
+        "hurtPlayed": 77
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 958458.5,
+      "gameTime": 129.96666666666223,
+      "status": "playing",
+      "enemy": 41,
+      "shots": 9,
+      "heap": 70094919,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 9.419366062933321,
+        "musicPosition": 22.123366062933272,
+        "enabled": true,
+        "hurtPlayed": 77
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 968475.1,
+      "gameTime": 139.83333333333675,
+      "status": "playing",
+      "enemy": 29,
+      "shots": 9,
+      "heap": 72949404,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 13.549658722607344,
+        "musicPosition": 13.618992055940591,
+        "enabled": true,
+        "hurtPlayed": 78
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 978508.4,
+      "gameTime": 149.86666666667807,
+      "status": "playing",
+      "enemy": 37,
+      "shots": 1,
+      "heap": 73771224,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 13.549658722607344,
+        "musicPosition": 23.656325389274027,
+        "enabled": true,
+        "hurtPlayed": 78
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 988508.5,
+      "gameTime": 159.9000000000194,
+      "status": "playing",
+      "enemy": 64,
+      "shots": 9,
+      "heap": 65294919,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 13.549658722607344,
+        "musicPosition": 33.65632538927403,
+        "enabled": true,
+        "hurtPlayed": 78
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 998525.1,
+      "gameTime": 169.90000000002735,
+      "status": "playing",
+      "enemy": 57,
+      "shots": 0,
+      "heap": 69135476,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 13.549658722607344,
+        "musicPosition": 43.67232538927399,
+        "enabled": true,
+        "hurtPlayed": 78
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1008541.8,
+      "gameTime": 179.86666666670195,
+      "status": "upgrade",
+      "enemy": 67,
+      "shots": 10,
+      "heap": 63999946,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": false,
+        "musicTrack": "boss-loop",
+        "musicOffset": 7.5283253892740305,
+        "musicPosition": 7.5283253892740305,
+        "enabled": true,
+        "hurtPlayed": 79
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1018558.4,
+      "gameTime": 189.80000000004318,
+      "status": "playing",
+      "enemy": 96,
+      "shots": 1,
+      "heap": 83208086,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 7.5283253892740305,
+        "musicPosition": 17.48032538927403,
+        "enabled": true,
+        "hurtPlayed": 80
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1028575.1,
+      "gameTime": 199.81666666671782,
+      "status": "playing",
+      "enemy": 133,
+      "shots": 9,
+      "heap": 72135266,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 7.5283253892740305,
+        "musicPosition": 27.496325389273878,
+        "enabled": true,
+        "hurtPlayed": 80
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1038590.2,
+      "gameTime": 3.4666666666666592,
+      "status": "playing",
+      "enemy": 1,
+      "shots": 1,
+      "heap": 63195705,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 1.245658722607331,
+        "musicPosition": 5.736325389273915,
+        "enabled": true,
+        "hurtPlayed": 81
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1048591.8,
+      "gameTime": 13.483333333333583,
+      "status": "playing",
+      "enemy": 5,
+      "shots": 2,
+      "heap": 77805090,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 1.245658722607331,
+        "musicPosition": 15.736325389273915,
+        "enabled": true,
+        "hurtPlayed": 81
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1058623.5,
+      "gameTime": 23.349999999999955,
+      "status": "playing",
+      "enemy": 8,
+      "shots": 1,
+      "heap": 75495986,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 23.17632538927397,
+        "musicPosition": 25.645658722607195,
+        "enabled": true,
+        "hurtPlayed": 81
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1068625.1,
+      "gameTime": 33.34999999999939,
+      "status": "playing",
+      "enemy": 14,
+      "shots": 2,
+      "heap": 62310299,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 0,
+        "music": true,
+        "musicTrack": "garden-loop",
+        "musicOffset": 23.17632538927397,
+        "musicPosition": 35.650992055940705,
+        "enabled": true,
+        "hurtPlayed": 81
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1078640.1,
+      "gameTime": 43.23333333333216,
+      "status": "playing",
+      "enemy": 18,
+      "shots": 1,
+      "heap": 69446790,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 3.164013091839861,
+        "musicPosition": 4.950679758506494,
+        "enabled": true,
+        "hurtPlayed": 81
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1088641.1,
+      "gameTime": 53.21666666666493,
+      "status": "playing",
+      "enemy": 23,
+      "shots": 1,
+      "heap": 61432969,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 1,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 3.164013091839861,
+        "musicPosition": 14.956013091839777,
+        "enabled": true,
+        "hurtPlayed": 82
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1098658.5,
+      "gameTime": 63.21666666666436,
+      "status": "playing",
+      "enemy": 30,
+      "shots": 0,
+      "heap": 73911102,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 3.164013091839861,
+        "musicPosition": 24.972013091839855,
+        "enabled": true,
+        "hurtPlayed": 83
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1108674.3,
+      "gameTime": 73.2166666666638,
+      "status": "playing",
+      "enemy": 33,
+      "shots": 0,
+      "heap": 62868745,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 10.01201309183979,
+        "musicPosition": 17.68667975850657,
+        "enabled": true,
+        "hurtPlayed": 83
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1118691.3,
+      "gameTime": 83.21666666666323,
+      "status": "playing",
+      "enemy": 34,
+      "shots": 2,
+      "heap": 66719666,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 10.01201309183979,
+        "musicPosition": 27.70267975850642,
+        "enabled": true,
+        "hurtPlayed": 84
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1128691.8,
+      "gameTime": 93.13333333332933,
+      "status": "playing",
+      "enemy": 32,
+      "shots": 1,
+      "heap": 75116752,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 17.13201309183988,
+        "musicPosition": 20.369346425173134,
+        "enabled": true,
+        "hurtPlayed": 85
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1138708.4,
+      "gameTime": 103.13333333332876,
+      "status": "playing",
+      "enemy": 39,
+      "shots": 0,
+      "heap": 64029630,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 4,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 17.13201309183988,
+        "musicPosition": 30.38534642517321,
+        "enabled": true,
+        "hurtPlayed": 87
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1148741.8,
+      "gameTime": 113.14999999999486,
+      "status": "playing",
+      "enemy": 44,
+      "shots": 0,
+      "heap": 67060533,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 17.13201309183988,
+        "musicPosition": 40.417346425173136,
+        "enabled": true,
+        "hurtPlayed": 87
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1158758.5,
+      "gameTime": 123.0499999999943,
+      "status": "playing",
+      "enemy": 55,
+      "shots": 3,
+      "heap": 67508051,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 7.6493464251732775,
+        "musicPosition": 15.750679758506564,
+        "enabled": true,
+        "hurtPlayed": 88
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1168775.1,
+      "gameTime": 133.0666666666647,
+      "status": "playing",
+      "enemy": 55,
+      "shots": 1,
+      "heap": 61040301,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 2,
+        "music": true,
+        "musicTrack": "elite-loop",
+        "musicOffset": 7.6493464251732775,
+        "musicPosition": 25.772013091839924,
+        "enabled": true,
+        "hurtPlayed": 89
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1178791.8,
+      "gameTime": 143.08333333333934,
+      "status": "playing",
+      "enemy": 71,
+      "shots": 2,
+      "heap": 77882002,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 9.274085711265002,
+        "musicPosition": 17.348752377931874,
+        "enabled": true,
+        "hurtPlayed": 92
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1188808.5,
+      "gameTime": 153.03333333334726,
+      "status": "playing",
+      "enemy": 95,
+      "shots": 1,
+      "heap": 78289337,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 3,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 3.391419044598493,
+        "musicPosition": 11.99941904459844,
+        "enabled": true,
+        "hurtPlayed": 95
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        780,
+        1518
+      ],
+      "wallMs": 1198841.8,
+      "gameTime": 162.93333333335514,
+      "status": "playing",
+      "enemy": 92,
+      "shots": 2,
+      "heap": 77390079,
+      "hidden": false,
+      "audio": {
+        "ready": true,
+        "state": "running",
+        "voices": 5,
+        "music": true,
+        "musicTrack": "boss-loop",
+        "musicOffset": 5.039419044598532,
+        "musicPosition": 6.57541904459859,
+        "enabled": true,
+        "hurtPlayed": 95
+      }
+    }
+  ],
+  "frames": 50961,
+  "frameMs": {
+    "p50": 17.19999999999709,
+    "p95": 35,
+    "p99": 35.39999999990687
+  },
+  "over50": 50,
+  "longTasks": {
+    "count": 0,
+    "max": 0
+  },
+  "runs": [
+    {
+      "id": "ef7f1cb5-b67c-4415-beea-f79f958f8046",
+      "start": 152.5,
+      "hero": "dave",
+      "stage": 0,
+      "status": "lost",
+      "time": 108.2666666666618,
+      "kills": 102
+    },
+    {
+      "id": "09567eaf-9250-4027-9333-bf569d7bb8f6",
+      "start": 111752.60000038147,
+      "hero": "dave",
+      "stage": 0,
+      "status": "lost",
+      "time": 175.2500000000316,
+      "kills": 282
+    },
+    {
+      "id": "837db921-e2c2-4ec2-b0f9-870edd81ad05",
+      "start": 288901.2000002861,
+      "hero": "dave",
+      "stage": 0,
+      "status": "lost",
+      "time": 120.74999999999443,
+      "kills": 105
+    },
+    {
+      "id": "0055fa89-d063-4c63-8517-df4fb35752ab",
+      "start": 412352.30000019073,
+      "hero": "dave",
+      "stage": 0,
+      "status": "lost",
+      "time": 154.0000000000147,
+      "kills": 158
+    },
+    {
+      "id": "29d43f2f-8756-4bb0-a9e1-ade44b4e46b3",
+      "start": 568802.2000002861,
+      "hero": "dave",
+      "stage": 0,
+      "status": "lost",
+      "time": 81.61666666666332,
+      "kills": 38
+    },
+    {
+      "id": "0d5ffab0-9d1e-4d39-926b-f87101ca0fca",
+      "start": 652802.3000001907,
+      "hero": "dave",
+      "stage": 0,
+      "status": "lost",
+      "time": 170.83333333336142,
+      "kills": 324
+    },
+    {
+      "id": "e679de94-0ec9-4fa5-a65c-94294e504592",
+      "start": 826952.9000000954,
+      "hero": "dave",
+      "stage": 0,
+      "status": "lost",
+      "time": 204.28333333338804,
+      "kills": 382
+    },
+    {
+      "id": "e92ca93f-3789-4e72-87e0-5ab1c4d63ab1",
+      "start": 1034251.8000001907,
+      "hero": "dave",
+      "stage": 0
+    }
+  ],
+  "errors": [],
+  "pauses": 0,
+  "audio": {
+    "ready": true,
+    "state": "running",
+    "voices": 7,
+    "music": true,
+    "musicTrack": "boss-loop",
+    "musicOffset": 5.039419044598532,
+    "musicPosition": 7.759419044598559,
+    "enabled": true,
+    "hurtPlayed": 95
+  },
+  "timing": {
+    "frames": 50777,
+    "steps": 70961,
+    "overloadSeconds": 0.8004000000000007
+  },
+  "pass": true
+}

@@ -1,0 +1,17 @@
+{
+  "viewport": [
+    390,
+    844
+  ],
+  "canvas": [
+    780,
+    1518
+  ],
+  "productionHookAbsent": true,
+  "brokenImages": 0,
+  "version": "v0.9.0GitHub ↗",
+  "touchMovementBothSides": true,
+  "pauseResume": true,
+  "checkpointSafeResume": true,
+  "pass": true
+}

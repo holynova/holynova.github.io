@@ -1,0 +1,2152 @@
+{
+  "runs": [
+    {
+      "url": "http://127.0.0.1:5206/",
+      "elapsedMs": 27701.5,
+      "resources": [
+        {
+          "duration": 22.200000286102295,
+          "bytes": 0,
+          "body": 0,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/main.tsx",
+          "duration": 98.40000009536743,
+          "bytes": 2190,
+          "body": 1890,
+          "initiator": "script"
+        },
+        {
+          "name": "/@vite/client",
+          "duration": 768.8000001907349,
+          "bytes": 210277,
+          "body": 209977,
+          "initiator": "script"
+        },
+        {
+          "name": "/@react-refresh",
+          "duration": 471.19999980926514,
+          "bytes": 112194,
+          "body": 111894,
+          "initiator": "script"
+        },
+        {
+          "name": "/.vite-cache/deps/react.js?v=9fda03eb",
+          "duration": 480.7000002861023,
+          "bytes": 130524,
+          "body": 130224,
+          "initiator": "script"
+        },
+        {
+          "name": "/@fs/Users/sym/code/plant-survivors-ui/node_modules/@fontsource/roboto/latin-500.css",
+          "duration": 115.09999990463257,
+          "bytes": 1269,
+          "body": 969,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/App.tsx",
+          "duration": 119.7999997138977,
+          "bytes": 2573,
+          "body": 2273,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/styles.css",
+          "duration": 157.59999990463257,
+          "bytes": 15865,
+          "body": 15565,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/prototype.css",
+          "duration": 407.59999990463257,
+          "bytes": 65312,
+          "body": 65012,
+          "initiator": "script"
+        },
+        {
+          "name": "/.vite-cache/deps/react-dom_client.js?v=98029321",
+          "duration": 2773.7999997138977,
+          "bytes": 2821806,
+          "body": 2821506,
+          "initiator": "script"
+        },
+        {
+          "name": "/.vite-cache/deps/react_jsx-dev-runtime.js?v=9fda03eb",
+          "duration": 361.5,
+          "bytes": 35159,
+          "body": 34859,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/Prototype.tsx",
+          "duration": 526.0999999046326,
+          "bytes": 109422,
+          "body": 109122,
+          "initiator": "script"
+        },
+        {
+          "name": "/.vite-cache/deps/rolldown-runtime-BvCyGRYZ.js?v=511b4a46",
+          "duration": 78.40000009536743,
+          "bytes": 1587,
+          "body": 1287,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/version.ts",
+          "duration": 242.40000009536743,
+          "bytes": 657,
+          "body": 357,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/simulation.ts",
+          "duration": 311.2000002861023,
+          "bytes": 75423,
+          "body": 75123,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/GameScroll.tsx",
+          "duration": 84.30000019073486,
+          "bytes": 3437,
+          "body": 3137,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/catalog.ts",
+          "duration": 94.2000002861023,
+          "bytes": 6246,
+          "body": 5946,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/GardenShop.tsx",
+          "duration": 116.2000002861023,
+          "bytes": 13595,
+          "body": 13295,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/FieldGuide.tsx",
+          "duration": 122.2000002861023,
+          "bytes": 16723,
+          "body": 16423,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/audio.ts",
+          "duration": 128.2000002861023,
+          "bytes": 21967,
+          "body": 21667,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/progression.ts",
+          "duration": 178.40000009536743,
+          "bytes": 10827,
+          "body": 10527,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/renderer.ts",
+          "duration": 335.2000002861023,
+          "bytes": 67409,
+          "body": 67109,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/enemies.ts",
+          "duration": 206.09999990463257,
+          "bytes": 9330,
+          "body": 9030,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/HealthMeter.tsx",
+          "duration": 212.19999980926514,
+          "bytes": 6365,
+          "body": 6065,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/touch.ts",
+          "duration": 282.7999997138977,
+          "bytes": 2694,
+          "body": 2394,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/loading.ts",
+          "duration": 284.59999990463257,
+          "bytes": 5109,
+          "body": 4809,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/OriginalMusic.tsx",
+          "duration": 334.19999980926514,
+          "bytes": 13413,
+          "body": 13113,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/plants.ts",
+          "duration": 373.2999997138977,
+          "bytes": 18141,
+          "body": 17841,
+          "initiator": "script"
+        },
+        {
+          "name": "/@fs/Users/sym/code/plant-survivors-ui/node_modules/vite/dist/client/env.mjs",
+          "duration": 348.40000009536743,
+          "bytes": 3778,
+          "body": 3478,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/render-cache.ts",
+          "duration": 124.69999980926514,
+          "bytes": 23536,
+          "body": 23236,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/asset-manifest.json?import",
+          "duration": 129.40000009536743,
+          "bytes": 10430,
+          "body": 10130,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/enemy-index.ts",
+          "duration": 130.90000009536743,
+          "bytes": 6168,
+          "body": 5868,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/attack-geometry.ts",
+          "duration": 91.2000002861023,
+          "bytes": 1889,
+          "body": 1589,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/balance.ts",
+          "duration": 107.39999961853027,
+          "bytes": 1745,
+          "body": 1445,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/world.ts",
+          "duration": 157.5,
+          "bytes": 4377,
+          "body": 4077,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/weapons.ts",
+          "duration": 205.2999997138977,
+          "bytes": 24027,
+          "body": 23727,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/ground-effects.ts",
+          "duration": 157.19999980926514,
+          "bytes": 7023,
+          "body": 6723,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/design/tokens.json?import",
+          "duration": 163.7000002861023,
+          "bytes": 7114,
+          "body": 6814,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/telegraphs.ts",
+          "duration": 188.40000009536743,
+          "bytes": 11553,
+          "body": 11253,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/anchors.ts",
+          "duration": 206.5,
+          "bytes": 8800,
+          "body": 8500,
+          "initiator": "script"
+        },
+        {
+          "name": "/.vite-cache/deps/react-dom.js?v=9fda03eb",
+          "duration": 106.69999980926514,
+          "bytes": 49264,
+          "body": 48964,
+          "initiator": "script"
+        },
+        {
+          "name": "/assets/game/logo-trim.png",
+          "duration": 8903.799999713898,
+          "bytes": 2441407,
+          "body": 2441107,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/audio/pea.wav",
+          "duration": 81.80000019073486,
+          "bytes": 5636,
+          "body": 5336,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/ice.wav",
+          "duration": 91.60000038146973,
+          "bytes": 8282,
+          "body": 7982,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/boomerang.wav",
+          "duration": 105.80000019073486,
+          "bytes": 13574,
+          "body": 13274,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/hit.wav",
+          "duration": 85.89999961853027,
+          "bytes": 5636,
+          "body": 5336,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/mushroom.wav",
+          "duration": 107.5,
+          "bytes": 15338,
+          "body": 15038,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/armor.wav",
+          "duration": 156.5,
+          "bytes": 8282,
+          "body": 7982,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/hurt.wav",
+          "duration": 248.5,
+          "bytes": 12692,
+          "body": 12392,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/death.wav",
+          "duration": 262.59999990463257,
+          "bytes": 11368,
+          "body": 11068,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/step.wav",
+          "duration": 151.5,
+          "bytes": 2768,
+          "body": 2468,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/click.wav",
+          "duration": 174.69999980926514,
+          "bytes": 2990,
+          "body": 2690,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/slam.wav",
+          "duration": 199.59999990463257,
+          "bytes": 24598,
+          "body": 24298,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/boss.wav",
+          "duration": 406.40000009536743,
+          "bytes": 48854,
+          "body": 48554,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/pickup.wav",
+          "duration": 222.40000009536743,
+          "bytes": 28568,
+          "body": 28268,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/evolution.wav",
+          "duration": 350.5,
+          "bytes": 53704,
+          "body": 53404,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/level.wav",
+          "duration": 429.40000009536743,
+          "bytes": 44002,
+          "body": 43702,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/victory.wav",
+          "duration": 547.5,
+          "bytes": 69580,
+          "body": 69280,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/defeat.wav",
+          "duration": 634.5999999046326,
+          "bytes": 65170,
+          "body": 64870,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/garden-loop.wav",
+          "duration": 6820.599999904633,
+          "bytes": 1693784,
+          "body": 1693484,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/animations/balloon-idle.webp",
+          "duration": 1457.8999996185303,
+          "bytes": 10370,
+          "body": 10070,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/balloon.webp",
+          "duration": 1680.6999998092651,
+          "bytes": 39994,
+          "body": 39694,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/boss-trim-idle.webp",
+          "duration": 1781.5999999046326,
+          "bytes": 8416,
+          "body": 8116,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/boss-trim.webp",
+          "duration": 2482.699999809265,
+          "bytes": 158896,
+          "body": 158596,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/bucket-idle.webp",
+          "duration": 2576.7999997138977,
+          "bytes": 7344,
+          "body": 7044,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/bucket.webp",
+          "duration": 3213.5,
+          "bytes": 148988,
+          "body": 148688,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/battle-bg.png",
+          "duration": 9109.599999904633,
+          "bytes": 2291435,
+          "body": 2291135,
+          "initiator": "css"
+        },
+        {
+          "name": "/assets/game/lobby-bg.png",
+          "duration": 10418.300000190735,
+          "bytes": 2456103,
+          "body": 2455803,
+          "initiator": "css"
+        },
+        {
+          "name": "/assets/game/paper-v2.png",
+          "duration": 844.2000002861023,
+          "bytes": 62845,
+          "body": 62545,
+          "initiator": "css"
+        },
+        {
+          "name": "/assets/game/button.png",
+          "duration": 1352.2000002861023,
+          "bytes": 170542,
+          "body": 170242,
+          "initiator": "css"
+        },
+        {
+          "name": "/assets/game/wood-v2.png",
+          "duration": 1085,
+          "bytes": 43906,
+          "body": 43606,
+          "initiator": "css"
+        },
+        {
+          "name": "/assets/game/parchment.png",
+          "duration": 2782.4000000953674,
+          "bytes": 655741,
+          "body": 655441,
+          "initiator": "css"
+        },
+        {
+          "name": "/assets/game/animations/cone-idle.webp",
+          "duration": 1416.8000001907349,
+          "bytes": 6960,
+          "body": 6660,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/cone.webp",
+          "duration": 1795.6999998092651,
+          "bytes": 141472,
+          "body": 141172,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dancer-idle.webp",
+          "duration": 1556.1999998092651,
+          "bytes": 15562,
+          "body": 15262,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dancer.webp",
+          "duration": 1099.6999998092651,
+          "bytes": 53124,
+          "body": 52824,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dave-idle.webp",
+          "duration": 1023.5999999046326,
+          "bytes": 12036,
+          "body": 11736,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dave.webp",
+          "duration": 1744.6999998092651,
+          "bytes": 247102,
+          "body": 246802,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/digger-idle.webp",
+          "duration": 514.3000001907349,
+          "bytes": 16922,
+          "body": 16622,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/digger.webp",
+          "duration": 700.6000003814697,
+          "bytes": 59782,
+          "body": 59482,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/flora-idle.webp",
+          "duration": 639.7999997138977,
+          "bytes": 8754,
+          "body": 8454,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/flora.webp",
+          "duration": 1340.9000000953674,
+          "bytes": 190876,
+          "body": 190576,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/football-idle.webp",
+          "duration": 1140.3999996185303,
+          "bytes": 16612,
+          "body": 16312,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/football.webp",
+          "duration": 1306.9000000953674,
+          "bytes": 61056,
+          "body": 60756,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/fx.webp",
+          "duration": 1739.7000002861023,
+          "bytes": 205692,
+          "body": 205392,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/imp-idle.webp",
+          "duration": 1031.4000000953674,
+          "bytes": 13978,
+          "body": 13678,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/imp.webp",
+          "duration": 818.6999998092651,
+          "bytes": 56342,
+          "body": 56042,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/jetpack-idle.webp",
+          "duration": 843.5999999046326,
+          "bytes": 18764,
+          "body": 18464,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/jetpack.webp",
+          "duration": 978,
+          "bytes": 72294,
+          "body": 71994,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/newspaper-idle.webp",
+          "duration": 855.9000000953674,
+          "bytes": 15564,
+          "body": 15264,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/newspaper.webp",
+          "duration": 1023.7999997138977,
+          "bytes": 55700,
+          "body": 55400,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/plants.webp",
+          "duration": 1209.1999998092651,
+          "bytes": 174302,
+          "body": 174002,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/rusty-idle.webp",
+          "duration": 693.8999996185303,
+          "bytes": 8604,
+          "body": 8304,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/rusty.webp",
+          "duration": 1245.0999999046326,
+          "bytes": 183222,
+          "body": 182922,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/wizard-idle.webp",
+          "duration": 894.4000000953674,
+          "bytes": 16926,
+          "body": 16626,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/wizard.webp",
+          "duration": 1162.5999999046326,
+          "bytes": 64862,
+          "body": 64562,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/zombie-idle.webp",
+          "duration": 712,
+          "bytes": 8394,
+          "body": 8094,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/zombie.webp",
+          "duration": 1297.6999998092651,
+          "bytes": 163104,
+          "body": 162804,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/bag-v2.png",
+          "duration": 2387.699999809265,
+          "bytes": 509601,
+          "body": 509301,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/bag.png",
+          "duration": 405.2999997138977,
+          "bytes": 10658,
+          "body": 10358,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/bamboo.png",
+          "duration": 742.9000000953674,
+          "bytes": 97734,
+          "body": 97434,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/battle-night.png",
+          "duration": 11264.099999904633,
+          "bytes": 2799566,
+          "body": 2799266,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/battle-roof.png",
+          "duration": 9749.300000190735,
+          "bytes": 2389485,
+          "body": 2389185,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/bonk.png",
+          "duration": 1764.5999999046326,
+          "bytes": 113632,
+          "body": 113332,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/boomerang.png",
+          "duration": 1988.1999998092651,
+          "bytes": 131878,
+          "body": 131578,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/boss-trim.png",
+          "duration": 9578.400000095367,
+          "bytes": 2493554,
+          "body": 2493254,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/boss.png",
+          "duration": 8288.900000095367,
+          "bytes": 2071556,
+          "body": 2071256,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/bucket.png",
+          "duration": 930.5,
+          "bytes": 148415,
+          "body": 148115,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/cabbage.png",
+          "duration": 1056.6999998092651,
+          "bytes": 88228,
+          "body": 87928,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/cabbagevolt.png",
+          "duration": 659.1999998092651,
+          "bytes": 125120,
+          "body": 124820,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/cactus.png",
+          "duration": 464,
+          "bytes": 103350,
+          "body": 103050,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/cherry.png",
+          "duration": 421.5,
+          "bytes": 92875,
+          "body": 92575,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/chest-v2.png",
+          "duration": 2201,
+          "bytes": 549776,
+          "body": 549476,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/chest.png",
+          "duration": 109.30000019073486,
+          "bytes": 11239,
+          "body": 10939,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/chomper.png",
+          "duration": 505.40000009536743,
+          "bytes": 109656,
+          "body": 109356,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/coconut.png",
+          "duration": 464.80000019073486,
+          "bytes": 99633,
+          "body": 99333,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/cone.png",
+          "duration": 524,
+          "bytes": 114715,
+          "body": 114415,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/crystal-v2.png",
+          "duration": 1031.5999999046326,
+          "bytes": 248711,
+          "body": 248411,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/crystal.png",
+          "duration": 97.59999990463257,
+          "bytes": 8552,
+          "body": 8252,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/dave.png",
+          "duration": 1044.5,
+          "bytes": 248118,
+          "body": 247818,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/effects.png",
+          "duration": 1541.0999999046326,
+          "bytes": 375951,
+          "body": 375651,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/evolution-hero-v2.png",
+          "duration": 854.7000002861023,
+          "bytes": 197990,
+          "body": 197690,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/evolution-hero.png",
+          "duration": 924.5,
+          "bytes": 217614,
+          "body": 217314,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/gatling.png",
+          "duration": 721.1999998092651,
+          "bytes": 164292,
+          "body": 163992,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/grass-tile.webp",
+          "duration": 227.7000002861023,
+          "bytes": 40624,
+          "body": 40324,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/ice.png",
+          "duration": 630.0999999046326,
+          "bytes": 144971,
+          "body": 144671,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/iceberg.png",
+          "duration": 448.19999980926514,
+          "bytes": 100101,
+          "body": 99801,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/items.png",
+          "duration": 4834.400000095367,
+          "bytes": 1301727,
+          "body": 1301427,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/jalapeno.png",
+          "duration": 334,
+          "bytes": 68507,
+          "body": 68207,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/kernel.png",
+          "duration": 408.80000019073486,
+          "bytes": 89654,
+          "body": 89354,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/laser.png",
+          "duration": 393.7999997138977,
+          "bytes": 93745,
+          "body": 93445,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/lightning.png",
+          "duration": 390.2000002861023,
+          "bytes": 84725,
+          "body": 84425,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/lobby-hero.png",
+          "duration": 1148.5999999046326,
+          "bytes": 288854,
+          "body": 288554,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/logo.png",
+          "duration": 6336.39999961853,
+          "bytes": 1970016,
+          "body": 1969716,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/magnet.png",
+          "duration": 409.09999990463257,
+          "bytes": 86134,
+          "body": 85834,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/map-day.png",
+          "duration": 222.09999990463257,
+          "bytes": 42982,
+          "body": 42682,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/map-night.png",
+          "duration": 212.7999997138977,
+          "bytes": 41983,
+          "body": 41683,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/map-roof.png",
+          "duration": 202.7000002861023,
+          "bytes": 41647,
+          "body": 41347,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/melon.png",
+          "duration": 404.09999990463257,
+          "bytes": 96141,
+          "body": 95841,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/mushroom.png",
+          "duration": 458.2999997138977,
+          "bytes": 113675,
+          "body": 113375,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/paper.png",
+          "duration": 308.69999980926514,
+          "bytes": 62845,
+          "body": 62545,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/pea.png",
+          "duration": 536.9000000953674,
+          "bytes": 127624,
+          "body": 127324,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/potato.png",
+          "duration": 332.6000003814697,
+          "bytes": 74288,
+          "body": 73988,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/prep-hero.png",
+          "duration": 452.8999996185303,
+          "bytes": 110810,
+          "body": 110510,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/projectile.png",
+          "duration": 280.1000003814697,
+          "bytes": 58854,
+          "body": 58554,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/result-hero-v2.png",
+          "duration": 657.2999997138977,
+          "bytes": 162001,
+          "body": 161701,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/result-hero.png",
+          "duration": 715.9000000953674,
+          "bytes": 174830,
+          "body": 174530,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/seed-v2.png",
+          "duration": 1650.3999996185303,
+          "bytes": 419895,
+          "body": 419595,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/seed.png",
+          "duration": 74.7000002861023,
+          "bytes": 2364,
+          "body": 2064,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/sign.png",
+          "duration": 899.0999999046326,
+          "bytes": 214569,
+          "body": 214269,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/slot.png",
+          "duration": 1877.7000002861023,
+          "bytes": 475558,
+          "body": 475258,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/snapdragon.png",
+          "duration": 427.40000009536743,
+          "bytes": 92358,
+          "body": 92058,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/sprites.png",
+          "duration": 3940.4000000953674,
+          "bytes": 1449381,
+          "body": 1449081,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/squash.png",
+          "duration": 462.59999990463257,
+          "bytes": 99178,
+          "body": 98878,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/starfruit.png",
+          "duration": 384.59999990463257,
+          "bytes": 83905,
+          "body": 83605,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/sun.png",
+          "duration": 643.5999999046326,
+          "bytes": 147232,
+          "body": 146932,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/sunflower.png",
+          "duration": 598.5,
+          "bytes": 144781,
+          "body": 144481,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/torchwood.png",
+          "duration": 393.69999980926514,
+          "bytes": 93115,
+          "body": 92815,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/ui-skin.png",
+          "duration": 2786.2999997138977,
+          "bytes": 1371988,
+          "body": 1371688,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/walnut.png",
+          "duration": 587.1999998092651,
+          "bytes": 140286,
+          "body": 139986,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/warning.png",
+          "duration": 1203.5999999046326,
+          "bytes": 353994,
+          "body": 353694,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/wood.png",
+          "duration": 240.90000009536743,
+          "bytes": 43906,
+          "body": 43606,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/zombie.png",
+          "duration": 462,
+          "bytes": 118435,
+          "body": 118135,
+          "initiator": "img"
+        }
+      ],
+      "images": [],
+      "ready": "开始远征 ▷",
+      "network": {
+        "downBytes": 1500000,
+        "upBytes": 750000,
+        "latencyMs": 60
+      },
+      "version": "v0.8"
+    },
+    {
+      "url": "http://127.0.0.1:5204/",
+      "elapsedMs": 8797.5,
+      "resources": [
+        {
+          "name": "/@vite/client",
+          "duration": 644.5999999046326,
+          "bytes": 210091,
+          "body": 209791,
+          "initiator": "script"
+        },
+        {
+          "duration": 16.59999990463257,
+          "bytes": 0,
+          "body": 0,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/main.tsx?t=1794900038038",
+          "duration": 101,
+          "bytes": 2164,
+          "body": 1864,
+          "initiator": "script"
+        },
+        {
+          "name": "/@react-refresh",
+          "duration": 354,
+          "bytes": 112194,
+          "body": 111894,
+          "initiator": "script"
+        },
+        {
+          "name": "/node_modules/@fontsource/roboto/latin-500.css",
+          "duration": 70.59999990463257,
+          "bytes": 1155,
+          "body": 855,
+          "initiator": "script"
+        },
+        {
+          "name": "/node_modules/.vite/deps/react.js?v=82ae76fb",
+          "duration": 492,
+          "bytes": 130387,
+          "body": 130087,
+          "initiator": "script"
+        },
+        {
+          "name": "/node_modules/.vite/deps/react-dom_client.js?v=82ae76fb",
+          "duration": 2756.0999999046326,
+          "bytes": 2819603,
+          "body": 2819303,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/App.tsx?t=1794900038038",
+          "duration": 79.10000038146973,
+          "bytes": 2512,
+          "body": 2212,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/styles.css",
+          "duration": 194.80000019073486,
+          "bytes": 15840,
+          "body": 15540,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/prototype.css",
+          "duration": 385,
+          "bytes": 67347,
+          "body": 67047,
+          "initiator": "script"
+        },
+        {
+          "name": "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=82ae76fb",
+          "duration": 386.90000009536743,
+          "bytes": 35013,
+          "body": 34713,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/Prototype.tsx?t=1794900038038",
+          "duration": 530.3000001907349,
+          "bytes": 139279,
+          "body": 138979,
+          "initiator": "script"
+        },
+        {
+          "name": "/node_modules/.vite/deps/rolldown-runtime-B-1-B7_t.js?v=82ae76fb",
+          "duration": 90.5,
+          "bytes": 7926,
+          "body": 7626,
+          "initiator": "script"
+        },
+        {
+          "name": "/node_modules/vite/dist/client/env.mjs",
+          "duration": 68.59999990463257,
+          "bytes": 3778,
+          "body": 3478,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/runtime.ts?t=1794900038036",
+          "duration": 98.69999980926514,
+          "bytes": 11454,
+          "body": 11154,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/version.ts?t=1794898565032",
+          "duration": 67.69999980926514,
+          "bytes": 657,
+          "body": 357,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/simulation.ts?t=1794900038036",
+          "duration": 297.5,
+          "bytes": 83367,
+          "body": 83067,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/GameScroll.tsx",
+          "duration": 79.5,
+          "bytes": 3344,
+          "body": 3044,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/catalog.ts",
+          "duration": 148.59999990463257,
+          "bytes": 6435,
+          "body": 6135,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/FieldGuide.tsx?t=1794900038036",
+          "duration": 222.59999990463257,
+          "bytes": 16669,
+          "body": 16369,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/audio.ts?t=1794899862529",
+          "duration": 248.59999990463257,
+          "bytes": 32551,
+          "body": 32251,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/GardenShop.tsx",
+          "duration": 259.5,
+          "bytes": 13509,
+          "body": 13209,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/renderer.ts?t=1794899540576",
+          "duration": 303.40000009536743,
+          "bytes": 86769,
+          "body": 86469,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/progression.ts",
+          "duration": 308.90000009536743,
+          "bytes": 10827,
+          "body": 10527,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/plants.ts",
+          "duration": 336.30000019073486,
+          "bytes": 18616,
+          "body": 18316,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/evolutions.ts?t=1794899354133",
+          "duration": 372.40000009536743,
+          "bytes": 7562,
+          "body": 7262,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/audio-manifest.ts?t=1794898565034",
+          "duration": 376.6000003814697,
+          "bytes": 1935,
+          "body": 1635,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/enemies.ts",
+          "duration": 382.30000019073486,
+          "bytes": 9330,
+          "body": 9030,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/expedition.ts",
+          "duration": 412.7000002861023,
+          "bytes": 11998,
+          "body": 11698,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/loading.ts?t=1794898565030",
+          "duration": 441.5,
+          "bytes": 5514,
+          "body": 5214,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/touch.ts",
+          "duration": 325.59999990463257,
+          "bytes": 2694,
+          "body": 2394,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/HealthMeter.tsx",
+          "duration": 395.2999997138977,
+          "bytes": 6279,
+          "body": 5979,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/OriginalMusic.tsx?t=1794898420049",
+          "duration": 463.3999996185303,
+          "bytes": 14172,
+          "body": 13872,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/combat-stats.ts",
+          "duration": 153,
+          "bytes": 4170,
+          "body": 3870,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/enemy-index.ts",
+          "duration": 169.69999980926514,
+          "bytes": 6168,
+          "body": 5868,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/attack-geometry.ts",
+          "duration": 178.09999990463257,
+          "bytes": 1889,
+          "body": 1589,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/balance.ts",
+          "duration": 206.80000019073486,
+          "bytes": 1745,
+          "body": 1445,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/world.ts",
+          "duration": 219,
+          "bytes": 4377,
+          "body": 4077,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/weapons.ts?t=1794899288328",
+          "duration": 269.69999980926514,
+          "bytes": 23907,
+          "body": 23607,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/enemy-animation.ts",
+          "duration": 232.89999961853027,
+          "bytes": 4443,
+          "body": 4143,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/ground-effects.ts",
+          "duration": 277.40000009536743,
+          "bytes": 7023,
+          "body": 6723,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/render-cache.ts",
+          "duration": 282.69999980926514,
+          "bytes": 23536,
+          "body": 23236,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/design/tokens.json?import",
+          "duration": 289.59999990463257,
+          "bytes": 7682,
+          "body": 7382,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/anchors.ts",
+          "duration": 305,
+          "bytes": 8800,
+          "body": 8500,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/telegraphs.ts",
+          "duration": 340,
+          "bytes": 11930,
+          "body": 11630,
+          "initiator": "script"
+        },
+        {
+          "name": "/src/game/asset-manifest.json?import&t=1794898565030",
+          "duration": 229.40000009536743,
+          "bytes": 20735,
+          "body": 20435,
+          "initiator": "script"
+        },
+        {
+          "name": "/node_modules/.vite/deps/react-dom.js?v=82ae76fb",
+          "duration": 112.5,
+          "bytes": 49122,
+          "body": 48822,
+          "initiator": "script"
+        },
+        {
+          "name": "/assets/game/release/logo-trim.webp",
+          "duration": 212,
+          "bytes": 50092,
+          "body": 49792,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/audio/pea.wav",
+          "duration": 175.7999997138977,
+          "bytes": 5636,
+          "body": 5336,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/ice.wav",
+          "duration": 209.7999997138977,
+          "bytes": 8282,
+          "body": 7982,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/boomerang.wav",
+          "duration": 276.59999990463257,
+          "bytes": 13574,
+          "body": 13274,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/hit.wav",
+          "duration": 277.90000009536743,
+          "bytes": 5636,
+          "body": 5336,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/mushroom.wav",
+          "duration": 290.69999980926514,
+          "bytes": 15338,
+          "body": 15038,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/armor.wav",
+          "duration": 386.69999980926514,
+          "bytes": 8282,
+          "body": 7982,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/hurt.wav",
+          "duration": 436.69999980926514,
+          "bytes": 12692,
+          "body": 12392,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/death.wav",
+          "duration": 302.40000009536743,
+          "bytes": 11368,
+          "body": 11068,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/click.wav",
+          "duration": 345.59999990463257,
+          "bytes": 2990,
+          "body": 2690,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/step.wav",
+          "duration": 358.80000019073486,
+          "bytes": 2768,
+          "body": 2468,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/slam.wav",
+          "duration": 396.59999990463257,
+          "bytes": 24598,
+          "body": 24298,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/boss.wav",
+          "duration": 609.5,
+          "bytes": 48854,
+          "body": 48554,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/pickup.wav",
+          "duration": 567.7000002861023,
+          "bytes": 28568,
+          "body": 28268,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/defeat.wav",
+          "duration": 619.8000001907349,
+          "bytes": 65170,
+          "body": 64870,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/victory.wav",
+          "duration": 702.7000002861023,
+          "bytes": 69580,
+          "body": 69280,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/evolution.wav",
+          "duration": 791.2000002861023,
+          "bytes": 53704,
+          "body": 53404,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/level.wav",
+          "duration": 815.3000001907349,
+          "bytes": 44002,
+          "body": 43702,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/garden-loop.wav",
+          "duration": 5619.400000095367,
+          "bytes": 1693784,
+          "body": 1693484,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/boss-loop.wav",
+          "duration": 3071.5999999046326,
+          "bytes": 677720,
+          "body": 677420,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/elite-loop.wav",
+          "duration": 3559.199999809265,
+          "bytes": 762392,
+          "body": 762092,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/audio/camp-loop.wav",
+          "duration": 4256.799999713898,
+          "bytes": 988182,
+          "body": 987882,
+          "initiator": "fetch"
+        },
+        {
+          "name": "/assets/game/animations/balloon-idle.webp",
+          "duration": 887.3000001907349,
+          "bytes": 10370,
+          "body": 10070,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/balloon.webp",
+          "duration": 1018.0999999046326,
+          "bytes": 39994,
+          "body": 39694,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/boss-trim-idle.webp",
+          "duration": 984.9000000953674,
+          "bytes": 8416,
+          "body": 8116,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/bucket-idle.webp",
+          "duration": 1108.8000001907349,
+          "bytes": 7344,
+          "body": 7044,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/boss-trim.webp",
+          "duration": 1663.2000002861023,
+          "bytes": 158896,
+          "body": 158596,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/bucket.webp",
+          "duration": 1757.1000003814697,
+          "bytes": 148988,
+          "body": 148688,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/cone-idle.webp",
+          "duration": 865,
+          "bytes": 6960,
+          "body": 6660,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/cone.webp",
+          "duration": 1360.6999998092651,
+          "bytes": 141472,
+          "body": 141172,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dancer-idle.webp",
+          "duration": 859.7999997138977,
+          "bytes": 15562,
+          "body": 15262,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dancer.webp",
+          "duration": 1048.4000000953674,
+          "bytes": 53124,
+          "body": 52824,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dave-idle.webp",
+          "duration": 597,
+          "bytes": 12036,
+          "body": 11736,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/dave.webp",
+          "duration": 1498.5,
+          "bytes": 247102,
+          "body": 246802,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/digger-idle.webp",
+          "duration": 710.5999999046326,
+          "bytes": 16922,
+          "body": 16622,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/digger.webp",
+          "duration": 896.7999997138977,
+          "bytes": 59782,
+          "body": 59482,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/flora-idle.webp",
+          "duration": 713,
+          "bytes": 8754,
+          "body": 8454,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/flora.webp",
+          "duration": 1362.3000001907349,
+          "bytes": 190876,
+          "body": 190576,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/football-idle.webp",
+          "duration": 841.7000002861023,
+          "bytes": 16612,
+          "body": 16312,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/football.webp",
+          "duration": 1020.5,
+          "bytes": 61056,
+          "body": 60756,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/fx.webp",
+          "duration": 1247.5,
+          "bytes": 205692,
+          "body": 205392,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/imp-idle.webp",
+          "duration": 739.5,
+          "bytes": 13978,
+          "body": 13678,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/imp.webp",
+          "duration": 598.0999999046326,
+          "bytes": 56342,
+          "body": 56042,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/jetpack-idle.webp",
+          "duration": 476.90000009536743,
+          "bytes": 18764,
+          "body": 18464,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/jetpack.webp",
+          "duration": 439.7999997138977,
+          "bytes": 72294,
+          "body": 71994,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/newspaper-idle.webp",
+          "duration": 249,
+          "bytes": 15564,
+          "body": 15264,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/newspaper.webp",
+          "duration": 413.1000003814697,
+          "bytes": 55700,
+          "body": 55400,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/plants.webp",
+          "duration": 754.7000002861023,
+          "bytes": 174302,
+          "body": 174002,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/rusty-idle.webp",
+          "duration": 237,
+          "bytes": 8604,
+          "body": 8304,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/rusty.webp",
+          "duration": 813.2999997138977,
+          "bytes": 183222,
+          "body": 182922,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/wizard-idle.webp",
+          "duration": 218.39999961853027,
+          "bytes": 16926,
+          "body": 16626,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/wizard.webp",
+          "duration": 290.59999990463257,
+          "bytes": 64862,
+          "body": 64562,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/zombie-idle.webp",
+          "duration": 215.59999990463257,
+          "bytes": 8394,
+          "body": 8094,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/animations/zombie.webp",
+          "duration": 734.4000000953674,
+          "bytes": 163104,
+          "body": 162804,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/bag-v2.webp",
+          "duration": 323.30000019073486,
+          "bytes": 43580,
+          "body": 43280,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/bamboo.webp",
+          "duration": 233.5,
+          "bytes": 25288,
+          "body": 24988,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/bonk.webp",
+          "duration": 287,
+          "bytes": 20970,
+          "body": 20670,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/boomerang.webp",
+          "duration": 158.59999990463257,
+          "bytes": 26664,
+          "body": 26364,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/cabbage.webp",
+          "duration": 135,
+          "bytes": 18310,
+          "body": 18010,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/cabbagevolt.webp",
+          "duration": 257,
+          "bytes": 29114,
+          "body": 28814,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/cactus.webp",
+          "duration": 164,
+          "bytes": 23482,
+          "body": 23182,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/cherry.webp",
+          "duration": 136.59999990463257,
+          "bytes": 18456,
+          "body": 18156,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/chest-v2.webp",
+          "duration": 179,
+          "bytes": 48944,
+          "body": 48644,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/chomper.webp",
+          "duration": 186.59999990463257,
+          "bytes": 22280,
+          "body": 21980,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/coconut.webp",
+          "duration": 121.40000009536743,
+          "bytes": 19202,
+          "body": 18902,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/crystal-v2.webp",
+          "duration": 140.7000002861023,
+          "bytes": 28324,
+          "body": 28024,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/gatling.webp",
+          "duration": 149.2000002861023,
+          "bytes": 30194,
+          "body": 29894,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/grass-tile.webp",
+          "duration": 188.80000019073486,
+          "bytes": 35392,
+          "body": 35092,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/ice.webp",
+          "duration": 161.5,
+          "bytes": 26610,
+          "body": 26310,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/iceberg.webp",
+          "duration": 134.80000019073486,
+          "bytes": 21576,
+          "body": 21276,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/jalapeno.webp",
+          "duration": 126.2999997138977,
+          "bytes": 14064,
+          "body": 13764,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/kernel.webp",
+          "duration": 105.69999980926514,
+          "bytes": 21332,
+          "body": 21032,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/laser.webp",
+          "duration": 153.30000019073486,
+          "bytes": 24976,
+          "body": 24676,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/lightning.webp",
+          "duration": 144,
+          "bytes": 32294,
+          "body": 31994,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/magnet.webp",
+          "duration": 113.80000019073486,
+          "bytes": 17462,
+          "body": 17162,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/map-day.webp",
+          "duration": 101.10000038146973,
+          "bytes": 6926,
+          "body": 6626,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/map-night.webp",
+          "duration": 95.5,
+          "bytes": 5632,
+          "body": 5332,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/map-roof.webp",
+          "duration": 127.2999997138977,
+          "bytes": 5588,
+          "body": 5288,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/melon.webp",
+          "duration": 110.5,
+          "bytes": 18752,
+          "body": 18452,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/mushroom.webp",
+          "duration": 110,
+          "bytes": 15688,
+          "body": 15388,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/pea.webp",
+          "duration": 125.89999961853027,
+          "bytes": 24744,
+          "body": 24444,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/potato.webp",
+          "duration": 114.40000009536743,
+          "bytes": 14878,
+          "body": 14578,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/result-hero-v2.webp",
+          "duration": 136.30000019073486,
+          "bytes": 24878,
+          "body": 24578,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/seed-v2.webp",
+          "duration": 217.7000002861023,
+          "bytes": 40874,
+          "body": 40574,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/sign.webp",
+          "duration": 117.5,
+          "bytes": 20326,
+          "body": 20026,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/slot.webp",
+          "duration": 139.19999980926514,
+          "bytes": 19548,
+          "body": 19248,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/snapdragon.webp",
+          "duration": 152.59999990463257,
+          "bytes": 25650,
+          "body": 25350,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/squash.webp",
+          "duration": 138.59999990463257,
+          "bytes": 17538,
+          "body": 17238,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/starfruit.webp",
+          "duration": 146.40000009536743,
+          "bytes": 18856,
+          "body": 18556,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/sun.webp",
+          "duration": 142.7999997138977,
+          "bytes": 29926,
+          "body": 29626,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/sunflower.webp",
+          "duration": 154.2000002861023,
+          "bytes": 28020,
+          "body": 27720,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/torchwood.webp",
+          "duration": 123.19999980926514,
+          "bytes": 20180,
+          "body": 19880,
+          "initiator": "img"
+        },
+        {
+          "name": "/assets/game/release/walnut.webp",
+          "duration": 123,
+          "bytes": 20074,
+          "body": 19774,
+          "initiator": "img"
+        }
+      ],
+      "images": [],
+      "ready": "开始远征 ▷",
+      "network": {
+        "downBytes": 1500000,
+        "upBytes": 750000,
+        "latencyMs": 60
+      },
+      "version": "v0.9"
+    }
+  ],
+  "limitation": "Same desktop Chromium and server, simulated 12 Mbps / 60 ms; not physical mobile cold launch or memory measurement."
+}

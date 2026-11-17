@@ -1,0 +1,39 @@
+{
+  "version": "0.9.0",
+  "runtimeCodeCommit": "0f2be29",
+  "mechanism": {
+    "tests": 70,
+    "passed": 70,
+    "failed": 0
+  },
+  "campaign": {
+    "runs": 81,
+    "wins": 77,
+    "losses": 4,
+    "unfinished": 0,
+    "firstUpgradeMedian": 25.1,
+    "level60Median": 4,
+    "level120Median": 7,
+    "finalLevelMedian": 12,
+    "evolutionMedian": 139.4,
+    "eliteCombatMedian": 24.6,
+    "byStage": [
+      {
+        "stage": 0,
+        "wins": 27,
+        "total": 27
+      },
+      {
+        "stage": 1,
+        "wins": 24,
+        "total": 27
+      },
+      {
+        "stage": 2,
+        "wins": 26,
+        "total": 27
+      }
+    ]
+  },
+  "limitations": "Seeded bot outcomes; not human difficulty or first-time player research."
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "starter": "pea",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 13413.817619047542,
+    "totalDamage": 24990.87547619034,
+    "level": 9
+  },
+  {
+    "starter": "ice",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 21468.19821428557,
+    "totalDamage": 25676.53821428555,
+    "level": 9
+  },
+  {
+    "starter": "boomerang",
+    "status": "won",
+    "time": 184.13333333332545,
+    "damage": 13808.686190476128,
+    "totalDamage": 21788.463333333235,
+    "level": 8
+  },
+  {
+    "starter": "mushroom",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 20058.645714285612,
+    "totalDamage": 25359.88857142844,
+    "level": 10
+  },
+  {
+    "starter": "cabbage",
+    "status": "won",
+    "time": 209.23333333332403,
+    "damage": 23906.404880952232,
+    "totalDamage": 28172.973928571264,
+    "level": 8
+  },
+  {
+    "starter": "kernel",
+    "status": "lost",
+    "time": 210.03333333332398,
+    "damage": 12059.341785714185,
+    "totalDamage": 28320.41499999981,
+    "level": 9
+  },
+  {
+    "starter": "melon",
+    "status": "won",
+    "time": 182.13333333332557,
+    "damage": 14101.653928571333,
+    "totalDamage": 23379.1233333332,
+    "level": 9
+  },
+  {
+    "starter": "cherry",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 13959.884285714179,
+    "totalDamage": 23816.413809523678,
+    "level": 9
+  },
+  {
+    "starter": "jalapeno",
+    "status": "lost",
+    "time": 210.03333333332398,
+    "damage": 16367.83916666655,
+    "totalDamage": 29237.41214285694,
+    "level": 8
+  },
+  {
+    "starter": "potato",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 11659.295714285636,
+    "totalDamage": 23929.35059523797,
+    "level": 9
+  },
+  {
+    "starter": "chomper",
+    "status": "lost",
+    "time": 210.03333333332398,
+    "damage": 2740.5986904761603,
+    "totalDamage": 23591.212619047506,
+    "level": 8
+  },
+  {
+    "starter": "squash",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 19519.664166666535,
+    "totalDamage": 23731.699404761763,
+    "level": 9
+  },
+  {
+    "starter": "starfruit",
+    "status": "won",
+    "time": 200.76666666665784,
+    "damage": 19951.35642857132,
+    "totalDamage": 29304.320119047457,
+    "level": 8
+  },
+  {
+    "starter": "cactus",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 19797.46535714273,
+    "totalDamage": 26600.15809523793,
+    "level": 9
+  },
+  {
+    "starter": "magnet",
+    "status": "won",
+    "time": 199.39999999999125,
+    "damage": 17875.431547618933,
+    "totalDamage": 26835.45238095217,
+    "level": 8
+  },
+  {
+    "starter": "bonk",
+    "status": "won",
+    "time": 193.53333333332492,
+    "damage": 13063.28380952372,
+    "totalDamage": 25609.432976190317,
+    "level": 9
+  },
+  {
+    "starter": "snapdragon",
+    "status": "won",
+    "time": 181.6333333333256,
+    "damage": 13041.843571428519,
+    "totalDamage": 23914.175595238004,
+    "level": 9
+  },
+  {
+    "starter": "lightning",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 21221.88223432101,
+    "totalDamage": 24958.342005952232,
+    "level": 10
+  },
+  {
+    "starter": "laser",
+    "status": "lost",
+    "time": 210.03333333332398,
+    "damage": 16247.614285714166,
+    "totalDamage": 30428.98571428549,
+    "level": 8
+  },
+  {
+    "starter": "bamboo",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 20595.48190476176,
+    "totalDamage": 26492.23059523792,
+    "level": 9
+  },
+  {
+    "starter": "coconut",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 20714.854642857,
+    "totalDamage": 23856.882738095093,
+    "level": 10
+  },
+  {
+    "starter": "iceberg",
+    "status": "lost",
+    "time": 210.03333333332398,
+    "damage": 10890.60321428563,
+    "totalDamage": 27799.533571428357,
+    "level": 9
+  },
+  {
+    "starter": "cabbagevolt",
+    "status": "won",
+    "time": 180.0333333333257,
+    "damage": 18634.496298511796,
+    "totalDamage": 23543.23208630939,
+    "level": 8
+  }
+]
