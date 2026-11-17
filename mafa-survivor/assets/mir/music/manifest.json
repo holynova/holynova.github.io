@@ -2,6 +2,24 @@
   "repository": "https://github.com/etorth/mir2x_res",
   "ref": "9e21ea6631317d06e064fbfa7e1ea43af6a2d3e6",
   "files": {
+    "00020004_BD041.mp3": {
+      "sourcePath": "sound/bgm/00020004_BD041.mp3",
+      "sha1": "28045ac1a303ae17aae2a96c89622384a64c5fa3",
+      "sha256": "123cb06642b91d400eed1f20fb278204605b37fd33242fde9da56449951146de",
+      "bytes": 6087985,
+      "sourceMap": "废矿东部洞穴_D402",
+      "bgmID": 131076,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "00020007_BD60.mp3": {
+      "sourcePath": "sound/bgm/00020007_BD60.mp3",
+      "sha1": "5ded22704483e4f410e8f0895f86f6d3cb185087",
+      "sha256": "55549761bfe2abb1703b43432b4bc352f9c2837632251d105d4ef3efeda1348e",
+      "bytes": 6153115,
+      "sourceMap": "绝命谷1层南部_D60011",
+      "bgmID": 131079,
+      "permissionStatus": "project_owner_authorized"
+    },
     "00010006_B300.mp3": {
       "sourcePath": "sound/bgm/00010006_B300.mp3",
       "sha1": "c518eb2352ba082b0a6eaa028b8f5293241c150f",
@@ -58,6 +76,8 @@
     }
   },
   "mapping": {
+    "mine": "00020004_BD041.mp3",
+    "valley": "00020007_BD60.mp3",
     "desert": "00010006_B300.mp3",
     "woma": "00020003_BD02.mp3",
     "redmoon": "00020009_BD99.mp3",
@@ -71,7 +91,7 @@
     "sourcePath": "common/src/maprecord.inc",
     "sha256": "781881a1029da203cbf1aff4cd242ca9496e21ccdb5f3a5a5f198250dee27f67"
   },
-  "note": "Pinned client map soundtrack assignments identify source tracks. Mengzhong, Woma and Redmoon use their source map-family assignments; other chapters reuse field/cave/temple categories; these are not claims of exact 1.76 chapter music. No synthesized or re-encoded music.",
+  "note": "Pinned client map soundtrack assignments identify source tracks. Map-family soundtracks and adapted final encounter selections are documented separately; no claim of exact 1.76 assignments for every chapter. No synthesized or re-encoded music.",
   "rightsStatus": "AUTHORIZED_BY_PROJECT_OWNER",
   "distribution": "PUBLIC_PROJECT_DISTRIBUTION",
   "releaseStatus": "AUTHORIZED_BY_PROJECT_OWNER",
