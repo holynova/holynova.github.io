@@ -1,5 +1,0 @@
-[
- {"issue":"Boss entrance banner overlapped health on short portrait screens","fix":"Position below the fixed health region; use max(180px,32%)","verification":"12 viewport profiles, battle and boss recaptured"},
- {"issue":"Evolution semantic click sometimes triggered blur/pause in browser automation","fix":"Layout fixture exits through the DEV fixture after its screenshot; real navigation remains browser input","verification":"12 complete regression profiles"},
- {"issue":"Music panel extended 13px into bottom safe area at 844x390 with 21px inset","fix":"Apply native safe-area insets to the fixed music overlay","verification":"Portrait and landscape safe-area retest"}
-]
