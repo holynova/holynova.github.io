@@ -1,0 +1,49 @@
+{
+  "repository": "https://github.com/etorth/mir2x_res",
+  "ref": "9e21ea6631317d06e064fbfa7e1ea43af6a2d3e6",
+  "files": {
+    "00010001_B000.mp3": {
+      "sourcePath": "sound/bgm/00010001_B000.mp3",
+      "sha1": "88c1472c6e3ece25620a28a82ba04bf9599cacd6",
+      "sha256": "b45347dcf5b505101beb1e8c8b985dc62b875f43669d2923f4203325e22ff842",
+      "bytes": 5310600,
+      "sourceMap": "比奇县_0",
+      "bgmID": 65537,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "00020006_BD50.mp3": {
+      "sourcePath": "sound/bgm/00020006_BD50.mp3",
+      "sha1": "169d9f94b9c1c7d0b7e2213e895cf7164178e2a7",
+      "sha256": "629060632c8620710b593c4966795c434f0c04f9dc195bd1afbf5bcf1a14106e",
+      "bytes": 6141425,
+      "sourceMap": "祖玛神殿大厅_0157",
+      "bgmID": 131078,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "00020008_BD70.mp3": {
+      "sourcePath": "sound/bgm/00020008_BD70.mp3",
+      "sha1": "2cf7d08cae15b0893918233a5824ab3008e4eda9",
+      "sha256": "6402e52c3fe7660dccb25be315a49068424b07367c5b72a03ab2ab202b7c0ed9",
+      "bytes": 5068450,
+      "sourceMap": "石阁7层_D717",
+      "bgmID": 131080,
+      "permissionStatus": "project_owner_authorized"
+    }
+  },
+  "mapping": {
+    "field": "00010001_B000.mp3",
+    "temple": "00020006_BD50.mp3",
+    "cave": "00020008_BD70.mp3"
+  },
+  "mappingReference": {
+    "repository": "https://github.com/etorth/mir2x",
+    "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
+    "sourcePath": "common/src/maprecord.inc",
+    "sha256": "781881a1029da203cbf1aff4cd242ca9496e21ccdb5f3a5a5f198250dee27f67"
+  },
+  "note": "Pinned client map soundtrack assignments identify source tracks. Game chapters reuse field/cave/temple categories; these are not claims of exact 1.76 chapter music. No synthesized or re-encoded music.",
+  "rightsStatus": "AUTHORIZED_BY_PROJECT_OWNER",
+  "distribution": "PUBLIC_PROJECT_DISTRIBUTION",
+  "releaseStatus": "AUTHORIZED_BY_PROJECT_OWNER",
+  "authorizationEvidence": "docs/asset-authorization.json"
+}
