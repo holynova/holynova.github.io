@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-17",
-  "totalRepos": 145,
+  "totalRepos": 146,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -679,6 +679,21 @@
           "is_featured": true,
           "screenshot": "screenshots/poem-formula.png",
           "commit_time": "2026-08-07T13:46:14Z"
+        },
+        {
+          "name": "web-motion-showcase",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "30 个经典网页动画动效画廊与 AI 提示词交互原型",
+            "en": "Modern web UI motion gallery with 30 animations and AI prompts"
+          },
+          "url": "https://github.com/holynova/web-motion-showcase",
+          "pushed_at": "2026-08-11",
+          "commit_time": "2026-08-11T08:55:12Z",
+          "homepage": "https://holynova.github.io/web-motion-showcase/",
+          "screenshot": "screenshots/web-motion-showcase.png",
+          "hidden": true,
+          "is_featured": false
         },
         {
           "name": "my-design-system",
