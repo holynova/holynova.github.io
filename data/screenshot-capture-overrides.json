@@ -1,11 +1,49 @@
 {
+  "char_finder": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "移动端中文韵脚检索工具，描述明确写移动端；桌面视口下为居中窄条（2026-11-17 截图复查）。"
+  },
+  "douban-quark-clawer": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "单卡片着陆页，内容只占右侧约 40%，左侧大片空白；重拍后如卡片仍偏右或裁切，改回桌面视口（2026-11-17 截图复查）。"
+  },
   "equal_width": {
     "captureUrl": "https://holynova.github.io/equal_width/",
-    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
+    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged.",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "构建后 CSS 写死 width: 400px 且无响应式断点；现有截图下方还有大块粉色色块疑似渲染异常（2026-11-17 截图复查）。"
+  },
+  "fallwell": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "竖版像素动作肉鸽，桌面视口下为居中竖框游戏画面（2026-11-17 截图复查）。"
   },
   "haiku-flow": {
     "captureUrl": "https://holynova.github.io/haiku-flow/",
-    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
+    "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged.",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "卡片滑动式俳句应用，桌面视口下为居中窄卡（2026-11-17 截图复查）。"
+  },
+  "hand_fireworks": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "CSS 容器 max-width: 500px，桌面视口下内容只占中间约 30%（2026-11-17 截图复查）。"
   },
   "head_tail_poem": {
     "captureUrl": "https://holynova.github.io/head_tail_poem/",
@@ -15,12 +53,54 @@
     "captureUrl": "https://holynova.github.io/hotpot-timer/",
     "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
   },
+  "mobile-sensor-playground": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "CSS 容器 max-width 300/440px，手机传感器实验本身面向手机（2026-11-17 截图复查）。"
+  },
   "offer_calculator": {
-    "skip": true,
-    "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored."
+    "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored.",
+    "skip": true
+  },
+  "poetry-flow": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "卡片式古诗词应用，桌面视口下为居中窄卡（2026-11-17 截图复查）。"
   },
   "pre_tax_salary_calculator": {
-    "skip": true,
-    "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored."
+    "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored.",
+    "skip": true
+  },
+  "prompt_one_by_one": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "Chrome 扩展弹窗界面，内容宽约 380px；桌面视口下只剩居中窄条（2026-11-17 截图复查）。"
+  },
+  "scrape-to-markdown.chrome": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "Chrome 扩展侧边栏弹窗，内容只占右侧约 30%（2026-11-17 截图复查）。"
+  },
+  "world-unsolved-mysteries": {
+    "viewport": {
+      "height": 800,
+      "width": 1280
+    },
+    "viewportReason": "现有文件是 1440×8651 整页长截图，卡片里缩成细条无法辨认；改拍标准桌面视口（2026-11-17 截图复查）。"
+  },
+  "youtube-channel-scraper-chrome": {
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "viewportReason": "Chrome 扩展弹窗，内容只占左侧约 30%（2026-11-17 截图复查）。"
   }
 }

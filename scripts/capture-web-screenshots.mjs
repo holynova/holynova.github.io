@@ -13,11 +13,24 @@ const overridesPath = path.join(projectRoot, 'data', 'screenshot-capture-overrid
 const playwrightModule = process.env.PLAYWRIGHT_MODULE || 'playwright';
 const concurrency = Math.max(1, Number(process.env.CAPTURE_CONCURRENCY || 4));
 const settleMs = Math.max(0, Number(process.env.CAPTURE_SETTLE_MS || 1800));
-const viewport = { width: 1280, height: 800, deviceScaleFactor: 1 };
+const defaultViewport = { width: 1280, height: 800, deviceScaleFactor: 1 };
 
 const { chromium } = await import(playwrightModule);
 const data = JSON.parse(await fs.readFile(dataPath, 'utf8'));
 const overrides = JSON.parse(await fs.readFile(overridesPath, 'utf8'));
+
+// Per-project viewport from overrides[repo.name].viewport ({ width, height }).
+// Mobile-first sites use 390x844; anything absent or invalid falls back to
+// the desktop default. The override is also what opts a chrome-extension
+// project back into this script (see the filter below).
+function viewportFor(repo) {
+  const override = overrides[repo.name]?.viewport;
+  if (override && Number.isFinite(override.width) && override.width > 0 &&
+      Number.isFinite(override.height) && override.height > 0) {
+    return { width: override.width, height: override.height, deviceScaleFactor: 1 };
+  }
+  return defaultViewport;
+}
 function isPortfolioDemo(homepage) {
   if (!homepage) return false;
   try {
@@ -34,7 +47,10 @@ const projects = data.categories.flatMap((category) =>
   category.repos.map((repo) => ({ ...repo, categoryId: category.id }))
 ).filter((repo) => (
   isPortfolioDemo(repo.homepage) &&
-  repo.categoryId !== 'chrome-extensions' && !overrides[repo.name]?.skip &&
+  // Chrome extensions are normally captured by capture-extension-popup.mjs,
+  // but an entry with an explicit viewport override opts back in here so its
+  // landing page can be shot at the right size.
+  (repo.categoryId !== 'chrome-extensions' || overrides[repo.name]?.viewport) && !overrides[repo.name]?.skip &&
   (!requestedNames.size || requestedNames.has(repo.name))
 ));
 
@@ -97,7 +113,8 @@ async function inspectPage(page) {
 }
 
 async function capture(browser, repo) {
-  const page = await browser.newPage({ viewport });
+  const viewport = viewportFor(repo);
+  const page = await browser.newPage({ viewport, isMobile: viewport.width < 768 });
   const consoleErrors = [];
   page.on('console', (message) => {
     if (message.type() === 'error') consoleErrors.push(message.text());
@@ -125,6 +142,7 @@ async function capture(browser, repo) {
       categoryId: repo.categoryId,
       homepage: repo.homepage,
       captureUrl,
+      viewport,
       screenshot: path.relative(projectRoot, output),
       status: metrics.bodyTextLength >= 5 || metrics.visibleImageCount > 0 ? 'captured' : 'review',
       startedAt,
@@ -137,6 +155,7 @@ async function capture(browser, repo) {
       categoryId: repo.categoryId,
       homepage: repo.homepage,
       captureUrl,
+      viewport,
       screenshot: path.relative(projectRoot, output),
       status: 'failed',
       startedAt,
@@ -167,7 +186,7 @@ await browser.close();
 results.sort((a, b) => a.name.localeCompare(b.name));
 await fs.writeFile(reportPath, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
-  viewport,
+  viewport: defaultViewport,
   settleMs,
   count: results.length,
   skipped: Object.entries(overrides).filter(([, override]) => override.skip).map(([name, override]) => ({ name, reason: override.reason })),
