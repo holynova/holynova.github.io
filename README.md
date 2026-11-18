@@ -1,273 +1,100 @@
-# 小桑前端作品集 (Xiaosang Frontend Portfolio)
-
-
-![Screenshot](./screenshot.png)
-
+<p align="right"><a href="README.en.md">English</a></p>
 
 <p align="center">
-  <img src="head.png" alt="小桑前端作品集" width="180" height="180">
+  <img src="./assets/readme/hero.svg" width="100%" alt="小桑作品集 — xiaosang.cc 的源码仓库：首页以瀑布流卡片展示 130 个在展项目，项目列表由 data/repos.json 驱动">
 </p>
 
 <p align="center">
-  <strong>一个前端开发者的学习与实践作品集</strong>
+  <a href="https://xiaosang.cc/">▶ 在线访问</a>
+  ·
+  <a href="https://github.com/holynova/holynova.github.io">GitHub 仓库</a>
 </p>
+
+小桑作品集是 holynova 个人作品集网站 [xiaosang.cc](https://xiaosang.cc/) 的源码仓库。首页以瀑布流卡片展示 130 个在展项目，分 9 大分类，支持搜索、分类筛选与三种排序；整个项目列表由 `data/repos.json` 驱动，改一个 JSON 文件就能更新全站。零构建，原生 HTML/CSS/JS。
+
+## 截图
 
 <p align="center">
-  <a href="https://xiaosang.cc/">🌐 在线预览</a> •
-  <a href="https://github.com/holynova/holynova.github.io">📦 GitHub</a> •
-  <a href="mailto:holy_nova@126.com">📧 联系我</a>
+  <img src="./assets/readme/screenshot-home.png" width="100%" alt="作品集首页：深色主题，标题 small ideas, better products，搜索栏与分类筛选，下方是项目卡片墙，显示 12 / 130 个项目">
 </p>
 
----
+## 这是什么
 
-## 📖 项目简介
+- **作品集站**：收录 holynova 的网页小项目——游戏、AI 工具、创意视觉、开发工具、生活效率等，每个项目一张卡片：截图、简介、Demo 与仓库链接。
+- **数据驱动**：`index.html` + `js/detail-app.js` 读取 `data/repos.json` 渲染卡片；卡片渐进加载，每批 12 张，滚动到底自动续载。
+- **站内功能**：搜索（按 `/` 聚焦）、9 个分类筛选、排序（最新 / Star / 字母）、中英双语切换、深浅主题切换、点赞收藏；另有极简版 `classic.html`。
+- **数量**（以 `data/repos.json` 实测为准，2026-11-17）：共 146 条，130 条可见展示，16 条隐藏。
 
-这是一个前端开发者的学习与实践作品集，包含了 **50+ 个前端项目和演示**，涵盖了原生 JavaScript、CSS3 动画、主流前端框架（React、Vue、Angular）等多个技术领域。每个项目都是一个独立的学习案例，展示了不同的前端技术和实现思路。
+| 分类 | 在展 |
+|---|---:|
+| 纯内容网站 | 49 |
+| 游戏交互 | 17 |
+| 创意视觉 | 18 |
+| 生活效率 | 13 |
+| Chrome 插件 | 7 |
+| AI 工具 | 8 |
+| 语言文化 | 8 |
+| 开发工具 | 7 |
+| 游戏实验 | 3 |
 
-## 🚀 在线预览
+## 项目列表怎么维护
 
-**👉 [https://xiaosang.cc/](https://xiaosang.cc/)**
+`data/repos.json` 是唯一数据源，结构：
 
-GitHub Pages 仍可作为备用入口：[holynova.github.io](https://holynova.github.io/)。两个入口的作品 Demo 均由 `master` 分支的 `data/repos.json` 决定。
+```json
+{
+  "lastUpdated": "2026-11-17",
+  "totalRepos": 146,
+  "categories": [
+    { "name": { "zh": "游戏交互", "en": "Games" }, "repos": [ … ] }
+  ]
+}
+```
 
-### 发布方式
+每条项目包含：`name`（仓库名）、`title`（中英标题）、`desc`（中英简介）、`url`（GitHub 仓库）、`homepage`（Demo 地址）、`screenshot`（缩略图路径）、`lang`（语言）、`pushed_at` / `commit_time`（排序用）、`hidden`（是否隐藏）。
 
-`master` 是唯一的作品数据来源。合并前运行 `node scripts/check-demo-links.mjs`，确保 Demo 不会退回 GitHub Pages 链接。GitHub Pages 读取 `master` 根目录；当前绑定 `xiaosang.cc` 的 Cloudflare Worker 是 `xiaosang-portfolio`，从同一提交手动发布：
+**新增一个项目**：
+
+1. 在 `data/repos.json` 对应分类的 `repos` 里追加一条，填好标题、简介、仓库与 Demo 地址。
+2. 截图放进 `screenshots/`，命名 `<name>.png`（建议同时提供同名 `.webp`，卡片优先用 webp）。
+3. 更新 `totalRepos` 与 `lastUpdated`。
+
+**隐藏项目**：把该条的 `hidden` 设为 `true` 即可下架展示，数据保留。
+
+## 本地运行
+
+零构建，起一个静态服务器即可：
 
 ```bash
-npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc
+python3 -m http.server 8080
+# 打开 http://localhost:8080
 ```
 
-`stage-cloudflare.mjs` 把本仓库的当前提交与图库项目从 `main` 构建的 `dist` 组装起来。图库完整图片只进入 Cloudflare 产物。Wrangler 的 build 步骤每次自动执行组装，并校验图库入口与图片数量。默认查找相邻图库项目及本机 ~/Code/xiaosang-gallery/dist，也可通过 XIAOSANG_GALLERY_DIST 环境变量指定。发布前会更新远端主分支引用并拒绝使用落后的提交，防止覆盖其他项目的新版本。
+`server.py` 是作者本地的开发辅助服务（含点赞同步接口），日常预览不需要它。
 
-macOS 的发布暂存使用 APFS 独立克隆，避免重复占用整份站点空间；暂存前后都要求受版本控制的文件与提交一致。其他平台仍从 Git archive 生成快照。
-
-吴军专题站挂载于 `/wujun-study/`，从 `WUJUN_STUDY_DIST` 或 `~/code/wujun-study/dist` 读取构建；必须与 `data/mounted-projects.json` 固定的源码提交一致，并包含完整幻灯片。每次发布都会同时保留图集与吴军站点。
-
-发布后读取 `https://xiaosang.cc/data/repos.json` 并实际点击作品卡片的 Demo，确认页面指向 `xiaosang.cc` 路径或其子域名。Git 提交或 GitHub Pages 更新不会自动发布 Cloudflare。
-
-## 📸 项目截图
-
-> 💡 **提示**: 以下截图展示了部分代表性项目的界面效果
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="screenshots/2048.png" alt="2048游戏" width="200"><br>
-        <b>2048 游戏</b>
-      </td>
-      <td align="center">
-        <img src="screenshots/sort.png" alt="排序算法可视化" width="200"><br>
-        <b>排序算法可视化</b>
-      </td>
-      <td align="center">
-        <img src="screenshots/calendar.png" alt="日历组件" width="200"><br>
-        <b>日历组件</b>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="screenshots/clock.png" alt="动态时钟" width="200"><br>
-        <b>动态时钟</b>
-      </td>
-      <td align="center">
-        <img src="screenshots/animation.png" alt="动画效果" width="200"><br>
-        <b>动画效果</b>
-      </td>
-      <td align="center">
-        <img src="screenshots/layout.png" alt="页面布局" width="200"><br>
-        <b>页面布局</b>
-      </td>
-    </tr>
-  </table>
-</div>
-
-## 🎯 项目分类
-
-### 1. 🎮 JS 综合作品
-
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| 2048 游戏 | 个性化定制 2048 游戏 | [在线演示](https://holynova.github.io/pages/2048new/index.html) |
-| 排序算法可视化 | 多种排序算法的可视化展示 | [在线演示](https://holynova.github.io/algorithm/show_sort/index.html) |
-| 二手房计算器 | 房贷计算工具 | [在线演示](https://holynova.github.io/pages/buy_house/index.html) |
-| 人名转拼音工具 | 中文姓名转拼音 | [在线演示](https://holynova.github.io/pages/pinyin_converter) |
-| 日期选择器 | 自定义日期选择器插件 | [在线演示](https://holynova.github.io/plug_in/date_picker/demo.html) |
-| 滑动解锁插件 | iOS 风格滑动解锁 | [在线演示](https://holynova.github.io/plug_in/slide_to_unlock/index.html) |
-| 面向对象选项卡 | OOP 实现的选项卡组件 | [在线演示](https://holynova.github.io/pages/tabs4.0/tabs4.0.html) |
-| 词频统计 | 文本词频分析工具 | [在线演示](https://holynova.github.io/pages/my_page/frequency.html) |
-| 电缆型号翻译 | 电缆型号查询工具 | [在线演示](https://holynova.github.io/pages/cable_name/cable_name.html) |
-
-### 2. ⚛️ 主流前端框架
-
-| 项目 | 框架 | 链接 |
-|------|------|------|
-| 购物清单 | React | [在线演示](https://holynova.github.io/framework/react/index.html) |
-| 井字棋 | React | [在线演示](https://holynova.github.io/framework/react_tictactoe/index.html) |
-| 留言板 | AngularJS | [在线演示](https://holynova.github.io/framework/learn_angular/ng_comments/index.html) |
-| 知乎注册页 | AngularJS | [在线演示](https://holynova.github.io/framework/learn_angular/ng_signup/index.html) |
-| 还款利息计算器 | Vue | [在线演示](https://holynova.github.io/framework/vue_return_money2/index.html) |
-| 还款利息计算器 | Angular | [在线演示](https://holynova.github.io/framework/angular_return_money/index.html) |
-| 还款利息计算器 | H5/CSS3 | [在线演示](https://holynova.github.io/css3/return_money/index.html) |
-| 微博应用 | Node.js | [在线演示](https://holynova.github.io/framework/learn_node/server/index.html) |
-
-### 3. 📐 页面布局
-
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| 京东布局 | 京东商城首页复刻 | [在线演示](https://holynova.github.io/layout/jingdong/index.html) |
-| 腾讯布局 | 腾讯首页复刻 | [在线演示](https://holynova.github.io/pages/qq.com/index.html) |
-| 家具网站 v1.0 | 家具电商布局 | [在线演示](https://holynova.github.io/pages/furnitureV1.0/index.html) |
-| 家具网站 v2.0 | Bootstrap 响应式布局 | [在线演示](https://holynova.github.io/pages/furnitureV2.0/full_screen.html) |
-| jQuery Mobile | 移动端布局 | [在线演示](https://holynova.github.io/pages/mobile/index.html) |
-
-### 4. 🌐 Web 技术
-
-| 项目 | 技术点 | 链接 |
-|------|--------|------|
-| Cookie 演示 | Cookie 操作 | [在线演示](https://holynova.github.io/tech/cookie/index.html) |
-| Ajax 演示 | Ajax 请求 | [在线演示](https://holynova.github.io/tech/ajax/index.html) |
-| 自定义事件 | JS 自定义事件 | [在线演示](https://holynova.github.io/tech/custom_event/index.html) |
-| JSONP 搜索建议 | JSONP 跨域 | [在线演示](https://holynova.github.io/tech/jsonp/index.html) |
-| Web 性能优化 | 性能优化技巧 | [在线演示](https://holynova.github.io/tech/optimize_web/index.html) |
-
-### 5. ✨ 页面效果和小功能
-
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| 购物车 | 购物车功能实现 | [在线演示](https://holynova.github.io/pages/shopping_cart/shopping_cart.html) |
-| 标签选项卡 | 选项卡组件 | [在线演示](https://holynova.github.io/pages/tabs2.0/tabs2.0.html) |
-| 多级导航菜单 | 多级下拉菜单 | [在线演示](https://holynova.github.io/pages/nav_menu/nav_menu.html) |
-| 表单验证 | 原生 JS 表单验证 | [在线演示](https://holynova.github.io/pages/table_verify/index.html) |
-| 富文本编辑器 | 富文本编辑功能 | [在线演示](https://holynova.github.io/pages/rich_edit/rich_edit.html) |
-| 放大镜 | 任意比例放大镜 | [在线演示](https://holynova.github.io/pages/magnify_glassV2/magnify.html) |
-| CSS Sprite | CSS 精灵图演示 | [在线演示](https://holynova.github.io/pages/css_sprite/css_sprite.html) |
-| 倒计时 | 倒计时功能 | [在线演示](https://holynova.github.io/pages/count_down/index.html) |
-| 变色时钟 | 动态变色时钟 | [在线演示](https://holynova.github.io/pages/clock/index.html) |
-| 图片轮播 | 图片轮播组件 | [在线演示](https://holynova.github.io/pages/slide/slide.html) |
-| 瀑布流 | 瀑布流布局 | [在线演示](https://holynova.github.io/pages/waterfall/waterfall.html) |
-| 360° 旋转 | 360 度旋转展示 | [在线演示](https://holynova.github.io/pages/360spin/index.html) |
-| 豆瓣打分 | 星级评分组件 | [在线演示](https://holynova.github.io/pages/star_grade/index.html) |
-| 手风琴菜单 | 手风琴折叠效果 | [在线演示](https://holynova.github.io/pages/top10_tab/index.html) |
-| 图标拖拽 | 拖拽功能实现 | [在线演示](https://holynova.github.io/pages/drag/drag.html) |
-| 自定义滚动条 | 自定义滚动条样式 | [在线演示](https://holynova.github.io/pages/custom_scroll_bar/custom_scroll_bar.html) |
-
-### 6. 🎬 动画效果
-
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| 动画框架 | 自定义动画框架 | [在线演示](https://holynova.github.io/pages/animation_framework2/animation.html) |
-| 动态时钟 | Canvas 动态时钟 | [在线演示](https://holynova.github.io/pages/clock_animation/clock.html) |
-| 幻灯片切换 | 左右/上下/淡入淡出/无缝滚动 | [在线演示](https://holynova.github.io/pages/slide_with_animations/slide.html) |
-| 手风琴菜单 | 动画手风琴效果 | [在线演示](https://holynova.github.io/animations/menu/index.html) |
-| 打字效果 | 打字机动画 | [在线演示](https://holynova.github.io/animations/typing/index.html) |
-| 图片翻页 | 图片翻页特效 | [在线演示](https://holynova.github.io/animations/next_pic/index.html) |
-| Mac Dock 效果 | macOS Dock 栏动画 | [在线演示](https://holynova.github.io/animations/macdock/index.html) |
-| 图标对齐 | 图标对齐排列动画 | [在线演示](https://holynova.github.io/animations/icon_align/index.html) |
-| 进度条幻灯片 | 带进度条的轮播 | [在线演示](https://holynova.github.io/animations/slide_with_progress/index.html) |
-| 唱片封面浏览 | 专辑封面展示 | [在线演示](https://holynova.github.io/animations/album/index.html) |
-| 圆形运动 | 圆形轨迹运动 | [在线演示](https://holynova.github.io/animations/circle/index.html) |
-| 浮动遮罩 | 浮动遮罩信息展示 | [在线演示](https://holynova.github.io/animations/float_mask/index.html) |
-| 触摸事件 | 触摸事件模拟 | [在线演示](https://holynova.github.io/animations/touch_demo/index.html) |
-
-### 7. 🎨 CSS3 效果
-
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| 重力倾斜 | 重力感应倾斜效果 | [在线演示](https://holynova.github.io/css3/rotate/index.html) |
-| 水平垂直居中 | 多种居中方案 | [在线演示](https://holynova.github.io/css3/center/index.html) |
-| Flex 布局 | Flex 弹性布局演示 | [在线演示](https://holynova.github.io/css3/flex/index.html) |
-
-## 🛠️ 技术栈
-
-- **前端基础**: HTML5, CSS3, JavaScript (ES5/ES6)
-- **前端框架**: React, Vue.js, Angular, AngularJS
-- **后端技术**: Node.js
-- **CSS 框架**: Bootstrap
-- **移动端**: jQuery Mobile
-- **构建工具**: 原生开发，无构建工具依赖
-
-## 📁 项目结构
+## 目录结构
 
 ```
-holynova.github.io/
-├── index.html          # 主页入口
-├── algorithm/          # 算法演示
-├── animations/         # 动画效果
-├── css3/              # CSS3 效果
-├── framework/         # 前端框架示例
-├── layout/            # 页面布局
-├── pages/             # 各类页面项目
-├── plug_in/           # 插件
-├── script/            # 公共脚本
-├── tech/              # Web 技术演示
-└── screenshots/       # 项目截图
+index.html            首页（Detail 视觉版）
+classic.html          极简经典版
+data/repos.json       项目列表，唯一数据源
+data/screenshots-map.json  截图映射
+js/detail-app.js      首页渲染：搜索 / 筛选 / 排序 / 渐进加载
+js/main.js            旧版首页逻辑
+css/                  Detail 设计系统样式
+screenshots/         项目缩略图（png + webp，327 张）
+server.py             本地开发辅助服务
+pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
+                      早期内置小项目与演示（历史遗留）
 ```
 
-## 🚀 本地运行
+## 技术
 
-```bash
-# 克隆项目
-git clone https://github.com/holynova/holynova.github.io.git
+- 零构建、零框架：原生 HTML/CSS/JS，可直接用静态服务器跑。
+- 数据驱动渲染 + 渐进加载（每批 12 张卡），卡片缩略图 `<picture>` 优先 webp。
+- 响应式，移动端优先；深浅双主题、中英双语。
 
-# 进入项目目录
-cd holynova.github.io
+## 联系
 
-# 使用任意静态服务器启动，例如：
-# 方法 1: 使用 Python
-python -m http.server 8080
-
-# 方法 2: 使用 Node.js (需要先安装 http-server)
-npx http-server -p 8080
-
-# 方法 3: 使用 VS Code 的 Live Server 插件
-
-# 访问 http://localhost:8080
-```
-
-## 📝 如何添加截图
-
-如果你想为项目添加截图，请按照以下步骤：
-
-1. 准备 200px 宽度的截图（建议使用 PNG 格式）
-2. 将截图放入 `screenshots/` 目录
-3. 命名规则：`项目名称.png`（如 `2048.png`、`sort.png`）
-4. 截图会自动显示在 README 中
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-1. Fork 本项目
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
-## 📧 联系方式
-
-- **邮箱**: [holy_nova@126.com](mailto:holy_nova@126.com)
-- **GitHub**: [holynova](https://github.com/holynova)
-
----
-
-<p align="center">
-  <sub>用 ❤️ 和 JavaScript 构建</sub>
-</p>
-
-## Demo 分享卡片
-
-[![小桑前端作品展示 EN/中 Demo 分享卡片：包含项目介绍与二维码](assets/demo-share-card.png)](https://xiaosang.cc/)
-
-移动端友好的在线 Demo：Frontend portfolio showcasing 50+ JavaScript, CSS3, React, Vue, and Angular projects. 扫码或点击卡片打开：<https://xiaosang.cc/>
-
-### 仅发布已提交作品
-
-共用 Worker 的每次发布均包含图库完整产物。线上出现 404 时，使用完整图库构建恢复发布；发布命令会自动校验必需页面、原图和衍生图数量。
-
-上海地铁页面位于 `shanghai-metro-night/`，从 `holynova/shanghai-metro-night` 的 main/dist 同步；来源提交记录在该目录 release.json。
+- 邮箱：[holy_nova@126.com](mailto:holy_nova@126.com)
+- GitHub：[holynova](https://github.com/holynova)
