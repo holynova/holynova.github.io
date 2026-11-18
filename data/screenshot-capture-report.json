@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T03:16:00.800345+00:00",
+  "generatedAt": "2026-11-18T02:49:17.111581+00:00",
   "scope": "All 101 catalog entries, including hidden entries",
   "count": 101,
   "captured": 99,
@@ -19,7 +19,7 @@
       "homepage": "https://100-clocks.xiaosang.cc/",
       "screenshot": "screenshots/100-clocks.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:03:54.624Z",
+      "startedAt": "2026-11-18T02:45:58.000Z",
       "metrics": {
         "bodyTextLength": 380,
         "visibleTextLength": 200,
@@ -27,7 +27,7 @@
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 800,
-        "title": "Matrix Clock Ultra"
+        "title": "100 Clocks · 时间实验室"
       },
       "consoleErrors": []
     },
@@ -183,7 +183,7 @@
       "homepage": "https://bookshelf-manager.xiaosang.cc/",
       "screenshot": "screenshots/bookshelf_manager.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:11.162Z",
+      "startedAt": "2026-11-18T02:45:33.000Z",
       "metrics": {
         "bodyTextLength": 378,
         "visibleTextLength": 307,
@@ -666,7 +666,7 @@
       "homepage": "https://xiaosang.cc/",
       "screenshot": "screenshots/holynova.github.io.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:17.848Z",
+      "startedAt": "2026-11-18T02:47:03.000Z",
       "metrics": {
         "bodyTextLength": 1658,
         "visibleTextLength": 1630,
@@ -1026,7 +1026,7 @@
       "homepage": "https://one-second-movie.xiaosang.cc/",
       "screenshot": "screenshots/one_second_movie.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:32.720Z",
+      "startedAt": "2026-11-18T02:46:23.000Z",
       "metrics": {
         "bodyTextLength": 260,
         "visibleTextLength": 259,
@@ -1034,7 +1034,7 @@
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 803,
-        "title": "client"
+        "title": "一眼看电影 · 影片视觉地图"
       },
       "consoleErrors": []
     },
@@ -1062,7 +1062,7 @@
       "homepage": "https://pdf2wechat.xiaosang.cc/",
       "screenshot": "screenshots/pdf2wechat.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:24.481Z",
+      "startedAt": "2026-11-18T02:45:38.000Z",
       "metrics": {
         "bodyTextLength": 91,
         "visibleTextLength": 78,
