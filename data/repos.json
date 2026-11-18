@@ -248,8 +248,8 @@
           "name": "rock-in-pictures",
           "lang": "JavaScript",
           "desc": {
-            "zh": "听见画面：60幅摄影意象猜华语乐队，点击即揭晓，支持线索与全部原图打包下载。",
-            "en": "Sound in Sight: guess 60 Chinese bands from photographic riddles, with instant reveals, clues, and a ZIP of all original images."
+            "zh": "听见画面：60幅摄影意象猜华语乐队，点击即揭晓，支持线索与单张原图下载。",
+            "en": "Sound in Sight: guess 60 Chinese bands from photographic riddles, with instant reveals, clues, and single-image downloads."
           },
           "url": "https://github.com/holynova/rock-in-pictures",
           "homepage": "https://xiaosang.cc/rock-in-pictures/",
