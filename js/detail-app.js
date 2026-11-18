@@ -793,6 +793,12 @@
           const cssSafeImageSource = imageSource.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
           imageLink.style.setProperty('--card-image', `url("${cssSafeImageSource}")`);
           applyMediaPalette(imageLink, image);
+          // Portrait screenshots (e.g. mobile 390x844) would be cropped by
+          // object-fit: cover in the 16:10 frame; mark them so CSS can show
+          // the whole image instead.
+          if (image.naturalWidth && image.naturalHeight) {
+            image.closest('.card-media-box')?.classList.toggle('is-portrait', image.naturalHeight > image.naturalWidth);
+          }
         };
 
         if (image.complete && image.naturalWidth) {
