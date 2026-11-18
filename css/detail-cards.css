@@ -771,6 +771,11 @@
   transition: filter 0.2s ease;
 }
 
+/* Portrait screenshots show fully instead of being cropped by cover. */
+.card-media-box.is-portrait .card-demo-image {
+  object-fit: contain;
+}
+
 .card-image-link {
   position: relative;
   isolation: isolate;
