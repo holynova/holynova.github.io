@@ -22,29 +22,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Read pinned wujun-study commit
-        id: pin
-        run: |
-          echo "commit=$(python3 -c 'import json; print(json.load(open("data/mounted-projects.json"))["wujun-study"]["commit"])')" >> "$GITHUB_OUTPUT"
-
-      - name: Checkout wujun-study at the pinned commit
-        uses: actions/checkout@v4
-        with:
-          repository: holynova/wujun-study
-          ref: ${{ steps.pin.outputs.commit }}
-          path: wujun-study
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Build wujun-study
-        run: cd wujun-study && npm ci && npm run build
-
       - name: Deploy to Cloudflare Workers
-        run: npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc
+        run: npx --yes wrangler@4.148.0 deploy --config wrangler.jsonc
         env:
-          WUJUN_STUDY_DIST: ${{ github.workspace }}/wujun-study/dist
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

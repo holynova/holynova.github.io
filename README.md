@@ -34,17 +34,17 @@ GitHub Pages 仍可作为备用入口：[holynova.github.io](https://holynova.gi
 
 `master` 是唯一的作品数据来源。合并前运行 `node scripts/check-demo-links.mjs`，确保 Demo 不会退回 GitHub Pages 链接。GitHub Pages 读取 `master` 根目录；当前绑定 `xiaosang.cc` 的 Cloudflare Worker 是 `xiaosang-portfolio`，推送到 `master` 后由 GitHub Actions（`.github/workflows/deploy-portfolio.yml`）自动发布。
 
-Actions 流程：检出本仓库，另检出吴军专题站 `holynova/wujun-study` 到 `data/mounted-projects.json` 固定的提交并构建，`stage-cloudflare.mjs` 把本仓库当前提交与吴军站构建组装成发布产物；Wrangler 的 build 步骤每次自动执行组装，并校验吴军站的提交、幻灯片与图片数量。发布前会更新远端主分支引用并拒绝使用落后的提交，防止覆盖其他项目的新版本。
+Actions 流程：检出本仓库，`stage-cloudflare.mjs` 把当前提交组装成发布产物；Wrangler 的 build 步骤每次自动执行组装。发布前会更新远端主分支引用并拒绝使用落后的提交，防止覆盖其他项目的新版本。
 
-本地手动发布仍可用同一命令（需本机有吴军站构建，或设 `WUJUN_STUDY_DIST` 指向构建目录）：
+本地手动发布仍可用同一命令（不再需要任何外部构建产物）：
 
 ```bash
-npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc
+npx --yes wrangler@4.148.0 deploy --config wrangler.jsonc
 ```
 
 macOS 的发布暂存使用 APFS 独立克隆，避免重复占用整份站点空间；暂存前后都要求受版本控制的文件与提交一致。其他平台仍从 Git archive 生成快照。
 
-吴军专题站挂载于 `/wujun-study/`，从 `WUJUN_STUDY_DIST` 或 `~/code/wujun-study/dist` 读取构建；必须与 `data/mounted-projects.json` 固定的源码提交一致，并包含完整幻灯片。
+吴军专题站已拆为独立 Worker `wujun-study`（仓库 `holynova/wujun-study`），在 `xiaosang.cc/wujun-study/` 提供服务，与作品集主站互不影响；吴军站内容更新时推送到吴军仓库，由 Actions 自动发布。
 
 图库已拆为独立 Worker `xiaosang-gallery`（仓库 `holynova/xiaosang-gallery`），在 `xiaosang.cc/xiaosang-gallery/` 提供服务，与作品集主站互不影响；图库内容更新时单独从图库仓库发布。
 
