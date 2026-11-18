@@ -1900,8 +1900,8 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "手机无限生存：四种首领、环绕植物、5 级质变；简洁战斗 HUD、原版风格墓碑庭院与三种地貌，附 180 场景验收和性能对照",
-            "en": "Endless mobile survival with four bosses, orbiting plants and Lv.5 transformations; minimal HUD, classic-style garden art and three biomes, with 180-scene QA and performance comparisons"
+            "zh": "爆芽工坊主题：戴夫营地、三张远征地图、植物配装与图鉴。触屏自动攻击、无限生存、首领与局外成长。",
+            "en": "Dave at the Sprout Forge, three expedition maps, plant loadouts and a field guide. Touch-driven endless survival with bosses and permanent upgrades."
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
