@@ -121766,7 +121766,7 @@
       "image": "atlas-0.png",
       "data": "atlas-0.json",
       "width": 2048,
-      "height": 4034,
+      "height": 4038,
       "lazy": false,
       "group": "core"
     },
@@ -177999,6 +177999,34 @@
       "originX": 24,
       "originY": 16
     },
+    "item/罗刹": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        688,
+        2,
+        36,
+        32
+      ],
+      "sourceIndex": 40,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 32,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "item/裁决之杖": {
       "sourcePath": "texture/item/0000042D.PNG",
       "sha1": "93e384ac930c463136993afc7e0de30346ea52cd",
@@ -179643,6 +179671,34 @@
       "originX": 24,
       "originY": 16
     },
+    "package/罗刹": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        968,
+        2,
+        36,
+        32
+      ],
+      "sourceIndex": 40,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 32,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "package/蛇眼戒指": {
       "sourcePath": "texture/item/010001FF.PNG",
       "sha1": "efebaf7d8b16a248a435096e6f8e6b5e4d1d1c2f",
@@ -180159,6 +180215,62 @@
       "originX": 15,
       "originY": 26
     },
+    "item/圣战宝甲（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        2184,
+        9,
+        36,
+        31
+      ],
+      "sourceIndex": 88,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 31,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
+    "package/圣战宝甲（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        2464,
+        9,
+        36,
+        31
+      ],
+      "sourceIndex": 88,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 31,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "dress-1-shadow/attack/3/4": {
       "sourcePath": "texture/hero/00C04964100001000A.PNG",
       "sha1": "0ec4b4f6db49f5237cb61905bf48762798ce99cd",
@@ -180315,6 +180427,62 @@
       "originX": 24,
       "originY": 16
     },
+    "item/天师长袍（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        2256,
+        10,
+        36,
+        30
+      ],
+      "sourceIndex": 90,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 30,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
+    "item/怒斩": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        1724,
+        10,
+        36,
+        30
+      ],
+      "sourceIndex": 70,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 30,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "item/斩马刀": {
       "sourcePath": "texture/item/00000427.PNG",
       "sha1": "cca37425a935caccfdc7c8d7446ff10b90fdcb6d",
@@ -180358,6 +180526,62 @@
       "dx": 0,
       "dy": 0,
       "width": 32,
+      "height": 30,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
+    "package/天师长袍（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        2536,
+        10,
+        36,
+        30
+      ],
+      "sourceIndex": 90,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 30,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
+    "package/怒斩": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        2004,
+        10,
+        36,
+        30
+      ],
+      "sourceIndex": 70,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
       "height": 30,
       "texture": "mir-0",
       "originX": 24,
@@ -180711,6 +180935,62 @@
       "originX": 19,
       "originY": 23
     },
+    "item/天尊道袍（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        2148,
+        11,
+        36,
+        29
+      ],
+      "sourceIndex": 87,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 29,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
+    "package/天尊道袍（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        2428,
+        11,
+        36,
+        29
+      ],
+      "sourceIndex": 87,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 29,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "dress-1-shadow/attack/6/1": {
       "sourcePath": "texture/hero/00C049C11000040008.PNG",
       "sha1": "0e9cccea2e5f1c06ff478ca0933f7e59eca2a748",
@@ -180865,6 +181145,34 @@
       "originX": 24,
       "originY": 16
     },
+    "item/天魔神甲（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        2076,
+        12,
+        36,
+        28
+      ],
+      "sourceIndex": 85,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
+      "height": 28,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "item/短剑": {
       "sourcePath": "texture/item/00000413.PNG",
       "sha1": "d9b922e49edb43456e5a7f8a35f2e5845bd4c789",
@@ -180896,6 +181204,34 @@
       "dx": 0,
       "dy": 0,
       "width": 28,
+      "height": 28,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
+    "package/天魔神甲（男）": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        2356,
+        12,
+        36,
+        28
+      ],
+      "sourceIndex": 85,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 36,
       "height": 28,
       "texture": "mir-0",
       "originX": 24,
@@ -182713,6 +183049,34 @@
       "originX": 28,
       "originY": 16
     },
+    "package/六角戒指": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        3368,
+        25,
+        20,
+        15
+      ],
+      "sourceIndex": 144,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 20,
+      "height": 15,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "item/金币（中）": {
       "sourcePath": "texture/item/00000079.PNG",
       "sha1": "285498eaf1d8a162c45b54bca1d7b9b002b3dc04",
@@ -183000,6 +183364,34 @@
       "texture": "mir-0",
       "originX": 9,
       "originY": 28
+    },
+    "package/玻璃戒指": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/Items.wil.png",
+      "sha1": "7c1a859465db43766cecb6b98d996e5b016a9b2b",
+      "sha256": "ea78dfead71532d46ebecac3001c2fd21fe510b697030ddd46364ad3101a8b15",
+      "sourceCrop": [
+        3352,
+        27,
+        16,
+        13
+      ],
+      "sourceIndex": 143,
+      "sourceLibrary": "Items.wil",
+      "sourceMetadata": {
+        "path": "res/item/Items.wil.json",
+        "sha1": "c08978553a957d56095451d5579e2b0e007c9009",
+        "sha256": "628239d0d7c4c3e761e5bba21880c34c7333b49d8c2314cad97795ddd4d2afdd"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 16,
+      "height": 13,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
     },
     "item/刺杀剑术": {
       "sourcePath": "texture/item/00000130.PNG",
@@ -183721,6 +184113,34 @@
       "originX": 34,
       "originY": 43
     },
+    "item/六角戒指": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        2812,
+        32,
+        12,
+        8
+      ],
+      "sourceIndex": 144,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 12,
+      "height": 8,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
+    },
     "item/白金项链": {
       "sourcePath": "texture/item/00000353.PNG",
       "sha1": "f39ef13c4ef3c441d6db9151d3856ba3f51ffc6b",
@@ -183960,6 +184380,34 @@
       "texture": "mir-0",
       "originX": 46,
       "originY": 43
+    },
+    "item/玻璃戒指": {
+      "sourceId": "classic-atlas",
+      "sourceRepository": "https://github.com/fluttergo/mir2-client-js",
+      "sourceRef": "c2419cb7803cafe5dea2d366c1948480e944cb09",
+      "sourcePath": "res/item/DnItems.wil.png",
+      "sha1": "77253390fa912856272075567636d2045916fe70",
+      "sha256": "bd2c764acd1bc1ffcf3a9ef487eb274e9ca224f0022e944873d64295e2e421eb",
+      "sourceCrop": [
+        2804,
+        33,
+        8,
+        7
+      ],
+      "sourceIndex": 143,
+      "sourceLibrary": "DnItems.wil",
+      "sourceMetadata": {
+        "path": "res/item/DnItems.wil.json",
+        "sha1": "90f46144e2e408a34fde21aa3eb2e101b3287ca3",
+        "sha256": "29f3f30b8a3f6f56203ad56e7df7c93bfe7bc8ef84c576fcdf1bd09569d8f09a"
+      },
+      "dx": 0,
+      "dy": 0,
+      "width": 8,
+      "height": 7,
+      "texture": "mir-0",
+      "originX": 24,
+      "originY": 16
     },
     "item/思贝儿手镯": {
       "sourcePath": "texture/item/000002BD.PNG",
