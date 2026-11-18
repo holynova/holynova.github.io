@@ -1900,8 +1900,8 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "爆芽工坊主题：戴夫营地、三张远征地图、植物配装与图鉴。触屏自动攻击、无限生存、首领与局外成长。",
-            "en": "Dave at the Sprout Forge, three expedition maps, plant loadouts and a field guide. Touch-driven endless survival with bosses and permanent upgrades."
+            "zh": "爆芽工坊重做版：按原设计等比重排戴夫营地、植物配装、战斗 HUD 与结算等 18 屏。触屏自动攻击、无限生存与局外成长。",
+            "en": "The Sprout Forge redesign follows the original proportions across 18 screens, including Dave’s camp, loadouts, the battle HUD and results. Touch-driven endless survival and permanent upgrades."
           },
           "url": "https://github.com/holynova/plant-survivors-ui",
           "homepage": "https://xiaosang.cc/plant-survivors-ui/",
