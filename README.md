@@ -1,24 +1,24 @@
+<p align="right"><a href="README.en.md">English</a></p>
+
 <p align="center">
   <img src="./assets/readme/hero.svg" width="100%" alt="小桑作品集 — xiaosang.cc 的源码仓库：首页以瀑布流卡片展示 130 个在展项目，项目列表由 data/repos.json 驱动">
 </p>
 
 <p align="center">
-  <a href="https://xiaosang.cc/">▶ 在线访问 Visit Live</a>
+  <a href="https://xiaosang.cc/">▶ 在线访问</a>
   ·
   <a href="https://github.com/holynova/holynova.github.io">GitHub 仓库</a>
 </p>
 
 小桑作品集是 holynova 个人作品集网站 [xiaosang.cc](https://xiaosang.cc/) 的源码仓库。首页以瀑布流卡片展示 130 个在展项目，分 9 大分类，支持搜索、分类筛选与三种排序；整个项目列表由 `data/repos.json` 驱动，改一个 JSON 文件就能更新全站。零构建，原生 HTML/CSS/JS。
 
-Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang.cc](https://xiaosang.cc/). The homepage shows 130 featured projects in a masonry grid across 9 categories, with search, category filters and three sort orders. The whole list is driven by `data/repos.json` — edit one JSON file to update the site. Zero build, plain HTML/CSS/JS.
-
-## 截图 / Screenshot
+## 截图
 
 <p align="center">
   <img src="./assets/readme/screenshot-home.png" width="100%" alt="作品集首页：深色主题，标题 small ideas, better products，搜索栏与分类筛选，下方是项目卡片墙，显示 12 / 130 个项目">
 </p>
 
-## 这是什么 / What It Is
+## 这是什么
 
 - **作品集站**：收录 holynova 的网页小项目——游戏、AI 工具、创意视觉、开发工具、生活效率等，每个项目一张卡片：截图、简介、Demo 与仓库链接。
 - **数据驱动**：`index.html` + `js/detail-app.js` 读取 `data/repos.json` 渲染卡片；卡片渐进加载，每批 12 张，滚动到底自动续载。
@@ -37,7 +37,7 @@ Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang
 | 开发工具 | 7 |
 | 游戏实验 | 3 |
 
-## 项目列表怎么维护 / Maintaining the List
+## 项目列表怎么维护
 
 `data/repos.json` 是唯一数据源，结构：
 
@@ -61,7 +61,7 @@ Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang
 
 **隐藏项目**：把该条的 `hidden` 设为 `true` 即可下架展示，数据保留。
 
-## 本地运行 / Run Locally
+## 本地运行
 
 零构建，起一个静态服务器即可：
 
@@ -72,7 +72,7 @@ python3 -m http.server 8080
 
 `server.py` 是作者本地的开发辅助服务（含点赞同步接口），日常预览不需要它。
 
-## 目录结构 / Structure
+## 目录结构
 
 ```
 index.html            首页（Detail 视觉版）
@@ -88,22 +88,13 @@ pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
                       早期内置小项目与演示（历史遗留）
 ```
 
-## 技术 / Tech
+## 技术
 
 - 零构建、零框架：原生 HTML/CSS/JS，可直接用静态服务器跑。
 - 数据驱动渲染 + 渐进加载（每批 12 张卡），卡片缩略图 `<picture>` 优先 webp。
 - 响应式，移动端优先；深浅双主题、中英双语。
 
-## English
-
-**Xiaosang Portfolio** is the source of holynova's personal portfolio at [xiaosang.cc](https://xiaosang.cc/) — 130 featured projects in a masonry grid across 9 categories, with search, filters and three sort orders.
-
-- **Data-driven**: `index.html` + `js/detail-app.js` render cards from `data/repos.json` (146 entries, 130 visible, 16 hidden). Cards load progressively, 12 per batch.
-- **Add a project**: append an entry to the right category in `data/repos.json` (title, description, repo URL, demo URL, screenshot), drop a thumbnail in `screenshots/<name>.png` (plus `.webp` if available), and bump `totalRepos` / `lastUpdated`. Set `hidden: true` to unlist a project without deleting it.
-- **Run it**: `python3 -m http.server 8080`, then open http://localhost:8080. No build step.
-- **Tech**: zero-build plain HTML/CSS/JS; responsive, mobile-first; dark/light themes, Chinese/English toggle; a minimal `classic.html` version is included.
-
-## 联系 / Contact
+## 联系
 
 - 邮箱：[holy_nova@126.com](mailto:holy_nova@126.com)
 - GitHub：[holynova](https://github.com/holynova)
