@@ -47,6 +47,14 @@
     "unarmed": "01010039.WAV",
     "hurt": "0103008A.WAV",
     "death": "01030090.WAV",
+    "step:ground:left": "01000001.WAV",
+    "step:ground:right": "01000002.WAV",
+    "step:stone:left": "01000005.WAV",
+    "step:stone:right": "01000006.WAV",
+    "step:grass:left": "01000009.WAV",
+    "step:grass:right": "0100000A.WAV",
+    "step:cave:left": "01000015.WAV",
+    "step:cave:right": "01000016.WAV",
     "monster:scarecrow:attack": "02000282.WAV",
     "monster:scarecrow:hurt": "02000284.WAV",
     "monster:scarecrow:death": "02000285.WAV",
@@ -74,9 +82,13 @@
     "monster:skeleton:attack": "02000202.WAV",
     "monster:skeleton:hurt": "02000204.WAV",
     "monster:skeleton:death": "02000205.WAV",
+    "monster:summonedSkeleton:death": "02000385.WAV",
     "monster:zombie:attack": "02000302.WAV",
     "monster:zombie:hurt": "02000304.WAV",
     "monster:zombie:death": "02000305.WAV",
+    "monster:beast:attack": "020005A2.WAV",
+    "monster:beast:hurt": "020005A4.WAV",
+    "monster:beast:death": "020005A5.WAV",
     "monster:skeletonWarrior:attack": "02000222.WAV",
     "monster:skeletonWarrior:hurt": "02000224.WAV",
     "monster:skeletonWarrior:death": "02000225.WAV",
@@ -165,6 +177,55 @@
       "sha1": "c38b7a612810bdd0312deda9f843e3cd8748d548",
       "sha256": "c67d3326c0190ed467acfbbb30f99b8b32d3b1f4328afbcfc1b2e97931fb9cf4",
       "bytes": 35328,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "01000002.WAV": {
+      "sourcePath": "sound/seff/01000002.WAV",
+      "sha1": "5cc125f0b2b0d9fb51b89edefa5fdb363b1741d7",
+      "sha256": "970d4cca497676d4fd8c1cadc2f4bc61d273d7f8f72b625bc43b9b3279d3571d",
+      "bytes": 38696,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "01000005.WAV": {
+      "sourcePath": "sound/seff/01000005.WAV",
+      "sha1": "f894c9320bc55d77179758fd095a944601281ab8",
+      "sha256": "6ce4999f406d302b60b7a8d63fc755f6850a23a30e3c7d5e06d80a456c6f5f56",
+      "bytes": 31844,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "01000006.WAV": {
+      "sourcePath": "sound/seff/01000006.WAV",
+      "sha1": "66871cb5397e1a71f85031605c1ea4f95e9afd35",
+      "sha256": "2a8f3a2bf22e2d58164316d019eafa876870255b3d27000c3323ffb78b6ef3e9",
+      "bytes": 33600,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "01000009.WAV": {
+      "sourcePath": "sound/seff/01000009.WAV",
+      "sha1": "6d201c20155d95638742dcdd7e345024f30ed894",
+      "sha256": "c5d24c330dc6913165cffb8be36ba5ff3735b5e4eb9d50e29a0a901a078e01b3",
+      "bytes": 51398,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "0100000A.WAV": {
+      "sourcePath": "sound/seff/0100000A.WAV",
+      "sha1": "201f4c959e99995dfc75594a1795c65c6659c0fe",
+      "sha256": "4a54ba2412fe0613ad86132ae3a9ce848c262991b79cd2179226316942c79c98",
+      "bytes": 50136,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "01000015.WAV": {
+      "sourcePath": "sound/seff/01000015.WAV",
+      "sha1": "777e0d9e326da72e21498829eed4037141d18474",
+      "sha256": "7421cdc3ba42b9cc3d1be45731a742b60d16fb0905698ddbb0418b47e21a317e",
+      "bytes": 58632,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "01000016.WAV": {
+      "sourcePath": "sound/seff/01000016.WAV",
+      "sha1": "70a50327860016798d42d03691e7315517bf1200",
+      "sha256": "252a4ef84f9efc9d8e620e23df12626cbf21a4128ce94d288c007c6379369ae3",
+      "bytes": 58824,
       "permissionStatus": "project_owner_authorized"
     },
     "01010034.WAV": {
@@ -559,6 +620,13 @@
       "bytes": 168120,
       "permissionStatus": "project_owner_authorized"
     },
+    "02000385.WAV": {
+      "sourcePath": "sound/seff/02000385.WAV",
+      "sha1": "eb19892d0d2c6d0b20bcb2965e848e5af535e26c",
+      "sha256": "932641890b2f7df98669a9d1a7aeb324c314dbf264854f66e23b6ac5e94bcb54",
+      "bytes": 226420,
+      "permissionStatus": "project_owner_authorized"
+    },
     "02000402.WAV": {
       "sourcePath": "sound/seff/02000402.WAV",
       "sha1": "b613e856ed4f0a9531cde14bc159b92bf6c7a447",
@@ -830,6 +898,27 @@
       "sha1": "a5b2bf9e52088a50d39995b54131c66d4169d532",
       "sha256": "19178a489acd95a2683a6e6b103c30b109a2c97a92037795691f73ebdfa2858a",
       "bytes": 281174,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "020005A2.WAV": {
+      "sourcePath": "sound/seff/020005A2.WAV",
+      "sha1": "29e6e19a43d9997e7f66131d73f40b8d4b672671",
+      "sha256": "a8b0e2be8707959d2ca96ff40c022c721622c007bf2ad84578f57a02a1fcbadc",
+      "bytes": 88492,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "020005A4.WAV": {
+      "sourcePath": "sound/seff/020005A4.WAV",
+      "sha1": "f4ffd1ee33b2ef3338f098cb5c07fa1461115441",
+      "sha256": "e4c06275f68be8578b055ee528af9271f9aa7b79fc8c1868a241a6606b06fdec",
+      "bytes": 101790,
+      "permissionStatus": "project_owner_authorized"
+    },
+    "020005A5.WAV": {
+      "sourcePath": "sound/seff/020005A5.WAV",
+      "sha1": "c5d060904aac9aff08c9aa48225fa8f2bba6d98f",
+      "sha256": "4a5cd5cde38162557611174de1009ce22afca4bc2c0708f098d1c5d4363a6202",
+      "bytes": 178144,
       "permissionStatus": "project_owner_authorized"
     },
     "02000652.WAV": {
@@ -1130,6 +1219,13 @@
   "missing": [
     "beastflame"
   ],
+  "footstepSoundReference": {
+    "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
+    "sourcePath": "client/src/soundeffectdb.cpp",
+    "sha256": "c531cfce810fe6f36eb1c59d56a53a35fb65b23646b7a5513e36c31dc721357c",
+    "soundFormula": "0x01000000 + source sound number; walk ground=1/2, stone=5/6, lawn=9/10, cave=21/22",
+    "note": "Chapter surface families are an adaptation, not per-cell acoustic materials or ambient loops."
+  },
   "coinSoundReference": {
     "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
     "sourcePath": "client/src/soundeffectdb.cpp",
@@ -1138,6 +1234,10 @@
   },
   "monsterSoundReference": {
     "references": {
+      "client/src/clienttaodog.cpp": {
+        "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
+        "sha256": "60e03093537f338e837061a8a33be3cfd07c961244e6f228ca4ed0aefdf24e30"
+      },
       "client/src/clientmonster.cpp": {
         "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
         "sha256": "0460baa44df7f2f9f078f01fa6738b1a8cb7f7a3af910da65db90131f95f9765"
@@ -1153,6 +1253,10 @@
       "common/src/monsterrecord.inc": {
         "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
         "sha256": "2664564923c0e3871b2711f828ec20ce209ed01bd9aa7fbf4a2e16335e89a795"
+      },
+      "client/src/soundeffectdb.cpp": {
+        "ref": "bb6a22287abcd9f248d2aba755074c254c68787a",
+        "sha256": "c531cfce810fe6f36eb1c59d56a53a35fb65b23646b7a5513e36c31dc721357c"
       }
     },
     "modelsPath": "tools/monster-models.json",
@@ -1178,7 +1282,15 @@
         "reason": "Pinned pack lacks this variant; explicitly reuse the same-family original voice."
       }
     },
-    "missing": []
+    "missing": [
+      "monster:summonedSkeleton:attack",
+      "monster:summonedSkeleton:hurt"
+    ],
+    "petKinds": [
+      "beast",
+      "summonedSkeleton"
+    ],
+    "petNote": "Friendly summons retain original monster attack/hitted/die voices. Beast attack accompanies its flame; this is not a separate magic flame WAV. Missing skeleton attack/hurt are not substituted."
   },
   "distribution": "PUBLIC_PROJECT_DISTRIBUTION",
   "authorizationEvidence": "docs/asset-authorization.json"
