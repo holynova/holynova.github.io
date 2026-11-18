@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-18T02:49:17.111581+00:00",
-  "scope": "All 101 catalog entries, including hidden entries",
-  "count": 101,
-  "captured": 99,
-  "retained": 2,
+  "generatedAt": "2026-11-18T06:48:14.164160+00:00",
+  "scope": "All 146 catalog entries, including hidden entries",
+  "count": 146,
+  "captured": 143,
+  "retained": 3,
   "customDomainIssues": [
     "equal_width",
     "haiku-flow",
@@ -14,276 +14,471 @@
   ],
   "results": [
     {
-      "name": "100-clocks",
+      "name": "x-bookmark-recall",
+      "categoryId": "chrome-extensions",
+      "homepage": "https://xiaosang.cc/x-bookmark-recall/",
+      "screenshot": "screenshots/x-bookmark-recall.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "X 书签回看"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "prompt_one_by_one",
+      "status": "captured",
+      "sourceURL": "https://gemini.google.com/?gemini_sidebar_open=1",
+      "entry": null,
+      "errors": [],
+      "screenshot": "screenshots/prompt_one_by_one.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "sampleData": "Actual extension sidebar on a blank capture host; no AI generation initiated.",
+      "metrics": {
+        "viewportHeight": 844,
+        "title": "Prompt One by One"
+      }
+    },
+    {
+      "name": "github-pages-detector-extension",
+      "status": "captured",
+      "sourceURL": "https://github.com/holynova/tank-tactics-3d",
+      "entry": null,
+      "errors": [],
+      "screenshot": "screenshots/github-pages-detector-extension.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "GitHub Pages Detector"
+      }
+    },
+    {
+      "name": "json-workbench-extension",
+      "status": "captured",
+      "sourceURL": "chrome-extension://ehmgagpnifljhpogolejflhcepeoejdi/workbench.html",
+      "entry": "workbench.html",
+      "errors": [],
+      "screenshot": "screenshots/json-workbench-extension.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "JSON Workbench"
+      }
+    },
+    {
+      "name": "scrape-to-markdown.chrome",
+      "status": "captured",
+      "sourceURL": "chrome-extension://nejbigmnpkcfpmbfbfcgoobhdloaihkl/sidepanel.html",
+      "entry": "sidepanel.html",
+      "errors": [],
+      "screenshot": "screenshots/scrape-to-markdown.chrome.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 844,
+        "title": "Intro - Scrape to Markdown"
+      }
+    },
+    {
+      "name": "youtube-channel-scraper-chrome",
+      "status": "captured",
+      "screenshot": "screenshots/youtube-channel-scraper-chrome.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 640,
+        "title": "YT Scraper"
+      }
+    },
+    {
+      "name": "collection_miner",
+      "status": "captured",
+      "sourceURL": "chrome-extension://onmhnmllclnnnpnifpicoabnnpjodiih/newtab.html",
+      "entry": "newtab.html",
+      "errors": [],
+      "screenshot": "screenshots/collection_miner.png",
+      "source": "latest remote extension in isolated Chromium",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "sampleData": "Six public demo bookmarks created in the isolated profile; no personal bookmarks accessed.",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "Privacy Policy — Collection Miner"
+      }
+    },
+    {
+      "name": "wujun-study",
       "categoryId": "content-only",
-      "homepage": "https://100-clocks.xiaosang.cc/",
-      "screenshot": "screenshots/100-clocks.png",
+      "homepage": "https://xiaosang.cc/wujun-study/",
+      "screenshot": "screenshots/wujun-study.png",
       "status": "captured",
-      "startedAt": "2026-11-18T02:45:58.000Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 380,
-        "visibleTextLength": 200,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "100 Clocks · 时间实验室"
+        "title": "财富的本质与自由现金流 · 吴军专题学习"
       },
       "consoleErrors": []
     },
     {
-      "name": "24points",
-      "categoryId": "games",
-      "homepage": "https://24points.xiaosang.cc/",
-      "screenshot": "screenshots/24points.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:34.734Z",
-      "metrics": {
-        "bodyTextLength": 169,
-        "visibleTextLength": 138,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "24点全解 — 四张牌算24的所有答案"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "50-seeds",
-      "categoryId": "creative-coding",
-      "homepage": "https://50-seeds.xiaosang.cc/",
-      "screenshot": "screenshots/50-seeds.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:17.576Z",
-      "metrics": {
-        "bodyTextLength": 481,
-        "visibleTextLength": 388,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1034,
-        "title": "50 Seeds · AI 作图视觉种子库"
-      },
-      "consoleErrors": [
-        "Failed to load resource: the server responded with a status of 404 ()"
-      ]
-    },
-    {
-      "name": "ai-agent-interview-report",
+      "name": "xiaosang-gallery",
       "categoryId": "content-only",
-      "homepage": "https://ai-agent-interview-report.xiaosang.cc/",
-      "screenshot": "screenshots/ai-agent-interview-report.png",
+      "homepage": "https://xiaosang.cc/xiaosang-gallery/",
+      "screenshot": "screenshots/xiaosang-gallery.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:00.320Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 7752,
-        "visibleTextLength": 7472,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 14111,
-        "title": "AI Agent 开发岗位面试题与要求报告"
+        "title": "xiaosang AI图集"
       },
       "consoleErrors": []
     },
     {
-      "name": "ai-gallery",
+      "name": "bernstein-ypc",
       "categoryId": "content-only",
-      "homepage": "https://ai-gallery.xiaosang.cc/",
-      "screenshot": "screenshots/ai-gallery.png",
+      "homepage": "https://xiaosang.cc/bernstein-ypc/",
+      "screenshot": "screenshots/bernstein-ypc.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:02.457Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 7615,
-        "visibleTextLength": 7535,
-        "visibleImageCount": 273,
-        "unloadedImageCount": 213,
         "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "ai-gallery"
+        "title": "伯恩斯坦《青少年音乐会》全 53 课"
       },
       "consoleErrors": []
     },
     {
-      "name": "anthropic-learn-assets",
+      "name": "x-prompt-library",
       "categoryId": "content-only",
-      "homepage": "https://anthropic-learn-assets.xiaosang.cc/",
-      "screenshot": "screenshots/anthropic-learn-assets.png",
+      "homepage": "https://xiaosang.cc/x-prompt-library/",
+      "screenshot": "screenshots/x-prompt-library.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:05.138Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 6708,
-        "visibleTextLength": 6569,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 6516,
-        "title": "Anthropic Learn - Color Palette & Icons"
+        "title": "Prompt 收藏册"
       },
       "consoleErrors": []
     },
     {
-      "name": "art-style-showcase",
+      "name": "concept-atlas",
       "categoryId": "content-only",
-      "homepage": "https://art-style-showcase.xiaosang.cc/",
-      "screenshot": "screenshots/art-style-showcase.png",
+      "homepage": "https://xiaosang.cc/concept-atlas/",
+      "screenshot": "screenshots/concept-atlas.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:02:46.865Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 2177,
-        "visibleTextLength": 2095,
-        "visibleImageCount": 43,
-        "unloadedImageCount": 20,
         "viewportHeight": 800,
-        "documentHeight": 7816,
-        "title": "Art Style Archive · 41 Art Styles Benchmark Matrix"
+        "title": "概念探险队：一图搞懂一个概念"
       },
       "consoleErrors": []
     },
     {
-      "name": "ask_all_ai",
-      "categoryId": "ai-tools",
-      "homepage": "https://ask-all-ai.xiaosang.cc/",
-      "screenshot": "screenshots/ask_all_ai.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:20.472Z",
-      "metrics": {
-        "bodyTextLength": 214,
-        "visibleTextLength": 480,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1141,
-        "title": "Ask All AI"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "auto-xiao-hong-shu",
-      "categoryId": "ai-tools",
-      "homepage": "https://auto-xiao-hong-shu.xiaosang.cc/",
-      "screenshot": "screenshots/auto-xiao-hong-shu.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:28.012Z",
-      "metrics": {
-        "bodyTextLength": 304,
-        "visibleTextLength": 294,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 880,
-        "title": "Auto XHS Publisher"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "bookshelf_manager",
-      "categoryId": "productivity",
-      "homepage": "https://bookshelf-manager.xiaosang.cc/",
-      "screenshot": "screenshots/bookshelf_manager.png",
-      "status": "captured",
-      "startedAt": "2026-11-18T02:45:33.000Z",
-      "metrics": {
-        "bodyTextLength": 378,
-        "visibleTextLength": 307,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "书香管家 - AI 智能拍照书架整理"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "brand-etymology",
+      "name": "world-unsolved-mysteries",
       "categoryId": "content-only",
-      "homepage": "https://brand-etymology.xiaosang.cc/",
-      "screenshot": "screenshots/brand-etymology.png",
+      "homepage": "https://holynova.github.io/world-unsolved-mysteries/",
+      "screenshot": "screenshots/world-unsolved-mysteries.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:12.582Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 94342,
-        "visibleTextLength": 85806,
-        "visibleImageCount": 80,
-        "unloadedImageCount": 52,
         "viewportHeight": 800,
-        "documentHeight": 67253,
-        "title": "名从何来｜英语品牌词源解析"
+        "title": "世界未解之谜 — 辟谣档案馆"
       },
       "consoleErrors": []
     },
     {
-      "name": "card-3d-depth-lab",
-      "categoryId": "creative-coding",
-      "homepage": "https://card-3d-depth-lab.xiaosang.cc/",
-      "screenshot": "screenshots/card-3d-depth-lab.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:04:59.244Z",
-      "metrics": {
-        "bodyTextLength": 509,
-        "visibleTextLength": 499,
-        "visibleImageCount": 6,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "3D Card Depth Lab"
-      },
-      "consoleErrors": [
-        "Failed to load resource: the server responded with a status of 404 ()"
-      ]
-    },
-    {
-      "name": "char_finder",
+      "name": "baking-variable-search",
       "categoryId": "content-only",
-      "homepage": "https://char-finder.xiaosang.cc/",
-      "screenshot": "screenshots/char_finder.png",
+      "homepage": "https://holynova.github.io/baking-variable-search/",
+      "screenshot": "screenshots/baking-variable-search.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:29.739Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 1386,
-        "visibleTextLength": 1355,
-        "visibleImageCount": 1,
-        "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "韵脚画布"
+        "title": "烘焙变量查询"
       },
       "consoleErrors": []
     },
     {
-      "name": "chrome-session-tui",
-      "categoryId": "dev-tools",
-      "homepage": "https://chrome-session-tui.xiaosang.cc/",
-      "screenshot": "screenshots/chrome-session-tui.png",
+      "name": "baking-encyclopedia",
+      "categoryId": "content-only",
+      "homepage": "https://holynova.github.io/baking-encyclopedia/",
+      "screenshot": "screenshots/baking-encyclopedia.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:06.577Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 487,
-        "visibleTextLength": 458,
-        "visibleImageCount": 1,
-        "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 1660,
-        "title": "Chrome Session TUI"
+        "title": "烘焙百科 — 用逻辑拆解每一个奇怪的名字"
       },
       "consoleErrors": []
     },
     {
-      "name": "city-public-facilities",
-      "categoryId": "productivity",
-      "homepage": "https://city-public-facilities.xiaosang.cc/",
-      "screenshot": "screenshots/city-public-facilities.png",
+      "name": "rock-in-pictures",
+      "categoryId": "content-only",
+      "homepage": "https://xiaosang.cc/rock-in-pictures/",
+      "screenshot": "screenshots/rock-in-pictures.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:16.759Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 419,
-        "visibleTextLength": 407,
+        "viewportHeight": 800,
+        "title": "听见画面 - 看照片猜乐队"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "podcast-atlas",
+      "categoryId": "content-only",
+      "homepage": "https://xiaosang.cc/podcast-atlas/",
+      "screenshot": "screenshots/podcast-atlas.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "把故事读成地图｜播客图解"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "up-series-70years",
+      "categoryId": "content-only",
+      "homepage": "https://xiaosang.cc/up-series-70years/",
+      "screenshot": "screenshots/up-series-70years.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "《人生七年》：14 个人，63 年人生"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "forty-classic-books",
+      "categoryId": "content-only",
+      "homepage": "https://xiaosang.cc/forty-classic-books/",
+      "screenshot": "screenshots/forty-classic-books.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "经典书导读｜10 大领域，921 本严选非虚构经典"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "dihao",
+      "categoryId": "content-only",
+      "homepage": "https://dihao.xiaosang.cc/",
+      "screenshot": "screenshots/dihao.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "帝号 · 把皇帝的称呼读明白"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "translucent-toy-guard",
+      "categoryId": "content-only",
+      "homepage": "https://translucent-toy-guard.xiaosang.cc/",
+      "screenshot": "screenshots/translucent-toy-guard.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "半透明玩具兵 · Translucent"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "shanhe-gallery",
+      "categoryId": "content-only",
+      "homepage": "https://shanhe-gallery.xiaosang.cc/",
+      "screenshot": "screenshots/shanhe-gallery.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "山河入版"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "world-landmarks",
+      "categoryId": "content-only",
+      "homepage": "https://world-landmarks.xiaosang.cc/",
+      "screenshot": "screenshots/world-landmarks.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "世界景点 · 纸上旅行"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "karpathy-deep-explainer-artifacts",
+      "categoryId": "content-only",
+      "homepage": "https://karpathy-deep-explainer-artifacts.xiaosang.cc/",
+      "screenshot": "screenshots/karpathy-deep-explainer-artifacts.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "Karpathy AI Artifacts - 认知跃迁与深度工件实验室"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "elden-ring-liveaction",
+      "categoryId": "content-only",
+      "homepage": "https://elden-ring-liveaction.xiaosang.cc/",
+      "screenshot": "screenshots/elden-ring-liveaction.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "游戏写实影像画册 — PHOTO-REAL VIRTUALITY"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "lore-hub",
+      "categoryId": "content-only",
+      "homepage": "https://lore.xiaosang.cc/",
+      "screenshot": "screenshots/lore-hub.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "游戏剧情解析 | 七部游戏的中文剧情视频"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "crossover-folk-gallery",
+      "categoryId": "content-only",
+      "homepage": "https://crossover-folk-gallery.xiaosang.cc/",
+      "screenshot": "screenshots/crossover-folk-gallery.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "王者荣耀联名英雄图集"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "folk-gallery",
+      "categoryId": "content-only",
+      "homepage": "https://folk-gallery.xiaosang.cc/",
+      "screenshot": "screenshots/folk-gallery.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "印画图鉴"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "builder-atlas",
+      "categoryId": "content-only",
+      "homepage": "https://builder-atlas.xiaosang.cc/",
+      "screenshot": "screenshots/builder-atlas.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "Builder Atlas · 研究工作台"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "game-narrative-archive",
+      "status": "captured",
+      "homepage": "https://game-narrative-archive.xiaosang.cc/",
+      "screenshot": "screenshots/game-narrative-archive.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "《巫师 3：狂猎》 · 阅读 · 游戏剧情档案馆",
+        "text": "GAME / ARCHIVE\n游戏剧情档案馆\n阅读\n目录\n附录\nTHE WITCHER 3\nCYBERPUNK 2077\nGTA 5\n阅读工具\n《巫师 3：狂猎》\n《赛博朋克 2077》\n《GTA 5》\n目录\n11 章\n从头开始阅读\n本体 · 旅程\n01\n战争已经先到了\n04\n一座城市如何把人变成标签\n06\n两个继承人：英雄不等于好国王\n07\n乌马：关键线索常常长得最不起眼\n08\n凯尔莫罕之战：失去维瑟米尔之后\n09\n希里的五个小选择\n本体 · 支线\n02\n血腥男爵：一个家庭并不是受害者之家\n03\n林中夫人：童话只是权力的化妆\n05\n生死攸关：逃亡不是浪漫的冒险\n扩展 · DLC\nD1\n欧吉尔德：救他，是奖励还是惩罚？\nD2\n童话王国的连环谋杀案\n附录\n人物关系\n选择与结局\n分析方法\nTHE WITCHER 3 / WILD HUNT\n一场关于\n如何放手的旅程\n\n从白果园的一口井，到希里（Ciri）最终要走向的世界。这里不急着解释所有支线，也不要求你先看懂所有关系，只从第一页开始，连续读下去。\n\n本体 + 2 个 DLC\n全剧透\n约 40 分钟\n序\n\n《巫师 3》的真正主线，不是杰洛特（Geralt）消灭了多少怪物，而是他如何在每一次没有干净答案的选择里，继续和别人一起生活。\n\n01\n序章 · 白果园\n战争已经先到了\n\n一场寻找叶奈法（Yennefer）的旅程，从一口井里的鬼魂开始。\n\n《巫师 3》开场时，有三个人必须先理解：杰洛特、叶奈法、希里。杰洛特是猎魔人；叶奈法是女术士，也是杰洛特长期纠缠、分分合合的爱人；希里虽然不是两人的亲生女儿，但在情感关系上，基本就是他们共同的女儿。\n\n希里还有一个极其特殊的身份：她拥有上古之血，能够穿越空间，甚至穿越不同的世界。因此狂猎一直在寻找她。不了解小说背景时，游戏很容易被玩成「我要找一个白头发女孩」；但更准确的说法是：一对关系复杂的父母正在寻找失踪的女儿，而整个世界最危险的一群人也在寻找她。\n\n游戏第一次出现希里，并不是现实。杰洛特梦见自己回到凯尔莫罕，年轻的希里正在接受猎魔人训练，叶奈法和维瑟米尔（Vesemir）也在屋里。一切几乎像一个家庭。然后狂猎出现。\n\n这段梦已经把整部游戏的情感核心说出来了。杰洛特最想得到的，未必是拯救世界；他只是想让这些人重新在一起。\n\n醒来以后，杰洛特正和老猎魔人维瑟米尔一起寻找叶奈法。他们来到白果园。尼弗迦德帝国刚刚入侵北方，这座村庄已经被占领。\n\n所以你第一次进入这个世界时看到的不是英雄、国王和魔法，而是尸体、战场、逃难者、吊死的人和占领军。游戏从一开始就在提醒你：「拯救世界」这件事，对普通人而言没有那么浪漫。\n\n为了得到叶奈法的消息，杰洛特答应替尼弗迦德驻军杀掉一只狮鹫。若只是赶任务，你会记得：找草药，调查尸体，杀狮鹫。可调查下去才知道，它的伴侣曾被士兵杀死，于是它开始攻击人类。\n\n怪物的行为背后通常有原因，但理解原因不等于可以放着它继续杀人。杰洛特仍然得拔剑。这就是猎魔人的典型困境：解释，不等于宽恕。\n\n白果园酒馆里，杰洛特还遇到一个奇怪的秃头男人：刚特·欧迪姆（Gaunter O'Dimm）。他热心地告诉杰洛特叶奈法的线索，然后消失。那时他看起来只是一个神秘路人；等到《石之心》，你才会发现，游戏开头几乎第一个遇到的人之一，竟是整个《巫师 3》宇宙里最恐怖的存在。\n\n杀掉狮鹫之后，杰洛特终于见到叶奈法。但她不是来叙旧的，而是直接把他带到维吉玛皇宫——皇帝恩希尔（Emhyr var Emreis）要见他。恩希尔是希里的亲生父亲，他告诉杰洛特：狂猎正在追捕希里，而她最后",
+        "canvas": 0,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "the-creation-variants",
+      "categoryId": "content-only",
+      "homepage": "https://the-creation-variants.xiaosang.cc/",
+      "screenshot": "screenshots/the-creation-variants.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 2037,
+        "visibleTextLength": 7436,
+        "visibleImageCount": 41,
+        "unloadedImageCount": 31,
+        "viewportHeight": 800,
+        "documentHeight": 7715,
+        "title": "创世纪 · 触碰的四十种可能 | The Genesis Touch - 40 Variations of Creation"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "system-design-algorithms-js",
+      "categoryId": "content-only",
+      "homepage": "https://system-design-algorithms-js.xiaosang.cc/",
+      "screenshot": "screenshots/system-design-algorithms-js.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 4167,
+        "visibleTextLength": 7081,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 987,
-        "title": "近邻 | 城市公共设施近邻检索"
+        "documentHeight": 2609,
+        "title": "系统设计经典算法全景图解与可交互实验室 | System Design Interview Algorithms"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "system-design-learning-lab",
+      "categoryId": "content-only",
+      "homepage": "https://holynova.github.io/system-design-learning-lab/",
+      "screenshot": "screenshots/system-design-learning-lab.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 2490,
+        "visibleTextLength": 2369,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 4888,
+        "title": "系统设计实验册 · 06—08"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "rubber-stamp-world-cities",
+      "categoryId": "content-only",
+      "homepage": "https://rubber-stamp-world-cities.xiaosang.cc/",
+      "screenshot": "screenshots/rubber-stamp-world-cities.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 290,
+        "visibleTextLength": 267,
+        "visibleImageCount": 12,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1242,
+        "title": "rubber world · 极简橡胶戳艺术印记"
       },
       "consoleErrors": []
     },
@@ -293,7 +488,7 @@
       "homepage": "https://city-stamp.xiaosang.cc/",
       "screenshot": "screenshots/city-stamp.jpg",
       "status": "captured",
-      "startedAt": "2026-10-02T03:02:40.489Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 1273,
         "visibleTextLength": 1048,
@@ -311,7 +506,7 @@
       "homepage": "https://citypop-shanghai-exploration.xiaosang.cc/",
       "screenshot": "screenshots/citypop-shanghai-exploration.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:02:43.013Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 3775,
         "visibleTextLength": 6488,
@@ -324,41 +519,12 @@
       "consoleErrors": []
     },
     {
-      "name": "collection_miner",
-      "status": "captured",
-      "sourceURL": "chrome-extension://onmhnmllclnnnpnifpicoabnnpjodiih/newtab.html",
-      "entry": "newtab.html",
-      "errors": [],
-      "screenshot": "screenshots/collection_miner.png",
-      "source": "latest remote extension in isolated Chromium",
-      "startedAt": "2026-10-02T03:16:00.773404+00:00",
-      "sampleData": "Six public demo bookmarks created in the isolated profile; no personal bookmarks accessed."
-    },
-    {
-      "name": "cut_and_remix",
-      "categoryId": "creative-coding",
-      "homepage": "https://cut-and-remix.xiaosang.cc/",
-      "screenshot": "screenshots/cut_and_remix.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:04:52.862Z",
-      "metrics": {
-        "bodyTextLength": 516,
-        "visibleTextLength": 354,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "织影 WeaveArt - 数字化照片编织艺术工坊"
-      },
-      "consoleErrors": []
-    },
-    {
       "name": "daily-necessities-library",
       "categoryId": "content-only",
       "homepage": "https://daily-necessities-library.xiaosang.cc/",
       "screenshot": "screenshots/daily-necessities-library.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:02:43.312Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 994,
         "visibleTextLength": 909,
@@ -371,129 +537,56 @@
       "consoleErrors": []
     },
     {
-      "name": "director-motorcycle-cinema",
+      "name": "art-style-showcase",
       "categoryId": "content-only",
-      "homepage": "https://director-motorcycle-cinema.xiaosang.cc/",
-      "screenshot": "screenshots/director-motorcycle-cinema.png",
+      "homepage": "https://art-style-showcase.xiaosang.cc/",
+      "screenshot": "screenshots/art-style-showcase.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:03:52.506Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 8963,
-        "visibleTextLength": 8757,
-        "visibleImageCount": 101,
-        "unloadedImageCount": 79,
+        "bodyTextLength": 2177,
+        "visibleTextLength": 2095,
+        "visibleImageCount": 43,
+        "unloadedImageCount": 20,
         "viewportHeight": 800,
-        "documentHeight": 16791,
-        "title": "Director Motorcycle Cinema"
+        "documentHeight": 7816,
+        "title": "Art Style Archive · 41 Art Styles Benchmark Matrix"
       },
       "consoleErrors": []
     },
     {
-      "name": "douban-quark-clawer",
-      "categoryId": "productivity",
-      "homepage": "https://douban-quark-clawer.xiaosang.cc/",
-      "screenshot": "screenshots/douban-quark-clawer.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:26.570Z",
-      "metrics": {
-        "bodyTextLength": 239,
-        "visibleTextLength": 184,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "豆瓣夸克资源自动搜刮器"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "emoji_life",
-      "categoryId": "games",
-      "homepage": "https://emoji-life.xiaosang.cc/",
-      "screenshot": "screenshots/emoji_life.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:45.938Z",
-      "metrics": {
-        "bodyTextLength": 785,
-        "visibleTextLength": 773,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1603,
-        "title": "Emoji 人生轨迹"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "equal_width",
-      "categoryId": "dev-tools",
-      "homepage": "https://equal-width.xiaosang.cc/",
-      "captureUrl": "https://holynova.github.io/equal_width/",
-      "screenshot": "screenshots/equal_width.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:13:02.872Z",
-      "metrics": {
-        "bodyTextLength": 10,
-        "visibleTextLength": 9,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1063,
-        "title": "equal-width"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "flash-card",
-      "categoryId": "chinese-tools",
-      "homepage": "https://flash-card.xiaosang.cc/",
-      "screenshot": "screenshots/flash-card.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:28.587Z",
-      "metrics": {
-        "bodyTextLength": 167,
-        "visibleTextLength": 110,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 820,
-        "title": "苔卡 Moss Card"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "flash-words",
-      "categoryId": "chinese-tools",
-      "homepage": "https://flash-words.xiaosang.cc/",
-      "screenshot": "screenshots/flash-words.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:35.741Z",
-      "metrics": {
-        "bodyTextLength": 838,
-        "visibleTextLength": 659,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1964,
-        "title": "Flash Words · 动态文字生成器"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "game-rating-lookup",
+      "name": "shanghai-through-walls",
       "categoryId": "content-only",
-      "homepage": "https://game-rating-lookup.xiaosang.cc/",
-      "screenshot": "screenshots/game-rating-lookup.png",
+      "homepage": "https://shanghai-through-walls.xiaosang.cc/",
+      "screenshot": "screenshots/shanghai-through-walls.jpg",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:48.059Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 109,
-        "visibleTextLength": 105,
-        "visibleImageCount": 0,
+        "bodyTextLength": 2832,
+        "visibleTextLength": 2542,
+        "visibleImageCount": 10,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "游戏评分查询"
+        "documentHeight": 7142,
+        "title": "穿墙透壁，上海建筑剖透图册"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "print-atlas",
+      "categoryId": "content-only",
+      "homepage": "https://print-atlas.xiaosang.cc/",
+      "screenshot": "screenshots/print-atlas.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 6181,
+        "visibleTextLength": 5898,
+        "visibleImageCount": 26,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 10249,
+        "title": "压印之间 · 版画与报刊印刷图鉴"
       },
       "consoleErrors": []
     },
@@ -503,7 +596,7 @@
       "homepage": "https://game-style-transfer-atlas.xiaosang.cc/",
       "screenshot": "screenshots/game-style-transfer-atlas.jpg",
       "status": "captured",
-      "startedAt": "2026-10-02T03:03:14.214Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 3401,
         "visibleTextLength": 3179,
@@ -516,114 +609,12 @@
       "consoleErrors": []
     },
     {
-      "name": "github-pages-detector-extension",
-      "status": "captured",
-      "sourceURL": "https://github.com/holynova/tank-tactics-3d",
-      "entry": null,
-      "errors": [],
-      "screenshot": "screenshots/github-pages-detector-extension.png",
-      "source": "latest remote extension in isolated Chromium",
-      "startedAt": "2026-10-02T03:16:00.773399+00:00"
-    },
-    {
-      "name": "gushi_namer",
-      "categoryId": "chinese-tools",
-      "homepage": "https://gushi-namer.xiaosang.cc/",
-      "screenshot": "screenshots/gushi_namer.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:41.903Z",
-      "metrics": {
-        "bodyTextLength": 475,
-        "visibleTextLength": 470,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 906,
-        "title": "古诗文起名 - 翻阅经典，遇见好名字"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "haiku-flow",
-      "categoryId": "chinese-tools",
-      "homepage": "https://haiku-flow.xiaosang.cc/",
-      "captureUrl": "https://holynova.github.io/haiku-flow/",
-      "screenshot": "screenshots/haiku-flow.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:13:02.873Z",
-      "metrics": {
-        "bodyTextLength": 131,
-        "visibleTextLength": 124,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "Haiku Flow"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "hand_fireworks",
-      "categoryId": "creative-coding",
-      "homepage": "https://hand-fireworks.xiaosang.cc/",
-      "screenshot": "screenshots/hand_fireworks.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:08.243Z",
-      "metrics": {
-        "bodyTextLength": 48,
-        "visibleTextLength": 81,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "3D 手势粒子文字特效 - 2026特别版"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "head_tail_poem",
-      "categoryId": "chinese-tools",
-      "homepage": "https://head-tail-poem.xiaosang.cc/",
-      "captureUrl": "https://holynova.github.io/head_tail_poem/",
-      "screenshot": "screenshots/head_tail_poem.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:13:02.873Z",
-      "metrics": {
-        "bodyTextLength": 330,
-        "visibleTextLength": 721,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 944,
-        "title": "藏头诗生成器"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "head_tail_poem_generator",
-      "categoryId": "chinese-tools",
-      "homepage": "https://head-tail-poem-generator.xiaosang.cc/",
-      "screenshot": "screenshots/head_tail_poem_generator.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:30.289Z",
-      "metrics": {
-        "bodyTextLength": 39,
-        "visibleTextLength": 39,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "React App"
-      },
-      "consoleErrors": []
-    },
-    {
       "name": "health-book",
       "categoryId": "content-only",
       "homepage": "https://health-book.xiaosang.cc/",
       "screenshot": "screenshots/health-book.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:03:19.013Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 3201,
         "visibleTextLength": 2558,
@@ -636,20 +627,254 @@
       "consoleErrors": []
     },
     {
-      "name": "holiday-visualizer",
+      "name": "poem-formula",
       "categoryId": "content-only",
-      "homepage": "https://holiday-visualizer.xiaosang.cc/",
-      "screenshot": "screenshots/holiday-visualizer.png",
+      "homepage": "https://poem-formula.xiaosang.cc/",
+      "screenshot": "screenshots/poem-formula.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:42.368Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 4841,
-        "visibleTextLength": 4841,
+        "bodyTextLength": 8632,
+        "visibleTextLength": 6232,
+        "visibleImageCount": 6,
+        "unloadedImageCount": 4,
+        "viewportHeight": 800,
+        "documentHeight": 18352,
+        "title": "《意象的帝国》写诗方法论：以“错配”为核心的可执行提炼"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "web-motion-showcase",
+      "categoryId": "content-only",
+      "homepage": "https://web-motion-showcase.xiaosang.cc/",
+      "screenshot": "screenshots/web-motion-showcase.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 1365,
+        "visibleTextLength": 4828,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 7068,
-        "title": "节假日可视化统计 - 小桑作品集"
+        "documentHeight": 8767,
+        "title": "网页 UI 动效灵感库 | Web Motion Showcase - 60+ 经典与现代网页动效与 AI 提示词"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "my-design-system",
+      "categoryId": "content-only",
+      "homepage": "https://my-design-system.xiaosang.cc/",
+      "screenshot": "screenshots/my-design-system.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 1886,
+        "visibleTextLength": 1883,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 2620,
+        "title": "设计系统目录 · Design Systems Hub"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "text_book_pics",
+      "categoryId": "content-only",
+      "homepage": "https://text-book-pics.xiaosang.cc/",
+      "screenshot": "screenshots/text_book_pics.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 8567,
+        "visibleTextLength": 8242,
+        "visibleImageCount": 198,
+        "unloadedImageCount": 29,
+        "viewportHeight": 800,
+        "documentHeight": 24130,
+        "title": "课本插图照片风格转换试样"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "director-motorcycle-cinema",
+      "categoryId": "content-only",
+      "homepage": "https://director-motorcycle-cinema.xiaosang.cc/",
+      "screenshot": "screenshots/director-motorcycle-cinema.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 8963,
+        "visibleTextLength": 8757,
+        "visibleImageCount": 101,
+        "unloadedImageCount": 79,
+        "viewportHeight": 800,
+        "documentHeight": 16791,
+        "title": "Director Motorcycle Cinema"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "100-clocks",
+      "categoryId": "content-only",
+      "homepage": "https://100-clocks.xiaosang.cc/",
+      "screenshot": "screenshots/100-clocks.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 380,
+        "visibleTextLength": 200,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "100 Clocks · 时间实验室"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "ai-agent-interview-report",
+      "categoryId": "content-only",
+      "homepage": "https://ai-agent-interview-report.xiaosang.cc/",
+      "screenshot": "screenshots/ai-agent-interview-report.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 7752,
+        "visibleTextLength": 7472,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 14111,
+        "title": "AI Agent 开发岗位面试题与要求报告"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "ai-gallery",
+      "categoryId": "content-only",
+      "homepage": "https://ai-gallery.xiaosang.cc/",
+      "screenshot": "screenshots/ai-gallery.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 7615,
+        "visibleTextLength": 7535,
+        "visibleImageCount": 273,
+        "unloadedImageCount": 213,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "AI Gallery · AI 图片画廊"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "anthropic-learn-assets",
+      "categoryId": "content-only",
+      "homepage": "https://anthropic-learn-assets.xiaosang.cc/",
+      "screenshot": "screenshots/anthropic-learn-assets.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 6708,
+        "visibleTextLength": 6569,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 6516,
+        "title": "Anthropic Learn - Color Palette & Icons"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "brand-etymology",
+      "categoryId": "content-only",
+      "homepage": "https://brand-etymology.xiaosang.cc/",
+      "screenshot": "screenshots/brand-etymology.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 94342,
+        "visibleTextLength": 85806,
+        "visibleImageCount": 80,
+        "unloadedImageCount": 52,
+        "viewportHeight": 800,
+        "documentHeight": 67253,
+        "title": "名从何来｜英语品牌词源解析"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "char_finder",
+      "categoryId": "content-only",
+      "homepage": "https://char-finder.xiaosang.cc/",
+      "screenshot": "screenshots/char_finder.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 1386,
+        "visibleTextLength": 1355,
+        "visibleImageCount": 1,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 800,
+        "title": "韵脚画布"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "js-go-compare",
+      "categoryId": "content-only",
+      "homepage": "https://js-go-compare.xiaosang.cc/",
+      "screenshot": "screenshots/js-go-compare.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 1889,
+        "visibleTextLength": 1325,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1091,
+        "title": "JS vs Go 对比学习手册"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "ui-compare-privacy-policy",
+      "categoryId": "content-only",
+      "homepage": "https://ui-compare-privacy-policy.xiaosang.cc/",
+      "screenshot": "screenshots/ui-compare-privacy-policy.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 2338,
+        "visibleTextLength": 1619,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 2185,
+        "title": "UI Compare Privacy Policy / 隐私政策"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "industry-book-recommender",
+      "categoryId": "content-only",
+      "homepage": "https://industry-book-recommender.xiaosang.cc/",
+      "screenshot": "screenshots/industry-book-recommender.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 21133,
+        "visibleTextLength": 20189,
+        "visibleImageCount": 169,
+        "unloadedImageCount": 134,
+        "viewportHeight": 800,
+        "documentHeight": 17427,
+        "title": "各行各业读什么 · 行业入读书架"
       },
       "consoleErrors": []
     },
@@ -658,60 +883,437 @@
       "status": "captured",
       "sourceURL": "https://github.com/holynova/holynova",
       "source": "public profile README",
-      "screenshot": "screenshots/holynova.png"
+      "screenshot": "screenshots/holynova.png",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "GitHub - holynova/holynova: Personal GitHub profile showcasing open-source projects · GitHub"
+      }
     },
     {
-      "name": "holynova.github.io",
-      "categoryId": "productivity",
-      "homepage": "https://xiaosang.cc/",
-      "screenshot": "screenshots/holynova.github.io.png",
+      "name": "wenwu-checkin",
+      "categoryId": "content-only",
+      "homepage": "https://wenwu-checkin.xiaosang.cc/",
+      "screenshot": "screenshots/wenwu-checkin.png",
       "status": "captured",
-      "startedAt": "2026-11-18T02:47:03.000Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 1658,
-        "visibleTextLength": 1630,
-        "visibleImageCount": 14,
-        "unloadedImageCount": 0,
+        "bodyTextLength": 16736,
+        "visibleTextLength": 12521,
+        "visibleImageCount": 195,
+        "unloadedImageCount": 160,
         "viewportHeight": 800,
-        "documentHeight": 2745,
-        "title": "holynova · Where Craft Lives | 作品集 Detail 视觉版"
+        "documentHeight": 17164,
+        "title": "文物打卡 · 195 件禁止出境展览文物图鉴"
       },
       "consoleErrors": []
     },
     {
-      "name": "hotpot-timer",
-      "categoryId": "productivity",
-      "homepage": "https://hotpot-timer.xiaosang.cc/",
-      "captureUrl": "https://holynova.github.io/hotpot-timer/",
-      "screenshot": "screenshots/hotpot-timer.png",
+      "name": "holiday-visualizer",
+      "categoryId": "content-only",
+      "homepage": "https://holiday-visualizer.xiaosang.cc/",
+      "screenshot": "screenshots/holiday-visualizer.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:13:02.873Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 115,
-        "visibleTextLength": 208,
+        "bodyTextLength": 4841,
+        "visibleTextLength": 4841,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 7068,
+        "title": "2026 年节假日历 · 中国大陆放假与调休"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "game-rating-lookup",
+      "categoryId": "content-only",
+      "homepage": "https://game-rating-lookup.xiaosang.cc/",
+      "screenshot": "screenshots/game-rating-lookup.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 109,
+        "visibleTextLength": 105,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 800,
-        "title": "TRA / Cinematic Countdown"
+        "title": "游戏评分查询"
       },
       "consoleErrors": []
     },
     {
-      "name": "image-gallery-template",
-      "categoryId": "dev-tools",
-      "homepage": "https://image-gallery-template.xiaosang.cc/",
-      "screenshot": "screenshots/image-gallery-template.png",
+      "name": "pingye",
+      "categoryId": "creative-coding",
+      "homepage": "https://xiaosang.cc/pingye/",
+      "screenshot": "screenshots/pingye.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:05:47.953Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 108,
-        "visibleTextLength": 97,
-        "visibleImageCount": 2,
+        "viewportHeight": 800,
+        "title": "拼页 · 个人海报"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "photo-breakout",
+      "categoryId": "creative-coding",
+      "homepage": "https://xiaosang.cc/photo-breakout/",
+      "screenshot": "screenshots/photo-breakout.webp",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "破框 · Photo Breakout"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "origami-studio",
+      "categoryId": "creative-coding",
+      "homepage": "https://xiaosang.cc/origami-studio/",
+      "screenshot": "screenshots/origami-studio.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "纸间 — 折纸实验室"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "fourier-atlas",
+      "categoryId": "creative-coding",
+      "homepage": "https://xiaosang.cc/fourier-atlas/",
+      "screenshot": "screenshots/fourier-atlas.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "傅里叶地图实验室 — 用旋转的圆描绘世界"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "jade-cards-lab",
+      "categoryId": "creative-coding",
+      "homepage": "https://xiaosang.cc/jade-cards-lab/",
+      "screenshot": "screenshots/jade-cards-lab.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "玉石浮雕 108 珍藏"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "doraemon-house-3d",
+      "categoryId": "creative-coding",
+      "homepage": "https://xiaosang.cc/doraemon-house-3d/",
+      "screenshot": "screenshots/doraemon-house-3d.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "哆啦A梦的家 · 野比家 3D 图解"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "time-slider-clock",
+      "categoryId": "creative-coding",
+      "homepage": "https://xiaosang.cc/time-slider-clock/",
+      "screenshot": "screenshots/time-slider-clock.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "整位滑轨 · 100 Clocks"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "photo_align",
+      "categoryId": "creative-coding",
+      "homepage": "https://photo-align.xiaosang.cc/",
+      "screenshot": "screenshots/photo_align.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 128,
+        "visibleTextLength": 70,
+        "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 800,
-        "title": "光影画廊"
+        "title": "人像时间线"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "cut_and_remix",
+      "categoryId": "creative-coding",
+      "homepage": "https://cut-and-remix.xiaosang.cc/",
+      "screenshot": "screenshots/cut_and_remix.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 516,
+        "visibleTextLength": 354,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "织影 WeaveArt - 数字化照片编织艺术工坊"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "win98-screen-saver",
+      "categoryId": "creative-coding",
+      "homepage": "https://win98-screen-saver.xiaosang.cc/",
+      "screenshot": "screenshots/win98-screen-saver.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 306,
+        "visibleTextLength": 213,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "Windows 98 屏幕保护程序"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "kaleidoscope-studio",
+      "categoryId": "creative-coding",
+      "homepage": "https://kaleidoscope-studio.xiaosang.cc/",
+      "screenshot": "screenshots/kaleidoscope-studio.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 383,
+        "visibleTextLength": 334,
+        "visibleImageCount": 4,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "镜花万象 · 电子万花筒"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "card-3d-depth-lab",
+      "categoryId": "creative-coding",
+      "homepage": "https://card-3d-depth-lab.xiaosang.cc/",
+      "screenshot": "screenshots/card-3d-depth-lab.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 509,
+        "visibleTextLength": 499,
+        "visibleImageCount": 6,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "3D Card Depth Lab"
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ]
+    },
+    {
+      "name": "spinning-drawer",
+      "categoryId": "creative-coding",
+      "homepage": "https://spinning-drawer.xiaosang.cc/",
+      "screenshot": "screenshots/spinning-drawer.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 346,
+        "visibleTextLength": 346,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "Spinning Drawer"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "hand_fireworks",
+      "categoryId": "creative-coding",
+      "homepage": "https://hand-fireworks.xiaosang.cc/",
+      "screenshot": "screenshots/hand_fireworks.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 48,
+        "visibleTextLength": 81,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 800,
+        "title": "3D 手势粒子文字特效 - 2026特别版"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "raytracing-demo",
+      "categoryId": "creative-coding",
+      "homepage": "https://raytracing-demo.xiaosang.cc/",
+      "screenshot": "screenshots/raytracing-demo.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 658,
+        "visibleTextLength": 616,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "3D Ray Tracing Demo"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "string_alchemy",
+      "categoryId": "creative-coding",
+      "homepage": "https://string-alchemy.xiaosang.cc/",
+      "screenshot": "screenshots/string_alchemy.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 132,
+        "visibleTextLength": 77,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 823,
+        "title": "弹幕附魔:为文字增加化学元素"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "50-seeds",
+      "categoryId": "creative-coding",
+      "homepage": "https://50-seeds.xiaosang.cc/",
+      "screenshot": "screenshots/50-seeds.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 481,
+        "visibleTextLength": 388,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1034,
+        "title": "50 Seeds · AI 作图视觉种子库"
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ]
+    },
+    {
+      "name": "music_pulse",
+      "categoryId": "creative-coding",
+      "homepage": "https://music-pulse.xiaosang.cc/",
+      "screenshot": "screenshots/music_pulse.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 652,
+        "visibleTextLength": 585,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1004,
+        "title": "Music Pulse"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "sort_animation",
+      "categoryId": "creative-coding",
+      "homepage": "https://sort-animation.xiaosang.cc/",
+      "screenshot": "screenshots/sort_animation.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 78,
+        "visibleTextLength": 14,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "排序算法可视化"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "token-theater",
+      "categoryId": "ai-tools",
+      "homepage": "https://xiaosang.cc/token-theater/",
+      "screenshot": "screenshots/token-theater.webp",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "Token Theater — 速度，眼见为实。"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "hospital-ocr",
+      "categoryId": "ai-tools",
+      "homepage": "https://hospital-ocr.xiaosang.cc/",
+      "screenshot": "screenshots/hospital-ocr.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "医疗单据 OCR 工作台"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "ask_all_ai",
+      "categoryId": "ai-tools",
+      "homepage": "https://ask-all-ai.xiaosang.cc/",
+      "screenshot": "screenshots/ask_all_ai.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 214,
+        "visibleTextLength": 480,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1141,
+        "title": "Ask All AI"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "video_prompt_generator",
+      "categoryId": "ai-tools",
+      "homepage": "https://video-prompt-generator.xiaosang.cc/",
+      "screenshot": "screenshots/video_prompt_generator.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 1577,
+        "visibleTextLength": 1605,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 2841,
+        "title": "视频提示词生成器"
       },
       "consoleErrors": []
     },
@@ -721,7 +1323,7 @@
       "homepage": "https://image-local-llm.xiaosang.cc/",
       "screenshot": "screenshots/image_local_llm.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:05:22.777Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 282,
         "visibleTextLength": 231,
@@ -740,311 +1342,12 @@
       ]
     },
     {
-      "name": "industry-book-recommender",
-      "categoryId": "content-only",
-      "homepage": "https://industry-book-recommender.xiaosang.cc/",
-      "screenshot": "screenshots/industry-book-recommender.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:04:40.007Z",
-      "metrics": {
-        "bodyTextLength": 21133,
-        "visibleTextLength": 20189,
-        "visibleImageCount": 169,
-        "unloadedImageCount": 134,
-        "viewportHeight": 800,
-        "documentHeight": 17427,
-        "title": "各行各业读什么 · 行业入读书架"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "js-go-compare",
-      "categoryId": "content-only",
-      "homepage": "https://js-go-compare.xiaosang.cc/",
-      "screenshot": "screenshots/js-go-compare.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:04:34.559Z",
-      "metrics": {
-        "bodyTextLength": 1889,
-        "visibleTextLength": 1325,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1091,
-        "title": "JS vs Go 对比学习手册"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "json-workbench-extension",
-      "status": "captured",
-      "sourceURL": "chrome-extension://ehmgagpnifljhpogolejflhcepeoejdi/workbench.html",
-      "entry": "workbench.html",
-      "errors": [],
-      "screenshot": "screenshots/json-workbench-extension.png",
-      "source": "latest remote extension in isolated Chromium",
-      "startedAt": "2026-10-02T03:16:00.773406+00:00"
-    },
-    {
-      "name": "json_to_ts",
-      "categoryId": "dev-tools",
-      "homepage": "https://json-to-ts.xiaosang.cc/",
-      "screenshot": "screenshots/json_to_ts.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:58.541Z",
-      "metrics": {
-        "bodyTextLength": 2547,
-        "visibleTextLength": 2018,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1721,
-        "title": "小桑作品集"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "kaleidoscope-studio",
-      "categoryId": "creative-coding",
-      "homepage": "https://kaleidoscope-studio.xiaosang.cc/",
-      "screenshot": "screenshots/kaleidoscope-studio.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:04:59.010Z",
-      "metrics": {
-        "bodyTextLength": 383,
-        "visibleTextLength": 334,
-        "visibleImageCount": 4,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "镜花万象 · 电子万花筒"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "keyboard_sentence",
-      "categoryId": "games",
-      "homepage": "https://keyboard-sentence.xiaosang.cc/",
-      "screenshot": "screenshots/keyboard_sentence.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:35.869Z",
-      "metrics": {
-        "bodyTextLength": 493,
-        "visibleTextLength": 437,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "iOS 软键盘自适应收缩与打字演示"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "life_bar_chart",
-      "categoryId": "productivity",
-      "homepage": "https://life-bar-chart.xiaosang.cc/",
-      "screenshot": "screenshots/life_bar_chart.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:27.939Z",
-      "metrics": {
-        "bodyTextLength": 24,
-        "visibleTextLength": 24,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1553,
-        "title": "React App"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "mercator-country-compare",
-      "categoryId": "games",
-      "homepage": "https://mercator-country-compare.xiaosang.cc/",
-      "screenshot": "screenshots/mercator-country-compare.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:41.631Z",
-      "metrics": {
-        "bodyTextLength": 264,
-        "visibleTextLength": 210,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "mercator-country-compare"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "mobile-sensor-playground",
-      "categoryId": "games",
-      "homepage": "https://mobile-sensor-playground.xiaosang.cc/",
-      "screenshot": "screenshots/mobile-sensor-playground.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:39.567Z",
-      "metrics": {
-        "bodyTextLength": 972,
-        "visibleTextLength": 933,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "WebGL Sensor Instrument Panel"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "mouse_scroll_heath_check",
-      "categoryId": "productivity",
-      "homepage": "https://mouse-scroll-heath-check.xiaosang.cc/",
-      "screenshot": "screenshots/mouse_scroll_heath_check.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:13.407Z",
-      "metrics": {
-        "bodyTextLength": 3216,
-        "visibleTextLength": 3080,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "鼠标滚轮故障检测器 | Mouse Wheel Malfunction Detector"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "multi-screen-view",
-      "categoryId": "dev-tools",
-      "homepage": "https://multi-screen-view.xiaosang.cc/",
-      "screenshot": "screenshots/multi-screen-view.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:04.234Z",
-      "metrics": {
-        "bodyTextLength": 731,
-        "visibleTextLength": 603,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1510,
-        "title": "Viewport Relay"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "music_pulse",
-      "categoryId": "creative-coding",
-      "homepage": "https://music-pulse.xiaosang.cc/",
-      "screenshot": "screenshots/music_pulse.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:17.681Z",
-      "metrics": {
-        "bodyTextLength": 652,
-        "visibleTextLength": 585,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1004,
-        "title": "Music Pulse"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "my-design-system",
-      "categoryId": "content-only",
-      "homepage": "https://my-design-system.xiaosang.cc/",
-      "screenshot": "screenshots/my-design-system.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:03:46.709Z",
-      "metrics": {
-        "bodyTextLength": 1886,
-        "visibleTextLength": 1883,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 2620,
-        "title": "设计系统目录 · Design Systems Hub"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "notebooklm_one_by_one",
-      "categoryId": "ai-tools",
-      "homepage": "https://notebooklm-one-by-one.xiaosang.cc/",
-      "screenshot": "screenshots/notebooklm_one_by_one.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:27.036Z",
-      "metrics": {
-        "bodyTextLength": 370,
-        "visibleTextLength": 360,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "NotebookLM One by One"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "offer_calculator",
-      "categoryId": "productivity",
-      "homepage": "https://offer-calculator.xiaosang.cc/",
-      "screenshot": "screenshots/offer_calculator.png",
-      "status": "retained",
-      "startedAt": "2026-10-02T03:06:31.025Z",
-      "metrics": {
-        "bodyTextLength": 101,
-        "visibleTextLength": 61,
-        "visibleImageCount": 1,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "Offer Calculator"
-      },
-      "consoleErrors": [],
-      "error": "Default Vite/React starter in custom domain, GitHub Pages and latest GitHub source; previous screenshot retained."
-    },
-    {
-      "name": "one-punch",
-      "categoryId": "dev-tools",
-      "homepage": "https://one-punch.xiaosang.cc/",
-      "screenshot": "screenshots/one-punch.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:54.020Z",
-      "metrics": {
-        "bodyTextLength": 1170,
-        "visibleTextLength": 936,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1693,
-        "title": "Repo2Script | GitHub to setup.sh"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "one_second_movie",
-      "categoryId": "games",
-      "homepage": "https://one-second-movie.xiaosang.cc/",
-      "screenshot": "screenshots/one_second_movie.png",
-      "status": "captured",
-      "startedAt": "2026-11-18T02:46:23.000Z",
-      "metrics": {
-        "bodyTextLength": 260,
-        "visibleTextLength": 259,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 803,
-        "title": "一眼看电影 · 影片视觉地图"
-      },
-      "consoleErrors": []
-    },
-    {
       "name": "opencli-pipeline",
       "categoryId": "ai-tools",
       "homepage": "https://opencli-pipeline.xiaosang.cc/",
       "screenshot": "screenshots/opencli-pipeline.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:05:25.519Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 328,
         "visibleTextLength": 318,
@@ -1057,12 +1360,505 @@
       "consoleErrors": []
     },
     {
+      "name": "notebooklm_one_by_one",
+      "categoryId": "ai-tools",
+      "homepage": "https://notebooklm-one-by-one.xiaosang.cc/",
+      "screenshot": "screenshots/notebooklm_one_by_one.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 370,
+        "visibleTextLength": 360,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "NotebookLM One by One"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "auto-xiao-hong-shu",
+      "categoryId": "ai-tools",
+      "homepage": "https://auto-xiao-hong-shu.xiaosang.cc/",
+      "screenshot": "screenshots/auto-xiao-hong-shu.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 304,
+        "visibleTextLength": 294,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 880,
+        "title": "Auto XHS Publisher"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "flash-card",
+      "categoryId": "chinese-tools",
+      "homepage": "https://flash-card.xiaosang.cc/",
+      "screenshot": "screenshots/flash-card.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 167,
+        "visibleTextLength": 110,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 820,
+        "title": "苔卡 Moss Card"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "head_tail_poem_generator",
+      "categoryId": "chinese-tools",
+      "homepage": "https://head-tail-poem-generator.xiaosang.cc/",
+      "screenshot": "screenshots/head_tail_poem_generator.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 39,
+        "visibleTextLength": 39,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 800,
+        "title": "React App"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "haiku-flow",
+      "categoryId": "chinese-tools",
+      "homepage": "https://haiku-flow.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/haiku-flow/",
+      "screenshot": "screenshots/haiku-flow.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 131,
+        "visibleTextLength": 124,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 800,
+        "title": "Haiku Flow"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "head_tail_poem",
+      "categoryId": "chinese-tools",
+      "homepage": "https://head-tail-poem.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/head_tail_poem/",
+      "screenshot": "screenshots/head_tail_poem.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 330,
+        "visibleTextLength": 721,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 944,
+        "title": "藏头诗生成器"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "poetry-flow",
+      "categoryId": "chinese-tools",
+      "homepage": "https://poetry-flow.xiaosang.cc/",
+      "screenshot": "screenshots/poetry-flow.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 229,
+        "visibleTextLength": 216,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 800,
+        "title": "Poetry Flow | 诗歌流"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "flash-words",
+      "categoryId": "chinese-tools",
+      "homepage": "https://flash-words.xiaosang.cc/",
+      "screenshot": "screenshots/flash-words.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 838,
+        "visibleTextLength": 659,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1964,
+        "title": "Flash Words · 动态文字生成器"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "xieyin",
+      "categoryId": "chinese-tools",
+      "homepage": "https://xieyin.xiaosang.cc/",
+      "screenshot": "screenshots/xieyin.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 4427,
+        "visibleTextLength": 3024,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 5543,
+        "title": "古籍谐音梗追踪器"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "gushi_namer",
+      "categoryId": "chinese-tools",
+      "homepage": "https://gushi-namer.xiaosang.cc/",
+      "screenshot": "screenshots/gushi_namer.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 475,
+        "visibleTextLength": 470,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 906,
+        "title": "古诗文起名 - 翻阅经典，遇见好名字"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "image-gallery-template",
+      "categoryId": "dev-tools",
+      "homepage": "https://image-gallery-template.xiaosang.cc/",
+      "screenshot": "screenshots/image-gallery-template.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 108,
+        "visibleTextLength": 97,
+        "visibleImageCount": 2,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "光影画廊"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "tiny-icons",
+      "categoryId": "dev-tools",
+      "homepage": "https://tiny-icons.xiaosang.cc/",
+      "screenshot": "screenshots/tiny-icons.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 876,
+        "visibleTextLength": 761,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1395,
+        "title": "Tiny Icons | Small by design"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "equal_width",
+      "categoryId": "dev-tools",
+      "homepage": "https://equal-width.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/equal_width/",
+      "screenshot": "screenshots/equal_width.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 10,
+        "visibleTextLength": 9,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 1063,
+        "title": "equal-width"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "one-punch",
+      "categoryId": "dev-tools",
+      "homepage": "https://one-punch.xiaosang.cc/",
+      "screenshot": "screenshots/one-punch.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 1170,
+        "visibleTextLength": 936,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1693,
+        "title": "Repo2Script | GitHub to setup.sh"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "json_to_ts",
+      "categoryId": "dev-tools",
+      "homepage": "https://json-to-ts.xiaosang.cc/",
+      "screenshot": "screenshots/json_to_ts.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 2547,
+        "visibleTextLength": 2018,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1721,
+        "title": "小桑作品集"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "multi-screen-view",
+      "categoryId": "dev-tools",
+      "homepage": "https://multi-screen-view.xiaosang.cc/",
+      "screenshot": "screenshots/multi-screen-view.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 731,
+        "visibleTextLength": 603,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1510,
+        "title": "Viewport Relay"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "chrome-session-tui",
+      "categoryId": "dev-tools",
+      "homepage": "https://chrome-session-tui.xiaosang.cc/",
+      "screenshot": "screenshots/chrome-session-tui.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 487,
+        "visibleTextLength": 458,
+        "visibleImageCount": 1,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 1660,
+        "title": "Chrome Session TUI"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "photo-atlas",
+      "categoryId": "dev-tools",
+      "homepage": "https://xiaosang.cc/photo-atlas/",
+      "screenshot": "screenshots/photo-atlas.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "城市足迹 · Photo Atlas"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "shanghai-metro-night",
+      "categoryId": "productivity",
+      "homepage": "https://xiaosang.cc/shanghai-metro-night/",
+      "screenshot": "screenshots/shanghai-metro-night.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "末班之后｜上海地铁时间地图"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "hotspot-ledger",
+      "categoryId": "productivity",
+      "homepage": "https://xiaosang.cc/hotspot-ledger/",
+      "screenshot": "screenshots/hotspot-ledger.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "热点账本 — 看清每一份热点流量"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "psy-talks",
+      "categoryId": "productivity",
+      "homepage": "https://psy-talks.xiaosang.cc/",
+      "screenshot": "screenshots/psy-talks.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 24803,
+        "visibleTextLength": 23401,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 36131,
+        "title": "助人对话训练手册｜阅读版练习"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "xiaoyuzhou-transcript-downloader",
+      "categoryId": "productivity",
+      "homepage": "https://xiaoyuzhou-transcript-downloader.xiaosang.cc/",
+      "screenshot": "screenshots/xiaoyuzhou-transcript-downloader.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 967,
+        "visibleTextLength": 930,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 2046,
+        "title": "小宇宙 Transcript 下载器"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "bookshelf_manager",
+      "categoryId": "productivity",
+      "homepage": "https://bookshelf-manager.xiaosang.cc/",
+      "screenshot": "screenshots/bookshelf_manager.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 378,
+        "visibleTextLength": 307,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "书香管家 - AI 智能拍照书架整理"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "mouse_scroll_heath_check",
+      "categoryId": "productivity",
+      "homepage": "https://mouse-scroll-heath-check.xiaosang.cc/",
+      "screenshot": "screenshots/mouse_scroll_heath_check.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 3216,
+        "visibleTextLength": 3080,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "鼠标滚轮故障检测器 | Mouse Wheel Malfunction Detector"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "shanghai-public-facilities",
+      "categoryId": "productivity",
+      "homepage": "https://shanghai-public-facilities.xiaosang.cc/",
+      "screenshot": "screenshots/shanghai-public-facilities.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 419,
+        "visibleTextLength": 407,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 987,
+        "title": "近邻 | 城市公共设施近邻检索"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "city-public-facilities",
+      "categoryId": "productivity",
+      "homepage": "https://city-public-facilities.xiaosang.cc/",
+      "screenshot": "screenshots/city-public-facilities.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 419,
+        "visibleTextLength": 407,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 987,
+        "title": "近邻 | 城市公共设施近邻检索"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "holynova.github.io",
+      "categoryId": "productivity",
+      "homepage": "https://xiaosang.cc/",
+      "screenshot": "screenshots/holynova.github.io.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 1658,
+        "visibleTextLength": 1630,
+        "visibleImageCount": 14,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 2745,
+        "title": "holynova · Where Craft Lives | 作品集 Detail 视觉版"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "hotpot-timer",
+      "categoryId": "productivity",
+      "homepage": "https://hotpot-timer.xiaosang.cc/",
+      "captureUrl": "https://holynova.github.io/hotpot-timer/",
+      "screenshot": "screenshots/hotpot-timer.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 115,
+        "visibleTextLength": 208,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "TRA / Cinematic Countdown"
+      },
+      "consoleErrors": []
+    },
+    {
       "name": "pdf2wechat",
       "categoryId": "productivity",
       "homepage": "https://pdf2wechat.xiaosang.cc/",
       "screenshot": "screenshots/pdf2wechat.png",
       "status": "captured",
-      "startedAt": "2026-11-18T02:45:38.000Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 91,
         "visibleTextLength": 78,
@@ -1075,56 +1871,38 @@
       "consoleErrors": []
     },
     {
-      "name": "photo_align",
-      "categoryId": "creative-coding",
-      "homepage": "https://photo-align.xiaosang.cc/",
-      "screenshot": "screenshots/photo_align.png",
+      "name": "douban-quark-clawer",
+      "categoryId": "productivity",
+      "homepage": "https://douban-quark-clawer.xiaosang.cc/",
+      "screenshot": "screenshots/douban-quark-clawer.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:48.889Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 128,
-        "visibleTextLength": 70,
+        "bodyTextLength": 239,
+        "visibleTextLength": 184,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 800,
-        "title": "人像时间线"
+        "title": "豆瓣夸克资源自动搜刮器"
       },
       "consoleErrors": []
     },
     {
-      "name": "poem-formula",
-      "categoryId": "content-only",
-      "homepage": "https://poem-formula.xiaosang.cc/",
-      "screenshot": "screenshots/poem-formula.png",
+      "name": "life_bar_chart",
+      "categoryId": "productivity",
+      "homepage": "https://life-bar-chart.xiaosang.cc/",
+      "screenshot": "screenshots/life_bar_chart.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:03:24.208Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 8632,
-        "visibleTextLength": 6232,
-        "visibleImageCount": 6,
-        "unloadedImageCount": 4,
-        "viewportHeight": 800,
-        "documentHeight": 18352,
-        "title": "《意象的帝国》写诗方法论：以“错配”为核心的可执行提炼"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "poetry-flow",
-      "categoryId": "chinese-tools",
-      "homepage": "https://poetry-flow.xiaosang.cc/",
-      "screenshot": "screenshots/poetry-flow.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:35.387Z",
-      "metrics": {
-        "bodyTextLength": 229,
-        "visibleTextLength": 216,
+        "bodyTextLength": 24,
+        "visibleTextLength": 24,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "Poetry Flow | 诗歌流"
+        "documentHeight": 1553,
+        "title": "React App"
       },
       "consoleErrors": []
     },
@@ -1148,221 +1926,297 @@
       "error": "Default Vite/React starter in custom domain, GitHub Pages and latest GitHub source; previous screenshot retained."
     },
     {
-      "name": "print-atlas",
-      "categoryId": "content-only",
-      "homepage": "https://print-atlas.xiaosang.cc/",
-      "screenshot": "screenshots/print-atlas.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:03:14.215Z",
-      "metrics": {
-        "bodyTextLength": 6181,
-        "visibleTextLength": 5898,
-        "visibleImageCount": 26,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 10249,
-        "title": "压印之间 · 版画与报刊印刷图鉴"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "prompt_one_by_one",
-      "status": "captured",
-      "sourceURL": "https://gemini.google.com/?gemini_sidebar_open=1",
-      "entry": null,
-      "errors": [],
-      "screenshot": "screenshots/prompt_one_by_one.png",
-      "source": "latest remote extension in isolated Chromium",
-      "startedAt": "2026-10-02T03:16:00.773277+00:00",
-      "sampleData": "Actual extension sidebar on a blank capture host; no AI generation initiated."
-    },
-    {
-      "name": "psy-talks",
+      "name": "offer_calculator",
       "categoryId": "productivity",
-      "homepage": "https://psy-talks.xiaosang.cc/",
-      "screenshot": "screenshots/psy-talks.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:07.322Z",
+      "homepage": "https://offer-calculator.xiaosang.cc/",
+      "screenshot": "screenshots/offer_calculator.png",
+      "status": "retained",
+      "startedAt": "2026-10-02T03:06:31.025Z",
       "metrics": {
-        "bodyTextLength": 24803,
-        "visibleTextLength": 23401,
-        "visibleImageCount": 0,
+        "bodyTextLength": 101,
+        "visibleTextLength": 61,
+        "visibleImageCount": 1,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 36131,
-        "title": "助人对话训练手册｜阅读版练习"
+        "documentHeight": 800,
+        "title": "Offer Calculator"
+      },
+      "consoleErrors": [],
+      "error": "Default Vite/React starter in custom domain, GitHub Pages and latest GitHub source; previous screenshot retained."
+    },
+    {
+      "name": "plant-survivors-ui",
+      "categoryId": "games",
+      "homepage": "https://xiaosang.cc/plant-survivors-ui/",
+      "screenshot": "screenshots/plant-survivors-ui.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "植物幸存者 · 爆芽工坊"
       },
       "consoleErrors": []
     },
     {
-      "name": "raytracing-demo",
-      "categoryId": "creative-coding",
-      "homepage": "https://raytracing-demo.xiaosang.cc/",
-      "screenshot": "screenshots/raytracing-demo.png",
+      "name": "woool-survivor-game",
+      "categoryId": "games",
+      "homepage": "https://xiaosang.cc/woool-survivor-game/",
+      "screenshot": "screenshots/woool-survivor-game.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:05:10.746Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 658,
-        "visibleTextLength": 616,
+        "viewportHeight": 800,
+        "title": "传奇世界幸存者 — 传世无双"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "mafa-survivor",
+      "categoryId": "games",
+      "homepage": "https://xiaosang.cc/mafa-survivor/?survivor",
+      "screenshot": "screenshots/mafa-survivor.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "玛法幸存者 · 比奇荒野"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "24-solver",
+      "categoryId": "games",
+      "homepage": "https://xiaosang.cc/24-solver/",
+      "screenshot": "screenshots/24-solver.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "凑出 24 · 纸牌求解器"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "rogue-snake",
+      "categoryId": "games",
+      "homepage": "https://rogue-snake.xiaosang.cc/",
+      "screenshot": "screenshots/rogue-snake.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "衔尾者 · OUROBOROS"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "tank-roguelike",
+      "categoryId": "games",
+      "homepage": "https://tank-roguelike.xiaosang.cc/",
+      "screenshot": "screenshots/tank-roguelike.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "铁甲回廊 · Iron Corridor"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "fallwell",
+      "categoryId": "games",
+      "homepage": "https://fallwell.xiaosang.cc/",
+      "screenshot": "screenshots/fallwell.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 844,
+        "title": "坠井者 · FALLWELL"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "rift-survivors",
+      "categoryId": "games",
+      "homepage": "https://rift-survivors.xiaosang.cc/",
+      "screenshot": "screenshots/rift-survivors.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "裂隙幸存者 · Rift Survivors"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "mafa-survivor-game",
+      "categoryId": "games",
+      "homepage": "https://xiaosang.cc/mafa-survivor-game/",
+      "screenshot": "screenshots/mafa-survivor-game.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "viewportHeight": 800,
+        "title": "玛法幸存者 · 比奇荒野"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "battle-city-roguelike",
+      "status": "captured",
+      "homepage": "https://xiaosang.cc/demos/battle-city-roguelike/",
+      "screenshot": "screenshots/battle-city-roguelike.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "钢铁誓约：重装肉鸽坦克 | Battle City: Rogue Bastion",
+        "text": "BASTION TACTICAL HUD\n🎯 自动瞄准: 开 (T)\n🔊 BGM: 开",
+        "canvas": 1,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "iron-corridor",
+      "status": "captured",
+      "homepage": "https://iron-corridor.xiaosang.cc/",
+      "screenshot": "screenshots/iron-corridor.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "铁甲回廊 · Iron Corridor",
+        "text": "GitHub\nPlay Online",
+        "canvas": 1,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "tank-tactics-3d",
+      "status": "captured",
+      "homepage": "https://tank-tactics-3d.xiaosang.cc/",
+      "screenshot": "screenshots/tank-tactics-3d.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "二打一 · 3D 战术沙盘",
+        "text": "二打一\n月背攻城线\n红方\n4\n寒光炮队行动\n蓝方\n4\n拖动旋转 · 滚轮缩放\n\n双方正在争夺先手…\n\n蓝方取得先手\n\n点选一个己方单位",
+        "canvas": 1,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "snake-rogue",
+      "status": "captured",
+      "homepage": "https://snake-rogue.xiaosang.cc/",
+      "screenshot": "screenshots/snake-rogue.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "蛇渊 · Snake Rogue",
+        "text": "GitHub · holynova/snake-rogue",
+        "canvas": 1,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "ouroboros-rogue-snake",
+      "status": "captured",
+      "homepage": "https://ouroboros-rogue-snake.xiaosang.cc/",
+      "screenshot": "screenshots/ouroboros-rogue-snake.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "衔尾者 · OUROBOROS",
+        "text": "HP\n6/6\n长度\n5\n撕咬\n1\nDEPTH 1\n腐锈回廊\n残敌 5\n➤\n9\n精华\n0\n等级\n1\n分数\n205\nSPACE · 突进\nESC 暂停 · TAB 图鉴\nOUROBOROS\n腐锈回廊",
+        "canvas": 1,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "neon-survivors",
+      "status": "captured",
+      "homepage": "https://neon-survivors.xiaosang.cc/",
+      "screenshot": "screenshots/neon-survivors.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "NEON SURVIVORS — 霓虹幸存者",
+        "text": "100 / 100\nLv 1\nXP 0/8\n猎人\nVanguard\nE\n过载冲锋\n3 秒内移速 +80%、攻速 +60%\nWAVE 1\n0:54\n战斗中\n击杀\n0\n金币\n0\n伤害\n0\n场上敌人\n3\n⚔\n1\nWAVE 1\n猎人\nGitHub ↗",
+        "canvas": 1,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "web-survivor-game-agy",
+      "status": "captured",
+      "homepage": "https://xiaosang.cc/demos/web-survivor-game-agy/",
+      "screenshot": "screenshots/web-survivor-game-agy.png",
+      "source": "verified current demo",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "title": "山海夜市 - Web Survivor",
+        "text": "",
+        "canvas": 1,
+        "unloadedImages": 0,
+        "viewportHeight": 800
+      }
+    },
+    {
+      "name": "one_second_movie",
+      "categoryId": "games",
+      "homepage": "https://one-second-movie.xiaosang.cc/",
+      "screenshot": "screenshots/one_second_movie.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 260,
+        "visibleTextLength": 259,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 803,
+        "title": "一眼看电影 · 影片视觉地图"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "24points",
+      "categoryId": "games",
+      "homepage": "https://24points.xiaosang.cc/",
+      "screenshot": "screenshots/24points.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 169,
+        "visibleTextLength": 138,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 800,
-        "title": "3D Ray Tracing Demo"
+        "title": "24点全解 — 四张牌算24的所有答案"
       },
       "consoleErrors": []
     },
     {
-      "name": "rubber-stamp-world-cities",
-      "categoryId": "content-only",
-      "homepage": "https://rubber-stamp-world-cities.xiaosang.cc/",
-      "screenshot": "screenshots/rubber-stamp-world-cities.png",
+      "name": "keyboard_sentence",
+      "categoryId": "games",
+      "homepage": "https://keyboard-sentence.xiaosang.cc/",
+      "screenshot": "screenshots/keyboard_sentence.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:02:36.210Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 290,
-        "visibleTextLength": 267,
-        "visibleImageCount": 12,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 1242,
-        "title": "rubber world · 极简橡胶戳艺术印记"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "scrape-to-markdown.chrome",
-      "status": "captured",
-      "sourceURL": "chrome-extension://nejbigmnpkcfpmbfbfcgoobhdloaihkl/sidepanel.html",
-      "entry": "sidepanel.html",
-      "errors": [],
-      "screenshot": "screenshots/scrape-to-markdown.chrome.png",
-      "source": "latest remote extension in isolated Chromium",
-      "startedAt": "2026-10-02T03:16:00.773407+00:00"
-    },
-    {
-      "name": "shanghai-public-facilities",
-      "categoryId": "productivity",
-      "homepage": "https://shanghai-public-facilities.xiaosang.cc/",
-      "screenshot": "screenshots/shanghai-public-facilities.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:14.457Z",
-      "metrics": {
-        "bodyTextLength": 419,
-        "visibleTextLength": 407,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 987,
-        "title": "近邻 | 城市公共设施近邻检索"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "shanghai-through-walls",
-      "categoryId": "content-only",
-      "homepage": "https://shanghai-through-walls.xiaosang.cc/",
-      "screenshot": "screenshots/shanghai-through-walls.jpg",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:03:05.805Z",
-      "metrics": {
-        "bodyTextLength": 2832,
-        "visibleTextLength": 2542,
-        "visibleImageCount": 10,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 7142,
-        "title": "穿墙透壁，上海建筑剖透图册"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "sort_animation",
-      "categoryId": "creative-coding",
-      "homepage": "https://sort-animation.xiaosang.cc/",
-      "screenshot": "screenshots/sort_animation.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:19.501Z",
-      "metrics": {
-        "bodyTextLength": 78,
-        "visibleTextLength": 14,
+        "bodyTextLength": 493,
+        "visibleTextLength": 437,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 800,
-        "title": "排序算法可视化"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "spinning-drawer",
-      "categoryId": "creative-coding",
-      "homepage": "https://spinning-drawer.xiaosang.cc/",
-      "screenshot": "screenshots/spinning-drawer.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:05.543Z",
-      "metrics": {
-        "bodyTextLength": 346,
-        "visibleTextLength": 346,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "Spinning Drawer"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "string_alchemy",
-      "categoryId": "creative-coding",
-      "homepage": "https://string-alchemy.xiaosang.cc/",
-      "screenshot": "screenshots/string_alchemy.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:14.542Z",
-      "metrics": {
-        "bodyTextLength": 132,
-        "visibleTextLength": 77,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 823,
-        "title": "弹幕附魔:为文字增加化学元素"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "system-design-algorithms-js",
-      "categoryId": "content-only",
-      "homepage": "https://system-design-algorithms-js.xiaosang.cc/",
-      "screenshot": "screenshots/system-design-algorithms-js.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:02:36.215Z",
-      "metrics": {
-        "bodyTextLength": 4167,
-        "visibleTextLength": 7081,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 2609,
-        "title": "系统设计经典算法全景图解与可交互实验室 | System Design Interview Algorithms"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "system-design-learning-lab",
-      "categoryId": "content-only",
-      "homepage": "https://holynova.github.io/system-design-learning-lab/",
-      "screenshot": "screenshots/system-design-learning-lab.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:02:36.215Z",
-      "metrics": {
-        "bodyTextLength": 2490,
-        "visibleTextLength": 2369,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 4888,
-        "title": "系统设计实验册 · 06—08"
+        "title": "iOS 软键盘自适应收缩与打字演示"
       },
       "consoleErrors": []
     },
@@ -1372,7 +2226,7 @@
       "homepage": "https://tank-tactics-game.xiaosang.cc/",
       "screenshot": "screenshots/tank-tactics-game.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:37.406Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 112,
         "visibleTextLength": 76,
@@ -1380,9 +2234,46 @@
         "unloadedImageCount": 0,
         "viewportHeight": 800,
         "documentHeight": 800,
-        "title": "Tank Tactics"
+        "title": "坦克战术 · 赤铁与苍蓝"
       },
       "consoleErrors": []
+    },
+    {
+      "name": "mobile-sensor-playground",
+      "categoryId": "games",
+      "homepage": "https://mobile-sensor-playground.xiaosang.cc/",
+      "screenshot": "screenshots/mobile-sensor-playground.png",
+      "status": "captured",
+      "startedAt": "2026-11-18T06:48:14.000Z",
+      "metrics": {
+        "bodyTextLength": 972,
+        "visibleTextLength": 933,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 844,
+        "documentHeight": 800,
+        "title": "WebGL Sensor Instrument Panel"
+      },
+      "consoleErrors": []
+    },
+    {
+      "name": "mercator-country-compare",
+      "categoryId": "games",
+      "homepage": "https://mercator-country-compare.xiaosang.cc/",
+      "screenshot": "screenshots/mercator-country-compare.png",
+      "status": "retained",
+      "startedAt": "2026-10-02T03:06:41.631Z",
+      "metrics": {
+        "bodyTextLength": 264,
+        "visibleTextLength": 210,
+        "visibleImageCount": 0,
+        "unloadedImageCount": 0,
+        "viewportHeight": 800,
+        "documentHeight": 800,
+        "title": "mercator-country-compare"
+      },
+      "consoleErrors": [],
+      "error": "Recapture lacks base map tiles (offline staging cannot load CARTO vector tiles); previous screenshot with full base map retained."
     },
     {
       "name": "texas-holdem-hand-probability",
@@ -1390,7 +2281,7 @@
       "homepage": "https://texas-holdem-hand-probability.xiaosang.cc/",
       "screenshot": "screenshots/texas-holdem-hand-probability.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:06:41.794Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "bodyTextLength": 216,
         "visibleTextLength": 206,
@@ -1403,275 +2294,35 @@
       "consoleErrors": []
     },
     {
-      "name": "text_book_pics",
-      "categoryId": "content-only",
-      "homepage": "https://text-book-pics.xiaosang.cc/",
-      "screenshot": "screenshots/text_book_pics.png",
+      "name": "emoji_life",
+      "categoryId": "games",
+      "homepage": "https://emoji-life.xiaosang.cc/",
+      "screenshot": "screenshots/emoji_life.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:03:50.523Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 8567,
-        "visibleTextLength": 8242,
-        "visibleImageCount": 198,
-        "unloadedImageCount": 29,
-        "viewportHeight": 800,
-        "documentHeight": 24130,
-        "title": "课本插图照片风格转换试样"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "the-creation-variants",
-      "categoryId": "content-only",
-      "homepage": "https://the-creation-variants.xiaosang.cc/",
-      "screenshot": "screenshots/the-creation-variants.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:02:36.215Z",
-      "metrics": {
-        "bodyTextLength": 2037,
-        "visibleTextLength": 7436,
-        "visibleImageCount": 41,
-        "unloadedImageCount": 31,
-        "viewportHeight": 800,
-        "documentHeight": 7715,
-        "title": "创世纪 · 触碰的四十种可能 | The Genesis Touch - 40 Variations of Creation"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "tiny-icons",
-      "categoryId": "dev-tools",
-      "homepage": "https://tiny-icons.xiaosang.cc/",
-      "screenshot": "screenshots/tiny-icons.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:48.486Z",
-      "metrics": {
-        "bodyTextLength": 876,
-        "visibleTextLength": 761,
+        "bodyTextLength": 785,
+        "visibleTextLength": 773,
         "visibleImageCount": 0,
         "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 1395,
-        "title": "Tiny Icons | Small by design"
+        "documentHeight": 1603,
+        "title": "Emoji 人生轨迹"
       },
       "consoleErrors": []
     },
     {
-      "name": "ui-compare-privacy-policy",
-      "categoryId": "content-only",
-      "homepage": "https://ui-compare-privacy-policy.xiaosang.cc/",
-      "screenshot": "screenshots/ui-compare-privacy-policy.png",
+      "name": "hearthstone-match",
+      "categoryId": "game-experiments",
+      "homepage": "https://hearthstone-match.xiaosang.cc/",
+      "screenshot": "screenshots/hearthstone-match.png",
       "status": "captured",
-      "startedAt": "2026-10-02T03:04:37.290Z",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "bodyTextLength": 2338,
-        "visibleTextLength": 1619,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
         "viewportHeight": 800,
-        "documentHeight": 2185,
-        "title": "UI Compare Privacy Policy / 隐私政策"
+        "title": "炉石匹配实验室（Hearthstone Match Lab）"
       },
       "consoleErrors": []
-    },
-    {
-      "name": "video_prompt_generator",
-      "categoryId": "ai-tools",
-      "homepage": "https://video-prompt-generator.xiaosang.cc/",
-      "screenshot": "screenshots/video_prompt_generator.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:22.335Z",
-      "metrics": {
-        "bodyTextLength": 1577,
-        "visibleTextLength": 1605,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 2841,
-        "title": "视频提示词生成器"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "web-motion-showcase",
-      "categoryId": "content-only",
-      "homepage": "https://web-motion-showcase.xiaosang.cc/",
-      "screenshot": "screenshots/web-motion-showcase.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:03:41.026Z",
-      "metrics": {
-        "bodyTextLength": 1365,
-        "visibleTextLength": 4828,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 8767,
-        "title": "网页 UI 动效灵感库 | Web Motion Showcase - 60+ 经典与现代网页动效与 AI 提示词"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "wenwu-checkin",
-      "categoryId": "content-only",
-      "homepage": "https://wenwu-checkin.xiaosang.cc/",
-      "screenshot": "screenshots/wenwu-checkin.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:04:42.205Z",
-      "metrics": {
-        "bodyTextLength": 16736,
-        "visibleTextLength": 12521,
-        "visibleImageCount": 195,
-        "unloadedImageCount": 160,
-        "viewportHeight": 800,
-        "documentHeight": 17164,
-        "title": "文物打卡 · 195 件禁止出境展览文物图鉴"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "win98-screen-saver",
-      "categoryId": "creative-coding",
-      "homepage": "https://win98-screen-saver.xiaosang.cc/",
-      "screenshot": "screenshots/win98-screen-saver.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:04:54.244Z",
-      "metrics": {
-        "bodyTextLength": 306,
-        "visibleTextLength": 213,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 800,
-        "title": "Windows 98 屏幕保护程序"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "xiaoyuzhou-transcript-downloader",
-      "categoryId": "productivity",
-      "homepage": "https://xiaoyuzhou-transcript-downloader.xiaosang.cc/",
-      "screenshot": "screenshots/xiaoyuzhou-transcript-downloader.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:06:08.848Z",
-      "metrics": {
-        "bodyTextLength": 967,
-        "visibleTextLength": 930,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 2046,
-        "title": "小宇宙 Transcript 下载器"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "xieyin",
-      "categoryId": "chinese-tools",
-      "homepage": "https://xieyin.xiaosang.cc/",
-      "screenshot": "screenshots/xieyin.png",
-      "status": "captured",
-      "startedAt": "2026-10-02T03:05:41.472Z",
-      "metrics": {
-        "bodyTextLength": 4427,
-        "visibleTextLength": 3024,
-        "visibleImageCount": 0,
-        "unloadedImageCount": 0,
-        "viewportHeight": 800,
-        "documentHeight": 5543,
-        "title": "古籍谐音梗追踪器"
-      },
-      "consoleErrors": []
-    },
-    {
-      "name": "youtube-channel-scraper-chrome",
-      "status": "captured",
-      "screenshot": "screenshots/youtube-channel-scraper-chrome.png",
-      "source": "latest remote extension in isolated Chromium",
-      "startedAt": "2026-10-02T03:16:00.773401+00:00"
-    },
-    {
-      "name": "tank-tactics-3d",
-      "status": "captured",
-      "homepage": "https://tank-tactics-3d.xiaosang.cc/",
-      "screenshot": "screenshots/tank-tactics-3d.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735489+00:00",
-      "metrics": {
-        "title": "二打一 · 3D 战术沙盘",
-        "text": "二打一\n月背攻城线\n红方\n4\n寒光炮队行动\n蓝方\n4\n拖动旋转 · 滚轮缩放\n\n双方正在争夺先手…\n\n蓝方取得先手\n\n点选一个己方单位",
-        "canvas": 1,
-        "unloadedImages": 0
-      }
-    },
-    {
-      "name": "iron-corridor",
-      "status": "captured",
-      "homepage": "https://iron-corridor.xiaosang.cc/",
-      "screenshot": "screenshots/iron-corridor.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735689+00:00",
-      "metrics": {
-        "title": "铁甲回廊 · Iron Corridor",
-        "text": "GitHub\nPlay Online",
-        "canvas": 1,
-        "unloadedImages": 0
-      }
-    },
-    {
-      "name": "snake-rogue",
-      "status": "captured",
-      "homepage": "https://snake-rogue.xiaosang.cc/",
-      "screenshot": "screenshots/snake-rogue.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735697+00:00",
-      "metrics": {
-        "title": "蛇渊 · Snake Rogue",
-        "text": "GitHub · holynova/snake-rogue",
-        "canvas": 1,
-        "unloadedImages": 0
-      }
-    },
-    {
-      "name": "ouroboros-rogue-snake",
-      "status": "captured",
-      "homepage": "https://ouroboros-rogue-snake.xiaosang.cc/",
-      "screenshot": "screenshots/ouroboros-rogue-snake.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735701+00:00",
-      "metrics": {
-        "title": "衔尾者 · OUROBOROS",
-        "text": "HP\n6/6\n长度\n5\n撕咬\n1\nDEPTH 1\n腐锈回廊\n残敌 5\n➤\n9\n精华\n0\n等级\n1\n分数\n205\nSPACE · 突进\nESC 暂停 · TAB 图鉴\nOUROBOROS\n腐锈回廊",
-        "canvas": 1,
-        "unloadedImages": 0
-      }
-    },
-    {
-      "name": "game-narrative-archive",
-      "status": "captured",
-      "homepage": "https://game-narrative-archive.xiaosang.cc/",
-      "screenshot": "screenshots/game-narrative-archive.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735703+00:00",
-      "metrics": {
-        "title": "《巫师 3：狂猎》 · 阅读 · 游戏剧情档案馆",
-        "text": "GAME / ARCHIVE\n游戏剧情档案馆\n阅读\n目录\n附录\nTHE WITCHER 3\nCYBERPUNK 2077\nGTA 5\n阅读工具\n《巫师 3：狂猎》\n《赛博朋克 2077》\n《GTA 5》\n目录\n11 章\n从头开始阅读\n本体 · 旅程\n01\n战争已经先到了\n04\n一座城市如何把人变成标签\n06\n两个继承人：英雄不等于好国王\n07\n乌马：关键线索常常长得最不起眼\n08\n凯尔莫罕之战：失去维瑟米尔之后\n09\n希里的五个小选择\n本体 · 支线\n02\n血腥男爵：一个家庭并不是受害者之家\n03\n林中夫人：童话只是权力的化妆\n05\n生死攸关：逃亡不是浪漫的冒险\n扩展 · DLC\nD1\n欧吉尔德：救他，是奖励还是惩罚？\nD2\n童话王国的连环谋杀案\n附录\n人物关系\n选择与结局\n分析方法\nTHE WITCHER 3 / WILD HUNT\n一场关于\n如何放手的旅程\n\n从白果园的一口井，到希里（Ciri）最终要走向的世界。这里不急着解释所有支线，也不要求你先看懂所有关系，只从第一页开始，连续读下去。\n\n本体 + 2 个 DLC\n全剧透\n约 40 分钟\n序\n\n《巫师 3》的真正主线，不是杰洛特（Geralt）消灭了多少怪物，而是他如何在每一次没有干净答案的选择里，继续和别人一起生活。\n\n01\n序章 · 白果园\n战争已经先到了\n\n一场寻找叶奈法（Yennefer）的旅程，从一口井里的鬼魂开始。\n\n《巫师 3》开场时，有三个人必须先理解：杰洛特、叶奈法、希里。杰洛特是猎魔人；叶奈法是女术士，也是杰洛特长期纠缠、分分合合的爱人；希里虽然不是两人的亲生女儿，但在情感关系上，基本就是他们共同的女儿。\n\n希里还有一个极其特殊的身份：她拥有上古之血，能够穿越空间，甚至穿越不同的世界。因此狂猎一直在寻找她。不了解小说背景时，游戏很容易被玩成「我要找一个白头发女孩」；但更准确的说法是：一对关系复杂的父母正在寻找失踪的女儿，而整个世界最危险的一群人也在寻找她。\n\n游戏第一次出现希里，并不是现实。杰洛特梦见自己回到凯尔莫罕，年轻的希里正在接受猎魔人训练，叶奈法和维瑟米尔（Vesemir）也在屋里。一切几乎像一个家庭。然后狂猎出现。\n\n这段梦已经把整部游戏的情感核心说出来了。杰洛特最想得到的，未必是拯救世界；他只是想让这些人重新在一起。\n\n醒来以后，杰洛特正和老猎魔人维瑟米尔一起寻找叶奈法。他们来到白果园。尼弗迦德帝国刚刚入侵北方，这座村庄已经被占领。\n\n所以你第一次进入这个世界时看到的不是英雄、国王和魔法，而是尸体、战场、逃难者、吊死的人和占领军。游戏从一开始就在提醒你：「拯救世界」这件事，对普通人而言没有那么浪漫。\n\n为了得到叶奈法的消息，杰洛特答应替尼弗迦德驻军杀掉一只狮鹫。若只是赶任务，你会记得：找草药，调查尸体，杀狮鹫。可调查下去才知道，它的伴侣曾被士兵杀死，于是它开始攻击人类。\n\n怪物的行为背后通常有原因，但理解原因不等于可以放着它继续杀人。杰洛特仍然得拔剑。这就是猎魔人的典型困境：解释，不等于宽恕。\n\n白果园酒馆里，杰洛特还遇到一个奇怪的秃头男人：刚特·欧迪姆（Gaunter O'Dimm）。他热心地告诉杰洛特叶奈法的线索，然后消失。那时他看起来只是一个神秘路人；等到《石之心》，你才会发现，游戏开头几乎第一个遇到的人之一，竟是整个《巫师 3》宇宙里最恐怖的存在。\n\n杀掉狮鹫之后，杰洛特终于见到叶奈法。但她不是来叙旧的，而是直接把他带到维吉玛皇宫——皇帝恩希尔（Emhyr var Emreis）要见他。恩希尔是希里的亲生父亲，他告诉杰洛特：狂猎正在追捕希里，而她最后",
-        "canvas": 0,
-        "unloadedImages": 0
-      }
-    },
-    {
-      "name": "neon-survivors",
-      "status": "captured",
-      "homepage": "https://neon-survivors.xiaosang.cc/",
-      "screenshot": "screenshots/neon-survivors.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735705+00:00",
-      "metrics": {
-        "title": "NEON SURVIVORS — 霓虹幸存者",
-        "text": "100 / 100\nLv 1\nXP 0/8\n猎人\nVanguard\nE\n过载冲锋\n3 秒内移速 +80%、攻速 +60%\nWAVE 1\n0:54\n战斗中\n击杀\n0\n金币\n0\n伤害\n0\n场上敌人\n3\n⚔\n1\nWAVE 1\n猎人\nGitHub ↗",
-        "canvas": 1,
-        "unloadedImages": 0
-      }
     },
     {
       "name": "spud-squad",
@@ -1679,26 +2330,13 @@
       "homepage": "https://spud-squad.xiaosang.cc/",
       "screenshot": "screenshots/spud-squad.png",
       "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735707+00:00",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "title": "Spud Squad - 3D Survivors",
         "text": "100 / 100\n波次: 1\n击杀: 0\n金币: 0\n等级: 1\n第 1 波",
         "canvas": 1,
-        "unloadedImages": 0
-      }
-    },
-    {
-      "name": "last-spud",
-      "status": "captured",
-      "homepage": "https://last-spud.xiaosang.cc/",
-      "screenshot": "screenshots/last-spud.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735708+00:00",
-      "metrics": {
-        "title": "地牢幸存者 · Dungeon Survivors",
-        "text": "第 1 / 12 波\n24\n0\n60 / 60\nLv.1\n★\n第 1 波\nM 静音",
-        "canvas": 1,
-        "unloadedImages": 0
+        "unloadedImages": 0,
+        "viewportHeight": 800
       }
     },
     {
@@ -1707,40 +2345,28 @@
       "homepage": "https://tuber-survivors.xiaosang.cc/",
       "screenshot": "screenshots/tuber-survivors.png",
       "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735710+00:00",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
         "title": "TUBER SURVIVORS — 块茎幸存者",
         "text": "第 1 波\n21\n◆ 0\n200/200\nLV 1\n🌀 环刃\n普通\n空武器槽\n空武器槽\n伤害 85%\n攻速 95%\n移速 88%\n暴击 8%\n护甲 8\n冲刺\nGitHub",
         "canvas": 1,
-        "unloadedImages": 0
+        "unloadedImages": 0,
+        "viewportHeight": 800
       }
     },
     {
-      "name": "web-survivor-game-agy",
+      "name": "last-spud",
       "status": "captured",
-      "homepage": "https://xiaosang.cc/demos/web-survivor-game-agy/",
-      "screenshot": "screenshots/web-survivor-game-agy.png",
+      "homepage": "https://last-spud.xiaosang.cc/",
+      "screenshot": "screenshots/last-spud.png",
       "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735712+00:00",
+      "startedAt": "2026-11-18T06:48:14.000Z",
       "metrics": {
-        "title": "山海夜市 - Web Survivor",
-        "text": "",
+        "title": "地牢幸存者 · Dungeon Survivors",
+        "text": "第 1 / 12 波\n24\n0\n60 / 60\nLv.1\n★\n第 1 波\nM 静音",
         "canvas": 1,
-        "unloadedImages": 0
-      }
-    },
-    {
-      "name": "battle-city-roguelike",
-      "status": "captured",
-      "homepage": "https://xiaosang.cc/demos/battle-city-roguelike/",
-      "screenshot": "screenshots/battle-city-roguelike.png",
-      "source": "verified current demo",
-      "startedAt": "2026-10-02T03:37:56.735714+00:00",
-      "metrics": {
-        "title": "钢铁誓约：重装肉鸽坦克 | Battle City: Rogue Bastion",
-        "text": "BASTION TACTICAL HUD\n🎯 自动瞄准: 开 (T)\n🔊 BGM: 开",
-        "canvas": 1,
-        "unloadedImages": 0
+        "unloadedImages": 0,
+        "viewportHeight": 800
       }
     }
   ]

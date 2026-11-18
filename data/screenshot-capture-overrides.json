@@ -1,53 +1,60 @@
 {
   "char_finder": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "移动端中文韵脚检索工具，描述明确写移动端；桌面视口下为居中窄条（2026-11-17 截图复查）。"
+    "viewportReason": "移动端中文韵脚检索工具，描述明确写移动端；桌面视口下为居中窄条（2026-11-17截图复查，2026-11-18全量重拍确认）。"
   },
   "douban-quark-clawer": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 1280,
+      "height": 800
     },
-    "viewportReason": "单卡片着陆页，内容只占右侧约 40%，左侧大片空白；重拍后如卡片仍偏右或裁切，改回桌面视口（2026-11-17 截图复查）。"
+    "viewportReason": "单卡片着陆页，卡片宽719px，390视口下卡片544px被裁切，改桌面1280×800（2026-11-17实测，2026-11-18全量重拍确认）。"
   },
   "equal_width": {
     "captureUrl": "https://holynova.github.io/equal_width/",
     "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged.",
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 900,
+      "height": 844
     },
-    "viewportReason": "构建后 CSS 写死 width: 400px 且无响应式断点；现有截图下方还有大块粉色色块疑似渲染异常（2026-11-17 截图复查）。"
+    "viewportReason": "构建后CSS写死width: 400px且无响应式断点，textarea固定532px，390会裁切；900×844完整显示（2026-11-17实测，2026-11-18全量重拍确认）。"
   },
   "fallwell": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "竖版像素动作肉鸽，桌面视口下为居中竖框游戏画面（2026-11-17 截图复查）。"
+    "viewportReason": "竖版像素动作肉鸽，桌面视口下为居中竖框游戏画面（2026-11-17截图复查，2026-11-18全量重拍确认）。"
   },
   "haiku-flow": {
     "captureUrl": "https://holynova.github.io/haiku-flow/",
     "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged.",
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "卡片滑动式俳句应用，桌面视口下为居中窄卡（2026-11-17 截图复查）。"
+    "viewportReason": "卡片滑动式俳句应用，桌面视口下为居中窄卡（2026-11-17截图复查，2026-11-18全量重拍确认）。"
   },
   "hand_fireworks": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "CSS 容器 max-width: 500px，桌面视口下内容只占中间约 30%（2026-11-17 截图复查）。"
+    "viewportReason": "CSS容器max-width: 500px，桌面视口下内容只占中间约30%（2026-11-17截图复查，2026-11-18全量重拍确认）。"
   },
   "head_tail_poem": {
     "captureUrl": "https://holynova.github.io/head_tail_poem/",
     "reason": "Custom domain is empty; capture the functioning GitHub Pages deployment. Demo URL is unchanged."
+  },
+  "head_tail_poem_generator": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "viewportReason": "藏头诗生成器，布局自适应；1280版页面稀疏、内容仅占顶部约1/3，390版满幅无裁切（2026-11-18全量重拍复核）。"
   },
   "hotpot-timer": {
     "captureUrl": "https://holynova.github.io/hotpot-timer/",
@@ -55,10 +62,10 @@
   },
   "mobile-sensor-playground": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "CSS 容器 max-width 300/440px，手机传感器实验本身面向手机（2026-11-17 截图复查）。"
+    "viewportReason": "CSS容器max-width 300/440px，手机传感器实验本身面向手机（2026-11-17截图复查，2026-11-18全量重拍确认）。"
   },
   "offer_calculator": {
     "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored.",
@@ -66,10 +73,10 @@
   },
   "poetry-flow": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "卡片式古诗词应用，桌面视口下为居中窄卡（2026-11-17 截图复查）。"
+    "viewportReason": "卡片式古诗词应用，桌面视口下为居中窄卡（2026-11-17截图复查，2026-11-18全量重拍确认）。"
   },
   "pre_tax_salary_calculator": {
     "reason": "Custom domain, GitHub Pages and latest GitHub source contain the default Vite/React starter; retain previous screenshot until project deployment is restored.",
@@ -77,17 +84,24 @@
   },
   "prompt_one_by_one": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "Chrome 扩展弹窗界面，内容宽约 380px；桌面视口下只剩居中窄条（2026-11-17 截图复查）。"
+    "viewportReason": "Chrome扩展弹窗式落地页，移动视口满幅（2026-11-17截图复查，2026-11-18全量重拍确认）。"
   },
   "scrape-to-markdown.chrome": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 390,
+      "height": 844
     },
-    "viewportReason": "Chrome 扩展侧边栏弹窗，内容只占右侧约 30%（2026-11-17 截图复查）。"
+    "viewportReason": "Chrome扩展落地页，移动视口满幅（2026-11-17截图复查，2026-11-18全量重拍确认）。"
+  },
+  "sort_animation": {
+    "viewport": {
+      "width": 700,
+      "height": 800
+    },
+    "viewportReason": "布局写死620px无响应式，700宽完整显示无裁切，390会裁、1280太空（2026-11-18全量重拍看站确认）。"
   },
   "world-unsolved-mysteries": {
     "viewport": {
@@ -96,11 +110,18 @@
     },
     "viewportReason": "现有文件是 1440×8651 整页长截图，卡片里缩成细条无法辨认；改拍标准桌面视口（2026-11-17 截图复查）。"
   },
+  "xieyin": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "viewportReason": "中文同音字词检索工具，手机应用式窄栏，桌面截图内容跨度仅0.66（2026-11-18全量重拍看站确认）。"
+  },
   "youtube-channel-scraper-chrome": {
     "viewport": {
-      "height": 844,
-      "width": 390
+      "width": 512,
+      "height": 640
     },
-    "viewportReason": "Chrome 扩展弹窗，内容只占左侧约 30%（2026-11-17 截图复查）。"
+    "viewportReason": "扩展弹窗body固定480px宽，390会裁切，512×640完整显示（2026-11-17实测，2026-11-18全量重拍确认）。"
   }
 }
