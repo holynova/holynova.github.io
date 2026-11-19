@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-19",
-  "totalRepos": 147,
+  "totalRepos": 148,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1649,6 +1649,24 @@
         "en": "Productivity"
       },
       "repos": [
+        {
+          "name": "vpn-ledger",
+          "title": {
+            "zh": "VPN 流量账本",
+            "en": "VPN Ledger"
+          },
+          "lang": "C#",
+          "desc": {
+            "zh": "按应用查看 Windows 的 VPN 与全局网络用量，查看未知连接线索和本机历史记录。",
+            "en": "Track per-app VPN or system-wide traffic on Windows, inspect unidentified connections, and browse local history."
+          },
+          "url": "https://github.com/holynova/vpn-ledger",
+          "homepage": "https://vpn-ledger.xiaosang.cc/",
+          "screenshot": "screenshots/vpn-ledger.png",
+          "pushed_at": "2026-11-19",
+          "commit_time": "2026-11-19T13:59:05+08:00",
+          "hidden": false
+        },
         {
           "name": "shanghai-metro-night",
           "title": {
