@@ -1,6 +1,6 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync, linkSync, copyFileSync } from 'node:fs';
-import { resolve, join, dirname } from 'node:path';
+import { resolve, join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { homedir } from 'node:os';
 
@@ -111,7 +111,14 @@ try {
     .split('\n').map(line => line.startsWith('/') ? `/wujun-study${line}` : line).join('\n');
   rmSync(join(wujunTarget, '_headers'));
   writeFileSync(headers, readFileSync(headers, 'utf8').trimEnd() + '\n\n' + wujunHeaders + '\n');
-  const files = filesIn(stage);
+  // Wrangler already excludes these directories from the asset upload.
+  // Keep the preflight count conservative by counting all other files.
+  const assetIgnore = readFileSync(join(stage, '.assetsignore'), 'utf8').split(/\r?\n/);
+  const ignoredDirectories = ['scripts/', '.github/'].filter(prefix => assetIgnore.includes(prefix));
+  const files = filesIn(stage).filter(file => {
+    const assetPath = relative(stage, file);
+    return !ignoredDirectories.some(prefix => assetPath.startsWith(prefix));
+  });
   if (files.length > 20_000 || files.some(file => lstatSync(file).size > 25 * 1024 ** 2)) {
     throw new Error(`Staged portfolio exceeds Workers Static Assets limits (${files.length} files)`);
   }
