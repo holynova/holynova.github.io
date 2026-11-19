@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-19",
-  "totalRepos": 148,
+  "totalRepos": 149,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1516,6 +1516,24 @@
       },
       "repos": [
         {
+          "name": "domestic-site-check",
+          "title": {
+            "zh": "线路对照",
+            "en": "Domestic Site Check"
+          },
+          "lang": "Python",
+          "desc": {
+            "zh": "从中国大陆多地对比网站与关键资源的 HTTP 可达性，查看状态码和分段耗时。",
+            "en": "Compare HTTP availability and timings for websites and individual assets from mainland China."
+          },
+          "url": "https://github.com/holynova/domestic-site-check",
+          "homepage": "https://xiaosang.cc/domestic-site-check/",
+          "screenshot": "screenshots/domestic-site-check.png",
+          "pushed_at": "2026-11-19",
+          "commit_time": "2026-11-19T08:44:49.626Z",
+          "hidden": false
+        },
+        {
           "name": "image-gallery-template",
           "lang": "TypeScript",
           "desc": {
@@ -1630,8 +1648,8 @@
           },
           "lang": "JavaScript",
           "desc": {
-            "zh": "扫描本地照片，生成城市足迹和多年报告。支持全球地球仪、城市打卡、重逢故事和分享卡。",
-            "en": "Scan photos locally to map visited cities, revisit stories across years, and share footprints from an interactive globe."
+            "zh": "扫描本地照片生成城市足迹和旅行年鉴。用行政区轮廓查看到访、重逢和生活城市。",
+            "en": "Scan photos locally to map visits, reunions, and home bases in a travel yearbook with administrative boundaries."
           },
           "url": "https://github.com/holynova/photo-atlas",
           "homepage": "https://xiaosang.cc/photo-atlas/",

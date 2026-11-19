@@ -1,8 +1,9 @@
+import {boundaryFor,boundaryPoints,outline} from "./footprint-boundaries.js";
 import {dateLabel,drawMap,esc} from "./model.js";
 import {cardMetrics,commonCountryNames,footprintDiscoveries,footprintYears,numbers,scopeFootprint} from "./footprint-model.js";
-import {cardRange,drawFootprintCard,highlightPlaces,shareSummary,worldBounds} from "./footprint-share.js";
+import {cardRange,drawFootprintCard,shareSummary,worldBounds} from "./footprint-share.js";
 import {bookendCards,footprintHighlights,recordCards,reunionCard} from "./footprint-stories.js";
-import {extractRoleFields,readRoleTracks,roleEditFields,roleTimeline} from "./city-roles.js";
+import {extractRoleFields,roleKeys,roleNames,readRoleTracks,roleEditFields,roleTimeline} from "./city-roles.js";
 import {catalogPlace,cityMatches,extendFootprint,readEdits,targetCards} from "./footprint-edits.js";
 
 const get = selector => document.querySelector(selector);
@@ -18,7 +19,7 @@ let data,baseData,world,countries,regions,names,stats,currentCheckins,checkinsKe
 let edits,editsKey,roleTracks,rolesKey,catalog,pendingPlace,highlights;
 let reunionIndex=0,playbackFrame=-1,playbackTimer,mapYears=[];
 let year=query.get("year")||"all", geography=Object.hasOwn(geographies,query.get("scope"))?query.get("scope"):"all";
-let country="", mode=query.get("map")==="flat"?"flat":"globe", camera={zoom:1}, marker, projection, drag, moved;
+let country="", mode=query.get("map")==="globe"?"globe":"flat", camera={zoom:1}, marker, projection, drag, moved;
 let animation;
 const countryName = code => commonCountryNames[code] || names.get(code) || code;
 const periodTitle = () => year==="all" ? "全部年份" : year+" 年";
@@ -47,10 +48,7 @@ function persistURL() {
   if (country) url.searchParams.set("country",country);
   else url.searchParams.delete("country");
   history.replaceState(null,"",url);
-  const annual = new URL("./annual.html",location.href);
-  if (scan) annual.searchParams.set("scan",scan);
-  if (year!=="all") annual.searchParams.set("year",year);
-  get("#photo-report").href = annual.href;
+
 }
 
 function filters() {
@@ -64,9 +62,12 @@ function filters() {
 }
 
 function dashboard() {
-  return '<section class="fp-heading"><p class="fp-period">'+esc(cardRange(stats))+(data.kind==="demo"?" · 示例数据":"")+'</p>'+
-    '<h1>我的城市足迹</h1></section>'+filters()+
-    '<dl class="fp-metrics">'+cardMetrics(stats).map(([key,value])=>'<div><dt>'+key+'</dt><dd>'+value+'</dd></div>').join("")+'</dl>';
+  const lead=stats.cities.find(place=>boundaryFor(place,regions)?.id===place.id);
+  return '<section class="yearbook-cover"><div><p class="fp-period">'+esc(cardRange(stats))+
+    (data.kind==="demo"?" · 示例数据":"")+'</p><h1>在生活的地方扎根，<br>向远方出发。</h1>'+
+    '<p class="cover-note">我的足迹年鉴 · '+esc(periodTitle())+'</p></div>'+
+    (lead?'<div class="cover-outline">'+outline(lead,regions,{decorative:true})+'</div>':"")+'</section>'+
+    '<dl class="fp-metrics">'+cardMetrics(stats).map(([key,value])=>'<div><dt>'+key+'</dt><dd>'+value+'</dd></div>').join("")+'</dl>'+filters();
 }
 
 function countryList() {
@@ -77,15 +78,15 @@ function countryList() {
 }
 
 function mapSection() {
-  return '<section id="map" class="fp-map-grid" aria-labelledby="fp-map-title"><div class="fp-map-panel"><div class="fp-map-header"><h2 id="fp-map-title">足迹地图</h2>'+
+  return '<section id="map" class="fp-map-grid" aria-labelledby="fp-map-title"><div class="fp-map-panel"><div class="fp-map-header"><h2 id="fp-map-title">生活与旅行的版图</h2>'+
     '<div class="fp-map-modes" role="group" aria-label="地图视图"><button type="button" data-action="mode" data-value="globe" aria-pressed="'+
     (mode==="globe")+'">地球仪</button><button type="button" data-action="mode" data-value="flat" aria-pressed="'+(mode==="flat")+'">平面地图</button></div></div>'+
-    playbackMarkup()+'<div class="fp-map-body'+(mode==="globe"?" is-globe":"")+'"><canvas id="fp-map" aria-label="按国家及城市标记的足迹地图"></canvas>'+
-    '<div id="fp-pins" class="fp-pins" aria-label="城市标记"></div>'+
+    playbackMarkup()+'<div class="fp-map-body'+(mode==="globe"?" is-globe":"")+'"><canvas id="fp-map" aria-label="可点击行政区轮廓的足迹地图；也可从下方城市清单选择城市"></canvas>'+
+    ''+
     '<div class="fp-map-nav">'+button("zoom","＋","in")+button("zoom","－","out")+button("zoom","全览","reset")+'</div>'+
     '<p id="fp-map-label" class="fp-map-label">'+(mode==="globe"?"拖动旋转地球仪":"拖动平移地图")+'</p></div>'+
-    '<div class="fp-map-foot"><span><i></i> 有记录的国家／地区</span><span><i class="pin-key"></i> 城市</span>'+
-    (stats.cities.some(place=>place.precision==="nearby")?'<span><i class="near-key"></i> 估算的附近城市</span>':"")+
+    '<div class="fp-map-foot"><span><i></i> 有记录的行政区</span>'+
+    (stats.cities.some(place=>boundaryFor(place,regions)?.id!==place.id)?'<span><i class="near-key"></i> 境外以国家轮廓展示，市级边界待补充</span>':"")+
     '<a href="https://www.naturalearthdata.com/">Natural Earth</a></div></div>'+
     '<aside class="fp-countries"><h2>国家／地区</h2>'+countryList()+
     '<button type="button" class="inline-action" data-action="find-cities">查看城市清单 ↓</button></aside></section>';
@@ -362,6 +363,31 @@ function trend() {
       '</td><td>'+numbers(computed.get(item)[1])+'</td></tr>').join("")+'</tbody></table></div></section>';
 }
 
+function lifeChapter() {
+  const roles=roleKeys(roleTracks,year);
+  const labeled=stats.cities.filter(place=>roles[place.id]?.some(role=>["home","hometown","work","study"].includes(role)));
+  const places=(labeled.length?labeled:stats.cities).slice(0,3);
+  if (!places.length) return "";
+  return '<section class="fp-section" id="life"><header><h2>有的地方是远方，有的成了家</h2></header>'+
+    '<div class="life-grid">'+places.map(place=>'<button class="life-card" data-action="city" data-value="'+esc(place.id)+'">'+
+      '<span>'+esc(roles[place.id]?.map(role=>roleNames[role]).join(" · ") || "记录日最多的城市")+'</span>'+
+      outline(place,regions)+'<h3>'+esc(place.name)+'</h3><p>'+numbers(place.days)+' 个记录日</p><small>'+
+      (place.first?esc(dateLabel(place.first)+" — "+dateLabel(place.last)):"日期未知")+'</small></button>').join("")+'</div>'+
+    '<details class="chapter-details"><summary>标注与生活时间线</summary>'+roleSection()+'</details></section>';
+}
+
+function travelChapter() {
+  const roles=roleKeys(roleTracks,year);
+  const visits=stats.visits.filter(visit=>!roles[visit.id]?.some(role=>["home","work","hometown"].includes(role)));
+  const longest=visits.slice().sort((a,b)=>b.days-a.days||b.first.localeCompare(a.first))[0];
+  if (!longest) return "";
+  const place=selected(longest.id);
+  return '<section class="fp-section travel-chapter" id="travel"><div class="travel-outline">'+outline(place,regions)+'</div>'+
+    '<div><p class="eyebrow">一段到访记录</p><h2>'+esc(place.name)+'，在这段时光里</h2><p>'+
+    esc(dateLabel(longest.first)+" — "+dateLabel(longest.last))+'</p><strong>'+numbers(longest.days)+' 个记录日</strong>'+
+    '<p>'+button("city","查看这座城市的历次到访 →",place.id,"inline-action")+'</p></div></section>';
+}
+
 function render() {
   stats = scopeFootprint(data,year,geography,country);
   if (country && !stats.options.some(place=>place.country===country)) {
@@ -372,8 +398,10 @@ function render() {
   const selectedBefore = document.activeElement;
   const oldAction = selectedBefore?.dataset.action, oldValue = selectedBefore?.dataset.value, oldId = selectedBefore?.id;
   highlights=footprintHighlights(data,stats);
-  root.innerHTML = dashboard()+mapSection()+visualStories()+roleSection()+checklist()+citiesSection()+discoveries()+trend()+
-    '<footer class="fp-footer"><details><summary>统计与定位口径</summary><p>同一天在多个地方有拍摄记录，总天数只算一天。首尾跨度包含首日和末日。城市以边界匹配或附近城市为依据，国家／地区按归属去重。</p>'+
+  root.innerHTML = dashboard()+mapSection()+lifeChapter()+travelChapter()+visualStories()+trend()+
+    '<details class="chapter-details"><summary>更多足迹发现</summary>'+discoveries()+'</details>'+citiesSection()+
+    '<details class="chapter-details"><summary>管理打卡清单</summary>'+checklist()+'</details>'+
+    '<footer class="fp-footer"><details><summary>统计与定位口径</summary><p>同一天在多个地方有拍摄记录，总天数只算一天。首尾跨度包含首日和末日。城市以边界匹配或附近城市为依据，国家／地区按归属去重。境外市级边界缺失时，地图展示所属国家轮廓。</p>'+
     '<p>日期来自相机记录和手动打卡。到访段依据记录日期归并，角色标注和打卡保存在这个浏览器。</p></details>'+
     '<a href="#footprint">返回顶部 ↑</a></footer>';
   root.setAttribute("aria-busy","false");
@@ -397,34 +425,17 @@ function defaultCenter() {
 
 function paintMap() {
   if (!stats) return;
-  const canvas = get("#fp-map"), pins = get("#fp-pins");
+  const canvas = get("#fp-map");
   const center = mode==="globe" ? defaultCenter() : camera.center;
   const frame=mapFrame();
-  const points = highlightPlaces(frame,countries);
-  const mapRegions=mode==="flat" && geography==="domestic" && stats.cities.length ? regions : countries;
+  const points=boundaryPoints(frame,regions);
+  const cityIds=new Set(points.filter(region=>!region.id.startsWith("country-")).map(region=>region.id));
+  const mapRegions=regions.filter(region=>cityIds.has(region.id)||points.some(point=>point.id===region.id))
+    .sort((a,b)=>Number(a.id.startsWith("country-"))-Number(b.id.startsWith("country-")));
   projection = drawMap(canvas,world,points,{design:"footprint",mode,regions:mapRegions,base:stats.places,
+    selected:marker&&boundaryFor(selected(marker)||{},regions)?.id,
     camera:{bounds:worldBounds(stats),zoom:camera.zoom,center}});
   if (!projection) return;
-  const {width,height,pos} = projection;
-  const labels = [];
-  pins.innerHTML = frame.cities.slice().sort((a,b)=>(b.id===marker)-(a.id===marker) || b.days-a.days).map(place=>{
-    const point = pos(place.lat,place.lon);
-    if (!point) return "";
-    const [x,y] = point;
-    if (x<12 || x>width-14 || y<18 || y>height-18) return "";
-    const active = place.id===marker;
-    const recent=playbackFrame>=0 && place.first?.startsWith(yearsInMap()[playbackFrame]);
-    const name = place.name+(place.precision==="nearby"?"附近":"");
-    const w = Math.min(130,[...place.name].length*10+14);
-    const box = [x-w/2,y+10,x+w/2,y+29];
-    const labelled = active || (labels.length<10 && box[0]>8 && box[2]<width-8 && y<height-55 &&
-      labels.every(([l,t,r,b])=>box[0]>r || box[2]<l || box[1]>b || box[3]<t));
-    if (labelled) labels.push(box);
-    return '<button type="button" data-action="city" data-value="'+esc(place.id)+'" class="fp-pin'+
-      (place.precision==="nearby"?" estimated":"")+(active?" current":"")+(recent?" newly-lit":"")+'" style="left:'+Math.round(x)+'px;top:'+Math.round(y)+
-      'px" aria-label="'+esc(name+" · "+numbers(place.days)+" 天")+'" title="'+esc(name)+'"><i></i>'+
-      (labelled?'<span aria-hidden="true">'+esc(place.name)+'</span>':"")+'</button>';
-  }).join("");
   const active = marker && selected(marker);
   get("#fp-map-label").textContent = active ? active.name : mode==="globe" ? "拖动旋转地球仪" : "拖动平移地图";
 }
@@ -450,7 +461,7 @@ function cityDetails(id) {
   const checked = marked(id);
   const isManual=edits.manual.some(entry=>entry.place.id===id);
   const isTarget=edits.targets.some(entry=>entry.id===id);
-  showDialog(place.name,'<p class="fp-detail-meta">'+esc(countryName(place.country))+' · '+esc(place.status)+'</p>'+
+  showDialog(place.name,outline(place,regions)+'<p class="fp-detail-meta">'+esc(countryName(place.country))+' · '+esc(place.status)+'</p>'+
     '<dl class="fp-detail-stats"><div><dt>有地点记录的天数</dt><dd>'+numbers(place.days)+'</dd></div><div><dt>到访记录</dt><dd>'+
     numbers(visits.length)+'</dd></div></dl>'+
     (place.first?bookendCards([
@@ -624,6 +635,16 @@ root.addEventListener("change",event=>{
 document.addEventListener("click",event=>{
   const control = event.target.closest("[data-action]");
   if (control) onAction(control.dataset.action,control.dataset.value);
+  if(event.target.id==="fp-map" && projection && !moved) {
+    const rect=event.target.getBoundingClientRect();
+    const id=projection.hit(event.clientX-rect.left,event.clientY-rect.top);
+    if (!id) return;
+    if (id.startsWith("country-")) {
+      country=id.slice(8); resetScope(); render();
+      get("#cities").scrollIntoView({block:"start"});
+    } else cityDetails(id);
+  }
+
 });
 share.addEventListener("click",openShare);
 dialogContent.addEventListener("change",event=>{
@@ -661,17 +682,20 @@ root.addEventListener("lostpointercapture",()=>{drag=null;});
 
 try {
   if (scan && !validId.test(scan)) throw new Error("本地报告地址无效。");
-  let provinces;
-  [baseData,world,countries,provinces]=await Promise.all([
+  let cityBoundaries;
+  [baseData,world,countries,cityBoundaries]=await Promise.all([
     json(scan?"./api/libraries/"+scan+"/footprint.json":"./footprint-demo.json",{footprint:true}),
-    json("./world.json"),json("./countries.json"),json("./regions.json"),
+    json("./world.json"),json("./countries.json"),json("./city-boundaries.json"),
   ]);
   countries = countries.map(({polygons,...item})=>({
     ...item,polygons,bounds:polygons.flatMap(item=>item[0]).reduce(([w,s,e,n],[x,y])=>
       [Math.min(w,x),Math.min(s,y),Math.max(e,x),Math.max(n,y)],[180,90,-180,-90]),
   }));
   data=baseData;
-  regions=[...countries,...data.regions.filter(item=>!item.id.startsWith("country-")),...(provinces||[])];
+  regions=[...new Map([...countries,...cityBoundaries,...data.regions].map(region=>[region.id,region])).values()].map(region=>({
+    ...region,bounds:region.bounds || region.polygons.flatMap(polygon=>polygon[0]).reduce(([w,s,e,n],[x,y])=>
+      [Math.min(w,x),Math.min(s,y),Math.max(e,x),Math.max(n,y)],[180,90,-180,-90]),
+  }));
   names=new Map(countries.map(item=>[item.id.slice(8),item.name]));
   country=query.get("country")||"";
   checkinsKey="photo-atlas:checkins:"+(scan?data.libraryKey||scan:"demo");

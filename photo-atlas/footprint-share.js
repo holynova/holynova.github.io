@@ -1,3 +1,4 @@
+import {boundaryPoints} from "./footprint-boundaries.js";
 import {drawMap,dateLabel} from "./model.js";
 import {cardMetrics,numbers} from "./footprint-model.js";
 
@@ -53,21 +54,9 @@ export function drawFootprintCard(canvas,state,world,regions,countries,{title,co
   let start = 380;
   if (showMap && state.places.length) {
     const map = document.createElement("canvas");
-    const mapRegions=state.geography==="domestic" && state.cities.length ? regions : countries;
-    const projection = drawMap(map,world,highlightPlaces(state,countries),{regions:mapRegions,design:"footprint",exported:true,
+    const mapRegions=boundaryPoints(state,regions);
+    drawMap(map,world,mapRegions,{regions:mapRegions,design:"footprint",exported:true,
       camera:{bounds:worldBounds(state)},base:state.places,mode:"flat",labels:false});
-    const layer = map.getContext("2d");
-    if (projection) for (const place of state.cities) {
-      const [x,y] = projection.pos(place.lat,place.lon);
-      if (x<3 || x>projection.width-3 || y<3 || y>projection.height-3) continue;
-      layer.beginPath();
-      layer.arc(x,y,3.5,0,Math.PI*2);
-      layer.fillStyle = "#17372b";
-      layer.fill();
-      layer.strokeStyle = "#f4ffdc";
-      layer.lineWidth = 1.8;
-      layer.stroke();
-    }
     ctx.drawImage(map,61,317,958,428);
     start = 824;
   } else {

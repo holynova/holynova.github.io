@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="线路对照，从中国大陆多地测量网站和关键资源的 HTTP 可达性。">
+<title>线路对照 · 国内网站可访问性检测</title>
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:light;background:#f5f7f6;color:#182b23;font:17px/1.65 system-ui,sans-serif}
+body{margin:0}main{margin:auto;width:min(960px,calc(100% - 48px));padding:64px 0 56px}
+h1{font-size:clamp(2.8rem,8vw,5.4rem);line-height:1.05;letter-spacing:-.07em;margin:0 0 22px}
+p{max-width:38rem;margin:0 0 19px}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin:25px 0 14px}
+a{color:#15583d;text-underline-offset:4px}.primary{border-radius:8px;background:#194d37;color:#fff;padding:9px 16px;text-decoration:none;font-weight:650}
+figure{margin:40px 0 0}img{width:100%;height:auto;display:block;border:1px solid #cedbd2;border-radius:12px}
+small,figcaption{color:#455c51}figcaption{margin-top:8px;font-size:.86rem}@media(max-width:540px){main{padding-top:43px}}
+</style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"></script>
+</head>
+<body><main>
+<h1>线路对照</h1>
+<p>从中国大陆多个网络测网站和关键资源。比较两种部署，查看各轮 HTTP 状态与耗时。</p>
+<div class="actions"><a class="primary" href="https://github.com/holynova/domestic-site-check/releases/latest">下载本地工具</a><a href="https://github.com/holynova/domestic-site-check">源码与运行说明</a></div>
+<small>使用 Python 在自己电脑上启动。实时拨测由 Globalping 提供。</small>
+<figure><img src="./screenshot.png" alt="八轮拨测的线路卡片，按运营商和地点显示 HTTP 状态与总耗时"><figcaption>近邻项目的八轮实测示例</figcaption></figure>
+</main></body>
+</html>
