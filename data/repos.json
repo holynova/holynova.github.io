@@ -951,14 +951,14 @@
             "en": "Piano Fireworks"
           },
           "desc": {
-            "zh": "听十首器乐曲，看烟花逐音绽放，可自由换景、巡镜并导出带曲目信息的 MP4。",
-            "en": "Watch fireworks synchronized to ten instrumental performances, tune the scenery and export a titled MP4."
+            "zh": "在播放列表中连听三十首器乐曲，看烟花随音符绽放，可自由换景、巡镜并导出 MP4。",
+            "en": "Listen to a playlist of thirty instrumental pieces with score-synchronized fireworks, adjustable scenery and MP4 export."
           },
           "url": "https://github.com/holynova/piano-fireworks",
           "homepage": "https://piano-fireworks.xiaosang.cc/",
           "screenshot": "screenshots/piano-fireworks.png",
           "pushed_at": "2026-11-20",
-          "commit_time": "2026-11-20T20:13:41+08:00",
+          "commit_time": "2026-11-20T22:14:26+08:00",
           "hidden": false
         },
         {
