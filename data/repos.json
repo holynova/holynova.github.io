@@ -2261,7 +2261,8 @@
           "title": {
             "zh": "铁甲夹击",
             "en": "Iron Flank"
-          }
+          },
+          "screenshot": "screenshots/iron-flank.png"
         },
         {
           "name": "rogue-bastion",
@@ -2277,7 +2278,8 @@
           "title": {
             "zh": "坦克要塞",
             "en": "Rogue Bastion"
-          }
+          },
+          "screenshot": "screenshots/rogue-bastion.png"
         },
         {
           "name": "mobile-sensor-playground",
