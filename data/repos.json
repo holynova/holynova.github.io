@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-20",
-  "totalRepos": 152,
+  "totalRepos": 153,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -943,6 +943,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "piano-fireworks",
+          "lang": "JavaScript",
+          "title": {
+            "zh": "花火琴房",
+            "en": "Piano Fireworks"
+          },
+          "desc": {
+            "zh": "听十首器乐曲，看烟花逐音绽放，可自由换景、巡镜并导出带曲目信息的 MP4。",
+            "en": "Watch fireworks synchronized to ten instrumental performances, tune the scenery and export a titled MP4."
+          },
+          "url": "https://github.com/holynova/piano-fireworks",
+          "homepage": "https://piano-fireworks.xiaosang.cc/",
+          "screenshot": "screenshots/piano-fireworks.png",
+          "pushed_at": "2026-11-20",
+          "commit_time": "2026-11-20T20:13:41+08:00",
+          "hidden": false
+        },
         {
           "name": "pingye",
           "lang": "JavaScript",
