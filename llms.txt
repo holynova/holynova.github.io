@@ -255,6 +255,8 @@
   EN: A Windows game library with cover-based launching, ratings, a disk usage map and archived game discovery.
 - [植物幸存者](https://xiaosang.cc/plant-survivors-ui/): 在戴夫的营地查图鉴、解锁植物或学习玩法，再选人出发。植物自动攻击，在三张地图上无尽生存。
   EN: Visit Dave’s camp for the guide, upgrades, plant unlocks and tutorial. Choose your hero and fight endless waves across three maps.
+- [传奇世界幸存者 · 移动版](https://xiaosang.cc/woool-survivor-mobile/): 手机竖屏单指走位，战法道三职业携 23 项技能挑战六章首领，支持中途存档与局外修行。
+  EN: A portrait survival game with three classes, 23 skills, six chapter bosses, resumable runs and persistent training.
 - [woool-survivor-game](https://xiaosang.cc/woool-survivor-game/): 传奇世界幸存者：战法道三职业、原版技能与怪物素材、六大城市要塞地图与四档锯齿难度曲线。
   EN: Legend of World (Woool) survivor roguelite with Warrior/Mage/Taoist builds, authentic sprites, six isometric city maps and four sawtooth difficulty curves.
 - [mafa-survivor](https://xiaosang.cc/mafa-survivor/?survivor): 手机优先的玛法幸存者：三职业、33种技能八级成长、十地图与最终首领，原版模式保留。

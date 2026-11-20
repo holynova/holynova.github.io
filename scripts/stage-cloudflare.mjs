@@ -111,13 +111,17 @@ try {
     .split('\n').map(line => line.startsWith('/') ? `/wujun-study${line}` : line).join('\n');
   rmSync(join(wujunTarget, '_headers'));
   writeFileSync(headers, readFileSync(headers, 'utf8').trimEnd() + '\n\n' + wujunHeaders + '\n');
-  // Wrangler already excludes these directories from the asset upload.
-  // Keep the preflight count conservative by counting all other files.
-  const assetIgnore = readFileSync(join(stage, '.assetsignore'), 'utf8').split(/\r?\n/);
-  const ignoredDirectories = ['scripts/', '.github/'].filter(prefix => assetIgnore.includes(prefix));
+  // Respect literal root paths in the upload configuration. Count wildcard
+  // rules conservatively, and fall back to counting all files for negations.
+  const rules = readFileSync(join(stage, '.assetsignore'), 'utf8').split(/\r?\n/);
+  const literalPaths = rules.some(rule => rule.startsWith('!')) ? [] :
+    rules.filter(rule => /^[\w./-]+$/.test(rule));
+  const ignoredFiles = new Set(literalPaths.filter(rule => !rule.endsWith('/')));
+  const ignoredDirectories = literalPaths.filter(rule => rule.endsWith('/'));
   const files = filesIn(stage).filter(file => {
     const assetPath = relative(stage, file);
-    return !ignoredDirectories.some(prefix => assetPath.startsWith(prefix));
+    return !ignoredFiles.has(assetPath) &&
+      !ignoredDirectories.some(prefix => assetPath.startsWith(prefix));
   });
   if (files.length > 20_000 || files.some(file => lstatSync(file).size > 25 * 1024 ** 2)) {
     throw new Error(`Staged portfolio exceeds Workers Static Assets limits (${files.length} files)`);

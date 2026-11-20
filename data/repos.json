@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-20",
-  "totalRepos": 151,
+  "totalRepos": 152,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1962,6 +1962,24 @@
           "screenshot": "screenshots/plant-survivors-ui.png",
           "pushed_at": "2026-11-18",
           "commit_time": "2026-11-18T00:30:00+08:00",
+          "hidden": false
+        },
+        {
+          "name": "woool-survivor-mobile",
+          "title": {
+            "zh": "传奇世界幸存者 · 移动版",
+            "en": "Woool Survivor Mobile"
+          },
+          "lang": "TypeScript",
+          "desc": {
+            "zh": "手机竖屏单指走位，战法道三职业携 23 项技能挑战六章首领，支持中途存档与局外修行。",
+            "en": "A portrait survival game with three classes, 23 skills, six chapter bosses, resumable runs and persistent training."
+          },
+          "url": "https://github.com/holynova/woool-survivor-mobile",
+          "homepage": "https://xiaosang.cc/woool-survivor-mobile/",
+          "screenshot": "screenshots/woool-survivor-mobile.png",
+          "pushed_at": "2026-11-20",
+          "commit_time": "2026-11-20T11:47:49+08:00",
           "hidden": false
         },
         {
