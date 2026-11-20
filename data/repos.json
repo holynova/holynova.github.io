@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-19",
-  "totalRepos": 149,
+  "lastUpdated": "2026-11-20",
+  "totalRepos": 151,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -2246,6 +2246,38 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/tank-tactics-game.png"
+        },
+        {
+          "name": "iron-flank",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "二打一回合制坦克战棋：8×8 棋盘，红蓝各 6 辆坦克，用连续集火把敌方消灭到只剩 1 辆。",
+            "en": "Two-on-one turn-based tank tactics on an 8x8 board: line up two of your tanks against one enemy to destroy it by focus fire."
+          },
+          "url": "https://github.com/holynova/iron-flank",
+          "homepage": "https://holynova.github.io/iron-flank/",
+          "pushed_at": "2026-11-16",
+          "hidden": false,
+          "title": {
+            "zh": "铁甲夹击",
+            "en": "Iron Flank"
+          }
+        },
+        {
+          "name": "rogue-bastion",
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "实时坦克 Roguelike：守卫护盾核心，逐层清剿敌军，拾取强化一路打通 16 层（含第 16 层 Boss）。",
+            "en": "A real-time tank roguelike: defend the shield core, clear enemies floor by floor, and take down the floor-16 boss."
+          },
+          "url": "https://github.com/holynova/rogue-bastion",
+          "homepage": "https://holynova.github.io/rogue-bastion/",
+          "pushed_at": "2026-11-16",
+          "hidden": false,
+          "title": {
+            "zh": "坦克要塞",
+            "en": "Rogue Bastion"
+          }
         },
         {
           "name": "mobile-sensor-playground",
