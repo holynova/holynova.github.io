@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-21",
-  "totalRepos": 154,
+  "totalRepos": 155,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -961,6 +961,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "gravity-watch-face",
+          "lang": "TypeScript",
+          "title": {
+            "zh": "重力物理互动表盘",
+            "en": "Gravity Watch Face"
+          },
+          "desc": {
+            "zh": "手机全屏 3D 物理重力互动表盘：传感器驱动网球、钻石、篮球、黄金与足球五套场景实时翻滚碰撞。",
+            "en": "Mobile-first 3D physics watch face driven by motion sensors across five interactive PBR scenes."
+          },
+          "url": "https://github.com/holynova/gravity-watch-face",
+          "homepage": "https://gravity-watch-face.xiaosang.cc/",
+          "screenshot": "screenshots/gravity-watch-face.png",
+          "pushed_at": "2026-11-21",
+          "commit_time": "2026-11-21T17:03:20+08:00",
+          "hidden": false
+        },
         {
           "name": "piano-fireworks",
           "lang": "JavaScript",
