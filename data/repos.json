@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-21",
-  "totalRepos": 155,
+  "totalRepos": 156,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -128,6 +128,24 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "parenting-reader",
+          "lang": "HTML",
+          "title": {
+            "zh": "育儿读本",
+            "en": "Parenting Reader"
+          },
+          "desc": {
+            "zh": "从自己倒水、收拾积木等家庭场景读懂蒙台梭利教育与正面管教。两篇各约一小时，含分龄案例与十幅手绘插图。",
+            "en": "Two illustrated Chinese essays on Montessori education and Positive Discipline, with age-specific examples from everyday family life. Each takes about an hour to read."
+          },
+          "url": "https://github.com/holynova/parenting-reader",
+          "homepage": "https://parenting-reader.xiaosang.cc/",
+          "screenshot": "screenshots/parenting-reader.png",
+          "pushed_at": "2026-11-21",
+          "commit_time": "2026-11-21T17:13:46+08:00",
+          "hidden": false
+        },
         {
           "name": "first-three-years",
           "lang": "JavaScript",
