@@ -1,1 +1,5 @@
 /photo-atlas /photo-atlas/ 301
+/wujun-study https://wujun-study.xiaosang.cc/ 302
+/wujun-study/* https://wujun-study.xiaosang.cc/:splat 302
+/xiaosang-gallery https://gallery.xiaosang.cc/ 302
+/xiaosang-gallery/* https://gallery.xiaosang.cc/:splat 302
