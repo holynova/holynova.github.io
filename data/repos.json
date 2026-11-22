@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-22",
-  "totalRepos": 159,
+  "totalRepos": 160,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1012,6 +1012,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "ucas-particles",
+          "lang": "JavaScript",
+          "title": {
+            "zh": "Ucas 粒子实验室",
+            "en": "Ucas Particle Lab"
+          },
+          "desc": {
+            "zh": "复刻 Ucas Studio 首页的五组动效，并收录 100 个交互粒子实验。可以倾斜星环、拨动曲柄或滑动点阵观察莫尔纹。",
+            "en": "Five Ucas Studio motion studies and 100 interactive particle experiments. Tilt planetary rings, turn a crank or adjust a moiré pattern."
+          },
+          "url": "https://github.com/holynova/ucas-particles",
+          "homepage": "https://ucas-particles.xiaosang.cc/",
+          "screenshot": "screenshots/ucas-particles.png",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T21:32:34+08:00",
+          "hidden": false
+        },
         {
           "name": "beyond-the-print",
           "title": {
