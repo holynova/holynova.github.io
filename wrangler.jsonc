@@ -5,7 +5,14 @@
   "compatibility_date": "2026-09-21",
   "workers_dev": false,
   "assets": {
-    "directory": "./.cloudflare-build"
+    "directory": "./.cloudflare-build",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/xiaosang-gallery/media/*",
+      "/xiaosang-gallery/originals/*",
+      "/wujun-study/slides/*",
+      "/wujun-study/static/*"
+    ]
   },
   "routes": [
     {
@@ -15,5 +22,6 @@
   ],
   "build": {
     "command": "node scripts/stage-cloudflare.mjs"
-  }
+  },
+  "main": "deploy/legacy-assets.mjs"
 }

@@ -1,0 +1,23 @@
+{
+  "archiveSha256": "ffcfc2119b36fc86392818712471173e676df2dfc99c947737ffa5d2e9a947a4",
+  "mounts": {
+    "xiaosang-gallery": {
+      "commit": "ee4df09520706aac342e9324356858ab15d9a825",
+      "version": "1.0.2",
+      "origin": "https://9797554e.xiaosang-gallery-archive.pages.dev",
+      "folders": [
+        "media",
+        "originals"
+      ]
+    },
+    "wujun-study": {
+      "commit": "1897dda67e392600c854ca91903edf0b56670d51",
+      "version": "1.0.2",
+      "origin": "https://e5891d69.wujun-study.pages.dev",
+      "folders": [
+        "slides",
+        "static"
+      ]
+    }
+  }
+}

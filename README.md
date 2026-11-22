@@ -88,6 +88,10 @@ pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
                       早期内置小项目与演示（历史遗留）
 ```
 
+## 发布作品集
+
+运行 `git push origin master`。Workers Builds 从该提交打包首页和两个旧版资料入口，再部署到 `xiaosang-portfolio`。本地可运行 `node scripts/stage-cloudflare.mjs` 检查生产包。旧图库图片和课程幻灯片继续使用原网址，归档版本及目录映射记录在 `deploy/mounts.json`。
+
 ## 技术
 
 - 零构建、零框架：原生 HTML/CSS/JS，可直接用静态服务器跑。

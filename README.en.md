@@ -88,6 +88,10 @@ pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
                       Early built-in mini-projects and demos (legacy)
 ```
 
+## Publish the portfolio
+
+Push `master` with `git push origin master`. Workers Builds stages the tracked site and the two pinned reading and gallery pages, then deploys the `xiaosang-portfolio` Worker. Run `node scripts/stage-cloudflare.mjs` to check the production package locally. The historical gallery images and course slides keep their original URLs. Their checked Pages deployment IDs and directory mappings are in `deploy/mounts.json`.
+
 ## Tech
 
 - Zero build, zero framework: plain HTML/CSS/JS, runnable on any static server.
