@@ -18,3 +18,5 @@ data/screenshot-capture-overrides.json
 wrangler.jsonc
 .gitignore
 .assetsignore
+README.en.md
+**/.DS_Store

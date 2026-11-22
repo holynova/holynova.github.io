@@ -50,6 +50,7 @@ execFileSync('git', ['merge-base', '--is-ancestor', 'origin/master', 'HEAD'], {c
 function placeTree(source, destination) {
   mkdirSync(destination, { recursive: true });
   for (const entry of readdirSync(source, { withFileTypes: true })) {
+    if (entry.name === '.DS_Store') continue;
     const from = join(source, entry.name);
     const to = join(destination, entry.name);
     if (entry.isDirectory()) placeTree(from, to);

@@ -1,7 +1,7 @@
 <p align="right"><a href="README.md">中文</a></p>
 
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="Xiaosang Portfolio — the source of xiaosang.cc: the homepage shows 130 featured projects as masonry cards, driven by data/repos.json">
+  <img src="./assets/readme/hero.svg" width="100%" alt="Xiaosang Portfolio — the source of xiaosang.cc: the homepage shows 148 visible projects as masonry cards, driven by data/repos.json">
 </p>
 
 <p align="center">
@@ -10,12 +10,12 @@
   <a href="https://github.com/holynova/holynova.github.io">GitHub Repository</a>
 </p>
 
-Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang.cc](https://xiaosang.cc/). The homepage shows 130 featured projects in a masonry grid across 9 categories, with search, category filters and three sort orders. The whole list is driven by `data/repos.json` — edit one JSON file to update the site. Zero build, plain HTML/CSS/JS.
+Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang.cc](https://xiaosang.cc/). The homepage shows 148 visible projects in a masonry grid across 9 categories, with search, category filters and three sort orders. The whole list is driven by `data/repos.json` — edit one JSON file to update the site. Zero build, plain HTML/CSS/JS.
 
 ## Screenshot
 
 <p align="center">
-  <img src="./assets/readme/screenshot-home.png" width="100%" alt="Portfolio homepage: dark theme, title small ideas, better products, search bar and category filters, and a wall of project cards below, showing 12 of 130 projects">
+  <img src="./assets/readme/screenshot-home.png" width="100%" alt="Portfolio homepage: dark theme, title small ideas, better products, search bar and category filters, and a wall of project cards below, showing 12 of 148 projects">
 </p>
 
 ## What It Is
@@ -23,19 +23,19 @@ Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang
 - **Portfolio site**: holynova's small web projects — games, AI tools, creative visuals, dev tools, productivity, and more — each shown as a card with a screenshot, a description, and demo and repo links.
 - **Data-driven**: `index.html` + `js/detail-app.js` render cards from `data/repos.json`; cards load progressively, 12 per batch, with automatic loading on desktop and a manual next-batch button on mobile.
 - **On-site features**: search (press `/` to focus), 9 category filters, sorting (newest / stars / alphabetical), Chinese/English toggle, dark/light themes, likes and bookmarks; a minimal `classic.html` version is also included.
-- **Counts** (measured from `data/repos.json`, 2026-11-17): 146 entries in total, 130 visible, 16 hidden.
+- **Counts** (measured from `data/repos.json`, 2026-11-22): 164 entries in total, 148 visible, 16 hidden.
 
-| Category | Featured |
+| Category | Visible |
 |---|---:|
-| 纯内容网站 (Content Sites) | 49 |
-| 游戏交互 (Games & Interactive) | 17 |
-| 创意视觉 (Creative Visuals) | 18 |
-| 生活效率 (Life & Productivity) | 13 |
-| Chrome 插件 (Chrome Extensions) | 7 |
-| AI 工具 (AI Tools) | 8 |
-| 语言文化 (Language & Culture) | 8 |
-| 开发工具 (Dev Tools) | 7 |
-| 游戏实验 (Game Experiments) | 3 |
+| Chrome Extensions | 7 |
+| Content-only | 51 |
+| Creative | 25 |
+| AI Tools | 10 |
+| Language | 8 |
+| Dev Tools | 8 |
+| Productivity | 14 |
+| Games | 22 |
+| Game Experiments | 3 |
 
 ## Maintaining the List
 
@@ -43,8 +43,8 @@ Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang
 
 ```json
 {
-  "lastUpdated": "2026-11-17",
-  "totalRepos": 146,
+  "lastUpdated": "2026-11-22",
+  "totalRepos": 164,
   "categories": [
     { "name": { "zh": "游戏交互", "en": "Games" }, "repos": [ … ] }
   ]
@@ -82,7 +82,7 @@ data/screenshots-map.json  Screenshot mapping
 js/detail-app.js      Homepage rendering: search / filters / sorting / progressive loading
 js/main.js            Legacy homepage logic
 css/                  Detail design-system styles
-screenshots/         Project thumbnails (png + webp, 327 files)
+screenshots/         Project thumbnails (png + webp, updated per project)
 server.py             Local dev helper service
 pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
                       Early built-in mini-projects and demos (legacy)
@@ -98,3 +98,5 @@ pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
 
 - Email: [holy_nova@126.com](mailto:holy_nova@126.com)
 - GitHub: [holynova](https://github.com/holynova)
+
+<a href="https://xiaosang.cc/"><img src="assets/readme/qr.png" width="112" alt="Scan to explore the portfolio"></a>

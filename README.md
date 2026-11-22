@@ -1,7 +1,7 @@
 <p align="right"><a href="README.en.md">English</a></p>
 
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="小桑作品集 — xiaosang.cc 的源码仓库：首页以瀑布流卡片展示 130 个在展项目，项目列表由 data/repos.json 驱动">
+  <img src="./assets/readme/hero.svg" width="100%" alt="小桑作品集 — xiaosang.cc 的源码仓库：首页以瀑布流卡片展示 148 个在展项目，项目列表由 data/repos.json 驱动">
 </p>
 
 <p align="center">
@@ -10,12 +10,12 @@
   <a href="https://github.com/holynova/holynova.github.io">GitHub 仓库</a>
 </p>
 
-小桑作品集是 holynova 个人作品集网站 [xiaosang.cc](https://xiaosang.cc/) 的源码仓库。首页以瀑布流卡片展示 130 个在展项目，分 9 大分类，支持搜索、分类筛选与三种排序；整个项目列表由 `data/repos.json` 驱动，改一个 JSON 文件就能更新全站。零构建，原生 HTML/CSS/JS。
+小桑作品集是 holynova 个人作品集网站 [xiaosang.cc](https://xiaosang.cc/) 的源码仓库。首页以瀑布流卡片展示 148 个在展项目，分 9 大分类，支持搜索、分类筛选与三种排序；整个项目列表由 `data/repos.json` 驱动，改一个 JSON 文件就能更新全站。零构建，原生 HTML/CSS/JS。
 
 ## 截图
 
 <p align="center">
-  <img src="./assets/readme/screenshot-home.png" width="100%" alt="作品集首页：深色主题，标题 small ideas, better products，搜索栏与分类筛选，下方是项目卡片墙，显示 12 / 130 个项目">
+  <img src="./assets/readme/screenshot-home.png" width="100%" alt="作品集首页：深色主题，标题 small ideas, better products，搜索栏与分类筛选，下方是项目卡片墙，显示 12 / 148 个项目">
 </p>
 
 ## 这是什么
@@ -23,18 +23,18 @@
 - **作品集站**：收录 holynova 的网页小项目——游戏、AI 工具、创意视觉、开发工具、生活效率等，每个项目一张卡片：截图、简介、Demo 与仓库链接。
 - **数据驱动**：`index.html` + `js/detail-app.js` 读取 `data/repos.json` 渲染卡片；卡片渐进加载，每批 12 张，桌面滚动续载，手机手动加载下一批。
 - **站内功能**：搜索（按 `/` 聚焦）、9 个分类筛选、排序（最新 / Star / 字母）、中英双语切换、深浅主题切换、点赞收藏；另有极简版 `classic.html`。
-- **数量**（以 `data/repos.json` 实测为准，2026-11-17）：共 146 条，130 条可见展示，16 条隐藏。
+- **数量**（以 `data/repos.json` 实测为准，2026-11-22）：共 164 条，148 条可见展示，16 条隐藏。
 
 | 分类 | 在展 |
 |---|---:|
-| 纯内容网站 | 49 |
-| 游戏交互 | 17 |
-| 创意视觉 | 18 |
-| 生活效率 | 13 |
 | Chrome 插件 | 7 |
-| AI 工具 | 8 |
+| 纯内容网站 | 51 |
+| 创意视觉 | 25 |
+| AI 工具 | 10 |
 | 语言文化 | 8 |
-| 开发工具 | 7 |
+| 开发工具 | 8 |
+| 生活效率 | 14 |
+| 游戏交互 | 22 |
 | 游戏实验 | 3 |
 
 ## 项目列表怎么维护
@@ -43,8 +43,8 @@
 
 ```json
 {
-  "lastUpdated": "2026-11-17",
-  "totalRepos": 146,
+  "lastUpdated": "2026-11-22",
+  "totalRepos": 164,
   "categories": [
     { "name": { "zh": "游戏交互", "en": "Games" }, "repos": [ … ] }
   ]
@@ -82,7 +82,7 @@ data/screenshots-map.json  截图映射
 js/detail-app.js      首页渲染：搜索 / 筛选 / 排序 / 渐进加载
 js/main.js            旧版首页逻辑
 css/                  Detail 设计系统样式
-screenshots/         项目缩略图（png + webp，327 张）
+screenshots/         项目缩略图（png + webp，按项目更新）
 server.py             本地开发辅助服务
 pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
                       早期内置小项目与演示（历史遗留）
@@ -98,3 +98,5 @@ pages/ algorithm/ animations/ css3/ framework/ layout/ plug_in/ tech/
 
 - 邮箱：[holy_nova@126.com](mailto:holy_nova@126.com)
 - GitHub：[holynova](https://github.com/holynova)
+
+<a href="https://xiaosang.cc/"><img src="assets/readme/qr.png" width="112" alt="扫码打开作品集"></a>

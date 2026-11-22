@@ -2,7 +2,7 @@
      width="1200" height="360" viewBox="0 0 1200 360"
      role="img" aria-labelledby="title desc">
   <title id="title">小桑作品集 — xiaosang.cc 的源码仓库</title>
-  <desc id="desc">深色底作品集横幅：小桑作品集，副标题 small ideas, better products；右侧是三列错落的迷你项目卡片组成的瀑布流，象征首页的卡片墙；底部是 130 个在展项目、9 大分类、搜索加筛选三个标签。</desc>
+  <desc id="desc">深色底作品集横幅：小桑作品集，副标题 small ideas, better products；右侧是三列错落的迷你项目卡片组成的瀑布流，象征首页的卡片墙；底部是 148 个在展项目、9 大分类、搜索加筛选三个标签。</desc>
 
   <rect width="1200" height="360" rx="26" fill="#101014"/>
 
@@ -13,15 +13,15 @@
     <text x="56" y="210" font-size="19" fill="#a1a1aa">small ideas, better products</text>
     <text x="56" y="240" font-size="18" fill="#8a8a94">项目列表由 data/repos.json 驱动，改一个 JSON 更新全站。</text>
     <g id="chips" font-size="18" fill="#e8e8ec" text-anchor="middle">
-      <g><rect x="56" y="266" width="150" height="36" rx="18" fill="#1c1c22" stroke="#33333d" stroke-width="1.5"/><text x="131" y="290">130 个在展项目</text></g>
+      <g><rect x="56" y="266" width="150" height="36" rx="18" fill="#1c1c22" stroke="#33333d" stroke-width="1.5"/><text x="131" y="290">148 个在展项目</text></g>
       <g><rect x="218" y="266" width="110" height="36" rx="18" fill="#1c1c22" stroke="#33333d" stroke-width="1.5"/><text x="273" y="290">9 大分类</text></g>
       <g><rect x="340" y="266" width="150" height="36" rx="18" fill="#1c1c22" stroke="#33333d" stroke-width="1.5"/><text x="415" y="290">搜索 + 筛选</text></g>
     </g>
   </g>
 
   <g id="masonry">
-    <g><rect x="700" y="36" width="140" height="150" rx="12" fill="#1c1c22" stroke="#2e2e38" stroke-width="1.5"/><rect x="712" y="48" width="116" height="70" rx="8" fill="#2f5d62"/><rect x="712" y="130" width="80" height="10" rx="5" fill="#3a3a44"/><rect x="712" y="148" width="104" height="10" rx="5" fill="#2e2e38"/><rect x="712" y="166" width="60" height="10" rx="5" fill="#2e2e38"/></g>
-    <g><rect x="856" y="36" width="140" height="110" rx="12" fill="#1c1c22" stroke="#2e2e38" stroke-width="1.5"/><rect x="868" y="48" width="116" height="52" rx="8" fill="#7a5c8f"/><rect x="868" y="112" width="80" height="10" rx="5" fill="#3a3a44"/><rect x="868" y="130" width="56" height="10" rx="5" fill="#2e2e38"/></g>
+    <g><rect x="700" y="36" width="140" height="150" rx="12" fill="#1c1c22" stroke="#2e2e38" stroke-width="1.5"/><rect x="712" y="48" width="116" height="70" rx="8" fill="#2f5d62"/><rect x="712" y="148" width="80" height="10" rx="5" fill="#3a3a44"/><rect x="712" y="148" width="104" height="10" rx="5" fill="#2e2e38"/><rect x="712" y="166" width="60" height="10" rx="5" fill="#2e2e38"/></g>
+    <g><rect x="856" y="36" width="140" height="110" rx="12" fill="#1c1c22" stroke="#2e2e38" stroke-width="1.5"/><rect x="868" y="48" width="116" height="52" rx="8" fill="#7a5c8f"/><rect x="868" y="112" width="80" height="10" rx="5" fill="#3a3a44"/><rect x="868" y="148" width="56" height="10" rx="5" fill="#2e2e38"/></g>
     <g><rect x="1012" y="36" width="140" height="170" rx="12" fill="#1c1c22" stroke="#2e2e38" stroke-width="1.5"/><rect x="1024" y="48" width="116" height="86" rx="8" fill="#4a6b8a"/><rect x="1024" y="146" width="80" height="10" rx="5" fill="#3a3a44"/><rect x="1024" y="164" width="104" height="10" rx="5" fill="#2e2e38"/><rect x="1024" y="182" width="70" height="10" rx="5" fill="#2e2e38"/></g>
     <g><rect x="700" y="202" width="140" height="122" rx="12" fill="#1c1c22" stroke="#2e2e38" stroke-width="1.5"/><rect x="712" y="214" width="116" height="58" rx="8" fill="#8a6d4a"/><rect x="712" y="284" width="80" height="10" rx="5" fill="#3a3a44"/><rect x="712" y="302" width="64" height="10" rx="5" fill="#2e2e38"/></g>
     <g><rect x="856" y="162" width="140" height="162" rx="12" fill="#1c1c22" stroke="#2e2e38" stroke-width="1.5"/><rect x="868" y="174" width="116" height="78" rx="8" fill="#5c7a4a"/><rect x="868" y="264" width="80" height="10" rx="5" fill="#3a3a44"/><rect x="868" y="282" width="104" height="10" rx="5" fill="#2e2e38"/><rect x="868" y="300" width="60" height="10" rx="5" fill="#2e2e38"/></g>

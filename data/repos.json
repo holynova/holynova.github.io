@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-22",
-  "totalRepos": 160,
+  "totalRepos": 164,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -184,7 +184,7 @@
             "en": "42 thematic guides to 14 Wu Jun courses, with 17 reviewed Chinese comic slide decks of 15 pages each, full-text search, traceable sources and PDF downloads."
           },
           "url": "https://github.com/holynova/wujun-study",
-          "homepage": "https://xiaosang.cc/wujun-study/",
+          "homepage": "https://wujun-study.xiaosang.cc/",
           "screenshot": "screenshots/wujun-study.png",
           "pushed_at": "2026-11-17",
           "commit_time": "2026-11-17T13:38:17+08:00",
@@ -199,7 +199,7 @@
             "en": "A unified gallery of 3,666 images across 22 collections, with grouped posts, filters, full-screen swiping, downloads, and reusable prompts."
           },
           "url": "https://github.com/holynova/xiaosang-gallery",
-          "homepage": "https://xiaosang.cc/xiaosang-gallery/",
+          "homepage": "https://gallery.xiaosang.cc/",
           "screenshot": "screenshots/xiaosang-gallery.png",
           "pushed_at": "2026-11-16",
           "commit_time": "2026-11-16T10:07:09+08:00",
@@ -1013,6 +1013,44 @@
       },
       "repos": [
         {
+          "name": "verb-theater",
+          "lang": "JavaScript",
+          "url": "https://github.com/holynova/verb-theater",
+          "hidden": false,
+          "title": {
+            "zh": "动词放映室",
+            "en": "DO IT! · Verb Theater"
+          },
+          "desc": {
+            "zh": "跟着十组手势做动作，看同一个下拉动作怎样打开百叶窗、放下卷纸或点亮床头灯。",
+            "en": "Follow ten gestures through a filmed sequence. One downward pull opens blinds, unrolls paper or switches on a light."
+          },
+          "homepage": "https://verb-theater.xiaosang.cc/",
+          "screenshot": "screenshots/verb-theater.webp",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T21:35:20+08:00",
+          "action": "web"
+        },
+        {
+          "name": "band-name-radio",
+          "lang": "JavaScript",
+          "url": "https://github.com/holynova/band-name-radio",
+          "hidden": false,
+          "title": {
+            "zh": "双词电台",
+            "en": "Two-Word Radio"
+          },
+          "desc": {
+            "zh": "按空格生成一个乐队名，点名字重听它的旋律。两组各 308 个词，共 94,864 种组合。",
+            "en": "Press Space to tune in to a band name and its melody. Two lists of 308 words yield 94,864 pairings."
+          },
+          "homepage": "https://band-name-radio.xiaosang.cc/",
+          "screenshot": "screenshots/band-name-radio.webp",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T21:32:06+08:00",
+          "action": "web"
+        },
+        {
           "name": "ucas-particles",
           "lang": "JavaScript",
           "title": {
@@ -1106,19 +1144,19 @@
             "en": "Piano Fireworks"
           },
           "desc": {
-            "zh": "在播放列表中连听三十首器乐曲，看烟花随音符绽放，可自由换景、巡镜并导出 MP4。",
-            "en": "Listen to a playlist of thirty instrumental pieces with score-synchronized fireworks, adjustable scenery and MP4 export."
+            "zh": "任选 55 首曲目，看烟花随音符、冰块敲击或小军鼓的节奏绽放。",
+            "en": "Choose from 55 recordings and watch fireworks respond to piano notes, ice sounds and snare drums."
           },
           "url": "https://github.com/holynova/piano-fireworks",
           "homepage": "https://piano-fireworks.xiaosang.cc/",
-          "screenshot": "screenshots/piano-fireworks.png",
-          "pushed_at": "2026-11-20",
-          "commit_time": "2026-11-20T22:14:26+08:00",
+          "screenshot": "screenshots/piano-fireworks.webp",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T21:44:15+08:00",
           "hidden": false,
           "action": "web",
           "summary": {
-            "zh": "选一首器乐曲，看烟花随音符在夜空绽放。",
-            "en": "Pick an instrumental track and watch fireworks bloom with its notes."
+            "zh": "任选 55 首曲目，看烟花随音符、冰块敲击或小军鼓的节奏绽放。",
+            "en": "Choose from 55 recordings and watch fireworks respond to piano notes, ice sounds and snare drums."
           }
         },
         {
@@ -1417,17 +1455,21 @@
           "name": "sort_animation",
           "lang": "JavaScript",
           "desc": {
-            "zh": "经典排序算法执行过程的可视化动态演示",
-            "en": "Visual step-by-step animations of classic sorting algorithms"
+            "zh": "逐步播放七种排序，对照实心柱、数组快照和伪代码，听见每次比较与交换。",
+            "en": "Step through seven algorithms with solid bars, array snapshots, pseudocode and sound."
           },
           "url": "https://github.com/holynova/sort_animation",
-          "pushed_at": "2019-03-05",
-          "screenshot": "screenshots/sort_animation.png",
+          "pushed_at": "2026-11-22",
+          "screenshot": "screenshots/sort_animation.webp",
           "hidden": false,
           "is_featured": true,
-          "commit_time": "2019-03-05T11:46:32Z",
-          "homepage": "https://xiaosang.cc/sort-animation/",
-          "action": "web"
+          "commit_time": "2026-11-22T21:36:46+08:00",
+          "homepage": "https://sort-animation.xiaosang.cc/",
+          "action": "web",
+          "title": {
+            "zh": "排序观察室",
+            "en": "Sort Lab"
+          }
         }
       ]
     },
@@ -1438,6 +1480,25 @@
         "en": "AI Tools"
       },
       "repos": [
+        {
+          "name": "ai-slop-fieldguide",
+          "lang": "JavaScript",
+          "url": "https://github.com/holynova/ai-slop-fieldguide",
+          "hidden": false,
+          "title": {
+            "zh": "AI Slop 观察图鉴",
+            "en": "AI Slop Field Guide"
+          },
+          "desc": {
+            "zh": "逐项对照 60 个中文样本的原稿和修改稿，8 条关联真实事件或研究。",
+            "en": "Compare 60 Chinese examples and their revisions, including eight linked to real events or studies."
+          },
+          "homepage": "https://ai-slop-fieldguide.xiaosang.cc/",
+          "screenshot": "screenshots/ai-slop-fieldguide.webp",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T21:32:06+08:00",
+          "action": "web"
+        },
         {
           "name": "preference-atlas",
           "title": {
@@ -2176,6 +2237,25 @@
       },
       "repos": [
         {
+          "name": "bramble-brawl",
+          "lang": "TypeScript",
+          "url": "https://github.com/holynova/bramble-brawl",
+          "hidden": false,
+          "title": {
+            "zh": "沙棘乱斗",
+            "en": "Bramble Brawl"
+          },
+          "desc": {
+            "zh": "拖动仙人掌英雄躲过怪潮，进化武器和被动技能，在矿区迎战晶核巨像。",
+            "en": "Dodge the horde with a cactus hero, evolve weapons and passives, and take on the mine boss."
+          },
+          "homepage": "https://bramble-brawl.xiaosang.cc/",
+          "screenshot": "screenshots/bramble-brawl.webp",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T21:32:31+08:00",
+          "action": "game"
+        },
+        {
           "name": "game-shelf",
           "title": {
             "zh": "游匣 Gamefolio",
@@ -2229,19 +2309,19 @@
           },
           "lang": "TypeScript",
           "desc": {
-            "zh": "手机竖屏单指走位，战法道三职业携 23 项技能挑战六章首领，支持中途存档与局外修行。",
-            "en": "A portrait survival game with three classes, 23 skills, six chapter bosses, resumable runs and persistent training."
+            "zh": "单指走位，用战士、法师或道士挑战八章首领。1.1 版有两场独立试招，经典版也可继续。",
+            "en": "Dodge with one finger through eight boss chapters. Version 1.1 adds two boss trials and keeps classic saves separate."
           },
           "url": "https://github.com/holynova/woool-survivor-mobile",
-          "homepage": "https://xiaosang.cc/woool-survivor-mobile/",
-          "screenshot": "screenshots/woool-survivor-mobile.png",
-          "pushed_at": "2026-11-20",
-          "commit_time": "2026-11-20T11:47:49+08:00",
+          "homepage": "https://xiaosang.cc/woool-survivor-mobile/next/",
+          "screenshot": "screenshots/woool-survivor-mobile.webp",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T18:41:47+08:00",
           "hidden": false,
           "action": "game",
           "summary": {
-            "zh": "单指走位，带战士、法师或道士挑战六章首领。",
-            "en": "Dodge with one finger and take one of three classes through six boss chapters."
+            "zh": "单指走位，用战士、法师或道士挑战八章首领。1.1 版有两场独立试招，经典版也可继续。",
+            "en": "Dodge with one finger through eight boss chapters. Version 1.1 adds two boss trials and keeps classic saves separate."
           }
         },
         {
