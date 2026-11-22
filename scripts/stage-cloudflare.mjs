@@ -121,6 +121,7 @@ try {
   const ignoredDirectories = literalPaths.filter(rule => rule.endsWith('/'));
   const files = filesIn(stage).filter(file => {
     const assetPath = relative(stage, file);
+    if (rules.includes('**/.DS_Store') && assetPath.split('/').pop() === '.DS_Store') return false;
     return !ignoredFiles.has(assetPath) &&
       !ignoredDirectories.some(prefix => assetPath.startsWith(prefix));
   });
