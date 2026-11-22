@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-21",
-  "totalRepos": 156,
+  "lastUpdated": "2026-11-22",
+  "totalRepos": 157,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1320,6 +1320,24 @@
         "en": "AI Tools"
       },
       "repos": [
+        {
+          "name": "preference-atlas",
+          "title": {
+            "zh": "风格样本室",
+            "en": "Preference Atlas"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "比较中文写作、界面、配色等 8 个主题的 96 个样本，把评分和备注整理成给 AI 的个人风格指南。",
+            "en": "Rate 96 Chinese writing and visual design samples across eight topics and copy a personal style guide into your AI."
+          },
+          "url": "https://github.com/holynova/preference-atlas",
+          "homepage": "https://preference-atlas.xiaosang.cc/",
+          "screenshot": "screenshots/preference-atlas.png",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T10:40:03+08:00",
+          "hidden": false
+        },
         {
           "name": "token-theater",
           "title": {
