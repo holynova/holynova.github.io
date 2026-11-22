@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-22",
-  "totalRepos": 157,
+  "totalRepos": 158,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -979,6 +979,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "win95-desktop-atlas",
+          "title": {
+            "zh": "Windows 95 桌面图鉴",
+            "en": "Win95 Desktop Atlas"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "八个可交互的复古桌面作品集，可放大植物标本、切换建筑平面图、比较釉色、盖邮戳和辨认星座。",
+            "en": "Eight interactive retro portfolios with herbarium close-ups, architectural plans, glaze comparisons, postmarks and star charts."
+          },
+          "url": "https://github.com/holynova/win95-desktop-atlas",
+          "homepage": "https://win95-desktop-atlas.xiaosang.cc/",
+          "screenshot": "screenshots/win95-desktop-atlas.png",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T14:21:05+08:00",
+          "hidden": false
+        },
         {
           "name": "gravity-watch-face",
           "lang": "TypeScript",
