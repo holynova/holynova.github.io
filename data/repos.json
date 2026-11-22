@@ -154,14 +154,14 @@
             "en": "First Three Years: 0–3 Parenting Guide"
           },
           "desc": {
-            "zh": "移动端优先的 0–3 岁育儿深度手册：蒙台梭利 7 节 + 正面管教 6 节共 4.1 万余字、12 张小黑原创手绘图解与客厅高频危机话术对照。",
-            "en": "Mobile-first 0–3 parenting handbook covering Montessori (7 chapters) and Positive Discipline (6 chapters), 12 hand-drawn illustrations, and interactive crisis scripts."
+            "zh": "移动端优先的 0–3 岁育儿深度手册：蒙台梭利 7 节 + 正面管教 6 节共 4.1 万余字、23 张小黑原创手绘图解与客厅高频危机话术对照。",
+            "en": "Mobile-first 0–3 parenting handbook covering Montessori (7 chapters) and Positive Discipline (6 chapters), 23 hand-drawn illustrations, and interactive crisis scripts."
           },
           "url": "https://github.com/holynova/first-three-years",
           "homepage": "https://first-three-years.xiaosang.cc/",
           "screenshot": "screenshots/first-three-years.png",
-          "pushed_at": "2026-11-21",
-          "commit_time": "2026-11-21T17:03:33+08:00",
+          "pushed_at": "2026-11-22",
+          "commit_time": "2026-11-22T09:44:20+08:00",
           "hidden": false
         },
         {
