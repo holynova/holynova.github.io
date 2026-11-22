@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-22",
-  "totalRepos": 158,
+  "totalRepos": 159,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -979,6 +979,24 @@
         "en": "Creative"
       },
       "repos": [
+        {
+          "name": "beyond-the-print",
+          "title": {
+            "zh": "纸上出界 · 破框摄影五十景",
+            "en": "Beyond the Print"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "50 幅原创 AI 破框摄影，可按题材筛选、逐幅看高清图，在手机上滑动翻页。",
+            "en": "Fifty original AI out-of-frame photographs in a browsable exhibition with subject filters and full-resolution prints."
+          },
+          "url": "https://github.com/holynova/beyond-the-print",
+          "homepage": "https://beyond-the-print.xiaosang.cc/",
+          "screenshot": "screenshots/beyond-the-print.webp",
+          "commit_time": "2026-11-22T14:29:28+08:00",
+          "pushed_at": "2026-11-22",
+          "hidden": false
+        },
         {
           "name": "win95-desktop-atlas",
           "title": {
