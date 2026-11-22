@@ -21,7 +21,7 @@
 ## 这是什么
 
 - **作品集站**：收录 holynova 的网页小项目——游戏、AI 工具、创意视觉、开发工具、生活效率等，每个项目一张卡片：截图、简介、Demo 与仓库链接。
-- **数据驱动**：`index.html` + `js/detail-app.js` 读取 `data/repos.json` 渲染卡片；卡片渐进加载，每批 12 张，滚动到底自动续载。
+- **数据驱动**：`index.html` + `js/detail-app.js` 读取 `data/repos.json` 渲染卡片；卡片渐进加载，每批 12 张，桌面滚动续载，手机手动加载下一批。
 - **站内功能**：搜索（按 `/` 聚焦）、9 个分类筛选、排序（最新 / Star / 字母）、中英双语切换、深浅主题切换、点赞收藏；另有极简版 `classic.html`。
 - **数量**（以 `data/repos.json` 实测为准，2026-11-17）：共 146 条，130 条可见展示，16 条隐藏。
 
@@ -51,7 +51,7 @@
 }
 ```
 
-每条项目包含：`name`（仓库名）、`title`（中英标题）、`desc`（中英简介）、`url`（GitHub 仓库）、`homepage`（Demo 地址）、`screenshot`（缩略图路径）、`lang`（语言）、`pushed_at` / `commit_time`（排序用）、`hidden`（是否隐藏）。
+每条项目包含：`name`（仓库名）、`title`（中英标题）、`desc`（中英简介）、`url`（GitHub 仓库）、`homepage`（Demo 地址）、`screenshot`（缩略图路径）、`lang`（语言）、`pushed_at` / `commit_time`（排序用）、`hidden`（是否隐藏）。可用 `cover` 指定列表封面、`summary` 提供双语短简介、`action` 指定作品入口类型。
 
 **新增一个项目**：
 

@@ -21,7 +21,7 @@ Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang
 ## What It Is
 
 - **Portfolio site**: holynova's small web projects — games, AI tools, creative visuals, dev tools, productivity, and more — each shown as a card with a screenshot, a description, and demo and repo links.
-- **Data-driven**: `index.html` + `js/detail-app.js` render cards from `data/repos.json`; cards load progressively, 12 per batch, with more loading automatically on scroll.
+- **Data-driven**: `index.html` + `js/detail-app.js` render cards from `data/repos.json`; cards load progressively, 12 per batch, with automatic loading on desktop and a manual next-batch button on mobile.
 - **On-site features**: search (press `/` to focus), 9 category filters, sorting (newest / stars / alphabetical), Chinese/English toggle, dark/light themes, likes and bookmarks; a minimal `classic.html` version is also included.
 - **Counts** (measured from `data/repos.json`, 2026-11-17): 146 entries in total, 130 visible, 16 hidden.
 
@@ -51,7 +51,7 @@ Xiaosang Portfolio is the source of holynova's personal portfolio site [xiaosang
 }
 ```
 
-Each project entry has: `name` (repo name), `title` (Chinese/English titles), `desc` (Chinese/English descriptions), `url` (GitHub repo), `homepage` (demo URL), `screenshot` (thumbnail path), `lang` (language), `pushed_at` / `commit_time` (for sorting), `hidden` (whether hidden).
+Each project entry has: `name` (repo name), `title` (Chinese/English titles), `desc` (Chinese/English descriptions), `url` (GitHub repo), `homepage` (demo URL), `screenshot` (thumbnail path), `lang` (language), `pushed_at` / `commit_time` (for sorting), `hidden` (whether hidden). Optional fields include `cover` for a list thumbnail, `summary` for a short bilingual description, and `action` for the destination type.
 
 **Adding a project**:
 

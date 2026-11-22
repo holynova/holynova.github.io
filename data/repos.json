@@ -144,7 +144,13 @@
           "screenshot": "screenshots/parenting-reader.png",
           "pushed_at": "2026-11-21",
           "commit_time": "2026-11-21T17:13:46+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read",
+          "summary": {
+            "zh": "从孩子自己倒一杯水读起，看手绘场景里的蒙台梭利与正面管教。",
+            "en": "Start with a child pouring water and explore Montessori and Positive Discipline through illustrated scenes."
+          },
+          "cover": "screenshots/parenting-reader-cover.webp"
         },
         {
           "name": "first-three-years",
@@ -162,7 +168,13 @@
           "screenshot": "screenshots/first-three-years.png",
           "pushed_at": "2026-11-22",
           "commit_time": "2026-11-22T09:44:20+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read",
+          "summary": {
+            "zh": "选一个今晚遇到的育儿难题，读应对话术和手绘图解。",
+            "en": "Pick a parenting dilemma from tonight and explore illustrated ways to respond."
+          },
+          "cover": "screenshots/first-three-years-cover.webp"
         },
         {
           "name": "wujun-study",
@@ -176,7 +188,8 @@
           "screenshot": "screenshots/wujun-study.png",
           "pushed_at": "2026-11-17",
           "commit_time": "2026-11-17T13:38:17+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read"
         },
         {
           "name": "xiaosang-gallery",
@@ -208,7 +221,8 @@
           "screenshot": "screenshots/bernstein-ypc.png",
           "pushed_at": "2026-11-11",
           "commit_time": "2026-11-11T19:18:06+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read"
         },
         {
           "name": "x-prompt-library",
@@ -250,7 +264,8 @@
           "screenshot": "screenshots/world-unsolved-mysteries.png",
           "pushed_at": "2026-10-25",
           "commit_time": "2026-10-25T17:45:08+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read"
         },
         {
           "name": "baking-variable-search",
@@ -264,7 +279,8 @@
           "screenshot": "screenshots/baking-variable-search.png",
           "pushed_at": "2026-10-25",
           "commit_time": "2026-10-25T17:42:08+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "web"
         },
         {
           "name": "baking-encyclopedia",
@@ -278,7 +294,8 @@
           "screenshot": "screenshots/baking-encyclopedia.png",
           "pushed_at": "2026-10-25",
           "commit_time": "2026-10-25T17:39:41+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read"
         },
         {
           "name": "rock-in-pictures",
@@ -306,7 +323,8 @@
           "screenshot": "screenshots/podcast-atlas.png",
           "pushed_at": "2026-10-13",
           "commit_time": "2026-10-13T00:38:33+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read"
         },
         {
           "name": "up-series-70years",
@@ -324,7 +342,8 @@
           "title": {
             "zh": "《人生七年》时间线",
             "en": "Up Series 70 Years"
-          }
+          },
+          "action": "read"
         },
         {
           "name": "forty-classic-books",
@@ -342,7 +361,8 @@
           "title": {
             "zh": "经典书导读 (112 本严选核实版)",
             "en": "Classic Books Guide (112 Verified Books)"
-          }
+          },
+          "action": "read"
         },
         {
           "name": "dihao",
@@ -360,7 +380,8 @@
           "screenshot": "screenshots/dihao.png",
           "pushed_at": "2026-10-07",
           "commit_time": "2026-10-07T18:32:26+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "read"
         },
         {
           "name": "translucent-toy-guard",
@@ -505,7 +526,8 @@
           "commit_time": "2026-10-04T23:21:05+08:00",
           "hidden": false,
           "stars": 0,
-          "is_featured": false
+          "is_featured": false,
+          "action": "read"
         },
         {
           "name": "game-narrative-archive",
@@ -520,7 +542,8 @@
           "homepage": "https://xiaosang.cc/game-narrative-archive/",
           "screenshot": "screenshots/game-narrative-archive.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "read"
         },
         {
           "name": "the-creation-variants",
@@ -549,7 +572,8 @@
           "screenshot": "screenshots/system-design-algorithms-js.png",
           "commit_time": "2026-09-24T00:36:52Z",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "read"
         },
         {
           "name": "system-design-learning-lab",
@@ -564,7 +588,8 @@
           "screenshot": "screenshots/system-design-learning-lab.png",
           "commit_time": "2026-09-08T16:46:38.242Z",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "rubber-stamp-world-cities",
@@ -579,7 +604,8 @@
           "screenshot": "screenshots/rubber-stamp-world-cities.png",
           "commit_time": "2026-10-02T02:12:00Z",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "city-stamp",
@@ -594,7 +620,8 @@
           "screenshot": "screenshots/city-stamp.jpg",
           "commit_time": "2026-10-02T15:04:47+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "citypop-shanghai-exploration",
@@ -699,7 +726,8 @@
           "homepage": "https://health-book.xiaosang.cc/",
           "screenshot": "screenshots/health-book.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "read"
         },
         {
           "name": "poem-formula",
@@ -714,7 +742,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/poem-formula.png",
-          "commit_time": "2026-08-07T13:46:14Z"
+          "commit_time": "2026-08-07T13:46:14Z",
+          "action": "web"
         },
         {
           "name": "web-motion-showcase",
@@ -864,7 +893,8 @@
           "screenshot": "screenshots/char_finder.png",
           "commit_time": "2026-06-20T20:01:51+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "js-go-compare",
@@ -894,7 +924,8 @@
           "commit_time": "2026-08-11T00:22:48+09:00",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/ui-compare-privacy-policy.png"
+          "screenshot": "screenshots/ui-compare-privacy-policy.png",
+          "action": "read"
         },
         {
           "name": "industry-book-recommender",
@@ -953,7 +984,8 @@
           "screenshot": "screenshots/holiday-visualizer.png",
           "hidden": false,
           "is_featured": true,
-          "commit_time": "2026-11-15T23:53:07+08:00"
+          "commit_time": "2026-11-15T23:53:07+08:00",
+          "action": "web"
         },
         {
           "name": "game-rating-lookup",
@@ -968,7 +1000,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/game-rating-lookup.png",
-          "commit_time": "2026-08-08T00:49:22Z"
+          "commit_time": "2026-08-08T00:49:22Z",
+          "action": "web"
         }
       ]
     },
@@ -995,7 +1028,11 @@
           "screenshot": "screenshots/beyond-the-print.webp",
           "commit_time": "2026-11-22T14:29:28+08:00",
           "pushed_at": "2026-11-22",
-          "hidden": false
+          "hidden": false,
+          "summary": {
+            "zh": "滑动翻看 50 幅破框摄影，点开细看纸面内外的细节。",
+            "en": "Swipe through 50 photographs and open a print to see what breaks its frame."
+          }
         },
         {
           "name": "win95-desktop-atlas",
@@ -1013,7 +1050,11 @@
           "screenshot": "screenshots/win95-desktop-atlas.png",
           "pushed_at": "2026-11-22",
           "commit_time": "2026-11-22T14:42:28+08:00",
-          "hidden": false
+          "hidden": false,
+          "summary": {
+            "zh": "在 Windows 95 窗口里，用同一份素材比较十种网页版式。",
+            "en": "Compare ten web layouts using the same material in a Windows 95 window."
+          }
         },
         {
           "name": "gravity-watch-face",
@@ -1031,7 +1072,13 @@
           "screenshot": "screenshots/gravity-watch-face.png",
           "pushed_at": "2026-11-21",
           "commit_time": "2026-11-21T17:36:00+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "web",
+          "summary": {
+            "zh": "倾斜手机，看篮球在球场里滚动。",
+            "en": "Tilt your phone to roll the basketballs across the court."
+          },
+          "cover": "screenshots/gravity-watch-face-cover.webp"
         },
         {
           "name": "piano-fireworks",
@@ -1049,7 +1096,12 @@
           "screenshot": "screenshots/piano-fireworks.png",
           "pushed_at": "2026-11-20",
           "commit_time": "2026-11-20T22:14:26+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "web",
+          "summary": {
+            "zh": "选一首器乐曲，看烟花随音符在夜空绽放。",
+            "en": "Pick an instrumental track and watch fireworks bloom with its notes."
+          }
         },
         {
           "name": "pingye",
@@ -1095,7 +1147,8 @@
           "screenshot": "screenshots/origami-studio.png",
           "pushed_at": "2026-10-23",
           "commit_time": "2026-10-23T20:24:19+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "web"
         },
         {
           "name": "fourier-atlas",
@@ -1131,7 +1184,8 @@
           "screenshot": "screenshots/jade-cards-lab.png",
           "pushed_at": "2026-10-19",
           "commit_time": "2026-10-19T14:40:17+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "web"
         },
         {
           "name": "doraemon-house-3d",
@@ -1149,7 +1203,8 @@
           "title": {
             "zh": "哆啦A梦的家 3D导览",
             "en": "Doraemon House 3D"
-          }
+          },
+          "action": "web"
         },
         {
           "name": "time-slider-clock",
@@ -1164,7 +1219,8 @@
           "pushed_at": "2026-10-09",
           "commit_time": "2026-10-09T10:37:15+08:00",
           "hidden": false,
-          "stars": 0
+          "stars": 0,
+          "action": "web"
         },
         {
           "name": "photo_align",
@@ -1194,7 +1250,8 @@
           "homepage": "https://xiaosang.cc/cut-and-remix/",
           "screenshot": "screenshots/cut_and_remix.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "win98-screen-saver",
@@ -1224,7 +1281,8 @@
           "screenshot": "screenshots/kaleidoscope-studio.png",
           "commit_time": "2026-08-13T00:42:23+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "card-3d-depth-lab",
@@ -1255,7 +1313,8 @@
           "commit_time": "2025-11-21T21:37:20+08:00",
           "hidden": false,
           "is_featured": true,
-          "homepage": "https://xiaosang.cc/spinning-drawer/"
+          "homepage": "https://xiaosang.cc/spinning-drawer/",
+          "action": "web"
         },
         {
           "name": "hand_fireworks",
@@ -1270,7 +1329,8 @@
           "commit_time": "2026-01-01T11:13:29+08:00",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/hand_fireworks.png"
+          "screenshot": "screenshots/hand_fireworks.png",
+          "action": "web"
         },
         {
           "name": "raytracing-demo",
@@ -1285,7 +1345,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/raytracing-demo.png",
-          "commit_time": "2026-08-11T08:52:59Z"
+          "commit_time": "2026-08-11T08:52:59Z",
+          "action": "web"
         },
         {
           "name": "string_alchemy",
@@ -1300,7 +1361,8 @@
           "screenshot": "screenshots/string_alchemy.png",
           "commit_time": "2021-12-13T09:39:00+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "50-seeds",
@@ -1330,7 +1392,8 @@
           "commit_time": "2026-08-19T09:59:04+08:00",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/music_pulse.png"
+          "screenshot": "screenshots/music_pulse.png",
+          "action": "web"
         },
         {
           "name": "sort_animation",
@@ -1345,7 +1408,8 @@
           "hidden": false,
           "is_featured": true,
           "commit_time": "2019-03-05T11:46:32Z",
-          "homepage": "https://xiaosang.cc/sort-animation/"
+          "homepage": "https://xiaosang.cc/sort-animation/",
+          "action": "web"
         }
       ]
     },
@@ -1372,7 +1436,11 @@
           "screenshot": "screenshots/preference-atlas.png",
           "pushed_at": "2026-11-22",
           "commit_time": "2026-11-22T10:40:03+08:00",
-          "hidden": false
+          "hidden": false,
+          "summary": {
+            "zh": "给写作、界面和配色样本打分，生成自己的 AI 风格指南。",
+            "en": "Rate writing, interface and color samples to build your own AI style guide."
+          }
         },
         {
           "name": "token-theater",
@@ -1453,7 +1521,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/image_local_llm.png",
-          "commit_time": "2026-08-08T00:43:16Z"
+          "commit_time": "2026-08-08T00:43:16Z",
+          "action": "guide"
         },
         {
           "name": "opencli-pipeline",
@@ -1468,7 +1537,8 @@
           "hidden": false,
           "is_featured": true,
           "commit_time": "2026-07-18T08:14:31Z",
-          "screenshot": "screenshots/opencli-pipeline.png"
+          "screenshot": "screenshots/opencli-pipeline.png",
+          "action": "guide"
         },
         {
           "name": "notebooklm_one_by_one",
@@ -1483,7 +1553,8 @@
           "commit_time": "2026-04-05T10:27:09+08:00",
           "hidden": false,
           "is_featured": true,
-          "homepage": "https://xiaosang.cc/notebooklm-one-by-one/"
+          "homepage": "https://xiaosang.cc/notebooklm-one-by-one/",
+          "action": "guide"
         },
         {
           "name": "auto-xiao-hong-shu",
@@ -1498,7 +1569,8 @@
           "hidden": false,
           "is_featured": true,
           "homepage": "https://xiaosang.cc/auto-xiao-hong-shu/",
-          "screenshot": "screenshots/auto-xiao-hong-shu.png"
+          "screenshot": "screenshots/auto-xiao-hong-shu.png",
+          "action": "guide"
         }
       ]
     },
@@ -1657,7 +1729,12 @@
           "screenshot": "screenshots/domestic-site-check.png",
           "pushed_at": "2026-11-19",
           "commit_time": "2026-11-19T08:44:49.626Z",
-          "hidden": false
+          "hidden": false,
+          "action": "web",
+          "summary": {
+            "zh": "输入网址，对比中国大陆各地的访问状态和耗时。",
+            "en": "Enter a URL to compare response times and availability across mainland China."
+          }
         },
         {
           "name": "image-gallery-template",
@@ -1672,7 +1749,8 @@
           "screenshot": "screenshots/image-gallery-template.png",
           "commit_time": "2026-09-22T20:08:00+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "guide"
         },
         {
           "name": "tiny-icons",
@@ -1687,7 +1765,8 @@
           "homepage": "https://tiny-icons.xiaosang.cc/",
           "screenshot": "screenshots/tiny-icons.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "equal_width",
@@ -1703,7 +1782,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/equal_width.png",
-          "commit_time": "2026-08-11T08:50:42Z"
+          "commit_time": "2026-08-11T08:50:42Z",
+          "action": "web"
         },
         {
           "name": "one-punch",
@@ -1734,7 +1814,8 @@
           "commit_time": "2025-06-03T23:23:09+08:00",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/json_to_ts.png"
+          "screenshot": "screenshots/json_to_ts.png",
+          "action": "web"
         },
         {
           "name": "multi-screen-view",
@@ -1749,7 +1830,8 @@
           "screenshot": "screenshots/multi-screen-view.png",
           "commit_time": "2026-08-01T00:26:05+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "guide"
         },
         {
           "name": "chrome-session-tui",
@@ -1764,7 +1846,8 @@
           "commit_time": "2026-08-02T00:03:43+08:00",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/chrome-session-tui.png"
+          "screenshot": "screenshots/chrome-session-tui.png",
+          "action": "mac"
         },
         {
           "name": "photo-atlas",
@@ -1809,7 +1892,12 @@
           "screenshot": "screenshots/vpn-ledger.png",
           "pushed_at": "2026-11-19",
           "commit_time": "2026-11-19T13:59:05+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "windows",
+          "summary": {
+            "zh": "在 Windows 上按应用查看用量，找出谁在消耗 VPN 流量。",
+            "en": "See which Windows apps are using your VPN traffic."
+          }
         },
         {
           "name": "shanghai-metro-night",
@@ -1827,7 +1915,8 @@
           "screenshot": "screenshots/shanghai-metro-night.png",
           "pushed_at": "2026-11-16",
           "commit_time": "2026-11-16T22:16:23+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "web"
         },
         {
           "name": "hotspot-ledger",
@@ -1845,7 +1934,8 @@
           "screenshot": "screenshots/hotspot-ledger.png",
           "pushed_at": "2026-11-16",
           "commit_time": "2026-11-16T16:47:11+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "mac"
         },
         {
           "name": "psy-talks",
@@ -1875,7 +1965,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/xiaoyuzhou-transcript-downloader.png",
-          "commit_time": "2026-08-11T08:55:04Z"
+          "commit_time": "2026-08-11T08:55:04Z",
+          "action": "guide"
         },
         {
           "name": "bookshelf_manager",
@@ -1890,7 +1981,8 @@
           "screenshot": "screenshots/bookshelf_manager.png",
           "commit_time": "2026-05-28T10:16:39+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "mouse_scroll_heath_check",
@@ -1905,7 +1997,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/mouse_scroll_heath_check.png",
-          "commit_time": "2026-08-11T08:52:35Z"
+          "commit_time": "2026-08-11T08:52:35Z",
+          "action": "web"
         },
         {
           "name": "shanghai-public-facilities",
@@ -1935,7 +2028,8 @@
           "screenshot": "screenshots/city-public-facilities.png",
           "hidden": false,
           "is_featured": true,
-          "commit_time": "2026-08-08T15:29:22Z"
+          "commit_time": "2026-08-08T15:29:22Z",
+          "action": "web"
         },
         {
           "name": "holynova.github.io",
@@ -1966,7 +2060,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/hotpot-timer.png",
-          "commit_time": "2026-08-31T00:00:00+08:00"
+          "commit_time": "2026-08-31T00:00:00+08:00",
+          "action": "web"
         },
         {
           "name": "pdf2wechat",
@@ -1982,7 +2077,8 @@
           "commit_time": "2025-11-29T13:27:28+08:00",
           "hidden": false,
           "is_featured": true,
-          "homepage": "https://xiaosang.cc/pdf2wechat/"
+          "homepage": "https://xiaosang.cc/pdf2wechat/",
+          "action": "web"
         },
         {
           "name": "douban-quark-clawer",
@@ -2013,7 +2109,8 @@
           "hidden": false,
           "is_featured": true,
           "homepage": "https://xiaosang.cc/life-bar-chart/",
-          "screenshot": "screenshots/life_bar_chart.png"
+          "screenshot": "screenshots/life_bar_chart.png",
+          "action": "web"
         },
         {
           "name": "pre_tax_salary_calculator",
@@ -2028,7 +2125,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/pre_tax_salary_calculator.png",
-          "homepage": "https://xiaosang.cc/pre-tax-salary-calculator/"
+          "homepage": "https://xiaosang.cc/pre-tax-salary-calculator/",
+          "action": "web"
         },
         {
           "name": "offer_calculator",
@@ -2043,7 +2141,8 @@
           "commit_time": "2022-05-21T16:11:27+08:00",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/offer_calculator.png"
+          "screenshot": "screenshots/offer_calculator.png",
+          "action": "web"
         }
       ]
     },
@@ -2070,7 +2169,12 @@
           "screenshot": "screenshots/game-shelf.png",
           "pushed_at": "2026-11-19",
           "commit_time": "2026-11-19T13:50:09+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "windows",
+          "summary": {
+            "zh": "在 Windows 上从封面启动游戏，查看评分和磁盘占用。",
+            "en": "Launch Windows games from their covers and check ratings and disk usage."
+          }
         },
         {
           "name": "plant-survivors-ui",
@@ -2088,7 +2192,12 @@
           "screenshot": "screenshots/plant-survivors-ui.png",
           "pushed_at": "2026-11-18",
           "commit_time": "2026-11-18T00:30:00+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "game",
+          "summary": {
+            "zh": "在营地选好植物，再到三张地图里迎战尸潮。",
+            "en": "Choose plants in camp, then take on zombie waves across three maps."
+          }
         },
         {
           "name": "woool-survivor-mobile",
@@ -2106,7 +2215,12 @@
           "screenshot": "screenshots/woool-survivor-mobile.png",
           "pushed_at": "2026-11-20",
           "commit_time": "2026-11-20T11:47:49+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "game",
+          "summary": {
+            "zh": "单指走位，带战士、法师或道士挑战六章首领。",
+            "en": "Dodge with one finger and take one of three classes through six boss chapters."
+          }
         },
         {
           "name": "woool-survivor-game",
@@ -2120,7 +2234,8 @@
           "screenshot": "screenshots/woool-survivor-game.png",
           "pushed_at": "2026-11-10",
           "commit_time": "2026-11-10T16:39:52+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "game"
         },
         {
           "name": "mafa-survivor",
@@ -2134,7 +2249,8 @@
           "screenshot": "screenshots/mafa-survivor.png",
           "pushed_at": "2026-11-16",
           "commit_time": "2026-11-02T22:55:39+08:00",
-          "hidden": false
+          "hidden": false,
+          "action": "game"
         },
         {
           "name": "24-solver",
@@ -2152,7 +2268,8 @@
           "title": {
             "zh": "24点纸牌求解器",
             "en": "24 Solver"
-          }
+          },
+          "action": "web"
         },
         {
           "name": "rogue-snake",
@@ -2196,7 +2313,8 @@
           "commit_time": "2026-10-04T23:21:05+08:00",
           "hidden": false,
           "stars": 0,
-          "is_featured": false
+          "is_featured": false,
+          "action": "game"
         },
         {
           "name": "rift-survivors",
@@ -2210,7 +2328,8 @@
           "pushed_at": "2026-10-04",
           "hidden": false,
           "url": "https://github.com/holynova/rift-survivors",
-          "commit_time": "2026-10-04T23:21:05+08:00"
+          "commit_time": "2026-10-04T23:21:05+08:00",
+          "action": "game"
         },
         {
           "name": "mafa-survivor-game",
@@ -2224,7 +2343,8 @@
           "pushed_at": "2026-11-02",
           "hidden": false,
           "url": "https://github.com/holynova/mafa-survivor-game",
-          "commit_time": "2026-11-02T22:48:00+08:00"
+          "commit_time": "2026-11-02T22:48:00+08:00",
+          "action": "game"
         },
         {
           "name": "battle-city-roguelike",
@@ -2239,7 +2359,8 @@
           "homepage": "https://battle-city-roguelike.xiaosang.cc/",
           "screenshot": "screenshots/battle-city-roguelike.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "game"
         },
         {
           "name": "iron-corridor",
@@ -2314,7 +2435,8 @@
           "homepage": "https://xiaosang.cc/neon-survivors/",
           "screenshot": "screenshots/neon-survivors.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "game"
         },
         {
           "name": "web-survivor-game-agy",
@@ -2329,7 +2451,8 @@
           "homepage": "https://xiaosang.cc/demos/web-survivor-game-agy/",
           "screenshot": "screenshots/web-survivor-game-agy.png",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "game"
         },
         {
           "name": "one_second_movie",
@@ -2359,7 +2482,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/24points.png",
-          "commit_time": "2026-08-11T08:57:16Z"
+          "commit_time": "2026-08-11T08:57:16Z",
+          "action": "web"
         },
         {
           "name": "keyboard_sentence",
@@ -2374,7 +2498,8 @@
           "screenshot": "screenshots/keyboard_sentence.png",
           "commit_time": "2026-05-23T11:31:01+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         },
         {
           "name": "tank-tactics-game",
@@ -2389,7 +2514,8 @@
           "commit_time": "2026-10-02T11:39:20+08:00",
           "hidden": false,
           "is_featured": true,
-          "screenshot": "screenshots/tank-tactics-game.png"
+          "screenshot": "screenshots/tank-tactics-game.png",
+          "action": "game"
         },
         {
           "name": "iron-flank",
@@ -2406,7 +2532,8 @@
             "zh": "铁甲夹击",
             "en": "Iron Flank"
           },
-          "screenshot": "screenshots/iron-flank.png"
+          "screenshot": "screenshots/iron-flank.png",
+          "action": "game"
         },
         {
           "name": "rogue-bastion",
@@ -2423,7 +2550,8 @@
             "zh": "坦克要塞",
             "en": "Rogue Bastion"
           },
-          "screenshot": "screenshots/rogue-bastion.png"
+          "screenshot": "screenshots/rogue-bastion.png",
+          "action": "game"
         },
         {
           "name": "mobile-sensor-playground",
@@ -2438,7 +2566,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/mobile-sensor-playground.png",
-          "commit_time": "2026-08-08T00:59:47Z"
+          "commit_time": "2026-08-08T00:59:47Z",
+          "action": "web"
         },
         {
           "name": "mercator-country-compare",
@@ -2453,7 +2582,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/mercator-country-compare.png",
-          "commit_time": "2026-08-08T00:58:53Z"
+          "commit_time": "2026-08-08T00:58:53Z",
+          "action": "web"
         },
         {
           "name": "texas-holdem-hand-probability",
@@ -2468,7 +2598,8 @@
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/texas-holdem-hand-probability.png",
-          "commit_time": "2026-08-08T00:44:48Z"
+          "commit_time": "2026-08-08T00:44:48Z",
+          "action": "web"
         },
         {
           "name": "emoji_life",
@@ -2483,7 +2614,8 @@
           "screenshot": "screenshots/emoji_life.png",
           "commit_time": "2026-05-23T21:18:27+08:00",
           "hidden": false,
-          "is_featured": true
+          "is_featured": true,
+          "action": "web"
         }
       ]
     },
@@ -2507,7 +2639,8 @@
           "pushed_at": "2026-10-04",
           "commit_time": "2026-10-04T23:21:03+08:00",
           "hidden": false,
-          "stars": 0
+          "stars": 0,
+          "action": "web"
         },
         {
           "name": "spud-squad",
@@ -2522,7 +2655,8 @@
           "homepage": "https://xiaosang.cc/spud-squad/",
           "screenshot": "screenshots/spud-squad.png",
           "hidden": false,
-          "is_featured": false
+          "is_featured": false,
+          "action": "game"
         },
         {
           "name": "tuber-survivors",
@@ -2537,7 +2671,8 @@
           "homepage": "https://xiaosang.cc/tuber-survivors/",
           "screenshot": "screenshots/tuber-survivors.png",
           "hidden": false,
-          "is_featured": false
+          "is_featured": false,
+          "action": "game"
         },
         {
           "name": "last-spud",

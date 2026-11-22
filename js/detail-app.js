@@ -7,10 +7,16 @@
 (function() {
   'use strict';
 
-  // Immediately initiate data fetch in background to overlap with DOM readiness
-  const reposFetchPromise = fetch('./data/repos.json', { cache: 'no-store' })
-    .then(res => res.ok ? res.json() : null)
-    .catch(() => null);
+  async function fetchCatalog() {
+    const response = await fetch('./data/repos.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Could not load the project catalog');
+    const data = await response.json();
+    if (!Array.isArray(data?.categories)) throw new Error('Invalid project catalog');
+    return data;
+  }
+
+  // Start the first request while the browser finishes parsing the document.
+  const initialCatalog = fetchCatalog().catch(() => null);
 
   // Load Likes from localStorage
   function loadLikes() {
@@ -44,26 +50,29 @@
 
   const BATCH_SIZE = 12; // Keep the first paint light while making progress visible.
 
+  const mobileLayout = window.matchMedia('(max-width: 768px)');
+
   const COPY = {
     zh: {
-      searchPlaceholder: '搜索项目、描述或语言（按 / 聚焦）…',
+      searchPlaceholder: '搜索作品',
       clearSearch: '清除搜索',
       sort: '排序',
       all: '全部',
-      liked: '已点赞',
+      liked: '已收藏',
       favorite: '收藏 {name}',
       unfavorite: '取消收藏 {name}',
-      liveDemo: '在线演示',
-      github: 'GitHub 源码',
-      liveDemoAction: 'Try Live Demo',
-      githubAction: 'GitHub',
+      open: '打开作品', web: '在线体验', game: '开始游戏', read: '在线阅读',
+      windows: '查看 Windows 版', mac: '查看 Mac 版', extension: '查看扩展', guide: '查看使用说明',
+      github: '查看源码', filter: '筛选', showResults: '查看 {total} 个作品',
+      loadingCatalog: '正在加载作品…', intro: '小桑的工程与设计作品',
       resultSummary: '显示 {shown} / {total} 个项目',
       noResults: '没有符合条件的项目',
       clearFilters: '清除筛选',
-      loadMore: '加载更多项目',
+      loadMore: '再看 {count} 个作品',
+      progress: '已看 {shown} / {total}',
       loading: '加载更多项目…',
       allShown: '已显示全部 {total} 个项目',
-      emptyFavoritesTitle: '暂无已点赞的项目',
+      emptyFavoritesTitle: '还没有收藏的作品',
       emptyFavoritesBody: '点击卡片顶部的爱心按钮即可收藏',
       emptySearchTitle: '未找到相关项目',
       emptySearchBody: '请尝试调整搜索关键词或选择其他分类',
@@ -74,30 +83,30 @@
       languageToChinese: '切换为中文',
       themeToLight: '切换到浅色模式',
       themeToDark: '切换到深色模式',
-      curatedBy: '精选自',
-      heroSubtitle: '精选收录 {total} 个工程与设计项目，持续探索更好的产品。'
+      heroSubtitle: '小桑的 {total} 个工程与设计作品'
     },
     en: {
-      searchPlaceholder: 'Search projects, descriptions, or languages (press / to focus)…',
+      searchPlaceholder: 'Search projects',
       clearSearch: 'Clear search',
       sort: 'Sort projects',
       all: 'All',
-      liked: 'Liked',
+      liked: 'Saved',
       favorite: 'Save {name}',
       unfavorite: 'Remove {name} from saved projects',
-      liveDemo: 'Try Live Demo',
-      github: 'GitHub Source',
-      liveDemoAction: 'Try Live Demo',
-      githubAction: 'GitHub',
+      open: 'Open project', web: 'Try online', game: 'Play game', read: 'Read online',
+      windows: 'View Windows version', mac: 'View Mac version', extension: 'View extension', guide: 'View guide',
+      github: 'View source', filter: 'Filters', showResults: 'Show {total} projects',
+      loadingCatalog: 'Loading projects…', intro: 'Engineering and design by Xiaosang',
       resultSummary: 'Showing {shown} of {total} projects',
       noResults: 'No matching projects',
       clearFilters: 'Clear filters',
-      loadMore: 'Load more projects',
+      loadMore: 'Show {count} more',
+      progress: 'Showing {shown} of {total}',
       loading: 'Loading more projects…',
       allShown: 'All {total} curated projects displayed',
-      emptyFavoritesTitle: 'No liked projects yet',
+      emptyFavoritesTitle: 'No saved projects yet',
       emptyFavoritesBody: 'Use the heart button at the top of any card to save it',
-      emptySearchTitle: 'No matching repositories found',
+      emptySearchTitle: 'No matching projects',
       emptySearchBody: 'Try adjusting your search terms or choosing another category',
       loadErrorTitle: 'The project directory is temporarily unavailable',
       loadErrorBody: 'Check your connection and try again.',
@@ -106,8 +115,7 @@
       languageToChinese: '切换为中文',
       themeToLight: 'Switch to light mode',
       themeToDark: 'Switch to dark mode',
-      curatedBy: 'Curated by',
-      heroSubtitle: 'A curated collection of {total} fine-crafted engineering & design projects shaping better products.'
+      heroSubtitle: '{total} engineering and design projects by Xiaosang'
     }
   };
 
@@ -218,6 +226,7 @@
 
   // Application State
   const state = {
+    catalogStatus: 'loading',
     allRepos: [],
     categories: [],
     activeCategory: 'all', // 'all', 'favorites', or category id
@@ -246,7 +255,7 @@
     if (state.likedRepos.size > 0) {
       syncLikesToServer(Array.from(state.likedRepos));
     }
-    await loadData();
+    await loadData(initialCatalog);
   }
 
   function cacheDOM() {
@@ -255,7 +264,12 @@
     DOM.searchClearBtn = document.getElementById('search-clear-btn');
     DOM.searchKeyHint = document.getElementById('search-kbd-hint');
     DOM.pillsContainer = document.getElementById('category-pills');
-    DOM.totalCounter = document.getElementById('total-counter');
+    DOM.filterSheet = document.getElementById('filter-sheet');
+    DOM.filterTrigger = document.getElementById('filter-trigger');
+    DOM.filterLabel = document.getElementById('filter-label');
+    DOM.showResults = document.getElementById('show-results');
+    DOM.mobileSort = document.getElementById('mobile-sort');
+    DOM.contact = document.getElementById('author-contact');
     DOM.resultsSummary = document.getElementById('results-summary');
     DOM.clearFiltersBtn = document.getElementById('clear-filters-btn');
     DOM.sortBtn = document.getElementById('sort-dropdown-btn');
@@ -284,16 +298,42 @@
   }
 
   function updateHeroCopy() {
-    const total = state.allRepos.length || 84;
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    if (heroSubtitle) heroSubtitle.textContent = t('heroSubtitle', { total });
+    document.querySelector('.hero-subtitle').textContent = state.catalogStatus === 'ready'
+      ? t('heroSubtitle', { total: state.allRepos.length }) : t('intro');
+  }
+
+  function placeCategoryControls() {
+    if (DOM.filterSheet.open) DOM.filterSheet.close();
+    const container = document.getElementById(mobileLayout.matches ? 'mobile-categories' : 'desktop-categories');
+    container.appendChild(DOM.pillsContainer);
+    setSortMenuOpen(false);
+  }
+
+  function showFirstResult() {
+    const top = DOM.grid.getBoundingClientRect().top;
+    const toolbarHeight = DOM.stickyToolbar.offsetHeight;
+    if (top < toolbarHeight) window.scrollBy({ top: top - toolbarHeight - 12, behavior: 'instant' });
+  }
+
+  function updateFilterTrigger() {
+    const selected = DOM.pillsContainer.querySelector('[aria-pressed="true"]');
+    let label = t('filter');
+    if (selected && state.activeCategory !== 'all') {
+      label = selected.querySelector('.cat-label').textContent + ' · ' + selected.querySelector('.cat-count-badge').textContent;
+    } else if (state.sortMode !== 'latest') {
+      label += ' · ' + DOM.sortLabel.textContent;
+    }
+    DOM.filterLabel.textContent = label;
+    DOM.filterTrigger.setAttribute('aria-label', state.activeCategory === 'all' ? label : t('filter') + ' · ' + label);
+    DOM.showResults.textContent = t('showResults', { total: state.filteredRepos.length });
   }
 
   function updateSortControls() {
     const labels = {
-      zh: { latest: '最新', stars: 'Star', alpha: '字母顺序' },
-      en: { latest: 'Latest', stars: 'Star', alpha: 'Name A-Z' }
+      zh: { latest: '最新', stars: '星标最多', alpha: '字母顺序' },
+      en: { latest: 'Latest', stars: 'Most stars', alpha: 'Name A-Z' }
     };
+    DOM.mobileSort.querySelectorAll('input').forEach(input => { input.checked = input.value === state.sortMode; });
     if (DOM.sortLabel) DOM.sortLabel.textContent = labels[state.currentLang][state.sortMode] || state.sortMode;
     document.querySelectorAll('.sort-menu-item').forEach(item => {
       const selected = item.getAttribute('data-sort') === state.sortMode;
@@ -321,6 +361,39 @@
     window.addEventListener('touchmove', () => { state.userHasScrolled = true; }, { passive: true });
     updateScrollShadow();
 
+    let categoryOnOpen;
+    let sortOnOpen;
+    placeCategoryControls();
+    mobileLayout.addEventListener('change', placeCategoryControls);
+    DOM.filterTrigger.addEventListener('click', () => {
+      categoryOnOpen = state.activeCategory;
+      sortOnOpen = state.sortMode;
+      DOM.filterSheet.showModal();
+      DOM.filterTrigger.setAttribute('aria-expanded', 'true');
+    });
+    DOM.filterSheet.addEventListener('close', () => {
+      DOM.filterTrigger.setAttribute('aria-expanded', 'false');
+      if (mobileLayout.matches) {
+        focusElement(DOM.filterTrigger);
+        if (categoryOnOpen !== state.activeCategory || sortOnOpen !== state.sortMode) showFirstResult();
+      }
+    });
+    DOM.filterSheet.addEventListener('click', event => {
+      if (event.target !== DOM.filterSheet) return;
+      const rect = DOM.filterSheet.getBoundingClientRect();
+      if (event.clientY < rect.top || event.clientX < rect.left || event.clientX > rect.right || event.clientY > rect.bottom) DOM.filterSheet.close();
+    });
+    DOM.mobileSort.addEventListener('change', event => setSortMode(event.target.value));
+    document.addEventListener('click', event => {
+      if (!DOM.contact.contains(event.target)) DOM.contact.open = false;
+    });
+    DOM.contact.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        DOM.contact.open = false;
+        focusElement(DOM.contact.querySelector('summary'));
+      }
+    });
+
     // Mouse tracking for ambient background spotlight
     window.addEventListener('mousemove', (e) => {
       document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
@@ -329,8 +402,9 @@
 
     // Search Input
     DOM.searchInput.addEventListener('input', (e) => {
-      state.searchQuery = e.target.value.trim().toLowerCase();
+      state.searchQuery = normalizeSearch(e.target.value);
       renderFilteredRepos();
+      showFirstResult();
     });
 
     if (DOM.searchClearBtn) {
@@ -344,12 +418,14 @@
         DOM.searchInput.value = '';
         renderCategoryPills();
         renderFilteredRepos();
-        DOM.searchInput.focus();
+        focusElement(mobileLayout.matches ? DOM.filterTrigger : DOM.searchInput);
+        showFirstResult();
       });
     }
 
     // Global Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
+      if (DOM.filterSheet.open) return;
       const isInput = document.activeElement === DOM.searchInput;
 
       if (!isInput && ['ArrowDown', 'PageDown', ' '].includes(e.key)) {
@@ -424,7 +500,10 @@
     });
 
     DOM.scrollStatus.addEventListener('click', (event) => {
-      if (event.target.closest('#load-more-btn')) loadNextBatch();
+      if (!event.target.closest('#load-more-btn')) return;
+      const firstNewIndex = state.renderedCount;
+      loadNextBatch();
+      if (event.detail === 0) focusElement(DOM.grid.children[firstNewIndex]?.querySelector('.card-title a'));
     });
 
     DOM.grid.addEventListener('click', (event) => {
@@ -436,18 +515,18 @@
   }
 
   // Load Data
-  async function loadData() {
-    if (DOM.grid) DOM.grid.setAttribute('aria-busy', 'true');
+  async function loadData(request = fetchCatalog()) {
+    state.catalogStatus = 'loading';
+    DOM.grid.replaceChildren();
+    DOM.grid.setAttribute('aria-busy', 'true');
+    updateResultsSummary();
     try {
-      let data = await reposFetchPromise;
-      if (!data) {
-        const response = await fetch('./data/repos.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error('Network error');
-        data = await response.json();
-      }
+      const data = await request;
+      if (!data) throw new Error('Could not load the project catalog');
       processLoadedData(data);
     } catch (err) {
       console.warn('Portfolio data fetch failed:', err);
+      state.catalogStatus = 'error';
       renderDataError();
     } finally {
       if (DOM.grid) DOM.grid.setAttribute('aria-busy', 'false');
@@ -490,6 +569,7 @@
       });
     });
 
+    state.catalogStatus = 'ready';
     state.allRepos = flattened;
     updateHeroCopy();
     renderCategoryPills();
@@ -500,7 +580,7 @@
     if (!button) return;
     button.classList.toggle('liked', isLiked);
     button.setAttribute('aria-pressed', String(isLiked));
-    button.setAttribute('aria-label', isLiked ? t('unfavorite', { name: repoName }) : t('favorite', { name: repoName }));
+    button.setAttribute('aria-label', t(isLiked ? 'unfavorite' : 'favorite', { name: button.dataset.projectTitle || repoName }));
     button.title = button.getAttribute('aria-label');
 
     const heart = button.querySelector('.heart-icon');
@@ -549,6 +629,7 @@
     // 1. "All" Pill
     const allPill = document.createElement('button');
     allPill.type = 'button';
+    allPill.dataset.category = 'all';
     allPill.className = `cat-pill-btn ${state.activeCategory === 'all' ? 'active' : ''}`;
     allPill.setAttribute('aria-pressed', String(state.activeCategory === 'all'));
     allPill.innerHTML = `
@@ -561,6 +642,7 @@
     // 2. "Favorites / Liked" Pill
     const favPill = document.createElement('button');
     favPill.type = 'button';
+    favPill.dataset.category = 'favorites';
     favPill.id = 'favorites-pill-btn';
     favPill.className = `cat-pill-btn favorites-pill ${state.activeCategory === 'favorites' ? 'active' : ''} ${state.likedRepos.size > 0 ? 'has-likes' : ''}`;
     favPill.setAttribute('aria-pressed', String(state.activeCategory === 'favorites'));
@@ -571,12 +653,13 @@
       <span class="cat-count-badge" id="favorites-pill-count">${state.likedRepos.size}</span>
     `;
     favPill.addEventListener('click', () => setCategory('favorites'));
-    DOM.pillsContainer.appendChild(favPill);
+
 
     // 3. Dynamic Category Pills
     state.categories.forEach(cat => {
       const pill = document.createElement('button');
       pill.type = 'button';
+      pill.dataset.category = cat.id;
       pill.className = `cat-pill-btn ${state.activeCategory === cat.id ? 'active' : ''}`;
       pill.setAttribute('aria-pressed', String(state.activeCategory === cat.id));
       const name = cat.name?.[state.currentLang] || cat.name?.zh || cat.name?.en || cat.id;
@@ -587,20 +670,15 @@
       pill.addEventListener('click', () => setCategory(cat.id));
       DOM.pillsContainer.appendChild(pill);
     });
+    DOM.pillsContainer.appendChild(favPill);
+    updateFilterTrigger();
   }
 
   function setCategory(catId) {
+    if (catId === state.activeCategory) return;
     state.activeCategory = catId;
-    document.querySelectorAll('.cat-pill-btn').forEach((btn, idx) => {
-      let isActive = false;
-      if (idx === 0) {
-        isActive = catId === 'all';
-      } else if (idx === 1) {
-        isActive = catId === 'favorites';
-      } else {
-        const cat = state.categories[idx - 2];
-        isActive = Boolean(cat && cat.id === catId);
-      }
+    DOM.pillsContainer.querySelectorAll('button').forEach(btn => {
+      const isActive = btn.dataset.category === catId;
       btn.classList.toggle('active', isActive);
       btn.setAttribute('aria-pressed', String(isActive));
     });
@@ -617,30 +695,35 @@
     if (menuWasOpen) DOM.sortBtn.focus();
   }
 
+  function normalizeSearch(value) {
+    return String(value ?? '').normalize('NFKC').trim().toLowerCase().replace(/\s+/g, ' ');
+  }
+
+  function searchRank(repo, query) {
+    const titles = [repo.name, repo.title?.zh, repo.title?.en].map(normalizeSearch);
+    if (titles.includes(query)) return 0;
+    if (titles.some(title => title.includes(query))) return 1;
+    const details = [repo.desc?.zh, repo.desc?.en, repo.summary?.zh, repo.summary?.en, repo.lang];
+    return details.some(value => normalizeSearch(value).includes(query)) ? 2 : 3;
+  }
+
   // Filter & Sort Logic
   function getFilteredAndSortedRepos() {
-    let list = state.allRepos.filter(repo => {
-      // Category Match
+    const ranks = new Map();
+    const list = state.allRepos.filter(repo => {
       if (state.activeCategory === 'favorites') {
         if (!state.likedRepos.has(repo.name)) return false;
       } else if (state.activeCategory !== 'all' && repo.categoryId !== state.activeCategory) {
         return false;
       }
-
-      // Query Match
-      if (state.searchQuery) {
-        const q = state.searchQuery;
-        const nameMatch = String(repo.name || '').toLowerCase().includes(q);
-        const zhMatch = String(repo.desc?.zh || '').toLowerCase().includes(q);
-        const enMatch = String(repo.desc?.en || '').toLowerCase().includes(q);
-        const langMatch = String(repo.lang || '').toLowerCase().includes(q);
-        return nameMatch || zhMatch || enMatch || langMatch;
-      }
-      return true;
+      if (!state.searchQuery) return true;
+      const rank = searchRank(repo, state.searchQuery);
+      ranks.set(repo, rank);
+      return rank < 3;
     });
 
-    // Sorting
     list.sort((a, b) => {
+      if (state.searchQuery && ranks.get(a) !== ranks.get(b)) return ranks.get(a) - ranks.get(b);
       const dateA = new Date(a.commit_time || a.pushed_at || 0).getTime() || 0;
       const dateB = new Date(b.commit_time || b.pushed_at || 0).getTime() || 0;
 
@@ -659,19 +742,18 @@
 
   function updateResultsSummary(shown = state.renderedCount, total = state.filteredRepos.length) {
     const safeShown = Math.min(Math.max(Number(shown) || 0, 0), total);
-    if (DOM.resultsSummary) {
-      DOM.resultsSummary.textContent = total > 0
-        ? t('resultSummary', { shown: safeShown, total })
-        : t('noResults');
-    }
-    if (DOM.totalCounter) {
-      DOM.totalCounter.textContent = `${total} ${state.currentLang === 'zh' ? '项' : 'details'}`;
-    }
+    const ready = state.catalogStatus === 'ready';
+    const loading = state.catalogStatus === 'loading';
+    DOM.filterTrigger.disabled = !ready;
+    if (loading) DOM.resultsSummary.textContent = t('loadingCatalog');
+    else if (!ready) DOM.resultsSummary.textContent = '';
+    else DOM.resultsSummary.textContent = total ? t('resultSummary', { shown: safeShown, total }) : t('noResults');
+    updateFilterTrigger();
     if (DOM.searchClearBtn) {
       DOM.searchClearBtn.hidden = !state.searchQuery;
     }
     if (DOM.clearFiltersBtn) {
-      const hasActiveFilters = Boolean(state.searchQuery) || state.activeCategory !== 'all';
+      const hasActiveFilters = ready && (Boolean(state.searchQuery) || state.activeCategory !== 'all');
       DOM.clearFiltersBtn.hidden = !hasActiveFilters;
       DOM.clearFiltersBtn.setAttribute('aria-hidden', String(!hasActiveFilters));
       DOM.clearFiltersBtn.textContent = t('clearFilters');
@@ -688,7 +770,7 @@
     scrollObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         // Do not consume every batch on the first paint when the sentinel starts in the viewport.
-        if (entry.isIntersecting && state.userHasScrolled && !state.isLoadingMore && state.renderedCount < state.filteredRepos.length) {
+        if (!mobileLayout.matches && entry.isIntersecting && state.userHasScrolled && !state.isLoadingMore && state.renderedCount < state.filteredRepos.length) {
           loadNextBatch();
         }
       });
@@ -701,6 +783,14 @@
     if (DOM.scrollSentinel) {
       scrollObserver.observe(DOM.scrollSentinel);
     }
+  }
+
+  function projectAction(repo) {
+    if (!repo.homepage || repo.homepage === repo.url) return 'github';
+    if (repo.action) return repo.action;
+    if (repo.categoryId === 'chrome-extensions') return 'extension';
+    if (repo.categoryId === 'chinese-tools' || repo.categoryId === 'ai-tools') return 'web';
+    return 'open';
   }
 
   // Render Card Element
@@ -716,9 +806,9 @@
       card.style.animationDelay = '';
     }, { once: true });
 
-    const repoTitle = repo.title?.[state.currentLang] || repo.title?.zh || repo.name;
+    const repoTitle = repo.title?.[state.currentLang] || repo.title?.zh || repo.title?.en || repo.name;
     const repoName = String(repo.name || 'Untitled project');
-    const descText = repoDescription(repo);
+    const descText = repo.summary?.[state.currentLang] || repoDescription(repo);
     const catName = categoryName(repo);
     const isLiked = state.likedRepos.has(repo.name);
     const aspectClass = 'aspect-16-10';
@@ -731,59 +821,38 @@
     }
 
     const cardLikeButtonHtml = `
-      <button class="card-like-btn ${isLiked ? 'liked' : ''}" type="button" data-repo-name="${escapeHtml(repoName)}" title="${escapeHtml(isLiked ? t('unfavorite', { name: repoName }) : t('favorite', { name: repoName }))}" aria-label="${escapeHtml(isLiked ? t('unfavorite', { name: repoName }) : t('favorite', { name: repoName }))}" aria-pressed="${String(isLiked)}">
+      <button class="card-like-btn ${isLiked ? 'liked' : ''}" type="button" data-repo-name="${escapeHtml(repoName)}" data-project-title="${escapeHtml(repoTitle)}" title="${escapeHtml(t(isLiked ? 'unfavorite' : 'favorite', { name: repoTitle }))}" aria-label="${escapeHtml(t(isLiked ? 'unfavorite' : 'favorite', { name: repoTitle }))}" aria-pressed="${String(isLiked)}">
         <svg class="heart-icon" width="13" height="13" viewBox="0 0 24 24" fill="${isLiked ? '#ef4444' : 'none'}" stroke="${isLiked ? '#ef4444' : 'currentColor'}" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
       </button>
     `;
 
     const imageTarget = repo.homepage || repo.url;
-    const imageActionLabel = repo.homepage ? t('liveDemo') : t('github');
-    const isLcp = index === 0;
-    const isEager = delayIndex < 2;
-    const webpScreenshot = /\.(png|jpe?g)$/i.test(repo.screenshot || '')
-      ? repo.screenshot.replace(/\.(png|jpe?g)$/i, '.webp')
-      : '';
-    const loadingAttr = isEager ? 'loading="eager"' : 'loading="lazy"';
-    const priorityAttr = isLcp ? 'fetchpriority="high"' : (isEager ? '' : 'decoding="async"');
-    const mediaHtml = repo.screenshot && imageTarget
-      ? `<a href="${escapeHtml(imageTarget)}" target="_blank" rel="noopener noreferrer" class="card-image-link" aria-label="${escapeHtml(`${imageActionLabel}: ${repoName}`)}"><picture class="card-picture">${webpScreenshot ? `<source srcset="${escapeHtml(webpScreenshot)}" type="image/webp">` : ''}<img src="${escapeHtml(repo.screenshot)}" alt="${escapeHtml(repoName)}" class="card-demo-image" width="400" height="250" ${loadingAttr} ${priorityAttr}></picture></a>`
-      : `<div class="card-name-placeholder"><span class="placeholder-repo-name">${escapeHtml(repoName)}</span></div>`;
-
-    const liveDemoActionHtml = repo.homepage ? `
-      <a href="${escapeHtml(repo.homepage)}" target="_blank" rel="noopener noreferrer" class="card-action-btn card-live-demo-btn" aria-label="${escapeHtml(t('liveDemo'))}">
-        <span>${escapeHtml(t('liveDemoAction'))}</span>
-        <span aria-hidden="true">↗</span>
-      </a>
-    ` : '';
+    const target = escapeHtml(imageTarget);
+    const action = escapeHtml(t(projectAction(repo)));
+    const title = escapeHtml(repoTitle || repoName);
+    const external = 'target="_blank" rel="noopener noreferrer"';
+    const screenshot = repo.cover || repo.screenshot || '';
+    const webp = /\.(png|jpe?g)$/i.test(screenshot) ? screenshot.replace(/\.(png|jpe?g)$/i, '.webp') : '';
+    const loading = index < 2 ? 'loading="eager"' : 'loading="lazy" decoding="async"';
+    const mediaHtml = screenshot && imageTarget
+      ? `<a href="${target}" ${external} class="card-image-link" aria-label="${action} · ${title}"><picture class="card-picture">${webp ? `<source srcset="${escapeHtml(webp)}" type="image/webp">` : ''}<img src="${escapeHtml(screenshot)}" alt="" class="card-demo-image" width="400" height="250" ${loading} ${index === 0 ? 'fetchpriority="high"' : ''}></picture></a>`
+      : `<div class="card-name-placeholder"><span class="placeholder-repo-name">${title}</span></div>`;
 
     card.innerHTML = `
-      <div class="card-media-box ${aspectClass}">
-        <div class="visual-canvas-container">
-          ${mediaHtml}
-        </div>
+      <div class="card-meta-header">
+        <h2 class="card-title">${imageTarget ? `<a href="${target}" ${external}>${title} <span aria-hidden="true">↗</span></a>` : title}</h2>
+        <span class="card-category-tag">${escapeHtml(catName)}</span>
+        ${cardLikeButtonHtml}
       </div>
+      <div class="card-media-box ${aspectClass}"><div class="visual-canvas-container">${mediaHtml}</div></div>
       <div class="card-body">
-        <div class="card-meta-header">
-          <span class="card-category-tag">${escapeHtml(catName)}</span>
-          <div class="card-meta-actions">
-            ${statusBadgeHtml}
-            ${cardLikeButtonHtml}
-          </div>
-        </div>
-        <h3 class="card-title">${escapeHtml(repoTitle || repoName)}</h3>
         <p class="card-description">${escapeHtml(descText)}</p>
-        <div class="card-hover-actions">
-          <div class="card-action-links">
-            ${liveDemoActionHtml}
-            ${repo.url ? `<a href="${escapeHtml(repo.url)}" target="_blank" rel="noopener noreferrer" class="card-action-btn card-github-btn" aria-label="${escapeHtml(t('github'))}">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              <span>${escapeHtml(t('githubAction'))}</span>
-            </a>` : ''}
-          </div>
+        <div class="card-action-links">
+          ${imageTarget ? `<a href="${target}" ${external} class="card-action-btn card-live-demo-btn">${action} <span aria-hidden="true">↗</span></a>` : ''}
+          ${repo.homepage && repo.url && repo.homepage !== repo.url ? `<a href="${escapeHtml(repo.url)}" ${external} class="card-action-btn card-github-btn" aria-label="GitHub · ${title}">GitHub</a>` : ''}
+          ${statusBadgeHtml}
         </div>
-      </div>
-    `;
-
+      </div>`;
     const imageLink = card.querySelector('.card-image-link');
     if (imageLink) {
       const image = imageLink.querySelector('.card-demo-image');
@@ -793,12 +862,6 @@
           const cssSafeImageSource = imageSource.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
           imageLink.style.setProperty('--card-image', `url("${cssSafeImageSource}")`);
           applyMediaPalette(imageLink, image);
-          // Portrait screenshots (e.g. mobile 390x844) would be cropped by
-          // object-fit: cover in the 16:10 frame; mark them so CSS can show
-          // the whole image instead.
-          if (image.naturalWidth && image.naturalHeight) {
-            image.closest('.card-media-box')?.classList.toggle('is-portrait', image.naturalHeight > image.naturalWidth);
-          }
         };
 
         if (image.complete && image.naturalWidth) {
@@ -813,7 +876,11 @@
             source.remove();
             return;
           }
-          imageLink.replaceWith(createNamePlaceholder('card-name-placeholder', repoName));
+          if (repo.cover && repo.screenshot && image.getAttribute('src') !== repo.screenshot) {
+            image.src = repo.screenshot;
+            return;
+          }
+          imageLink.replaceWith(createNamePlaceholder('card-name-placeholder', repoTitle));
         });
       }
     }
@@ -823,7 +890,6 @@
       likeButton.addEventListener('click', event => window.toggleLike(repoName, event));
     }
 
-    // Navigation is intentionally explicit: the image and CTA links own the card actions.
     // Web Motion: project a cursor-tracked radial spotlight across the card
     // surface and its border. requestAnimationFrame keeps mousemove cheap.
     let spotlightFrame = 0;
@@ -906,8 +972,8 @@
     } else {
       DOM.scrollStatus.innerHTML = `
         <div class="scroll-progress-control">
-          <span class="scroll-progress-label">${escapeHtml(t('resultSummary', { shown: state.renderedCount, total: state.filteredRepos.length }))}</span>
-          <button class="load-more-btn" id="load-more-btn" type="button">${escapeHtml(t('loadMore'))}</button>
+          <span class="scroll-progress-label">${escapeHtml(t('progress', { shown: state.renderedCount, total: state.filteredRepos.length }))}</span>
+          <button class="load-more-btn" id="load-more-btn" type="button">${escapeHtml(t('loadMore', { count: Math.min(BATCH_SIZE, state.filteredRepos.length - state.renderedCount) }))}</button>
         </div>
       `;
     }
@@ -915,6 +981,7 @@
 
   // Filter & Initial Batch Trigger
   function renderFilteredRepos() {
+    if (state.catalogStatus !== 'ready') { updateResultsSummary(); return; }
     state.filteredRepos = getFilteredAndSortedRepos();
 
     DOM.grid.innerHTML = '';
@@ -923,7 +990,7 @@
     updateResultsSummary(0, state.filteredRepos.length);
 
     if (state.filteredRepos.length === 0) {
-      const isFavEmpty = state.activeCategory === 'favorites';
+      const isFavEmpty = state.activeCategory === 'favorites' && !state.likedRepos.size && !state.searchQuery;
       DOM.grid.innerHTML = `
         <div class="empty-state-box">
           ${isFavEmpty
@@ -931,15 +998,11 @@
             : '<svg class="empty-state-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>'}
           <div class="empty-state-title">${escapeHtml(isFavEmpty ? t('emptyFavoritesTitle') : t('emptySearchTitle'))}</div>
           <div>${escapeHtml(isFavEmpty ? t('emptyFavoritesBody') : t('emptySearchBody'))}</div>
-          ${!isFavEmpty && (state.searchQuery || state.activeCategory !== 'all')
-            ? `<button class="empty-state-action" type="button" id="empty-clear-filters-btn">${escapeHtml(t('clearFilters'))}</button>`
-            : ''}
+
         </div>
       `;
       if (DOM.scrollStatus) DOM.scrollStatus.innerHTML = '';
       if (DOM.scrollSentinel) DOM.scrollSentinel.style.display = 'none';
-      const emptyClearButton = document.getElementById('empty-clear-filters-btn');
-      if (emptyClearButton) emptyClearButton.addEventListener('click', () => DOM.clearFiltersBtn.click());
       return;
     }
 
@@ -990,7 +1053,8 @@
     applyTheme(state.currentTheme);
     updateHeroCopy();
     updateSortControls();
-    if (state.categories.length > 0) {
+    if (state.catalogStatus === 'error') renderDataError();
+    if (state.catalogStatus === 'ready') {
       renderCategoryPills();
       renderFilteredRepos();
     }
