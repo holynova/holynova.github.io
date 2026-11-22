@@ -25,9 +25,9 @@
 
 ## 纯内容网站
 
-- [wujun-study](https://xiaosang.cc/wujun-study/): 吴军14门课程的42个学习专题，含17份15页中文漫画图解，支持全文搜索、原课追溯、全屏阅读与PDF下载
+- [wujun-study](https://wujun-study.xiaosang.cc/): 吴军14门课程的42个学习专题，含17份15页中文漫画图解，支持全文搜索、原课追溯、全屏阅读与PDF下载
   EN: 42 thematic guides to 14 Wu Jun courses, with 17 reviewed Chinese comic slide decks of 15 pages each, full-text search, traceable sources and PDF downloads.
-- [xiaosang AI图集](https://xiaosang.cc/xiaosang-gallery/): 汇集 22 个系列、3,666 张作品的统一图库，支持多图帖、分组搜索、沉浸滑览、单图下载和生成 Prompt。
+- [xiaosang AI图集](https://gallery.xiaosang.cc/): 汇集 22 个系列、3,666 张作品的统一图库，支持多图帖、分组搜索、沉浸滑览、单图下载和生成 Prompt。
   EN: A unified gallery of 3,666 images across 22 collections, with grouped posts, filters, full-screen swiping, downloads, and reusable prompts.
 - [bernstein-ypc](https://xiaosang.cc/bernstein-ypc/): 伯恩斯坦《青少年音乐会》全 53 课导览：提炼核心观点与现场实验，支持全文搜索与分类筛选，附 B 站掘火中译视频与可折叠试听曲目单
   EN: Two-column study guide to all 53 Young People's Concerts with live search, category filters, Bilibili links, and playable repertoire previews.

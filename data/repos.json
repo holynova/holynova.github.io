@@ -172,7 +172,7 @@
             "en": "42 thematic guides to 14 Wu Jun courses, with 17 reviewed Chinese comic slide decks of 15 pages each, full-text search, traceable sources and PDF downloads."
           },
           "url": "https://github.com/holynova/wujun-study",
-          "homepage": "https://xiaosang.cc/wujun-study/",
+          "homepage": "https://wujun-study.xiaosang.cc/",
           "screenshot": "screenshots/wujun-study.png",
           "pushed_at": "2026-11-17",
           "commit_time": "2026-11-17T13:38:17+08:00",
@@ -186,7 +186,7 @@
             "en": "A unified gallery of 3,666 images across 22 collections, with grouped posts, filters, full-screen swiping, downloads, and reusable prompts."
           },
           "url": "https://github.com/holynova/xiaosang-gallery",
-          "homepage": "https://xiaosang.cc/xiaosang-gallery/",
+          "homepage": "https://gallery.xiaosang.cc/",
           "screenshot": "screenshots/xiaosang-gallery.png",
           "pushed_at": "2026-11-16",
           "commit_time": "2026-11-16T10:07:09+08:00",
