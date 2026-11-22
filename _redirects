@@ -1,1 +1,3 @@
 /photo-atlas /photo-atlas/ 301
+/equal-width https://equal-width.xiaosang.cc/ 301
+/equal-width/* https://equal-width.xiaosang.cc/:splat 301

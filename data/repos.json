@@ -1790,18 +1790,22 @@
           "name": "equal_width",
           "lang": "JavaScript",
           "desc": {
-            "zh": "中英文字符等宽对齐与字间距校准工具",
-            "en": "Chinese-English monospace alignment and spacing calibration tool"
+            "zh": "输入多行文字，自动对齐到同一宽度。选字体和版式，复制排版或保存高清海报。",
+            "en": "Fit each line of text to the same width. Choose a font and layout, then copy the typeset text or save a high-resolution poster."
           },
           "url": "https://github.com/holynova/equal_width",
-          "pushed_at": "2026-08-11",
+          "pushed_at": "2026-11-22",
           "stars": 1,
-          "homepage": "https://xiaosang.cc/equal-width/",
+          "homepage": "https://equal-width.xiaosang.cc/",
           "hidden": false,
           "is_featured": true,
           "screenshot": "screenshots/equal_width.png",
-          "commit_time": "2026-08-11T08:50:42Z",
-          "action": "web"
+          "commit_time": "2026-11-22T21:31:42+08:00",
+          "action": "web",
+          "title": {
+            "zh": "齐行 · 等宽海报工坊",
+            "en": "Typepress · Equal-width Posters"
+          }
         },
         {
           "name": "one-punch",
