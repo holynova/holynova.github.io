@@ -167,12 +167,12 @@
           "homepage": "https://first-three-years.xiaosang.cc/",
           "screenshot": "screenshots/first-three-years.png",
           "pushed_at": "2026-11-23",
-          "commit_time": "2026-11-23T13:46:38+08:00",
+          "commit_time": "2026-11-23T15:25:06+08:00",
           "hidden": false,
           "action": "read",
           "summary": {
-            "zh": "从孩子第一次自己倒水读起，或按今晚遇到的育儿难题查找对话练习。",
-            "en": "Start with a child learning to pour water, or find a dialogue exercise for a situation at home."
+            "zh": "选一个今晚遇到的育儿难题，读应对话术和手绘图解。",
+            "en": "Pick a parenting dilemma from tonight and explore illustrated ways to respond."
           },
           "cover": "screenshots/first-three-years-cover.webp"
         },
