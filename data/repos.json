@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-22",
+  "lastUpdated": "2026-11-23",
   "totalRepos": 164,
   "categories": [
     {
@@ -160,19 +160,19 @@
             "en": "First Three Years: 0–3 Parenting Guide"
           },
           "desc": {
-            "zh": "移动端优先的 0–3 岁育儿深度手册：蒙台梭利 7 节 + 正面管教 6 节共 4.1 万余字、23 张小黑原创手绘图解与客厅高频危机话术对照。",
-            "en": "Mobile-first 0–3 parenting handbook covering Montessori (7 chapters) and Positive Discipline (6 chapters), 23 hand-drawn illustrations, and interactive crisis scripts."
+            "zh": "给 0–3 岁孩子父母的图文手记。蒙台梭利与正面管教共 13 章，配 46 幅手绘插图、适龄居家清单和常见亲子对话练习。",
+            "en": "A reading guide for parents of children aged 0–3, with 13 chapters on Montessori and Positive Discipline, 46 illustrations, home checklists and interactive dialogue exercises."
           },
           "url": "https://github.com/holynova/first-three-years",
           "homepage": "https://first-three-years.xiaosang.cc/",
           "screenshot": "screenshots/first-three-years.png",
-          "pushed_at": "2026-11-22",
-          "commit_time": "2026-11-22T09:44:20+08:00",
+          "pushed_at": "2026-11-23",
+          "commit_time": "2026-11-23T13:46:38+08:00",
           "hidden": false,
           "action": "read",
           "summary": {
-            "zh": "选一个今晚遇到的育儿难题，读应对话术和手绘图解。",
-            "en": "Pick a parenting dilemma from tonight and explore illustrated ways to respond."
+            "zh": "从孩子第一次自己倒水读起，或按今晚遇到的育儿难题查找对话练习。",
+            "en": "Start with a child learning to pour water, or find a dialogue exercise for a situation at home."
           },
           "cover": "screenshots/first-three-years-cover.webp"
         },
