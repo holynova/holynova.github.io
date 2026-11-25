@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-23",
-  "totalRepos": 164,
+  "lastUpdated": "2026-11-25",
+  "totalRepos": 165,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -1959,6 +1959,29 @@
         "en": "Productivity"
       },
       "repos": [
+        {
+          "name": "hk-food-guide",
+          "title": {
+            "zh": "香港美食地图与真口碑食单",
+            "en": "Hong Kong Food Map & Guide"
+          },
+          "lang": "JavaScript",
+          "desc": {
+            "zh": "面向手机的香港美食地图与攻略：全港 29 家核验食店（5 家平价米其林一星、8 家知名名店、16 家本地私藏），含红磡出发路线、避雷平替与一键导航。",
+            "en": "Mobile-first Hong Kong food map and dining guide with 29 vetted spots: 5 affordable 1-Michelin-star eateries, 8 iconic classics, and 16 local favorites, with itineraries and one-tap navigation."
+          },
+          "url": "https://github.com/holynova/hk-food-guide",
+          "homepage": "https://hk-food-guide.xiaosang.cc/",
+          "screenshot": "screenshots/hk-food-guide.png",
+          "pushed_at": "2026-11-25",
+          "commit_time": "2026-11-25T09:34:56+08:00",
+          "hidden": false,
+          "action": "web",
+          "summary": {
+            "zh": "全港 29 家米其林一星、知名名店与本地私藏一图总览，红磡出发随时导航。",
+            "en": "29 vetted Hong Kong eateries mapped across Kowloon and Hong Kong Island with one-tap navigation."
+          }
+        },
         {
           "name": "vpn-ledger",
           "title": {
