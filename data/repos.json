@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-25",
-  "totalRepos": 165,
+  "totalRepos": 166,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -128,6 +128,29 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "ai-coding-thinkers",
+          "title": {
+            "zh": "AI 编程三重视角 · Zara / poteto / Pocock",
+            "en": "AI Coding Thinkers · Zara / poteto / Pocock"
+          },
+          "lang": "HTML",
+          "desc": {
+            "zh": "收录 Zara Zhang、poteto（Lauren Tan）与 Matt Pocock 的一手 AI 编程观点与 16 支核验 YouTube 视频，每人一套 30 分钟差异化 PC 专题原型：16:9 审美翻页画册、Prompt 对照实验台与 6 阶段工程流水线。",
+            "en": "A source-bound PC showcase of Zara Zhang, poteto (Lauren Tan), and Matt Pocock backed by primary repos and 16 verified YouTube talks, with three 30-minute interactive formats: an editorial slide deck, a Prompt Diff workbench, and an engineering pipeline blueprint."
+          },
+          "summary": {
+            "zh": "Zara 翻页画册、poteto Prompt 对照实验台、Pocock 工程流水线——三套 30 分钟可溯源专题。",
+            "en": "Three 30-minute interactive studies: Zara editorial deck, poteto Prompt Diff lab, and Pocock engineering pipeline."
+          },
+          "url": "https://github.com/holynova/ai-coding-thinkers",
+          "homepage": "https://ai-coding-thinkers.xiaosang.cc/",
+          "screenshot": "screenshots/ai-coding-thinkers.webp",
+          "pushed_at": "2026-11-25",
+          "commit_time": "2026-11-25T16:25:00+08:00",
+          "hidden": false,
+          "action": "read"
+        },
         {
           "name": "parenting-reader",
           "lang": "HTML",
