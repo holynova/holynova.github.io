@@ -1157,19 +1157,19 @@
             "en": "Gravity Watch Face"
           },
           "desc": {
-            "zh": "手机全屏 3D 物理重力互动空间：横竖屏无黑边地面铺满、解析级柔光阴影与多体缝隙闭塞，传感器驱动五套场景翻滚及多通道细腻震动。",
-            "en": "Mobile-first 3D physics interactive playground with borderless full-bleed grounds, analytical soft shadows and crevice AO, regulation basketball court, five PBR scenes, and layered haptics."
+            "zh": "手机全屏 3D 物理重力互动空间：13 套 PBR 物理场景（球场、金库、钨丝灯泡、氦气气球、赌桌骰子、玻璃弹珠、威士忌冰块、弹力球、钢珠、青花瓷球），支持气球戳破、两段裂纹碎裂、精确柔光阴影与分材质细腻震动。",
+            "en": "Mobile-first 3D physics interactive playground featuring 13 PBR scenes—from sports & vaults to Edison bulbs, helium balloons, casino dice, marbles, ice cubes, jelly balls, chrome bearings, and porcelain orbs—with crackle/shatter mechanics, soft shadows, and material-tuned haptics."
           },
           "url": "https://github.com/holynova/gravity-watch-face",
           "homepage": "https://gravity-watch-face.xiaosang.cc/",
           "screenshot": "screenshots/gravity-watch-face.png",
           "pushed_at": "2026-11-26",
-          "commit_time": "2026-11-26T15:11:36+08:00",
+          "commit_time": "2026-11-26T16:00:51+08:00",
           "hidden": false,
           "action": "web",
           "summary": {
-            "zh": "倾斜手机，看篮球在球场里滚动。",
-            "en": "Tilt your phone to roll the basketballs across the court."
+            "zh": "倾斜手机，玩转 13 套重力物理材质与碎裂交互。",
+            "en": "Tilt your phone to tumble 13 PBR physics materials with crackle & shatter."
           },
           "cover": "screenshots/gravity-watch-face-cover.webp"
         },
