@@ -20,3 +20,5 @@ wrangler.jsonc
 .assetsignore
 README.en.md
 **/.DS_Store
+
+classic-literature-covers/.wrangler/
