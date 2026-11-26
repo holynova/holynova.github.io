@@ -1,0 +1,122 @@
+[
+  {
+    "title": "红楼梦",
+    "author": "曹雪芹 原著",
+    "group": "中国古典",
+    "image": "assets/covers/21.webp"
+  },
+  {
+    "title": "三国演义",
+    "author": "罗贯中",
+    "group": "中国古典",
+    "image": "assets/covers/22.webp"
+  },
+  {
+    "title": "水浒传",
+    "author": "施耐庵",
+    "group": "中国古典",
+    "image": "assets/covers/23.webp"
+  },
+  {
+    "title": "西游记",
+    "author": "吴承恩",
+    "group": "中国古典",
+    "image": "assets/covers/24.webp"
+  },
+  {
+    "title": "活着",
+    "author": "余华",
+    "group": "中国现当代",
+    "image": "assets/covers/25.webp"
+  },
+  {
+    "title": "红高粱家族",
+    "author": "莫言",
+    "group": "中国现当代",
+    "image": "assets/covers/26.webp"
+  },
+  {
+    "title": "边城",
+    "author": "沈从文",
+    "group": "中国现当代",
+    "image": "assets/covers/27.webp"
+  },
+  {
+    "title": "骆驼祥子",
+    "author": "老舍",
+    "group": "中国现当代",
+    "image": "assets/covers/28.webp"
+  },
+  {
+    "title": "围城",
+    "author": "钱锺书",
+    "group": "中国现当代",
+    "image": "assets/covers/29.webp"
+  },
+  {
+    "title": "呐喊",
+    "author": "鲁迅",
+    "group": "中国现当代",
+    "image": "assets/covers/30.webp"
+  },
+  {
+    "title": "倾城之恋",
+    "author": "张爱玲",
+    "group": "中国现当代",
+    "image": "assets/covers/31.webp"
+  },
+  {
+    "title": "平凡的世界",
+    "author": "路遥",
+    "group": "中国现当代",
+    "image": "assets/covers/32.webp"
+  },
+  {
+    "title": "百年孤独",
+    "author": "加西亚·马尔克斯",
+    "group": "外国文学",
+    "image": "assets/covers/33.webp"
+  },
+  {
+    "title": "老人与海",
+    "author": "欧内斯特·海明威",
+    "group": "外国文学",
+    "image": "assets/covers/34.webp"
+  },
+  {
+    "title": "小王子",
+    "author": "安托万·德·圣埃克苏佩里",
+    "group": "外国文学",
+    "image": "assets/covers/35.webp"
+  },
+  {
+    "title": "变形记",
+    "author": "弗兰茨·卡夫卡",
+    "group": "外国文学",
+    "image": "assets/covers/36.webp"
+  },
+  {
+    "title": "傲慢与偏见",
+    "author": "简·奥斯汀",
+    "group": "外国文学",
+    "image": "assets/covers/37.webp"
+  },
+  {
+    "title": "堂吉诃德",
+    "author": "米格尔·德·塞万提斯",
+    "group": "外国文学",
+    "image": "assets/covers/38.webp"
+  },
+  {
+    "title": "局外人",
+    "author": "阿尔贝·加缪",
+    "group": "外国文学",
+    "image": "assets/covers/39.webp"
+  },
+  {
+    "title": "了不起的盖茨比",
+    "author": "F. 斯科特·菲茨杰拉德",
+    "group": "外国文学",
+    "image": "assets/covers/40.webp"
+  }
+]

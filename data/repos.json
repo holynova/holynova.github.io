@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-25",
-  "totalRepos": 166,
+  "lastUpdated": "2026-11-26",
+  "totalRepos": 167,
   "categories": [
     {
       "id": "chrome-extensions",
@@ -128,6 +128,20 @@
         "en": "Content-only"
       },
       "repos": [
+        {
+          "name": "classic-literature-covers",
+          "lang": "HTML",
+          "desc": {
+            "zh": "二十部经典文学原创装帧封面，支持分类浏览与大图预览",
+            "en": "Twenty original book jackets for classics, with category filters and full-size previews"
+          },
+          "url": "https://github.com/holynova/classic-literature-covers",
+          "homepage": "https://xiaosang.cc/classic-literature-covers/",
+          "screenshot": "screenshots/classic-literature-covers.png",
+          "pushed_at": "2026-11-26",
+          "commit_time": "2026-11-26T09:50:00+08:00",
+          "hidden": false
+        },
         {
           "name": "ai-coding-thinkers",
           "title": {

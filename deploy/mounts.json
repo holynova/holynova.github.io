@@ -1,5 +1,5 @@
 {
-  "archiveSha256": "ffcfc2119b36fc86392818712471173e676df2dfc99c947737ffa5d2e9a947a4",
+  "archiveSha256": "988bee8661586811e8c9482498ed38ac353d9e23ff4d5701aa7d894a4ea06a58",
   "mounts": {
     "xiaosang-gallery": {
       "commit": "ee4df09520706aac342e9324356858ab15d9a825",
@@ -18,6 +18,12 @@
         "slides",
         "static"
       ]
+    },
+    "classic-literature-covers": {
+      "commit": "64efbef3ae4cdfdb1bfeef927e562f35b2df0080",
+      "version": "1.0.0",
+      "origin": "https://classic-literature-covers.pages.dev",
+      "folders": []
     }
   }
 }
