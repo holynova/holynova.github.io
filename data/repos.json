@@ -1157,19 +1157,19 @@
             "en": "Gravity Watch Face"
           },
           "desc": {
-            "zh": "手机全屏 3D 物理重力互动空间：13 套 PBR 物理场景（球场、金库、钨丝灯泡、氦气气球、赌桌骰子、玻璃弹珠、威士忌冰块、弹力球、钢珠、青花瓷球），支持气球戳破、两段裂纹碎裂、精确柔光阴影与分材质细腻震动。",
-            "en": "Mobile-first 3D physics interactive playground featuring 13 PBR scenes—from sports & vaults to Edison bulbs, helium balloons, casino dice, marbles, ice cubes, jelly balls, chrome bearings, and porcelain orbs—with crackle/shatter mechanics, soft shadows, and material-tuned haptics."
+            "zh": "手机全屏 3D 物理重力互动空间：18 套 PBR 物理场景，在球场、金库、灯泡、气球、骰子、玻璃弹珠、冰块与瓷球之外，新增高弹力弹力球、揉皱纸球、原木圆球、天然石球与「纸木石混合」；内置 Kenney / Meta CC0 实录碰撞拟音、分级触觉震动、彩色矢量图标导航与上一套/下一套快捷切换。",
+            "en": "Mobile-first 3D physics interactive playground with 18 PBR scenes—adding Super Bouncy Balls, Crumpled Paper, Wood, Stone, and a weight-contrasting Paper·Wood·Stone mix alongside courts, bulbs, dice, glass, ice, and porcelain—complete with CC0 recorded foley audio, material-tuned haptics, vector icons, and prev/next steppers."
           },
           "url": "https://github.com/holynova/gravity-watch-face",
           "homepage": "https://gravity-watch-face.xiaosang.cc/",
           "screenshot": "screenshots/gravity-watch-face.png",
           "pushed_at": "2026-11-26",
-          "commit_time": "2026-11-26T16:00:51+08:00",
+          "commit_time": "2026-11-26T16:32:24+08:00",
           "hidden": false,
           "action": "web",
           "summary": {
-            "zh": "倾斜手机，玩转 13 套重力物理材质与碎裂交互。",
-            "en": "Tilt your phone to tumble 13 PBR physics materials with crackle & shatter."
+            "zh": "倾斜手机，体验 18 套重力物理材质、CC0 实录拟音与碎裂交互。",
+            "en": "Tilt your phone to tumble 18 PBR physics materials with CC0 audio & shatter."
           },
           "cover": "screenshots/gravity-watch-face-cover.webp"
         },
