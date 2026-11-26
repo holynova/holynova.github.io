@@ -1157,14 +1157,14 @@
             "en": "Gravity Watch Face"
           },
           "desc": {
-            "zh": "手机全屏 3D 物理重力互动空间：横竖全屏自适应与无时钟纯净视图，传感器驱动标准篮球场与五套场景翻滚及多通道细腻震动。",
-            "en": "Mobile-first 3D physics interactive playground with responsive fullscreen, distraction-free view, regulation basketball court, five PBR scenes, and layered haptics."
+            "zh": "手机全屏 3D 物理重力互动空间：横竖屏无黑边地面铺满、解析级柔光阴影与多体缝隙闭塞，传感器驱动五套场景翻滚及多通道细腻震动。",
+            "en": "Mobile-first 3D physics interactive playground with borderless full-bleed grounds, analytical soft shadows and crevice AO, regulation basketball court, five PBR scenes, and layered haptics."
           },
           "url": "https://github.com/holynova/gravity-watch-face",
           "homepage": "https://gravity-watch-face.xiaosang.cc/",
           "screenshot": "screenshots/gravity-watch-face.png",
-          "pushed_at": "2026-11-21",
-          "commit_time": "2026-11-21T17:36:00+08:00",
+          "pushed_at": "2026-11-26",
+          "commit_time": "2026-11-26T15:11:36+08:00",
           "hidden": false,
           "action": "web",
           "summary": {
